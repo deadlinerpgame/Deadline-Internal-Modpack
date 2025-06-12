@@ -16,6 +16,7 @@ local original_ISInventoryTransferAction_isValid = ISInventoryTransferAction.isV
 function ISInventoryTransferAction:isValid()
     local player = self.character
     local sourceContainer = self.srcContainer
+    local destContainer = self.destContainer
 
     if sourceContainer and player then
         local items = sourceContainer:getItems()
@@ -33,6 +34,15 @@ function ISInventoryTransferAction:isValid()
         end
     end
 
+    -- If player is trying to drop a corpse token onto the floor, destroy it.
+    if item and item:getType() == "Base.CorpseTicket" and destContainer and destContainer:getType() == "floor" then
+        local ownerName = item:getModData().corpseOwner;
+        if ownerName ~= player:getUsername() then return false end;
+
+        item:getContainer():DoRemoveItem(item);
+        player:Say("Corpse ticket deleted!");
+        return false;
+    end
 
     return original_ISInventoryTransferAction_isValid(self)
 end
