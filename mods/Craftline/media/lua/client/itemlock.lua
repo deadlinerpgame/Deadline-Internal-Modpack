@@ -25,7 +25,7 @@ function ISInventoryTransferAction:isValid()
                 local item = items:get(i)
                 local ownerName = item:getModData().corpseOwner
                 if ownerName then
-                    if ownerName ~= player:getUsername() then
+                    if ownerName ~= player:getUsername() and not isAdmin() then
                         player:Say("You can't take items from " .. ownerName .. "'s corpse.")
                         return false 
                     end
