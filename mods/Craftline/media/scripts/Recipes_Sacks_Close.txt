@@ -1,0 +1,570 @@
+module SP
+{
+    imports
+    {
+   	 Base,
+    }
+
+    recipe Put Clay in Sack
+    {
+        Clay=8,
+	EmptySandbag=1,
+        Result:Sack_Clay,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Apples in Sack
+    {
+        Apple=12,
+	EmptySandbag=1,
+        Result:SackProduce_Apple,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Bell Peppers in Sack
+    {
+        BellPepper=12,
+	EmptySandbag=1,
+        Result:SackProduce_BellPepper,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Broccoli in Sack
+    {
+        Broccoli=12,
+	EmptySandbag=1,
+        Result:SackProduce_Broccoli,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Cabbage in Sack
+    {
+        Cabbage=8,
+	EmptySandbag=1,
+        Result:SackProduce_Cabbage,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Carrots in Sack
+    {
+        Carrots=12,
+	EmptySandbag=1,
+        Result:SackProduce_Carrot,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Cherries in Sack
+    {
+        Cherry=16,
+	EmptySandbag=1,
+        Result:SackProduce_Cherry,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Corn in Sack
+    {
+        Corn=12,
+	EmptySandbag=1,
+        Result:SackProduce_Corn,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Eggplants in Sack
+    {
+        Eggplant=12,
+	EmptySandbag=1,
+        Result:SackProduce_Eggplant,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Grapes in Sack
+    {
+        Grapes=12,
+	EmptySandbag=1,
+        Result:SackProduce_Grapes,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Leeks in Sack
+    {
+        Leek=12,
+	EmptySandbag=1,
+        Result:SackProduce_Leek,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Lettuce in Sack
+    {
+        Lettuce=8,
+	EmptySandbag=1,
+        Result:SackProduce_Lettuce,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Onions in Sack
+    {
+        Onion=12,
+	EmptySandbag=1,
+        Result:SackProduce_Onion,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Peaches in Sack
+    {
+        Peach=12,
+	EmptySandbag=1,
+        Result:SackProduce_Peach,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Pears in Sack
+    {
+        Pear=12,
+	EmptySandbag=1,
+        Result:SackProduce_Pear,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Potatoes in Sack
+    {
+        Potato=12,
+	EmptySandbag=1,
+        Result:SackProduce_Potato,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Radishes in Sack
+    {
+        RedRadish=12,
+	EmptySandbag=1,
+        Result:SackProduce_RedRadish,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Strawberries in Sack
+    {
+        Strewberrie=16,
+	EmptySandbag=1,
+        Result:SackProduce_Strawberry,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Tomatoes in Sack
+    {
+        Tomato=12,
+	EmptySandbag=1,
+        Result:SackProduce_Tomato,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Avocados in Sack
+    {
+        Avocado=12,
+	EmptySandbag=1,
+        Result:SackProduce_Avocado,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Bananas in Sack
+    {
+        Banana=12,
+	EmptySandbag=1,
+        Result:SackProduce_Banana,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Blackberries in Sack
+    {
+        BerryBlack=12,
+	EmptySandbag=1,
+        Result:SackProduce_BlackBerry,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Blueberries in Sack
+    {
+        BerryBlue=12,
+	EmptySandbag=1,
+        Result:SackProduce_BlueBerry,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Coffee Beans in Sack
+    {
+        CoffeeBeans=12,
+	EmptySandbag=1,
+        Result:SackProduce_Coffee,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Comfrey in Sack
+    {
+        Comfrey=16,
+	EmptySandbag=1,
+        Result:SackProduce_Comfrey,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Common Mallow in Sack
+    {
+        CommonMallow=16,
+	EmptySandbag=1,
+        Result:SackProduce_CommonMallow,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Garlic in Sack
+    {
+        WildGarlic=16,
+	EmptySandbag=1,
+        Result:SackProduce_Garlic,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Pears in Sack
+    {
+        Pear=12,
+	EmptySandbag=1,
+        Result:SackProduce_Pear,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Sage in Sack
+    {
+        Sage=16,
+	EmptySandbag=1,
+        Result:SackProduce_Sage,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Ginger in Sack
+    {
+        GingerRoot=12,
+	EmptySandbag=1,
+        Result:SackProduce_Ginger,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Ginseng in Sack
+    {
+        Ginseng=12,
+	EmptySandbag=1,
+        Result:SackProduce_Ginseng,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Grapefruits in Sack
+    {
+        GrapeFruit=12,
+	EmptySandbag=1,
+        Result:SackProduce_GrapeFruit,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Hops in Sack
+    {
+        Hops=12,
+	EmptySandbag=1,
+        Result:SackProduce_Hops,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Lemons in Sack
+    {
+        Lemon=16,
+	EmptySandbag=1,
+        Result:SackProduce_Lemon,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Lemongrass in Sack
+    {
+        LemonGrass=16,
+	EmptySandbag=1,
+        Result:SackProduce_Lemongrass,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Mangos in Sack
+    {
+        Mango=16,
+	EmptySandbag=1,
+        Result:SackProduce_Mango,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Mushrooms in Sack
+    {
+        MushroomGeneric1/MushroomGeneric2/MushroomGeneric3/MushroomGeneric4/MushroomGeneric5/MushroomGeneric6/MushroomGeneric7=16,
+	EmptySandbag=1,
+        Result:SackProduce_Mushroom,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Peppers in Sack
+    {
+        PepperPlant=12,
+	EmptySandbag=1,
+        Result:SackProduce_Pepper,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Pineapples in Sack
+    {
+        Pineapple=8,
+	EmptySandbag=1,
+        Result:SackProduce_Pineapple,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Pumpkins in Sack
+    {
+        Pumpkin=8,
+	EmptySandbag=1,
+        Result:SackProduce_Pumpkin,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Soy Beans in Sack
+    {
+        SoyBean=12,
+	EmptySandbag=1,
+        Result:SackProduce_SoyBean,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+
+    recipe Put Sugar Cane in Sack
+    {
+        SugarCane=12,
+	EmptySandbag=1,
+        Result:SackProduce_SugarCane,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Tea Leaves in Sack
+    {
+        TeaLeaf=16,
+	EmptySandbag=1,
+        Result:SackProduce_Tea,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Tobacco in Sack
+    {
+        TobaccoLeaves=16,
+	EmptySandbag=1,
+        Result:SackProduce_Tobacco,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Watermelons in Sack
+    {
+        Watermelon=8,
+	EmptySandbag=1,
+        Result:SackProduce_Watermelon,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Wheat in Sack
+    {
+        Wheat=12,
+	EmptySandbag=1,
+        Result:SackProduce_Wheat,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Zucchini in Sack
+    {
+        Zucchini=12,
+	EmptySandbag=1,
+        Result:SackProduce_Zucchini,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Limes in Sack
+    {
+        Lime=16,
+	EmptySandbag=1,
+        Result:SackProduce_Lime,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Oranges in Sack
+    {
+        Orange=16,
+	EmptySandbag=1,
+        Result:SackProduce_Orange,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Plantain in Sack
+    {
+        Plantain=16,
+	EmptySandbag=1,
+        Result:SackProduce_Plantain,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+    recipe Put Black Sage in Sack
+    {
+        BlackSage=16,
+	EmptySandbag=1,
+        Result:SackProduce_Blacksage,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
+}

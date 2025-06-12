@@ -1,0 +1,198 @@
+module Base
+{
+
+    item GreaveTire_Right
+	{
+        Weight = 2,
+		DisplayName = Tire Shin Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Tire_ShinArmour,
+		BloodLocation = LowerLegs,
+		BodyLocation = Calf_Right,
+		ClothingItem = GreaveTire_Right,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = FALSE,
+		WorldStaticModel = GreaveMagazine_Right,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.80,
+		DamagedSound = ArmourBreakRubber,
+	}
+
+	item GreaveTire_Left
+	{
+        Weight = 2,
+		DisplayName = Tire Shin Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Tire_ShinArmour,
+		BloodLocation = LowerLegs,
+		BodyLocation = Calf_Left,
+		ClothingItem = GreaveTire_Left,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = FALSE,
+		WorldStaticModel = GreaveMagazine_Left,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.80,
+		DamagedSound = ArmourBreakRubber,
+	}
+
+	item ThighTire_R
+	{
+        Weight = 2,
+		DisplayName = Tire Thigh Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Tire_ThighArmour,
+		BloodLocation = UpperLegs,
+		BodyLocation = Thigh_Right,
+		ClothingItem = ThighTire_R,
+		CanHaveHoles = FALSE,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		WorldStaticModel = ThighArmor_R,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.80,
+		DamagedSound = ArmourBreakRubber,
+
+	}
+
+	item ThighTire_L
+	{
+        Weight = 2,
+		DisplayName = Tire Thigh Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Tire_ThighArmour,
+		BloodLocation = UpperLegs,
+		BodyLocation = Thigh_Left,
+		ClothingItem = ThighTire_L,
+		CanHaveHoles = FALSE,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		WorldStaticModel = ThighArmor_L,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.80,
+		DamagedSound = ArmourBreakRubber,
+
+	}
+
+	item VambraceTire_Right
+	{
+        Weight = 2,
+		DisplayName = Tire Forearm Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Tire_ForearmArmour,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Right,
+		ClothingItem = VambraceTire_Right,
+		CanHaveHoles = FALSE,
+		BiteDefense = 5,
+		ScratchDefense = 10,
+		WorldStaticModel = VambraceMagazine_Right,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		CombatSpeedModifier = 0.95,
+		DamagedSound = ArmourBreakRubber,
+	}
+
+	item VambraceTire_Left
+	{
+        Weight = 2,
+		DisplayName = Tire Forearm Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Tire_ForearmArmour,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Left,
+		ClothingItem = VambraceTire_Left,
+		CanHaveHoles = FALSE,
+		BiteDefense = 5,
+		ScratchDefense = 10,
+		WorldStaticModel = VambraceMagazine_Left,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		CombatSpeedModifier = 0.97,
+		DamagedSound = ArmourBreakRubber,
+	}
+
+	item Shoulderpad_Tire_L
+    {
+        DisplayName = Tire Shoulder Armor - Left,
+        DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+        Icon = Tire_ShoulderArmour_Left,
+        BloodLocation = UpperArms,
+        BodyLocation = ShoulderpadLeft,
+        ClothingItem = Shoulderpad_Tire_L,
+        CanHaveHoles = FALSE,
+        WorldStaticModel = Shoulderpad_Articulated_L_Metal,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+        CombatSpeedModifier = 0.95,
+        DamagedSound = ArmourBreakRubber,
+        Weight = 3,
+		DiscomfortModifier = 0.20,
+        Tooltip = Tooltip_item_NoBackpack,
+		Tags = IgnoreZombieDensity;HasMetal,
+		ConditionMax = 5,
+		ConditionLowerChanceOneIn = 5,
+    }
+
+	item Shoulderpad_Tire_R
+    {
+        DisplayName = Tire Shoulder Armor - Right,
+        DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+        Icon = Tire_ShoulderArmour_Right,
+        BloodLocation = UpperArms,
+        BodyLocation = ShoulderpadRight,
+        ClothingItem = Shoulderpad_Tire_R,
+        CanHaveHoles = FALSE,
+        WorldStaticModel = Shoulderpad_Articulated_R_Metal,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+        CombatSpeedModifier = 0.92,
+        DamagedSound = ArmourBreakRubber,
+        Weight = 3,
+    }
+
+	item Cuirass_Tire
+	{
+		DisplayName = Tire Body Armor,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Tire_Cuirass,
+		BloodLocation = ShirtNoSleeves,
+		BodyLocation = Cuirass,
+		ClothingItem = Cuirass_Tire,
+        CanHaveHoles = FALSE,
+        BiteDefense = 10,
+        ScratchDefense = 15,
+        CombatSpeedModifier = 0.95,
+        DamagedSound = ArmourBreakRubber,
+	RunSpeedModifier = 0.90,
+	WindResistance = 0.80,
+	WorldStaticModel = Cuirass_Bone,
+        Weight = 6,
+
+	}
+
+    item TirePiece
+    {
+        DisplayCategory = Material,
+        Weight	=	3.0,
+        Type	=	Normal,
+        DisplayName	= Tire Piece,
+        Icon	=	Tire_Quarter,
+        StaticModel = TirePiece,
+        WorldStaticModel = TirePiece,
+    }
+}

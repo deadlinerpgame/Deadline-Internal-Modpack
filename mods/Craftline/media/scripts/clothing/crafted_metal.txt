@@ -1,0 +1,740 @@
+module Base
+{
+
+	item ThighMetal_R
+	{
+		Weight = 1,
+		DisplayName = Metal Thigh Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = ThighArmour,
+		BloodLocation = UpperLegs,
+		BodyLocation = Thigh_Right,
+		ClothingItem = ThighMetal_R,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = FALSE,
+		WorldStaticModel = ThighArmor_R,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.90,
+		DamagedSound = ArmourBreakMetal,
+	}
+
+	item ThighMetal_L
+	{
+		Weight = 1,
+		DisplayName = Metal Thigh Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = ThighArmour,
+		BloodLocation = UpperLegs,
+		BodyLocation = Thigh_Left,
+		ClothingItem = ThighMetal_L,
+        BiteDefense = 5,
+        BiteDefense = 10,
+		CanHaveHoles = FALSE,
+		WorldStaticModel = ThighArmor_L,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.90,
+		DamagedSound = ArmourBreakMetal,
+	}
+
+	item ThighMetalSpike_R
+	{
+		Weight = 2,
+		DisplayName = Spiked Metal Thigh Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = ThighArmour_Nails,
+		BloodLocation = UpperLegs,
+		BodyLocation = Thigh_Right,
+		ClothingItem = ThighMetalSpike_R,
+        BiteDefense = 5,
+        BiteDefense = 10,
+		CanHaveHoles = FALSE,
+		WorldStaticModel = ThighArmorSpiked_R,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.85,
+		DamagedSound = ArmourBreakMetal,
+
+	}
+
+	item ThighMetalSpike_L
+	{
+		Weight = 2,
+		DisplayName = Spiked Metal Thigh Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = ThighArmour_Nails,
+		BloodLocation = UpperLegs,
+		BodyLocation = Thigh_Left,
+		ClothingItem = ThighMetalSpike_L,
+		WorldStaticModel = ThighArmorSpiked_L,
+        BiteDefense = 5,
+        BiteDefense = 10,
+		CanHaveHoles = FALSE,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.85,
+		DamagedSound = ArmourBreakMetal,
+	}
+
+    item Greave_Right
+	{
+		DisplayName = Metal Shin Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Vambrace,
+		BloodLocation = LowerLegs,
+		BodyLocation = Calf_Right,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = FALSE,
+		ClothingItem = Greave_Right,
+		WorldStaticModel = Greave_Ground,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.90,
+		DamagedSound = ArmourBreakMetal,
+	}
+
+	item Greave_Left
+	{
+		DisplayName = Metal Shin Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Vambrace,
+		BloodLocation = LowerLegs,
+		BodyLocation = Calf_Left,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = FALSE,
+		ClothingItem = Greave_Left,
+		WorldStaticModel = Greave_Ground,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.90,
+		DamagedSound = ArmourBreakMetal,
+	}
+
+	item GreaveSpike_Left
+	{
+		DisplayName = Spiked Metal Shin Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Vambrace_Nails,
+		BloodLocation = LowerLegs,
+		BodyLocation = Calf_Left,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = FALSE,
+		ClothingItem = GreaveSpike_Left,
+		WorldStaticModel = GreaveSpike_Left,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.90,
+		DamagedSound = ArmourBreakMetal,
+		Weight = 2,
+		ConditionLowerChanceOneIn = 5,
+	}
+
+	item GreaveSpike_Right
+	{
+		DisplayName = Spiked Metal Shin Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Vambrace_Nails,
+		BloodLocation = LowerLegs,
+		BodyLocation = Calf_Right,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = FALSE,
+		ClothingItem = GreaveSpike_Right,
+		WorldStaticModel = GreaveSpike_Right,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.90,
+		DamagedSound = ArmourBreakMetal,
+		Weight = 2,
+
+	}
+
+	item Vambrace_Right
+	{
+		DisplayName = Metal Forearm Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Greave,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Right,
+        BiteDefense = 5,
+        BiteDefense = 10,
+		CanHaveHoles = FALSE,
+		ClothingItem = Vambrace_Right,
+		WorldStaticModel = Vambrace_Ground,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		CombatSpeedModifier = 0.98,
+		DamagedSound = ArmourBreakMetal,
+	}
+
+	item Vambrace_Left
+	{
+		DisplayName = Metal Forearm Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Greave,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Left,
+        BiteDefense = 5,
+        BiteDefense = 10,
+		CanHaveHoles = FALSE,
+		ClothingItem = Vambrace_Left,
+		WorldStaticModel = Vambrace_Ground,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		CombatSpeedModifier = 0.99,
+		DamagedSound = ArmourBreakMetal,
+	}
+
+	item VambraceSpike_Left
+	{
+		DisplayName = Spiked Metal Forearm Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Greave_Nails,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Left,
+        BiteDefense = 5,
+        BiteDefense = 10,
+		CanHaveHoles = FALSE,
+		ClothingItem = VambraceSpike_Left,
+		WorldStaticModel = VambraceSpike_Left,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		CombatSpeedModifier = 0.95,
+		DamagedSound = ArmourBreakMetal,
+		Weight = 2,
+	}
+
+	item VambraceSpike_Right
+	{
+		DisplayName = Spiked Metal Forearm Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Greave_Nails,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Right,
+        BiteDefense = 5,
+        BiteDefense = 10,
+		CanHaveHoles = FALSE,
+		ClothingItem = VambraceSpike_Right,
+		WorldStaticModel = VambraceSpike_Right,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		CombatSpeedModifier = 0.90,
+		DamagedSound = ArmourBreakMetal,
+		Weight = 2,
+	}
+
+	item Shoulderpad_Articulated_L_Metal
+    {
+
+        DisplayName = Articulated Metal Shoulder Armor - Left,
+        DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+        Icon = Articulated_ShoulderArmour_Left,
+        BloodLocation = UpperArms,
+        BodyLocation = ShoulderpadLeft,
+        ClothingItem = Shoulderpad_Articulated_L_Metal,
+        CanHaveHoles = FALSE,
+        WorldStaticModel = Shoulderpad_Articulated_L_Metal,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+        CombatSpeedModifier = 0.97,
+        DamagedSound = ArmourBreakMetal,
+        Weight = 2,
+    }
+
+	item Shoulderpad_Articulated_R_Metal
+    {
+        DisplayName = Articulated Metal Shoulder Armor - Right,
+        DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+        Icon = Articulated_ShoulderArmour_Right,
+        BloodLocation = UpperArms,
+        BodyLocation = ShoulderpadRight,
+        ClothingItem = Shoulderpad_Articulated_R_Metal,
+        CanHaveHoles = FALSE,
+        WorldStaticModel = Shoulderpad_Articulated_R_Metal,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+        CombatSpeedModifier = 0.95,
+        DamagedSound = ArmourBreakMetal,
+        Weight = 2,
+    }
+
+	item Shoulderpad_ArticulatedSpike_L
+    {
+        DisplayName = Spiked Articulated Metal Shoulder Armor - Left,
+        DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+        Icon = Articulated_ShoulderArmour_Left_Nails,
+        BloodLocation = UpperArms,
+        BodyLocation = ShoulderpadLeft,
+        ClothingItem = Shoulderpad_ArticulatedSpike_L,
+        CanHaveHoles = FALSE,
+        WorldStaticModel = Shoulderpad_ArticulatedSpike_L,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+        CombatSpeedModifier = 0.95,
+        DamagedSound = ArmourBreakMetal,
+        Weight = 3,
+        ConditionLowerChanceOneIn = 5,
+    }
+
+	item Shoulderpad_ArticulatedSpike_R
+    {
+        DisplayName = Spiked Articulated Metal Shoulder Armor - Right,
+        DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+        Icon = Articulated_ShoulderArmour_Right_Nails,
+        BloodLocation = UpperArms,
+        BodyLocation = ShoulderpadRight,
+        ClothingItem = Shoulderpad_ArticulatedSpike_R,
+        CanHaveHoles = FALSE,
+        WorldStaticModel = Shoulderpad_ArticulatedSpike_R,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+        CombatSpeedModifier = 0.90,
+        DamagedSound = ArmourBreakMetal,
+        Weight = 3,
+        ConditionLowerChanceOneIn = 5,
+    }
+
+	item Hat_HockeyMask_Metal
+	{
+		DisplayName = Metal Mask,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Metal_Mask,
+		BiteDefense = 10,
+		ScratchDefense = 20,
+		BloodLocation = Head,
+		BodyLocation = MaskEyes,
+		CanHaveHoles = FALSE,
+		ClothingItem = Hat_HockeyMask_Metal,
+		Insulation = 0.25,
+		WindResistance = 0.55,
+		DamagedSound = ArmourBreakMetal,
+		WorldStaticModel = HockeyMask_Metal,
+	}
+
+	item Hat_HockeyMask_Copper
+	{
+		DisplayName = Copper Mask,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Metal_Mask_Copper,
+		BiteDefense = 10,
+		ScratchDefense = 20,
+		BloodLocation = Head,
+		BodyLocation = MaskEyes,
+		CanHaveHoles = FALSE,
+		ClothingItem = Hat_HockeyMask_Copper,
+		Insulation = 0.25,
+		WindResistance = 0.55,
+		DamagedSound = ArmourBreakMetal,
+		WorldStaticModel = HockeyMask_Metal,
+	}
+
+	item Hat_HockeyMask_Gold
+	{
+		DisplayName = Gold Mask,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Metal_Mask_Gold,
+		BiteDefense = 10,
+		ScratchDefense = 20,
+		BloodLocation = Head,
+		BodyLocation = MaskEyes,
+		CanHaveHoles = FALSE,
+		ClothingItem = Hat_HockeyMask_Gold,
+		Insulation = 0.25,
+		WindResistance = 0.55,
+		DamagedSound = ArmourBreakMetal,
+		WorldStaticModel = HockeyMask_Metal,
+	}
+
+	item Hat_HockeyMask_Silver
+	{
+		DisplayName = Silver Mask,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Metal_Mask_Silver,
+		BiteDefense = 10,
+		ScratchDefense = 20,
+		BloodLocation = Head,
+		BodyLocation = MaskEyes,
+		CanHaveHoles = FALSE,
+		ClothingItem = Hat_HockeyMask_Silver,
+		Insulation = 0.25,
+		WindResistance = 0.55,
+		DamagedSound = ArmourBreakMetal,
+		WorldStaticModel = HockeyMask_Metal,
+	}
+
+	item Cuirass_Metal
+	{
+		DisplayName = Metal Body Armor,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Metal_Cuirass,
+		BloodLocation = ShirtNoSleeves,
+		BodyLocation = Cuirass,
+		ClothingItem = Cuirass_Metal,
+        CanHaveHoles = FALSE,
+        BiteDefense = 10,
+        BiteDefense = 15,
+        CombatSpeedModifier = 0.95,
+		RunSpeedModifier = 0.90,
+		WindResistance = 0.80,
+		WorldStaticModel = Cuirass_Bone,
+        Weight = 4,
+	}
+
+	item Gloves_MetalArmour
+	{
+		DisplayName = Gloves - Fingerless Metal Armored,
+		DisplayCategory = Accessory,
+		Type = Clothing,
+		Weight = 1,
+		Icon = FingerlessGloves_Metal,
+		BloodLocation = Hands,
+		BodyLocation = Hands,
+		ClothingItem = Gloves_MetalArmour,
+		Insulation = 0.25,
+		BiteDefense = 10,
+		ScratchDefense = 20,
+		WindResistance = 0.3,
+		WorldStaticModel = Gloves_Ground,
+		ConditionMax = 5,
+		ConditionLowerChanceOneIn = 4,
+        CanHaveHoles = FALSE,
+        DamagedSound = ArmourBreakMetal,
+	}
+
+	item Hat_MetalHelmet
+	{
+		DisplayName = Crude Metal Helmet,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Weight = 2,
+		Icon = Helmet_Metal_Crude,
+		BloodLocation = FullHelmet,
+		BodyLocation = FullHat,
+		CanHaveHoles = FALSE,
+		ChanceToFall = 0,
+		ClothingItem = Hat_MetalHelmet,
+		CombatSpeedModifier = 0.95,
+		Insulation = 0.55,
+        BiteDefense = 10,
+        ScratchDefense = 20,
+		WaterResistance = 0.85,
+		WindResistance = 0.35,
+        CanHaveHoles = FALSE,
+        DamagedSound = ArmourBreakMetal,
+	}
+
+	item Thigh_ArticMetal_R
+	{
+		Weight = 1,
+		DisplayName = Articulated Metal Thigh Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Articulated_ThighArmour,
+		BloodLocation = UpperLegs,
+		BodyLocation = Thigh_Right,
+		ClothingItem = Thigh_ArticMetal_R,
+       	BiteDefense = 5,
+        BiteDefense = 10,
+		CanHaveHoles = FALSE,
+		WorldStaticModel = ThighArmor_R,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.95,
+		DamagedSound = ArmourBreakMetal,
+	}
+
+	item Thigh_ArticMetal_L
+	{
+		Weight = 1,
+		DisplayName = Articulated Metal Thigh Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Articulated_ThighArmour,
+		BloodLocation = UpperLegs,
+		BodyLocation = Thigh_Left,
+		ClothingItem = Thigh_ArticMetal_L,
+        	BiteDefense = 5,
+        	BiteDefense = 10,
+		CanHaveHoles = FALSE,
+		WorldStaticModel = ThighArmor_L,
+        	Insulation = 0.35,
+        	WindResistance = 0.3,
+		RunSpeedModifier = 0.95,
+		DamagedSound = ArmourBreakMetal,
+	}
+
+	item Vambrace_FullMetal_Right
+	{
+		DisplayName = Full Metal Forearm Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Onepiece_ForearmArmour,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Right,
+        	BiteDefense = 5,
+        	BiteDefense = 10,
+		CanHaveHoles = FALSE,
+		ClothingItem = Vambrace_FullMetal_Right,
+		WorldStaticModel = Vambrace_Ground,
+        	Insulation = 0.35,
+        	WindResistance = 0.3,
+		CombatSpeedModifier = 0.98,
+		DamagedSound = ArmourBreakMetal,
+	}
+
+	item Vambrace_FullMetal_Left
+	{
+		DisplayName = Full Metal Forearm Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Onepiece_ForearmArmour,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Left,
+        	BiteDefense = 5,
+        	BiteDefense = 10,
+		CanHaveHoles = FALSE,
+		ClothingItem = Vambrace_FullMetal_Left,
+		WorldStaticModel = Vambrace_Ground,
+        	Insulation = 0.35,
+        	WindResistance = 0.3,
+		CombatSpeedModifier = 0.99,
+		DamagedSound = ArmourBreakMetal,
+	}
+
+	item Cuirass_CoatOfPlates
+	{
+		DisplayName = Coat of Plates Body Armor,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Metal_Cuirass,
+		BloodLocation = ShirtNoSleeves,
+		BodyLocation = Cuirass,
+		ClothingItem = Cuirass_CoatOfPlates,
+        	CanHaveHoles = FALSE,
+        	BiteDefense = 10,
+        	BiteDefense = 15,
+        	CombatSpeedModifier = 0.97,
+		RunSpeedModifier = 0.95,
+		WindResistance = 0.80,
+		WorldStaticModel = Cuirass_Bone,
+        	Weight = 4,
+        	DamagedSound = ArmourBreakMetal,
+	}
+
+	item Shoulderpad_Metal_L
+    {
+        DisplayName = Metal Shoulder Armor - Left,
+        DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+		Icon = Onepiece_ShoulderArmour,
+        BloodLocation = UpperArms,
+        BodyLocation = ShoulderpadLeft,
+        ClothingItem = Shoulderpad_Metal_L,
+        CanHaveHoles = FALSE,
+        WorldStaticModel = Shoulderpad_Metal_L,
+        	BiteDefense = 5,
+        	BiteDefense = 10,
+        CombatSpeedModifier = 0.95,
+        DamagedSound = ArmourBreakMetal,
+        Weight = 1,
+    }
+
+	item Shoulderpad_Metal_R
+    {
+        DisplayName = Metal Shoulder Armor - Right,
+        DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+		Icon = Onepiece_ShoulderArmour,
+        BloodLocation = UpperArms,
+        BodyLocation = ShoulderpadRight,
+        ClothingItem = Shoulderpad_Metal_R,
+        CanHaveHoles = FALSE,
+        WorldStaticModel = Shoulderpad_Metal_R,
+        	BiteDefense = 5,
+        	BiteDefense = 10,
+        CombatSpeedModifier = 0.92,
+        DamagedSound = ArmourBreakMetal,
+        Weight = 1,
+    }
+
+	item Shoulderpad_MetalSpike_L
+    {
+        DisplayName = Spiked Metal Shoulder Armor - Left,
+        DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+		Icon = Onepiece_ShoulderArmour_Spike,
+        BloodLocation = UpperArms,
+        BodyLocation = ShoulderpadLeft,
+        ClothingItem = Shoulderpad_MetalSpike_L,
+        CanHaveHoles = FALSE,
+        WorldStaticModel = Shoulderpad_MetalSpike_L,
+        	BiteDefense = 5,
+        	BiteDefense = 10,
+        CombatSpeedModifier = 0.95,
+        DamagedSound = ArmourBreakMetal,
+        Weight = 1,
+    }
+
+	item Shoulderpad_MetalSpike_R
+    {
+        DisplayName = Spiked Metal Shoulder Armor - Right,
+        DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+		Icon = Onepiece_ShoulderArmour_Spike,
+        BloodLocation = UpperArms,
+        BodyLocation = ShoulderpadRight,
+        ClothingItem = Shoulderpad_MetalSpike_R,
+        CanHaveHoles = FALSE,
+        WorldStaticModel = Shoulderpad_MetalSpike_R,
+        	BiteDefense = 5,
+        	BiteDefense = 10,
+        CombatSpeedModifier = 0.92,
+        DamagedSound = ArmourBreakMetal,
+        Weight = 1,
+    }
+
+    item ShinKneeGuard_L_Metal
+    {
+        DisplayName = Articulated Metal Shin Armor - Left,
+		DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+        Icon = Articulated_KneeShinArmour,
+		BloodLocation = LowerLegs,
+        BodyLocation = Calf_Left,
+        ClothingItem = ShinKneeGuard_L_Metal,
+		CanHaveHoles = FALSE,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+        BiteDefense = 5,
+        BiteDefense = 10,
+		RunSpeedModifier = 0.85,
+		WorldStaticModel = ShinKneeGuard_Ground_L,
+        DamagedSound = ArmourBreakMetal,
+		Weight = 2,
+    }
+
+    item ShinKneeGuard_R_Metal
+    {
+        DisplayName = Articulated Metal Shin Armor - Right,
+		DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+        Icon = Articulated_KneeShinArmour,
+		BloodLocation = LowerLegs,
+        BodyLocation = Calf_Right,
+        ClothingItem = ShinKneeGuard_R_Metal,
+		CanHaveHoles = FALSE,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+        BiteDefense = 5,
+        BiteDefense = 10,
+		RunSpeedModifier = 0.85,
+		WorldStaticModel = ShinKneeGuard_Ground_R,
+        DamagedSound = ArmourBreakMetal,
+		Weight = 2,
+    }
+
+    item ShinKneeGuardSpike_R_Metal
+    {
+        DisplayName = Spiked Articulated Metal Shin Armor - Right,
+		DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+        Icon = Articulated_KneeShinArmour_Spiked,
+		BloodLocation = LowerLegs,
+        BodyLocation = Calf_Right,
+        ClothingItem = ShinKneeGuardSpike_R_Metal,
+		CanHaveHoles = FALSE,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+        BiteDefense = 5,
+        BiteDefense = 10,
+		RunSpeedModifier = 0.80,
+		WorldStaticModel = ShinKneeGuardSpike_R,
+        DamagedSound = ArmourBreakMetal,
+		Weight = 3,
+    }
+
+    item ShinKneeGuardSpike_L_Metal
+    {
+        DisplayName = Spiked Articulated Metal Shin Armor - Left,
+		DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+        Icon = Articulated_KneeShinArmour_Spiked,
+		BloodLocation = LowerLegs,
+        BodyLocation = Calf_Left,
+        ClothingItem = ShinKneeGuardSpike_L_Metal,
+		CanHaveHoles = FALSE,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+        BiteDefense = 5,
+        BiteDefense = 10,
+		RunSpeedModifier = 0.80,
+		WorldStaticModel = ShinKneeGuardSpike_L,
+        DamagedSound = ArmourBreakMetal,
+		Weight = 3,
+    }
+
+	item Gorget_Metal
+	{
+		DisplayName = Metal Neck Guard,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Weight = 1,
+		Icon = Gorget_Metal,
+		BloodLocation = Neck,
+		BodyLocation = Gorget,
+		ClothingItem = Gorget_Metal,
+		Insulation = 1.0,
+		WindResistance = 1.0,
+		WorldStaticModel = Gorget,
+		BiteDefense = 25,
+		ScratchDefense = 50,
+		DamagedSound = ArmourBreakMetal,
+	}
+
+	item Codpiece_Metal
+	{
+		DisplayName = Metal Codpiece,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Weight = 1,
+		Icon = Codpiece_Metal,
+		BodyLocation = Codpiece,
+		CanHaveHoles = FALSE,
+		ClothingItem = Codpiece_Metal,
+		WorldStaticModel = BoxersHearts_Ground,
+		BloodLocation = Groin,
+		WorldStaticModel = Codpiece,
+		BiteDefense = 25,
+		ScratchDefense = 50,
+		DiscomfortModifier = 0.30,
+		RunSpeedModifier = 0.97,
+		DamagedSound = ArmourBreakMetal,
+	}
+
+}

@@ -1,0 +1,56 @@
+module Base
+{
+
+    item DyePack
+	{
+	DisplayCategory = Household,
+	Weight =	2,
+	Type =	Drainable,
+	UseWhileEquipped = FALSE,
+	UseDelta = 0.1,
+	DisplayName = Dye Pack,
+	Icon = DyePack,
+	Tooltip = Tooltip_ClothingDye,
+	WorldStaticModel = DyePack_Ground,
+	}
+
+	model DyePack_Ground
+    {
+        mesh = WorldItems/BoxOfJars,
+        texture = DyePackTexJars,
+        scale = 0.4,
+    }
+
+    recipe Make Dye Pack {
+	BlackDye,
+	BlueDye,
+	GreenDye,
+	RedDye,
+	YellowDye,
+	WhiteDye,
+        keep Mugl/Bowl/Teacup,
+        keep Spoon/WoodenStick,
+        Result: DyePack,
+        Category:Tailoring,
+        SkillRequired:Tailoring=6,
+        Sound:MakePlaster,
+        Time: 150,
+        }
+
+    recipe Mix Dye Pack {
+        HairDyeYellow/HairDyeBlonde,
+        HairDyeBlue/HairDyeRed/HairDyeGreen,
+        HairDyeWhite/Bleach/HairDyeBlack,
+	No=1,
+        keep Mugl/Bowl/Teacup,
+        keep Spoon/WoodenStick,
+        Result: DyePack,
+        Category:Tailoring,
+        SkillRequired:Tailoring=6,
+        Sound:MakePlaster,
+        Time: 150,
+	NeedToBeLearn : true,
+	Override : true,
+        }
+
+}

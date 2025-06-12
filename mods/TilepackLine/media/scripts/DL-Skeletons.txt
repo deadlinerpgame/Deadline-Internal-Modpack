@@ -1,0 +1,359 @@
+module Deadline
+{
+    imports    
+    {
+		Base
+	}
+
+item SkeletonF_A
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Female A,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonF_A,
+    }
+item SkeletonF_B
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Female B,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonF_B,
+    }
+item SkeletonF_C
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Female C,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonF_C,
+    }
+item SkeletonF_D
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Female D,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonF_D,
+    }
+item SkeletonF_AS
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Female A Sack,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonF_AS,
+    }
+item SkeletonF_BS
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Female B Sack,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonF_BS,
+    }
+item SkeletonF_CS
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Female C Sack,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonF_CS,
+    }
+item SkeletonF_DS
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Female D Sack,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonF_DS,
+    }
+
+
+
+
+item SkeletonM_A
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Male A,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonM_A,
+    }
+item SkeletonM_B
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Male B,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonM_B,
+    }
+item SkeletonM_C
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Male C,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonM_C,
+    }
+item SkeletonM_D
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Male D,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonM_D,
+    }
+item SkeletonM_AS
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Male A Sack,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonM_AS,
+    }
+item SkeletonM_BS
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Male B Sack,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonM_BS,
+    }
+item SkeletonM_CS
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Male C Sack,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonM_CS,
+    }
+item SkeletonM_DS
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10,
+		Type	=	Normal,
+		DisplayName	=	Skeleton Male D Sack,
+		Icon	=	Logs,
+		WorldStaticModel = MSkeletonM_DS,
+    }
+
+
+
+
+
+
+    model MSkeletonF_A
+	{
+		mesh = WorldItems/Monsters/SkeletonFemaleA,
+		texture = WorldItems/Monsters/SkeletonClothedA,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MSkeletonF_B
+	{
+		mesh = WorldItems/Monsters/SkeletonFemaleB,
+		texture = WorldItems/Monsters/SkeletonClothedA,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MSkeletonF_C
+	{
+		mesh = WorldItems/Monsters/SkeletonFemaleC,
+		texture = WorldItems/Monsters/SkeletonClothedB,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MSkeletonF_D
+	{
+		mesh = WorldItems/Monsters/SkeletonFemaleD,
+		texture = WorldItems/Monsters/SkeletonClothedB,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model MSkeletonF_AS
+	{
+		mesh = WorldItems/Monsters/SkeletonFemaleASack,
+		texture = WorldItems/Monsters/SkeletonClothedA,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MSkeletonF_BS
+	{
+		mesh = WorldItems/Monsters/SkeletonFemaleBSack,
+		texture = WorldItems/Monsters/SkeletonClothedA,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MSkeletonF_CS
+	{
+		mesh = WorldItems/Monsters/SkeletonFemaleCSack,
+		texture = WorldItems/Monsters/SkeletonClothedB,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MSkeletonF_DS
+	{
+		mesh = WorldItems/Monsters/SkeletonFemaleDSack,
+		texture = WorldItems/Monsters/SkeletonClothedB,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+
+    model MSkeletonM_A
+	{
+		mesh = WorldItems/Monsters/SkeletonMaleA,
+		texture = WorldItems/Monsters/SkeletonClothedA,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MSkeletonM_B
+	{
+		mesh = WorldItems/Monsters/SkeletonMaleB,
+		texture = WorldItems/Monsters/SkeletonClothedA,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MSkeletonM_C
+	{
+		mesh = WorldItems/Monsters/SkeletonMaleC,
+		texture = WorldItems/Monsters/SkeletonClothedB,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MSkeletonM_D
+	{
+		mesh = WorldItems/Monsters/SkeletonMaleD,
+		texture = WorldItems/Monsters/SkeletonClothedB,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model MSkeletonM_AS
+	{
+		mesh = WorldItems/Monsters/SkeletonMaleASack,
+		texture = WorldItems/Monsters/SkeletonClothedA,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MSkeletonM_BS
+	{
+		mesh = WorldItems/Monsters/SkeletonMaleBSack,
+		texture = WorldItems/Monsters/SkeletonClothedA,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MSkeletonM_CS
+	{
+		mesh = WorldItems/Monsters/SkeletonMaleCSack,
+		texture = WorldItems/Monsters/SkeletonClothedB,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MSkeletonM_DS
+	{
+		mesh = WorldItems/Monsters/SkeletonMaleDSack,
+		texture = WorldItems/Monsters/SkeletonClothedB,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+   }

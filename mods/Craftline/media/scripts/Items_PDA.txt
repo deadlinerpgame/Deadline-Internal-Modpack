@@ -1,0 +1,44 @@
+module Base
+{
+
+item PDA
+	{
+	    DisplayCategory = Communications,
+		Type			= Radio,
+		Icon			= PDA,
+		Weight          	= 1.25,
+
+		DisplayName		= Personal Digital Assistant,
+
+		UseDelta		= 0.010,
+		UseWhileEquipped	= FALSE,
+		DisappearOnUse		= FALSE,
+		TwoWay			= TRUE,
+		TransmitRange		= 8000,
+		MicRange		= 5,
+		BaseVolumeRange		= 14,
+		IsPortable		= TRUE,
+		IsTelevision		= FALSE,
+		MinChannel		= 10000,
+		MaxChannel		= 500000,
+		UsesBattery		= TRUE,
+		IsHighTier		= FALSE,
+		Tooltip = Tooltip_item_Radio,
+        	WorldStaticModel = Model_PDA,
+        	AttachmentType = Walkie,
+
+    }
+
+	model Model_PDA
+	{
+		mesh = WorldItems/PDA,
+		texture = WorldItems/PDA,
+
+		attachment world
+		{
+			offset = 0 0 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+}

@@ -1,0 +1,188 @@
+module Deadline
+{
+    imports    
+    {
+		Base
+	}
+
+item MonsterA_A
+	{
+	    	DisplayCategory = Material,
+		Weight	=	50,
+		Type	=	Normal,
+		DisplayName	=	Monster A,
+		Icon	=	Logs,
+		WorldStaticModel = MMonsterA_A,
+    }
+
+item MonsterA_B
+	{
+	    	DisplayCategory = Material,
+		Weight	=	50,
+		Type	=	Normal,
+		DisplayName	=	Monster A,
+		Icon	=	Logs,
+		WorldStaticModel = MMonsterA_B,
+    }
+
+item FrozenZed_A
+	{
+	    	DisplayCategory = Material,
+		Weight	=	50,
+		Type	=	Normal,
+		DisplayName	=	Frozen Zed,
+		Icon	=	Logs,
+		WorldStaticModel = MFrozenZed_A,
+    }
+
+item IcecubeZed_A
+	{
+	    	DisplayCategory = Material,
+		Weight	=	50,
+		Type	=	Normal,
+		DisplayName	=	Icecube Zed,
+		Icon	=	Logs,
+		WorldStaticModel = MIcecubeZed_A,
+    }
+
+item RatKing
+	{
+	    	DisplayCategory = Material,
+		Weight	=	50,
+		Type	=	Normal,
+		DisplayName	=	Zombie Rat King,
+		Icon	=	Logs,
+		WorldStaticModel = MRatKing,
+    }
+
+item ZombieBuck
+	{
+	    	DisplayCategory = Material,
+		Weight	=	50,
+		Type	=	Normal,
+		DisplayName	=	Diseased Buck,
+		Icon	=	Logs,
+		WorldStaticModel = MZombieBuck,
+    }
+
+item ZombieBear_A
+	{
+	    	DisplayCategory = Material,
+		Weight	=	50,
+		Type	=	Normal,
+		DisplayName	=	Diseased Bear - Up,
+		Icon	=	Logs,
+		WorldStaticModel = MZombieBear_A,
+    }
+
+item ZombieBear_B
+	{
+	    	DisplayCategory = Material,
+		Weight	=	50,
+		Type	=	Normal,
+		DisplayName	=	Diseased Bear - Down,
+		Icon	=	Logs,
+		WorldStaticModel = MZombieBear_B,
+    }
+    model MIcecubeZed_A
+	{
+		mesh = WorldItems/Monsters/IcecubeZed,
+		texture = WorldItems/Monsters/IcecubeZed,
+		scale = 0.5,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MMonsterA_A
+	{
+		mesh = WorldItems/Monsters/MonsterA_A,
+		texture = WorldItems/Monsters/MonsterA,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MMonsterA_B
+	{
+		mesh = WorldItems/Monsters/MonsterA_B,
+		texture = WorldItems/Monsters/MonsterA,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MFrozenZed_A
+	{
+		mesh = WorldItems/Monsters/FrozenZed,
+		texture = WorldItems/Monsters/FrozenZed,
+		scale = 0.5,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model MRatKing
+	{
+		mesh = WorldItems/Monsters/RatKing,
+		texture = WorldItems/Monsters/ratking,
+		scale = 7,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model MZombieBuck
+	{
+		mesh = WorldItems/Monsters/ZombieBuck,
+		texture = WorldItems/Monsters/ZombieBuck,
+		scale = 0.2,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model MZombieBear_A
+	{
+		mesh = WorldItems/Monsters/ZombieBear_A,
+		texture = WorldItems/Monsters/ZombieBear,
+		scale = 0.005,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model MZombieBear_B
+	{
+		mesh = WorldItems/Monsters/ZombieBear_B,
+		texture = WorldItems/Monsters/ZombieBear,
+		scale = 0.005,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+   }

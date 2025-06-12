@@ -1,0 +1,59 @@
+module GL
+{
+    imports
+    {
+   	 Base,
+    }
+
+recipe Train Tailoring (Level 0)
+    {
+        RippedSheets/RippedSheetsDirty=2,
+	keep Needle,
+
+        Result:RippedSheets,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveTailoring10,
+        Category:Training,
+    }
+
+    recipe Train Tailoring (Level 1)
+    {
+        RippedSheets/RippedSheetsDirty=2,
+	keep Needle,
+
+        Result:RippedSheets,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveTailoring20,
+        Category:Training,
+	SkillRequired:Tailoring=1,
+    }
+
+    recipe Train Tailoring (Level 2)
+    {
+        RippedSheets/RippedSheetsDirty=2,
+	keep Needle,
+
+        Result:RippedSheets,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveTailoring30,
+        Category:Training,
+	SkillRequired:Tailoring=2,
+    }
+
+    recipe Train Tailoring (Level 3)
+    {
+        RippedSheets/RippedSheetsDirty=2,
+	keep Needle,
+
+        Result:RippedSheets,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveTailoring40,
+        Category:Training,
+	SkillRequired:Tailoring=3,
+    }
+
+}

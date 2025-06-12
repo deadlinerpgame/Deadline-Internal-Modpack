@@ -1,0 +1,197 @@
+module Base
+{ 
+
+   recipe Craft Cudgel with Brake Disc
+    {
+       	aerx.LargeBranch=1,
+	LeatherStrips=2,
+	keep Wrench,
+	NormalBrake1/ModernBrake1/NormalBrake2/ModernBrake2/NormalBrake3/ModernBrake3=1,
+        Result:aerx.Cudgel_Brake=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:Woodwork=4,
+    }
+
+   recipe Craft Sheet Metal Reinforced Cudgel
+    {
+       	aerx.LargeBranch=1,
+	Screws=2,
+	LeatherStrips=2,
+	SmallSheetMetal/AluminumScrap=2,
+	keep Wrench,
+	keep Screwdriver,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	keep [Recipe.GetItemTypes.Saw],
+        Result:aerx.Cudgel_ScrapSheet=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:Woodwork=3,
+
+    }
+
+   recipe Craft a Bone War Hatchet
+    {
+       	aerx.HatchetHead_Bone=1,
+	TreeBranch=1,
+	LeatherStrips=2,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.Hatchet_Bone=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:Woodwork=1,
+	NeedToBeLearn:true,
+
+    }
+
+   recipe Cudgel with Spade Head
+    {
+       	aerx.LargeBranch=1,
+	Shovel=1,
+	Screws=2,
+	LeatherStrips=2,
+	keep Wrench,
+	keep Screwdriver,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	keep [Recipe.GetItemTypes.Saw],
+        Result:aerx.Cudgel_SpadeHead=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:Woodwork=4,
+
+    }
+
+   recipe Craft a Jawbone War Axe
+    {
+       	aerx.LargeBranch=1,
+	LeatherStrips=2,
+	aerx.JawboneBovide=1,
+	keep [Recipe.GetItemTypes.Saw],
+        Result:aerx.JawboneBovide_Axe=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:Woodwork=3,
+	NeedToBeLearn:true,
+
+    }
+
+
+   recipe Craft Scrap Metal Cleaver
+    {
+       	MetalBar=2,
+	MetalPipe=2,
+	BlowTorch=1,
+	SmallSheetMetal=1,
+	LeatherStrips/RippedSheets/DenimStrips=1,
+	keep [Recipe.GetItemTypes.Saw],
+	keep WeldingMask,
+        Result:aerx.MeatCleaver_Scrap=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:MetalWelding=5,
+	NearItem:Simple Forge,
+
+    }
+
+   recipe Craft Brake Disk Scrap Metal Weapon
+    {
+        MetalBar=2,
+	MetalPipe=2,
+	BlowTorch=1,
+	NormalBrake1/ModernBrake1/NormalBrake2/ModernBrake2/NormalBrake3/ModernBrake3=1,
+	LeatherStrips/RippedSheets/DenimStrips=1,
+	keep [Recipe.GetItemTypes.Saw],
+	keep WeldingMask,
+	keep Wrench,
+        Result:aerx.ScrapWeapon_Brake=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:MetalWelding=5,
+	NearItem:Simple Forge,
+
+    }
+
+   recipe Craft Cudgel with Spikes
+    {
+       	aerx.LargeBranch=1,
+	aerx.SharpBone_Long=4,
+	LeatherStrips=2,
+	keep Wrench,
+	keep Screwdriver,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	keep [Recipe.GetItemTypes.Saw],
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.Cudgel_Bone=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:Woodwork=3,
+
+    }
+
+   recipe Cudgel with Garden Fork Head
+    {
+	GardenFork=1,
+       	aerx.LargeBranch=1,
+	Screws=2,
+	LeatherStrips=2,
+	keep Wrench,
+	keep Screwdriver,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	keep [Recipe.GetItemTypes.Saw],
+        Result:aerx.Cudgel_GardenForkHead=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:Woodwork=4,
+
+    }
+
+   recipe Craft Cudgel with Nails
+    {
+	Nails=5,
+       	aerx.LargeBranch=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.Cudgel_Nails=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:Woodwork=1,
+
+    }
+
+   recipe Craft Scrap Metal Cleaver-Axe
+    {
+       	MetalBar=2,
+	MetalPipe=2,
+	BlowTorch=1,
+	SmallSheetMetal=1,
+	LeatherStrips/RippedSheets/DenimStrips=1,
+	keep [Recipe.GetItemTypes.Saw],
+	keep WeldingMask,
+        Result:aerx.Axe_ScrapCleaver=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:MetalWelding=5,
+	NearItem:Simple Forge,
+    }
+
+
+
+   recipe Craft Spade Scrap Metal Weapon
+    {
+       	MetalBar=2,
+	MetalPipe=2,
+	BlowTorch=1,
+	SmallSheetMetal=1,
+	Shovel=1,
+	LeatherStrips/RippedSheets/DenimStrips=1,
+	keep [Recipe.GetItemTypes.Saw],
+	keep WeldingMask,
+        Result:aerx.ScrapWeaponSpade=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:MetalWelding=5,
+	NearItem:Simple Forge,
+    }
+
+
+
+}

@@ -1,0 +1,59 @@
+module GL
+{
+    imports
+    {
+   	 Base,
+    }
+
+    recipe Train First Aid (Level 0)
+    {
+        Thread=5,
+	keep Needle,
+
+        Result: Thread,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveDoctor10,
+        Category:Training,
+    }
+
+    recipe Train First Aid (Level 1)
+    {
+        Thread=5,
+	keep Needle,
+
+        Result: Thread,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveDoctor20,
+        Category:Training,
+	SkillRequired:Doctor=1,
+    }
+
+    recipe Train First Aid (Level 2)
+    {
+        Thread=5,
+	keep Needle,
+
+        Result: Thread,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveDoctor30,
+        Category:Training,
+	SkillRequired:Doctor=2,
+    }
+
+    recipe Train First Aid (Level 3)
+    {
+        Thread=5,
+	keep Needle,
+
+        Result: Thread,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveDoctor40,
+        Category:Training,
+	SkillRequired:Doctor=3,
+    }
+	
+}

@@ -1,0 +1,152 @@
+module Deadline
+{
+    imports    
+    {
+		Base
+	}
+
+item Rakija
+	{
+		DisplayName = Rakija Bottle,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.7,
+		Icon = Rakija,
+		EvolvedRecipe = Beverage:4;Beverage2:4;HotDrink:4;HotDrinkRed:4;HotDrinkWhite:4;HotDrinkSpiffo:4;HotDrinkTea:4, /*;Soup:4;Stew:4,*/
+		FoodType = Liquor,
+		AlcoholPower = 2,
+		Alcoholic = TRUE,
+		CantBeFrozen = TRUE,
+		EatType = Bourbon,
+		Packaged = TRUE,
+		ReplaceOnUse = WhiskeyEmpty,
+		HungerChange = -20,
+		ThirstChange = -20,
+		UnhappyChange = -10,
+		Calories = 1500,
+		Carbohydrates = 0,
+		Lipids = 0,
+		Proteins = 0,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottleGlass,
+		StaticModel = Rakija,
+		WorldStaticModel = Rakija,
+		Tags = Liquor,
+	}
+
+item Mead
+	{
+		DisplayName = Mead Bottle,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.7,
+		Icon = Mead,
+		EvolvedRecipe = Beverage:4;Beverage2:4;HotDrink:4;HotDrinkRed:4;HotDrinkWhite:4;HotDrinkSpiffo:4;HotDrinkTea:4, /*;Soup:4;Stew:4,*/
+		FoodType = Liquor,
+		AlcoholPower = 2,
+		Alcoholic = TRUE,
+		CantBeFrozen = TRUE,
+		EatType = Bourbon,
+		Packaged = TRUE,
+		ReplaceOnUse = WhiskeyEmpty,
+		HungerChange = -20,
+		ThirstChange = -20,
+		UnhappyChange = -10,
+		Calories = 1500,
+		Carbohydrates = 0,
+		Lipids = 0,
+		Proteins = 0,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottleGlass,
+		StaticModel = Mead,
+		WorldStaticModel = Mead,
+		Tags = Liquor,
+	}
+
+item Vodka
+	{
+		DisplayName = Vodka Bottle,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.7,
+		Icon = Vodka,
+		EvolvedRecipe = Beverage:4;Beverage2:4;HotDrink:4;HotDrinkRed:4;HotDrinkWhite:4;HotDrinkSpiffo:4;HotDrinkTea:4, /*;Soup:4;Stew:4,*/
+		FoodType = Liquor,
+		AlcoholPower = 2,
+		Alcoholic = TRUE,
+		CantBeFrozen = TRUE,
+		EatType = Bourbon,
+		Packaged = TRUE,
+		ReplaceOnUse = WhiskeyEmpty,
+		HungerChange = -20,
+		ThirstChange = -20,
+		UnhappyChange = -10,
+		Calories = 1500,
+		Carbohydrates = 0,
+		Lipids = 0,
+		Proteins = 0,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottleGlass,
+		StaticModel = Vodka,
+		WorldStaticModel = Vodka,
+		Tags = Liquor,
+	}
+
+	item Kvass
+	{
+		DisplayName = Kvass Bottle,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.7,
+		Icon = Kvass,
+		EvolvedRecipe = Beverage:4;Beverage2:4;HotDrink:4;HotDrinkRed:4;HotDrinkWhite:4;HotDrinkSpiffo:4;HotDrinkTea:4, /*;Soup:4;Stew:4,*/
+		FoodType = Liquor,
+		AlcoholPower = 2,
+		Alcoholic = TRUE,
+		CantBeFrozen = TRUE,
+		EatType = Bourbon,
+		Packaged = TRUE,
+		ReplaceOnUse = WaterBottleEmpty,
+		HungerChange = -20,
+		ThirstChange = -20,
+		UnhappyChange = -10,
+		Calories = 1500,
+		Carbohydrates = 0,
+		Lipids = 0,
+		Proteins = 0,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottleGlass,
+		StaticModel = Kvass,
+		WorldStaticModel = Kvass,
+		Tags = Liquor,
+	}
+
+item Sake
+	{
+		DisplayName = Sake,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 1,
+		Icon = WineFull,
+		/*EvolvedRecipe = Beverage:4;Beverage2:4;Soup:4;Stew:4;PastaPot:4;PastaPan:4;WineInGlass:4,*/
+		EvolvedRecipe = Beverage:4;Beverage2:4;WineInGlass:4;PastaPot:4;PastaPan:4,
+		FoodType = Wine,
+		Alcoholic = TRUE,
+		CantBeFrozen = TRUE,
+		EatType = Bourbon,
+		Packaged = TRUE,
+		ReplaceOnUse = WineEmpty,
+		HungerChange = -20,
+		ThirstChange = -20,
+		UnhappyChange = -20,
+		Calories = 481,
+		Carbohydrates = 0,
+		Lipids = 0,
+		Proteins = 0,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottleGlass,
+		StaticModel = WhiteWineBottle,
+		WorldStaticModel = WineWhiteGround,
+	}
+
+   }

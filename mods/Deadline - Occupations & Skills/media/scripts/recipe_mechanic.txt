@@ -1,0 +1,417 @@
+module Base
+{
+
+ recipe Make Performance Suspensions Type Standard 
+    {
+        NormalSuspension1=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:ModernSuspension1,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Regular Suspensions Type Standard.,
+    }
+
+    recipe Make Performance Suspensions Type Heavy-Duty
+    {
+        NormalSuspension2=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:ModernSuspension2,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Regular Suspensions Type Heavy-Duty.,
+    }
+
+    recipe Make Performance Suspensions Type Sport
+    {
+        NormalSuspension3=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:ModernSuspension3,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Regular Suspensions Type Sport.,
+    }
+
+    /** Gas Tanks **/
+
+    recipe Make Standard Gas Tank Type Standard
+    {
+        SmallGasTank1=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:NormalGasTank1,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Small Gas Tank Type Standard.,
+    }
+
+    recipe Make Big Gas Tank Type Standard
+    {
+        NormalGasTank1=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:BigGasTank1,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Standard Gas Tank Type Standard.,
+    }
+
+    recipe Make Standard Gas Tank Type Heavy-Duty
+    {
+        SmallGasTank2=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:NormalGasTank2,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Small Gas Tank Type Heavy-Duty.,
+    }
+
+    recipe Make Big Gas Tank Type Heavy-Duty
+    {
+        NormalGasTank2=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:BigGasTank2,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Standard Gas Tank Type Heavy-Duty.,
+    }
+
+    recipe Make Standard Gas Tank Type Sport
+    {
+        SmallGasTank3=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:NormalGasTank3,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Small Gas Tank Type Sport.,
+    }
+
+    recipe Make Big Gas Tank Type Sport
+    {
+        NormalGasTank3=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:BigGasTank3,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Standard Gas Tank Type Sport.,
+    }
+
+    /** Mufflers **/
+
+    recipe Make Average Muffler Type Standard
+    {
+        OldCarMuffler1=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:NormalCarMuffler1,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Old Muffler Type Standard.,
+    }
+
+    recipe Make Performance Muffler Type Standard
+    {
+        NormalCarMuffler1=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:ModernCarMuffler1,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Average Muffler Type Standard.,
+    }
+
+    recipe Make Average Muffler Type Heavy-Duty
+    {
+        OldCarMuffler2=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:NormalCarMuffler2,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Old Muffler Type Heavy-Duty.,
+    }
+
+    recipe Make Performance Muffler Type Heavy-Duty
+    {
+        NormalCarMuffler2=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:ModernCarMuffler2,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Average Muffler Type Heavy-Duty.,
+    }
+
+    recipe Make Average Muffler Type Sport
+    {
+        OldCarMuffler3=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:NormalCarMuffler3,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Old Muffler Type Sport.,
+    }
+
+    recipe Make Performance Muffler Type Sport
+    {
+        NormalCarMuffler3=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:ModernCarMuffler3,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Average Muffler Type Sport.,
+    }
+
+    /** Tires **/
+
+    recipe Make Regular Tire Type Standard
+    {
+        OldTire1=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:NormalTire1,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Old Tire Type Standard.,
+    }
+
+    recipe Make Performance Tire Type Standard
+    {
+        NormalTire1=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:ModernTire1,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Regular Tire Type Standard.,
+    }
+
+    recipe Make Regular Tire Type Heavy-Duty
+    {
+        OldTire2=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:NormalTire2,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Old Tire Type Heavy-Duty.,
+    }
+
+    recipe Make Performance Tire Type Heavy-Duty
+    {
+        NormalTire2=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:ModernTire2,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Regular Tire Type Heavy-Duty.,
+    }
+
+    recipe Make Regular Tire Type Sport
+    {
+        OldTire3=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:NormalTire3,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Old Tire Type Sport.,
+    }
+
+    recipe Make Performance Tire Type Sport
+    {
+        NormalTire3=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:ModernTire3,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Regular Tire Type Sport.,
+    }
+
+    /** Brakes **/
+
+    recipe Make Regular Brake Type Standard
+    {
+        OldBrake1=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:NormalBrake1,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Old Brake Type Standard.,
+    }
+
+    recipe Make Performance Brake Type Standard
+    {
+        NormalBrake1=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:ModernBrake1,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Regular Brake Type Standard.,
+    }
+
+    recipe Make Regular Brake Type Heavy-Duty
+    {
+        OldBrake2=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:NormalBrake2,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Old Brake Type Heavy-Duty.,
+    }
+
+    recipe Make Performance Brake Type Heavy-Duty
+    {
+        NormalBrake2=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:ModernBrake2,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Regular Brake Type Heavy-Duty.,
+    }
+
+    recipe Make Regular Brake Type Sport
+    {
+        OldBrake3=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:NormalBrake3,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Old Brake Type Sport.,
+    }
+
+    recipe Make Performance Brake Type Sport
+    {
+        NormalBrake3=2,
+        keep Wrench,
+        keep Screwdriver,
+
+        Result:ModernBrake3,
+        Time:100.0,
+        Category:Expertise,
+        OnGiveXP:Recipe.OnGiveXP.OE_MergeCarParts,
+        NeedToBeLearn:true,
+        CanBeDoneFromFloor:true,
+        Tooltip:Requires 2 Regular Brake Type Sport.,
+    }
+
+}

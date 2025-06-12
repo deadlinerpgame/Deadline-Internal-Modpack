@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animNode x_extends="Cow_crawlerattack_fail.xml">
+	<m_Name>Cow_crawlerattack_success</m_Name>
+	<m_AnimName>Cow_Attack_HeadSwipe</m_AnimName>
+	<m_Looped>false</m_Looped>
+	<m_SpeedScale>1.40</m_SpeedScale>
+	<m_BlendTime>0</m_BlendTime>
+
+
+	<m_Conditions />
+	<m_Conditions>
+		<m_BoolValue>true</m_BoolValue>
+	</m_Conditions>
+	<m_Events />
+	<m_Events>
+		<m_EventName>SetVariable</m_EventName>
+		<m_TimePc>0.1</m_TimePc>
+		<m_ParameterValue>PlayerHitReaction=CrawlerBite</m_ParameterValue>
+	</m_Events>
+	<m_Events>
+		<m_EventName>AttackCollisionCheck</m_EventName>
+		<m_TimePc>0.5</m_TimePc>
+		<m_ParameterValue></m_ParameterValue>
+	</m_Events>
+
+
+
+	<m_Conditions>
+		<m_Name>isCowAnimal</m_Name>
+		<m_Type>STRING</m_Type>
+		<m_StringValue>true</m_StringValue>
+	</m_Conditions>
+</animNode>

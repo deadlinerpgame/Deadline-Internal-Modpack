@@ -1,0 +1,214 @@
+module Base
+{
+	model Hominid_Skull
+	{
+		mesh = WorldItems/Skull_Hominid_Whole,
+		texture = WorldItems/Skull_Hominid,
+		scale = 0.1,
+	}
+	model Hominid_Skull_Partial
+	{
+		mesh = WorldItems/Skull_Hominid_Part,
+		texture = WorldItems/Skull_Hominid,
+		scale = 0.1,
+	}
+	model Hominid_Skull_Fragment
+	{
+		mesh = WorldItems/Skull_Hominid_Piece,
+		texture = WorldItems/Skull_Hominid,
+		scale = 0.1,
+	}
+
+	model Chicken_Skull
+    {
+        mesh = WorldItems/Chicken_Skull,
+        texture = WorldItems/ChickenSkeleton,
+        scale = 1,
+    }
+	model Cockerel_Skull
+    {
+        mesh = WorldItems/Cockerel_Skull,
+        texture = WorldItems/ChickenSkeleton,
+        scale = 1,
+    }
+	model Chicken_Chick_Skull
+    {
+        mesh = WorldItems/Chicken_Chick_Skull,
+        texture = WorldItems/ChickenSkeleton,
+        scale = 1,
+    }
+	model Chicken_Feather
+    {
+        mesh = WorldItems/Feather,
+        texture = WorldItems/Feather_Chicken,
+        scale = 0.1,
+    }
+	model Turkey_Feather
+    {
+        mesh = WorldItems/Feather_Turkey,
+        texture = WorldItems/Feather_Turkey,
+        scale = 0.1,
+    }
+	model Bull_Skull
+    {
+        mesh = WorldItems/Bull_Skull,
+        texture = WorldItems/Bull_Skeleton,
+        scale = 0.3,
+    }
+	model Calf_Skull
+    {
+        mesh = WorldItems/Calf_Skull,
+        texture = WorldItems/Bull_Skeleton,
+        scale = 0.3,
+    }
+	model Cow_Skull
+    {
+        mesh = WorldItems/Cow_Skull,
+        texture = WorldItems/Bull_Skeleton,
+        scale = 0.3,
+    }
+	model DeerDoe_Skull
+    {
+        mesh = WorldItems/DeerDoe_Skull,
+        texture = WorldItems/DeerStag_Skeleton,
+        scale = 0.3,
+    }
+	model DeerFawn_Skull
+    {
+        mesh = WorldItems/DeerFawn_Skull,
+        texture = WorldItems/DeerStag_Skeleton,
+        scale = 0.4,
+    }
+	model DeerStag_Skull
+    {
+        mesh = WorldItems/DeerStag_Skull,
+        texture = WorldItems/DeerStag_Skeleton,
+        scale = 0.3,
+    }
+	model Pig_Skull
+    {
+        mesh = WorldItems/Pig_Skull,
+        texture = WorldItems/PigSkeleton,
+        scale = 0.3,
+    }
+	model Piglet_Skull
+    {
+        mesh = WorldItems/Piglet_Skull,
+        texture = WorldItems/PigSkeleton,
+        scale = 1,
+    }
+	model Sheep_LambSkull
+    {
+        mesh = WorldItems/Sheep_LambSkull,
+        texture = WorldItems/SheepSkeleton,
+        scale = 1,
+    }
+	model Sheep_RamSkull
+    {
+        mesh = WorldItems/Sheep_RamSkull,
+        texture = WorldItems/SheepSkeleton,
+        scale = 0.5,
+    }
+	model Sheep_Skull
+    {
+        mesh = WorldItems/Sheep_Skull,
+        texture = WorldItems/SheepSkeleton,
+        scale = 0.5,
+    }
+	model Rabbit_KittenSkull
+    {
+        mesh = WorldItems/Rabbit_KittenSkull,
+        texture = WorldItems/RabbitSkeleton,
+        scale = 1,
+    }
+	model Rabbit_Skull
+    {
+        mesh = WorldItems/Rabbit_Skull,
+        texture = WorldItems/RabbitSkeleton,
+        scale = 0.5,
+    }
+	model Raccoon_Skull
+    {
+        mesh = WorldItems/Raccoon_Skull,
+        texture = WorldItems/RaccoonSkeleton,
+        scale = 0.4,
+    }
+	model Turkey_PoultSkull
+    {
+        mesh = WorldItems/Turkey_PoultSkull,
+        texture = WorldItems/TurkeySkeleton,
+        scale = 1,
+    }
+	model Turkey_Skull
+    {
+        mesh = WorldItems/Turkey_Skull,
+        texture = WorldItems/TurkeySkeleton,
+        scale = 0.5,
+    }
+
+
+	model Bones_Ground
+    {
+        mesh = WorldItems/Bones,
+		texture = WorldItems/Bones,
+        scale = 0.3,
+    }
+
+	model Bone
+	{
+		mesh = weapons/1handed/Bone_Long_Hand,
+		texture = weapons/1handed/Bone_Club,
+
+		attachment world
+		{
+			offset = -0.0143 -0.0001 -0.0000,
+			rotate = 0.0000 -0.0000 0.4854,
+		}
+	}
+
+	model LargeBone
+	{
+		mesh = weapons/1handed/Bone_Short_Hand,
+		texture = weapons/1handed/Bone_Club,
+		scale = 1.4,
+
+		attachment world
+		{
+			offset = -0.0186 -0.0000 -0.0000,
+			rotate = 0.0000 -0.0000 0.0000,
+		}
+	}
+
+	model HerbivoreTeeth
+    {
+        mesh = WorldItems/MammalTeeth_Pile,
+        texture = WorldItems/MammalTeeth_Pile,
+        scale = 0.1,
+    }
+
+	model BoarTusk
+    {
+        mesh = WorldItems/BoarTusk,
+		texture = WorldItems/BoarTusk,
+        scale = 0.125,
+    }
+
+	model JawboneBovide
+	{
+		mesh = weapons/1handed/JawBone_Hand,
+		texture = weapons/1handed/Jawbone_Weapon,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0106 -0.0321 -0.0001,
+			rotate = 180.0000 -89.4590 180.0000,
+		}
+
+		attachment world
+		{
+			offset = -0.0112 0.1040 0.0105,
+			rotate = -0.0000 2.4797 0.2376,
+		}
+	}
+
+}

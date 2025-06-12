@@ -1,0 +1,52 @@
+module aerx {
+  imports {
+      Base
+ }
+
+item BlackPowder
+    {
+        DisplayCategory = Material,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseDelta = 0.1,
+        UseWhileEquipped = FALSE,
+        DisplayName	=	Black Powder,
+        Icon	=	Blackpowder,
+        WeightEmpty = 0.01,
+        WorldStaticModel = GunpowderJar,
+    }
+
+item T1PistolAmmo
+	{
+		DisplayName = Junk Pistol Round,
+		DisplayCategory = Ammo,
+		Type = Normal,
+		Weight = 0.02,
+		Icon = PistolAmmo,
+		Count = 1,
+		WorldStaticModel = 9mmRounds,
+	}
+
+item T1ShotgunAmmo
+	{
+		DisplayName = Junk Shotgun Shell,
+		DisplayCategory = Ammo,
+		Type = Normal,
+		Weight = 0.06,
+		Icon = ShotgunAmmo,
+		Count = 1,
+		WorldStaticModel = ShotGunShells,
+	}
+
+item T1RevolverAmmo
+	{
+		DisplayName = Junk Revolver Round,
+		DisplayCategory = Ammo,
+		Type = Normal,
+		Weight = 0.03,
+		Icon = PistolAmmo,
+		Count = 1,
+		WorldStaticModel = 9mmRounds,
+	}
+
+}

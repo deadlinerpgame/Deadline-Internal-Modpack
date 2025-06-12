@@ -1,0 +1,10 @@
+require "Moveables/ISMoveableDefinitions"
+Events.OnGameBoot.Add(function()
+    local defs = ISMoveableDefinitions:getInstance()
+    defs.addScrapDefinition( "BatteryBank",  {"Base.Screwdriver"}, {}, Perks.Electricity,  2000, "Dismantle", true, 10)
+    defs.addScrapItem( "BatteryBank", "ISA.ISAInverter", 1, 60, true )
+    defs.addScrapItem( "BatteryBank", "Radio.ElectricWire", 3, 80, true )
+    defs.addScrapItem( "BatteryBank", "Base.ElectronicsScrap", 6, 80, true )
+    defs.addScrapItem( "BatteryBank", "Base.MetalBar", 4, 70, true )
+    defs.addScrapItem( "BatteryBank", "Base.SmallSheetMetal", 5, 70, true )
+end)

@@ -1,0 +1,354 @@
+module Deadline
+{
+imports
+	{
+		Base,
+	}
+
+recipe Make 3-Plank Stack
+    {
+        Plank=3,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+
+        CanBeDoneFromFloor:true,
+        Result:Plank3,
+        Time:60.0,
+        OnCreate:Recipe.OnCreate.CreatePlankStack,
+        Category:Carpentry,
+    }
+
+recipe Unstack Planks
+    {
+        Plank3,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.Plank=3,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+recipe Make 6-Plank Stack
+    {
+        Plank=6,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+
+        CanBeDoneFromFloor:true,
+        Result:Plank6,
+        Time:60.0,
+        OnCreate:Recipe.OnCreate.CreatePlankStack,
+        Category:Carpentry,
+    }
+
+recipe Unstack Planks
+    {
+        Plank6,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.Plank=6,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+recipe Make 12-Plank Stack
+    {
+        Plank=12,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+
+        CanBeDoneFromFloor:true,
+        Result:Plank12,
+        Time:60.0,
+        OnCreate:Recipe.OnCreate.CreatePlankStack,
+        Category:Carpentry,
+    }
+
+recipe Unstack Planks
+    {
+        Plank12,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.Plank=12,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+ recipe Make 24-Plank Stack
+    {
+        Plank=24,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+
+        CanBeDoneFromFloor:true,
+        Result:Plank24,
+        Time:60.0,
+        OnCreate:Recipe.OnCreate.CreatePlankStack,
+        Category:Carpentry,
+    }
+
+recipe Unstack Planks
+    {
+        Plank24,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.Plank=24,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+recipe Make 48-Plank Stack
+    {
+        Plank=48,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+        CanBeDoneFromFloor:true,
+        Result:Plank48,
+        Time:60.0,
+        OnCreate:Recipe.OnCreate.CreatePlankStack,
+        Category:Carpentry,
+    }
+
+recipe Unstack Planks
+    {
+        Plank48,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.Plank=48,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+
+
+
+recipe Make 3-Branch Stack
+    {
+        TreeBranch=3,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+
+        CanBeDoneFromFloor:true,
+        Result:Branch3,
+        Time:60.0,
+        OnCreate:Recipe.OnCreate.CreateBranchStack,
+        Category:Carpentry,
+    }
+
+recipe Unstack Branchs
+    {
+        Branch3,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.TreeBranch=3,
+        Time:60.0,
+        Category:Carpentry,
+    }
+recipe Make 6-Branch Stack
+    {
+        TreeBranch=6,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+
+        CanBeDoneFromFloor:true,
+        OnCreate:Recipe.OnCreate.CreateBranchStack,
+        Result:Branch6,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+recipe Unstack Branchs
+    {
+        Branch6,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.TreeBranch=6,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+ recipe Make 12-Branchs Stack
+    {
+        TreeBranch=12,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+
+        CanBeDoneFromFloor:true,
+        OnCreate:Recipe.OnCreate.CreateBranchStack,
+        Result:Branch12,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+recipe Unstack Branchs
+    {
+        Branch12,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.TreeBranch=12,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+ recipe Make 24-Branchs Stack
+    {
+        TreeBranch=24,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+
+        CanBeDoneFromFloor:true,
+        OnCreate:Recipe.OnCreate.CreateBranchStack,
+        Result:Branch24,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+recipe Unstack Branchs
+    {
+        Branch24,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.TreeBranch=24,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+ recipe Make 48-Branchs Stack
+    {
+        TreeBranch=48,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+        CanBeDoneFromFloor:true,
+        OnCreate:Recipe.OnCreate.CreateBranchStack,
+        Result:Branch48,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+recipe Unstack Branchs
+    {
+        Branch48,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.TreeBranch=48,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+
+
+
+recipe Make 3-Twigs Stack
+    {
+        Twigs=3,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+
+        CanBeDoneFromFloor:true,
+        OnCreate:Recipe.OnCreate.CreateTwigStack,
+        Result:Twig3,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+recipe Unstack Twigs
+    {
+        Twig3,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.Twigs=3,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+recipe Make 6-Twigs Stack
+    {
+        Twigs=6,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+
+        CanBeDoneFromFloor:true,
+        OnCreate:Recipe.OnCreate.CreateTwigStack,
+        Result:Twig6,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+recipe Unstack Twigs
+    {
+        Twig6,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.Twigs=6,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+ recipe Make 12-Twigs Stack
+    {
+        Twigs=12,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+
+        CanBeDoneFromFloor:true,
+        OnCreate:Recipe.OnCreate.CreateTwigStack,
+        Result:Twig12,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+recipe Unstack Twigs
+    {
+        Twig12,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.Twigs=12,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+ recipe Make 24-Twigs Stack
+    {
+        Twigs=24,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+
+        CanBeDoneFromFloor:true,
+        OnCreate:Recipe.OnCreate.CreateTwigStack,
+        Result:Twig24,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+recipe Unstack Twigs
+    {
+        Twig24,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.Twigs=24,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+ recipe Make 48-Twigs Stack
+    {
+        Twigs=48,
+	[Recipe.GetItemTypes.CraftLogStack]=2,
+        CanBeDoneFromFloor:true,
+        OnCreate:Recipe.OnCreate.CreateTwigStack,
+        Result:Twig48,
+        Time:60.0,
+        Category:Carpentry,
+    }
+
+recipe Unstack Twigs
+    {
+        Twig48,
+
+        CanBeDoneFromFloor:true,
+	OnCreate:Recipe.OnCreate.SplitLogStack,
+        Result:Base.Twigs=48,
+        Time:60.0,
+        Category:Carpentry,
+    }
+}

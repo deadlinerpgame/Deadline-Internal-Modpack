@@ -1,0 +1,25 @@
+module Wheelbarrow
+{
+    imports
+    {
+        Base
+
+    }
+
+item HCWoodenwheelbarrow2
+    {
+        WeightReduction             = 100,
+        Weight                      = 20,
+        Type                        = Container,
+        Capacity                    = 10,
+        DisplayName                 = Trolley with Computer,
+        icon                        = HCWoodenwheelbarrow2,
+		DisplayCategory	            = Container,
+        RequiresEquippedBothHands   = true,
+		StaticModel         	= carretilla2_model,
+		WorldStaticModel 		= carretilla2_world,
+		
+		ReplaceInPrimaryHand = models_x_wheelbarrow2 holdingbagboth_cart,
+    }
+
+}

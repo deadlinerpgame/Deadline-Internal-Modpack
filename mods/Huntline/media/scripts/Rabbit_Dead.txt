@@ -1,0 +1,27 @@
+module Base {
+
+
+	model Rabbit_Dead
+    {
+        mesh = WorldItems/Rab_Dead,
+        texture = Rabbit_Cottontail,
+        scale = 1.2,
+    }
+
+    item Rabbit_Dead
+	{
+        WorldStaticModel = Rabbit_Dead,
+	DisplayCategory = Food,
+	Weight	=	5.0,
+	Type	=	Normal,
+	DaysFresh 			=		10,
+	DaysTotallyRotten 	=	 	15,
+	DisplayName = Rabbit Carcass,
+	Icon = DeadPerson_MaleZombie,
+	RequiresEquippedBothHands = true,
+	Tags = HeavyItem,
+	}
+
+
+}
+

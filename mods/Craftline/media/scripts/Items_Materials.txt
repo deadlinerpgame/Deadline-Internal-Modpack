@@ -1,0 +1,2256 @@
+module aerx {
+  imports {
+      Base
+ }
+	item AluminumFragments
+	{
+		DisplayName = Aluminum Fragments,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
+	item AluminumScrap
+	{
+		DisplayName = Aluminum Scrap,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = AluminumScrap,
+		Tags	             =  meltable,
+		WorldStaticModel = AluminumScrap,
+	}
+
+		item TinScrap
+	{
+		DisplayName = Tin Scrap,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
+	item TinFragments
+	{
+		DisplayName = Tin Fragments,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
+	item CopperScrap
+	{
+		DisplayName = Copper Scrap,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
+
+
+	item CopperFragments
+	{
+		DisplayName = Copper Fragments,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
+		item CowLeather_Angus_Full
+	{
+		DisplayName = Angus Leather (Unprocessed),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 5,
+		Icon = LeatherHide_CowBlack,
+		WorldStaticModel = Leather_Black,
+
+	}
+
+	item CowLeather_Angus_Fur
+	{
+		DisplayName = Angus Leather (Furred),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 5,
+		Icon = LeatherHide_CowBlack,
+		WorldStaticModel = Leather_Black,
+
+	}
+
+
+	item CowLeather_Angus_Fur_Tan
+	{
+	    DisplayCategory     = Material,
+		Weight              = 5.0,
+		Type                = Drainable,
+		UseDelta	        = 0.10,
+		DisplayName = Angus Leather (Tanned; Furred),
+		Icon = LeatherHide_CowBlack,
+		WorldStaticModel = Leather_Black,
+	}
+
+	item OldAxeHead
+	{
+		DisplayName = Axe Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = Axehead_Forged02,
+		StaticModel         = AxeHead_Old,
+		WorldStaticModel    = AxeHead_Old,
+
+	}
+
+	item BarbedWireStack
+	{
+		DisplayName = Stack of Barbed Wire,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 10,
+		Icon = BarbedWireBundle,
+		MetalValue = 200,
+		WorldStaticModel = BarbedWireStack,
+	}
+
+    item FabricRoll_Cotton
+    {
+        DisplayCategory = Material,
+        Weight	=	10.0,
+	Type	= Drainable,
+	UseDelta = 0.05,
+        DisplayName	=   Cotton Fabric Roll,
+        Icon	=	FabricRoll_Cotton_White,
+        WorldStaticModel = FabricRoll_White,
+    }
+
+    item FabricRoll_DenimBlack
+    {
+        DisplayCategory = Material,
+        Weight	=	10.0,
+	Type	= Drainable,
+	UseDelta = 0.05,
+        DisplayName	=   Black Denim Fabric Roll,
+        Icon	=	FabricRoll_Denim_Black,
+        WorldStaticModel = FabricRoll_Black,
+    }
+
+    item FabricRoll_DenimBlue
+    {
+        DisplayCategory = Material,
+        Weight	=	10.0,
+	Type	= Drainable,
+	UseDelta = 0.05,
+        DisplayName	=   Blue Denim Fabric Roll,
+        Icon	=	FabricRoll_Denim_Blue,
+        WorldStaticModel = FabricRoll_Blue,
+    }
+
+    item FabricRoll_DenimDarkBlue
+    {
+        DisplayCategory = Material,
+        Weight	=	10.0,
+	Type	= Drainable,
+	UseDelta = 0.05,
+        DisplayName	=   Dark Blue Denim Fabric Roll,
+        Icon	=	FabricRoll_Denim_DarkBlue,
+        WorldStaticModel = FabricRoll_DarkBlue,
+    }
+
+	item PigLeather_Landrace_Full
+	{
+		DisplayName = Landrace Pig Leather (Unprocessed),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = LeatherHide_PigPink,
+		WorldStaticModel = Leather_Pink_Medium,
+
+	}
+
+	item PigLeather_Landrace_Fur
+	{
+		DisplayName = Landrace Pig Leather (Furred),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = LeatherHide_PigPink,
+		WorldStaticModel = Leather_Pink_Medium,
+	}
+
+
+	item PigLeather_Landrace_Fur_Tan
+	{
+	    DisplayCategory     = Material,
+		Weight              = 5.0,
+		Type                = Drainable,
+		UseDelta	        = 0.10,
+		DisplayName = Landrace Pig Leather (Tanned; Furred),
+		Icon = LeatherHide_PigPink,
+		WorldStaticModel = Leather_Pink_Medium,
+	}
+
+	item PigLeather_Black_Full
+	{
+		DisplayName = Black Pig Leather (Unprocessed),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 5,
+		Icon = LeatherHide_CowBlack,
+		WorldStaticModel = Leather_Black_Medium,
+
+
+	}
+
+	item PigLeather_Black_Fur
+	{
+		DisplayName = Black Pig Leather (Furred),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 5,
+		Icon = LeatherHide_CowBlack,
+		WorldStaticModel = Leather_Black_Medium,
+
+	}
+
+	item PigLeather_Black_Fur_Tan
+	{
+		DisplayName = Black Pig Leather (Tanned; Furred),
+	    DisplayCategory     = Material,
+		Weight              = 5.0,
+		Type                = Drainable,
+		UseDelta	        = 0.10,
+		
+		Icon = LeatherHide_CowBlack,
+		WorldStaticModel = Leather_Black_Medium,
+
+
+	}
+
+	item HatchetHead_Bone
+	{
+		DisplayName = Bone War Hatchet Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = Scapula_Axehead,
+		StaticModel         = HatchetHead_Bone,
+		WorldStaticModel    = HatchetHead_Bone,
+	}
+
+	item PigIronIngot
+	{
+		DisplayName = Pig Iron Ingot,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 5,
+		Icon = Ingot_Pigiron,
+		StaticModel = PigIronIngot,
+		WorldStaticModel = PigIronIngot,
+	}
+
+
+	item IronIngot
+	{
+		DisplayName = Iron Ingot,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 6,
+		Icon = Ingot_Iron,
+		StaticModel = IronIngot,
+		WorldStaticModel = IronIngot,
+	}
+
+	item SteelIngot
+	{
+		DisplayName = Steel Ingot,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 6,
+		WeightEmpty = 0.01,
+		Icon = Ingot_Steel,
+		StaticModel = SteelIngot,
+		WorldStaticModel = SteelIngot,
+	}
+
+	item NickelScrap
+	{
+		DisplayName = Nickel Scrap,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = BrassScrap,
+		WorldStaticModel = BrassScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item NickelFragments
+	{
+		DisplayName = Nickel Fragments,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = BrassScrap,
+		WorldStaticModel = BrassScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item LeadScrap
+	{
+		DisplayName = Lead Scrap,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = IronScrap,
+		WorldStaticModel = IronScrap,
+		Tags	             =  meltable,
+	}
+
+	item LeadFragments
+	{
+		DisplayName = Lead Fragments,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = IronScrap,
+		WorldStaticModel = IronScrap,
+		Tags	             =  meltable,
+	}
+
+	item IronScrap
+	{
+		DisplayName = Iron Scrap,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = IronScrap,
+		WorldStaticModel = IronScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item IronFragments
+	{
+		DisplayName = Iron Fragments,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = SteelScrap,
+		WorldStaticModel = SteelScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item GoldScrap
+	{
+		DisplayName = Gold Fragments,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = GoldScrap,
+		WorldStaticModel = GoldScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item SilverScrap
+	{
+		DisplayName = Silver Fragments,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = SilverScrap,
+		WorldStaticModel = SilverScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item ZincScrap
+	{
+		DisplayName = Zinc Scrap,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = SilverScrap,
+		WorldStaticModel = SilverScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item ZincFragments
+	{
+		DisplayName = Zinc Fragments,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = SilverScrap,
+		WorldStaticModel = SilverScrap,
+		Tags	             =  meltable,
+
+	}
+
+		item ClayBrickUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Clay Brick,
+		Icon                = ClayBrick_Unfired,
+		StaticModel         = ClayBrickUnfired,
+		WorldStaticModel    = ClayBrickUnfired,
+	}
+
+	item ClayBrick
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay Brick,
+		Icon                = ClayBrick_Fired,
+		StaticModel         = ClayBrick,
+		WorldStaticModel    = ClayBrick,
+	}
+	item WoodenCrucibleMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Crucible Mold,
+		Icon                = WoodMold_CrucibleCast,
+		StaticModel         = WoodenCrucibleMold,
+		WorldStaticModel    = WoodenCrucibleMold,
+	}
+
+	item WoodenBenchAnvilMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Bench Anvil Mold,
+		Icon                = WoodMold_AnvilCast,
+		StaticModel         = WoodenBenchAnvilMold,
+		WorldStaticModel    = WoodenBenchAnvilMold,
+	}
+
+
+	item WoodenBlockAnvilMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Block Anvil Mold,
+		Icon                = WoodMold_BlockAnvilCast,
+		StaticModel         = WoodenBlockAnvilMold,
+		WorldStaticModel    = WoodenBlockAnvilMold,
+	}
+
+	item ClayBenchAnvilMoldUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Bench Anvil Mold,
+		Icon                = Ceramic_Anvil_Unfired,
+		StaticModel         = ClayBenchAnvilMoldUnfired,
+		WorldStaticModel    = ClayBenchAnvilMoldUnfired,
+	}
+
+	item ClayBenchAnvilMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Bench Anvil Mold,
+		Icon                = Ceramic_Anvil_Fired,
+		StaticModel         = ClayBenchAnvilMold,
+		WorldStaticModel    = ClayBenchAnvilMold,
+	}
+
+	item ClayBlockAnvilMoldUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Block Anvil Mold,
+		Icon                = Ceramic_BlockAnvil_Unfired,
+		StaticModel         = ClayBlockAnvilMoldUnfired,
+		WorldStaticModel    = ClayBlockAnvilMoldUnfired,
+	}
+
+	item ClayBlockAnvilMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Bench Block Mold,
+		Icon                = Ceramic_BlockAnvil_Fired,
+		StaticModel         = ClayBlockAnvilMoldFired,
+		WorldStaticModel    = ClayBlockAnvilMoldFired,
+	}
+
+	item WoodenBrickMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Brick Mold,
+		Icon                = WoodMold_BarCast,
+		StaticModel         = WoodenIngotCastMold,
+		WorldStaticModel    = WoodenIngotCastMold,
+	}
+
+	item WoodenTileMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Tile Mold,
+		Icon                = WoodMold_BarCast,
+		StaticModel         = WoodenIngotCastMold,
+		WorldStaticModel    = WoodenIngotCastMold,
+	}
+
+	item WoodenIngotCastMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Ingot Cast Mold,
+		Icon                = WoodMold_BarCast,
+		StaticModel         = WoodenIngotCastMold,
+		WorldStaticModel    = WoodenIngotCastMold,
+	}
+		item Coke
+	{
+		DisplayName = Coke,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = CokeCoal,
+		StaticModel = Coke,
+		WorldStaticModel = Coke,
+	}
+
+	item ClayTileUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Clay Tile,
+		Icon                = ClayTile_Unfired,
+		StaticModel         = ClayTileUnfired,
+		WorldStaticModel    = ClayTileUnfired,
+	}
+
+	item ClayTile
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay Tile,
+		Icon                = ClayTile_Fired,
+		StaticModel         = ClayTile,
+		WorldStaticModel    = ClayTile,
+	}
+
+	item ClaySheetMoldUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Sheet Mold,
+		Icon                = ClayMold_GlassPane_Unfired,
+		StaticModel         = MoldGlass_Unfired,
+		WorldStaticModel    = MoldGlass_Unfired,
+	}
+
+	item ClaySheetMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Sheet Mold,
+		Icon                = ClayMold_GlassPane_Fired,
+		StaticModel         = MoldGlass_Fired,
+		WorldStaticModel    = MoldGlass_Fired,
+	}
+
+item ClayBarMoldUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Bar Mold,
+		Icon                = CeramicCast_LongBar_Unfired,
+		StaticModel         = ClayBarStockMoldUnfired,
+		WorldStaticModel    = ClayBarStockMoldUnfired,
+	}
+
+	item ClayBarMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Bar Mold,
+		Icon                = CeramicCast_LongBar_Fired,
+		StaticModel         = ClayBarStockMold,
+		WorldStaticModel    = ClayBarStockMold,
+		Tags = Destructible,
+	}
+
+	item WoodenBarCastMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Bar Cast Mold,
+		Icon                = WoodMold_LonbBarCast,
+		StaticModel         = WoodenBarStockCastMold,
+		WorldStaticModel    = WoodenBarStockCastMold,
+	}
+
+	item IronBarMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 6,
+		Type                = Normal,
+		DisplayName         = Iron Bar Mold,
+		Icon                = IronMold_Bar,
+		StaticModel         = IronBarMold,
+		WorldStaticModel    = IronBarMold,
+	}
+
+	item IronIngotMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 6,
+		Type                = Normal,
+		DisplayName         = Iron Ingot Mold,
+		Icon                = IronMold_Ingot,
+		StaticModel         = IronIngotMold,
+		WorldStaticModel    = IronIngotMold,
+	}
+
+	item SteelBarMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 6,
+		Type                = Normal,
+		DisplayName         = Steel Bar Mold,
+		Icon                = SteelMold_Bar,
+		StaticModel         = SteelBarMold,
+		WorldStaticModel    = SteelBarMold,
+	}
+
+	item SteelIngotMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 6,
+		Type                = Normal,
+		DisplayName         = Steel Ingot Mold,
+		Icon                = SteelMold_Ingot,
+		StaticModel         = SteelIngotMold,
+		WorldStaticModel    = SteelIngotMold,
+	}
+
+	item ClayIngotMoldUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Ingot Mold,
+		Icon                = CeramicCast_Bar_Unfired,
+		StaticModel         = CeramicIngotCastUnfired,
+		WorldStaticModel    = CeramicIngotCastUnfired,
+	}
+
+	item ClayIngotMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Ingot Mold,
+		Icon                = CeramicCast_Bar_Fired,
+		StaticModel         = CeramicIngotCast,
+		WorldStaticModel    = CeramicIngotCast,
+	}
+
+	item CrudeBenchVise
+	{
+		DisplayName = Crude Bench Vise,
+		DisplayCategory = Tool,
+		Type = Normal,
+		Weight = 5,
+		Icon = Clamp_Forged,
+		StaticModel = CrudeBenchVise,
+		WorldStaticModel = CrudeBenchVise,
+		Tags = HasMetal,
+	}
+
+	item CrudeBenchViseParts
+	{
+		DisplayName = Crude Bench Vise Parts,
+		DisplayCategory = Tool,
+		Type = Normal,
+		Weight = 5,
+		Icon = ClampComponents_Forged,
+		StaticModel = CrudeBenchVise,
+		WorldStaticModel = CrudeBenchViseParts,
+		Tags = HasMetal,
+	}
+
+	item ClayCrudeBenchVisePartsMoldUnfired
+	{
+		DisplayName = Unfired Crude Bench Vise Parts Mold,
+		DisplayCategory = Tool,
+		Type = Normal,
+		Weight = 0.3,
+		Icon = Ceramic_Clamp_Unfired,
+		StaticModel = ClayCrudeBenchVisePartsMoldUnfired,
+		WorldStaticModel = ClayCrudeBenchVisePartsMoldUnfired,
+		Tags = HasMetal,
+	}
+
+	item ClayCrudeBenchVisePartsMold
+	{
+		DisplayName = Crude Bench Vise Parts Mold,
+		DisplayCategory = Tool,
+		Type = Normal,
+		Weight = 0.3,
+		Icon = Ceramic_Clamp_Fired,
+		StaticModel = ClayCrudeBenchVisePartsMold,
+		WorldStaticModel = ClayCrudeBenchVisePartsMold,
+		Tags = HasMetal,
+	}
+
+	item WoodenCrudeBenchVisePartsMold
+	{
+		DisplayName = Wooden Crude Bench Vise Parts Mold,
+		DisplayCategory = Tool,
+		Type = Normal,
+		Weight = 0.3,
+		Icon = WoodMold_ClampCast,
+		StaticModel = WoodenCrudeBenchVisePartsMold,
+		WorldStaticModel = WoodenCrudeBenchVisePartsMold,
+		Tags = HasMetal,
+	}
+
+    item OilPress
+    {
+        DisplayCategory = Tool,
+        Type		= Normal,
+        DisplayName	= Oil Press,
+        Icon		= FlaxPress,
+        Weight		= 0.2,
+        WorldStaticModel = FlaxPress,
+    }
+
+	item ClayJarUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Clay Jar,
+		Icon                = ClayJar_Unfired,
+		StaticModel         = ClayJarUnfired,
+		WorldStaticModel    = ClayJarUnfired,
+	}
+
+	item ClayJar
+	{
+	    DisplayCategory     = WaterContainer,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay Jar,
+		Icon                = ClayJar_Fired,
+		StaticModel         = ClayJar,
+		WorldStaticModel    = ClayJar,
+		ReplaceOnUseOn = WaterSource-ClayJarWater,
+		ReplaceTypes = WaterSource 	item ClayJarWater,
+		CanStoreWater	=	TRUE,
+	}
+
+	item ClayJarWater
+	{
+		DisplayCategory = Water,
+		Type = Drainable,
+		Weight = 4,
+		CanStoreWater = TRUE,
+		FillFromDispenserSound = GetWaterFromDispenserPlasticMedium,
+		FillFromTapSound = GetWaterFromTapPlasticMedium,
+		IsWaterSource = TRUE,
+		ReplaceOnDeplete = ClayJar,
+		ReplaceOnUseOn = WaterSource-ClayJarWater,
+		UseDelta = 0.02,
+		UseWhileEquipped = FALSE,
+		CustomEatSound = DrinkingFromBottlePlastic,
+		DisplayName         = Clay Jar with Water,
+		Icon                = ClayJar_Fired,
+		StaticModel         = ClayJar,
+		WorldStaticModel    = ClayJar,
+	}
+
+	item ClayPot
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay Pot,
+		Icon                = ClayJar_Fired,
+		StaticModel         = ClayJar,
+		WorldStaticModel    = ClayJar,
+	}
+
+	item ClayPotUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Clay Pot,
+		Icon                = ClayJar_Unfired,
+		StaticModel         = ClayJarUnfired,
+		WorldStaticModel    = ClayJarUnfired,
+	}
+
+	item Clay
+	{
+	    	DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay,
+		Icon                = Clay,
+		StaticModel         = Clay,
+		WorldStaticModel    = Clay,
+	}
+
+	item ClayTool2
+	{
+	    	DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay Sculpting Tool,
+		Icon                = ClayTool_02,
+		StaticModel         = ClayTool2,
+		WorldStaticModel    = ClayTool2,
+	}
+
+	item ClayTool
+	{
+	    	DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay Sculpting Tool,
+		Icon                = ClayTool_01,
+		StaticModel         = ClayTool,
+		WorldStaticModel    = ClayTool,
+	}
+
+	item ClawhammerHead
+	{
+		DisplayName = Clawhammer Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = HammerHead_Forged,
+		StaticModel         = ClawhammerHeadForged,
+		WorldStaticModel    = ClawhammerHeadForged,
+
+	}
+
+	item CopperIngot
+	{
+		DisplayName = Copper Ingot,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 6,
+		Icon = Ingot_Copper,
+		StaticModel = CopperIngot,
+		WorldStaticModel = CopperIngot,
+	}
+
+	item CopperOre
+	{
+		DisplayName = Copper Ore,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 40,
+		Icon = CopperOre,
+		StaticModel = CopperOre,
+		WorldStaticModel = CopperOre,
+	}
+
+	item CopperOre_Crushed
+	{
+		DisplayName = Copper Ore - Crushed,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 40,
+		Icon = CopperOre_Rubble,
+		WorldStaticModel = CopperOre_Crushed,
+	}
+	item IronOre
+	{
+		DisplayName = Iron Ore,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 40,
+		Icon = IronORe,
+		StaticModel = IronOre,
+		WorldStaticModel = IronOre,
+	}
+
+	item IronOre_Crushed
+	{
+		DisplayName = Iron Ore - Crushed,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 40,
+		Icon = IronOre_Rubble,
+		WorldStaticModel = IronOre_Crushed,
+
+	}
+
+	item CrudeSwordBlade
+	{
+		DisplayName = Crude Sword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = SwordBlade_Forged_01,
+		StaticModel = CrudeSwordBlade,
+		WorldStaticModel = CrudeSwordBlade,
+	}
+
+	item CrudeSwordBlade_NoTang
+	{
+		DisplayName = Crude Sword Blade (No Tang),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = SwordBlade_Forged_01_NoTang,
+		StaticModel = CrudeSwordBlade_NoTang,
+		WorldStaticModel = CrudeSwordBlade_NoTang,
+	}
+
+	item CrudeShortSwordBlade
+	{
+		DisplayName = Crude Shortsword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1.5,
+		Icon = SwordBlade_Forged_01,
+		StaticModel = CrudeShortSwordBlade,
+		WorldStaticModel = CrudeShortSwordBlade,
+	}
+
+	item CrudeShortSwordBlade_NoTang
+	{
+		DisplayName = Crude Shortsword Blade (No Tang),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1.5,
+		Icon = SwordBlade_Short_Forged_01_NoTang,
+		StaticModel = CrudeShortSwordBlade_NoTang,
+		WorldStaticModel = CrudeShortSwordBlade_NoTang,
+	}
+
+	item DeerLeather_Full
+	{
+		DisplayName = Deer Leather (Unprocessed),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = LeatherHide_CowBrown,
+		WorldStaticModel = Leather_Brown_Medium,
+	}
+
+	item DeerLeather_Fur
+	{
+		DisplayName = Deer Leather (Furred),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = LeatherHide_CowBrown,
+		WorldStaticModel = Leather_Brown_Medium,
+	}
+
+
+	item DeerLeather_Fur_Tan
+	{
+		DisplayName = Deer Leather (Tanned; Furred),
+	    DisplayCategory     = Material,
+		Weight              = 5.0,
+		Type                = Drainable,
+		UseDelta	        = 0.10,
+		Icon = LeatherHide_CowBrown,
+		WorldStaticModel = Leather_Brown_Medium,
+	}
+	item DenimStripsBundle
+	{
+		DisplayName = Denim Strips Bundle,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = DenimStripsBundle,
+		WorldStaticModel = DenimStripsBundle,
+	}
+	item LeatherStripsBundle
+	{
+		DisplayName = Leather Strips Bundle,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = LeatherStripsBundle,
+		WorldStaticModel = LeatherStripsBundle,
+	}
+	item RippedSheetsBundle
+	{
+		DisplayName = Rag Bundle,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = ClothStripsBundle,
+		WorldStaticModel = RippedSheetsBundle,
+	}
+	item GardenForkHead_Forged
+	{
+		DisplayName = Garden Fork Head,
+		DisplayCategory = Material,
+		Type = Weapon,
+		Weight = 1,
+		Icon = GardenFork_Head_Forged,
+		BaseSpeed = 1.2,
+		BreakSound = MeatCleaverBreak,
+		Categories = Blunt,
+		ConditionLowerChanceOneIn = 15,
+		ConditionMax = 10,
+		CritDmgMultiplier = 2,
+		CriticalChance = 15,
+		DamageCategory = Slash,
+		DamageMakeHole = TRUE,
+		DoorDamage = 1,
+		DoorHitSound = MeatCleaverHit,
+		DropSound = MeatCleaverDrop,
+		HitFloorSound = MeatCleaverHit,
+		HitSound = MeatCleaverHit,
+		KnockBackOnNoDeath = TRUE,
+		KnockdownMod = 2,
+		MaxDamage = 0.8,
+		MaxHitCount = 2,
+		MaxRange = 1.1,
+		MinAngle = 0.65,
+		MinDamage = 0.4,
+		MinRange = 0.61,
+		MinimumSwingTime = 4,
+		PushBackMod = 0.3,
+		SplatBloodOnNoDeath = FALSE,
+		SplatNumber = 3,
+		SubCategory = Swinging,
+		SwingAmountBeforeImpact = 0.02,
+		SwingAnim = Bat,
+		SwingSound = MeatCleaverSwing,
+		SwingTime = 4,
+		TreeDamage = 0,
+		WeaponLength = 0.2,
+		WeaponSprite = GardenFork_Head,
+	}
+
+	item GoldBar
+	{
+		DisplayName = Gold Bar,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 16,
+		Icon = Ingot_Gold,
+		StaticModel = GoldBar,
+		WorldStaticModel = GoldBar,
+
+	}
+
+	item SmallGoldBar
+	{
+		DisplayName = Gold Bar - Small,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = Ingot_Gold,
+		StaticModel = GoldBarSmall,
+		WorldStaticModel = GoldBarSmall,
+
+	}
+
+	item SilverBar
+	{
+		DisplayName = Silver Bar,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 8,
+		Icon = Ingot_Silver,
+		StaticModel = SilverBar,
+		WorldStaticModel = SilverBar,
+
+	}
+
+	item SmallSilverBar
+	{
+		DisplayName = Silver Bar - Small,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = Ingot_Silver,
+		StaticModel = SilverBarSmall,
+		WorldStaticModel = SilverBarSmall,
+	}
+
+	item GoldSheet
+	{
+		DisplayName = Gold Sheet,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = MetalSheet_Small,
+		MetalValue = 20,
+		WorldStaticModel = SmallGoldSheet,
+	}
+
+	item SilverSheet
+	{
+		DisplayName = Silver Sheet,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = MetalSheet_Small,
+		MetalValue = 20,
+		WorldStaticModel = SmallSilverSheet,
+
+	}
+	item HacksawBlade
+	{
+		DisplayName = Hacksaw Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = Sawblade,
+		StaticModel = HacksawBlade,
+		WorldStaticModel = HacksawBlade,
+	}
+
+	item HandScytheBlade
+	{
+		DisplayName = Hand Scythe Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.3,
+		Icon = ScytheHead_Forged,
+		StaticModel         = HandScytheHeadForged,
+		WorldStaticModel    = HandScytheHeadForged,
+	}
+
+	item HandAxeHead
+	{
+		DisplayName = Hatchet Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = AxeHead_Forged,
+		StaticModel = HandAxeHeadForged,
+		WorldStaticModel = HandAxeHeadForged,
+	}
+
+	item CowLeather_Holstein_Full
+	{
+		DisplayName = Holstein Leather (Unprocessed),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 5,
+		Icon = LeatherHide_CowWhitePatch,
+		WorldStaticModel = Leather_WhitePatches,
+	}
+
+	item CowLeather_Holstein_Fur
+	{
+		DisplayName = Holstein Leather (Furred),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 5,
+		Icon = LeatherHide_CowWhitePatch,
+		WorldStaticModel = Leather_WhitePatches,
+
+	}
+
+
+	item CowLeather_Holstein_Fur_Tan
+	{
+		DisplayName = Holstein Leather (Tanned; Furred),
+	    DisplayCategory     = Material,
+		Weight              = 5.0,
+		Type                = Drainable,
+		UseDelta	        = 0.10,
+		Icon = LeatherHide_CowWhitePatch,
+		WorldStaticModel = Leather_WhitePatches,
+	}
+
+	item HuntingKnifeBlade
+	{
+		DisplayName = Hunting Knife Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = HuntingKnifeBlade_Forged,
+		StaticModel = HuntingKnifeBladeForged,
+		WorldStaticModel = HuntingKnifeBladeForged,
+	}
+
+    item IronBar
+    {
+        DisplayName = Bar,
+        DisplayCategory = Material,
+        Type = Weapon,
+        Weight = 2,
+        Icon = IronBar_Whole,
+        AttachmentType = BigBlade,
+        BaseSpeed = 1,
+        Categories = Blunt,
+        ConditionLowerChanceOneIn = 15,
+        ConditionMax = 8,
+        CritDmgMultiplier = 2,
+        CriticalChance = 20,
+        DoorDamage = 1,
+        HitAngleMod = -30,
+        KnockBackOnNoDeath = TRUE,
+        KnockdownMod = 0,
+        MaxDamage = 1.15,
+        MaxHitCount = 3,
+        MaxRange = 1.25,
+        MetalValue = 150,
+        MinAngle = 0.75,
+        MinDamage = 0.6,
+        MinRange = 0.61,
+        MinimumSwingTime = 3,
+        PushBackMod = 0.5,
+        RunAnim = Run_Weapon2,
+        SubCategory = Swinging,
+        SwingAmountBeforeImpact = 0.02,
+        SwingAnim = Bat,
+        SwingTime = 3,
+        TreeDamage = 0,
+        TwoHandWeapon = TRUE,
+        WeaponLength = 0.4,
+        WeaponSprite = IronBarStock,
+        BreakSound  =   MetalPipeBreak,
+        DoorHitSound = MetalPipeHit,
+		HitSound = MetalPipeHit,
+		HitFloorSound = MetalPipeHit,
+		SwingSound = MetalPipeSwing,
+    }
+
+    item IronBarHalf
+	{
+		DisplayName = Bar Half,
+		DisplayCategory = Material,
+		Type = Weapon,
+		Weight = 1,
+        Icon = IronBar_Half,
+		AttachmentType = Wrench,
+		BaseSpeed = 1,
+		Categories = SmallBlunt,
+		ConditionLowerChanceOneIn = 15,
+		ConditionMax = 8,
+		CritDmgMultiplier = 2,
+		CriticalChance = 20,
+		DoorDamage = 10,
+		KnockBackOnNoDeath = FALSE,
+		KnockdownMod = 2,
+		MaxDamage = 1,
+		MaxHitCount = 2,
+		MaxRange = 1.1,
+		MinAngle = 0.67,
+		MinDamage = 0.5,
+		MinRange = 0.61,
+		MinimumSwingTime = 4,
+		PushBackMod = 0.3,
+		SplatBloodOnNoDeath = FALSE,
+		SplatNumber = 1,
+		SubCategory = Swinging,
+		SwingAmountBeforeImpact = 0.02,
+		SwingAnim = Bat,
+		SwingTime = 4,
+		TreeDamage = 0,
+		WeaponLength = 0.23,
+		WeaponSprite = IronBarStockHalf,
+        BreakSound  =   MetalPipeBreak,
+        DoorHitSound = MetalPipeHit,
+		HitSound = MetalPipeHit,
+		HitFloorSound = MetalPipeHit,
+		SwingSound = MetalPipeSwing,
+	}
+
+    item IronBarQuarter
+    {
+        DisplayName = Bar Quarter,
+        DisplayCategory = Material,
+        Type = Normal,
+        Weight = 0.5,
+        Icon = IronBar_Quarter,
+        StaticModel = IronBarStockQuarter,
+        WorldStaticModel = IronBarStockQuarter,
+    }
+
+    item IronPiece
+    {
+        DisplayName = Piece,
+        DisplayCategory = Material,
+        Type = Normal,
+        Weight = 0.1,
+        Icon = IronBar_Tenth,
+        StaticModel = IronBarStockPiece,
+        WorldStaticModel = IronBarStockPiece,
+    }
+    item IronBlock
+    {
+        DisplayName = Block,
+        DisplayCategory = Material,
+        Type = Normal,
+        Weight = 2,
+        WeightEmpty = 0.01,
+        Icon = IronBillet,
+        StaticModel = IronBlock,
+        WorldStaticModel = IronBlock,
+        Tags = HasMetal;IronMaterial;Block;SmeltableIronMedium,
+    }
+
+    item IronChunk
+    {
+        DisplayName = Chunk,
+        DisplayCategory = Material,
+        Type = Normal,
+        Weight = 0.5,
+        WeightEmpty = 0.01,
+        Icon = IronChunk,
+        StaticModel = IronChunk,
+        WorldStaticModel = IronChunk,
+        Tags = HasMetal;IronMaterial;Chunk,
+    }
+	item PiercedIronIngot
+	{
+		DisplayName = Pierced Ingot,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 6,
+		Icon = Ingot_Iron_Hole,
+		StaticModel = PiercedIronIngot,
+		WorldStaticModel = PiercedIronIngot,
+
+	}
+
+    item PiercedIronBlock
+    {
+        DisplayName = Pierced Block,
+        DisplayCategory = Material,
+        Type = Normal,
+        Weight = 2,
+        WeightEmpty = 0.01,
+        Icon = Billet_Iron_Hole,
+        StaticModel = PiercedIronBlock,
+        WorldStaticModel = PiercedIronBlock,
+
+    }
+
+    item PiercedIronChunk
+    {
+        DisplayName = Pierced Chunk,
+        DisplayCategory = Material,
+        Type = Normal,
+        Weight = 0.5,
+        WeightEmpty = 0.01,
+        Icon = Chunk_Iron_Hole,
+        StaticModel = PiercedIronChunk,
+        WorldStaticModel = PiercedIronChunk,
+    }
+
+ 	item LambLeather_Full
+ 	{
+ 		DisplayName = Lamb Leather (Unprocessed),
+ 		DisplayCategory = Material,
+ 		Type = Normal,
+ 		Weight = 1,
+ 		Icon = LeatherHide_SheepWhite,
+ 		WorldStaticModel = Leather_White_Small,
+
+ 	}
+
+ 	item LambLeather_Fur
+ 	{
+ 		DisplayName = Lamb Leather (Furred),
+ 		DisplayCategory = Material,
+ 		Type = Normal,
+ 		Weight = 1,
+ 		Icon = LeatherHide_SheepWhite,
+ 		WorldStaticModel = Leather_White_Small,
+
+ 	}
+
+ 	item LambLeather_Fur_Tan
+ 	{
+ 		DisplayName = Lamb Leather (Tanned; Furred),
+	    DisplayCategory     = Material,
+		Weight              = 5.0,
+		Type                = Drainable,
+		UseDelta	        = 0.10,
+ 		Icon = LeatherHide_SheepWhite,
+ 		WorldStaticModel = Leather_White_Small,
+ 	}
+    item BoneBead_Large
+	{
+        DisplayCategory = Material,
+	    Weight = 0.3,
+	    Type = Normal,
+		Tags = AnimalBone,
+	    DisplayName = Large Bone Bead,
+	    Icon	=	Bone_Segment,
+	    StaticModel = BoneBead_Large,
+	    WorldStaticModel = BoneBead_Large,
+	}
+	item KitchenKnifeBlade
+	{
+		DisplayName = Kitchen Knife Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = KitchenKnifeBlade_Forged,
+		StaticModel = KitchenKnifeBladeForged,
+		WorldStaticModel = KitchenKnifeBladeForged,
+	}
+
+	item CeramicCrucibleUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 5.0,
+		Type                = Normal,
+		DisplayName         = Unfired Large Ceramic Crucible,
+		Icon                = Ceramic_Crucible_Fired,
+		StaticModel         = CeramicCrucibleUnfired,
+		WorldStaticModel    = CeramicCrucibleUnfired,
+	}
+
+	item CeramicCrucible
+	{
+	    DisplayCategory     = Material,
+		Weight              = 5.0,
+		Type	             =	Container,
+		Capacity	         =	1,
+		AcceptItemFunction	 =	AcceptItemFunction.Crucible,
+		DisplayName         = Large Ceramic Crucible,
+		Icon                = Ceramic_Crucible_Unfired,
+		StaticModel         = CeramicCrucible,
+		WorldStaticModel    = CeramicCrucible,
+	}
+
+	item CeramicCrucibleSmall
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.2,
+		Type                = Normal,
+		DisplayName         = Small Ceramic Crucible,
+		Icon                = Ceramic_Crucible_Fired,
+		StaticModel         = CeramicCrucible,
+		WorldStaticModel    = CeramicCrucible,
+	}
+
+	item CeramicCrucibleSmallUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.2,
+		Type                = Normal,
+		DisplayName         = Unfired Small Ceramic Crucible,
+		Icon                = Ceramic_Crucible_Unfired,
+		StaticModel         = CeramicCrucibleUnfired,
+		WorldStaticModel    = CeramicCrucibleUnfired,
+	}
+
+	item LargeKnifeBlade
+	{
+		DisplayName = Large Knife Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = KnifeLargeBlade_Crude_Tang,
+		StaticModel = CrudeHuntingKnifeForgedBlade,
+		WorldStaticModel = CrudeHuntingKnifeForgedBlade,
+
+	}
+
+		item LongHandle
+	{
+		DisplayName = Long Handle,
+		DisplayCategory = Material,
+		Type = Weapon,
+		Weight = 2,
+		Icon = LongHandle,
+		AttachmentType = Shovel,
+		BaseSpeed = 1,
+		Categories = Blunt,
+		ConditionLowerChanceOneIn = 10,
+		ConditionMax = 10,
+		CritDmgMultiplier = 2,
+		CriticalChance = 25,
+		DoorDamage = 5,
+		BreakSound = PickAxeHandleBreak,
+		DoorHitSound = PickAxeHandleHit,
+		DropSound = PickAxeHandleDrop,
+		HitFloorSound = PickAxeHandleHit,
+		HitSound = PickAxeHandleHit,
+		SwingSound = PickAxeHandleSwing,
+		IdleAnim = Idle_Weapon2,
+		KnockBackOnNoDeath = FALSE,
+		KnockdownMod = 2,
+		MaxDamage = 0.9,
+		MaxHitCount = 2,
+		MaxRange = 1.25,
+		MinAngle = 0.65,
+		MinDamage = 0.5,
+		MinRange = 0.61,
+		MinimumSwingTime = 4,
+		PushBackMod = 0.3,
+		RunAnim = Run_Weapon2,
+		SplatBloodOnNoDeath = FALSE,
+		SplatNumber = 1,
+		SubCategory = Swinging,
+		SwingAmountBeforeImpact = 0.02,
+		SwingAnim = Bat,
+		SwingTime = 4,
+		TreeDamage = 0,
+		TwoHandWeapon = TRUE,
+		WeaponSprite = LongHandle,
+	}
+
+
+	item Handle
+	{
+		DisplayName = Medium Handle,
+		DisplayCategory = Material,
+		Type = Weapon,
+		Weight = 1,
+		Icon = Hammer_Shaft,
+		AttachmentType = Hammer,
+		BaseSpeed = 1.2,
+		BreakSound = PlungerBreak,
+		Categories = SmallBlunt,
+		ConditionLowerChanceOneIn = 5,
+		ConditionMax = 10,
+		CritDmgMultiplier = 2,
+		CriticalChance = 5,
+		DoorDamage = 1,
+		DoorHitSound = PickAxeHandleHit,
+		DropSound = PickAxeHandleDrop,
+		HitFloorSound = PickAxeHandleHit,
+		HitSound = PickAxeHandleHit,
+		KnockBackOnNoDeath = FALSE,
+		KnockdownMod = 2,
+		MaxDamage = 0.5,
+		MaxHitCount = 2,
+		MaxRange = 1.1,
+		MinAngle = 0.65,
+		MinDamage = 0.3,
+		MinRange = 0.61,
+		MinimumSwingTime = 4,
+		PushBackMod = 0.3,
+		SplatBloodOnNoDeath = FALSE,
+		SplatNumber = 1,
+		SubCategory = Swinging,
+		SwingAmountBeforeImpact = 0.02,
+		SwingAnim = Bat,
+		SwingSound = PlungerSwing,
+		SwingTime = 4,
+		TreeDamage = 0,
+		WeaponLength = 0.23,
+		WeaponSprite = Handle_Hand,
+	}
+
+	item SpearLongHead
+	{
+		DisplayName = Long Spearhead,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = SpearHead_Forged_02,
+		StaticModel = SpearLongHeadForged,
+		WorldStaticModel = SpearLongHeadForged,
+	}
+
+	item StoneBladeLong
+	{
+		DisplayName = Long Stone Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.75,
+		Icon = SpearHead_Stone_Crude02,
+		StaticModel = StoneSpearheadLong,
+		WorldStaticModel = StoneSpearheadLong,
+	}
+
+	item MaceHead
+	{
+		DisplayName = Mace Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = MaceHead_Forged,
+		StaticModel = MaceHead,
+		WorldStaticModel = MaceHead,
+	}
+
+	item MacheteBlade
+	{
+		DisplayName = Machete Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = MacheteBlade_Forged,
+		StaticModel = MacheteBladeForged,
+		WorldStaticModel = MacheteBladeForged,
+	}
+
+	item MacheteBlade_NoTang
+	{
+		DisplayName = Machete Blade (No Tang),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = MacheteBlade_Forged_NoTang,
+		StaticModel = MacheteBlade_NoTang,
+		WorldStaticModel = MacheteBlade_NoTang,
+	}
+
+	item MeatCleaverBlade
+	{
+		DisplayName = Meat Cleaver Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = CleaverBlade_Forged,
+		StaticModel = MeatCleaverBladeForged,
+		WorldStaticModel = MeatCleaverBladeForged,
+	}
+
+	item PickAxeHead
+	{
+		DisplayName = Pick Axe Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = PickaxeHead_Forged,
+		StaticModel         = PickAxeHeadForged,
+		WorldStaticModel    = PickAxeHeadForged,
+	}
+
+	item RabbitLeather_Full
+	{
+		DisplayName = Rabbit Leather (Unprocessed),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = LeatherHide_CowBrown,
+		WorldStaticModel = Leather_Brown_Small,
+	}
+
+	item RabbitLeather_Fur
+	{
+		DisplayName = Rabbit Leather (Furred),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = LeatherHide_CowBrown,
+		WorldStaticModel = Leather_Brown_Small,
+	}
+
+
+	item RabbitLeather_Fur_Tan
+	{
+		DisplayName = Rabbit Leather (Tanned; Furred),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = LeatherHide_CowBrown,
+		WorldStaticModel = Leather_Brown_Small,
+	}
+
+	item RakeHead
+	{
+		DisplayName = Rake-Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = RakeHead,
+		StaticModel = RakeHead,
+		WorldStaticModel = RakeHead,
+	}
+
+	item Sword_Scrap_Shard
+	{
+		DisplayName = Scrap Metal Blade Shard,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = Sword_Crude_Tip,
+		StaticModel = Sword_Scrap_Shard,
+		WorldStaticModel = Sword_Scrap_Shard,
+	}
+
+	item ScytheBlade
+	{
+		DisplayName = Scythe Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = FullScytheHead_Forged,
+		StaticModel         = ScytheHeadForged,
+		WorldStaticModel    = ScytheHeadForged,
+	}
+
+ 	item SheepLeather_Full
+ 	{
+ 		DisplayName = Sheep Leather (Unprocessed),
+ 		DisplayCategory = Material,
+ 		Type = Normal,
+ 		Weight = 3,
+ 		Icon = LeatherHide_SheepWhite,
+ 		WorldStaticModel = Leather_White_Medium,
+
+ 	}
+
+ 	item SheepLeather_Fur
+ 	{
+ 		DisplayName = Sheep Leather (Furred),
+ 		DisplayCategory = Material,
+ 		Type = Normal,
+ 		Weight = 3,
+ 		Icon = LeatherHide_SheepWhite,
+ 		WorldStaticModel = Leather_White_Medium,
+ 	}
+
+
+ 	item SheepLeather_Fur_Tan
+ 	{
+ 		DisplayName = Sheep Leather (Tanned; Furred),
+	    DisplayCategory     = Material,
+		Weight              = 5.0,
+		Type                = Drainable,
+		UseDelta	        = 0.10,
+ 		Icon = LeatherHide_SheepWhite,
+ 		WorldStaticModel = Leather_White_Medium,
+ 	}
+
+	item ShortSwordBlade
+	{
+		DisplayName = Shortsword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1.5,
+		Icon = SwordBlade_Forged_Short,
+		StaticModel = ShortSwordBlade,
+		WorldStaticModel = ShortSwordBlade,
+	}
+
+	item ShortSwordBlade_NoTang
+	{
+		DisplayName = Shortsword Blade (No Tang),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1.5,
+		Icon = SwordBlade_Forged_02_NoTang,
+		StaticModel = ShortSwordBlade_NoTang,
+		WorldStaticModel = ShortSwordBlade_NoTang,
+	}
+
+	item CowLeather_Simmental_Full
+	{
+		DisplayName = Simmental Leather (Unprocessed),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 5,
+		Icon = LeatherHide_CowBrownPatch,
+		WorldStaticModel = Leather_BrownPatches,
+	}
+
+	item CowLeather_Simmental_Fur
+	{
+		DisplayName = Simmental Leather (Furred),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 5,
+		Icon = LeatherHide_CowBrownPatch,
+		WorldStaticModel = Leather_BrownPatches,
+	}
+
+
+	item CowLeather_Simmental_Fur_Tan
+	{
+		DisplayName = Simmental Leather (Tanned; Furred),
+	    DisplayCategory     = Material,
+		Weight              = 5.0,
+		Type                = Drainable,
+		UseDelta	        = 0.10,
+		Icon = LeatherHide_CowBrownPatch,
+		WorldStaticModel = Leather_BrownPatches,
+	}
+
+	item SledgehammerHead
+	{
+		DisplayName = Sledgehammer Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 4,
+		Icon = SledgehammerHead_Forged,
+		StaticModel         = SledgehammerHeadForged,
+		WorldStaticModel    = SledgehammerHeadForged,
+	}
+
+	item SmallHandle
+	{
+		DisplayName = Small Handle,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = Handle,
+		StaticModel = SmallHandle,
+		WorldStaticModel = SmallHandle,
+	}
+	item StoneWheel
+	{
+	    DisplayCategory     = Material,
+		Weight	=	20,
+		Type = Normal,
+		Icon = StoneWheel,
+		DisplayName	=	Stone Wheel,
+		WorldStaticModel = StoneWheel_Big,
+	}
+
+	item StoneWheelSmall
+	{
+	    DisplayCategory     = Material,
+		Weight	=	15,
+		Type = Normal,
+		Icon = StoneWheelSmall,
+		DisplayName	=	Small Stone Wheel,
+		WorldStaticModel = StoneWheel_Small,
+	}
+	item SpadeHead_Forged
+	{
+		DisplayName = Spade Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = ShovelHead_Forged,
+		StaticModel = SpadeHeadForged,
+		WorldStaticModel = SpadeHeadForged,
+	}
+	item SpearHead
+	{
+		DisplayName = Spearhead,
+		DisplayCategory = Material,
+		Type = Weapon,
+		Weight = 0.7,
+		Icon = SpearHead_Forged_01,
+		StaticModel = SpearShortHeadForged,
+		WorldStaticModel = SpearShortHeadForged,
+	}
+
+
+	item SteelBar
+    {
+        DisplayName = Steel Bar,
+        DisplayCategory = Material,
+        Type = Weapon,
+        Weight = 2,
+        Icon = SteelBar_Whole,
+        AttachmentType = BigBlade,
+        BaseSpeed = 1,
+        Categories = Blunt,
+        ConditionLowerChanceOneIn = 15,
+        ConditionMax = 8,
+        CritDmgMultiplier = 2,
+        CriticalChance = 20,
+        DoorDamage = 1,
+        HitAngleMod = -30,
+        KnockBackOnNoDeath = TRUE,
+        KnockdownMod = 0,
+        MaxDamage = 1.15,
+        MaxHitCount = 3,
+        MaxRange = 1.25,
+        MetalValue = 150,
+        MinAngle = 0.75,
+        MinDamage = 0.6,
+        MinRange = 0.61,
+        MinimumSwingTime = 3,
+        PushBackMod = 0.5,
+        RunAnim = Run_Weapon2,
+        SubCategory = Swinging,
+        SwingAmountBeforeImpact = 0.02,
+        SwingAnim = Bat,
+        SwingTime = 3,
+        TreeDamage = 0,
+        TwoHandWeapon = TRUE,
+        WeaponLength = 0.4,
+        WeaponSprite = SteelBarStock,
+        BreakSound  =   MetalPipeBreak,
+        DoorHitSound = MetalPipeHit,
+		HitSound = MetalPipeHit,
+		HitFloorSound = MetalPipeHit,
+		SwingSound = MetalPipeSwing,
+
+    }
+
+    item SteelBarHalf
+	{
+		DisplayName = Steel Bar Half,
+		DisplayCategory = Material,
+		Type = Weapon,
+		Weight = 1,
+        Icon = SteelBar_Half,
+		AttachmentType = Wrench,
+		BaseSpeed = 1,
+		Categories = SmallBlunt,
+		ConditionLowerChanceOneIn = 15,
+		ConditionMax = 8,
+		CritDmgMultiplier = 2,
+		CriticalChance = 20,
+		DoorDamage = 10,
+		KnockBackOnNoDeath = FALSE,
+		KnockdownMod = 2,
+		MaxDamage = 1,
+		MaxHitCount = 2,
+		MaxRange = 1.1,
+		MinAngle = 0.67,
+		MinDamage = 0.5,
+		MinRange = 0.61,
+		MinimumSwingTime = 4,
+		PushBackMod = 0.3,
+		SplatBloodOnNoDeath = FALSE,
+		SplatNumber = 1,
+		SubCategory = Swinging,
+		SwingAmountBeforeImpact = 0.02,
+		SwingAnim = Bat,
+		SwingTime = 4,
+		TreeDamage = 0,
+		WeaponLength = 0.23,
+		WeaponSprite = SteelBarStockHalf,
+        BreakSound  =   MetalPipeBreak,
+        DoorHitSound = MetalPipeHit,
+		HitSound = MetalPipeHit,
+		HitFloorSound = MetalPipeHit,
+		SwingSound = MetalPipeSwing,
+
+	}
+
+	item SteelBarQuarter
+	{
+		DisplayName = Steel Bar Quarter,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+        Icon = SteelBar_Quarter,
+		StaticModel = SteelBarStockQuarter,
+		WorldStaticModel = SteelBarStockQuarter,
+	}
+
+	item SteelPiece
+	{
+		DisplayName = Steel Piece,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.1,
+        Icon = SteelBar_Tenth,
+		StaticModel = SteelBarStockPiece,
+		WorldStaticModel = SteelBarStockPiece,
+	}
+
+	item SteelBlock
+	{
+		DisplayName = Steel Block,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		WeightEmpty = 0.01,
+		Icon = SteelBillet,
+		StaticModel = SteelBlock,
+		WorldStaticModel = SteelBlock,
+	}
+
+	item SteelChunk
+	{
+		DisplayName = Steel Chunk,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		WeightEmpty = 0.01,
+		Icon = SteelChunk,
+		StaticModel = SteelChunk,
+		WorldStaticModel = SteelChunk,
+	}
+
+	item PiercedSteelIngot
+	{
+		DisplayName = Pierced Steel Ingot,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 6,
+		WeightEmpty = 0.01,
+		Icon = Ingot_Steel_Hole,
+		StaticModel = PiercedSteelIngot,
+		WorldStaticModel = PiercedSteelIngot,
+	}
+
+	item PiercedSteelBlock
+	{
+		DisplayName = Pierced Steel Block,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		WeightEmpty = 0.01,
+		Icon = Billet_Steel_Hole,
+		StaticModel = PiercedSteelBlock,
+		WorldStaticModel = PiercedSteelBlock,
+	}
+
+	item PiercedSteelChunk
+	{
+		DisplayName = Pierced Steel Chunk,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		WeightEmpty = 0.01,
+		Icon = Chunk_Steel_Hole,
+		StaticModel = PiercedSteelChunk,
+		WorldStaticModel = PiercedSteelChunk,
+	}
+
+	item SheetMetal
+	{
+		DisplayName = Steel Sheet,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = SheetMetal,
+		MetalValue = 80,
+		WorldStaticModel = MetalSheet,
+	}
+	
+	item SmallSheetMetal
+	{
+		DisplayName = Steel Sheet - Small,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = MetalSheetSmall,
+		MetalValue = 20,
+		WorldStaticModel = MetalSheetSmall,
+	}
+
+	item StoneBlade
+	{
+		DisplayName = Stone Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = SpearHead_Stone_Crude01,
+		StaticModel = StoneSpearhead,
+		WorldStaticModel = StoneSpearhead,
+	}
+
+	item StoneMaulHead
+	{
+		DisplayName = Stone Maul Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = StoneMaulHead,
+		StaticModel = StoneMaulHead,
+		WorldStaticModel = StoneMaulHead,
+	}
+
+	item SwordBlade
+	{
+		DisplayName = Sword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = SwordBlade_Forged_02,
+		StaticModel = SwordBlade,
+		WorldStaticModel = SwordBlade,
+	}
+
+	item SwordBlade_NoTang
+	{
+		DisplayName = Sword Blade (No Tang),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = SwordBlade_Forged_02_NoTang,
+		StaticModel = SwordBlade_NoTang,
+		WorldStaticModel = SwordBlade_NoTang,
+
+	}
+	item BenchAnvil
+	{
+	    DisplayCategory     = Tool,
+		Weight	=	20,
+		Type	             =	Container,
+		Capacity	         =	1,
+		AcceptItemFunction	 =	AcceptItemFunction.Anvil,
+		Icon = Anvil_Forged,
+		DisplayName	=	Bench Anvil,
+		StaticModel = BenchAnvil,
+		WorldStaticModel = BenchAnvil,
+	}
+	item BenchAnvilUntreated
+	{
+	    DisplayCategory     = Material,
+		Weight	=	20,
+		Type	=	Normal,
+		Icon = Anvil_Forged,
+		DisplayName	=	Untreated Bench Anvil,
+		StaticModel = BenchAnvilUntreated,
+		WorldStaticModel = BenchAnvilUntreated,
+
+	}
+	item BlockAnvil
+	{
+	    DisplayCategory     = Tool,
+		Weight	=	30,
+		Type = Normal,
+		Icon = BlockAnvil,
+		DisplayName	=	Block Anvil,
+		StaticModel = BlockAnvil,
+		WorldStaticModel = BlockAnvil,
+	}
+	item BlockAnvilUntreated
+	{
+	    DisplayCategory     = Material,
+		Weight	=	30,
+		Type	=	Normal,
+		Icon = BlockAnvil,
+		DisplayName	=	Untreated Block Anvil,
+		StaticModel = BlockAnvil,
+		WorldStaticModel = BlockAnvil,
+	}
+
+	item LongStick
+	{
+        DisplayCategory = Material,
+        DisplayName = Long Stick,
+        Icon = Shaft,
+        WeaponSprite	=	LongShaft,
+        MaxRange	=	1.6,
+        MinAngle	=	0.85,
+        Type	=	Weapon,
+        MinimumSwingTime	=	2,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	=	Blunt,
+        ConditionLowerChanceOneIn	=	5,
+        Weight	=	2,
+        SplatNumber	=	1,
+        PushBackMod	=	0.3,
+        SubCategory	=	Swinging,
+        ConditionMax	=	5,
+        MaxHitCount	=	3,
+        DoorDamage	=	1,
+        SwingAnim	=	Bat,
+        MinRange	=	0.61,
+        SwingTime	=	2,
+        KnockdownMod	=	0,
+        SplatBloodOnNoDeath	=	FALSE,
+        RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        TreeDamage  =   0,
+        CriticalChance	=	5,
+        CritDmgMultiplier = 1,
+        MinDamage	=	0.3,
+        MaxDamage	=	0.6,
+        BaseSpeed = 1.2,
+		WeaponLength = 0.55,
+		TwoHandWeapon = TRUE,
+		BreakSound = PickAxeHandleBreak,
+		DoorHitSound = PickAxeHandleHit,
+		DropSound = PickAxeHandleDrop,
+		HitFloorSound = PickAxeHandleHit,
+		HitSound = PickAxeHandleHit,
+		SwingSound = PickAxeHandleSwing,
+	}
+	item WireStack
+	{
+		DisplayName = Stack of Wire,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 10,
+		Icon = WireBundle,
+		MetalValue = 200,
+		WorldStaticModel = WireStack,
+	}
+	item WoodAxeHead
+	{
+		DisplayName = Wood Axe Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = AxeHead_Forged,
+		StaticModel         = WoodAxeHeadForged,
+		WorldStaticModel    = WoodAxeHeadForged,
+	}
+	item GlassBlowingPipeUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Glass Blowing Pipe,
+		Icon                = Ceramic_Glasspipe_Fired,
+		StaticModel         = GlassBlowingPipeUnfired,
+		WorldStaticModel    = GlassBlowingPipeUnfired,
+	}
+
+	item GlassBlowingPipe
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Glass Blowing Pipe,
+		Icon                = Ceramic_Glasspipe_Unfired,
+		StaticModel         = GlassBlowingPipeFired,
+		WorldStaticModel    = GlassBlowingPipeFired,
+	}
+	item CeramicCrucibleWithGlass
+	{
+	    DisplayCategory     = Material,
+		Weight              = 6.0,
+		Type                = Drainable,
+		UseDelta	        = 0.25,
+		UseWhileEquipped = FALSE,
+		ReplaceOnDeplete = CeramicCrucibleSmall,
+		DisplayName         = Ceramic Crucible with Molten Glass,
+		Icon                = Ceramic_Crucible_Fired_Molten,
+		StaticModel         = CeramicCrucible,
+		WorldStaticModel    = CeramicCrucible,
+	}
+}

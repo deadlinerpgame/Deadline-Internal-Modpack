@@ -1,0 +1,58 @@
+module SGuns
+{
+	imports
+	{
+		Base,
+	}
+	item ScrapGunMag4
+	{
+		Weight = 0.1,
+		Tooltip    =    Tooltip_ScrapGunMag4,
+		Type = Literature,
+		DisplayName = Gunsmiths Journal Vol. 1,
+		Icon = ScrapGunMag4,
+		TeachedRecipes = Disassamble Gun;Make Scrap Bullets;Assemble Scrap SMG;Assemble Scrap Pistol;Assemble Scrap Pistol Magazine;Assemble Scrap SMG Magazine,
+		StaticModel = ScrapGunMag4_Reading,
+		ReplaceOnUse    =   ScrapGunMag4,
+		WorldStaticModel = ScrapGunMag4_Ground,
+		DisplayCategory = SkillBook,
+		Override = true,
+	}
+	recipe Assemble Scrap Gatling
+	{
+		GunParts=6,
+		SmallSheetMetal=6,
+		Wire=5,
+		SheetMetal=3,
+		EngineParts=3,
+		Plank=2,
+		No=1,
+		MetalPipe/LeadPipe,
+		MetalPipe/LeadPipe,
+		MetalPipe/LeadPipe,
+		Motor,
+		CarBattery1/CarBattery2/CarBattery3,
+		Screws=30,
+		LeatherStrips=20,
+		BlowTorch=5,
+		keep [Recipe.GetItemTypes.Drill],
+		keep [Recipe.GetItemTypes.Pliers],
+		keep [Recipe.GetItemTypes.WeldingMask],
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Screwdriver],
+		Result 		: ScrapGatling,
+		Sound 		: SMGCrafting,
+		Time 		: 1800,
+		Category 		: Weapons,
+		SkillRequired       : Electrical=1,
+		SkillRequired       : Mechanics=1,
+		SkillRequired 		: MetalWelding=9,
+		OnGiveXP 		: Give10MWXP,
+		AnimNode 		: BlowTorchMid,
+		Prop1       : BlowTorch,
+		NeedToBeLearn : true,
+		Override : true
+		
+	}
+
+}

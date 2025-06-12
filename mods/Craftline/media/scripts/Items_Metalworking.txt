@@ -1,0 +1,51 @@
+module Base
+{
+
+	item BrassKnuckles
+    {
+
+        DisplayCategory = Weapon,
+        MaxRange	=	0.8,
+        WeaponSprite	=	null,
+        MinAngle	=	0.65,
+        Type	=	Weapon,
+        MinimumSwingTime	=	1,
+        KnockBackOnNoDeath	=	FALSE,
+        SwingAmountBeforeImpact	=	0.02,
+        Categories	= SmallBlunt,
+        ConditionLowerChanceOneIn	=	40,
+        Weight	=	0.1,
+        SplatNumber	=	1,
+        PushBackMod	=	0.3,
+        SubCategory	=	Swinging,
+        ConditionMax	=	20,
+        MaxHitCount	=	2,
+        DoorDamage	=	1,
+        SwingAnim	=	Bat,
+        DisplayName	=	Brass Knuckles,
+        MinRange	=	0.4,
+        SwingTime	=	2,
+        KnockdownMod	=	0,
+        SplatBloodOnNoDeath	=	FALSE,
+        Icon	=	null,
+        RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+        BreakSound  =   BadmintonRacketBreak,
+        DoorHitSound = BadmintonRacketHit,
+		HitSound = HammerHit,
+		HitFloorSound = BadmintonRacketHit,
+		SwingSound = BaseballBatSwing,
+        TreeDamage  =   0,
+        CriticalChance	=	33,
+        CritDmgMultiplier = 10,
+        MinDamage	=	0.3,
+        MaxDamage	=	0.5,
+        BaseSpeed = 1.4,
+        WeaponLength = 0.17,
+		EnduranceMod = 0.7,
+        AttachmentType = Hammer,
+        WorldStaticModel = Gloves_Ground,
+		Icon = MasterWraps,
+    }
+
+}

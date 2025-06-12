@@ -1,0 +1,33 @@
+module Base
+{ 
+
+   recipe Craft Crude Shortsword
+    {
+       	aerx.CrudeShortSwordBlade=1,
+	aerx.SmallHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.CrudeShortSword=1,
+        Time:255.0,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferCShortBladeToCShortSword,
+        Category:LongBlade,
+	SkillRequired:MetalWelding=4,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft Crude Sword
+    {
+       	aerx.CrudeSwordBlade=1,
+	aerx.SmallHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.CrudeSword=1,
+        Time:255.0,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferCBladeToCSword,
+        Category:LongBlade,
+	SkillRequired:MetalWelding=4,
+	NearItem:Simple Forge,
+    }
+
+
+}

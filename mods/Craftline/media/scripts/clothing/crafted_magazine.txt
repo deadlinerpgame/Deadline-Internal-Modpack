@@ -1,0 +1,146 @@
+module Base
+{
+
+	item Cuirass_Magazine
+	{
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		DisplayName = Magazine Body Armor,
+		ClothingItem = Cuirass_Magazine,
+		BodyLocation = Cuirass,
+		Icon = MagazineArmour_Chest,
+		BloodLocation = ShirtNoSleeves,
+        	BiteDefense = 10,
+        	ScratchDefense = 15,
+		RunSpeedModifier = 0.90,
+		WindResistance = 0.80,
+        	CombatSpeedModifier = 0.95,
+        	CanHaveHoles = TRUE,
+		WorldStaticModel = Cuirass_Bone,
+        	Weight = 4,
+	}
+
+	item GreaveMagazine_Right
+	{
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		DisplayName = Magazine Shin Armor - Right,
+		ClothingItem = GreaveMagazine_Right,
+		BodyLocation = Calf_Right,
+		Icon = MagazineArmour,
+		BloodLocation = LowerLegs,
+        	BiteDefense = 5,
+        	ScratchDefense = 10,
+        	Insulation = 0.35,
+        	WindResistance = 0.3,
+		RunSpeedModifier = 0.90,
+		CanHaveHoles = TRUE,
+		WorldStaticModel = GreaveMagazine_Right,
+	    	Weight = 0.6,
+	}
+
+	item GreaveMagazine_Left
+	{
+	    Weight = 0.6,
+		DisplayName = Magazine Shin Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = MagazineArmour,
+		BloodLocation = LowerLegs,
+		BodyLocation = Calf_Left,
+		ClothingItem = GreaveMagazine_Left,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = TRUE,
+		WorldStaticModel = GreaveMagazine_Left,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.90,
+		DamagedSound = ArmourBreakMagazine,
+
+	}
+
+	item VambraceMagazine_Right
+	{
+	    Weight = 0.6,
+		DisplayName = Magazine Forearm Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = MagazineArmour,
+		BloodLocation = UpperArms,
+		BodyLocation = ForeArm_Right,
+		ClothingItem = VambraceMagazine_Right,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = TRUE,
+		WorldStaticModel = VambraceMagazine_Right,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		CombatSpeedModifier = 0.95,
+		DamagedSound = ArmourBreakMagazine,
+
+	}
+
+	item VambraceMagazine_Left
+	{
+	    Weight = 0.6,
+		DisplayName = Magazine Forearm Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = MagazineArmour,
+		BloodLocation = UpperArms,
+		BodyLocation = ForeArm_Left,
+		ClothingItem = VambraceMagazine_Left,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = TRUE,
+		WorldStaticModel = VambraceMagazine_Left,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		CombatSpeedModifier = 0.97,
+		DamagedSound = ArmourBreakMagazine,
+
+	}
+
+
+	item ThighMagazine_R
+	{
+	    Weight = 0.6,
+		DisplayName = Magazine Thigh Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = MagazineArmour,
+		BloodLocation = UpperLegs,
+		BodyLocation = Thigh_Right,
+		ClothingItem = ThighMagazine_R,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = TRUE,
+		WorldStaticModel = ThighMagazine_R,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.90,
+		DamagedSound = ArmourBreakMagazine,
+	}
+
+	item ThighMagazine_L
+	{
+	    Weight = 0.6,
+		DisplayName = Magazine Thigh Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = MagazineArmour,
+		BloodLocation = UpperLegs,
+		BodyLocation = Thigh_Left,
+		ClothingItem = ThighMagazine_L,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = TRUE,
+
+		WorldStaticModel = ThighMagazine_L,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		RunSpeedModifier = 0.90,
+		DamagedSound = ArmourBreakMagazine,
+	}
+}

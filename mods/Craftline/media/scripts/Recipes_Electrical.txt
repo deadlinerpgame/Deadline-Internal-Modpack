@@ -1,0 +1,118 @@
+module SP
+{
+    imports
+    {
+   	 Base,
+    }
+
+    recipe Upgrade Makeshift Walkie Talkie 
+    {
+	WalkieTalkieMakeShift,
+	RadioTransmitter,
+	RadioReceiver,
+	ElectricWire,
+	ElectronicsScrap=2,
+	keep Screwdriver,
+
+        Result:WalkieTalkie2,
+        Time:70.0,
+	Sound:Screwdriver,
+	SkillRequired:Electricity=2,
+        Category:Electrical,
+    }
+
+    recipe Upgrade ValuTech Walkie Talkie
+
+    {
+	WalkieTalkie2,
+	RadioTransmitter,
+	RadioReceiver,
+	ElectricWire,
+	ElectronicsScrap=2,
+	keep Screwdriver,
+
+        Result:WalkieTalkie3,
+        Time:70.0,
+	Sound:Screwdriver,
+	SkillRequired:Electricity=4,
+        Category:Electrical,
+    }
+
+    recipe Upgrade Premium Technologies Walkie Talkie
+
+    {
+	WalkieTalkie3,
+	RadioTransmitter,
+	RadioReceiver,
+	ElectricWire,
+	ElectronicsScrap=2,
+	keep Screwdriver,
+
+        Result:WalkieTalkie4,
+        Time:70.0,
+	Sound:Screwdriver,
+	SkillRequired:Electricity=6,
+        Category:Electrical,
+    }
+
+    recipe Upgrade Tactical Walkie Talkie
+
+    {
+	WalkieTalkie4,
+	RadioTransmitter,
+	RadioReceiver,
+	ElectricWire,
+	ElectronicsScrap=2,
+	keep Screwdriver,
+
+        Result:WalkieTalkie5,	
+        Time:70.0,
+	Sound:Screwdriver,
+	SkillRequired:Electricity=10,
+        Category:Electrical,
+    }
+
+
+    recipe Make Recordable Tapes
+
+    {
+	ElectronicsScrap=10,
+	Aluminum=2,
+	SolidRubber=1,
+	keep Screwdriver,
+
+        Result:WRCRecorderTape=5,	
+        Time:70.0,
+	Sound:Screwdriver,
+	SkillRequired:Electricity=6,
+        Category:Electrical,
+    }
+
+DEADLINE Game
+ 	 
+   
+    recipe Make Duct Tape from Glue
+    {
+        LeatherStrips=5,
+        Water=5,
+        Glue=2,
+
+        Result:DuctTape,
+        Time:230.0,
+        Category:Expertise,
+        NeedToBeLearn:true,
+    }
+
+    recipe Make Duct Tape from Wood Glue
+    {
+        LeatherStrips=5,
+        Water=5,
+        Woodglue=2,
+
+        Result:DuctTape,
+        Time:230.0,
+        Category:Expertise,
+        NeedToBeLearn:true,
+    }
+
+}

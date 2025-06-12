@@ -1,0 +1,59 @@
+module GL
+{
+    imports
+    {
+   	 Base,
+    }
+
+    recipe Train Mechanics (Level 0)
+    {
+        ElectronicsScrap=1,
+	keep Wrench,
+
+        Result: ElectronicsScrap,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveMechanics10,
+        Category:Training,
+    }
+
+    recipe Train Mechanics (Level 1)
+    {
+        ElectronicsScrap=1,
+	keep Wrench,
+
+        Result: ElectronicsScrap,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveMechanics20,
+        Category:Training,
+	SkillRequired:Mechanics=1,
+    }
+
+    recipe Train Mechanics (Level 2)
+    {
+        ElectronicsScrap=1,
+	keep Wrench,
+
+        Result: ElectronicsScrap,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveMechanics30,
+        Category:Training,
+	SkillRequired:Mechanics=2,
+    }
+
+    recipe Train Mechanics (Level 3)
+    {
+        ElectronicsScrap=1,
+	keep Wrench,
+
+        Result: ElectronicsScrap,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveMechanics40,
+        Category:Training,
+	SkillRequired:Mechanics=3,
+    }
+
+}

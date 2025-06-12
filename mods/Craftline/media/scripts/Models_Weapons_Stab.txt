@@ -1,0 +1,134 @@
+module Base
+{
+	model CrudeKnife
+	{
+		mesh = weapons/1handed/Shiv_Spear_Crude_Hand,
+		texture = weapons/2handed/Spear_Crude,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0228 -0.0018 0.0048,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0063 0.0565 -0.0108,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model CrudeBlade
+    {
+        mesh = weapons/1handed/Spear_Crude_Head_Hand,
+        texture = weapons/2handed/Spear_Crude,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0228 -0.0018 0.0048,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+    }
+
+	model ScissorsForged
+	{
+		mesh = Weapons/1Handed/Scissors_Forged_Hand,
+		texture = worlditems/Scissors_Forged,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0075 -0.0018 0.0028,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0108 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model HandguardDagger
+	{
+		mesh = weapons/1handed/Knife_DaggerCrafted_Hand,
+		texture = weapons/1handed/Knife_DaggerCrafted,
+		scale = 1.0,
+
+		attachment world
+		{
+			offset = -0.0093 -0.0000 -0.0000,
+			rotate = 0.0000 -0.0000 0.0000,
+		}
+	}
+	model LongCrudeBlade
+    {
+        mesh = weapons/1handed/Spear_Crude_Longer_Head_Hand,
+        texture = weapons/2handed/Spear_Crude_Longer,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0166 -0.0017 0.0064,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+    }
+	model LongCrudeKnife
+	{
+		mesh = weapons/1handed/Shiv_SpearCrude_Longer_Hand,
+		texture = weapons/2handed/Spear_Crude_Longer,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0166 -0.0017 0.0064,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0036 0.1282 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model SharpBone_Long
+	{
+		mesh = weapons/1handed/Bone_Sharp_Long_Hand,
+		texture = weapons/2handed/Spears_Bone,
+
+		attachment world
+		{
+			offset = -0.0120 0.0005 0.0000,
+			rotate = 0.0000 0.0000 -2.1586,
+		}
+	}
+	model KnifeShiv
+	{
+		mesh = Weapons/1Handed/Shiv,
+		scale = 1.0,
+
+		attachment world
+		{
+			offset = 0.0072 0.0244 -0.0100,
+			rotate = 180.0000 0.0000 180.0000,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0165 0.0076 0.0035,
+			rotate = -19.3322 -82.2846 -16.2658,
+		}
+	}
+	model LargeKnife_Scrap
+	{
+		mesh = weapons/1handed/HuntingKnife_ScrapMetal_Hand,
+		texture = weapons/1handed/Sword_ScrapMetal,
+
+		attachment world
+		{
+			offset = -0.0063 0.0789 -0.0170,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0166 -0.0017 0.0064,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+	}
+}

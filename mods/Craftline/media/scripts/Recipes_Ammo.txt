@@ -1,0 +1,48 @@
+module aerx {
+  imports {
+      Base
+ }
+
+	recipe Craft Black Powder
+	{
+		Charcoal=2,
+		Base.WasteItem,
+		aerx.AluminumFragments/aerx.NickelFragments=2,
+		keep Base.MortarPestle,
+		Result:aerx.BlackPowder,
+		Time:50.0,
+		Category:Firearms,
+	}
+
+
+	recipe Craft Junk Pistol Ammo
+	{
+		aerx.BlackPowder,
+		aerx.AluminumFragments/aerx.TnFragments/aerx.CopperFragments/aerx.NickelFragments/aerx.LeadFragments/aerx.IronFragments/aerx.ZincFragments=2,
+		keep Base.MortarPestle,
+		Result:aerx.T1PistolAmmo=2,
+		Time:50.0,
+		Category:Firearms,
+	}
+
+	recipe Craft Junk Revolver Ammo
+	{
+		aerx.BlackPowder,
+		aerx.AluminumFragments/aerx.TnFragments/aerx.CopperFragments/aerx.NickelFragments/aerx.LeadFragments/aerx.IronFragments/aerx.ZincFragments=2,
+		keep Base.MortarPestle,
+		Result:aerx.T1RevolverAmmo=2,
+		Time:50.0,
+		Category:Firearms,
+	}
+
+	recipe Craft Junk Shotgun Ammo
+	{
+		aerx.BlackPowder,
+		aerx.AluminumFragments/aerx.TnFragments/aerx.CopperFragments/aerx.NickelFragments/aerx.LeadFragments/aerx.IronFragments/aerx.ZincFragments=2,
+		keep Base.MortarPestle,
+		Result:aerx.T1ShotgunAmmo=2,
+		Time:50.0,
+		Category:Firearms,
+	}
+
+}

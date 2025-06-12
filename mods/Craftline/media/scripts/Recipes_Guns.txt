@@ -1,0 +1,96 @@
+module Base
+{
+
+	recipe Craft Junk Pistol
+	{
+		SmallSheetMetal,
+		DuctTape=2,
+		BlowTorch=5,
+		MetalPipe/MetalBar=2,
+		Screws/Nails=5,
+		LeatherStrips/RippedSheets/DenimStrips=1,
+		keep Saw,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		Result:aerx.T1Pistol1,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:MetalWelding=5,
+	}
+
+	recipe Craft Scrap Pistol
+	{
+		SmallSheetMetal,
+		DuctTape=2,
+		BlowTorch=5,
+		MetalPipe/MetalBar=2,
+		Screws/Nails=5,
+		LeatherStrips/RippedSheets/DenimStrips=1,
+		keep Saw,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		Result:aerx.T1Pistol2,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:MetalWelding=5,
+	}
+
+	recipe Craft Slamfire Junk Pipe Shotgun
+	{
+		MetalPipe/MetalBar,
+		Screws/Nails=5,
+		MetalBar/MetalPipe/WoodenStick,
+		Plank/MetalPipe,
+		DuctTape=2,
+		BlowTorch=3,
+		LeatherStrips/RippedSheets/DenimStrips=1,
+		keep Saw,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		Result:aerx.T1Shotgun1,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:MetalWelding=5,
+	}
+
+	recipe Craft Junk Stapler Shotgun
+	{
+		MetalPipe/MetalBar,
+		Screws/Nails=5,
+		MetalBar/MetalPipe/WoodenStick,
+		Plank/MetalPipe,
+		DuctTape=2,
+		BlowTorch=3,
+		LeatherStrips/RippedSheets/DenimStrips=1,
+		keep Saw,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		Result:aerx.T1Shotgun2,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:MetalWelding=5,
+	}
+
+	recipe Craft Junk Stapler Revolver
+	{
+		SmallSheetMetal=2,
+		MetalPipe/MetalBar=2,
+		Screws/Nails=10,
+		DuctTape=2,
+		BlowTorch=5,
+		LeatherStrips/RippedSheets/DenimStrips=1,
+		keep Saw,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		Result:aerx.T1Revolver,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:MetalWelding=5,
+	}
+
+}

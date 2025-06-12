@@ -1,0 +1,62 @@
+module aerx {
+  imports {
+      Base
+ }
+	item Needle_Bone
+	{
+		DisplayName = Bone Needle,
+		DisplayCategory = Tool,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = SewingNeedle_Bone,
+		Medical = TRUE,
+		MetalValue = 2,
+		SurvivalGear = TRUE,
+		WorldStaticModel = Needle_Bone,
+		Tags = SewingNeedle,
+        ConditionLowerChanceOneIn = 5,
+	}
+
+	item Needle_Brass
+	{
+		DisplayName = Brass Needle,
+		DisplayCategory = Tool,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = SewingNeedle_Brass,
+		Medical = TRUE,
+		MetalValue = 2,
+		WorldStaticModel = Needle_Brass,
+		Tags = SewingNeedle,
+        ConditionLowerChanceOneIn = 8,
+	}
+
+	item Needle_Forged
+	{
+		DisplayName = Needle,
+		DisplayCategory = Tool,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = SewingNeedle_Iron,
+		Medical = TRUE,
+		MetalValue = 2,
+		WorldStaticModel = Needle_Forged,
+		Tags = SewingNeedle,
+        ConditionLowerChanceOneIn = 10,
+	}
+
+
+	item Tweezers_Forged
+	{
+		DisplayName = Tweezers,
+		DisplayCategory = FirstAid,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = Tweezers_Forged,
+		Medical = TRUE,
+		MetalValue = 1,
+		Tooltip = Tooltip_Tweezers,
+		WorldStaticModel = Tweezers_Forged,
+		Tags = RemoveBullet;RemoveGlass;Tweezers,
+	}
+}

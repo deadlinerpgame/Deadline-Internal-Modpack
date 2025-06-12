@@ -1,0 +1,27 @@
+module Sprout
+{
+	imports
+	{
+		Base
+	}
+
+   recipe Make Soap
+	{
+       	Twigs=2,
+       	Matches=1,
+       	OilOlive=5,
+       	Water=5,
+
+       	keep Pot,
+       	keep Spoon,
+       	keep KitchenKnife,
+       	keep BakingPan,
+
+       	Result:Soap=2,
+       	Time:200.0,
+       	Category:Cooking,
+       	OnGiveXP:Recipe.OnGiveXP.Cooking15,
+       	Override:true,
+	}
+
+}

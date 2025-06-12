@@ -1,0 +1,44 @@
+module Deadline
+{
+    imports    
+    {
+		Base
+	}
+
+item PathogenContainer
+	{
+        DisplayCategory = Bag,
+        Type = Container,
+        DisplayName = Pathogen Container,
+        ClothingItem = PathogenContainer,
+        CanBeEquipped = Back,
+        WeightReduction	=	85,
+        Weight	=	2,
+        Capacity	=	1,
+        Icon	=	Pathogencontainer,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        BloodLocation = Bag,
+        RunSpeedModifier = 0.94,
+        CanHaveHoles = false,
+        AttachmentReplacement = Bag,
+        ReplaceInSecondHand = PathogenContainer_LHand holdingbagleft,
+        ReplaceInPrimaryHand = PathogenContainer_RHand holdingbagright,
+        WorldStaticModel = MPathogenContainer,
+    }
+
+    model MPathogenContainer
+	{
+		mesh = WorldItems/Story/Pathogen_Ground,
+		texture = WorldItems/Story/PathogenContainer,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+   }

@@ -1,0 +1,212 @@
+module Base
+{ 
+
+   recipe Reinforce Medium Handle with Cans
+    {
+       	aerx.Handle=1,
+	DuctTape=2,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	Base.BeerCanEmpty/Base.PopEmpty/Base.Pop2Empty/Base.Pop3Empty=2,
+        Result:aerx.Handle_Can=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=3,
+    }
+
+   recipe Craft a Bone Club
+    {
+	aerx.AnimalBone=1,
+	LeatherStrips=2,
+        Result:aerx.BoneClub=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=1,
+	NeedToBeLearn:true,
+
+    }
+
+   recipe Craft a Sturdy Bone Club
+    {
+	aerx.LargeAnimalBone=1,
+	LeatherStrips=2,
+        Result:aerx.LargeBoneClub=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=1,
+	NeedToBeLearn:true,
+
+    }
+
+   recipe Craft a Spiked Sturdy Bone Club
+    {
+       	aerx.LargeBoneClub=1,
+	Nails=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.LargeBoneClub_Spiked=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=3,
+	NeedToBeLearn:true,
+
+    }
+
+   recipe Craft a Bowling Pin
+    {
+	Log=1,
+	keep [Recipe.GetItemTypes.Saw],
+        Result:aerx.BowlingPin=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=2,
+    }
+
+   recipe Craft a Plunger
+    {
+	Log=1,
+	keep [Recipe.GetItemTypes.Saw],
+        Result:Plunger=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=2,
+    }
+
+   recipe Craft Short Bat
+    {
+	Log=1,
+	keep [Recipe.GetItemTypes.Saw],
+        Result:aerx.ShortBat=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=2,
+    }
+
+   recipe Reinforce Bowling Pin with Nails
+    {
+	aerx.BowlingPin=1,
+	Nails=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:BowlingPin_Nails=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=2,
+    }
+
+   recipe Craft a Jawbone Club
+    {
+       	aerx.Handle
+	LeatherStrips=2,
+	aerx.JawboneBovide=1,
+	keep [Recipe.GetItemTypes.Saw],
+        Result:aerx.JawboneBovide_Club=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=3,
+	NeedToBeLearn:true,
+    }
+
+   recipe Reinforce Short Bat with Cans
+    {
+	aerx.ShortBat=1,
+	DuctTape=2,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	Base.BeerCanEmpty/Base.PopEmpty/Base.Pop2Empty/Base.Pop3Empty=2,
+        Result:aerx.ShortBat_Can=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=2,
+    }
+
+
+   recipe Reinforce Short Bat with Rake Head
+    {
+	Rake=1,
+       	aerx.ShortBat=1,
+	LeatherStrips=2,
+	Screws=2,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.ShortBat_RakeHead=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=3,
+    }
+
+   recipe Reinforce Short Bat with Nails
+    {
+	aerx.ShortBat=1,
+	Nails=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.ShortBat_Nails=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=2,
+    }
+
+   recipe Reinforce Medium Handle with Nails
+    {
+	aerx.Handle=1,
+	Nails=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.Handle_Nails=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=2,
+    }
+
+   recipe Reinforce Plunger with Barbed Wire
+    {
+	Plunger=1,
+	BarbedWire=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.Plunger_BarbedWire=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:Woodwork=3,
+    }
+
+   recipe Craft Short Scrap Morningstar
+    {
+        MetalBar=1,
+	MetalPipe=2,
+	BlowTorch=1,
+	SmallSheetMetal=1,
+	LeatherStrips/RippedSheets/DenimStrips=1,
+	keep [Recipe.GetItemTypes.Saw],
+	keep WeldingMask,
+	keep Wrench,
+        Result:Morningstar_Scrap_Short=1,
+        Time:100.0,
+        Category:ShortBlunt,
+	SkillRequired:MetalWelding=6,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft Mace
+    {
+       	aerx.MaceHead=1,
+	aerx.SmallHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.Mace=1,
+        Time:255.0,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferMaceheadToMace,
+        Category:ShortBlunt,
+	SkillRequired:MetalWelding=4,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft Long Mace
+    {
+       	aerx.MaceHead=1,
+	aerx.LongHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.LongMace=1,
+        Time:255.0,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferMaceheadToLongMace,
+        Category:ShortBlunt,
+	SkillRequired:MetalWelding=4,
+	NearItem:Simple Forge,
+    }
+
+
+}

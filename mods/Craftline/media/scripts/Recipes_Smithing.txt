@@ -1,0 +1,144 @@
+module Base
+{ 
+   recipe Smith Ingot into Bars
+    {
+       	Smithing.IngotA/Smithing.IngotB/Smithing.IngotC/Smithing.IngotD/Smithing.IngotE/Smithing.IngotF/Smithing.IngotG/Smithing.IngotH/Smithing.IngotI/Smithing.IngotJ/Smithing.IngotK/Smithing.IngotT/Smithing.IngotY/Smithing.IngotP/Smithing.IngotM/Smithing.IngotS/Smithing.IngotQ/Smithing.IngotR/Smithing.IngotU/Smithing.IngotV/Smithing.IngotW/Smithing.IngotX/Smithing.IngotL/Smithing.IngotO/Smithing.IngotN/Smithing.IngotZ,
+	Log/Coke/Charcoal=1,
+	keep IronBarMold/ClayBarMold=4,
+        Result:aerx.IronBar=4,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferIngotToBars,
+	SkillRequired:MetalWelding=4,
+	NearItem:Simple Forge,
+    }
+
+   recipe Smith Bar into Set of Coins (25)
+    {
+       	aerx.IronBar=1,
+	Log/Coke/Charcoal=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:DLM.CrCoin=25,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarsToCoins,
+	SkillRequired:MetalWelding=9,
+	NearItem:Simple Forge,
+    }
+
+   recipe Smith Bar into (Iron) Bar
+    {
+       	aerx.IronBar=1,
+	Log/Coke/Charcoal=1,
+	keep aerx.ClayBarMold,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:MetalBar=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarsToVBar,
+	SkillRequired:MetalWelding=5,
+	NearItem:Simple Forge,
+    }
+
+   recipe Smith Bar into (Iron) Pipe
+    {
+       	aerx.IronBar=1,
+	Log/Coke/Charcoal=1,
+	keep aerx.ClayBarMold,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:MetalPipe=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarsToPipes,
+	SkillRequired:MetalWelding=5,
+	NearItem:Simple Forge,
+    }
+
+   recipe Smith Bar into Sheet Metal
+    {
+       	aerx.IronBar=1,
+	Log/Coke/Charcoal=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:SheetMetal=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarsToSheetMetal,
+	SkillRequired:MetalWelding=5,
+	NearItem:Simple Forge,
+    }
+
+
+
+   recipe Craft Crude Shortsword Blade
+    {
+       	aerx.IronBar=1,
+	Coke/Charcoal=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.CrudeShortSwordBlade=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToSimpleShortSword,
+	SkillRequired:MetalWelding=6,
+	NearItem:Simple Furnace,
+    }
+
+   recipe Craft Mace Head
+    {
+       	aerx.IronBar=1,
+	Coke/Charcoal=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.MaceHead=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToMaceHead,
+	SkillRequired:MetalWelding=6,
+	NearItem:Simple Furnace,
+    }
+
+
+   recipe Craft Crude Sword Blade
+    {
+       	aerx.IronBar=2,
+	Coke/Charcoal=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.CrudeSwordBlade=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToSimpleSword,
+	SkillRequired:MetalWelding=7,
+	NearItem:Simple Furnace,
+    }
+
+   recipe Craft Anvil
+    {
+       		Smithing.IngotA/Smithing.IngotB/Smithing.IngotC/Smithing.IngotD/Smithing.IngotE/Smithing.IngotF/Smithing.IngotG/Smithing.IngotH/Smithing.IngotI/Smithing.IngotJ/Smithing.IngotK/Smithing.IngotT/Smithing.IngotY/Smithing.IngotP/Smithing.IngotM/Smithing.IngotS/Smithing.IngotQ/Smithing.IngotR/Smithing.IngotU/Smithing.IngotV/Smithing.IngotW/Smithing.IngotX/Smithing.IngotL/Smithing.IngotO/Smithing.IngotN/Smithing.IngotZ=5,
+	keep aerx.ClayBenchAnvilMold=1,
+	Result:aerx.BenchAnvil=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferIngotToAnvil,
+	SkillRequired:MetalWelding=5,
+
+    }
+
+   recipe Smelt Down Broken Weapon
+    {
+        aerx.CrudeShortSword/aerx.CrudeSword,
+        Result:aerx.IronScrap,
+        Time:15.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.ReturnMetalFromWeapon,
+    }
+
+
+}

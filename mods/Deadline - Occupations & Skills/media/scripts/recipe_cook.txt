@@ -1,0 +1,34 @@
+module Base
+{
+
+      recipe Remove Poison from Mushroom
+    {
+        MushroomGeneric1/MushroomGeneric2/MushroomGeneric3/MushroomGeneric4/MushroomGeneric5/MushroomGeneric6/MushroomGeneric7,
+        keep KitchenKnife/HuntingKnife,
+
+        Result:MushroomMash,
+        Sound:SliceMeat,
+        Time:20.0,
+        Category:Expertise,
+        OnCreate:Recipe.OnCreate.OE_PerformPoisonCleaning,
+        OnGiveXP:Recipe.OnGiveXP.Cooking10,
+        Tooltip:Food needs to be poisonous to appear as valid for this recipe.,
+        NeedToBeLearn:true,
+    }
+
+    recipe Remove Poison from Berries
+    {
+        BerryBlue/BerryBlack/BerryPoisonIvy/BerryGeneric1/BerryGeneric2/BerryGeneric3/BerryGeneric4/BerryGeneric5,
+        keep KitchenKnife/HuntingKnife,
+
+        Result:BerryMash,
+        Sound:SliceMeat,
+        Time:20.0,
+        Category:Expertise,
+        OnCreate:Recipe.OnCreate.OE_PerformPoisonCleaning,
+        OnGiveXP:Recipe.OnGiveXP.Cooking10,
+        Tooltip:Food needs to be poisonous to appear as valid for this recipe.,
+        NeedToBeLearn:true,
+    }
+
+}

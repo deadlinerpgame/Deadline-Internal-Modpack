@@ -1,0 +1,188 @@
+module Base {
+
+recipe Craft a Drying Rack Kit
+    {
+        keep Saw,
+	keep Hammer,
+	aerx.LongStick=6,
+	Base.Twine=8,
+	Base.Nails=2,
+        CanBeDoneFromFloor:true,
+        Result:Base.DryingRackConstructionSet,
+        Time:600.0,
+	SkillRequired:Woodwork=3,
+        Category:Construction,
+    }
+
+recipe Craft a Tailoring Table Kit
+    {
+        keep Saw,
+	keep Hammer,
+	aerx.LongStick=6,
+	Base.Plank=7,
+	Base.Nails=5,
+        CanBeDoneFromFloor:true,
+        Result:Base.TailorTableConstructionSet,
+        Time:600.0,
+	SkillRequired:Woodwork=3,
+        Category:Construction,
+	NeedToBeLearn:true,
+    }
+
+recipe Craft a Brewing Station Kit
+    {
+        keep Saw,
+	keep Hammer,
+	Base.BucketEmpty,
+	Base.Plank=6,
+	Base.Nails=10,
+	Base.GlassPane,
+        CanBeDoneFromFloor:true,
+        Result:Base.BrewingStationConstructionSet,
+        Time:600.0,
+	SkillRequired:Woodwork=3,
+        Category:Construction,
+	NeedToBeLearn:true,
+    }
+
+recipe Craft a Paint Mixing Kit
+    {
+        keep Saw,
+	keep Hammer,
+	Base.BucketEmpty,
+	Base.Plank=6,
+	Base.Nails=10,
+	Base.MortarPestle,
+	Base.Paintbrush,
+        CanBeDoneFromFloor:true,
+        Result:Base.PaintMixingConstructionSet,
+        Time:600.0,
+	SkillRequired:Woodwork=3,
+        Category:Construction,
+	NeedToBeLearn:true,
+    }
+
+
+recipe Craft a Butchering Hook Kit
+    {
+	Base.Plank=2,
+	Base.Nails=2,
+        CanBeDoneFromFloor:true,
+        Result:Base.ButcheringHookConstructionSet,
+        Time:600.0,
+	SkillRequired:Woodwork=3,
+        Category:Construction,
+    }
+
+recipe Craft a Simple Forge Kit
+    {
+	Base.Stone=30,
+	aerx.BenchAnvil=1,
+	Base.Log=1,
+        CanBeDoneFromFloor:true,
+        Result:Base.ForgeSimpleConstructionSet,
+        Time:600.0,
+	SkillRequired:Woodwork=3,
+        Category:Construction,
+    }
+
+recipe Craft an Advanced Forge Kit
+    {
+	Base.Stone=50,
+	aerx.BenchAnvil=1,
+	Base.Log=1,
+        CanBeDoneFromFloor:true,
+        Result:Base.ForgeAdvancedConstructionSet,
+        Time:600.0,
+	SkillRequired:Woodwork=7,
+        Category:Construction,
+    }
+
+recipe Craft a Simple Furnace Kit
+    {
+	Base.Stone=30,
+	Base.Log=1,
+        CanBeDoneFromFloor:true,
+        Result:Base.FurnaceSimpleConstructionSet,
+        Time:600.0,
+	SkillRequired:Woodwork=3,
+        Category:Construction,
+    }
+
+recipe Craft an Advanced Furnace Kit
+    {
+	Base.Stone=100,
+	Base.Log=5,
+        CanBeDoneFromFloor:true,
+        Result:Base.FurnaceAdvancedConstructionSet,
+        Time:600.0,
+	SkillRequired:Woodwork=7,
+        Category:Construction,
+    }
+
+recipe Craft a Simple Kiln Kit
+    {
+	aerx.Clay=15,
+        CanBeDoneFromFloor:true,
+        Result:Base.KilnSimpleConstructionSet,
+        Time:600.0,
+        Category:Construction,
+    }
+
+recipe Craft an Advanced Kiln Kit
+    {
+	aerx.ClayBrick=30,
+        CanBeDoneFromFloor:true,
+        Result:Base.KilnAdvancedConstructionSet,
+        Time:600.0,
+	SkillRequired:Woodwork=4,
+        Category:Construction,
+    }
+
+recipe Craft a Hand Press Kit
+    {
+	Base.Plank=4,
+	Base.Nails=4,
+        CanBeDoneFromFloor:true,
+        Result:Base.HandPressConstructionSet,
+        Time:600.0,
+        Category:Construction,
+	NeedToBeLearn:true,
+    }
+
+recipe Craft a Sculpting Table Kit
+    {
+	Base.Plank=4,
+	Base.Nails=4,
+        CanBeDoneFromFloor:true,
+        Result:Base.SculptingTableConstructionSet,
+        Time:600.0,
+        Category:Construction,
+	NeedToBeLearn:true,
+    }
+
+recipe Craft a Anaerobic Digester Kit
+    {
+        keep Saw,
+	keep Hammer,
+	Garbagebag=10,
+	Screws=20,
+	SheetMetal=4,
+	SmallSheetMetal=2,
+	MetalPipe=2,
+	ElectricWire=5,
+	ElectronicsScrap=20,
+	LightBulbRed=1,
+	LightBulbGreen=1,
+	LightBulbYellow=1,
+	Base.Nails=2,
+        CanBeDoneFromFloor:true,
+        Result:Base.DigesterConstructionSet,
+        Time:600.0,
+	SkillRequired:Electricity=8;MetalWelding=4,
+        Category:Construction,
+	NeedToBeLearn:true,
+    }
+
+}
+
