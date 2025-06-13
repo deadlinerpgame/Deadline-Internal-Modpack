@@ -19,13 +19,9 @@ function ISSafehouseUI:onClickAddManager(button)
     local selectedName = self.playerList.items[selected].item.name;
     if not selectedName then return end;
 
-    -- Check if player is valid.
-    local matchingPlayer = getPlayerFromUsername(selectedName);
-    if not matchingPlayer then return end; -- They have likely DCed or crashed between selecting and clicking accept (rare edge case).
+    SafehouseClient.AddSafehouseManager(self.safehouse, selectedName);
 
-    SafehouseClient.AddSafehouseManager(self.safehouse, matchingPlayer);
-
-    self:populateList();
+    self:populateListEx();
     self.playerList:onMouseUp(getMouseX(), getMouseY());
     self:updateManagerButtons();
 end 
@@ -37,13 +33,9 @@ function ISSafehouseUI:onClickRemoveManager(button)
     local selectedName = self.playerList.items[selected].item.name;
     if not selectedName then return end;
 
-    -- Check if player is valid.
-    local matchingPlayer = getPlayerFromUsername(selectedName);
-    if not matchingPlayer then return end; -- They have likely DCed or crashed between selecting and clicking accept (rare edge case).
+    SafehouseClient.RemoveSafehouseManager(self.safehouse, selectedName);
 
-    SafehouseClient.RemoveSafehouseManager(self.safehouse, matchingPlayer);
-
-    self:populateList();
+    self:populateListEx();
     self.playerList:onMouseDown(getMouseX(), getMouseY());
     self:updateManagerButtons();
 end
@@ -134,72 +126,19 @@ function ISSafehouseUI:updateManagerButtons()
     end
 end
 
-
-function ISSafehouseUI:drawPlayers(y, item, alt)
-    local a = 0.9;
-
-    self:drawRectBorder(0, (y), self:getWidth(), self.itemheight - 1, a, self.borderColor.r, self.borderColor.g, self.borderColor.b);
-    if self.selected == item.index then
-        self:drawRect(0, (y), self:getWidth(), self.itemheight - 1, 0.3, 0.7, 0.35, 0.15);
-    end
-
-    if item.item.isManager and item.item.isManager == true then
-        self:drawText(item.text .. " - Manager", 10, y + 2, 1, 1, 1, a, self.font);
-    else
-        self:drawText(item.text, 10, y + 2, 1, 1, 1, a, self.font);
-    end
-
-    return y + self.itemheight;
-end
-
---[[
-    OVERRIDE DEFAULT SAFEHOUSE UI INIT FUNCTIONALITY
-    Call initial functionality.
-    Then inject our own features.
---]]
-local vanillaSafehouseFunction = ISSafehouseUI.initialise;
-function ISSafehouseUI:initialise()
-    vanillaSafehouseFunction(self);
-    ModData.request("SafehouseLine_Managers");
-
-    local safehouse = self.safehouse;
-    if not safehouse then return end;
-
-    local mgrBtn = ISButton:new(self.addPlayer:getRight() + 5, self.playerList.y + self.playerList.height + 5, 70, FONT_HGT_SMALL, getText("IGUI_SafehouseUI_AddManager"), self, ISSafehouseUI.onClickAddManager);
-    mgrBtn.internal = "ADDMGR";
-    mgrBtn:initialise();
-    mgrBtn:instantiate();
-    mgrBtn.borderColor = self.buttonBorderColor;
-    mgrBtn.tooltip = "Managers allow other players to add/remove from the safehouse, but not make other players managers themselves.";
-    self:addChild(mgrBtn);
-
-    self.mgrBtn = mgrBtn;
-    self.mgrBtn.enable = false;
-
-    -- Override vanilla functionality to allow managers to add players.
-    self.addPlayer.enable = self:isOwner() or self:hasPrivilegedAccessLevel() or SafehouseClient.IsManager(getPlayer(), self.safehouse);
-    self.playerList.onMouseDown = self.onMouseDown_List;
-    self.playerList.doDrawItem = self.drawPlayers;
-
-    self:populateList();
-    self:updateManagerButtons();
-end
-
-local vanillaPlayerListFunction = ISSafehouseUI.populateList;
-function ISSafehouseUI:populateList()
+function ISSafehouseUI:populateListEx()
+    if not self.playerList then return end;
 
     local selected = self.playerList.selected;
+    if not selected then return end;
+
     self.playerList:clear();
 
     for i = 0, self.safehouse:getPlayers():size() - 1 do
 
         local newPlayer = {};
         newPlayer.name = self.safehouse:getPlayers():get(i);
-
-        local player = getPlayerFromUsername(newPlayer.name);
-        if not player then return end;
-        
-        newPlayer.isManager = SafehouseClient.IsManager(player, self.safehouse);
+        newPlayer.isManager = SafehouseClient.IsManagerEx(newPlayer.name, self.safehouse);
             
         if newPlayer.name ~= self.safehouse:getOwner() then
             self.playerList:addItem(newPlayer.name, newPlayer);
@@ -207,14 +146,20 @@ function ISSafehouseUI:populateList()
     end;
 
     self.playerList.selected = math.min(selected, #self.playerList.items);
+    self:updateManagerButtons();
 end
 
+--[[
+    OVERRIDE DEFAULT SAFEHOUSE UI INIT FUNCTIONALITY
+    Call initial functionality.
+    Then inject our own features.
+--]]
+
+local vanillaPlayerListFunction = ISSafehouseUI.populateList;
 
 --[[
     OVERRIDE THE FUNCTION TO PREVENT SENDING IF HAS MULTIPLE SHs.
 --]]
-
-
 
 function SafehouseLine_ReceiveSafehouseInvite(safehouse, host)
     if ISSafehouseUI.inviteDialogs[host] then
@@ -232,3 +177,58 @@ function SafehouseLine_ReceiveSafehouseInvite(safehouse, host)
 end
 
 Events.ReceiveSafehouseInvite.Add(SafehouseLine_ReceiveSafehouseInvite);
+
+
+function SafehouseLine_OnCreatePlayer(playerNum, player)
+
+    local vanillaSafehouseFunction = ISSafehouseUI.initialise;
+    
+    ISSafehouseUI.initialise = function(self)
+        vanillaSafehouseFunction(self);
+        
+        ModData.request("SafehouseLine_Managers");
+    
+        local safehouse = self.safehouse;
+        if not safehouse then return end;
+    
+        local mgrBtn = ISButton:new(self.addPlayer:getRight() + 5, self.playerList.y + self.playerList.height + 5, 70, FONT_HGT_SMALL, getText("IGUI_SafehouseUI_AddManager"), self, ISSafehouseUI.onClickAddManager);
+        mgrBtn.internal = "ADDMGR";
+        mgrBtn:initialise();
+        mgrBtn:instantiate();
+        mgrBtn.borderColor = self.buttonBorderColor;
+        mgrBtn.tooltip = "Managers allow other players to add/remove from the safehouse, but not make other players managers themselves.";
+        self:addChild(mgrBtn);
+    
+        self.mgrBtn = mgrBtn;
+        self.mgrBtn.enable = false;
+    
+        -- Override vanilla functionality to allow managers to add players.
+        self.addPlayer.enable = self:isOwner() or self:hasPrivilegedAccessLevel() or SafehouseClient.IsManager(getPlayer(), self.safehouse);
+        self.playerList.onMouseDown = self.onMouseDown_List;
+        self.playerList.doDrawItem = self.drawPlayers;
+
+        self.populateList = self.populateListEx;
+    
+        self:populateListEx();
+        self:updateManagerButtons();
+    end
+
+    ISSafehouseUI.drawPlayers = function(self, y, item, alt)
+        local a = 0.9;
+    
+        self:drawRectBorder(0, (y), self:getWidth(), self.itemheight - 1, a, self.borderColor.r, self.borderColor.g, self.borderColor.b);
+        if self.selected == item.index then
+            self:drawRect(0, (y), self:getWidth(), self.itemheight - 1, 0.3, 0.7, 0.35, 0.15);
+        end
+    
+        if item.item.isManager and item.item.isManager == true then
+            self:drawText(item.text .. " - Manager", 10, y + 2, 1, 1, 1, a, self.font);
+        else
+            self:drawText(item.text, 10, y + 2, 1, 1, 1, a, self.font);
+        end
+    
+        return y + self.itemheight;
+    end
+end
+
+Events.OnCreatePlayer.Add(SafehouseLine_OnCreatePlayer);
