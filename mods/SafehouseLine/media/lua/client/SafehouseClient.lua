@@ -23,17 +23,17 @@ function SafehouseClient.OnInitGlobalModData(newGame)
 end
 
 function SafehouseClient.AddSafehouseManager(safehouse, newManager)
-    if SafehouseClient.IsManager(newManager, safehouse) then return end;
+    if SafehouseClient.IsManagerEx(newManager, safehouse) then return end;
 
     local id  = SafehouseClient.GetSafehouseKey(safehouse);
-    sendClientCommand(getPlayer(), "SafehouseLine", "AddSafehouseManager", { safehouse = id, manager = newManager:getUsername(), issuer = getPlayer():getUsername() });
+    sendClientCommand(getPlayer(), "SafehouseLine", "AddSafehouseManager", { safehouse = id, manager = newManager, issuer = getPlayer():getUsername() });
 end
 
 function SafehouseClient.RemoveSafehouseManager(safehouse, newManager)
-    if not SafehouseClient.IsManager(newManager, safehouse) then return end;
+    if not SafehouseClient.IsManagerEx(newManager, safehouse) then return end;
 
     local id  = SafehouseClient.GetSafehouseKey(safehouse);
-    sendClientCommand(getPlayer(), "SafehouseLine", "RemoveSafehouseManager", { safehouse = id, manager = newManager:getUsername(), issuer = getPlayer():getUsername() });
+    sendClientCommand(getPlayer(), "SafehouseLine", "RemoveSafehouseManager", { safehouse = id, manager = newManager, issuer = getPlayer():getUsername() });
 end
 
 function SafehouseClient.getUIFontScale()
@@ -91,7 +91,7 @@ end
 function SafehouseClient.GetSafehouseKey(safehouse)
     if not safehouse then return nil end;
 
-    return string.format("%s|%d-%d-%d", safehouse:getTitle(), safehouse:getX(), safehouse:getY(), safehouse:getW());
+    return string.format("%s|%d-%d-%d", safehouse:getOwner(), safehouse:getX(), safehouse:getY(), safehouse:getW());
 end
 
 
