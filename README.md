@@ -10,3 +10,6 @@
 
 ### Requirements:
 - If you are making changes to .pack files (tilepacks) you must have [Git LFS installed](https://git-lfs.com/).
+
+### IMPORTANT DEPLOYMENT NOTICE!!
+- If you git pull this repo to deploy it, make sure you `git lfs pull` in order to convert the .tile LFS pointers to their actual original files!
