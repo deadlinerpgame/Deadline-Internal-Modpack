@@ -777,7 +777,7 @@ addTrait("Graceful", {
 
 addTrait("HobbyAxe", {
     name = "Hobby Axe",
-    description = "Adds +1 to Axe.",
+    description = "Adds +1 to Axe. +1 to Axe Attack Rolls.",
     cost = 2,
     xp = {
         [Perks.Axe] = 1,
@@ -850,7 +850,7 @@ addTrait("HobbyFarming", {
 
 addTrait("HobbyFirearms", {
     name = "Hobby Firearms",
-    description = "Adds +1 to Aiming and +1 to Reloading.",
+    description = "Adds +1 to Aiming and +1 to Reloading. +1 to Ranged Attack Rolls.",
     cost = 2,
     xp = {
         [Perks.Aiming] = 1,
@@ -888,7 +888,7 @@ addTrait("HobbyForaging", {
 
 addTrait("HobbyLongBlade", {
     name = "Hobby Long Blade",
-    description = "Adds +1 to Long Blade.",
+    description = "Adds +1 to Long Blade. +1 to Long Blade Attack Rolls.",
     cost = 2,
     xp = {
         [Perks.LongBlade] = 1,
@@ -897,7 +897,7 @@ addTrait("HobbyLongBlade", {
 
 addTrait("HobbyLongBlunt", {
     name = "Hobby Long Blunt",
-    description = "Adds +1 to Long Blunt.",
+    description = "Adds +1 to Long Blunt. +1 to Long Blunt Attack Rolls.",
     cost = 2,
     xp = {
         [Perks.Blunt] = 1,
@@ -942,7 +942,7 @@ addTrait("HobbyMusic", {
 
 addTrait("HobbyShortBlade", {
     name = "Hobby Short Blade",
-    description = "Adds +1 to Short Blade.",
+    description = "Adds +1 to Short Blade. +1 to Short Blade Attack Rolls.",
     cost = 2,
     xp = {
         [Perks.SmallBlade] = 1,
@@ -951,7 +951,7 @@ addTrait("HobbyShortBlade", {
 
 addTrait("HobbyShortBlunt", {
     name = "Hobby Short Blunt",
-    description = "Adds +1 to Short Blunt.",
+    description = "Adds +1 to Short Blunt. +1 to Short Blunt Attack Rolls.",
     cost = 2,
     xp = {
         [Perks.SmallBlunt] = 1,
@@ -960,7 +960,7 @@ addTrait("HobbyShortBlunt", {
 
 addTrait("HobbySpear", {
     name = "Hobby Spear",
-    description = "Adds +1 to Spear.",
+    description = "Adds +1 to Spear. +1 to Spear Attack Rolls.",
     cost = 2,
     xp = {
         [Perks.Spear] = 1,
@@ -1197,7 +1197,7 @@ addTrait("SkilledNimble", {
 
 addTrait("SkilledAxe", {
     name = "Skilled Axe",
-    description = "Adds +2 to Axe.",
+    description = "Adds +2 to Axe. +2 to Axe Attack Rolls.",
     cost = 4,
     xp = {
         [Perks.Axe] = 2,
@@ -1233,7 +1233,7 @@ addTrait("SkilledFarming", {
 
 addTrait("SkilledFirearms", {
     name = "Skilled Firearms",
-    description = "Adds +2 to Aiming and Reloading.",
+    description = "Adds +2 to Aiming and Reloading. +2 to Ranged Attack Rolls.",
     cost = 4,
     xp = {
         [Perks.Aiming] = 2,
@@ -1271,7 +1271,7 @@ addTrait("SkilledForaging", {
 
 addTrait("SkilledLongBlade", {
     name = "Skilled Long Blade",
-    description = "Adds +2 to Long Blade.",
+    description = "Adds +2 to Long Blade. +2 to Long Blade Attack Rolls.",
     cost = 4,
     xp = {
         [Perks.LongBlade] = 2,
@@ -1280,7 +1280,7 @@ addTrait("SkilledLongBlade", {
 
 addTrait("SkilledLongBlunt", {
     name = "Skilled Long Blunt",
-    description = "Adds +2 to Long Blunt.",
+    description = "Adds +2 to Long Blunt. +2 to Long Blunt Attack Rolls.",
     cost = 4,
     xp = {
         [Perks.Blunt] = 2,
@@ -1325,7 +1325,7 @@ addTrait("SkilledMusic", {
 
 addTrait("SkilledShortBlade", {
     name = "Skilled Short Blade",
-    description = "Adds +2 to Short Blade.",
+    description = "Adds +2 to Short Blade. +2 to Short Blade Attack Rolls.",
     cost = 4,
     xp = {
         [Perks.SmallBlade] = 2,
@@ -1334,7 +1334,7 @@ addTrait("SkilledShortBlade", {
 
 addTrait("SkilledShortBlunt", {
     name = "Skilled Short Blunt",
-    description = "Adds +2 to Short Blunt.",
+    description = "Adds +2 to Short Blunt. +2 to Short Blunt Attack Rolls.",
     cost = 4,
     xp = {
         [Perks.SmallBlunt] = 2,
@@ -1343,7 +1343,7 @@ addTrait("SkilledShortBlunt", {
 
 addTrait("SkilledSpear", {
     name = "Skilled Spear",
-    description = "Adds +2 to Spear.",
+    description = "Adds +2 to Spear. +2 to Spear Attack Rolls.",
     cost = 4,
     xp = {
         [Perks.Spear] = 2,

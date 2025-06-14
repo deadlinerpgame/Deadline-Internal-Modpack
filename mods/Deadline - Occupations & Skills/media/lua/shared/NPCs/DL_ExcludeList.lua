@@ -22,6 +22,7 @@ local function onGameBootAddDLTraits()
 	TraitFactory.setMutualExclusive("Nutritionist2","Nutritionist")
 	TraitFactory.setMutualExclusive("Dextrous2","Dextrous")
 	TraitFactory.setMutualExclusive("Dextrous2","Hemophobic")
+	TraitFactory.setMutualExclusive("SlowHealer","Hemophobic")
 	
 	TraitFactory.setMutualExclusive("FastReader","Illiterate")
 	TraitFactory.setMutualExclusive("SlowReader","Illiterate")
@@ -39,6 +40,7 @@ local function onGameBootAddDLTraits()
 	TraitFactory.setMutualExclusive("FastLearner","Pacifist")
 
 	TraitFactory.setMutualExclusive("SlowHealer","FastHealer")
+	
 
 	TraitFactory.setMutualExclusive("Disorganized","Organized2")
 

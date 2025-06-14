@@ -139,6 +139,21 @@ recipe Craft an Advanced Kiln Kit
         Category:Construction,
     }
 
+recipe Craft a Distiller Kit
+    {
+	PropaneTank=1,
+	SheetMetal=2,
+	SmallSheetMetal=1,
+	MetalPipe=5,
+	ElectricWire=3,
+	ElectronicsScrap=10
+        CanBeDoneFromFloor:true,
+        Result:Base.DistillerConstructionSet,
+        Time:600.0,
+	SkillRequired:Electricity=4,
+        Category:Construction,
+    }
+
 recipe Craft a Hand Press Kit
     {
 	Base.Plank=4,
