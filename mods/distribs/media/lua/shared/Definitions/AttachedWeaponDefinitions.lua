@@ -9,20 +9,18 @@ AttachedWeaponDefinitions.chanceOfAttachedWeapon = 6; -- Global chance of having
 
 -- random spear in the stomach
 AttachedWeaponDefinitions.spearStomach = {
-	chance = 5, -- chance is total, we'll get the chance of every definition and take one from there
+	chance = 1, -- chance is total, we'll get the chance of every definition and take one from there
 	weaponLocation = {"Stomach"}, -- defined in AttachedLocations.lua
 	bloodLocations = {"Torso_Lower","Back"}, -- we add blood & hole on this part
 	addHoles = true, -- if true, you need at least one bloodLocation
 	daySurvived = 30, -- needed day of survival before seeing this one
 	weapons = { -- list of possible weapons, we'll take one randomly from there
-		"Base.SpearKnife",
 		"Base.SpearCrafted",
-		"Base.SpearHuntingKnife",
 		"Base.SpearScrewdriver",
 		"Base.SpearScissors",
 		"Base.SpearScalpel",
 		"Base.SpearButterKnife",
-		"Base.SpearHuntingKnife",
+
 	},
 }
 
@@ -39,14 +37,14 @@ AttachedWeaponDefinitions.katanaStomach = {
 
 -- meat cleaver & some others low weapons (Hand Axes..) in the back
 AttachedWeaponDefinitions.meatCleaverBackLowQuality = {
-	chance = 5,
+	chance = 2,
 	weaponLocation = {"MeatCleaver in Back"},
 	bloodLocations = {"Back"},
 	addHoles = true,
 	daySurvived = 0,
 	weapons = {
 		"Base.MeatCleaver",
-		"Base.HandAxe",
+
 	},
 }
 
@@ -58,7 +56,7 @@ AttachedWeaponDefinitions.meatCleaverBack = {
 	addHoles = true,
 	daySurvived = 20,
 	weapons = {
-		"Base.HandAxe",
+
 	},
 }
 
@@ -87,7 +85,7 @@ AttachedWeaponDefinitions.axeBack = {
 	addHoles = true,
 	daySurvived = 15,
 	weapons = {
-		"Base.Axe",
+
 	},
 }
 
@@ -99,7 +97,7 @@ AttachedWeaponDefinitions.huntingKnifeBack = {
 	addHoles = false,
 	daySurvived = 10,
 	weapons = {
-		"Base.HuntingKnife",
+
 	},
 }
 
@@ -141,7 +139,7 @@ AttachedWeaponDefinitions.huntingKnifeLeftLeg = {
 	addHoles = false,
 	daySurvived = 10,
 	weapons = {
-		"Base.HuntingKnife",
+
 	},
 }
 
@@ -183,7 +181,7 @@ AttachedWeaponDefinitions.huntingKnifeRightLeg = {
 	addHoles = false,
 	daySurvived = 10,
 	weapons = {
-		"Base.HuntingKnife",
+
 	},
 }
 
@@ -225,7 +223,7 @@ AttachedWeaponDefinitions.huntingKnifeShoulder = {
 	addHoles = false,
 	daySurvived = 10,
 	weapons = {
-		"Base.HuntingKnife",
+
 	},
 }
 
@@ -280,7 +278,7 @@ AttachedWeaponDefinitions.huntingKnifeStomach = {
 	addHoles = false,
 	daySurvived = 10,
 	weapons = {
-		"Base.HuntingKnife",
+		
 	},
 }
 
@@ -320,7 +318,7 @@ AttachedWeaponDefinitions.crowbarBack = {
 	addHoles = true,
 	daySurvived = 10,
 	weapons = {
-		"Base.Crowbar",
+
 	},
 }
 
@@ -415,7 +413,7 @@ AttachedWeaponDefinitions.lumberjack = {
 	addHoles = false,
 	daySurvived = 0,
 	weapons = {
-		"Base.HandAxe",
+
 	},
 }
 
@@ -479,7 +477,7 @@ AttachedWeaponDefinitions.knivesBelt = {
 	addHoles = false,
 	daySurvived = 0,
 	weapons = {
-		"Base.HuntingKnife",
+		
 		"Base.KitchenKnife",
 		"Base.HammerStone",
 	},
@@ -487,7 +485,7 @@ AttachedWeaponDefinitions.knivesBelt = {
 
 -- crowbar or machete in back
 AttachedWeaponDefinitions.bladeInBack = {
-	chance = 20,
+	chance = 1,
 	outfit = {"Bandit"},
 	weaponLocation = {"Blade On Back"},
 	bloodLocations = nil,
