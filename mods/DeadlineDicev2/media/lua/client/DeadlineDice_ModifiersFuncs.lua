@@ -100,7 +100,7 @@ end
 
 local traitModifiers = {Marksman = 2,ShakyHands = -2,HobbyFirearms = 1, SkilledFirearms = 2}
 
-    return DeadlineDice.addTraitModifiers2(modifiers, character, traitModifiers)
+    return DeadlineDice.addTraitModifiers(modifiers, character, traitModifiers)
 
 end
 
@@ -238,6 +238,7 @@ function DeadlineDice.getHideModifiers(modifiers, character)
         Inconspicuous = 2,
         Clumsy = -1,
         Conspicuous = -2,
+        Burglar = 2,
     }
 
     return DeadlineDice.addTraitModifiers2(modifiers, character, traitModifiers)
