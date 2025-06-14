@@ -1,0 +1,101 @@
+module SolarPanels
+{
+
+	recipe Craft a Solar Panel
+	{
+		base.BlowTorch=1,
+		base.GlassPane=4,
+		ElectricWire=2,
+		ElectronicsScrap=5,
+		aerx.AluminumFragments=5,
+		aerx.ZincFragments/aerx.LeadFragments=5,
+		DuctTape/Glue=2,
+		keep Wrench,
+		keep Screwdriver,
+
+		Result:SolarPanel,
+		Sound:CutSheet,
+		Time:200.0,
+		SkillRequired:Electricity=10,
+		Category:SolarPanels,
+	}
+
+    recipe Craft Solar Roof Tile
+    {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        SolarPanel,
+        Radio.ElectricWire = 3,
+	keep Wrench,
+	keep Screwdriver,
+        CanBeDoneFromFloor:false,
+        Time:120,
+        SkillRequired:Electricity=6,
+        Result: Moveables.solarmod_tileset_01_8,
+        Category:SolarPanels,
+    }
+    recipe Craft Wall-Mounted Solar Panel
+    {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        SolarPanel,
+        Radio.ElectricWire = 3,
+        Base.MetalBar = 2,
+        Base.Screws = 4,
+	keep Wrench,
+	keep Screwdriver,
+        CanBeDoneFromFloor:false,
+        Time:120,
+        SkillRequired:Electricity=6,
+        Result: Moveables.solarmod_tileset_01_6,
+        Category:SolarPanels,
+    }
+
+	recipe Craft a Battery Bank
+	{
+		ElectricWire=2,
+		SmallSheetMetal=5,
+		ElectronicsScrap=20,
+		MetalPipe/MetalBar=4,
+		keep Wrench,
+		keep Screwdriver,
+		Result: Moveables.solarmod_tileset_01_0,
+		Sound:CutSheet,
+		Time:200.0,
+		SkillRequired:Electricity=10,
+		Category:SolarPanels,
+	}
+
+	recipe Craft a DIY Battery
+	{
+		ElectricWire=2,
+		aerx.ZincFragments/aerx.LeadFragments=10,
+		ElectronicsScrap=5,
+		MetalPipe/MetalBar=1,
+		Glue/DuctTape=1,
+		keep Wrench,
+		keep Screwdriver,
+		Result: DIYBattery,
+		Sound:CutSheet,
+		Time:200.0,
+		SkillRequired:Electricity=10,
+		Category:SolarPanels,
+	}
+
+	recipe Craft a Solar Failsafe
+	{
+		ElectricWire=2,
+		ElectronicsScrap=15,
+		MetalPipe/MetalBar=1,
+		Glue/DuctTape=2,
+		LightBulbRed=1,
+		LightBulbGreen=1,
+		keep Wrench,
+		keep Screwdriver,
+		Result: SolarFailsafe,
+		Sound:CutSheet,
+		Time:200.0,
+		SkillRequired:Electricity=10,
+		Category:SolarPanels,
+	}
+ 
+
+}
