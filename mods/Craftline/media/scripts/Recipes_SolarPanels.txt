@@ -3,8 +3,8 @@ module SolarPanels
 
 	recipe Craft a Solar Panel
 	{
-		base.BlowTorch=1,
-		base.GlassPane=4,
+		BlowTorch=1,
+		GlassPane=4,
 		ElectricWire=2,
 		ElectronicsScrap=5,
 		aerx.AluminumFragments=5,
@@ -13,7 +13,7 @@ module SolarPanels
 		keep Wrench,
 		keep Screwdriver,
 
-		Result:SolarPanel,
+		Result:ISA.SolarPanel,
 		Sound:CutSheet,
 		Time:200.0,
 		SkillRequired:Electricity=10,
@@ -23,8 +23,8 @@ module SolarPanels
     recipe Craft Solar Roof Tile
     {
         keep [Recipe.GetItemTypes.Screwdriver],
-        SolarPanel,
-        Radio.ElectricWire = 3,
+        ISA.SolarPanel,
+        ElectricWire = 3,
 	keep Wrench,
 	keep Screwdriver,
         CanBeDoneFromFloor:false,
@@ -36,8 +36,8 @@ module SolarPanels
     recipe Craft Wall-Mounted Solar Panel
     {
         keep [Recipe.GetItemTypes.Screwdriver],
-        SolarPanel,
-        Radio.ElectricWire = 3,
+        ISA.SolarPanel,
+        ElectricWire = 3,
         Base.MetalBar = 2,
         Base.Screws = 4,
 	keep Wrench,
@@ -73,7 +73,7 @@ module SolarPanels
 		Glue/DuctTape=1,
 		keep Wrench,
 		keep Screwdriver,
-		Result: DIYBattery,
+		Result: ISA.DIYBattery,
 		Sound:CutSheet,
 		Time:200.0,
 		SkillRequired:Electricity=10,
@@ -90,7 +90,7 @@ module SolarPanels
 		LightBulbGreen=1,
 		keep Wrench,
 		keep Screwdriver,
-		Result: SolarFailsafe,
+		Result: ISA.SolarFailsafe,
 		Sound:CutSheet,
 		Time:200.0,
 		SkillRequired:Electricity=10,
