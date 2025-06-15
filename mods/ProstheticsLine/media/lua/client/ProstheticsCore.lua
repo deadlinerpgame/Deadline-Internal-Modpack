@@ -1,5 +1,8 @@
 ProstheticsCore = {};
 
+GameTime = {};
+Calendar = {};
+
 function ProstheticsCore.CheckForAmputations()
     local player = getPlayer();
     if not player then return end;
@@ -92,6 +95,16 @@ function ProstheticsCore.GetAllAmputations()
     return amputations;
 end
 
+function ProstheticsCore.GetAmputationCount()
+    local player = getPlayer();
+    if not player then return end;
+
+    local armAmputations = player:getModData().ProstheticsLine_ArmAmputations;
+    local legAmputations = player:getModData().ProstheticsLine_LegAmputations;
+
+    return (#armAmputations or 0) + (#legAmputations or 0);
+end 
+
 function ProstheticsCore.GetAmputationActionModifier()
     if SandboxVars.ProstheticsLine and SandboxVars.ProstheticsLine.AmputationDebuffMulti then
         return SandboxVars.ProstheticsLine.AmputationDebuffMulti;
@@ -103,5 +116,42 @@ function ProstheticsCore.DoMultiAmputationsDisableActions()
         return SandboxVars.ProstheticsLine.MultiAmputationDisableActions;
     end 
 end
+
+--[[
+        TIME HELPERS
+--]]
+function ProstheticsCore.GetMinutesDiffMs(oldTimestamp)
+    return ProstheticsCore.GetMinutesDiff(GameTime:getCalender():getTimeInMillis(), oldTimestamp);
+end
+
+function ProstheticsCore.GetMinutesDiffMs(currentTimestamp, oldTimestamp)
+    local diff = math.abs(currentTimestamp - oldTimestamp);
+    return math.floor(diff / 60000);
+end
+
+function ProstheticsCore.GetCurrentTimeInMs()
+    if not GameTime then
+        GameTime = getGameTime();
+    end
+
+    if not Calendar then
+        Calendar = GameTime:getCalender();
+    end
+
+    return Calendar:getTimeInMillis();
+end
+
+function ProstheticsCore.MinutesToMs(minutes)
+    return math.floor(minutes * 60000);
+end
+
+---------------------------------------------------------------
+
+local function OnGameTimeLoaded()
+    GameTime = getGameTime();
+    Calendar = GameTime:getCalender();
+end
+
+Events.OnGameTimeLoaded.Add(OnGameTimeLoaded);
 
 return ProstheticsCore;

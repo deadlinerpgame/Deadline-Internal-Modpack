@@ -17,3 +17,35 @@ option ProstheticsLine.AmputationDropEquipped =
     type = boolean, default = true,
     page = ProstheticsLine, translation = ProstheticsLine_AmputationDropEquipped,
 }
+
+option ProstheticsLine.PhantomPainsChance = 
+{
+    type = integer, min = 0, max = 100, default = 15,
+    page = ProstheticsLine, translation = ProstheticsLine_PhantomPainsChance,
+}
+
+option ProstheticsLine.PhantomPainsMaxDelay =
+{
+    type = integer, min = 1, max = 720, default = 5,
+    page = ProstheticsLine, translation = ProstheticsLine_PhantomPainsMaxDelay,
+}
+
+option ProstheticsLine.PhantomPainsMaxDuration =
+{
+    type = integer, min = 1, max = 720, default = 5,
+    page = ProstheticsLine, translation = ProstheticsLine_PhantomPainsMaxDuration,
+}
+
+option ProstheticsLine.PhantomPainsCooldown =
+{
+    type = integer, min = 1, max = 1440, default = 360,
+    page = ProstheticsLine, translation = ProstheticsLine_PhantomPainsCooldown,
+}
+
+options ProstheticsLine.PhantomPainsSeverity = 
+{
+    type = enum, numValues = 3, default = 1,
+
+    page = ProstheticsLine, translation = ProstheticsLine_PhantomPainsSeverity,
+    valueTranslation = ProstheticsLine_PhantomPainsSeverity,
+}
