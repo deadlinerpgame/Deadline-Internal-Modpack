@@ -209,7 +209,11 @@ function DeadlineDice.getDefendCloseModifiers(modifiers, character)
 
     local traitModifiers = {
         QuickReflexes = 2,
-        Clumsy = -2
+        Clumsy = -2,
+        HobbySprinting = 1,
+        HobbyNimble = 1,
+        SkilledSprinting = 2,
+        SkilledNimble = 2,
     }
 
     return DeadlineDice.addTraitModifiers2(modifiers, character, traitModifiers)
@@ -221,7 +225,11 @@ function DeadlineDice.getDefendRangedModifiers(modifiers, character)
 
     local traitModifiers = {
         BulletDodger = 2,
-        Target = -2
+        Target = -2,
+        HobbySneaking = 1,
+        HobbyLightfoot = 1,
+        SkilledSneaking = 2,
+        SkilledLightfoot = 2,
     }
 
     return DeadlineDice.addTraitModifiers2(modifiers, character, traitModifiers)
