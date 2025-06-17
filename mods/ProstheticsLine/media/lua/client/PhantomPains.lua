@@ -1,10 +1,11 @@
 if isServer() then return end;
 
 ProstheticsCore = require("ProstheticsCore");
+PhantomPains = {};
 
 PAIN_LEVELS = {20, 50, 80};
 
-function SchedulePhantomPains()
+function PhantomPains.SchedulePhantomPains()
     local player = getPlayer();
     if not player or not player:getModData() then return end;
     
@@ -25,7 +26,7 @@ function SchedulePhantomPains()
     player:transmitModData();
 end
 
-function GetTimeSinceLastDurationCheck()
+function PhantomPains.GetTimeSinceLastDurationCheck()
     local player = getPlayer();
     if not player then return nil end;
 
@@ -33,23 +34,23 @@ function GetTimeSinceLastDurationCheck()
     return painsData.lastDurationTimestamp or -1;
 end
 
-function GetPainLevel()
+function PhantomPains.GetPainLevel()
     local severity = SandboxVars.ProstheticsLine.PhantomPainsSeverity or 1;
     return PAIN_LEVELS[severity] or 25;
 end
 
 -- Limb must be BodyPartType
-function SetPainInLimb(limb)
+function PhantomPains.SetPainInLimb(limb)
     local limb = player:getBodyDamage():getBodyPart(limb);
     if not limb then return end;
 
     local currentPain = limb:getAdditionalPain();
-    if currentPain < GetPainLevel() then
-        limb:setAdditionalPain(GetPainLevel());
+    if currentPain < PhantomPains.GetPainLevel() then
+        limb:setAdditionalPain(PhantomPains.GetPainLevel());
     end
 end
 
-function ApplyPains()
+function PhantomPains.ApplyPains()
     local player = getPlayer();
     if not player then return end;
 
@@ -61,24 +62,24 @@ function ApplyPains()
         if string.find(amputations[i], "_L") then
             -- Left arm.
             if ProstheticsCore.IsArmLocation() then
-                SetPainInLimb(BodyPartType.ForeArm_L);
+                PhantomPains.SetPainInLimb(BodyPartType.ForeArm_L);
             else
             -- Left leg.
-                SetPainInLimb(BodyPartType.LowerLeg_L);
+                PhantomPains.SetPainInLimb(BodyPartType.LowerLeg_L);
             end
         end
 
         if string.find(amputations[i], "_R") then
             -- Right arm.
-            SetPainInLimb(BodyPartType.ForeArm_R);
+            PhantomPains.SetPainInLimb(BodyPartType.ForeArm_R);
         else
             -- Right leg.
-            SetPainInLimb(BodyPartType.LowerLeg_R);
+            PhantomPains.SetPainInLimb(BodyPartType.LowerLeg_R);
         end
     end
 end
 
-function StopPhantomPains()
+function PhantomPains.StopPhantomPains()
 
     local player = getPlayer();
     if not player or not player:getModData() then return end;
@@ -95,7 +96,7 @@ function StopPhantomPains()
     player:transmitModData();
 end
 
-local function EveryTenMinutes()
+function PhantomPains.EveryTenMinutes()
     local amputations = ProstheticsCore.GetAmputationCount();
     if amputations == 0 then return end;
 
@@ -119,7 +120,7 @@ local function EveryTenMinutes()
         -- Now check we're within the cooldown grace period or not.
         if 
             player:getModData().ProstheticsLine_PhantomPain.cooldown and
-            player:getModData.ProstheticsLine_PhantomPain.cooldown > 0 
+            player:getModData().ProstheticsLine_PhantomPain.cooldown > 0 
         then
             return;
         end;
@@ -130,7 +131,7 @@ local function EveryTenMinutes()
     local random = ZombRand(100);
     if random < painChance then return end;
 
-    SchedulePhantomPains();
+    PhantomPains.SchedulePhantomPains();
 end
 
 -- Run this every one minute rather than on tick to save FPS.
@@ -139,7 +140,7 @@ end
     Check to see if pains are scheduled. If past schedule time and duration remaining,
     Apply pain.
 --]]
-local function EveryOneMinute()
+function PhantomPains.EveryOneMinute()
     local player = getPlayer();
     if not player then return end;
 
@@ -165,7 +166,7 @@ local function EveryOneMinute()
 
         -- This means that the pains should expire this frame.
         if duration <= 0 then
-            StopPhantomPains();
+            PhantomPains.StopPhantomPains();
             return;
         end
 
@@ -177,12 +178,12 @@ local function EveryOneMinute()
         -- We want to ceil this so it doesn't go below zero, though if any of these numbers have turned into floats
         -- something has gone drastically wrong and that's probably the least of our concerns.
         -- But it is Lua.
-        local difference = math.ceil(ProstheticsCore.GetCurrentTimeInMs() - GetTimeSinceLastDurationCheck());
+        local difference = math.ceil(ProstheticsCore.GetCurrentTimeInMs() - PhantomPains.GetTimeSinceLastDurationCheck());
         painsData.duration = painsData.duration - difference;
 
-        ApplyPains();
+        PhantomPains.ApplyPains();
     end
 end
 
-Events.EveryTenMinutes.Add(EveryTenMinutes);
-Events.EveryOneMinute.Add(EveryOneMinute);
+Events.EveryTenMinutes.Add(PhantomPains.EveryTenMinutes);
+Events.EveryOneMinute.Add(PhantomPains.EveryOneMinute);
