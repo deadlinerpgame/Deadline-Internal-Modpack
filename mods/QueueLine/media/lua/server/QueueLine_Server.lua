@@ -24,16 +24,17 @@ QueueLine_Server.QueueItems = {};
 --]]
 
 function QueueLine_Server.GetQueueItemsForUsername(username)
-    if not QueueLine_Server.QueueItems or not username then return end;
+    print("[QueueLine_Server] GetQueueItemsForUsername: " .. username);
+
+    if not username then return end;
 
     local returnList = {};
 
     for i, v in ipairs(QueueLine_Server.QueueItems) do
-        local item = QueueLine_Server[i];
+        print("Iterating through queue item " .. tostring(i));
+        local item = QueueLine_Server.QueueItems[i];
         if item then
             print("Checking item username against given...");
-            print(item.username);
-            print(item.type);
             if item.username == username then
                 table.insert(returnList, item);
             end
@@ -41,6 +42,38 @@ function QueueLine_Server.GetQueueItemsForUsername(username)
     end
 
     return returnList;
+end
+
+function QueueLine_Server.GetItemFromId(id)
+    print("[QueueLine_Server] GetItemFromId: " .. id);
+
+    if not id then return end;
+
+    for i, v in ipairs(QueueLine_Server.QueueItems) do
+       
+        local item = QueueLine_Server.QueueItems[i];
+        if item and item.id == id  then
+            return item;
+        end
+    end
+    
+    return nil;
+end
+
+function QueueLine_Server.RemoveItemFromQueue(id)
+    print("[QueueLine_Server] RemoveItemFromQueue: " .. id);
+
+    if not id then return end;
+
+    for i, v in ipairs(QueueLine_Server.QueueItems) do
+        local item = QueueLine_Server.QueueItems[i];
+        if item and item.id == id then
+            table.remove(QueueLine_Server.QueueItems, i);
+            print("[QueueLine_Server] Removed queue item " .. tostring(i) .. " with ID " .. tostring(id));
+        end
+    end
+
+    QueueLine_Server.SaveQueue();
 end
 
 function QueueLine_Server.OnClientCommand(module, command, player, args)
@@ -85,10 +118,30 @@ function QueueLine_Server.OnClientCommand(module, command, player, args)
         QueueLine_Server.AddLanguageItem(args.username, args.language);
     end
     
+    if command == "RemoveOnSuccess" then
+        if not args then return end;
+        if not args.id then return end;
+
+        QueueLine_Server.RemoveItemFromQueue(args.id);
+    end 
+
+    if command == "QueueItemFailed" then
+        if not args then return end;
+        if not args.id then return end;
+
+        local item = QueueLine_Server.GetItemFromId(args.id);
+        local errorStr = string.format("[QueueLine_Server] [QueueItemFailed] Player %s attempted to redeem queue item of type %s but this function failed.", player:getUsername(), item.type);
+        print(errorStr);
+        for i, v in ipairs(item.params) do
+            local param = item.params[i];
+            print("         > " .. tostring(param));
+        end
+    end
 end
 
 function QueueLine_Server.OnInitGlobalModData(newGame)
     QueueLine_Server.QueueItems = ModData.getOrCreate("QueueLine_CurrentQueue");
+    print("[QueueLine_Server] Queue Items initialised with " .. tostring(#QueueLine_Server.QueueItems) .. " items.");
 end
 
 function QueueLine_Server.SaveQueue()
@@ -101,30 +154,34 @@ function QueueLine_Server.SaveQueue()
     ModData.transmit("QueueLine_Queue");
 
     for i, v in ipairs(QueueLine_Server.QueueItems) do
-        print("Queue item: " .. tostring(i));
-        print(v.username);
-        print(v.type);
+        local queueItemStr = string.format("[QueueLine_Server] Queue item %0d - username: %s - type: %s.", i, v.username, v.type);
+        print(queueItemStr);
     end
 end
 
 
 function QueueLine_Server.AddLanguageItem(targetUsername, newLanguage)
+    if not targetUsername or not newLanguage then
+        print("[QueueLine_Server] AddLanguageItem - no username or language passed.");
+        return;
+    end
+
     print("[QueueLine_Server] Add Language Item for player " .. targetUsername .. " with language " .. newLanguage);
-    if not username or not newLanguage then return end;
 
     local item = 
     {
+        id = tostring(getTimestampMs()) .. "|" .. targetUsername,
         username = targetUsername,
         type = QueueLine_Server.ItemTypes.ADD_LANGUAGE,
         params =
         {
-            username = targetUsername,
-            language = newLanguage
+            [1] = targetUsername,
+            [2] = newLanguage
         }
     };
 
     print("Item: ");
-    print(tostring(item))
+    print(tostring(item));
 
     --print(table.unpack(item));
 
