@@ -375,8 +375,8 @@ TraitFactory.setMutualExclusive("profsurvivalist", "SkilledFishing")
 TraitFactory.setMutualExclusive("profsurvivalist", "MerchantIslandFishing")
 TraitFactory.setMutualExclusive("HobbyFishing", "MerchantIslandFishing")
 TraitFactory.setMutualExclusive("SkilledFishing", "MerchantIslandFishing")
-TraitFactory.setMutualExclusive("HobbyTrapping", "MerchantIslandFishing")
-TraitFactory.setMutualExclusive("SkilledTrapping", "MerchantIslandFishing")
+
+
 TraitFactory.setMutualExclusive("profsurvivalist", "SplintersFishing")
 
 TraitFactory.setMutualExclusive("proftailor", "HobbyTailoring")
@@ -845,7 +845,7 @@ TraitFactory.setMutualExclusive("FastLearnerFree", "FastLearner")
 TraitFactory.setMutualExclusive("FastLearnerFree", "SlowLearner")
 
 TraitFactory.setMutualExclusive("Weak", "Feeble")
-TraitFactory.setMutualExclusive("OutOfShape", "Unfit")
+
 
 end
 Events.OnGameBoot.Add(onGameBootAddDLTraits);
