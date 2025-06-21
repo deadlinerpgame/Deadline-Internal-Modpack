@@ -30,7 +30,18 @@ function DebuffManager.AmputationChecks()
         end
     end
 
+    -- The movement speed debuff is handled by the actual items themselves.
+
     player:transmitModData();
+end
+
+function DebuffManager.GetDebuffNegationFromProsthetics(bodyPart)
+    local player = getPlayer();
+    local worn = player:getWornItem(bodyPart);
+
+    if not worn then return 0 end;
+
+    
 end
 
 function DebuffManager.OnLoad()
