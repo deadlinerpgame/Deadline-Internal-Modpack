@@ -1483,3 +1483,36 @@ addTrait("Strong", {
         [Perks.Strength] = 4,
     },
 })
+
+
+-- Weight Related Skills
+
+addTrait("Very Underweight", {
+    name = "UI_trait_veryunderweight",
+    description = "UI_trait_veryunderweightdesc",
+    profession = true,
+})
+
+addTrait("Underweight", {
+    name = "UI_trait_underweight",
+    description = "UI_trait_underweightdesc",
+    profession = true,
+})
+
+addTrait("Overweight", {
+    name = "UI_trait_overweight",
+    description = "UI_trait_overweightdesc",
+    profession = true,
+})
+
+addTrait("Obese", {
+    name = "UI_trait_obese",
+    description = "UI_trait_obesedesc",
+    profession = true,
+})
+
+addTrait("Emaciated", {
+    name = "UI_trait_emaciated",
+    description = "UI_trait_emaciateddesc",
+    profession = true,
+})
