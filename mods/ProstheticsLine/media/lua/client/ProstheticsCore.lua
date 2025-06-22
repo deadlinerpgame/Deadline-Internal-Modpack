@@ -8,8 +8,6 @@ ProstheticsCore.PROSTHETIC_TIERS =
     [4] = "Futuristic"
 }
 
-GameTime = {};
-
 function ProstheticsCore.CheckForAmputations()
     local player = getPlayer();
     if not player then return end;
@@ -99,7 +97,10 @@ function ProstheticsCore.IsProsthetic(bodyLocation)
     return string.find(bodyLocation, "Prosthetic");
 end
 
-function ProstheticsCore.GetProstheticTier(item)
+function ProstheticsCore.GetProstheticTier(slot)
+    local item = getPlayer():getWornItem(slot);
+    if not slot then return 0 end;
+    
     for i, v in ipairs(ProstheticsCore.PROSTHETIC_TIERS) do
         local tier = ProstheticsCore.PROSTHETIC_TIERS[i];
 
@@ -120,8 +121,6 @@ function ProstheticsCore.GetMultiplierFromProstheticTier(tier)
     return 1;
 end
 
-
-
 function ProstheticsCore.GetArmAmputations()
     local player = getPlayer();
     if not player then return end;
@@ -135,6 +134,25 @@ function ProstheticsCore.GetLegAmputations()
 
     return player:getModData().ProstheticsLine_LegAmputations or {};
 end
+
+
+
+function ProstheticsCore.GetArmProsthetics()
+    local player = getPlayer();
+    if not player then return end;
+
+    return player:getModData().ProstheticsLine_ArmProsthetics or {};
+end
+
+function ProstheticsCore.GetLegProsthetics()
+    local player = getPlayer();
+    if not player then return end;
+
+    return player:getModData().ProstheticsLine_LegProsthetics or {};
+end
+
+
+
 
 function ProstheticsCore.GetAllAmputations()
     local player = getPlayer();
@@ -200,7 +218,7 @@ function ProstheticsCore.GetMinutesDiffMs(currentTimestamp, oldTimestamp)
 end
 
 function ProstheticsCore.GetCurrentTimeInMs()
-    return getGameTime():getInstance():getTimeInMillis();
+    return getGametimeTimestamp();
 end
 
 function ProstheticsCore.MinutesToMs(minutes)

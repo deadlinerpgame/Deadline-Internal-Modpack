@@ -25,7 +25,7 @@ function ISBaseTimedAction:adjustMaxTime(maxTime)
             return original_adjustMaxTime(self, maxTime);
         end
 
-        if ProstheticsCore.DoMultiAmputationsDisableActions() and #armAmputations == 2 then
+        if ProstheticsCore.DoMultiAmputationsDisableActions() == true and #armAmputations == 2 then
             HaloTextHelper.addTextWithArrow(player, "I need hands to do that.", false, HaloTextHelper.getColorRed());
             return { ignoreAction = true };
         end

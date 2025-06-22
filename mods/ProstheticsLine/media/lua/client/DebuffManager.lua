@@ -67,14 +67,14 @@ end
 
 function DebuffManager.OnLoad()
     DebuffManager.AmputationChecks();
-    --DebuffManager.ProstheticChecks();
+    DebuffManager.ProstheticChecks();
 end
 
 function DebuffManager.OnClothingUpdated(character)
     if character ~= getPlayer() then return end;
 
     DebuffManager.AmputationChecks();
-    --DebuffManager.ProstheticChecks();
+    DebuffManager.ProstheticChecks();
 end
 
 Events.OnLoad.Add(DebuffManager.OnLoad);
