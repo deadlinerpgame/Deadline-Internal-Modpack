@@ -35,23 +35,46 @@ function DebuffManager.AmputationChecks()
     player:transmitModData();
 end
 
-function DebuffManager.GetDebuffNegationFromProsthetics(bodyPart)
+
+function DebuffManager.ProstheticChecks()
     local player = getPlayer();
-    local worn = player:getWornItem(bodyPart);
+    if not player then return end;
 
-    if not worn then return 0 end;
-
+    local prosthetics = ProstheticsCore.CheckForProsthetics();
+    if #prosthetics == 0 then return end;
     
+    local armProsthetics = 0;
+    local legProsthetics = 0;
+
+    player:getModData().ProstheticsLine_ArmProsthetics = {};
+    player:getModData().ProstheticsLine_LegProsthetics = {};
+
+    for i, v in ipairs(prosthetics) do
+        local slot = prosthetics[i];
+        if ProstheticsCore.IsArmLocation(slot) then
+            armProsthetics = armProsthetics + 1;
+            table.insert(getPlayer():getModData().ProstheticsLine_ArmProsthetics, slot);
+        end
+
+        if ProstheticsCore.IsLegLocation(slot) then
+            legProsthetics = legProsthetics + 1;
+            table.insert(getPlayer():getModData().ProstheticsLine_LegProsthetics, slot);
+        end
+    end
+
+    player:transmitModData();
 end
 
 function DebuffManager.OnLoad()
     DebuffManager.AmputationChecks();
+    --DebuffManager.ProstheticChecks();
 end
 
 function DebuffManager.OnClothingUpdated(character)
     if character ~= getPlayer() then return end;
 
     DebuffManager.AmputationChecks();
+    --DebuffManager.ProstheticChecks();
 end
 
 Events.OnLoad.Add(DebuffManager.OnLoad);
