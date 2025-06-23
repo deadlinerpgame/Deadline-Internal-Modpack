@@ -29,5 +29,61 @@ module Base
 	NearItem:Simple Forge,
     }
 
+   recipe Craft Shortsword
+    {
+       	aerx.ShortSwordBlade=1,
+	aerx.SmallHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.ShortSword=1,
+        Time:255.0,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBladeToShortsword,
+        Category:LongBlade,
+	SkillRequired:MetalWelding=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft Sword
+    {
+       	aerx.SwordBlade=1,
+	aerx.SmallHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.Sword=1,
+        Time:255.0,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBladeToSword,
+        Category:LongBlade,
+	SkillRequired:MetalWelding=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft Scrap Shortsword 
+    {
+       	aerx.IronBar=1,
+	Coke/Charcoal=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.ShortSword_Scrap=1,
+        Time:255.0,
+        Category:LongBlade,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToScrapShortsword,
+	SkillRequired:MetalWelding=5,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft Scrap Sword 
+    {
+       	aerx.IronBar=2,
+	Coke/Charcoal=10,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.Sword_Scrap=1,
+        Time:255.0,
+        Category:LongBlade,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToScrapSword,
+	SkillRequired:MetalWelding=6,
+	NearItem:Simple Forge,
+    }
+
 
 }

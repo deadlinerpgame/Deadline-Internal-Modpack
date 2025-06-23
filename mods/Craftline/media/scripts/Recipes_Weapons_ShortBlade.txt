@@ -93,5 +93,20 @@ module Base
 
     }
 
+   recipe Craft Handguard Dagger
+    {
+	aerx.IronBar=1,
+	aerx.SmallHandle=1,
+	Coke/Charcoal=5,
+        Result:aerx.HandguardDagger=1,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToHandguardDagger,
+        Time:100.0,
+        Category:ShortBlade,
+	SkillRequired:MetalWelding=9,
+	NearItem:Simple Forge,
+
+    }
+
 
 }

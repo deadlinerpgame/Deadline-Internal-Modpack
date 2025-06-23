@@ -1,0 +1,333 @@
+module aerx
+{ 
+   recipe Craft a Left Scrap Metal Thigh Armor
+    {
+	Base.SheetMetal=1,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Twine=1,
+       	Base.BlowTorch=2,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.ThighScrapMetal_L=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7;Tailoring=3,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft a Right Scrap Metal Thigh Armor
+    {
+	Base.SheetMetal=1,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Twine=1,
+       	Base.BlowTorch=2,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.ThighScrapMetal_R=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7;Tailoring=3,
+	NearItem:Simple Forge,
+    }
+
+   recipe Reinforce Left Scrap Metal Thigh Armor with Spikes
+    {
+	Base.ThighScrapMetal_L,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.ThighScrapMetalSpike_L=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7,
+	NearItem:Simple Forge,
+    }
+
+   recipe Reinforce Right Scrap Metal Thigh Armor with Spikes
+    {
+	Base.ThighScrapMetal_R=1,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.ThighScrapMetalSpike_R=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7,
+	NearItem:Simple Forge,
+    }
+
+
+   recipe Craft a Left Scrap Metal Shin Armor
+    {
+	Base.SheetMetal=1,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Twine=1,
+       	Base.BlowTorch=2,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.GreaveScrap_Left=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7;Tailoring=3,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft a Right Scrap Metal Shin Armor
+    {
+	Base.SheetMetal=1,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Twine=1,
+       	Base.BlowTorch=2,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.GreaveScrap_Right=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7;Tailoring=3,
+	NearItem:Simple Forge,
+    }
+
+   recipe Reinforce Left Scrap Metal Shin Armor with Spikes
+    {
+	Base.GreaveScrap_Left,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.GreaveSpikeScrap_Left=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7,
+	NearItem:Simple Forge,
+    }
+
+   recipe Reinforce Right Scrap Metal Shin Armor with Spikes
+    {
+	Base.GreaveScrap_Right=1,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.GreaveSpikeScrap_Right=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft a Left Scrap Metal Forearm Armor
+    {
+	Base.SheetMetal=1,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Twine=1,
+       	Base.BlowTorch=2,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.VambraceScrap_Left=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7;Tailoring=3,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft a Right Scrap Metal Forearm Armor
+    {
+	Base.SheetMetal=1,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Twine=1,
+       	Base.BlowTorch=2,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.VambraceScrap_Right=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7;Tailoring=3,
+	NearItem:Simple Forge,
+    }
+
+   recipe Reinforce Left Scrap Metal Forearm Armor with Spikes
+    {
+	Base.VambraceScrap_Left,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.VambraceSpikeScrap_Left=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7,
+	NearItem:Simple Forge,
+    }
+
+   recipe Reinforce Right Scrap Metal Forearm Armor with Spikes
+    {
+	Base.VambraceScrap_Right=1,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.VambraceSpikeScrap_Right=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft a Scrap Metal Mask
+    {
+	Base.SheetMetal=1,
+	LeatherStrips=2,
+	Twine=2,
+       	Base.BlowTorch=2,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Hat_HockeyMask_MetalScrap=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7;Tailoring=3,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft a Scrap Metal Helmet
+    {
+	Base.SheetMetal=3,
+       	Base.BlowTorch=2,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Hat_MetalScrapHelmet=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=8;Tailoring=4,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft a Scrap Metal Body Armor
+    {
+	Base.SheetMetal=4,
+	aerx.Buckle=4,
+	LeatherStrips=6,
+	Twine=2,
+       	Base.BlowTorch=4,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Cuirass_MetalScrap=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=8;Tailoring=4,
+	NearItem:Simple Forge,
+    }
+
+
+
+
+
+
+
+
+   recipe Craft a Left Scrap Metal Shoulder Armor
+    {
+	Base.SheetMetal=1,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Twine=1,
+       	Base.BlowTorch=2,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Shoulderpad_MetalScrap_L=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7;Tailoring=3,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft a Right Scrap Metal Shoulder Armor
+    {
+	Base.SheetMetal=1,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Twine=1,
+       	Base.BlowTorch=2,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Shoulderpad_MetalScrap_R=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7;Tailoring=3,
+	NearItem:Simple Forge,
+    }
+
+   recipe Reinforce Left Scrap Metal Shoulder Armor with Spikes
+    {
+	Base.Shoulderpad_MetalScrap_L,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.Shoulderpad_MetalSpikeScrap_L=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7,
+	NearItem:Simple Forge,
+    }
+
+   recipe Reinforce Right Scrap Metal Shoulder Armor with Spikes
+    {
+	Base.Shoulderpad_MetalScrap_R=1,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.Shoulderpad_MetalSpikeScrap_R=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=7,
+	NearItem:Simple Forge,
+    }
+
+   recipe Reinforce Gloves with Scrap Metal
+    {
+	Base.SmallSheetMetal,
+	Gloves_LeatherGloves,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.Gloves_MetalScrapArmour=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=6;Tailoring=2,
+	NearItem:Simple Forge,
+    }
+
+
+
+}

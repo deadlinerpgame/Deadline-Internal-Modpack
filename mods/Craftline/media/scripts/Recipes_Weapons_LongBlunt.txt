@@ -288,4 +288,32 @@ module Base
 	NeedToBeLearn:true,
     }
 
+   recipe Craft Crowbar 
+    {
+       	aerx.IronBar=2,
+	Coke/Charcoal=15,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.CrowbarForged=1,
+        Time:255.0,
+        Category:LongBlunt,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToCrowbar,
+	SkillRequired:MetalWelding=10,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft Sledgehammer 
+    {
+       	aerx.SledgehammerHead=1,
+	aerx.LongHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.SledgehammerForged=1,
+        Time:255.0,
+        Category:LongBlunt,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToSledgehammerHead5,
+	SkillRequired:MetalWelding=4,
+	NearItem:Advanced Forge,
+    }
+
 }

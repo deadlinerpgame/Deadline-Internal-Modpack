@@ -316,6 +316,17 @@ function Recipe.OnCreate.MeltMetal(items, result, player)
 	print(crucible:getItemContainer():getCapacityWeight())
 	if crucible:getItemContainer():getCapacityWeight() < 0.9999 then
 		getPlayer():Say("I need a full crucible.")
+		local items = crucible:getItemContainer():getItems()
+		if items:size() > 0 then
+			local itemsToMove = {}
+			for i = 0, items:size() - 1 do
+				table.insert(itemsToMove, items:get(i))
+			end
+
+			for _, item in ipairs(itemsToMove) do
+				player:getInventory():AddItem(item)
+			end
+		end
 		return
 	end
 
