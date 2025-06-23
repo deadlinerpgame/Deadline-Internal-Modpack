@@ -192,6 +192,62 @@ module Base
 	NearItem:Simple Forge,
     }
 
+   recipe Craft Wood Axe
+    {
+	aerx.WoodAxeHead=1,
+       	aerx.LongHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.WoodAxeForged=1,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferWAHeadtoWA,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:MetalWelding=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft War Axe
+    {
+	aerx.WoodAxeHead=1,
+       	aerx.LongHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.WarAxeForged=1,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferWAHeadtoWA2,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:MetalWelding=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft Hatchet
+    {
+	aerx.HandAxeHead=1,
+       	aerx.Handle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.HandAxeForged=1,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferHHeadtoHatchet,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:MetalWelding=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft Pickaxe
+    {
+	aerx.PickAxeHead=1,
+       	aerx.LongHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:base.Pickaxe=1,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferPHeadtoPickaxe,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:MetalWelding=4,
+	NearItem:Advanced Forge,
+    }
+
 
 
 }

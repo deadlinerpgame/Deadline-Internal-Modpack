@@ -54,14 +54,14 @@ function ISRemoveBurntVehicle:perform()
 	end
 	local totalXp = 5;
 	for i=1,math.max(5,self.character:getPerkLevel(Perks.MetalWelding)) do
-		if self:checkAddItem("MetalBar", 25) then totalXp = totalXp + 2 end;
-		if self:checkAddItem("MetalBar", 25) then totalXp = totalXp + 2 end;
-		if self:checkAddItem("MetalBar", 25) then totalXp = totalXp + 2 end;
-		if self:checkAddItem("MetalBar", 25) then totalXp = totalXp + 2 end;
-		if self:checkAddItem("MetalPipe", 25) then totalXp = totalXp + 2 end;
-		if self:checkAddItem("MetalPipe", 25) then totalXp = totalXp + 2 end;
-		if self:checkAddItem("MetalPipe", 25) then totalXp = totalXp + 2 end;
-		if self:checkAddItem("MetalPipe", 25) then totalXp = totalXp + 2 end;
+		if self:checkAddItem("MetalBar", 20) then totalXp = totalXp + 2 end;
+		if self:checkAddItem("MetalBar", 20) then totalXp = totalXp + 2 end;
+		if self:checkAddItem("MetalBar", 20) then totalXp = totalXp + 2 end;
+		if self:checkAddItem("MetalBar", 20) then totalXp = totalXp + 2 end;
+		if self:checkAddItem("MetalPipe", 20) then totalXp = totalXp + 2 end;
+		if self:checkAddItem("MetalPipe", 20) then totalXp = totalXp + 2 end;
+		if self:checkAddItem("MetalPipe", 20) then totalXp = totalXp + 2 end;
+		if self:checkAddItem("MetalPipe", 20) then totalXp = totalXp + 2 end;
 		if self:checkAddItem("SheetMetal", 25) then totalXp = totalXp + 2 end;
 		if self:checkAddItem("SheetMetal", 25) then totalXp = totalXp + 2 end;
 		if self:checkAddItem("SheetMetal", 25) then totalXp = totalXp + 2 end;
@@ -70,38 +70,39 @@ function ISRemoveBurntVehicle:perform()
 		if self:checkAddItem("SmallSheetMetal", 20) then totalXp = totalXp + 2 end;
 		if self:checkAddItem("SmallSheetMetal", 20) then totalXp = totalXp + 2 end;
 		if self:checkAddItem("SmallSheetMetal", 20) then totalXp = totalXp + 2 end;
-        if self:checkAddItem("ScrapMetal", 30) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("ScrapMetal", 15) then totalXp = totalXp + 2 end;
+		if self:checkAddItem("ScrapMetal", 15) then totalXp = totalXp + 2 end;
 
 
-        if self:checkAddItem("aerx.AluminumFragments", 40) then totalXp = totalXp + 1 end;
-        if self:checkAddItem("aerx.AluminumFragments", 40) then totalXp = totalXp + 1 end;
-        if self:checkAddItem("aerx.AluminumScrap", 45) then totalXp = totalXp + 2 end;
-        if self:checkAddItem("aerx.AluminumScrap", 45) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.AluminumFragments", 16) then totalXp = totalXp + 1 end;
+        if self:checkAddItem("aerx.AluminumFragments", 16) then totalXp = totalXp + 1 end;
+        if self:checkAddItem("aerx.AluminumScrap", 25) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.AluminumScrap", 25) then totalXp = totalXp + 2 end;
 
-        if self:checkAddItem("aerx.TinFragments", 40) then totalXp = totalXp + 1 end;
-        if self:checkAddItem("aerx.TinFragments", 40) then totalXp = totalXp + 1 end;
-        if self:checkAddItem("aerx.TinScrap", 45) then totalXp = totalXp + 2 end;
-        if self:checkAddItem("aerx.TinScrap", 45) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.TinFragments", 16) then totalXp = totalXp + 1 end;
+        if self:checkAddItem("aerx.TinFragments", 16) then totalXp = totalXp + 1 end;
+        if self:checkAddItem("aerx.TinScrap", 25) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.TinScrap", 25) then totalXp = totalXp + 2 end;
 
-        if self:checkAddItem("aerx.CopperFragments", 40) then totalXp = totalXp + 1 end;
-        if self:checkAddItem("aerx.CopperFragments", 40) then totalXp = totalXp + 1 end;
-        if self:checkAddItem("aerx.CopperScrap", 45) then totalXp = totalXp + 2 end;
-        if self:checkAddItem("aerx.CopperScrap", 45) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.CopperFragments", 16) then totalXp = totalXp + 1 end;
+        if self:checkAddItem("aerx.CopperFragments", 16) then totalXp = totalXp + 1 end;
+        if self:checkAddItem("aerx.CopperScrap", 26) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.CopperScrap", 26) then totalXp = totalXp + 2 end;
 
-        if self:checkAddItem("aerx.NickelFragments", 40) then totalXp = totalXp + 1 end;
-        if self:checkAddItem("aerx.NickelFragments", 40) then totalXp = totalXp + 1 end;
-        if self:checkAddItem("aerx.NickelScrap", 45) then totalXp = totalXp + 2 end;
-        if self:checkAddItem("aerx.NickelScrap", 45) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.NickelFragments", 16) then totalXp = totalXp + 1 end;
+        if self:checkAddItem("aerx.NickelFragments", 16) then totalXp = totalXp + 1 end;
+        if self:checkAddItem("aerx.NickelScrap", 25) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.NickelScrap", 25) then totalXp = totalXp + 2 end;
 
-        if self:checkAddItem("aerx.LeadFragments", 40) then totalXp = totalXp + 1 end;
-        if self:checkAddItem("aerx.LeadFragments", 40) then totalXp = totalXp + 1 end;
-        if self:checkAddItem("aerx.LeadScrap", 45) then totalXp = totalXp + 2 end;
-        if self:checkAddItem("aerx.LeadScrap", 45) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.LeadFragments", 16) then totalXp = totalXp + 1 end;
+        if self:checkAddItem("aerx.LeadFragments", 16) then totalXp = totalXp + 1 end;
+        if self:checkAddItem("aerx.LeadScrap", 25) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.LeadScrap", 25) then totalXp = totalXp + 2 end;
 
         if self:checkAddItem("aerx.IronFragments", 20) then totalXp = totalXp + 1 end;
         if self:checkAddItem("aerx.IronFragments", 20) then totalXp = totalXp + 1 end;
-        if self:checkAddItem("aerx.IronScrap", 15) then totalXp = totalXp + 2 end;
-        if self:checkAddItem("aerx.IronScrap", 15) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.IronScrap", 12) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.IronScrap", 12) then totalXp = totalXp + 2 end;
 
         if self:checkAddItem("aerx.GoldScrap", 80) then totalXp = totalXp + 3 end;
         if self:checkAddItem("aerx.GoldScrap", 80) then totalXp = totalXp + 3 end;
@@ -109,10 +110,10 @@ function ISRemoveBurntVehicle:perform()
         if self:checkAddItem("aerx.SilverScrap", 80) then totalXp = totalXp + 3 end;
         if self:checkAddItem("aerx.SilverScrap", 80) then totalXp = totalXp + 3 end;
 
-        if self:checkAddItem("aerx.ZincFragments", 40) then totalXp = totalXp + 1 end;
-        if self:checkAddItem("aerx.ZincFragments", 40) then totalXp = totalXp + 1 end;
-        if self:checkAddItem("aerx.ZincScrap", 45) then totalXp = totalXp + 2 end;
-        if self:checkAddItem("aerx.ZincScrap", 45) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.ZincFragments", 16) then totalXp = totalXp + 1 end;
+        if self:checkAddItem("aerx.ZincFragments", 16) then totalXp = totalXp + 1 end;
+        if self:checkAddItem("aerx.ZincScrap", 25) then totalXp = totalXp + 2 end;
+        if self:checkAddItem("aerx.ZincScrap", 25) then totalXp = totalXp + 2 end;
 	end
 	for i=1,10 do
 		self.item:Use();

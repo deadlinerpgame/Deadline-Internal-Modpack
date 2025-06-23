@@ -14,6 +14,19 @@ module Base
 	NearItem:Simple Forge,
     }
 
+
+   recipe Melt Down Crude Ingot
+    {
+        Smithing.IngotTestingAlloy,
+	Log/Coke/Charcoal=1,
+	keep aerx.CeramicCrucible,
+        Result:aerx.IronScrap,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.MeltIngot,
+    }
+
    recipe Smith Bar into Set of Coins (25)
     {
        	aerx.IronBar=1,
@@ -73,7 +86,6 @@ module Base
     }
 
 
-
    recipe Craft Crude Shortsword Blade
     {
        	aerx.IronBar=1,
@@ -84,8 +96,22 @@ module Base
         Category:Smithing,
 	RemoveResultItem:true,
 	OnCreate:Recipe.OnCreate.TransferBarToSimpleShortSword,
-	SkillRequired:MetalWelding=6,
+	SkillRequired:MetalWelding=7,
 	NearItem:Simple Furnace,
+    }
+
+   recipe Craft Shortsword Blade
+    {
+       	aerx.IronBar=1,
+	Coke/Charcoal=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.ShortSwordBlade=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToFShortSword,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Furnace,
     }
 
    recipe Craft Mace Head
@@ -106,15 +132,29 @@ module Base
    recipe Craft Crude Sword Blade
     {
        	aerx.IronBar=2,
-	Coke/Charcoal=5,
+	Coke/Charcoal=10,
 	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.CrudeSwordBlade=1,
         Time:255.0,
         Category:Smithing,
 	RemoveResultItem:true,
 	OnCreate:Recipe.OnCreate.TransferBarToSimpleSword,
-	SkillRequired:MetalWelding=7,
+	SkillRequired:MetalWelding=8,
 	NearItem:Simple Furnace,
+    }
+
+   recipe Craft Sword Blade
+    {
+       	aerx.IronBar=2,
+	Coke/Charcoal=10,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.CrudeSwordBlade=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToFSword,
+	SkillRequired:MetalWelding=10,
+	NearItem:Advanced Furnace,
     }
 
    recipe Craft Anvil
@@ -130,15 +170,118 @@ module Base
 
     }
 
-   recipe Smelt Down Broken Weapon
+   recipe Melt Down Broken Weapon
     {
-        aerx.CrudeShortSword/aerx.CrudeSword,
+        aerx.CrudeShortSword/aerx.CrudeSword/aerx.Mace/aerx.LongMace,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.IronScrap,
-        Time:15.0,
+        Time:115.0,
+	AllowDestroyedItem:true,
+	NoBrokenItems:false,
         Category:Smithing,
 	RemoveResultItem:true,
 	OnCreate:Recipe.OnCreate.ReturnMetalFromWeapon,
     }
+
+   recipe Craft Hatchet Head
+    {
+       	aerx.IronBar=1,
+	Coke/Charcoal=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.HandAxeHead=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToHatchetHead,
+	SkillRequired:MetalWelding=8,
+	NearItem:Advanced Furnace,
+    }
+
+
+   recipe Craft Wood Axe Head
+    {
+       	aerx.IronBar=1,
+	Coke/Charcoal=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.WoodAxeHead=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToWoodAxeHead,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Furnace,
+    }
+
+   recipe Craft Pickaxe Head
+    {
+       	aerx.IronBar=1,
+	Coke/Charcoal=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.PickAxeHead=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToPickaxeHead,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Furnace,
+    }
+
+   recipe Craft Sledgehammer Head
+    {
+       	aerx.IronBar=1,
+	Coke/Charcoal=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.SledgehammerHead=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToSledgehammerHead,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Furnace,
+    }
+
+   recipe Craft Ball-Peen Hammer Head
+    {
+       	aerx.IronBar=1,
+	Coke/Charcoal=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.BallPeenHammerHead=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToBallPeenHammerHead,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Furnace,
+    }
+
+   recipe Craft Claw Hammer Head
+    {
+       	aerx.IronBar=1,
+	Coke/Charcoal=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.ClawhammerHead=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToClawHammerHead,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Furnace,
+    }
+
+   recipe Craft Club Hammer Head
+    {
+       	aerx.IronBar=1,
+	Coke/Charcoal=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.ClubHammerHead=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToClubHammerHead,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Furnace,
+    }
+
 
 
 }

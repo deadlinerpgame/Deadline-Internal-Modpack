@@ -2,6 +2,15 @@ module aerx {
   imports {
       Base
  }
+	item Buckle
+	{
+		DisplayName = Buckle,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = BeltBuckle,
+		WorldStaticModel = Buckle,
+	}
 	item AluminumFragments
 	{
 		DisplayName = Aluminum Fragments,
@@ -795,14 +804,14 @@ item ClayBarMoldUnfired
 	{
 		DisplayCategory = Water,
 		Type = Drainable,
-		Weight = 4,
+		Weight = 5,
 		CanStoreWater = TRUE,
 		FillFromDispenserSound = GetWaterFromDispenserPlasticMedium,
 		FillFromTapSound = GetWaterFromTapPlasticMedium,
 		IsWaterSource = TRUE,
 		ReplaceOnDeplete = ClayJar,
 		ReplaceOnUseOn = WaterSource-ClayJarWater,
-		UseDelta = 0.02,
+		UseDelta = 0.01,
 		UseWhileEquipped = FALSE,
 		CustomEatSound = DrinkingFromBottlePlastic,
 		DisplayName         = Clay Jar with Water,
@@ -2252,5 +2261,27 @@ item ClayBarMoldUnfired
 		Icon                = Ceramic_Crucible_Fired_Molten,
 		StaticModel         = CeramicCrucible,
 		WorldStaticModel    = CeramicCrucible,
+	}
+	item BallPeenHammerHead
+	{
+		DisplayName = Ball Peen Hammer Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = BallPeenHammerHead_Forged,
+		StaticModel         = BallPeenHammerHeadForged,
+		WorldStaticModel    = BallPeenHammerHeadForged,
+		ConditionMax = 10,
+	}
+	item ClubHammerHead
+	{
+		DisplayName = Club Hammer Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = ClubHammerHead_Forged,
+		StaticModel         = ClubHammerForgedHead,
+		WorldStaticModel    = ClubHammerForgedHead,
+		ConditionMax = 10,
 	}
 }

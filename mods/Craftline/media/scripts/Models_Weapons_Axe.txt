@@ -1,5 +1,22 @@
 module Base
 {
+	model Axe_Old
+	{
+		mesh = Weapons/2Handed/Axe_Forged_2Handed_Hand,
+		texture = Weapons/1Handed/Axe_OldStyle_Forged,
+
+		attachment world
+		{
+			offset = 0.0400 0.1250 0.0000,
+			rotate = 180.0000 0.0000 180.0000,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 180.0000 -86.0322 180.0000,
+		}
+	}
 	model LargeBranch
 	{
 		mesh = Weapons/2Handed/Cudgel_TwoHanded_Basic_Hand,

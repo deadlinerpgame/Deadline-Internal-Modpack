@@ -1,0 +1,355 @@
+module Base
+{
+	recipe Make Carbonated Water
+	{
+		destroy WaterBottleFull/WaterPopBottle,
+		Yeast,
+
+		Result:CarbonatedWater,
+		Time:300.0,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.Cooking3,
+		CanBeDoneFromFloor:true,
+		Heat:-0.1,
+		Category:Cooking,
+		SkillRequired:Cooking=2,
+	}
+
+	recipe Make Marinara Sauce
+	{
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+		keep Bowl,
+		WaterSaucepan;10,
+		Salt;2,
+		SlicedTomato=1,
+		[Recipe.GetItemTypes.Oil];2,
+
+		Result:Marinara,
+		Time:100.0,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+		SkillRequired:Cooking=4,
+		CanBeDoneFromFloor:true,
+	}
+	recipe Make Gravy
+	{
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+		keep Bowl,
+		[Recipe.GetItemTypes.Flour]=1,
+		[Recipe.GetItemTypes.BakingFat];2,
+		[Recipe.GetItemTypes.SapphCookingMilk];4,
+
+		Result:Gravy,
+		Category:Cooking,
+		Time:150,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+		SkillRequired:Cooking=6,
+	}
+	recipe Make Gummy Bears
+	{
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+		keep Bowl,
+		Water=4,
+		Jello_Strawberry;1,
+		Jello_Lime;1,
+		Jello_Orange;1,
+		keep BakingMolds,
+
+		Result:GummyBears,
+		Category:Cooking,
+		Time:150,
+		OnGiveXP:Recipe.OnGiveXP.Cooking3,
+		SkillRequired:Cooking=2,
+	}
+	recipe Make Cannabis Gummies
+	{
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+		keep BakingMolds,
+		keep Bowl,
+		Water=4,
+		Jello_Strawberry;1,
+		Jello_Lime;1,
+		Jello_Orange;1,
+        [Recipe.GetItemTypes.CannaButter];8,
+
+		Result:CannabisGummies,
+		Category:MoreSmokes,
+		Time:250,
+        OnGiveXP: Recipe.OnGiveXP.Cultivation20,
+        SkillRequired:Cultivation=6,
+		SkillRequired:Cooking=2,
+	}
+	recipe Make Gummy Worms
+	{
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+		keep Bowl,
+		keep BakingMolds,
+		Water=4,
+		Jello_Strawberry;1,
+		Jello_Lime;1,
+		Jello_Orange;1,
+		Jello_Pineapple;2,
+
+		Result:GummyWorms,
+		Category:Cooking,
+		Time:150,
+		OnGiveXP:Recipe.OnGiveXP.Cooking3,
+		SkillRequired:Cooking=2,
+	}
+	recipe Make Fruit Jam
+	{
+		Apple/Cherry/Banana/Grape/Grapefruit/Orange/Peach/BerryBlue/BerryBlack=5,
+		[Recipe.GetItemTypes.SapphCookingSugar];5,
+		WaterSaucepan;10,
+		keep [Recipe.GetItemTypes.SapphCookingKnifes]/MeatCleaver,
+
+		Result:JamFruit,
+		Heat:-0.1,
+		Time:300,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.Cooking3,
+		SkillRequired:Cooking=3,
+		CanBeDoneFromFloor:true,
+	}
+	recipe Make Ice Cream
+	{
+		[Recipe.GetItemTypes.SapphCookingMilk];10,
+		[Recipe.GetItemTypes.SapphCookingSugar];10,
+		[Recipe.GetItemTypes.BakingFat];1,
+		[Recipe.GetItemTypes.SapphCookingEgg]=2,
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+
+		Result:Icecream,
+		Category:Cooking,
+		Time:500,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+		SkillRequired:Cooking=8,
+	}
+	recipe Make Caramel Syrup
+	{
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+		[Recipe.GetItemTypes.SapphCookingSugar];15,
+		keep Saucepan,
+		Butter;3,
+
+		Result:Syrup_Caramel,
+		Time:400,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+		SkillRequired:Cooking=5,
+		CanBeDoneFromFloor:true,
+	}
+	recipe Make Chocolate Syrup
+	{
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+		[Recipe.GetItemTypes.SapphCookingSugar];5,
+		Chocolate,
+		keep Saucepan,
+
+		Result:Syrup_Chocolate,
+		Time:400,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+		SkillRequired:Cooking=5,
+		CanBeDoneFromFloor:true,
+	}
+	recipe Make Pancakes
+	{
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+		[Recipe.GetItemTypes.SapphCookingEgg]=2,
+		[Recipe.GetItemTypes.SapphCookingMilk];4,
+		[Recipe.GetItemTypes.SapphCookingSalt];1,
+		[Recipe.GetItemTypes.SapphCookingSugar];3,
+	   	keep Bowl,
+		[Recipe.GetItemTypes.Flour]=2,
+
+		Result:PancakesCraft,
+        Category:Cooking,
+        Time:100,
+		OnGiveXP:Recipe.OnGiveXP.Cooking3,
+		SkillRequired:Cooking=4,
+	}
+	recipe Make Tomato Paste
+	{
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+	   	keep Bowl,
+		Salt;2,
+		DicedTomato=1,
+		[Recipe.GetItemTypes.SapphCookingOil];2,
+		
+		Result:TomatoPaste,
+		SkillRequired:Cooking=3,
+        Time:220,
+		OnGiveXP:Recipe.OnGiveXP.Cooking3,
+	}
+	recipe Package Sugar
+	{
+		[Recipe.GetItemTypes.SapphCookingSugar];1,
+		SheetPaper2,
+
+		Result:SugarPacket,
+        Time:30,
+		OnGiveXP:Recipe.OnGiveXP.None,
+	}
+	recipe Make Chocolate Chips
+	{
+		[Recipe.GetItemTypes.SapphCookingMeltedChocolate];10,
+		keep BakingMolds,
+
+		Result:ChocolateChips=2,
+		Time:150,
+		Category: Cooking,
+		SkillRequired:Cooking=1,
+	}
+	recipe Make Chips
+	{
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+		CutPeeledPotato/PeeledPotato,
+		SaucepanwithOil,
+		keep [Recipe.GetItemTypes.SapphCookingKnifes]/MeatCleaver,
+		CanBeDoneFromFloor:true,
+		Result:Crisps,
+		Time:250,
+		Heat:-0.1,
+		Category:Cooking,
+		OnGiveXP: Recipe.OnGiveXP.Cooking10,
+		OnCreate:Recipe.OnCreate.FryingCooking,
+		Sound:FryingSounds,
+		AnimNode:Disassemble,
+		Prop1: Source=1,
+		Prop2:Cooking_SaucepanOil,
+		SkillRequired:Cooking=2,
+	}
+	recipe Make Cereal
+	{
+		[Recipe.GetItemTypes.SapphCookingSalt];1,
+		[Recipe.GetItemTypes.SapphCookingSugar];15,
+		[Recipe.GetItemTypes.BakingFat];10,
+		[Recipe.GetItemTypes.Flour]=3,
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+	   	keep Bowl,
+		keep BakingTray,
+
+		Result:Cereal,
+		Time:150,
+		Category: Cooking,
+		SkillRequired:Cooking=5,
+	}
+	recipe Make Peanut Butter Sachet
+	{
+		keep CoffeeGrinder/MortarPestle,
+		Peanuts,
+
+		Result:PeanutButter_Sachet=2,
+		Time:50,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.None,
+	}
+	recipe Make Cornbread
+	{
+		[Recipe.GetItemTypes.SapphCookingSugar];5,
+		[Recipe.GetItemTypes.SapphCookingMilk];2,
+		[Recipe.GetItemTypes.BakingFat];3,
+		[Recipe.GetItemTypes.Flour]=3,
+		[Recipe.GetItemTypes.SapphCookingEgg]=1,
+     	Corn=4,
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+	   	keep Bowl,
+		keep BakingPan,
+
+
+		Result:Cornbread=4,
+		Time:300,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		SkillRequired:Cooking=3,
+       	OnGiveXP:Recipe.OnGiveXP.Cooking3,
+	}
+	recipe Mix Orange Soda
+	{
+		Drinkmix_Orange,
+		CarbonatedWater,
+		Result:PopBottle,
+		Time:150.0,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		Sound:BottleShake,
+		AnimNode:Sapph_DrinkMixing,
+		StopOnWalk: false,
+	}
+	recipe Make Cupcakes
+	{
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+		[Recipe.GetItemTypes.SapphCookingEgg]=1,
+		[Recipe.GetItemTypes.SapphCookingMilk];4,
+		[Recipe.GetItemTypes.SapphCookingSalt];1,
+		[Recipe.GetItemTypes.SapphCookingSugar];15,
+		[Recipe.GetItemTypes.BakingFat];1,
+	   	keep Bowl,
+		[Recipe.GetItemTypes.Flour]=2,
+
+		Result:Cupcake=3,
+        Category:Cooking,
+        Time:300,
+       	OnGiveXP:Recipe.OnGiveXP.Cooking3,
+		SkillRequired:Cooking=4,
+
+	}
+	recipe Make Mac and Cheese Noodles
+	{
+		[Recipe.GetItemTypes.Flour]=3,
+		[Recipe.GetItemTypes.SapphCookingSalt];1,
+		[Recipe.GetItemTypes.SapphCookingEgg]=2,
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+		keep BakingMolds,
+	   	keep Bowl,
+
+		Result:Macandcheese,
+       	Time:200.0,
+       	Category:Cooking,
+       	OnGiveXP:Recipe.OnGiveXP.Cooking3,
+		SkillRequired:Cooking=6,
+	}
+	recipe Make Graham Crackers
+	{
+		[Recipe.GetItemTypes.SapphCookingSalt];1,
+		[Recipe.GetItemTypes.SapphCookingSugar];15,
+		[Recipe.GetItemTypes.BakingFat];5,
+		[Recipe.GetItemTypes.Flour]=3,
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+	   	keep Bowl,
+		keep BakingTray,
+
+		Result:GrahamCrackers=9,
+		Time:300,
+		Category: Cooking,
+		SkillRequired:Cooking=4,
+       	OnGiveXP:Recipe.OnGiveXP.Cooking3,
+	}
+
+	recipe Make Cone
+	{
+		[Recipe.GetItemTypes.SapphCookingSalt];1,
+		[Recipe.GetItemTypes.SapphCookingSugar];5,
+		[Recipe.GetItemTypes.BakingFat];2,
+		[Recipe.GetItemTypes.Flour]=1,
+		[Recipe.GetItemTypes.SapphCookingEgg]=1,
+		[Recipe.GetItemTypes.SapphCookingMilk];2,
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+		keep BakingMolds,
+	   	keep Bowl,
+
+		Result:Cone=5,
+		Time:300,
+		Category:Cooking,
+		SkillRequired:Cooking=4,
+       	OnGiveXP:Recipe.OnGiveXP.Cooking3,
+	}
+}
+
+
+
+
+
+

@@ -1,5 +1,10 @@
 module Base
 {
+	model Buckle
+	{
+		mesh = WorldItems/BeltBuckle_Forged,
+		scale = 0.2,
+	}
 
 	model ClayTileUnfired
     {
@@ -1193,4 +1198,17 @@ module Base
 		texture = WorldItems/GlassBlowingPipe_Unfired,
 		scale = 0.08,
 	}
+	model ClubHammerForgedHead
+	{
+		mesh = WorldItems/HammerClubHead_Forged,
+		texture = Weapons/1Handed/HammerClub_Forged,
+        scale = 0.12,
+	}
+	model BallPeenHammerHeadForged
+    {
+        mesh = WorldItems/BallPeenHammer_Head,
+        texture = weapons/1handed/BallPeen_Forged,
+        scale = 0.125,
+    }
+
 }
