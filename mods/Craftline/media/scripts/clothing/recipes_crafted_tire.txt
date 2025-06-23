@@ -1,0 +1,148 @@
+module aerx
+{ 
+
+   recipe Cut Tire Into Pieces
+    {
+	Base.OldTire1/Base.NormalTire1/Base.ModernTire1/Base.OldTire2/Base.NormalTire2/Base.ModernTire2/Base.OldTire3/Base.NormalTire3/Base.ModernTire3,
+       	Base.Saw=1,
+        Result:Base.TirePiece=4,
+        Time:100.0,
+        Category:Armor,
+    }
+
+   recipe Craft Right Shin Tire Armor
+    {
+       	Base.TirePiece=1,
+	LeatherStrips=2,
+	aerx.Buckle=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+	keep Needle,
+        Result:aerx.GreaveTire_Right=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:Tailoring=7,
+	NearItem:TailoringWorkbench,
+    }
+
+   recipe Craft a Left Shin Tire Armor
+    {
+       	Base.TirePiece=1,
+	LeatherStrips=2,
+	aerx.Buckle=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+	keep Needle,
+        Result:aerx.GreaveTire_Left=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:Tailoring=7,
+	NearItem:TailoringWorkbench,
+    }
+
+   recipe Craft Right Thigh Tire Armor
+    {
+       	Base.TirePiece=1,
+	LeatherStrips=2,
+	aerx.Buckle=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+	keep Needle,
+        Result:aerx.ThighTire_R=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:Tailoring=7,
+	NearItem:TailoringWorkbench,
+    }
+
+   recipe Craft a Left Thigh Tire Armor
+    {
+       	Base.TirePiece=1,
+	LeatherStrips=2,
+	aerx.Buckle=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+	keep Needle,
+        Result:aerx.ThighTire_L=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:Tailoring=7,
+	NearItem:TailoringWorkbench,
+    }
+
+   recipe Craft Right Forearm Tire Armor
+    {
+       	Base.TirePiece=1,
+	LeatherStrips=2,
+	aerx.Buckle=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+	keep Needle,
+        Result:aerx.VambraceTire_Right=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:Tailoring=7,
+	NearItem:TailoringWorkbench,
+    }
+
+   recipe Craft a Left Forearm Tire Armor
+    {
+       	Base.TirePiece=1,
+	LeatherStrips=2,
+	aerx.Buckle=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+	keep Needle,
+        Result:aerx.VambraceTire_Left=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:Tailoring=7,
+	NearItem:TailoringWorkbench,
+    }
+
+   recipe Craft Right Shoulder Tire Armor
+    {
+       	Base.TirePiece=1,
+	LeatherStrips=2,
+	aerx.Buckle=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+	keep Needle,
+        Result:aerx.Shoulderpad_Tire_R=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:Tailoring=7,
+	NearItem:TailoringWorkbench,
+    }
+
+   recipe Craft a Left Shoulder Tire Armor
+    {
+       	Base.TirePiece=1,
+	LeatherStrips=2,
+	aerx.Buckle=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+	keep Needle,
+        Result:aerx.Shoulderpad_Tire_L=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:Tailoring=7,
+	NearItem:TailoringWorkbench,
+    }
+
+   recipe Craft a Tire Body Armor
+    {
+       	Base.TirePiece=4,
+	LeatherStrips=4,
+	Twine=5,
+	keep [Recipe.GetItemTypes.SharpKnife],
+	keep Needle,
+        Result:aerx.Cuirass_Tire=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:Tailoring=8,
+	NearItem:TailoringWorkbench,
+    }
+
+
+}

@@ -208,5 +208,46 @@ module Base
 	NearItem:Simple Forge,
     }
 
+   recipe Craft Ball-Peen Hammer 
+    {
+       	aerx.BallPeenHammerHead=1,
+	aerx.SmallHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.BallPeenHammerForged=1,
+        Time:255.0,
+        Category:LongBlunt,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToSledgehammerHead4,
+	SkillRequired:MetalWelding=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft Claw Hammer 
+    {
+       	aerx.ClawhammerHead=1,
+	aerx.SmallHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.HammerForged=1,
+        Time:255.0,
+        Category:LongBlunt,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToSledgehammerHead3,
+	SkillRequired:MetalWelding=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft Club Hammer 
+    {
+       	aerx.ClubHammerHead=1,
+	aerx.SmallHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.ClubHammerForged=1,
+        Time:255.0,
+        Category:LongBlunt,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToSledgehammerHead2,
+	SkillRequired:MetalWelding=4,
+	NearItem:Advanced Forge,
+    }
 
 }

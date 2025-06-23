@@ -79,9 +79,32 @@ module Base
         	Sound:BlowTorch,
         	Category:Welding,
     	}
-    	recipe Make Doorknob
+    	recipe Make Doorknobs from Bars
     	{
-		IronBar=1,
+		aerx.IronBar=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        	Result:Doorknob=10,
+        	Time:10.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Hinges from Bars
+    	{
+		aerx.IronBar=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+        	Result:Hinge=10,
+        	Time:10.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Doorknobs
+    	{
+		MetalBar/MetalPipe=1,
 		BlowTorch=1,
 		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
 		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
@@ -91,9 +114,9 @@ module Base
         	Category:Welding,
     	}
 
-    	recipe Make Hinge
+    	recipe Make Hinges
     	{
-		IronBar=1,
+		MetalBar/MetalPipe=1,
 		BlowTorch=1,
 		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
         	Result:Hinge=4,
@@ -101,6 +124,37 @@ module Base
         	Sound:BlowTorch,
         	Category:Welding,
     	}
+
+
+
+    	recipe Make Buckles from Bars
+    	{
+		aerx.IronBar=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        	Result:aerx.Buckle=10,
+        	Time:10.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+
+    	recipe Make Buckles
+    	{
+		MetalBar/MetalPipe=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        	Result:aerx.Buckle=4,
+        	Time:10.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+
+
+
 
     	recipe Make Empty Paint Bucket
     	{

@@ -1,3 +1,4 @@
+
 function Recipe.OnCreate.GiveRope(items, result, player)
     player:getInventory():AddItem("SheetRope");
     player:getInventory():AddItem("SheetRope");
@@ -107,6 +108,37 @@ function Recipe.OnCreate.TransferIngotToBars(items, result, player)
     end
 end
 
+function Recipe.OnCreate.MeltIngot(items, result, player)
+    local item = items:get(0)
+    local modData = item:getModData()
+    local alloyType = modData.AlloyType
+    if not alloyType then return end
+
+    local words = {}
+    for word in alloyType:gmatch("%S+") do
+        table.insert(words, word)
+    end
+    local metal = words[2]
+    if not metal then return end
+
+    local validMetals = {
+        Copper = true,
+        Tin = true,
+        Aluminum = true,
+        Iron = true,
+        Lead = true,
+        Silver = true,
+        Gold = true,
+        Zinc = true,
+        Nickel = true
+    }
+    if validMetals[metal] then
+        local itemType = "aerx." .. metal .. "Scrap"
+        for i = 1, 6 do
+            player:getInventory():AddItem(itemType)
+        end
+    end
+end
 
 function Recipe.OnCreate.TransferIngotToAnvil(items, result, player)
     local ingotItems = {
@@ -312,6 +344,195 @@ function Recipe.OnCreate.TransferBarToMaceHead(items, result, player)
     end
 end
 
+function Recipe.OnCreate.TransferBarToHatchetHead(items, result, player)
+    local barItems = { ["aerx.IronBar"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.HandAxeHead")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBarToWoodAxeHead(items, result, player)
+    local barItems = { ["aerx.IronBar"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.WoodAxeHead")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBarToPickaxeHead(items, result, player)
+    local barItems = { ["aerx.IronBar"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.PickAxeHead")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferWAHeadtoWA(items, result, player)
+    local barItems = { ["aerx.WoodAxeHead"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.WoodAxeForged")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferHHeadtoHatchet(items, result, player)
+    local barItems = { ["aerx.HandAxeHead"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.HatchetForged")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferHHeadtoHatchet(items, result, player)
+    local barItems = { ["aerx.PickAxeHead"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("base.PickAxe")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferWAHeadtoWA2(items, result, player)
+    local barItems = { ["aerx.WoodAxeHead"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.WarAxeForged")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
 
 function Recipe.OnCreate.TransferBarToSimpleShortSword(items, result, player)
     local barItems = { ["aerx.IronBar"] = true, }
@@ -507,43 +728,82 @@ end
 
 function Recipe.OnCreate.ReturnMetalFromWeapon(items, result, player)
     local item = items:get(0)
-    if item then
-        local itemType = item:getFullType()
-        local fragmentCount = 0
+    local type = item:getFullType()
+    local modData = item:getModData()
+    local alloyType = modData.AlloyType
+    if not alloyType then return end
 
-        if itemType == "aerx.CrudeShortSwordBlade" then
-            fragmentCount = 12
-        elseif itemType == "aerx.CrudeSwordBlade" then
-            fragmentCount = 24
+    metalValues = {
+        ["aerx.CrudeShortSword"] = 10,
+        ["aerx.CrudeSword"] = 20,
+        ["aerx.Mace"] = 10,
+        ["aerx.LongMace"] = 10,
+    }
+
+    local itemID = type
+    local metalValue = metalValues[itemID]
+    if not metalValue then
+        player:Say("Unknown weapon type for melting.")
+        return
+    end
+
+    local cleanAlloy = alloyType:gsub("Made from", ""):gsub("Bar", ""):gsub("^%s*(.-)%s*$", "%1")
+
+    local metalMap = {
+        ["Pure Copper"] = { Copper = 1 },
+        ["Pure Tin"] = { Tin = 1 },
+        ["Pure Aluminum"] = { Aluminum = 1 },
+        ["Pure Iron"] = { Iron = 1 },
+        ["Pure Lead"] = { Lead = 1 },
+        ["Pure Silver"] = { Silver = 1 },
+        ["Pure Gold"] = { Gold = 1 },
+        ["Pure Zinc"] = { Zinc = 1 },
+        ["Pure Nickel"] = { Nickel = 1 },
+        ["Abyssinian Gold"] = { Copper = 1 },
+        ["Constantan Gold"] = { Copper = 0.5, Nickel = 0.5 },
+        ["Duralumin"] = { Aluminum = 1 },
+        ["Electrum"] = { Silver = 0.5, Gold = 0.5 },
+        ["Nordic Gold"] = { Copper = 1 },
+        ["Prince's Metal"] = { Copper = 0.8, Zinc = 0.2 },
+        ["Molybdochalkos"] = { Lead = 1 },
+        ["Panchaloha"] = { Copper = 0.2, Zinc = 0.2, Iron = 0.2, Silver = 0.2, Gold = 0.2 },
+        ["Sterling Silver"] = { Silver = 1 },
+        ["White Bronze"] = { Copper = 0.7, Tin = 0.3 },
+        ["Pinchbeck"] = { Copper = 1 },
+        ["Bronze"] = { Copper = 0.7, Tin = 0.3 },
+        ["Brass"] = { Copper = 0.7, Zinc = 0.3 },
+        ["Shakudo"] = { Copper = 1 },
+        ["Invar"] = { Iron = 0.7, Nickel = 0.3 },
+        ["Orichalcum"] = { Copper = 0.7, Zinc = 0.3 },
+        ["Pewter"] = { Copper = 0.7, Tin = 0.3 },
+    }
+
+    local metalComposition = metalMap[cleanAlloy]
+    if not metalComposition then
+        return
+    end
+
+    local totalScrap = math.floor(metalValue / 2)
+    local given = 0
+
+    for metal, ratio in pairs(metalComposition) do
+        local count = math.floor(totalScrap * ratio)
+        for i = 1, count do
+            player:getInventory():AddItem("aerx." .. metal .. "Scrap")
+            given = given + 1
         end
+    end
 
-        if fragmentCount > 0 then
-            local modData = item:getModData()
-            local alloyType = modData.AlloyType or "Unknown"
-
-            local metal = alloyType:lower()
-            metal = metal:gsub("^made from", "")
-            metal = metal:gsub("%f[%a]pure%f[%A]", "") 
-            metal = metal:gsub("^%s*(.-)%s*$", "%1")
-
-            local metalToItem = {
-                tin = "aerx.TinFragments",
-                copper = "aerx.CopperFragments",
-                nickel = "aerx.NickelFragments",
-                lead = "aerx.LeadFragments",
-                iron = "aerx.IronFragments",
-                gold = "aerx.GoldFragments",
-                silver = "aerx.SilverFragments",
-                zinc = "aerx.ZincFragments",
-                aluminum = "aerx.AluminumFragments"
-            }
-
-
-            local fragmentItem = metalToItem[metal] or "aerx.IronFragments"
-
-            for i = 1, fragmentCount do
-                player:getInventory():AddItem(fragmentItem)
+    if given < totalScrap then
+        local maxMetal, maxRatio = nil, 0
+        for metal, ratio in pairs(metalComposition) do
+            if ratio > maxRatio then
+                maxMetal = metal
+                maxRatio = ratio
             end
+        end
+        for i = 1, (totalScrap - given) do
+            player:getInventory():AddItem("aerx." .. maxMetal .. "Scrap")
         end
     end
 end

@@ -1,0 +1,584 @@
+module aerx
+{ 
+   recipe Craft a Left Metal Thigh Armor
+    {
+	Base.SheetMetal=3,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Coke/Charcoal=5,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.ThighMetal_L=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft a Right Metal Thigh Armor
+    {
+	Base.SheetMetal=3,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Coke/Charcoal=5,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.ThighMetal_R=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Reinforce Left Metal Thigh Armor with Spikes
+    {
+	Base.ThighMetal_L,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.ThighMetalSpike_L=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9,
+	NearItem:Simple Forge,
+    }
+
+   recipe Reinforce Right Scrap Metal Thigh Armor with Spikes
+    {
+	Base.ThighMetal_R=1,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.ThighMetalSpike_R=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9,
+	NearItem:Simple Forge,
+    }
+
+
+   recipe Craft a Left Metal Shin Armor
+    {
+	Base.SheetMetal=3,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Coke/Charcoal=5,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Greave_Left=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft a Right Metal Shin Armor
+    {
+	Base.SheetMetal=3,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Coke/Charcoal=5,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Greave_Right=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Reinforce Left Metal Shin Armor with Spikes
+    {
+	Base.Greave_Left,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.GreaveSpike_Left=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Reinforce Right Scrap Metal Shin Armor with Spikes
+    {
+	Base.Greave_Right=1,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.GreaveSpike_Right=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft a Left Scrap Metal Forearm Armor
+    {
+	Base.SheetMetal=3,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Coke/Charcoal=5,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Vambrace_Left=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft a Right Scrap Metal Forearm Armor
+    {
+	Base.SheetMetal=3,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Coke/Charcoal=5,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Vambrace_Right=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Reinforce Left Metal Forearm Armor with Spikes
+    {
+	Base.Vambrace_Left,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.VambraceSpike_Left=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Reinforce Right Metal Forearm Armor with Spikes
+    {
+	Base.Vambrace_Right=1,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.VambraceSpike_Right=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+
+   recipe Craft a Left Metal Shoulder Armor
+    {
+	Base.SheetMetal=3,
+	aerx.Buckle=1,
+	LeatherStrips=2,
+	Coke/Charcoal=5,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Shoulderpad_Metal_L=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft a Right Metal Shoulder Armor
+    {
+	Base.SheetMetal=3,
+	aerx.Buckle=1,
+	LeatherStrips=2,
+	Coke/Charcoal=5,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Shoulderpad_Metal_R=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Reinforce Left Metal Shoulder Armor with Spikes
+    {
+	Base.Shoulderpad_Metal_L,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.Shoulderpad_MetalSpike_L=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Reinforce Right Metal Shoulder Armor with Spikes
+    {
+	Base.Shoulderpad_Metal_R=1,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.Shoulderpad_MetalSpike_R=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+
+   recipe Craft a Metal Helmet
+    {
+	Base.SheetMetal=4,
+	Coke/Charcoal=7,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Hat_MetalHelmet=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+    }
+
+
+   recipe Craft a Metal Body Armor
+    {
+	Base.SheetMetal=6,
+	aerx.Buckle=4,
+	LeatherStrips=6,
+	Coke/Charcoal=15,
+	Twine=2,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Cuirass_MetalScrap=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=8;Tailoring=4,
+	NearItem:Simple Forge,
+    }
+
+
+
+   recipe Reinforce Gloves with Metal
+    {
+	Base.SmallSheetMetal=2,
+	Gloves_LeatherGloves,
+	Coke/Charcoal=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.Gloves_MetalArmour=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=8;Tailoring=2,
+	NearItem:Simple Forge,
+    }
+
+
+
+   recipe Craft a Left Articulated Metal Shoulder Armor
+    {
+	Smithing.IngotA/Smithing.IngotB/Smithing.IngotC/Smithing.IngotD/Smithing.IngotE/Smithing.IngotF/Smithing.IngotG/Smithing.IngotH/Smithing.IngotI/Smithing.IngotJ/Smithing.IngotK/Smithing.IngotT/Smithing.IngotY/Smithing.IngotP/Smithing.IngotM/Smithing.IngotS/Smithing.IngotQ/Smithing.IngotR/Smithing.IngotU/Smithing.IngotV/Smithing.IngotW/Smithing.IngotX/Smithing.IngotL/Smithing.IngotO/Smithing.IngotN/Smithing.IngotZ,
+	aerx.Buckle=1,
+	LeatherStrips=2,
+	Coke/Charcoal=10,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Shoulderpad_Articulated_L_Metal=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+	
+    }
+
+   recipe Craft a Right Articulated Metal Shoulder Armor
+    {
+	Smithing.IngotA/Smithing.IngotB/Smithing.IngotC/Smithing.IngotD/Smithing.IngotE/Smithing.IngotF/Smithing.IngotG/Smithing.IngotH/Smithing.IngotI/Smithing.IngotJ/Smithing.IngotK/Smithing.IngotT/Smithing.IngotY/Smithing.IngotP/Smithing.IngotM/Smithing.IngotS/Smithing.IngotQ/Smithing.IngotR/Smithing.IngotU/Smithing.IngotV/Smithing.IngotW/Smithing.IngotX/Smithing.IngotL/Smithing.IngotO/Smithing.IngotN/Smithing.IngotZ,
+	aerx.Buckle=1,
+	LeatherStrips=2,
+	Coke/Charcoal=10,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Shoulderpad_Articulated_R_Metal=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Reinforce Left Articulated Metal Shoulder Armor with Spikes
+    {
+	Base.Shoulderpad_Articulated_L_Metal,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.Shoulderpad_ArticulatedSpike_L=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Reinforce Right Articulated Metal Shoulder Armor with Spikes
+    {
+	Base.Shoulderpad_Articulated_R_Metal=1,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.Shoulderpad_ArticulatedSpike_R=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+
+
+
+
+
+   recipe Craft a Left Articulated Metal Thigh Armor
+    {
+	Smithing.IngotA/Smithing.IngotB/Smithing.IngotC/Smithing.IngotD/Smithing.IngotE/Smithing.IngotF/Smithing.IngotG/Smithing.IngotH/Smithing.IngotI/Smithing.IngotJ/Smithing.IngotK/Smithing.IngotT/Smithing.IngotY/Smithing.IngotP/Smithing.IngotM/Smithing.IngotS/Smithing.IngotQ/Smithing.IngotR/Smithing.IngotU/Smithing.IngotV/Smithing.IngotW/Smithing.IngotX/Smithing.IngotL/Smithing.IngotO/Smithing.IngotN/Smithing.IngotZ,
+	aerx.Buckle=1,
+	LeatherStrips=2,
+	Coke/Charcoal=10,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Thigh_ArticMetal_L=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+	
+    }
+
+   recipe Craft a Right Articulated Metal Thigh Armor
+    {
+	Smithing.IngotA/Smithing.IngotB/Smithing.IngotC/Smithing.IngotD/Smithing.IngotE/Smithing.IngotF/Smithing.IngotG/Smithing.IngotH/Smithing.IngotI/Smithing.IngotJ/Smithing.IngotK/Smithing.IngotT/Smithing.IngotY/Smithing.IngotP/Smithing.IngotM/Smithing.IngotS/Smithing.IngotQ/Smithing.IngotR/Smithing.IngotU/Smithing.IngotV/Smithing.IngotW/Smithing.IngotX/Smithing.IngotL/Smithing.IngotO/Smithing.IngotN/Smithing.IngotZ,
+	aerx.Buckle=1,
+	LeatherStrips=2,
+	Coke/Charcoal=10,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Thigh_ArticMetal_R=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+    }
+
+
+
+
+   recipe Craft a Left Full Metal Forearm Armor
+    {
+	Smithing.IngotA/Smithing.IngotB/Smithing.IngotC/Smithing.IngotD/Smithing.IngotE/Smithing.IngotF/Smithing.IngotG/Smithing.IngotH/Smithing.IngotI/Smithing.IngotJ/Smithing.IngotK/Smithing.IngotT/Smithing.IngotY/Smithing.IngotP/Smithing.IngotM/Smithing.IngotS/Smithing.IngotQ/Smithing.IngotR/Smithing.IngotU/Smithing.IngotV/Smithing.IngotW/Smithing.IngotX/Smithing.IngotL/Smithing.IngotO/Smithing.IngotN/Smithing.IngotZ,
+	aerx.Buckle=1,
+	LeatherStrips=2,
+	Coke/Charcoal=10,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Vambrace_FullMetal_Left=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+	
+    }
+
+   recipe Craft a Right Full Metal Forearm Armor
+    {
+	Smithing.IngotA/Smithing.IngotB/Smithing.IngotC/Smithing.IngotD/Smithing.IngotE/Smithing.IngotF/Smithing.IngotG/Smithing.IngotH/Smithing.IngotI/Smithing.IngotJ/Smithing.IngotK/Smithing.IngotT/Smithing.IngotY/Smithing.IngotP/Smithing.IngotM/Smithing.IngotS/Smithing.IngotQ/Smithing.IngotR/Smithing.IngotU/Smithing.IngotV/Smithing.IngotW/Smithing.IngotX/Smithing.IngotL/Smithing.IngotO/Smithing.IngotN/Smithing.IngotZ,
+	aerx.Buckle=1,
+	LeatherStrips=2,
+	Coke/Charcoal=10,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Vambrace_FullMetal_Right=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+    }
+
+
+
+
+   recipe Craft a Metal Coat of Plates Body Armor
+    {
+	Smithing.IngotA/Smithing.IngotB/Smithing.IngotC/Smithing.IngotD/Smithing.IngotE/Smithing.IngotF/Smithing.IngotG/Smithing.IngotH/Smithing.IngotI/Smithing.IngotJ/Smithing.IngotK/Smithing.IngotT/Smithing.IngotY/Smithing.IngotP/Smithing.IngotM/Smithing.IngotS/Smithing.IngotQ/Smithing.IngotR/Smithing.IngotU/Smithing.IngotV/Smithing.IngotW/Smithing.IngotX/Smithing.IngotL/Smithing.IngotO/Smithing.IngotN/Smithing.IngotZ=3,
+	aerx.Buckle=4,
+	LeatherStrips=6,
+	Coke/Charcoal=25,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Cuirass_CoatOfPlates=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=10;Tailoring=4,
+	NearItem:Advanced Forge,	
+    }
+
+
+   recipe Craft a Left Articulated Metal Shin Armor
+    {
+	Smithing.IngotA/Smithing.IngotB/Smithing.IngotC/Smithing.IngotD/Smithing.IngotE/Smithing.IngotF/Smithing.IngotG/Smithing.IngotH/Smithing.IngotI/Smithing.IngotJ/Smithing.IngotK/Smithing.IngotT/Smithing.IngotY/Smithing.IngotP/Smithing.IngotM/Smithing.IngotS/Smithing.IngotQ/Smithing.IngotR/Smithing.IngotU/Smithing.IngotV/Smithing.IngotW/Smithing.IngotX/Smithing.IngotL/Smithing.IngotO/Smithing.IngotN/Smithing.IngotZ,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Coke/Charcoal=10,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.ShinKneeGuard_L_Metal=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+	
+    }
+
+   recipe Craft a Right Articulated Metal Shin Armor
+    {
+	Smithing.IngotA/Smithing.IngotB/Smithing.IngotC/Smithing.IngotD/Smithing.IngotE/Smithing.IngotF/Smithing.IngotG/Smithing.IngotH/Smithing.IngotI/Smithing.IngotJ/Smithing.IngotK/Smithing.IngotT/Smithing.IngotY/Smithing.IngotP/Smithing.IngotM/Smithing.IngotS/Smithing.IngotQ/Smithing.IngotR/Smithing.IngotU/Smithing.IngotV/Smithing.IngotW/Smithing.IngotX/Smithing.IngotL/Smithing.IngotO/Smithing.IngotN/Smithing.IngotZ,
+	aerx.Buckle=2,
+	LeatherStrips=2,
+	Coke/Charcoal=10,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.ShinKneeGuard_R_Metal=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Reinforce Left Articulated Metal Shin Armor with Spikes
+    {
+	Base.ShinKneeGuard_L_Metal,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.ShinKneeGuardSpike_L_Metal=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Reinforce Right Articulated Metal Shin Armor with Spikes
+    {
+	Base.ShinKneeGuard_R_Metal=1,
+	Base.Nails=10,
+       	Base.BlowTorch=1,
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+        Result:Base.ShinKneeGuardSpike_R_Metal=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+	recipe Craft a Metal Neck Guard
+	{
+	Base.SmallSheetMetal=2,
+	Coke/Charcoal=5,
+	aerx.RabbitLeather_Fur_Tan=1,   
+        Base.LeatherStrips=2,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Gorget_Metal=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+	}
+
+	recipe Craft a Metal Codpiece
+	{
+	Base.SmallSheetMetal=1,
+	Coke/Charcoal=3,
+	aerx.RabbitLeather_Fur_Tan=1,   
+        Base.LeatherStrips=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        keep [Recipe.GetItemTypes.Hammer],
+        keep WeldingMask,
+	keep Needle,
+        Result:Base.Codpiece_Metal=1,
+        Time:100.0,
+        Category:Armor,
+	SkillRequired:MetalWelding=9;Tailoring=4,
+	NearItem:Advanced Forge,
+	}
+
+
+
+}
