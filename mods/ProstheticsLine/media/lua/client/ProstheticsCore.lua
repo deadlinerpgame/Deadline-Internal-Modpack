@@ -1,12 +1,6 @@
 ProstheticsCore = {};
 
-ProstheticsCore.PROSTHETIC_TIERS =
-{
-    [1] = "Basic",
-    [2] = "Articulated",
-    [3] = "Battery-Powered",
-    [4] = "Futuristic"
-}
+ProstheticsCore.PROSTHETIC_TIERS = {};
 
 function ProstheticsCore.CheckForAmputations()
     local player = getPlayer();
@@ -32,13 +26,9 @@ function ProstheticsCore.CheckForAmputations()
 
     for i, v in ipairs(amputationSlots) do
         if player:getWornItem(amputationSlots[i]) then
-            print("getWornItem: " .. player:getWornItem(amputationSlots[i]):getName() or "NO NAME");
             table.insert(currentAmputations, amputationSlots[i]);
         end
     end
-
-    print("AmputationChecks:");
-    print(tostring(#currentAmputations));
 
     return currentAmputations or {};
 end
@@ -64,25 +54,49 @@ function ProstheticsCore.CheckForProsthetics()
     if #prosSlots == 0 then return {} end;
 
     for i, v in ipairs(prosSlots) do
-        if player:getWornItem(prosSlots[i]) then
-            print("getWornItem: " .. player:getWornItem(prosSlots[i]):getName() or "NO NAME");
-            table.insert(currentPros, prosSlots[i]);
+        local slot = prosSlots[i];
+
+        if player:getWornItem(slot) then
+            
+            table.insert(currentPros, slot);
+
+            local item = player:getWornItem(slot);
+            local tier = ProstheticsCore.GetProstheticTier(item:getType());
+            if tier then
+                item:getModData().ProstheticsLine_ProstheticModifier = ProstheticsCore.GetMultiplierFromProstheticTier(tier);
+            end
         end
     end
 
     return currentPros or {};
 end
 
+function ProstheticsCore.GetProstheticTier(itemName)
+    print("GET PROSTHETIC TIER")
+    print(itemName);
+    for tier, tierStr in ipairs(ProstheticsCore.PROSTHETIC_TIERS) do
+        local splitList = string.split(tierStr, ";");
+        if not splitList then return 1 end;
+
+        for i, iteratedItem in ipairs(splitList) do
+            if itemName == iteratedItem then
+                print("Tier is " .. tostring(tier));
+                return tier;
+            end
+        end
+    end
+end
+
 function ProstheticsCore.IsLegLocation(bodyLocation)
     if not bodyLocation then return false end;
 
-    return string.find(bodyLocation, "_RL") or string.find(bodyLocation, "_LL");
+    return string.find(bodyLocation, "_RL") or string.find(bodyLocation, "_LL") or string.find(bodyLocation, "Leg");
 end
 
 function ProstheticsCore.IsArmLocation(bodyLocation)
     if not bodyLocation then return false end;
 
-    return string.find(bodyLocation, "_LA") or string.find(bodyLocation, "_RA");
+    return string.find(bodyLocation, "_LA") or string.find(bodyLocation, "_RA") or string.find(bodyLocation, "Arm");
 end
 
 function ProstheticsCore.IsAmputation(bodyLocation)
@@ -97,26 +111,11 @@ function ProstheticsCore.IsProsthetic(bodyLocation)
     return string.find(bodyLocation, "Prosthetic");
 end
 
-function ProstheticsCore.GetProstheticTier(slot)
-    local item = getPlayer():getWornItem(slot);
-    if not slot then return 0 end;
-    
-    for i, v in ipairs(ProstheticsCore.PROSTHETIC_TIERS) do
-        local tier = ProstheticsCore.PROSTHETIC_TIERS[i];
-
-        if item:hasTag(tier) then
-            return i;
-        end
-    end
-
-    return 0;
-end
-
 function ProstheticsCore.GetMultiplierFromProstheticTier(tier)
-    if tier == 1 then return SandboxVars.ProstheticsLine.ProsTier_BasicMult end;
-    if tier == 2 then return SandboxVars.ProstheticsLine.ProsTier_ArticulatedMult end;
-    if tier == 3 then return SandboxVars.ProstheticsLine.ProsTier_BatteryMult end;
-    if tier == 4 then return SandboxVars.ProstheticsLine.ProsTier_FuturisticMult end;
+    if tier == 1 then return SandboxVars.ProstheticsLine.ProsTierBasic end;
+    if tier == 2 then return SandboxVars.ProstheticsLine.ProsTierArticulated end;
+    if tier == 3 then return SandboxVars.ProstheticsLine.ProsTierBattery end;
+    if tier == 4 then return SandboxVars.ProstheticsLine.ProsTierFuturistic end;
 
     return 1;
 end
@@ -225,6 +224,26 @@ function ProstheticsCore.MinutesToMs(minutes)
     return math.floor(minutes * 60000);
 end
 
+---------------------------------------------------------------
+function ProstheticsCore.LoadProstheticItems()
+    ProstheticsCore.PROSTHETIC_TIERS = {};
+
+    local basic = SandboxVars.ProstheticsLine.ProsItemsBasic;
+    local artic = SandboxVars.ProstheticsLine.ProsItemsArticulated;
+    local batt = SandboxVars.ProstheticsLine.ProsItemsBattery;
+    local future = SandboxVars.ProstheticsLine.ProsItemsFuturistic;
+
+    if basic then ProstheticsCore.PROSTHETIC_TIERS[1] = basic end;
+    if artic then ProstheticsCore.PROSTHETIC_TIERS[2] = artic end;
+    if batt then ProstheticsCore.PROSTHETIC_TIERS[3] = batt end;
+    if future then ProstheticsCore.PROSTHETIC_TIERS[4] = future end;
+end
+
+function ProstheticsCore.OnLoad()
+    ProstheticsCore.LoadProstheticItems();
+end
+
+Events.OnLoad.Add(ProstheticsCore.OnLoad);
 ---------------------------------------------------------------
 
 return ProstheticsCore;

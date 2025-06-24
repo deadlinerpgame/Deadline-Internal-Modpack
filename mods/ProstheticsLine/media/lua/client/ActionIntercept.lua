@@ -5,6 +5,7 @@ require "TimedActions/ISBaseTimedAction"
 
 local original_adjustMaxTime = ISBaseTimedAction.adjustMaxTime;
 function ISBaseTimedAction:adjustMaxTime(maxTime)
+    print("[ProstheticsLine_ActionIntercept] Start of function with base time: " .. maxTime);
     local player = getPlayer();
     if not player then return end;
 
@@ -17,11 +18,16 @@ function ISBaseTimedAction:adjustMaxTime(maxTime)
         if armProsthetics and #armProsthetics > 0 then
             local prosMult = 1;
             for i, v in ipairs(armProsthetics) do
-                local tier = ProstheticsCore.GetProstheticTier(armProsthetics[i]);
-                prosMult = prosMult * ProstheticsCore.GetMultiplierFromProstheticTier(tier);
+                local prosSlot = armProsthetics[i];
+                local item = player:getWornItem(prosSlot);
+                if item then
+                    local mult = item:getModData().ProstheticsLine_ProstheticModifier;
+                    prosMult = prosMult * mult;
+                end
             end
 
             maxTime = math.floor(maxTime * prosMult);
+            print("[FINAL] New max time: " .. tostring(maxTime));
             return original_adjustMaxTime(self, maxTime);
         end
 
