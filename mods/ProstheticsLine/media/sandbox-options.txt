@@ -1,0 +1,98 @@
+VERSION = 1,
+
+option ProstheticsLine.EnablePoweredProsthetics =
+{
+    type = boolean, default = true,
+    page = ProstheticsLine, translation = ProstheticsLine_EnablePoweredProsthetics,
+}
+
+option ProstheticsLine.AmputationDebuffMulti = 
+{
+    type = double, min = 1, max = 5, default = 1.5,
+    page = ProstheticsLine, translation = ProstheticsLine_AmputationDebuffMulti,
+}
+
+option ProstheticsLine.AmputationDropEquipped =
+{
+    type = boolean, default = true,
+    page = ProstheticsLine, translation = ProstheticsLine_AmputationDropEquipped,
+}
+
+option ProstheticsLine.PhantomPainsChance = 
+{
+    type = integer, min = 0, max = 100, default = 15,
+    page = ProstheticsLine, translation = ProstheticsLine_PhantomPainsChance,
+}
+
+option ProstheticsLine.PhantomPainsMaxDelay =
+{
+    type = integer, min = 1, max = 720, default = 5,
+    page = ProstheticsLine, translation = ProstheticsLine_PhantomPainsMaxDelay,
+}
+
+option ProstheticsLine.PhantomPainsMaxDuration =
+{
+    type = integer, min = 1, max = 720, default = 5,
+    page = ProstheticsLine, translation = ProstheticsLine_PhantomPainsMaxDuration,
+}
+
+option ProstheticsLine.PhantomPainsCooldown =
+{
+    type = integer, min = 1, max = 1440, default = 360,
+    page = ProstheticsLine, translation = ProstheticsLine_PhantomPainsCooldown,
+}
+
+option ProstheticsLine.PhantomPainsSeverity = 
+{
+    type = enum, numValues = 3, default = 1,
+    page = ProstheticsLine, translation = ProstheticsLine_PhantomPainsSeverity,
+    valueTranslation = ProstheticsLine_PhantomPainsSeverity,
+}
+
+option ProstheticsLine.ProsTierBasic =
+{
+    type = double, min = 1, max = 5, default = 1.3,
+    page = ProstheticsLine, translation = ProstheticsLine_ProsTierBasic,
+}
+
+option ProstheticsLine.ProsTierArticulated =
+{
+    type = double, min = 1, max = 5, default = 1.15,
+    page = ProstheticsLine, translation = ProstheticsLine_ProsTierArticulated,
+}
+
+option ProstheticsLine.ProsTierBattery =
+{
+    type = double, min = 1, max = 5, default = 1.0,
+    page = ProstheticsLine, translation = ProstheticsLine_ProsTierBattery,
+}
+
+option ProstheticsLine.ProsTierFuturistic =
+{
+    type = double, min = 0.1, max = 1, default = 0.8,
+    page = ProstheticsLine, translation = ProstheticsLine_ProsTierFuturistic,
+}
+
+option ProstheticsLine.ProsItemsBasic =
+{
+    type = string, default = Pros_LL;Pros_RL;Pros_RA;Pros_LA,
+    page = ProstheticsLine, translation = ProstheticsLine_ProsItemsBasic,
+}
+
+option ProstheticsLine.ProsItemsArticulated =
+{
+    type = string, default = ProsArtic_LL;ProsArtic_LA;ProsArtic_RA;ProsArtic_LA,
+    page = ProstheticsLine, translation = ProstheticsLine_ProsItemsArticulated,
+}
+
+option ProstheticsLine.ProsItemsBattery =
+{
+    type = string, default =ProsBatt_LL;ProsBatt_LA;ProsBatt_RA;ProsBatt_LA,
+    page = ProstheticsLine, translation = ProstheticsLine_ProsItemsBattery,
+}
+
+option ProstheticsLine.ProsItemsFuturistic =
+{
+    type = string, default =ProsFuture_LL;ProsFuture_LA;ProsFuture_RA;ProsFuture_LA,
+    page = ProstheticsLine, translation = ProstheticsLine_ProsItemsFuturistic,
+}
