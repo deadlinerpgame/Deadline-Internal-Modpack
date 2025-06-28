@@ -83,9 +83,13 @@ function QueueLine_Client.OnServerCommand(module, command, args)
                 end
 
                 -- If the function for the queue item is called successfully, then remove it from queue
-                local status, error = pcall(QueueLine_Client.Functions[item.type](unpack(item.params)))
+                if not item.type then return end;
 
-                if status then
+                local queueItemFunction = QueueLine_Client.Functions[item.type];
+                local queueFuncArgs = unpack(item.params);
+                local queueFuncStatus, queueFuncError = pcall(queueItemFunction, queueFuncArgs);
+
+                if queueFuncStatus and not queueFuncError then
                     print("[QueueLine_Client] Queue item redeemed successfully.");
                     sendClientCommand(getPlayer(), "QueueLine", "RemoveOnSuccess", { id = item.id });
                 else    
