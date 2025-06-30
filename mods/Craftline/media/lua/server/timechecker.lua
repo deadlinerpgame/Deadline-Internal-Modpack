@@ -21,6 +21,8 @@ end
 
 local function verifyAccess()
     local onlinePlayers = getOnlinePlayers()
+    if not onlinePlayers then return end;
+    
     for i = 0, onlinePlayers:size() - 1 do
         local player = onlinePlayers:get(i)
         local key = player:getSteamID()
