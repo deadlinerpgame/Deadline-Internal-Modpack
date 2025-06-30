@@ -128,14 +128,11 @@ function QueueLine_Server.OnClientCommand(module, command, player, args)
     if command == "QueueItemFailed" then
         if not args then return end;
         if not args.id then return end;
+        if not args.error then args.error = "QueueItemFailedNoErrorMsg" end;
 
         local item = QueueLine_Server.GetItemFromId(args.id);
-        local errorStr = string.format("[QueueLine_Server] [QueueItemFailed] Player %s attempted to redeem queue item of type %s but this function failed.", player:getUsername(), item.type);
+        local errorStr = string.format("[QueueLine_Server] [QueueItemFailed] Player %s redeem type %s failed with error: %s", player:getUsername(), item.type, args.error);
         print(errorStr);
-        for i, v in ipairs(item.params) do
-            local param = item.params[i];
-            print("         > " .. tostring(param));
-        end
     end
 end
 
@@ -157,6 +154,8 @@ function QueueLine_Server.SaveQueue()
         local queueItemStr = string.format("[QueueLine_Server] Queue item %0d - username: %s - type: %s.", i, v.username, v.type);
         print(queueItemStr);
     end
+
+    print("[QueueLine_Server] Queue saved.");
 end
 
 
@@ -166,7 +165,8 @@ function QueueLine_Server.AddLanguageItem(targetUsername, newLanguage)
         return;
     end
 
-    print("[QueueLine_Server] Add Language Item for player " .. targetUsername .. " with language " .. newLanguage);
+    string addLangStr = string.format("[QueueLine_Server] Add Language for player %s with language %s", targetUsername, newLanguage);
+    print(addLangStr);
 
     local item = 
     {
@@ -180,16 +180,9 @@ function QueueLine_Server.AddLanguageItem(targetUsername, newLanguage)
         }
     };
 
-    print("Item: ");
-    print(tostring(item));
-
-    --print(table.unpack(item));
-
     table.insert(QueueLine_Server.QueueItems, item);
     QueueLine_Server.SaveQueue();
 end
-
-
 
 Events.OnClientCommand.Add(QueueLine_Server.OnClientCommand);
 Events.OnInitGlobalModData.Add(QueueLine_Server.OnInitGlobalModData);

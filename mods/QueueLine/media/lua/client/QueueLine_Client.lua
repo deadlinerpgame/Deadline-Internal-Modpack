@@ -64,7 +64,6 @@ function QueueLine_Client.OnServerCommand(module, command, args)
 
     if not args.items then return end;
 
-    print("[QueueLine] [ConnectionReceiveItems] For no. items: " .. tostring(#args.items));
     for i, v in ipairs(args.items) do
         local item = args.items[i];
 
@@ -73,11 +72,9 @@ function QueueLine_Client.OnServerCommand(module, command, args)
 
                 -- Check the function is valid
                 if not QueueLine_Client.Functions[item.type] then
-                    print("[QueueLine_Client] Queue type called but does not have client function - " .. tostring(item.type));
                     return;
                 end
 
-                print("[QueueLine] Calling function for type " .. tostring(item.type) .. " with args:");
                 for i, v in ipairs(item.params) do
                     print(tostring(i) .. ": " .. tostring(v));
                 end
@@ -92,9 +89,10 @@ function QueueLine_Client.OnServerCommand(module, command, args)
                 if queueFuncStatus and not queueFuncError then
                     print("[QueueLine_Client] Queue item redeemed successfully.");
                     sendClientCommand(getPlayer(), "QueueLine", "RemoveOnSuccess", { id = item.id });
+                    QueueLine_Client.QueueQueriedThisConnect = true;
                 else    
-                    print("[QueueLine_Client] An error occurred executing your queue item with code: " .. tostring(code));
-                    sendClientCommand(getPlayer(), "QueueLine", "QueueItemFailed", { id = item.id });
+                    print("[QueueLine_Client] An error occurred executing your queue item with error: " .. tostring(queueFuncError));
+                    sendClientCommand(getPlayer(), "QueueLine", "QueueItemFailed", { id = item.id, error = queueFuncError });
                 end
             end
         end
