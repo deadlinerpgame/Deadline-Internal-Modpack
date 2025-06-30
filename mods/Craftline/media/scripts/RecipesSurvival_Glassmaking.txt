@@ -226,6 +226,18 @@ module Base
 		Category:Glassmaking,
 	}
 
+	recipe Make Wine Bottle
+	{
+		CeramicCrucibleWithGlass,
+		keep GlassBlowingPipe,
+		Result:WineEmpty,
+
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
 	recipe Make Lowball Glass
 	{
 		CeramicCrucibleWithGlass,
