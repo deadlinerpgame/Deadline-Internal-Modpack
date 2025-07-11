@@ -33,15 +33,17 @@ function ISFinalizeDealAction:perform()
         receiveList = LogLineUtils.ItemListToAmountDict(self.itemsToReceive);
     end
 
-    local logStr = string.format("Player %s [%s] finalized trade with %s [%s].", receiverName, LogLineUtils.PlayerCoordsStr(self.character), giverName, LogLineUtils.PlayerCoordsStr(self.otherPlayer),);
+    local logStr = string.format("Player %s [%s] finalized trade with %s [%s]", receiverName, LogLineUtils.PlayerCoordsStr(self.character), giverName, LogLineUtils.PlayerCoordsStr(self.otherPlayer));
     LogLineUtils.LogFromClient("Trade", logStr);
 
+    local receiveString = "";
+    local giveString = "";
+    local parsedReceiveList = LogLineUtils.ParseAmountDict(receiveList, receiveString);
+    local parsedGiveList = LogLineUtils.ParseAmountDict(giveList, giveString)
 
-    logStr = string.format(" --> Player %s has received: %s\nPlayer %s has given: %s", 
-        receiverName, LogLineUtils.ParseAmountDict(receiveList),
-        giverName, LogLineUtils.ParseAmountDict(giveList)
-    );
+    logStr = string.format(" --> Player %s has received: %s", receiverName, parsedReceiveList);
     LogLineUtils.LogFromClient("Trade", logStr);
-
+    
+    logStr = string.format(" --> Player %s has given: %s", receiverName, parsedGiveList);
     LogLineUtils.LogFromClient("Trade", logStr);
 end

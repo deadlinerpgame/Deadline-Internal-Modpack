@@ -11,7 +11,7 @@ function LogLineServer.OnClientCommand(module, command, player, args)
         local prefix = args.prefix;
         local msg = args.message;
 
-        writeLog(prefix, msg);
+        writeLog("LogLine_" .. prefix, msg);
     end
     
 end
