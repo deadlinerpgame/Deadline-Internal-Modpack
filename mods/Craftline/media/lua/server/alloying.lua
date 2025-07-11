@@ -294,6 +294,8 @@ AlloyRules = {
     },
 }
 
+
+
 function Recipe.OnCreate.MeltMetal(items, result, player)
 	player:getInventory():AddItem('aerx.CeramicCrucible')
 --[[ Part 1, creates the table for the resulting ingot ]]--
@@ -314,8 +316,8 @@ function Recipe.OnCreate.MeltMetal(items, result, player)
 	print('Test2: ' .. tostring(crucible:getInventoryWeight()))
 	print('Test3: ' .. crucible:getItemContainer():getCountTag('meltable'))
 	print(crucible:getItemContainer():getCapacityWeight())
-	if crucible:getItemContainer():getCapacityWeight() < 0.9999 then
-		getPlayer():Say("I need a full crucible.")
+	if crucible:getItemContainer():getCapacityWeight() < 0.9999 or crucible:getItemContainer():getCapacityWeight() > 1.0001 then
+		getPlayer():Say("I need one weight unit of metals to make an alloy.")
 		local items = crucible:getItemContainer():getItems()
 		if items:size() > 0 then
 			local itemsToMove = {}

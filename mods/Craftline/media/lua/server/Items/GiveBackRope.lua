@@ -287,6 +287,59 @@ function Recipe.OnCreate.TransferCBladeToCSword(items, result, player)
     end
 end
 
+function Recipe.OnCreate.TransferBladeToSword(items, result, player)
+    local barItems = { ["aerx.SwordBlade"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.Sword")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBladeToShortsword(items, result, player)
+    local barItems = { ["aerx.ShortSwordBlade"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.ShortSword")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
 
 
 function Recipe.OnCreate.TransferBarsToCoins(items, result, player)
@@ -315,6 +368,252 @@ function Recipe.OnCreate.TransferBarsToCoins(items, result, player)
         end
     end
 end
+
+function Recipe.OnCreate.TransferBarToCrowbar(items, result, player)
+    local barItems = { ["aerx.IronBar"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.CrowbarForged")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+
+function Recipe.OnCreate.TransferBarToSledgehammerHead5(items, result, player)
+    local barItems = { ["aerx.SledgehammerHead"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.SledgehammerForged")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+
+function Recipe.OnCreate.TransferBarToSledgehammerHead4(items, result, player)
+    local barItems = { ["aerx.BallPeenHammerHead"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.BallPeenHammerForged")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBarToSledgehammerHead3(items, result, player)
+    local barItems = { ["aerx.ClawhammerHead"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.HammerForged")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBarToSledgehammerHead2(items, result, player)
+    local barItems = { ["aerx.ClubHammerHead"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.ClubHammerForged")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBarToSledgehammerHead(items, result, player)
+    local barItems = { ["aerx.IronBar"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.SledgehammerHead")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBarToBallPeenHammerHead(items, result, player)
+    local barItems = { ["aerx.IronBar"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.BallPeenHammerHead")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBarToClawHammerHead(items, result, player)
+    local barItems = { ["aerx.IronBar"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.ClawhammerHead")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBarToClubHammerHead(items, result, player)
+    local barItems = { ["aerx.IronBar"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.ClubHammerHead")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
 
 
 function Recipe.OnCreate.TransferBarToMaceHead(items, result, player)
@@ -469,7 +768,7 @@ function Recipe.OnCreate.TransferHHeadtoHatchet(items, result, player)
 
             -- Add metadata to result
             for i = 1, 1 do
-                local bar = player:getInventory():AddItem("aerx.HatchetForged")
+                local bar = player:getInventory():AddItem("aerx.HandAxeForged")
                 bar:getModData().AlloyType = "Made from " .. cleanAlloyName
                 bar:setName(cleanAlloyName .. " " .. bar:getName())
             end
@@ -479,7 +778,7 @@ function Recipe.OnCreate.TransferHHeadtoHatchet(items, result, player)
     end
 end
 
-function Recipe.OnCreate.TransferHHeadtoHatchet(items, result, player)
+function Recipe.OnCreate.TransferPHeadtoPickaxe(items, result, player)
     local barItems = { ["aerx.PickAxeHead"] = true, }
 
     -- Get the first item used in the recipe
@@ -552,6 +851,141 @@ function Recipe.OnCreate.TransferBarToSimpleShortSword(items, result, player)
             -- Add metadata to result
             for i = 1, 1 do
                 local bar = player:getInventory():AddItem("aerx.CrudeShortSwordBlade")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBarToFShortSword(items, result, player)
+    local barItems = { ["aerx.IronBar"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.ShortSwordBlade")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBarToFSword(items, result, player)
+    local barItems = { ["aerx.IronBar"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.SwordBlade")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBarToScrapShortsword(items, result, player)
+    local barItems = { ["aerx.IronBar"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.ShortSword_Scrap")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBarToHandguardDagger(items, result, player)
+    local barItems = { ["aerx.IronBar"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.HandguardDagger")
+                bar:getModData().AlloyType = "Made from " .. cleanAlloyName
+                bar:setName(cleanAlloyName .. " " .. bar:getName())
+            end
+        else
+            print("Not recognized ingot: " .. itemType)
+        end
+    end
+end
+
+function Recipe.OnCreate.TransferBarToScrapSword(items, result, player)
+    local barItems = { ["aerx.IronBar"] = true, }
+
+    -- Get the first item used in the recipe
+    local item = items:get(0)
+    if item then
+        local itemType = item:getFullType()
+
+        if barItems[itemType] then
+            local modData = item:getModData()
+            local alloyType = modData.AlloyType or "Unknown"
+            local cleanAlloyName = alloyType:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "")
+            print("First recipe item type: " .. itemType)
+            print("Alloy type: " .. cleanAlloyName)
+
+            -- Add metadata to result
+            for i = 1, 1 do
+                local bar = player:getInventory():AddItem("aerx.Sword_Scrap")
                 bar:getModData().AlloyType = "Made from " .. cleanAlloyName
                 bar:setName(cleanAlloyName .. " " .. bar:getName())
             end
@@ -789,7 +1223,7 @@ function Recipe.OnCreate.ReturnMetalFromWeapon(items, result, player)
     for metal, ratio in pairs(metalComposition) do
         local count = math.floor(totalScrap * ratio)
         for i = 1, count do
-            player:getInventory():AddItem("aerx." .. metal .. "Scrap")
+            player:getInventory():AddItem("aerx." .. metal .. "Fragments")
             given = given + 1
         end
     end
@@ -803,7 +1237,7 @@ function Recipe.OnCreate.ReturnMetalFromWeapon(items, result, player)
             end
         end
         for i = 1, (totalScrap - given) do
-            player:getInventory():AddItem("aerx." .. maxMetal .. "Scrap")
+            player:getInventory():AddItem("aerx." .. maxMetal .. "Fragments")
         end
     end
 end

@@ -19,3 +19,11 @@ BSBook1Entries.getEntryCount = function()
 end
 
 BSBook1Entries.addBookEntry(getText("SurvivalGuide_BS1Entry1Title"), getText("SurvivalGuide_BS1Entry1txt"));
+BSBook2Entries.addBookEntry(getText("SurvivalGuide_BS2Entry1Title"), getText("SurvivalGuide_BS2Entry1txt"));
+BSBook3Entries.addBookEntry(getText("SurvivalGuide_bs3Entry1Title"), getText("SurvivalGuide_BS3Entry1txt"));
+BSBook3Entries.addBookEntry(getText("SurvivalGuide_bs3Entry1Title"), getText("SurvivalGuide_BS3Entry2txt"));
+BSBook3Entries.addBookEntry(getText("SurvivalGuide_bs3Entry1Title"), getText("SurvivalGuide_BS3Entry3txt"));
+BSBook3Entries.addBookEntry(getText("SurvivalGuide_bs3Entry1Title"), getText("SurvivalGuide_BS3Entry4txt"));
+BSBook4Entries.addBookEntry(getText("SurvivalGuide_BS4Entry1Title"), getText("SurvivalGuide_BS4Entry1txt"));
+BSBook4Entries.addBookEntry(getText("SurvivalGuide_BS4Entry1Title"), getText("SurvivalGuide_BS4Entry2txt"));
+BSBook5Entries.addBookEntry(getText("SurvivalGuide_BS5Entry1Title"), getText("SurvivalGuide_BS5Entry1txt"));

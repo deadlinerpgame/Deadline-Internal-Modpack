@@ -807,7 +807,7 @@ AttachedWeaponDefinitions.handaxeLoganCarter = {
 	addHoles = false,
 	daySurvived = 0,
 	weapons = {
-
+		"Base.HandAxe",
 	},
 }
 
@@ -885,7 +885,7 @@ AttachedWeaponDefinitions.knivesBeltAZ = {
 	addHoles = false,
 	daySurvived = 0,
 	weapons = {
-
+		"Base.HuntingKnife",
 		"Base.KitchenKnife",
 	},
 }
@@ -899,12 +899,12 @@ AttachedWeaponDefinitions.bladeInBackAZ = {
 	addHoles = false,
 	daySurvived = 0,
 	weapons = {
-
+		"Base.Crowbar",
 	},
 }
 -- crowbar in back
 AttachedWeaponDefinitions.Crowbar = {
-	chance = 2,
+	chance = 100,
 	outfit = {"AuthenticGordonFreeman", "AuthenticDianneCaldwell"},
 	weaponLocation = {"Blade On Back"},
 	bloodLocations = nil,
@@ -983,12 +983,12 @@ AttachedWeaponDefinitions.HuntingKniveinHand = {
 	addHoles = false,
 	daySurvived = 0,
 	weapons = {
-
+		"Base.HuntingKnife",
 	},
 }
 
 AttachedWeaponDefinitions.axeRochelle = {
-	chance = 5,
+	chance = 100,
 	outfit = {"AuthenticRochelle", "AuthenticNMRIHBateman"},
 	weaponLocation = {"Big Weapon On Back"},
 	bloodLocations = nil,
