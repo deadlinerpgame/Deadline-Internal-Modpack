@@ -42,4 +42,5 @@ function ISInventoryTransferAction:perform()
     end
 
     print(transferStr);
+    LogLineUtils.LogFromClient("ItemTransfer", transferStr);
 end
