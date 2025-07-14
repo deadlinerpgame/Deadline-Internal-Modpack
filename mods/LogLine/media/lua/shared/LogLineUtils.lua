@@ -61,11 +61,11 @@ function LogLineUtils.ParseAmountDict(dict, returnStr)
             local count = dict[k];
 
             if count then
-                local newStr = string.format("%s [%s: %0d] |", returnStr, k, count);
+                local newStr = string.format("%s [%0dx%s] |", returnStr, count, k);
                 returnStr = newStr;
             end
         else
-            local tableHeader = string.format("%s [*] %s: %s |", returnStr, k, LogLineUtils.ParseAmountDict(v, returnStr));
+            local tableHeader = string.format("%s [%s]: %s |", returnStr, k, LogLineUtils.ParseAmountDict(v, returnStr));
             returnStr = tableHeader; -- Update with the container name before recursively iterating through it.
         end
     end
@@ -73,11 +73,66 @@ function LogLineUtils.ParseAmountDict(dict, returnStr)
     return returnStr;
 end
 
+function LogLineUtils.ContainerToLogStr(container)
+    if not container then return "" end;
 
-function LogLineUtils.PlayerCoordsStr(player)
-    if not player then return "[POS - INVALID PLAYER]" end;
+    local returnStr = "";
 
-    return string.format("POS: %0d,%0d,%0d", player:getX(), player:getY(), player:getZ());
+    -- Step 1, get the item name.
+
+
+    -- Step 2, is the item on the floor?
+
+    -- Step 2 i) If on floor, include grid coordinates.
+
+    -- Step 2 ii) If not on floor, get parent object name and grid coordinates.
+
+    if instanceof(container, "ItemContainer") then
+        if container:getType() == "floor" then
+            -- From ISInventoryTransferAction.lua:
+                --[[
+                    function ISInventoryTransferAction:getNotFullFloorSquare(item)
+	                    local square = self.character:getCurrentSquare()
+                        ...
+                --]]
+
+            local square = getPlayer():getCurrentSquare();
+            -- No need to null check this, if the player DOESN'T have a square then something catastrophic has gone wrong which needs erroring.
+            return string.format("floor (%0d,%0d,%0d)", square:getX(), square:getY(), square:getZ());
+        end
+
+        if container:getParent() then -- If it has a parent, it's in an object container such as a counter or a fridge, or the
+            local parent = container:getParent();
+
+            if instanceof(parent, "IsoPlayer") then
+                return string.format("%s %s (U: %s, SID: %s)", parent:getForname(), parent:getSurname(), parent:getUsername(), parent:getSteamID());
+            end
+
+            
+
+            if instanceof(parent, "IsoObject") then
+                local x = parent:getX();
+                local y = parent:getY();
+                local z = parent:getZ();
+
+                local objName = parent:getSprite():getName() or parent:getSprite():getParentObjectName() or "[cannot find obj name]";
+
+                if not x or not y or not z then
+                    return string.format("%s (invalid pos LogLineUtils.ContainerToLogStr)", objName);
+                end
+
+                return string.format("%s (%0d,%0d,%0d)", objName, x, y, z);
+            end
+        else
+            if container:isInCharacterInventory(getPlayer()) then
+                return string.format("%s [inv]", container:getType());
+            end
+        end
+    end
+
+    
+    
+
 end
 
 function LogLineUtils.LogFromClient(prefix, string)
