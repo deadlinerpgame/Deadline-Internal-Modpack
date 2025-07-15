@@ -35,10 +35,10 @@ function ISInventoryTransferAction:perform()
             transferStr = string.format("%s (INVALID_CONTAINER_AMT_DICT)", self.item:getFullType()); 
         else
             local parsedAmountDict = LogLineUtils.ParseAmountDict(amountDict);
-            transferStr = string.format("[%s] Item: %s (%s) | From: %s | To: %s", getPlayer():getUsername(), self.item:getFullType(), parsedAmountDict, srcStr, destStr);
+            transferStr = string.format("[%s] Item: %s (%s) | From: %s | To: %s", getPlayer():getUsername(), LogLineUtils.LogSingleItem(self.item), parsedAmountDict, srcStr, destStr);
         end
     else
-        transferStr = string.format("[%s] Item: %s | From: %s | To: %s", getPlayer():getUsername(), self.item:getFullType(), srcStr, destStr);
+        transferStr = string.format("[%s] Item: %s | From: %s | To: %s", getPlayer():getUsername(), LogLineUtils.LogSingleItem(self.item), srcStr, destStr);
     end
 
     print(transferStr);

@@ -15,6 +15,12 @@ function LogLineUtils.JavaArrayToTable(javaTable)
     return returnTable;
 end
 
+function LogLineUtils.ItemToDictKey(item)
+    if not item then return nil end;
+
+    return string.format("%s|%s", item:getFullType(), item:getName()); -- This will group items of the same name, but if items have been renamed they will appear independently.
+end
+
 --[[
         Takes a list of items, e.g. { Base.Log, Base.Log, Base.KitchenKnife }.
         Condenses it into a dictionary of items and their amount, e.g:
@@ -32,7 +38,7 @@ function LogLineUtils.ItemListToAmountDict(itemList)
     for i, v in ipairs(itemList) do
         local item = itemList[i];
         if item then
-            local itemType = item:getFullType(); -- Use GetFullType to differentiate similar items.
+            local itemType = LogLineUtils.ItemToDictKey(item);-- Use GetFullType to differentiate similar items.
 
             if instanceof(item, "InventoryContainer") then
                 local subItems = item:getItemContainer():getItems();
@@ -61,7 +67,7 @@ function LogLineUtils.ParseAmountDict(dict, returnStr)
             local count = dict[k];
 
             if count then
-                local newStr = string.format("%s [%0dx%s] |", returnStr, count, k);
+                local newStr = string.format("%s [%0dx%s]", returnStr, count, k);
                 returnStr = newStr;
             end
         else
@@ -71,6 +77,12 @@ function LogLineUtils.ParseAmountDict(dict, returnStr)
     end
 
     return returnStr;
+end
+
+function LogLineUtils.LogSingleItem(item)
+    if not item then return nil end;
+
+    return string.format("%s [%s]", item:getFullType(), item:getName());
 end
 
 function LogLineUtils.ContainerToLogStr(container)
@@ -129,10 +141,6 @@ function LogLineUtils.ContainerToLogStr(container)
             end
         end
     end
-
-    
-    
-
 end
 
 function LogLineUtils.LogFromClient(prefix, string)
