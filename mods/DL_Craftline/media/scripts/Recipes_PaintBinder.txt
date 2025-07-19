@@ -1,0 +1,45 @@
+module Base
+{
+
+	recipe Make Flour-Based Paint Binder
+	{
+		Flour/Cornflour=2,
+		Water=6,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:FlourPaintBinder,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+	}
+
+	recipe Make Oil-Based Paint Binder
+	{
+		AvocadoOil/OilOlive/OilVegetable=1,
+		Water=2,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:OilPaintBinder,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+		OnCreate:Recipe.OnCreate.ReturnOliveJar,
+	}
+
+	recipe Make Glue-Based Paint Binder
+	{
+		Glue=3,
+		Water=3,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:GluePaintBinder,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+	}
+
+
+}

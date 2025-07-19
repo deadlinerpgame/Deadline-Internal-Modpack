@@ -1,0 +1,279 @@
+module Base
+{
+	model Axe_Old
+	{
+		mesh = Weapons/2Handed/Axe_Forged_2Handed_Hand,
+		texture = Weapons/1Handed/Axe_OldStyle_Forged,
+
+		attachment world
+		{
+			offset = 0.0400 0.1250 0.0000,
+			rotate = 180.0000 0.0000 180.0000,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 180.0000 -86.0322 180.0000,
+		}
+	}
+	model LargeBranch
+	{
+		mesh = Weapons/2Handed/Cudgel_TwoHanded_Basic_Hand,
+		texture = Weapons/2Handed/Cudgel_TwoHanded,
+		scale = 1,
+
+		attachment world
+		{
+			offset = -0.0293 0.2081 -0.0000,
+			rotate = -0.0000 0.0000 1.9696,
+		}
+	}
+	model Cudgel_ScrapSheet
+	{
+		mesh = Weapons/2Handed/Cudgel_Unusable_Metal_Hand,
+		texture = Weapons/2Handed/Cudgel_Unusable_Metal,
+		scale = 1,
+
+		attachment world
+		{
+			offset = -0.0293 0.2081 -0.0000,
+			rotate = -0.0000 0.0000 1.9696,
+		}
+	}
+
+	model Cudgel_Brake
+	{
+		mesh = Weapons/2Handed/Cudgel_BreakDisk_Hand,
+		texture = Weapons/2Handed/Cudgel_BrakeDisk,
+
+		attachment world
+		{
+			offset = 0.0276 0.2080 -0.0115,
+			rotate = 179.6606 -20.4270 -178.0003,
+		}
+	}
+	model Hatchet_Bone
+	{
+		mesh = weapons/1handed/Axe_Bone_Hand,
+		texture = weapons/1handed/Axe_Bone,
+		scale = 0.6,
+
+		attachment world
+		{
+			offset = -0.0078 -0.0002 -0.0010,
+			rotate = -0.0000 -7.5072 1.1317,
+		}
+	}
+	model ScrapWeaponBrake
+	{
+		mesh = Weapons/2Handed/ScrapMetal_BrakeDisk_Hand,
+		texture = Weapons/2Handed/ScrapMetal_BrakeDisk,
+
+		attachment world
+		{
+			offset = 0.0144 -0.0001 -0.0034,
+			rotate = -179.9509 -13.1375 -179.7720,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+
+	model Cudgel_Spike
+	{
+		mesh = Weapons/2Handed/Cudgel_TwoHanded_Mace_Hand,
+		texture = Weapons/2Handed/Cudgel_TwoHanded,
+		scale = 1,
+
+		attachment world
+		{
+			offset = 0.0142 -0.0002 -0.0334,
+			rotate = 4.1996 -77.7341 8.9785,
+		}
+	}
+	model Cudgel_Nail
+	{
+		mesh = Weapons/2Handed/Cudgel_TwoHanded_Nail_Hand,
+		texture = Weapons/2Handed/Cudgel_TwoHanded,
+		scale = 1,
+
+		attachment world
+		{
+			offset = -0.0210 0.0011 -0.0013,
+			rotate = 0.5335 -3.5659 7.9386,
+		}
+	}
+	model Cudgel_GardenForkHead
+	{
+		mesh = weapons/2handed/Cudgel_Fork_Hand,
+		texture = Weapons/2Handed/Cudgel_TwoHanded,
+
+		attachment world
+		{
+			offset = -0.0307 0.2082 0.0051,
+			rotate = -0.3707 11.7987 1.8125,
+		}
+	}
+	model Cudgel_SpadeHead
+    {
+        mesh = weapons/2handed/Cudgel_Spade_Hand,
+		texture = Weapons/2Handed/Cudgel_TwoHanded,
+
+		attachment world
+		{
+			offset = -0.0307 0.2082 0.0051,
+			rotate = -0.3707 11.7987 1.8125,
+		}
+    }
+	model Cudgel_Bone
+	{
+		mesh = weapons/2handed/Cudgel_Bone_Hand,
+		texture = weapons/2handed/Cudgel_Bones,
+
+		attachment world
+		{
+			offset = -0.0258 -0.0011 -0.0072,
+			rotate = 0.0000 -15.6361 2.3334,
+		}
+	}
+	model JawboneBovide_Axe
+	{
+		mesh = weapons/1handed/JawBone_Axe_Hand,
+		texture = weapons/1handed/Jawbone_Weapon,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0106 -0.0321 -0.0001,
+			rotate = 180.0000 -89.4590 180.0000,
+		}
+
+		attachment world
+		{
+			offset = -0.0206 0.1211 -0.0045,
+			rotate = -0.0000 -12.3868 2.7047,
+		}
+	}
+	model MeatCleaver_Scrap
+	{
+		mesh = Weapons/1Handed/MeatCleaver_ScrapMetal_Hand,
+		texture = Weapons/1Handed/MeatCleaver_ScrapMetal,
+		scale = 1.0,
+
+		attachment world
+		{
+			offset = -0.0074 0.1001 -0.0003,
+			rotate = 0.0152 -2.6322 -0.5273,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0059 -0.0016 0.0048,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+	}
+	model Axe_ScrapCleaver
+	{
+		mesh = Weapons/2Handed/MeatCleaverApzxe_ScrapMetal_Hand,
+		texture = Weapons/1Handed/MeatCleaver_ScrapMetal,
+		scale = 1.0,
+
+		attachment world
+		{
+			offset = 0.0147 0.1731 0.0031,
+			rotate = 179.9496 -6.9426 179.5707,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 180.0000 -86.0322 180.0000,
+		}
+	}
+	model ScrapWeaponSpade
+	{
+		mesh = Weapons/2Handed/ScrapMetal_SpadeHead_Hand,
+		texture = Weapons/2Handed/ScrapMetal_GardenTools,
+
+		attachment world
+		{
+			offset = 0.0148 -0.0004 -0.0002,
+			rotate = -180.0000 -0.7089 -178.4529,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model LargeBoneClub
+	{
+		mesh = weapons/1handed/Bone_ClubShort_Hand,
+		texture = weapons/1handed/Bone_Club,
+		scale = 1.4,
+
+		attachment world
+		{
+			offset = -0.0186 -0.0000 -0.0000,
+			rotate = 0.0000 -0.0000 0.0000,
+		}
+
+	}
+	model LargeBoneClub_Spiked
+	{
+		mesh = weapons/1handed/BoneClub_MetalSpikes_Short,
+		texture = weapons/1handed/Bone_Club,
+		scale = 1.4,
+
+		attachment world
+		{
+			offset = -0.0230 -0.0000 -0.0015,
+			rotate = 0.0000 -3.7802 0.0000,
+		}
+	}
+	model HandAxeForged
+	{
+		mesh = weapons/1handed/HandAxe_Forged_Hand,
+		texture = weapons/1handed/HandAxe_Forged,
+
+		attachment world
+		{
+			offset = -0.0117 0.0995 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model SledgeHammerForged
+	{
+		mesh = Weapons/2Handed/SledgeHammer02,
+		texture = Weapons/2Handed/Sledgehammer02_Forged,
+
+		attachment world
+		{
+			offset = -0.0290 0.2450 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+	model WoodAxeForged
+	{
+		mesh = Weapons/2Handed/WoodAxe_Forged_Hand,
+		texture = Weapons/2Handed/WoodAxe_Forged,
+
+		attachment world
+		{
+			offset = 0.0165 0.2500 0.0000,
+			rotate = 180.0000 0.0000 180.0000,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+}

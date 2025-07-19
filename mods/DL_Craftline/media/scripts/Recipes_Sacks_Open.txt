@@ -1,0 +1,404 @@
+module SP
+{
+    imports
+    {
+   	 Base,
+    }
+
+    recipe Open Sack of Clay
+    {
+        Sack_Clay,
+
+        Result:Clay=8,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+    }
+
+    recipe Open Sack of Avocados
+    {
+        SackProduce_Avocado,
+
+        Result:Avocado=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Bananas
+    {
+        SackProduce_Banana,
+
+        Result:Banana=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Blackberries
+    {
+        SackProduce_BlackBerry,
+
+        Result:BerryBlack,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Blueberries
+    {
+        SackProduce_BlueBerry,
+
+        Result:BerryBlue,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Coffee Beans
+    {
+        SackProduce_Coffee,
+
+        Result:CoffeeBeans=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Comfrey
+    {
+        SackProduce_Comfrey,
+
+        Result:Comfrey=16,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Common Mallow
+    {
+        SackProduce_CommonMallow,
+
+        Result:CommonMallow=16,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Garlic
+    {
+        SackProduce_Garlic,
+
+        Result:WildGarlic=16,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Pears
+    {
+        SackProduce_Pear,
+
+        Result:Pear=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Sage
+    {
+        SackProduce_Sage,
+
+        Result:Sage=16,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Ginger
+    {
+        SackProduce_Ginger,
+
+        Result:GingerRoot=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Ginseng
+    {
+        SackProduce_Ginseng,
+
+        Result:Ginseng=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Grapefruits
+    {
+        SackProduce_GrapeFruit,
+
+        Result:Grapefruit=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Hops
+    {
+        SackProduce_Hops,
+
+        Result:Hops=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Lemons
+    {
+        SackProduce_Lemon,
+
+        Result:Lemon=16,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Lemongrass
+    {
+        SackProduce_Lemongrass,
+
+        Result:LemonGrass=16,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Mangos
+    {
+        SackProduce_Mango,
+
+        Result:Mango=16,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Mushrooms
+    {
+        SackProduce_Mushroom,
+
+        Result:MushroomGeneric1=16,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Peppers
+    {
+        SackProduce_Pepper,
+
+        Result:PepperPlant=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Pineapples
+    {
+        SackProduce_Pineapple,
+
+        Result:Pineapple=8,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Pumpkins
+    {
+        SackProduce_Pumpkin,
+
+        Result:Pumpkin=8,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Soybeans
+    {
+        SackProduce_SoyBean,
+
+        Result:SoyBean=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+
+    recipe Open Sack of Sugar Cane
+    {
+        SackProduce_SugarCane,
+
+        Result:SugarCane=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Tea Leaves
+    {
+        SackProduce_Tea,
+
+        Result:TeaLeaf=16,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Tobacco
+    {
+        SackProduce_Tobacco,
+
+        Result:TobaccoLeaves=16,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Watermelons
+    {
+        SackProduce_Watermelon,
+
+        Result:Watermelon=8,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Wheat
+    {
+        SackProduce_Wheat,
+
+        Result:Wheat=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Zucchini
+    {
+        SackProduce_Zucchini,
+
+        Result:Zucchini=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Limes
+    {
+        SackProduce_Lime,
+
+        Result:Lime=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Oranges
+    {
+        SackProduce_Orange,
+
+        Result:Orange=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Plantain
+    {
+        SackProduce_Plantain,
+
+        Result:Plantain=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Black Sage
+    {
+        SackProduce_Blacksage,
+
+        Result:BlackSage=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
+}

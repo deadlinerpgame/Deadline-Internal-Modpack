@@ -1,0 +1,58 @@
+module GL
+{
+    imports
+    {
+   	 Base,
+    }
+
+ recipe Train Metalworking (Level 0)
+    {
+        aerx.IronFragments=1,
+	keep [Recipe.GetItemTypes.Hammer],  
+
+        Result: ScrapMetal,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveMetalWelding10,
+        Category:Training,
+    }
+
+    recipe Train Metalworking (Level 1)
+    {
+        aerx.IronFragments=1,
+	keep [Recipe.GetItemTypes.Hammer],  
+
+        Result: ScrapMetal,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveMetalWelding20,
+        Category:Training,
+	SkillRequired:MetalWelding=1,
+    }
+
+    recipe Train Metalworking (Level 2)
+    {
+        aerx.IronFragments=1,
+	keep [Recipe.GetItemTypes.Hammer],  
+
+        Result: ScrapMetal,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveMetalWelding30,
+        Category:Training,
+	SkillRequired:MetalWelding=2,
+    }
+
+    recipe Train Metalworking (Level 3)
+    {
+        aerx.IronFragments=1,
+	keep [Recipe.GetItemTypes.Hammer],  
+
+        Result: ScrapMetal,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveMetalWelding40,
+        Category:Training,
+	SkillRequired:MetalWelding=3,
+    }
+}

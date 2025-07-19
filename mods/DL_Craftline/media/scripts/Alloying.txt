@@ -1,0 +1,23 @@
+module Smithing
+{
+
+imports {
+        Base
+        }
+
+
+recipe Make An Alloy
+{
+keep aerx.IronIngotMold/aerx.ClayIngotMold=1,
+CeramicCrucible,
+Result:GenericAlloy;1,
+Time:120,
+OnCreate:Recipe.OnCreate.MeltMetal,
+CanBeDoneFromFloor      : TRUE,
+RemoveResultItem:true,
+StopOnWalk:true,
+StopOnRun:true,
+}
+
+}
+

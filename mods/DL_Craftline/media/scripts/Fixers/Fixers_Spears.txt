@@ -1,0 +1,58 @@
+module aerx {
+  imports {
+      Base
+ }
+
+	fixing Fix Bone Spear
+	{
+		Require : Spear_Bone,
+	
+	Fixer : DuctTape=2,
+    	Fixer : Glue=2,
+    	Fixer : SharpBone_Long=1,
+	}
+
+	fixing Fix Long Bone Spear
+	{
+		Require : SharpBone_Long,
+	
+	Fixer : DuctTape=2,
+    	Fixer : Glue=2,
+    	Fixer : SharpBone_Long=1,
+	}
+
+	fixing Fix Crude Metal Spear
+	{
+		Require : SpearCrude,
+	
+	Fixer : DuctTape=2,
+    	Fixer : Glue=2,
+    	Fixer : IronFragments=2,
+	}
+
+	fixing Fix Long Crude Metal Spear
+	{
+		Require : SpearCrudeLong,
+	
+	Fixer : DuctTape=2,
+    	Fixer : Glue=2,
+    	Fixer : IronFragments=2,
+	}
+
+	fixing Fix Stone Spear
+	{
+		Require : SpearCrude,
+	
+	Fixer : DuctTape=2,
+    	Fixer : Stone=1,
+	}
+
+	fixing Fix Long Stone Spear
+	{
+		Require : SpearCrudeLong,
+	
+	Fixer : DuctTape=2,
+    	Fixer : Stone=1,
+	}
+
+}

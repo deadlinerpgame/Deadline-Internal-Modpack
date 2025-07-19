@@ -1,0 +1,26 @@
+module Base {
+
+
+	model Cow_Dead
+    {
+        mesh = WorldItems/Bull_Dead_A,
+        texture = Bull_Brown_01,
+        scale = 1.2,
+    }
+
+    item Cow_Dead
+	{
+        WorldStaticModel = Cow_Dead,
+	DisplayCategory = Food,
+	Weight	=	30.0,
+	Type	=	Normal,
+	DaysFresh 			=		10,
+	DaysTotallyRotten 	=	 	15,
+	DisplayName = Cow Carcass,
+	Icon = DeadPerson_MaleZombie,
+
+	}
+
+
+}
+

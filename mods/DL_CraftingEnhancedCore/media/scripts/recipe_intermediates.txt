@@ -1,0 +1,99 @@
+module Base {
+
+recipe Craft Long Sticks
+    {
+        keep Saw,
+	Base.TreeBranch=1,
+        CanBeDoneFromFloor:true,
+        Result:aerx.LongStick=2,
+        Time:25.0,
+        Category:Carpentry,
+    }
+
+recipe Craft Large Branch
+    {
+        keep Saw,
+	Base.TreeBranch=1,
+        CanBeDoneFromFloor:true,
+        Result:aerx.LargeBranch=2,
+        Time:25.0,
+        Category:Carpentry,
+    }
+
+recipe Craft Long Handles
+    {
+        keep Saw,
+	Base.TreeBranch=1,
+        CanBeDoneFromFloor:true,
+        Result:aerx.LongHandle=1,
+        Time:25.0,
+        Category:Carpentry,
+    }
+
+recipe Craft Medium Handles
+    {
+        keep Saw,
+	Base.TreeBranch=1,
+        CanBeDoneFromFloor:true,
+        Result:aerx.Handle=1,
+        Time:25.0,
+        Category:Carpentry,
+    }
+
+recipe Craft Small Handles
+    {
+        keep Saw,
+	Base.TreeBranch=1,
+        CanBeDoneFromFloor:true,
+        Result:aerx.SmallHandle=3,
+        Time:25.0,
+        Category:Carpentry,
+    }
+
+   recipe Craft Bone War Hatchet Head
+    {
+       	aerx.JawboneBovide/aerx.LargeAnimalBone=1,
+	keep [Recipe.GetItemTypes.Saw],
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.HatchetHead_Bone=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:Woodwork=3,
+
+    }
+
+
+   recipe Craft Stone Blade
+    {
+	Stone/SharpedStone=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.StoneBlade=1,
+        Time:100.0,
+        Category:StoneBlade,
+	SkillRequired:Woodwork=1,
+
+    }
+
+   recipe Craft Long Stone Blade
+    {
+	Stone/SharpedStone=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.StoneBladeLong=1,
+        Time:100.0,
+        Category:StoneBlade,
+	SkillRequired:Woodwork=1,
+
+    }
+
+   recipe Chip a Stone
+    {
+	Stone=1,
+	keep Stone/SharpedStone=1,
+        Result:SharpedStone=1,
+        Time:25.0,
+
+    }
+
+
+}
+

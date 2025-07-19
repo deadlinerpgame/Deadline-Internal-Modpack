@@ -1,0 +1,105 @@
+module Deadline
+{
+    imports    
+    {
+		Base
+	}
+
+item FallenTree
+	{
+	    	DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	FallenTree,
+		Icon	=	Logs,
+		WorldStaticModel = MFallenTree,
+    }
+
+item Hwacha
+	{
+	    	DisplayCategory = Material,
+		Weight	=	45,
+		Type	=	Normal,
+		DisplayName	=	Hwacha,
+		Icon	=	Logs,
+		WorldStaticModel = MHwacha,
+    }
+
+item Journal
+	{
+        	DisplayCategory = Literature,
+        	Weight	=	45,
+        	Type	=	Literature,
+        	DisplayName	=	Journal,
+        	Icon	=	Book,
+        	CanBeWrite  =   true,
+        	PageToWrite =   8,
+		WorldStaticModel = MJournal,
+    }
+
+item Kevlar
+	{
+        	DisplayCategory = Material,
+        	Weight	=	1,
+		Type	=	Normal,
+        	DisplayName	=	High Quality Fabric,
+        	Icon	=	kevlar,
+		WorldStaticModel = MKevlar,
+		Tooltip 			= 	Tooltip_Fabric,
+    }
+
+    model MFallenTree
+	{
+		mesh = WorldItems/Misc/FallenTree,
+		texture = WorldItems/Misc/Log,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model MJournal
+	{
+		mesh = WorldItems/Misc/openbook,
+		texture = WorldItems/Misc/openbook,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model MHwacha
+	{
+		mesh = WorldItems/Misc/hwacha,
+		texture = WorldItems/Misc/hwacha,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model MKevlar
+	{
+		mesh = WorldItems/Misc/Kevlar,
+		texture = WorldItems/Misc/kevlar,
+		scale = 0.2,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+
+   }

@@ -1,0 +1,26 @@
+module Base {
+
+
+	model Pig_Dead
+    {
+        mesh = WorldItems/FarmPig_Dead,
+        texture = FarmPig_Boar,
+        scale = 1.2,
+    }
+
+    item Pig_Dead
+	{
+        WorldStaticModel = Pig_Dead,
+	DisplayCategory = Food,
+	Weight	=	15.0,
+	Type	=	Normal,
+	DaysFresh 			=		10,
+	DaysTotallyRotten 	=	 	15,
+	DisplayName = Pig Carcass,
+	Icon = DeadPerson_MaleZombie,
+
+	}
+
+
+}
+

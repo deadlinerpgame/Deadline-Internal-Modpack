@@ -1,0 +1,19 @@
+VERSION = 1,
+
+option SafehouseLine.MaxManagers =
+{
+    type = integer, min = 0, max = 99, default = 1,
+    page = SafehouseLine, translation = SafehouseLine_MaxManagers,
+}
+
+option SafehouseLine.AllowExport =
+{
+    type = boolean, default = true,
+    page = SafehouseLine, translation = SafehouseLine_AllowExport,
+}
+
+option SafehouseLine.AllowImport =
+{
+    type = boolean, default = true,
+    page = SafehouseLine, translation = SafehouseLine_AllowImport,
+}

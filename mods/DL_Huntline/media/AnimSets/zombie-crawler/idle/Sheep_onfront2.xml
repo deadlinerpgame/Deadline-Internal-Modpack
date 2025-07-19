@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animNode>
+	<m_Name>Sheep_onfront</m_Name>
+	<m_AnimName>Sheep_Idle02</m_AnimName>
+	<m_deferredBoneAxis>Y</m_deferredBoneAxis>
+	<m_SpeedScale>1</m_SpeedScale>
+	<m_BlendTime>0.30</m_BlendTime>
+	<m_Conditions>
+		<m_Name>FallOnFront</m_Name>
+		<m_Type>BOOL</m_Type>
+		<m_BoolValue>true</m_BoolValue>
+	</m_Conditions>
+
+
+	<m_Conditions>
+		<m_Name>AnimSpeed</m_Name>
+		<m_Type>GTR</m_Type>
+		<m_FloatValue>4</m_FloatValue>
+	</m_Conditions>
+	<m_SpeedScaleRandomMultiplierMin>0.2</m_SpeedScaleRandomMultiplierMin>
+	<m_SpeedScaleRandomMultiplierMax>1.25</m_SpeedScaleRandomMultiplierMax>
+	<m_BlendTime>0.35</m_BlendTime>
+	<m_randomAdvanceFraction>0.50</m_randomAdvanceFraction>
+	<m_Conditions>
+		<m_Name>isSheepAnimal</m_Name>
+		<m_Type>STRING</m_Type>
+		<m_StringValue>true</m_StringValue>
+	</m_Conditions>
+	<m_Conditions>
+		<m_Name>isSheepAnimal</m_Name>
+		<m_Type>STRING</m_Type>
+		<m_StringValue>true</m_StringValue>
+	</m_Conditions>
+</animNode>

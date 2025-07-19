@@ -1,0 +1,46 @@
+module Base
+{
+
+    	recipe Make Empty Methane Tank
+    	{
+		SmallSheetMetal=1,
+		SheetMetal=1,
+		MetalPipe/MetalBar=1,
+		WeldingRods=1,
+		BlowTorch=1,
+		keep WeldingMask,
+		SkillRequired:MetalWelding=4,
+
+        	Result:Base.EmptyMethaneTank,
+        	Time:140.0,
+        	Sound:Welding,
+        	Category:Methane,
+    	}
+
+	recipe Bundle Waste Food
+	{
+		Apple/BellPepper/Broccoli/Cabbage/Carrots/Cherry/Corn/Eggplant/Grapes/Leek/Lettuce/Onion/Peach/Pear/Potato/RedRadish/Strawberrie/Tomato/Avocado/Banana/BerryBlack/BerryBlue/CoffeeBeans/Comfrey/CommonMallow/WildGarlic/Pear/Sage/GingerRoot/Ginseng/GrapeFruit/Hops/Lemon/Lemongrass/Mango/Mushroom/PepperPlant/Pineapple/Pumpkin/SoyBean/SugarCane/Tealeaf/Watermelon/Wheat/Zucchini=5,
+		SkillRequired:Farming=6,
+		AllowRottenItem:true,
+        	Result:Base.WasteItem,
+        	Time:5,
+        	Sound:Welding,
+        	Category:Methane,
+	}
+
+    	recipe Make Process Methane into Fuel
+    	{
+		EmptyPetrolCan=1,
+		MethaneTank=1,
+		Water=10,
+		Charcoal/Bleach=1,
+		Log/Plank/Charcoal=2,
+		SkillRequired:Electricity=3,
+		NearItem:Distiller,
+        	Result:Base.PetrolCan,
+        	Time:140.0,
+        	Sound:Screwdriver,
+		OnCreate:Recipe.OnCreate.GiveEmptyMethaneTank,
+        	Category:Methane,
+    	}
+}

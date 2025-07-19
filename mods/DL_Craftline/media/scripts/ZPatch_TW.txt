@@ -1,0 +1,52 @@
+module module TW
+{
+	imports
+	{
+		Base,
+	}
+
+	recipe Cut Scraps into Wire
+    {
+
+    		IronScrap/AluminumScrap/TinScrap/NickelScrap/ZincScrap=15,
+		BlowTorch=2,
+
+		keep [Recipe.GetItemTypes.WeldingMask],
+
+		NoBrokenItems			: false,
+		AllowDestroyedItem      : true,
+        	Result           		: Wire=2,
+        	Time             		: 500.0,
+	    	Sound 					: CutSheet,
+		OnGiveXP 				: Give2MWXP,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+
+		CanBeDoneFromFloor      : False,
+		NeedToBeLearn: false,
+
+    }
+
+	recipe Cut Wire Into Nails
+    {
+
+    		Wire=4,
+		BlowTorch=2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+
+		NoBrokenItems			: false,
+		AllowDestroyedItem      : true,
+		SkillRequired:MetalWelding=8,
+        	Result:NailsBox,
+        	Time             		: 1500.0,
+	    	Sound 					: CutSheet,
+		OnGiveXP 				: Give2MWXP,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+
+		CanBeDoneFromFloor      : False,
+		NeedToBeLearn: false,
+
+    }
+
+}

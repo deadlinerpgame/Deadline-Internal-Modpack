@@ -1,0 +1,30 @@
+module Base
+{
+    
+item NewAlbanyMap
+    {
+    	DisplayCategory 	= 	Cartography,
+        Type                	=       Map,
+        DisplayName            	=       New Albany Map,
+        Icon                	=       Map,
+        Weight                	=       0.1,
+        Map                 	=       NewAlbanyMap,
+    	WorldStaticModel 	= 	Map,
+	Override = TRUE,
+	Obsolete = TRUE,
+    }
+
+ item BunkerMap
+    {
+    	DisplayCategory 	= 	Cartography,
+        Type                	=       Map,
+        DisplayName            	=       Strange Map,
+        Icon                	=       Map,
+        Weight                	=       0.1,
+        Map                 	=       BunkerMap,
+        Tooltip                 -       Tooltip_BunkerMap
+    	WorldStaticModel = Map,
+	Override = TRUE,
+	Obsolete = TRUE,
+    }
+}

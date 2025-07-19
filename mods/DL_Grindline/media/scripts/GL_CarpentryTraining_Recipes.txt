@@ -1,0 +1,59 @@
+module GL
+{
+    imports
+    {
+   	 Base,
+    }
+
+    recipe Train Carpentry (Level 0)
+    {
+        Plank=1,
+	keep Saw/GardenSaw,
+
+        Result: Plank,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveWoodwork10,
+        Category:Training,
+    }
+
+    recipe Train Carpentry (Level 1)
+    {
+        Plank=1,
+	keep Saw/GardenSaw,
+
+        Result: Plank,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveWoodwork20,
+        Category:Training,
+	SkillRequired:Woodwork=1,
+    }
+
+    recipe Train Carpentry (Level 2)
+    {
+        Plank=1,
+	keep Saw/GardenSaw,
+	
+        Result: Plank,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveWoodwork30,
+        Category:Training,
+	SkillRequired:Woodwork=2,
+    }
+
+    recipe Train Carpentry (Level 3)
+    {
+        Plank=1,
+	keep Saw/GardenSaw,
+
+        Result: Plank,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveWoodwork40,
+        Category:Training,
+	SkillRequired:Woodwork=3,
+    }
+
+}

@@ -1,0 +1,3 @@
+SafehouseUtils = {};
+
+return SafehouseUtils;

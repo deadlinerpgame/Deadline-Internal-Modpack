@@ -1,0 +1,250 @@
+module Base
+{
+
+	item Cuirass_Bone
+	{
+		DisplayName = Bone Body Armor,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Bone_ChestArmour,
+		BloodLocation = ShirtNoSleeves,
+		BodyLocation = Cuirass,
+		ClothingItem = Cuirass_Bone,
+        CanHaveHoles = true,
+        BiteDefense = 10,
+        ScratchDefense = 15,
+        CombatSpeedModifier = 0.95,
+		RunSpeedModifier = 0.98,
+		WindResistance = 0.80,
+		WorldStaticModel = Cuirass_Bone,
+        Weight = 4,
+        DamagedSound = ArmourBreakBone,
+	}
+
+	item GreaveBone_Right
+	{
+		Weight = 1,
+		DisplayName = Bone Shin Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Bone_ShinArmour,
+		BloodLocation = LowerLegs,
+		BodyLocation = Calf_Right,
+		ClothingItem = GreaveBone_Right,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = true,
+		WorldStaticModel = Greave_Ground,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+        DamagedSound = ArmourBreakBone,
+	}
+
+	item GreaveBone_Left
+	{
+		Weight = 1,
+		DisplayName = Bone Shin Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Bone_ShinArmour,
+		BloodLocation = LowerLegs,
+		BodyLocation = Calf_Left,
+		ClothingItem = GreaveBone_Left,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = true,
+		WorldStaticModel = Greave_Ground,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+        DamagedSound = ArmourBreakBone,
+	}
+
+	item VambraceBone_Right
+        {
+        Weight = 1,
+		DisplayName = Bone Forearm Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Bone_ForearemArmour,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Right,
+		ClothingItem = VambraceBone_Right,
+		CanHaveHoles = true,
+		BiteDefense = 5,
+		ScratchDefense = 10,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+        DamagedSound = ArmourBreakBone,
+		WorldStaticModel = VambraceMagazine_Right,
+	}
+
+	item VambraceBone_Left
+	{
+        Weight = 1,
+		DisplayName = Bone Forearm Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Bone_ForearemArmour,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Left,
+		ClothingItem = VambraceBone_Left,
+		CanHaveHoles = true,
+		BiteDefense = 5,
+		ScratchDefense = 10,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+        DamagedSound = ArmourBreakBone,
+		WorldStaticModel = VambraceMagazine_Left,
+	}
+
+	item Shoulderpad_Bone_L
+    {
+        DisplayName = Bone Shoulder Armor - Left,
+        DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+		Icon = Bone_ShoulderArmour,
+        BloodLocation = UpperArms,
+        BodyLocation = ShoulderpadLeft,
+        ClothingItem = Shoulderpad_Bone_L,
+        CanHaveHoles = true,
+        WorldStaticModel = Shoulderpad_Articulated_L_Metal,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+        CombatSpeedModifier = 0.99,
+        DamagedSound = ArmourBreakBone,
+        Weight = 1,
+    }
+
+	item Shoulderpad_Bone_R
+    {
+        DisplayName = Bone Shoulder Armor - Right,
+        DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+		Icon = Bone_ShoulderArmour,
+        BloodLocation = UpperArms,
+        BodyLocation = ShoulderpadRight,
+        ClothingItem = Shoulderpad_Bone_R,
+        CanHaveHoles = true,
+        WorldStaticModel = Shoulderpad_Articulated_R_Metal,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+        CombatSpeedModifier = 0.99,
+        DamagedSound = ArmourBreakBone,
+        Weight = 1,
+    }
+
+item Necklace_Choker_Bone
+	{
+		DisplayName = Bone Choker,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Bone_Chocker,
+		BodyLocation = Gorget,
+		ClothingItem = Necklace_Choker_Bone,
+		WorldStaticModel = Choker_Ground,
+		Weight = 0.5,
+		BloodLocation = Neck,
+        	CanHaveHoles = true,
+		BiteDefense = 25,
+		ScratchDefense = 25,
+		WorldStaticModel = Necklace_Choker_Bone,
+        	DamagedSound = ArmourBreakBone,
+		BulletHitArmourSound = ArmourFirearmHitBone,
+		WeaponHitArmourSound = ArmourMeleeHitBone,
+
+	}
+
+	item ThighBone_R
+	{
+		Weight = 1,
+		DisplayName = Bone Thigh Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Bone_ThighArmour,
+		BloodLocation = UpperLegs,
+		BodyLocation = Thigh_Right,
+		ClothingItem = ThighBone_R,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = true,
+		WorldStaticModel = ThighArmor_R,
+       	Insulation = 0.35,
+        WindResistance = 0.3,
+        DamagedSound = ArmourBreakBone,
+	}
+
+	item ThighBone_L
+	{
+		Weight = 1,
+		DisplayName = Bone Thigh Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Bone_ThighArmour,
+		BloodLocation = UpperLegs,
+		BodyLocation = Thigh_Left,
+		ClothingItem = ThighBone_L,
+        BiteDefense = 5,
+        ScratchDefense = 10,
+		CanHaveHoles = true,
+		WorldStaticModel = ThighArmor_L,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+        DamagedSound = ArmourBreakBone,
+	}
+
+	item Gloves_BoneGloves
+	{
+		DisplayName = Gloves - Fingerless Bone Armored,
+		DisplayCategory = Accessory,
+		Type = Clothing,
+		Weight = 1,
+		Icon = Bone_FingerlessGloves,
+		BloodLocation = Hands,
+		BodyLocation = Hands,
+		ClothingItem = Gloves_BoneGloves,
+		Insulation = 0.25,
+		BiteDefense = 50,
+		ScratchDefense = 75,
+		WindResistance = 0.3,
+		WorldStaticModel = Gloves_Ground,
+        CanHaveHoles = TRUE,
+        DamagedSound = ArmourBreakBone,
+	}
+
+	item Hat_BoneMask
+	{
+		DisplayName = Bone Mask,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Bone_Mask,
+		BiteDefense = 25,
+		ScratchDefense = 50,
+		BloodLocation = Head,
+		BodyLocation = MaskEyes,
+		CanHaveHoles = TRUE,
+		ClothingItem = Hat_BoneMask,
+		Insulation = 0.25,
+		WaterResistance = 1.0,
+		WindResistance = 0.55,
+        DamagedSound = ArmourBreakBone,
+	}
+
+	item Cuirass_BasicBone
+	{
+		DisplayName = Bone Pectoral,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Bone_PectoralArmour,
+        BloodLocation = UpperBody,
+		BodyLocation = Necklace_Long,
+		ClothingItem = Cuirass_BasicBone,
+        CanHaveHoles = true,
+        BiteDefense = 10,
+        ScratchDefense = 15,
+        CombatSpeedModifier = 0.95,
+		RunSpeedModifier = 0.90,
+		WindResistance = 0.80,
+		WorldStaticModel = Cuirass_BasicBone,
+	}
+
+}

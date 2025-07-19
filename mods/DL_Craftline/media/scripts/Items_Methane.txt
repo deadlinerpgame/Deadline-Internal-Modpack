@@ -1,0 +1,42 @@
+module Base
+{
+
+	item MethaneTank
+	{
+	    	DisplayCategory = Material,
+		Weight	=	10.0,
+		Type	=	Normal,
+		UseWhileEquipped	=	FALSE,
+		DisplayName	=	Methane Tank,
+		Icon	=	PropaneTank,
+		UseWorldItem = TRUE,
+		ScaleWorldIcon = 2.0,
+		WeightEmpty = 5.0,
+		WorldStaticModel = PropaneTank,
+	}
+
+	item EmptyMethaneTank
+	{
+	    	DisplayCategory = Material,
+		Weight	=	1.0,
+		Type	=	Normal,
+		UseWhileEquipped	=	FALSE,
+		DisplayName	=	Empty Methane Tank,
+		Icon	=	PropaneTank,
+		UseWorldItem = TRUE,
+		ScaleWorldIcon = 2.0,
+		WeightEmpty = 5.0,
+		WorldStaticModel = PropaneTank,
+	}
+
+	item WasteItem
+	{
+		DisplayName = Bundle Of Waste Food,
+		DisplayCategory = Food,
+		Type	=	Normal,
+		Weight = 1,
+		Icon = Sandbag,
+		WorldStaticModel = SandBag,
+	}
+
+}

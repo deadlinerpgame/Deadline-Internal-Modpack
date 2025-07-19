@@ -1,0 +1,26 @@
+module aerx {
+  imports {
+      Base
+ }
+
+	fixing Fix Crude Shortsword
+	{
+		Require : CrudeShortSword,
+	
+	Fixer : DuctTape=2,
+    	Fixer : Glue=2,
+	Fixer : IronFragments=5,
+	}
+
+	fixing Fix Crude Sword
+	{
+		Require : CrudeSword,
+	
+	Fixer : DuctTape=2,
+    	Fixer : Glue=2,
+	Fixer : IronFragments=5,
+	}
+
+
+
+}

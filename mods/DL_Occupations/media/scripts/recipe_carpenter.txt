@@ -1,0 +1,24 @@
+module Base
+{
+
+    recipe Saw Logs
+    {
+       Log,
+       keep Saw/GardenSaw,
+
+       CanBeDoneFromFloor:true,
+       Result:Plank=3,
+       Sound:Sawing,
+       Time:230.0,
+       Category:Carpentry,
+       OnGiveXP:Recipe.OnGiveXP.SawLogs,
+       AnimNode:SawLog,
+       Prop1:Source=2,
+       Prop2:Log,
+       Override:true,
+       OnCreate:Recipe.OnCreate.OE_SawLogs,
+       Tooltip:Carpenters will produce more planks and gain peace of mind doing this.,
+    }
+
+
+}

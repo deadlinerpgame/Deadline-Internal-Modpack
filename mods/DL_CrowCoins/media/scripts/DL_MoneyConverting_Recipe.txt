@@ -1,0 +1,18 @@
+module DLM
+{
+    imports
+    {
+   	 Base,
+    }
+
+
+    recipe Open Wallet
+    {
+	Wallet/Wallet2/Wallet3/Wallet4,
+
+	Result: CrowCoinIron,
+	OnCreate: Recipe.OnCreate.Wallet,
+	RemoveResultItem: true,
+	Time: 25.0,
+    }
+}

@@ -1,0 +1,504 @@
+module aerx {
+  imports {
+      Base
+ }
+
+	recipe Retrieve Tannin Solution
+	{
+		aerx.WaterPotWL2,
+		Result:aerx.Tannin,
+		Time:50,
+        OnCreate:Recipe.OnCreate.GiveEmptyPot,
+		Category:Tanning,
+	}
+
+	recipe Prepare Tannin Solution
+	{
+		Pot,
+        	Log=3,
+		Water=5,
+		Result:aerx.WaterPotWL,
+		
+		Time:50,
+		Category:Tanning,
+	}
+
+	recipe Tailor a Leather Codpiece
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=2,     
+        Base.LeatherStrips=2,
+		keep Needle,
+        keep Scissors,
+		Result:Base.Codpiece_Leather,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Leather Gorget
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=2,     
+        Base.LeatherStrips=2,
+		keep Needle,
+        keep Scissors,
+		Result:Base.Gorget_Leather,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Left Leather Vambrace
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=2,     
+        Base.LeatherStrips=2,
+		keep Needle,
+        keep Scissors,
+		Result:Base.Vambrace_Leather_Left,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Right Leather Vambrace
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=2,     
+        Base.LeatherStrips=2,
+		keep Needle,
+        keep Scissors,
+		Result:Base.Vambrace_Leather_Right,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+
+	recipe Reinforce a Left Leather Vambrace with Spikes
+	{
+		Base.Vambrace_Leather_Right,    
+        Base.LeatherStrips=2,
+        Nails=10,
+		keep Needle,
+        keep Scissors,
+		Result:Base.Vambrace_LeatherSpike_Left,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Reinforce a Right Leather Vambrace with Spikes
+	{
+		Base.Vambrace_Leather_Right   
+        Base.LeatherStrips=2,
+        Nails=10,
+		keep Needle,
+        keep Scissors,
+		Result:Base.Vambrace_LeatherSpike_Right,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Left Gaiter
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=2,     
+        Base.LeatherStrips=2,
+		keep Needle,
+        keep Scissors,
+		Result:Base.Gaiter_Left,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Right Gaiter
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=2,     
+        Base.LeatherStrips=2,
+		keep Needle,
+        keep Scissors,
+		Result:Base.Gaiter_Right,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Hide Wallet
+	{
+		aerx.RabbitLeather_Fur_Tan=1,     
+        Base.LeatherStrips=1,
+		keep Needle,
+        keep Scissors,
+		Result:aerx.WalletHide,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=4,
+		Category:Tailoring,
+	}
+
+
+
+	recipe Tailor Hide Pants
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,   
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Trousers_DeerHide,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Hide Sack
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,   
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Bag_HideSack,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Long Hide Skirt
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,   
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Skirt_Knees_DeerHide,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Short Hide Skirt
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,   
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Skirt_Short_FaunHide,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Hide Holster
+	{
+		aerx.RabbitLeather_Fur_Tan=1,     
+        Base.LeatherStrips=1,
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Holster_Hide,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Hide Hat
+	{
+		aerx.RabbitLeather_Fur_Tan=1,     
+        Base.LeatherStrips=1,
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Hat_HideHat,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Hide Headsack
+	{
+		aerx.RabbitLeather_Fur_Tan=1,     
+        Base.LeatherStrips=1,
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Hat_HeadSack_Hide,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Hide Boots
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,   
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Shoes_HideBoots,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Hide Coat
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,   
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.JacketLong_Hide,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=8,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Hide Robe
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,   
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.LongCoat_Hide,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Hide Jacket
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,   
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Jacket_Hide,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+	}
+
+
+	recipe Tailor Hide Hooded Jacket
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,   
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Hoodie_Hide_DOWN,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Strapless Deerhide Dress
+	{
+		aerx.DeerLeather_Fur_Tan=1,   
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Dress_SmallDeerHideStrapless,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Strapless Hide Dress
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,   
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Dress_SmallHideStrapless,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=7,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Hide Satchel
+	{
+		aerx.RabbitLeather_Fur_Tan=1,     
+        Base.LeatherStrips=1,
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Bag_HideSatchel,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Hide Sling Bag
+	{
+		aerx.RabbitLeather_Fur_Tan=1,     
+        Base.LeatherStrips=1,
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Bag_FannyPackFront_Hide,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Leather Gloves
+	{
+		aerx.RabbitLeather_Fur_Tan=1,     
+        Base.LeatherStrips=1,
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Gloves_LeatherGloves,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Hide Fanny Pack
+	{
+		aerx.RabbitLeather_Fur_Tan=1,     
+        Base.LeatherStrips=1,
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Bag_HideSlingBag,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=5,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Waterskin
+	{
+		aerx.RabbitLeather_Fur_Tan=1,     
+        Base.LeatherStrips=1,
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Waterskin,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+	}
+
+	recipe Tailor a Small Backpack
+	{
+		aerx.RabbitLeather_Fur_Tan=1,     
+        Base.LeatherStrips=1,
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Bag_CrudeLeatherBag,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Cowhide Coat
+	{
+		aerx.CowLeather_Simmental_Fur_Tan=2,   
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.JacketLong_SimmentalHide,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Sheepskin Coat
+	{
+		aerx.SheepLeather_Fur_Tan=2,  
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.JacketLong_SheepSkin,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Cowhide Jacket
+	{
+		aerx.CowLeather_Simmental_Fur_Tan=2,   
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Jacket_SimmentalHide,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Sheepskin Jacket
+	{
+		aerx.SheepLeather_Fur_Tan=2,  
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Jacket_SheepSkin,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Sheepskin Pants
+	{
+		aerx.SheepLeather_Fur_Tan=2,  
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Trousers_SheepSkin,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Tailor Sheepskin Vest
+	{
+		aerx.SheepLeather_Fur_Tan=2,  
+        Base.LeatherStrips=1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+		keep Needle,
+        keep Scissors,
+		Result:aerx.Vest_SheepSkin,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+}

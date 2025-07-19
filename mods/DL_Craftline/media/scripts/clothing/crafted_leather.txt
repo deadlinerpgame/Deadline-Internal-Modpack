@@ -1,0 +1,176 @@
+module Base
+{
+
+	item Vambrace_Leather_Right
+	{
+		DisplayName = Forearm Leather Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Arm_Armor_Leather,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Right,
+		ClothingItem = Vambrace_Leather_Right,
+		WorldStaticModel = Vambrace_Leather_Right,
+		BiteDefense = 5,
+		ScratchDefense = 10,
+		CanHaveHoles = TRUE,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		CombatSpeedModifier = 0.98,
+		DamagedSound = ArmourBreakLeather,
+		Weight =  0.5,
+	}
+
+	item Vambrace_Leather_Left
+	{
+		DisplayName = Forearm Leather Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Arm_Armor_Leather,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Left,
+		BiteDefense = 5,
+		ScratchDefense = 10,
+		CanHaveHoles = TRUE,
+		ClothingItem = Vambrace_Leather_Left,
+		WorldStaticModel = Vambrace_Leather_Left,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		CombatSpeedModifier = 0.99,
+		DamagedSound = ArmourBreakLeather,
+		Weight =  0.5,
+	}
+
+	item Vambrace_LeatherSpike_Right
+	{
+		DisplayName = Forearm Leather Spike Armor - Right,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Arm_Armor_Leather_Nails,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Right,
+		ClothingItem = Vambrace_LeatherSpike_Right,
+		BiteDefense = 5,
+		ScratchDefense = 10,
+		CanHaveHoles = TRUE,
+		WorldStaticModel = Vambrace_LeatherSpike_Right,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		CombatSpeedModifier = 0.90,
+		DamagedSound = ArmourBreakLeather,
+		Weight = 1.5,
+
+	}
+
+	item Vambrace_LeatherSpike_Left
+	{
+		DisplayName = Forearm Leather Spike Armor - Left,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Icon = Arm_Armor_Leather_Nails,
+		BloodLocation = LowerArms,
+		BodyLocation = ForeArm_Left,
+		BiteDefense = 5,
+		ScratchDefense = 10,
+		CanHaveHoles = TRUE,
+		ClothingItem = Vambrace_LeatherSpike_Left,
+		WorldStaticModel = Vambrace_LeatherSpike_Left,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+		CombatSpeedModifier = 0.95,
+		DamagedSound = ArmourBreakLeather,
+		Weight = 1.5,
+	}
+
+	item Gorget_Leather
+	{
+		DisplayName = Leather Neck Guard,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Weight = 0.5,
+		Icon = Gorget_Leather,
+		BloodLocation = Neck,
+		BodyLocation = Gorget,
+		ClothingItem = Gorget_Leather,
+		Insulation = 1.0,
+		WindResistance = 1.0,
+		WorldStaticModel = Gorget,
+		CanHaveHoles = TRUE,
+		BiteDefense = 25,
+		ScratchDefense = 50,
+		DamagedSound = ArmourBreakLeather,
+	}
+
+	item Codpiece_Leather
+	{
+		DisplayName = Leather Codpiece,
+		DisplayCategory = ProtectiveGear,
+		Type = Clothing,
+		Weight = 0.5,
+		Icon = Codpiece_Leather,
+		BodyLocation = Codpiece,
+		CanHaveHoles = FALSE,
+		ClothingItem = Codpiece_Leather,
+		BloodLocation = Groin,
+		CanHaveHoles = TRUE,
+		WorldStaticModel = Codpiece,
+		BiteDefense = 25,
+		ScratchDefense = 50,
+
+	}
+
+	item Gaiter_Left
+    {
+        DisplayName = Left Gaiter,
+		DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+		Icon = Gaiter_Leather,
+        BloodLocation = LowerLegs,
+        BodyLocation = Calf_Left,
+        ClothingItem = Gaiter_Left,
+		ClothingExtraSubmenu = LeftShin,
+		ClothingItemExtra = Gaiter_Right,
+		ClothingItemExtraOption = RightShin,
+		CanHaveHoles = TRUE,
+		FabricType = Leather,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+        WorldStaticModel = Shinpad_L,
+		BiteDefense = 5,
+		ScratchDefense = 10,
+		RunSpeedModifier = 0.95,
+		Weight = 0.3,
+		DiscomfortModifier = 0.05,
+		Tags = RipClothingLeather,
+		SpawnWith = Base.Gaiter_Right,
+        ResearchableRecipes = SewLeatherVambrace;SewHideBoots;SewLeatherGaiter,
+		WorldStaticModel = GaiterGround_L,
+    }
+
+    item Gaiter_Right
+    {
+        DisplayName = Right Gaiter,
+		DisplayCategory = ProtectiveGear,
+        Type = Clothing,
+		Icon = Gaiter_Leather,
+        BloodLocation = LowerLegs,
+        BodyLocation = Calf_Right,
+        ClothingItem = Gaiter_Right,
+		ClothingExtraSubmenu = RightShin,
+		ClothingItemExtra = Gaiter_Left,
+		ClothingItemExtraOption = LeftShin,
+		CanHaveHoles = TRUE,
+		FabricType = Leather,
+        Insulation = 0.35,
+        WindResistance = 0.3,
+        WorldStaticModel = Shinpad_R,
+		BiteDefense = 5,
+		ScratchDefense = 10,
+		RunSpeedModifier = 0.95,
+		Weight = 0.3,
+		DiscomfortModifier = 0.05,
+		Tags = RipClothingLeather,
+		WorldStaticModel = GaiterGround_R,
+    }
+
+}

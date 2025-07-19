@@ -1,0 +1,89 @@
+module Base
+{
+
+	recipe Iron Sight
+	{
+		SmallSheetMetal=3,
+		keep Saw,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		Result:IronSight,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:MetalWelding=6;Aiming=6,
+	}
+
+
+
+	recipe Recoil Pad
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,
+		Thread=10,
+		Glue=5,
+		keep Needle,
+
+		Result:RecoilPad,
+		Sound:Sewing,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:Tailoring=8,
+	}
+
+	recipe Ammo Rack
+	{
+		Plank=1,
+		Screws=14,
+		LeatherStrips=12,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		Result:AmmoStock,
+		Sound:Sewing,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:Carpentry=8;Reloading=4,
+	}
+
+
+	recipe Quick Draw Grip
+	{
+		Plank=1,
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		Glue=2,
+		keep Saw,
+		Result:QuickDraw,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:Tailoring=8,
+	}
+
+	recipe Red Laser
+	{
+		SmallSheetMetal=3,
+		Remote/MotionSensor,
+		ElectricWire=5,
+		DuctTape=5,
+		Screws=10,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep Screwdriver,
+		keep Saw,
+		Result:Laser,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:Electricity=10;MetalWelding=4;Aiming=4,
+	}
+	recipe Gun Light
+	{
+		SmallSheetMetal=3,
+		Torch/Torch1/Torch2/Torch3/Torch7/TorchArmy1/TorchArmy2,
+		ElectricWire=5,
+		DuctTape=5,
+		Screws=10,
+		Result:GunLight,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:Electricity=10;MetalWelding=4,
+	}
+}

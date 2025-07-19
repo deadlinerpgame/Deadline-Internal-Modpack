@@ -1,0 +1,630 @@
+module aerx {
+  imports {
+      Base
+ }
+
+	item Tannin
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Tannin Solution,
+        Icon	=	Blackpowder,
+        WeightEmpty = 0.01,
+        WorldStaticModel = GunpowderJar,
+	}
+
+item WaterPotWL
+	{
+		DisplayName = Cooking Pot with Water and Logs,
+		DisplayCategory = Material,
+		Type = Food,
+		Weight = 5,
+		Icon = Pot_Water,
+		IsCookable = TRUE,
+		StaticModel = CookingPot,
+        MinutesToCook = 90,
+        MinutesToBurn = 900,
+        ReplaceOnCooked = aerx.WaterPotWL2,
+		WorldStaticModel = CookingPotWater_Ground,
+	}
+
+item WaterPotWL2
+	{
+		DisplayName = Cooking Pot with Tannin Solution,
+		DisplayCategory = Water,
+		Type = Normal,
+		Weight = 5,
+		Icon = Pot_Water,
+		StaticModel = CookingPot,
+		WorldStaticModel = CookingPotWater_Ground,
+	}
+
+
+item WalletHide
+	{
+	    DisplayCategory = Container,
+		Weight	=	0.2,
+		Type	=	Normal,
+		DisplayName	=	Hide Wallet,
+		Icon	=	WalletHide,
+		WorldStaticModel = Wallet,
+		Capacity = 1,
+		WeightReduction = 90,
+	}
+
+item Trousers_DeerHide
+	{
+		DisplayName = Hide Pants,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Icon = Trousers_Deerhide,
+		BiteDefense = 10,
+		BloodLocation = Trousers,
+		BodyLocation = Pants,
+		ClothingItem = Trousers_DeerHide,
+		FabricType = Leather,
+		Insulation = 0.65,
+		RunSpeedModifier = 0.98,
+		ScratchDefense = 20,
+		WindResistance = 0.60,
+		WorldStaticModel = Trousers_Ground,
+	}
+
+	item Bag_HideSack
+	{
+		DisplayName = Hide Sack,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 0.5,
+		Icon = Sack_StitchedHide,
+		Capacity = 20,
+		CloseSound = CloseLeatherBag,
+		OpenSound = OpenLeatherBag,
+		PutInSound = StoreItemLeatherBag,
+		ReplaceInPrimaryHand = Bag_HideSack_RHand holdingbagright,
+		ReplaceInSecondHand = Bag_HideSack_LHand holdingbagleft,
+		RunSpeedModifier = 0.99,
+		WeightReduction = 50,
+		WorldStaticModel = Bag_Gunny_Ground,
+	}
+
+	item Skirt_Knees_DeerHide
+	{
+		DisplayName = Long Hide Skirt,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Icon = SkirtKnee_Deerhide,
+		BloodLocation = ShortsShort,
+		BodyLocation = Skirt,
+		ClothingItem = Skirt_Knees_DeerHide,
+		FabricType = Leather,
+		Insulation = 0.1,
+		ScratchDefense = 10,
+		WaterResistance = 0.35,
+		WindResistance = 0.01,
+		WorldStaticModel = Skirt_Short_Ground,
+	}
+
+	item Skirt_Short_FaunHide
+	{
+		DisplayName = Short Hide Skirt,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Icon = SkirtShort_Deerhide,
+		BloodLocation = ShortsShort,
+		BodyLocation = Skirt,
+		ClothingItem = Skirt_Short_FaunHide,
+		FabricType = Leather,
+		Insulation = 0.05,
+		ScratchDefense = 10,
+		WaterResistance = 0.35,
+		WorldStaticModel = Skirt_Short_Ground,
+	}
+
+	item Holster_Hide
+	{
+		DisplayName = Hide Holster,
+		DisplayCategory = Accessory,
+		Type = Clothing,
+		Weight = 0.2,
+		Icon = Holster_StitchedHide,
+		AttachmentsProvided = HolsterRight,
+		BodyLocation = BeltExtra,
+		ClothingItem = Holster_Hide,
+		WorldStaticModel = HolsterSingle_Ground,
+	}
+
+	item Hat_HideHat
+	{
+		DisplayName = Hide Hat,
+		DisplayCategory = Accessory,
+		Type = Clothing,
+		Icon = Sunhat_Hide,
+		BloodLocation = Head,
+		BodyLocation = Hat,
+		CanHaveHoles = FALSE,
+		ChanceToFall = 80,
+		ClothingItem = Hat_HideHat,
+		Insulation = 0.1,
+		WindResistance = 0.1,
+	}
+
+	item Hat_HeadSack_Hide
+	{
+		DisplayName = Hide Headsack,
+		DisplayCategory = Accessory,
+		Type = Clothing,
+		Icon = Bagmask_Crafted_Burlap,
+		BloodLocation = Head,
+		BodyLocation = FullHat,
+		CanHaveHoles = TRUE,
+		ChanceToFall = 10,
+		ClothingItem = Hat_HeadSack_Hide,
+		FabricType = Leather,
+		Insulation = 0.75,
+		WaterResistance = 0.75,
+		WindResistance = 0.75,
+		VisionModifier = 0.5,
+		HearingModifier = 0.85,
+		ScratchDefense = 10,
+		WorldStaticModel = HeadSackHide_Ground,
+	}
+
+
+	item Shoes_HideBoots
+	{
+		DisplayName = Hide Boots,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Icon = Boots_Hide,
+		BiteDefense = 40,
+		BloodLocation = Shoes,
+		BodyLocation = Shoes,
+		ClothingItem = Shoes_HideBoots,
+		ConditionLowerChanceOneIn = 20,
+		ConditionMax = 30,
+		Insulation = 0.5,
+		RemoveOnBroken = FALSE,
+		RunSpeedModifier = 0.95,
+		ScratchDefense = 80,
+		StompPower = 2.1,
+		WaterResistance = 0.5,
+		WindResistance = 0.60,
+		WorldStaticModel = Boots_Ground,
+	}
+
+	item JacketLong_Hide
+	{
+		DisplayName = Hide Coat,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Weight = 2,
+		Icon = JacketLong_Hide,
+		BiteDefense = 10,
+		BloodLocation = LongJacket,
+		BodyLocation = JacketSuit,
+		ClothingItem = JacketLong_Hide,
+		CombatSpeedModifier = 0.97,
+		FabricType = Leather,
+		Insulation = 0.65,
+		NeckProtectionModifier = 0.5,
+		RunSpeedModifier = 0.93,
+		ScratchDefense = 20,
+		WaterResistance = 0.45,
+		WindResistance = 0.35,
+		WorldStaticModel = JacketLong_Ground,
+	}
+
+	item LongCoat_Hide
+	{
+		DisplayName = Hide Robe,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Icon = Robe_Hide,
+		BiteDefense = 10,
+		BloodLocation = Trousers;Jumper,
+		BodyLocation = BathRobe,
+		ClothingItem = LongCoat_HideRobe,
+		FabricType = Leather,
+		Insulation = 0.5,
+		RunSpeedModifier = 0.9,
+		ScratchDefense = 20,
+		WindResistance = 0.35,
+		WorldStaticModel = Bathrobe_Ground,
+		Tags = RipClothingLeather,
+	}
+
+	item Jacket_Hide
+	{
+		DisplayName = Hide Jacket,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Weight = 2,
+		Icon = Jacket_Hide,
+		BiteDefense = 10,
+		BloodLocation = Jacket,
+		BodyLocation = Jacket,
+		ClothingItem = Jacket_Hide,
+		CombatSpeedModifier = 0.97,
+		FabricType = Leather,
+		Insulation = 0.40,
+		NeckProtectionModifier = 0.5,
+		RunSpeedModifier = 0.95,
+		ScratchDefense = 20,
+		WaterResistance = 0.4,
+		WindResistance = 0.6,
+		WorldStaticModel = JacketCoat_Ground,
+		Tags = RipClothingLeather,
+	}
+
+item Hoodie_Hide_DOWN
+	{
+		DisplayName = Hide Hooded Jacket,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Weight = 2,
+		Icon = Hoodie_Hide,
+		BiteDefense = 10,
+		BloodLocation = Jumper,
+		BodyLocation = Sweater,
+		ClothingExtraSubmenu = DownHoodie,
+		ClothingItem = Hoodie_Hide_DOWN,
+		ClothingItemExtra = Hoodie_Hide_UP,
+		ClothingItemExtraOption = UpHoodie,
+		FabricType = Leather,
+		Insulation = 0.65,
+		NeckProtectionModifier = 0.5,
+		ScratchDefense = 20,
+		WaterResistance = 0.45,
+		WindResistance = 0.40,
+		WorldStaticModel = Hoodie_Ground,
+		Tags = RipClothingLeather,
+	}
+
+item Hoodie_Hide_UP
+	{
+		DisplayName = Hide Hooded Jacket,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Weight = 2,
+		Icon = Hoodie_Hide,
+		BiteDefense = 10,
+		BloodLocation = Jumper;FullHelmet,
+		BodyLocation = SweaterHat,
+		ClothingExtraSubmenu = UpHoodie,
+		ClothingItem = Hoodie_Hide_UP,
+		ClothingItemExtra = Hoodie_Hide_DOWN,
+		ClothingItemExtraOption = DownHoodie,
+		FabricType = Leather,
+		Insulation = 0.65,
+		ScratchDefense = 20,
+		WaterResistance = 0.45,
+		WindResistance = 0.35,
+		WorldStaticModel = Hoodie_Ground,
+		Tags = RipClothingLeather,
+	}
+
+	item Dress_SmallDeerHideStrapless
+	{
+		DisplayName = Small Strapless Deerhide Dress,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Icon = DressStrapless_Deerhide,
+		BloodLocation = ShortsShort;Shirt,
+		BodyLocation = Dress,
+		ClothingItem = Dress_SmallDeerHideStrapless,
+		FabricType = Leather,
+		Insulation = 0.15,
+		ScratchDefense = 10,
+		WaterResistance = 0.35,
+		WindResistance = 0.30,
+		WorldStaticModel = Dress_Small_Strapless_Ground_MultiTexture,
+
+
+	}
+
+	item Dress_SmallHideStrapless
+	{
+		DisplayName = Small Strapless Hide Dress,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Icon = DressStrapless_Hide,
+		BloodLocation = ShortsShort;Shirt,
+		BodyLocation = Dress,
+		ClothingItem = Dress_SmallHideStrapless,
+		FabricType = Leather,
+		Insulation = 0.15,
+		ScratchDefense = 10,
+		WaterResistance = 0.35,
+		WindResistance = 0.30,
+		WorldStaticModel = Dress_Small_Strapless_Ground_MultiTexture,
+	}
+
+	item Bag_HideSatchel
+	{
+		DisplayName = Hide Satchel,
+		DisplayCategory = Bag,
+		Type = Container,
+		Weight = 1,
+		Icon = Satchel_StitchedHide,
+		BloodLocation = Bag,
+		CanBeEquipped = Back,
+		Capacity = 12,
+		CloseSound = CloseLeatherBag,
+		ClothingItem = Bag_HideSatchel,
+		EquipSound = EquipLeatherBag,
+		OpenSound = OpenLeatherBag,
+		PutInSound = StoreItemLeatherBag,
+		ReplaceInPrimaryHand = Bag_HideSatchel_RHand holdingbagright,
+		ReplaceInSecondHand = Bag_HideSatchel_LHand holdingbagleft,
+		RunSpeedModifier = 0.99,
+		WeightReduction = 65,
+		WorldStaticModel = Satchel_Fishing_Ground,
+	}
+
+	item Bag_HideSlingBag
+	{
+		DisplayName = Hide Sling Bag,
+		DisplayCategory = Bag,
+		Type = Container,
+		Weight = 0.8,
+		Icon = Sling_StitchedHide,
+		CanBeEquipped = Back,
+		CanHaveHoles = FALSE,
+		Capacity = 14,
+		CloseSound = CloseSheetSlingBag,
+		ClothingItem = Bag_HideSlingBag,
+		OpenSound = OpenSheetSlingBag,
+		PutInSound = StoreItemSheetSlingBag,
+		ReplaceInPrimaryHand = Bag_HideSlingBag_RHand holdingbagright,
+		ReplaceInSecondHand = Bag_HideSlingBag_LHand holdingbagleft,
+		RunSpeedModifier = 0.95,
+		WeightReduction = 60,
+		WorldStaticModel = SheetSlingBag_Ground,
+	}
+
+item WaterWaterskin
+	{
+		DisplayName = Waterskin with Water,
+		DisplayCategory = Water,
+		Type = Drainable,
+		Weight = 1.6,
+		Icon = Waterskin,
+		CanStoreWater = TRUE,
+		FillFromDispenserSound = GetWaterFromDispenserPlasticBig,
+		FillFromTapSound = GetWaterFromTapPlasticBig,
+		IsWaterSource = TRUE,
+		ReplaceOnDeplete = Waterskin,
+		ReplaceOnUseOn = WaterSource-WaterWaterskin,
+		UseDelta = 0.1,
+		UseWhileEquipped = FALSE,
+		CustomContextMenu = Drink,
+		CustomEatSound = DrinkingFromBottlePlastic,
+		StaticModel = LeatherWaterBag_Ground,
+		WorldStaticModel = LeatherWaterBag_Ground,
+
+	}
+
+item Waterskin
+    {
+        DisplayCategory = WaterContainer,
+        Weight	=	0.2,
+        CanStoreWater	=	TRUE,
+        Type	=	Normal,
+        DisplayName	=	Empty Waterskin,
+        Icon	=	Waterskin,
+        ReplaceOnUseOn	=	WaterSource-WaterWaterskin,
+        StaticModel = LeatherWaterBag_Ground,
+		WorldStaticModel = LeatherWaterBag_Ground,
+		Tags = EmptyPetrol,
+		ReplaceTypes = WaterSource WaterWaterskin,
+
+    }
+
+	item Bag_CrudeLeatherBag
+	{
+		DisplayName = Small Leather Backpack,
+		DisplayCategory = Bag,
+		Type = Container,
+		Weight = 1,
+		Icon = BackpackCrafted,
+		AttachmentReplacement = Bag,
+		BloodLocation = Bag,
+		CanBeEquipped = Back,
+		Capacity = 14,
+		CloseSound = CloseLeatherBag,
+		ClothingItem = Bag_CrudeLeatherBag,
+		EquipSound = EquipLeatherBag,
+		OpenSound = OpenLeatherBag,
+		PutInSound = StoreItemLeatherBag,
+		ReplaceInPrimaryHand = Bag_CrudeLeatherBag_RHand holdingbagright,
+		ReplaceInSecondHand = Bag_CrudeLeatherBag_LHand holdingbagleft,
+		RunSpeedModifier = 0.96,
+		SoundParameter = EquippedBaggageContainer SchoolBag,
+		WeightReduction = 65,
+		WorldStaticModel = CrudeLeatherBag_Ground,
+
+	}
+
+
+	item JacketLong_SimmentalHide
+	{
+		DisplayName = Cowhide Coat,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Weight = 2,
+		Icon = JacketLong_HideCowSimmental,
+		BiteDefense = 20,
+		BloodLocation = LongJacket,
+		BodyLocation = JacketSuit,
+		ClothingItem = JacketLong_SimmentalHide,
+		CombatSpeedModifier = 0.97,
+		FabricType = Leather,
+		Insulation = 0.65,
+		NeckProtectionModifier = 0.5,
+		RunSpeedModifier = 0.93,
+		ScratchDefense = 40,
+		WaterResistance = 0.45,
+		WindResistance = 0.35,
+		WorldStaticModel = JacketLong_Ground,
+	}
+
+	item JacketLong_SheepSkin
+	{
+		DisplayName = Sheepskin Coat,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Weight = 2,
+		Icon = JacketLong_Sheepskinl,
+		BiteDefense = 10,
+		BloodLocation = LongJacket,
+		BodyLocation = JacketSuit,
+		ClothingItem = JacketLong_SheepSkin,
+		CombatSpeedModifier = 0.97,
+		FabricType = Leather,
+		Insulation = 0.95,
+		NeckProtectionModifier = 0.5,
+		RunSpeedModifier = 0.93,
+		ScratchDefense = 20,
+		WaterResistance = 0.6,
+		WindResistance = 0.5,
+		WorldStaticModel = JacketLong_Ground,
+
+	}
+
+	item Jacket_SimmentalHide
+	{
+		DisplayName = Cowhide Jacket,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Weight = 2,
+		Icon =  Jacket_HideCowSimmental,
+		BiteDefense = 20,
+		BloodLocation = Jacket,
+		BodyLocation = Jacket,
+		ClothingItem = Jacket_SimmentalHide,
+		CombatSpeedModifier = 0.97,
+		FabricType = Leather,
+		Insulation = 0.40,
+		NeckProtectionModifier = 0.5,
+		RunSpeedModifier = 0.95,
+		ScratchDefense = 40,
+		WaterResistance = 0.4,
+		WindResistance = 0.6,
+		WorldStaticModel = JacketCoat_Ground,
+		Tags = RipClothingLeather,
+	}
+
+	item Jacket_SheepSkin
+	{
+		DisplayName = Sheepskin Jacket,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Weight = 2,
+		Icon =  Jacket_Sheepskin,
+		BiteDefense = 20,
+		BloodLocation = Jacket,
+		BodyLocation = Jacket,
+		ClothingItem = Jacket_SheepSkin,
+		CombatSpeedModifier = 0.97,
+		FabricType = Leather,
+		Insulation = 0.70,
+		NeckProtectionModifier = 0.5,
+		RunSpeedModifier = 0.95,
+		ScratchDefense = 40,
+		WaterResistance = 0.5,
+		WindResistance = 0.8,
+		WorldStaticModel = JacketCoat_Ground,
+		Tags = RipClothingLeather,
+	}
+
+	item Trousers_SheepSkin
+	{
+		DisplayName = Sheepskin Pants,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Icon = Trousers_Sheepskin,
+		BiteDefense = 20,
+		BloodLocation = Trousers,
+		BodyLocation = Pants,
+		ClothingItem = Trousers_SheepSkin,
+		FabricType = Leather,
+		ScratchDefense = 10,
+		Weight = 2,
+		Insulation = 1.0,
+		RunSpeedModifier = 0.95,
+		ScratchDefense = 40,
+		WaterResistance = 0.6,
+		WindResistance = 1.0,
+		WorldStaticModel = Trousers_Ground,
+		Tags = RipClothingLeather,
+	}
+
+	item Vest_SheepSkin
+	{
+		DisplayName = Sheepskin Vest,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Icon = Vest_Sheepskin,
+		BiteDefense = 20,
+		BloodLocation = ShirtNoSleeves,
+		BodyLocation = Jacket_Bulky,
+		ClothingItem = Vest_SheepSkin,
+		Insulation = 1.0,
+		ScratchDefense = 40,
+		Weight = 2,
+		WaterResistance = 0.6,
+		WindResistance = 1.0,
+		WorldStaticModel = BulletVest_Ground,
+		Tags = RipClothingLeather,
+	}
+
+	item Bag_FannyPackFront_Hide
+	{
+		DisplayName = Hide Fanny Pack - Front,
+		DisplayCategory = Bag,
+		Type = Container,
+		Weight = 0.2,
+		Icon = FannypackCrafted,
+		BodyLocation = FannyPackFront,
+		CanBeEquipped = FannyPackFront,
+		Capacity = 1,
+		CloseSound = CloseHideFannyPack,
+		ClothingItem = Bag_FannyPackFront_Hide,
+		ClothingItemExtra = Bag_FannyPackBack_Hide,
+		ClothingItemExtraOption = FannyPack_WearBack,
+		EquipSound = EquipFannyPack,
+		OpenSound = OpenHideFannyPack,
+		PutInSound = StoreItemHideFannyPack,
+		RunSpeedModifier = 0.98,
+		WeightReduction = 65,
+		ClothingExtraSubmenu = FannyPack_WearFront,
+		WorldStaticModel = FannyPack_Ground,
+	}
+
+	item Bag_FannyPackBack_Hide
+	{
+		DisplayName = Hide Fanny Pack - Back,
+		DisplayCategory = Bag,
+		Type = Container,
+		Weight = 0.2,
+		Icon = FannypackCrafted,
+		BodyLocation = FannyPackBack,
+		CanBeEquipped = FannyPackBack,
+		Capacity = 1,
+		CloseSound = CloseHideFannyPack,
+		ClothingItem = Bag_FannyPackBack_Hide,
+		ClothingItemExtra = Bag_FannyPackFront_Hide,
+		ClothingItemExtraOption = FannyPack_WearFront,
+		EquipSound = EquipFannyPack,
+		OpenSound = OpenHideFannyPack,
+		PutInSound = StoreItemHideFannyPack,
+		RunSpeedModifier = 0.98,
+		WeightReduction = 65,
+		ClothingExtraSubmenu = FannyPack_WearBack,
+		WorldStaticModel = FannyPack_Ground,
+	}
+
+
+}

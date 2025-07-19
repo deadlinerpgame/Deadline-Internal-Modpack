@@ -1,0 +1,266 @@
+module aerx {
+  imports {
+      Base
+ }
+
+	item Bag_BirthdayBasket
+	{
+		DisplayName = Basket,
+		DisplayCategory = Bag,
+		Type = Container,
+		Weight = 1.5,
+		Icon = GardenBasket,
+		Capacity = 6,
+		ClothingItem = Bag_GardenBasket_RHand,
+		ReplaceInPrimaryHand = Bag_GardenBasket_RHand holdingbagright,
+		ReplaceInSecondHand = Bag_GardenBasket_LHand holdingbagleft,
+		WeightReduction = 50,
+		WorldStaticModel = GardenBasket_Ground,
+	}
+
+	item Bag_ProtectiveCaseBulky
+	{
+		DisplayName = Bulky Protective Container,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+		Icon = ProtectiveCase_LargeBlack,
+		Capacity = 16,
+		CloseSound = CloseBulkyProtectiveContainer,
+		OpenSound = OpenBulkyProtectiveContainer,
+		PutInSound = StoreItemBulkyProtectiveContainer,
+		ReplaceInPrimaryHand = Bag_ProtectiveCaseBulky_RHand holdingbagright,
+		ReplaceInSecondHand = Bag_ProtectiveCaseBulky_LHand holdingbagleft,
+		WeightReduction = 50,
+		WorldStaticModel = ProtectiveCaseBulky_Ground,
+		ClothingItem = Bag_ProtectiveCaseBulky_RHand,
+	}
+
+	item Bag_ProtectiveCaseBulkyMilitary
+	{
+		DisplayName = Bulky Military Container,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+		Icon = ProtectiveCase_LargeGreen,
+		Capacity = 16,
+		CloseSound = CloseBulkyProtectiveContainer,
+		OpenSound = OpenBulkyProtectiveContainer,
+		PutInSound = StoreItemBulkyProtectiveContainer,
+		ReplaceInPrimaryHand = Bag_ProtectiveCaseBulky_RHand_Green holdingbagright,
+		ReplaceInSecondHand = Bag_ProtectiveCaseBulky_LHand_Green holdingbagleft,
+		WeightReduction = 50,
+		WorldStaticModel = ProtectiveCaseBulky_Ground,
+		ClothingItem = Bag_ProtectiveCaseBulky_RHand_Green,
+	}
+
+	item Bag_ProtectiveCaseBulkyHazard
+	{
+		DisplayName = Biohazard Container,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+		Icon = ProtectiveCase_LargeHazardous,
+		Capacity = 16,
+		CloseSound = CloseBiohazardContainer,
+		OpenSound = OpenBiohazardContainer,
+		PutInSound = StoreItemBiohazardContainer,
+		ReplaceInPrimaryHand = Bag_ProtectiveCaseBulky_RHand_Hazard holdingbagright,
+		ReplaceInSecondHand = Bag_ProtectiveCaseBulky_LHand_Hazard holdingbagleft,
+		WeightReduction = 50,
+		WorldStaticModel = ProtectiveCaseBulky_Ground,
+		ClothingItem = Bag_ProtectiveCaseBulky_RHand_Hazard,
+	}
+
+	item Present_ExtraSmall
+	{
+		DisplayName = Present - Extra Small,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Present3,
+		Capacity = 1,
+		WorldStaticModel = Present3,
+	}
+	item Present_Small
+	{
+		DisplayName = Present - Small,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Present5,
+		Capacity = 2,
+		WorldStaticModel = Present5,
+	}
+	item Present_Medium
+	{
+		DisplayName = Present - Medium,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Present4,
+		Capacity = 5,
+		WorldStaticModel = Present4,
+	}
+	item Present_Large
+	{
+		DisplayName = Present - Large,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Present2,
+		Capacity = 10,
+		WorldStaticModel = Present2,
+	}
+	item Present_ExtraLarge
+	{
+		DisplayName = Present - Extra Large,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Present1,
+		Capacity = 20,
+		WorldStaticModel = Present1,
+	}
+
+	item MakeupCase_Professional
+	{
+		DisplayName = Makeup Case - Professional,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+		Icon = MakeupCase_Professional,
+		Capacity = 4,
+		WeightReduction = 50,
+		WorldStaticModel = MakeupCase_Professional,
+		ReplaceInPrimaryHand = Bag_MakeupCase_Professional_RHand holdingbagright,
+		ReplaceInSecondHand = Bag_MakeupCase_Professional_LHand holdingbagleft,
+	}
+
+	item Parcel_ExtraSmall
+	{
+		DisplayName = Parcel - Extra Small,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Parcel2,
+		Capacity = 1,
+		WorldStaticModel = Parcel3,
+	}
+	item Parcel_Small
+	{
+		DisplayName = Parcel - Small,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Parcel4,
+		Capacity = 2,
+		WorldStaticModel = Parcel5,
+	}
+	item Parcel_Medium
+	{
+		DisplayName = Parcel - Medium,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Parcel5,
+		Capacity = 5,
+		WorldStaticModel = Parcel4,
+	}
+	item Parcel_Large
+	{
+		DisplayName = Parcel - Large,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Parcel3,
+		Capacity = 10,
+		WorldStaticModel = Parcel2,
+	}
+	item Parcel_ExtraLarge
+	{
+		DisplayName = Parcel - Extra Large,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Parcel1,
+		Capacity = 20,
+		WorldStaticModel = Parcel1,
+	}
+
+	item ProduceBox_ExtraSmall
+	{
+		DisplayName = Produce Box - Extra Small,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Parcel_Small_Fruit,
+		Capacity = 1,
+		WorldStaticModel = ProduceBox_ExtraSmall,
+	}
+	item ProduceBox_Small
+	{
+		DisplayName = Produce Box - Small,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Parcel_Small_Fruit,
+		Capacity = 2,
+		WorldStaticModel = ProduceBox_Small,
+	}
+	item ProduceBox_Medium
+	{
+		DisplayName = Produce Box - Medium,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Parcel_Medium_Fruit,
+		Capacity = 5,
+		WorldStaticModel = ProduceBox_Medium,
+	}
+	item ProduceBox_Large
+	{
+		DisplayName = Produce Box - Large,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Parcel_Large_Fruit,
+		Capacity = 10,
+		WorldStaticModel = ProduceBox_Large,
+	}
+	item ProduceBox_ExtraLarge
+	{
+		DisplayName = Produce Box - Extra Large,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 1,
+        Icon	=	Parcel_ExtraLarge_Fruit,
+		Capacity = 20,
+		WorldStaticModel = ProduceBox_ExtraLarge,
+	}
+
+	item ToolRoll_Leather
+	{
+		DisplayName = Tool Roll - Leather,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 0.5,
+		Icon = ToolRoll_Leather,
+		Capacity = 4,
+		WeightReduction = 50,
+		WorldStaticModel = ToolRoll_Leather,
+	}
+
+	item ToolRoll_Fabric
+	{
+		DisplayName = Tool Roll - Fabric,
+		DisplayCategory = Container,
+		Type = Container,
+		Weight = 0.5,
+		Icon = ToolRoll_Chef,
+		Capacity = 4,
+		WeightReduction = 50,
+		WorldStaticModel = ToolRoll_Fabric,
+	}
+
+}

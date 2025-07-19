@@ -1,0 +1,50 @@
+module Base
+{
+
+	recipe Concrete Barbell
+	{
+	  	MetalBar,
+	  	ConcretePowder=2,
+		
+	  	Result:BarBell,
+	  	Sound:Sawing,
+	  	Time:200.0,
+		Category : Carpentry,
+		SkillRequired:Woodwork=5,
+	}
+	recipe Concrete Dumbbell
+	{
+	  	MetalBar,
+	  	ConcretePowder,
+
+	  	Result:DumbBell,
+	  	Sound:Sawing,
+	  	Time:150.0,
+		Category : Carpentry,
+		SkillRequired:Woodwork=5,
+	}
+	recipe Walking Cane
+	{
+	  	TreeBranch/WoodenStick,
+	  	RippedSheets=5,
+
+	  	Result:AuthenticWalkingCane,
+	  	Sound:Sawing,
+		Time:75.0,
+		Category : Carpentry,
+		SkillRequired:Woodwork=4,
+	}
+	recipe Mosquito Amber Walking Cane
+	{
+	  	TreeBranch/WoodenStick,
+	  	RippedSheets=5,
+		PaintYellow,
+		Stone,
+		
+	  	Result:AuthenticWalkingCane,
+	  	Sound:Sawing,
+		Time:75.0,
+		Category : Carpentry,
+		SkillRequired:Woodwork=4,
+	}
+}

@@ -1,0 +1,86 @@
+module Base
+{ 
+
+   recipe Craft Spear with Bone Head
+    {
+       	aerx.LongStick=1,
+	aerx.SharpBone_Long=1,
+	LeatherStrips/Twine=2,
+        Result:aerx.Spear_Bone=1,
+        Time:100.0,
+        Category:Spear,
+	SkillRequired:Woodwork=2,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft Spear with Long Bone Head
+    {
+       	aerx.LongStick=1,
+	aerx.SharpBone_Long=1,
+	LeatherStrips/Twine=2,
+        Result:aerx.Spear_BoneLong=1,
+        Time:100.0,
+        Category:Spear,
+	SkillRequired:Woodwork=2,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft Spear with Simple Metal Head
+    {
+       	aerx.LongStick=1,
+	aerx.CrudeBlade/aerx.CrudeKnife=1,
+	LeatherStrips/Twine=2,
+        Result:aerx.SpearCrude=1,
+        Time:100.0,
+        Category:Spear,
+	SkillRequired:Woodwork=3,
+    }
+
+   recipe Craft Spear with Long Simple Metal Head
+    {
+       	aerx.LongStick=1,
+	aerx.LongCrudeBlade/aerx.LongCrudeKnife=1,
+	LeatherStrips/Twine=2,
+        Result:aerx.SpearCrudeLong=1,
+        Time:100.0,
+        Category:Spear,
+	SkillRequired:Woodwork=4,
+    }
+
+
+   recipe Craft Spear with Simple Stone Head
+    {
+       	aerx.LongStick=1,
+	aerx.StoneBlade=1,
+	LeatherStrips/Twine=2,
+        Result:aerx.SpearStone=1,
+        Time:100.0,
+        Category:Spear,
+	SkillRequired:Woodwork=3,
+    }
+
+   recipe Craft Spear with Long Simple Stone Head
+    {
+       	aerx.LongStick=1,
+	aerx.StoneBladeLong=1,
+	LeatherStrips/Twine=2,
+        Result:aerx.SpearStoneLong=1,
+        Time:100.0,
+        Category:Spear,
+	SkillRequired:Woodwork=4,
+    }
+
+   recipe Attach Plunger to Stick
+    {
+       	aerx.LongStick=1,
+	aerx.Plunger_BarbedWire=1,
+	LeatherStrips/Twine=2,
+        Result:aerx.Spear_Plunger=1,
+        Time:100.0,
+        Category:Spear,
+	SkillRequired:Woodwork=3,
+    }
+
+
+
+}

@@ -1,0 +1,371 @@
+module Base
+{
+	model Knife_Bone
+	{
+		mesh = Weapons/1Handed/Knife_Bone_Hand,
+		texture = Weapons/1Handed/Knife_Bone,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0059 -0.0018 0.0026,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0036 0.0655 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+	model Fork_Bone
+	{
+		mesh = Weapons/1Handed/Fork_Bone_Hand,
+		texture = Weapons/1Handed/Fork_Bone,
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0018 -0.0013 0.0113,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0136 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+	model Spoon_Bone
+	{
+		mesh = Weapons/1Handed/Spoon_Bone_Hand,
+		texture = Weapons/1Handed/Spoon_Bone,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0130 -0.0001 0.0108,
+			rotate = 159.6679 73.7352 -162.5630,
+		}
+
+		attachment world
+		{
+			offset = -0.0099 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+	model BottleOpener
+	{
+		mesh = WorldItems/BottleOpener,
+		scale = 0.1,
+	}
+
+	model TinOpener_Old
+    {
+        mesh = weapons/1handed/CanOpener_Forged_Hand,
+        texture = weapons/1handed/CanOpener_Forged,
+    }
+
+	model Mug_Metal
+	{
+		mesh = WorldItems/Mug_Tin,
+		scale = 0.125,
+	}
+	model Mug_Copper
+	{
+		mesh = WorldItems/Mug_Tin,
+		texture = WorldItems/Mug_Copper,
+		scale = 0.125,
+	}
+	model Mug_Gold
+	{
+		mesh = WorldItems/Mug_Tin,
+		texture = WorldItems/Mug_Gold,
+		scale = 0.125,
+	}
+	model Mug_Silver
+	{
+		mesh = WorldItems/Mug_Tin,
+		texture = WorldItems/Mug_Silver,
+		scale = 0.125,
+	}
+	model Teacup_Fired
+	{
+		mesh = WorldItems/Teacup,
+		texture = WorldItems/TeaCup_Fired,
+		scale = 0.1,
+
+		attachment Bip01_Prop1
+		{
+			offset = 0.0147 0.0034 -0.0019,
+			rotate = 174.1569 51.7684 -176.7695,
+			scale = 0.7800,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0074 0.0078 -0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+			scale = 0.7850,
+		}
+	}
+
+	model ForkForged
+	{
+		mesh = Weapons/1Handed/Fork_Forged_Hand,
+		texture = Weapons/1Handed/Fork_Forged,
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0018 -0.0013 0.0113,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0123 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+	model FryingPanForged
+	{
+		mesh = weapons/1handed/FryingPan_Forged_Hand,
+		texture = weapons/1handed/FryingPan_Forged,
+
+		attachment world
+		{
+			offset = -0.0274 0.1186 -0.0044,
+			rotate = 0.0000 -45.1430 0.0000,
+		}
+
+		attachment Bip01_Prop1
+		{
+			offset = -0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 0.0000,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0131 -0.0002 0.0007,
+			rotate = 0.0000 106.0540 0.0000,
+		}
+
+		attachment fryingpan_back
+		{
+			offset = -0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 0.0000,
+		}
+
+		attachment fryingpan_back_bag
+		{
+			offset = -0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 0.0000,
+		}
+	}
+
+	model ButterKnife_Gold
+	{
+		mesh = Weapons/1Handed/ButterKnife,
+		texture = Weapons/1Handed/Cutlery_Gold,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0059 -0.0018 0.0026,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0036 0.0655 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model ButterKnife_Silver
+	{
+		mesh = Weapons/1Handed/ButterKnife,
+		texture = Weapons/1Handed/Cutlery_Silver,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0059 -0.0018 0.0026,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0036 0.0655 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model PlasticKnife
+	{
+		mesh = Weapons/1Handed/Plastic_Knife_Hand,
+		texture = Weapons/1Handed/Plastic_Cutlery,
+		scale = 1.0,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0059 -0.0018 0.0026,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = 0.0044 -0.0000 -0.0000,
+			rotate = 0.0000 -0.0000 89.8935,
+		}
+	}
+	model Fork_Gold
+	{
+		mesh = Weapons/1Handed/Fork,
+		texture = Weapons/1Handed/Cutlery_Gold,
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0018 -0.0013 0.0113,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0136 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model Fork_Silver
+	{
+		mesh = Weapons/1Handed/Fork,
+		texture = Weapons/1Handed/Cutlery_Silver,
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0018 -0.0013 0.0113,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0136 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model PlasticFork
+	{
+		mesh = Weapons/1Handed/Plastic_Fork_Hand,
+		texture = Weapons/1Handed/Plastic_Cutlery,
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0018 -0.0013 0.0113,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0049 -0.0003 -0.0000,
+			rotate = 0.0000 0.0000 -86.1222,
+		}
+	}
+	model Spoon_Gold
+	{
+		mesh = Weapons/1Handed/Spoon,
+		texture = Weapons/1Handed/Cutlery_Gold,
+		attachment Bip01_Prop2
+		{
+			offset = -0.0130 -0.0001 0.0108,
+			rotate = 159.6679 73.7352 -162.5630,
+		}
+
+		attachment world
+		{
+			offset = -0.0099 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model Spoon_Silver
+	{
+		mesh = Weapons/1Handed/Spoon,
+		texture = Weapons/1Handed/Cutlery_Gold,
+		attachment Bip01_Prop2
+		{
+			offset = -0.0130 -0.0001 0.0108,
+			rotate = 159.6679 73.7352 -162.5630,
+		}
+
+		attachment world
+		{
+			offset = -0.0099 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model PlasticSpoon
+	{
+		mesh = Weapons/1Handed/Plastic_Spoon_Hand,
+		texture = Weapons/1Handed/Plastic_Cutlery,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0130 -0.0001 0.0108,
+			rotate = 159.6679 73.7352 -162.5630,
+		}
+
+		attachment world
+		{
+			offset = -0.0068 -0.0004 0.0000,
+			rotate = 0.0000 0.0000 -86.4172,
+		}
+	}
+	model WoodenFork
+	{
+		mesh = Weapons/1Handed/Fork_Wood_Hand,
+		texture = Weapons/1Handed/Fork_Wood,
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0018 -0.0013 0.0113,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0044 -0.0003 -0.0000,
+			rotate = 0.0000 0.0000 -86.6715,
+		}
+	}
+	model WoodenSpoon
+	{
+		mesh = Weapons/1Handed/Spoon_Wood_Hand,
+		texture = Weapons/1Handed/Spoon_Wood,
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0018 -0.0013 0.0113,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0038 -0.0004 -0.0000,
+			rotate = 0.0000 0.0000 -84.7576,
+		}
+	}
+
+	model SpoonForged
+	{
+		mesh = Weapons/1Handed/Spoon_Forged_Hand,
+		texture = Weapons/1Handed/Spoon_Forged,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0130 -0.0001 0.0108,
+			rotate = 159.6679 73.7352 -162.5630,
+		}
+
+		attachment world
+		{
+			offset = -0.0117 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+}

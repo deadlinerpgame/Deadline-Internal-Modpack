@@ -1,0 +1,377 @@
+module Base
+{
+	recipe Mechanic - Make Car Engine Parts
+    {
+
+		Smithing.IngotD/Smithing.IngotE/Smithing.IngotA/Smithing.IngotC,
+		Screws=12,
+		BlowTorch=2,
+		WeldingRods=2,
+		MetalPipe/aerx.IronBar=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=8,
+        	Result           		: EngineParts=10,
+        	Time             		: 500.0,
+	    	Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+
+		CanBeDoneFromFloor      : False,
+		NeedToBeLearn: false,
+		NearItem:Advanced Forge,
+    }
+
+	recipe Metalworker - Make Car Engine Parts
+    {
+
+		SheetMetal=2,
+		Screws=12,
+		BlowTorch=3,
+		WeldingRods=1,
+		MetalPipe/aerx.IronBar=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+
+		NoBrokenItems			: false,
+		SkillRequired:MetalWelding=8,
+        	Result           		: EngineParts=6,
+        	Time             		: 500.0,
+	    	Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+
+		CanBeDoneFromFloor      : False,
+		NeedToBeLearn: false,
+		NearItem:Advanced Forge,
+    }
+
+	recipe Tinkerer - Make Car Engine Parts
+    {
+
+		SheetMetal=2,
+		ElectricWire=2,
+		DuctTape=1,
+		ElectronicsScrap=20,
+		BlowTorch=1,
+		WeldingRods=3,
+		MetalPipe/aerx.IronBar=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+
+		NoBrokenItems			: false,
+		SkillRequired:Electricity=8,
+        	Result           		: EngineParts=6,
+        	Time             		: 500.0,
+	    	Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+
+		CanBeDoneFromFloor      : False,
+		NeedToBeLearn: false,
+		NearItem:Advanced Forge,
+    }
+
+
+	recipe Craft a Standard Car Hood
+    {
+
+		SheetMetal=2,
+		Screws=8,
+		Hinge=2,
+		BlowTorch=1,
+		WeldingRods=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=6,
+        	Result           		: EngineDoor1,
+        	Time             		: 200.0,
+	    	Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+		CanBeDoneFromFloor      : False,
+		NearItem:Simple Forge,
+    }
+
+	recipe Craft a Heavy-Duty Car Hood
+    {
+
+		SheetMetal=2,
+		Screws=8,
+		Hinge=2,
+		BlowTorch=1,
+		WeldingRods=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=6,
+        	Result           		: EngineDoor2,
+        	Time             		: 200.0,
+	    	Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+		CanBeDoneFromFloor      : False,
+		NearItem:Simple Forge,
+    }
+
+	recipe Craft a Sports Car Hood
+    {
+
+		SheetMetal=2,
+		Screws=8,
+		Hinge=2,
+		BlowTorch=1,
+		WeldingRods=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=6,
+        	Result           		: EngineDoor3,
+        	Time             		: 200.0,
+	    	Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+		CanBeDoneFromFloor      : False,
+		NearItem:Simple Forge,
+    }
+
+recipe Craft a Old Car Muffler (Standard)
+    {
+
+		SheetMetal=2,
+		Screws=8,
+		Hinge=2,
+		BlowTorch=1,
+		WeldingRods=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=6,
+        	Result           		: OldCarMuffler1,
+        	Time             		: 200.0,
+    		Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+		CanBeDoneFromFloor      : False,
+		NearItem:Simple Forge,
+    }
+
+	recipe Craft a Old Car Muffler (Heavy-Duty)
+    {
+
+		SheetMetal=2,
+		Screws=8,
+		Hinge=2,
+		BlowTorch=1,
+		WeldingRods=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=6,
+        	Result           		: OldCarMuffler2,
+        	Time             		: 200.0,
+    		Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+		CanBeDoneFromFloor      : False,
+		NearItem:Simple Forge,
+    }
+
+	recipe Craft a Old Car Muffler (Sports)
+    {
+
+		SheetMetal=2,
+		Screws=8,
+		Hinge=2,
+		BlowTorch=1,
+		WeldingRods=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=6,
+        	Result           		: OldCarMuffler3,
+        	Time             		: 200.0,
+    		Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+		CanBeDoneFromFloor      : False,
+		NearItem:Simple Forge,
+    }
+
+	recipe Craft a Standard Suspension
+    {
+
+		SheetMetal=2,
+		Screws=8,
+		Hinge=2,
+		BlowTorch=1,
+		WeldingRods=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=6,
+        	Result           		: NormalSuspension1,
+        	Time             		: 200.0,
+    		Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+		CanBeDoneFromFloor      : False,
+		NearItem:Simple Forge,
+    }
+
+	recipe Craft a Heavy-Duty Suspension
+    {
+
+		SheetMetal=2,
+		Screws=8,
+		Hinge=2,
+		BlowTorch=1,
+		WeldingRods=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=6,
+        	Result           		: NormalSuspension2,
+        	Time             		: 200.0,
+    		Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+		CanBeDoneFromFloor      : False,
+		NearItem:Simple Forge,
+    }
+
+	recipe Craft a Sports Suspension
+    {
+
+		SheetMetal=2,
+		Screws=8,
+		Hinge=2,
+		BlowTorch=1,
+		WeldingRods=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=6,
+        	Result           		: NormalSuspension3,
+        	Time             		: 200.0,
+    		Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+		CanBeDoneFromFloor      : False,
+		NearItem:Simple Forge,
+    }
+
+
+	recipe Craft a Standard Trunk Door
+    {
+
+		SheetMetal=2,
+		Screws=8,
+		Hinge=2,
+		BlowTorch=1,
+		WeldingRods=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=6,
+        	Result           		: TrunkDoor1,
+        	Time             		: 200.0,
+    		Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+		CanBeDoneFromFloor      : False,
+		NearItem:Simple Forge,
+    }
+
+	recipe Craft a Heavy-Duty Trunk Door
+    {
+
+		SheetMetal=2,
+		Screws=8,
+		Hinge=2,
+		BlowTorch=1,
+		WeldingRods=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=6,
+        	Result           		: TrunkDoor2,
+        	Time             		: 200.0,
+    		Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+		CanBeDoneFromFloor      : False,
+		NearItem:Simple Forge,
+    }
+
+	recipe Craft a Sports Trunk Door
+    {
+
+		SheetMetal=2,
+		Screws=8,
+		Hinge=2,
+		BlowTorch=1,
+		WeldingRods=1,
+		keep PipeWrench,
+		keep Wrench,
+		keep Screwdriver,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=6,
+        	Result           		: TrunkDoor3,
+        	Time             		: 200.0,
+    		Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+		CanBeDoneFromFloor      : False,
+		NearItem:Simple Forge,
+    }
+
+
+}

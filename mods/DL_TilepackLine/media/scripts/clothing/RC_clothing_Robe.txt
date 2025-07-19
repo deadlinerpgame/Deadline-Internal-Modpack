@@ -1,0 +1,23 @@
+module RC {
+  imports {
+      Base
+  }
+	item RunicRobe
+    	{
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Runic Robe,
+        ClothingItem = RunicRobe,
+        BodyLocation = FullSuit,
+        BloodLocation = Trousers;Jumper,
+        Icon = RunicRobe,
+		CanHaveHoles = false,
+        RunSpeedModifier = 0.7,
+        ScratchDefense = 50,	
+		BiteDefense = 40,
+        Insulation = 0.9,
+        WindResistance = 0.9,
+        WorldStaticModel = RunicRobe_Ground,
+   	}
+	
+}

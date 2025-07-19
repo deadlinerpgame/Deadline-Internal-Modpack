@@ -1,0 +1,26 @@
+module Base {
+
+
+	model Deer_Dead
+    {
+        mesh = WorldItems/DeerStag_Dead,
+        texture = DeerStag,
+        scale = 1,
+    }
+
+    item Deer_Dead
+	{
+        WorldStaticModel = Deer_Dead,
+	DisplayCategory = Food,
+	Weight	=	20.0,
+	Type	=	Normal,
+	DaysFresh 			=		10,
+	DaysTotallyRotten 	=	 	15,
+	DisplayName = Deer Carcass,
+	Icon = DeadPerson_MaleZombie,
+
+	}
+
+
+}
+

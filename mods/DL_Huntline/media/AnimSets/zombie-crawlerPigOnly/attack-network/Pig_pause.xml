@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animNode>
+	<m_Name>Pig_pause</m_Name>
+	<m_SpeedScale>0.80</m_SpeedScale>
+	<m_AnimName>FarmPig_Idle01</m_AnimName>
+	<m_deferredBoneAxis>Y</m_deferredBoneAxis>
+	<m_BlendTime>1.20</m_BlendTime>
+	<m_Conditions>
+		<m_Name>targetSeenTime</m_Name>
+		<m_Type>LESS</m_Type>
+		<m_FloatValue>1</m_FloatValue>
+	</m_Conditions>
+
+	<m_Conditions>
+		<m_Name>bHasTarget</m_Name>
+		<m_Type>BOOL</m_Type>
+		<m_BoolValue>true</m_BoolValue>
+	</m_Conditions>
+	<m_Conditions>
+		<m_Name>AttackOutcome</m_Name>
+		<m_Type>STRING</m_Type>
+		<m_StringValue>start</m_StringValue>
+	</m_Conditions>
+	<m_Conditions>
+		<m_Name>isPigAnimal</m_Name>
+		<m_Type>STRING</m_Type>
+		<m_StringValue>true</m_StringValue>
+	</m_Conditions>
+</animNode>

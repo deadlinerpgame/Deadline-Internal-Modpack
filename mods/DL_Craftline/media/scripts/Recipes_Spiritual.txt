@@ -1,0 +1,29 @@
+module Base
+{
+ recipe Write down a Prayer
+    {
+        SheetPaper2,
+        keep Pen/Pencil/RedPen/BluePen,
+        CanBeDoneFromFloor:true,
+        Result:PriestPrayer,
+		NeedToBeLearn:true,		
+        Time:50.0,
+    }
+
+item PriestPrayer
+    {
+        DisplayCategory = Literature,
+        Weight	=	0.2,
+        Type	=	Literature,
+        DisplayName	=	Prayers,
+        StressChange	=	-15,
+	
+        Icon	=	Magazine,
+		UnhappyChange				= -15,  
+		BoredomChange 				= -15,
+		StressChange				= -15,  
+        StaticModel = Magazine,
+        WorldStaticModel = MagazineGround,
+    }
+
+}

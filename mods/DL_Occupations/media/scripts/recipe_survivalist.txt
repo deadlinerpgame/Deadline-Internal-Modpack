@@ -1,0 +1,21 @@
+module Base
+{
+
+ 
+ 	 
+  
+recipe Find Bait in Rotten Food
+    {
+        Apple/Banana/Grapefruit/Grapes/Mango/Orange/Peach/Pear/Pineapple/Watermelon/Zucchini/Cheese/Ham/PorkChop/Steak/MuttonChop/Chicken/MeatPatty/MincedMeat/Rabbitmeat/Smallanimalmeat/Smallbirdmeat/Baloney/Salami/Sausage/Hotdog/ChickenNuggets/ChickenFried/FishFried/DeadBird/DeadMouse/DeadRabbit/DeadRat/DeadSquirrel/FishFillet/Bass/Catfish/Perch/Crappie/Panfish/Pike/Trout/Lobster/FrogMeat/Squid,
+
+        Result:Worm,
+        Sound:SliceMeat,
+        Time:50.0,
+        OnTest:Recipe.OnTest.OE_IsRottenFood,
+        Category:Expertise,
+        Tooltip:Food needs to be rotten to appear as valid for this recipe.,
+        AllowRottenItem:true,
+        NeedToBeLearn:true,
+    }
+
+}

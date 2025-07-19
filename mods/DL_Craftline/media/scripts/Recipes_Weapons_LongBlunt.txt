@@ -1,0 +1,319 @@
+module Base
+{ 
+
+   recipe Reinforce Baseball Bat with Cans
+    {
+       	BaseballBat=1,
+	DuctTape=2,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	Base.BeerCanEmpty/Base.PopEmpty/Base.Pop2Empty/Base.Pop3Empty=2,
+        Result:aerx.BaseballBat_Can=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=3,
+    }
+
+   recipe Reinforce Baseball Bat with Garden Fork
+    {
+	GardenFork=1,
+       	BaseballBat=1,
+	Screws=2,
+	LeatherStrips=2,
+	keep Wrench,
+	keep Screwdriver,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	keep [Recipe.GetItemTypes.Saw],
+        Result:aerx.BaseballBat_GardenForkHead=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=4,
+
+    }
+
+   recipe Reinforce Baseball Bat with Nails
+    {
+	Nails=5,
+       	BaseballBat=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.Cudgel_Nails=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=1,
+
+    }
+
+   recipe Reinforce Baseball Bat with Rake Spikes
+    {
+	Rake=1,
+       	BaseballBat=1,
+	LeatherStrips=2,
+	Screws=2,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.BaseballBat_RakeHead=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=3,
+
+    }
+
+   recipe Reinforce Baseball Bat with Sheet Metal
+    {
+       	BaseballBat=1,
+	Screws=2,
+	LeatherStrips=2,
+	SmallSheetMetal/AluminumScrap=2,
+	keep Wrench,
+	keep Screwdriver,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	keep [Recipe.GetItemTypes.Saw],
+        Result:aerx.BaseballBat_ScrapSheet=1,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:Woodwork=3,
+    }
+
+   recipe Craft Bucket Maul
+    {
+       	MetalBar=1,
+	MetalPipe=1,
+	BlowTorch=1,
+	BucketEmpty=1,
+	Screws=2,
+	LeatherStrips/RippedSheets/DenimStrips=1,
+	keep [Recipe.GetItemTypes.Saw],
+	keep WeldingMask,
+        Result:aerx.BucketMace_Metal=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:MetalWelding=5,
+	NearItem:Simple Forge,
+    }
+
+   recipe Reinforce Hockey Stick with Nails
+    {
+	Nails=5,
+       	HockeyStick/IceHockeyStick=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.FieldHockeyStick_Nails=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=1,
+    }
+
+   recipe Craft a Jawbone Morningstar
+    {
+       	MetalBar=1,
+	MetalPipe=1,
+	BlowTorch=1,
+	aerx.JawboneBovide=1,
+	Screws=2,
+	LeatherStrips/RippedSheets/DenimStrips=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	keep [Recipe.GetItemTypes.Saw],
+	keep WeldingMask,
+        Result:aerx.JawboneBovide_Morningstar=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:MetalWelding=4,
+	NearItem:Simple Forge,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft Kettle Maul
+    {
+       	MetalBar=1,
+	MetalPipe=1,
+	BlowTorch=1,
+	Screws=2,
+	Kettle=1,
+	LeatherStrips/RippedSheets/DenimStrips=1,
+	keep [Recipe.GetItemTypes.Saw],
+	keep WeldingMask,
+        Result:aerx.KettleMace_Metal=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:MetalWelding=5,
+	NearItem:Simple Forge,
+    }
+
+   recipe Reinforce Long Handle with Cans
+    {
+       	aerx.LongHandle=1,
+	DuctTape=2,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	Base.BeerCanEmpty/Base.PopEmpty/Base.Pop2Empty/Base.Pop3Empty=2,
+        Result:aerx.LongHandle_Can=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=3,
+    }
+
+   recipe Reinforce Long Handle with Nails
+    {
+	Nails=5,
+       	aerx.LongHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.LongHandle_Nails=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=3,
+    }
+
+   recipe Reinforce Long Handle with Rake Spikes
+    {
+	Rake=1,
+       	aerx.LongHandle=1,
+	LeatherStrips=2,
+	Screws=2,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.LongHandle_RakeHead=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=3,
+
+    }
+
+   recipe Craft Long Handle with Brake Disc
+    {
+       	aerx.LongHandle=1,
+	LeatherStrips=2,
+	keep Wrench,
+	NormalBrake1/ModernBrake1/NormalBrake2/ModernBrake2/NormalBrake3/ModernBrake3=1,
+        Result:aerx.LongHandle_Brake=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=4,
+    }
+
+   recipe Craft Rake Head Scrap Metal Weapon
+    {
+        MetalBar=2,
+	MetalPipe=2,
+	BlowTorch=1,
+	Rake=1,
+	LeatherStrips/RippedSheets/DenimStrips=1,
+	keep [Recipe.GetItemTypes.Saw],
+	keep WeldingMask,
+	keep Wrench,
+        Result:aerx.ScrapWeaponRakeHead=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:MetalWelding=5,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft Scrap Maul
+    {
+        MetalBar=2,
+	MetalPipe=2,
+	BlowTorch=1,
+	aerx.IronScrap=2,
+	LeatherStrips/RippedSheets/DenimStrips=1,
+	keep [Recipe.GetItemTypes.Saw],
+	keep WeldingMask,
+	keep Wrench,
+        Result:aerx.ScrapMaul=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:MetalWelding=5,
+	NearItem:Simple Forge,
+    }
+
+   recipe Craft Scrap Metal Morningstar
+    {
+        MetalBar=1,
+	MetalPipe=2,
+	BlowTorch=1,
+	SmallSheetMetal=1,
+	LeatherStrips/RippedSheets/DenimStrips=1,
+	keep [Recipe.GetItemTypes.Saw],
+	keep WeldingMask,
+	keep Wrench,
+        Result:aerx.Morningstar_Scrap=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:MetalWelding=6,
+	NearItem:Simple Forge,
+    }
+
+   recipe Reinforce Tree Branch with Spikes
+    {
+       	aerx.TreeBranch=1,
+	aerx.SharpBone_Long=4,
+	LeatherStrips=2,
+	keep Wrench,
+	keep Screwdriver,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	keep [Recipe.GetItemTypes.Saw],
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.TreeBranch_Bone=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=3,
+    }
+
+   recipe Reinforce Tree Branch with Cans
+    {
+       	aerx.TreeBranch=1,
+	DuctTape=2,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	Base.BeerCanEmpty/Base.PopEmpty/Base.Pop2Empty/Base.Pop3Empty=2,
+        Result:aerx.TreeBranch_Can=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=3,
+    }
+
+   recipe Reinforce Tree Branch with Nails
+    {
+       	aerx.TreeBranch=1,
+	Nails=5,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.TreeBranch_Nails=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=3,
+    }
+
+   recipe Craft Long Spiked Club
+    {
+       	aerx.LongHandle=1,
+	aerx.SharpBone_Long=4,
+	LeatherStrips=2,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.LongSpikedClub=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=3,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft Crowbar 
+    {
+       	aerx.IronBar=2,
+	Coke/Charcoal=15,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.CrowbarForged=1,
+        Time:255.0,
+        Category:LongBlunt,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToCrowbar,
+	SkillRequired:MetalWelding=10,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft Sledgehammer 
+    {
+       	aerx.SledgehammerHead=1,
+	aerx.LongHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.SledgehammerForged=1,
+        Time:255.0,
+        Category:LongBlunt,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferBarToSledgehammerHead5,
+	SkillRequired:MetalWelding=4,
+	NearItem:Advanced Forge,
+    }
+
+}

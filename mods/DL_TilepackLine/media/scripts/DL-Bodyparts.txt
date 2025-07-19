@@ -1,0 +1,188 @@
+module Deadline
+{
+    imports    
+    {
+		Base
+	}
+
+item ArmTypeA
+	{
+	    	DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Severed Arm,
+		Icon	=	Logs,
+		WorldStaticModel = MArmTypeA,
+    }
+
+item ArmTypeB
+	{
+	    	DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Severed Arm,
+		Icon	=	Logs,
+		WorldStaticModel = MArmTypeB,
+    }
+
+item LegTypeA
+	{
+	    	DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Severed Leg,
+		Icon	=	Logs,
+		WorldStaticModel = MLegTypeA,
+    }
+
+item LegTypeB
+	{
+	    	DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Severed Leg,
+		Icon	=	Logs,
+		WorldStaticModel = MLegTypeB,
+    }
+
+item HandTypeA
+	{
+	    	DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Severed Hand,
+		Icon	=	Logs,
+		WorldStaticModel = MHandTypeA,
+    }
+
+item HandTypeB
+	{
+	    	DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Severed Hand,
+		Icon	=	Logs,
+		WorldStaticModel = MHandTypeB,
+    }
+
+item FootTypeA
+	{
+	    	DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Severed Foot,
+		Icon	=	Logs,
+		WorldStaticModel = MFootTypeA,
+    }
+
+item FootTypeB
+	{
+	    	DisplayCategory = Material,
+		Weight	=	1,
+		Type	=	Normal,
+		DisplayName	=	Severed Foot,
+		Icon	=	Logs,
+		WorldStaticModel = MFootTypeB,
+    }
+
+    model MArmTypeA
+	{
+		mesh = WorldItems/Bodyparts/ArmTypeA,
+		texture = WorldItems/Bodyparts/whitelegarm,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model MArmTypeB
+	{
+		mesh = WorldItems/Bodyparts/ArmTypeB,
+		texture = WorldItems/Bodyparts/darklegarm,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MLegTypeA
+	{
+		mesh = WorldItems/Bodyparts/LegTypeA,
+		texture = WorldItems/Bodyparts/whitelegarm,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model MLegTypeB
+	{
+		mesh = WorldItems/Bodyparts/LegTypeB,
+		texture = WorldItems/Bodyparts/darklegarm,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MFootTypeA
+	{
+		mesh = WorldItems/Bodyparts/FootTypeA,
+		texture = WorldItems/Bodyparts/whitefoothand,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model MFootTypeB
+	{
+		mesh = WorldItems/Bodyparts/FootTypeB,
+		texture = WorldItems/Bodyparts/darkfoothand,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+    model MHandTypeA
+	{
+		mesh = WorldItems/Bodyparts/HandTypeA,
+		texture = WorldItems/Bodyparts/whitefoothand,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model MHandTypeB
+	{
+		mesh = WorldItems/Bodyparts/HandTypeB,
+		texture = WorldItems/Bodyparts/darkfoothand,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+}

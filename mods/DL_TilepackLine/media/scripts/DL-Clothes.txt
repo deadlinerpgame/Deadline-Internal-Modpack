@@ -1,0 +1,94 @@
+module Deadline
+{
+    imports    
+    {
+		Base
+	}
+
+item CardboardSign
+	{
+	    DisplayCategory = Accessory,
+		Type = Clothing,
+		DisplayName = Cardboard Sign,
+		ClothingItem = CardboardSign,
+		BodyLocation = TorsoExtra,
+		Icon = Necklace_Gold,
+		Weight = 0.1,
+		Cosmetic = TRUE,
+		WorldStaticModel = MCardboardSign,
+	}
+
+    model MCardboardSign
+	{
+		mesh = WorldItems/Clothes/CardboardSign,
+		texture = WorldItems/Clothes/CardboardSign,
+		
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+item Tshirt_Paradise
+    {
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Paradise T-Shirt,
+        ClothingItem = Paradise_Shirt,
+        BodyLocation = Tshirt,
+        Icon	=	TshirtGeneric,
+        BloodLocation = Shirt,
+        Insulation = 0.2,
+        WindResistance = 0.05,
+        FabricType = Cotton,
+        WorldStaticModel = TShirt_Ground,
+    }
+
+item Tshirt_ParadiseWorn
+    {
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Worn Paradise T-Shirt,
+        ClothingItem = Paradise_ShirtWorn,
+        BodyLocation = Tshirt,
+        Icon	=	TshirtParadiseWorn,
+        BloodLocation = Shirt,
+        Insulation = 0.2,
+        WindResistance = 0.05,
+        FabricType = Cotton,
+        WorldStaticModel = TShirt_Ground,
+    }
+
+item Tshirt_DiscoBroccoli
+    {
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Disco Broccoli T-Shirt,
+        ClothingItem = DiscoBroccoli_Shirt,
+        BodyLocation = Tshirt,
+        Icon	=	TshirtDisco,
+        BloodLocation = Shirt,
+        Insulation = 0.2,
+        WindResistance = 0.05,
+        FabricType = Cotton,
+        WorldStaticModel = TShirt_Ground,
+    }
+
+item Tshirt_Longsleeve_White
+    {
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Long-Sleeved T-Shirt,
+        ClothingItem = Tshirt_Longsleeve_White,
+        BodyLocation = UnderwearExtra2,
+        Icon	=	TshirtParadise,
+        BloodLocation = Shirt,
+        Insulation = 0.2,
+        WindResistance = 0.05,
+        FabricType = Cotton,
+        WorldStaticModel = TShirt_Ground,
+    }
+
+   }

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animNode x_extends="Cow_crawlerattack_start2.xml">
+	<m_Name>Cow_crawlerattack_fail2</m_Name>
+	<m_AnimName>Cow_Idle01</m_AnimName>
+	<m_SpeedScale>0.60</m_SpeedScale>
+	<m_BlendTime>0.51</m_BlendTime>
+	<m_Conditions>
+		<m_Name>ZombieBiteStarted</m_Name>
+		<m_Type>BOOL</m_Type>
+		<m_BoolValue>true</m_BoolValue>
+	</m_Conditions>
+	<m_Conditions>
+		<m_Name>battack</m_Name>
+		<m_Type>BOOL</m_Type>
+		<m_BoolValue>false</m_BoolValue>
+	</m_Conditions>
+	<m_Events>
+		<m_EventName>SetVariable</m_EventName>
+		<m_Time>End</m_Time>
+		<m_ParameterValue>ZombieBiteStarted=false</m_ParameterValue>
+	</m_Events>
+	<m_Conditions>
+		<m_Name>CrawlerType</m_Name>
+		<m_Type>EQU</m_Type>
+		<m_FloatValue>2</m_FloatValue>
+	</m_Conditions>
+	<m_Conditions>
+		<m_Name>isCowAnimal</m_Name>
+		<m_Type>STRING</m_Type>
+		<m_StringValue>true</m_StringValue>
+	</m_Conditions>
+</animNode>

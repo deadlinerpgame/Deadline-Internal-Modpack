@@ -1,0 +1,169 @@
+module Base
+{
+
+	recipe Bear Headdress
+	{
+		BearSkinRug,
+		Thread=20,
+		Salt,
+		keep Needle,
+		keep [Recipe.GetItemTypes.SharpKnife]/SharpedStone/MeatCleaver,
+		
+		Result:HoodieDOWN_BearHeaddress,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=8,
+		Category:Tailoring,
+	}
+
+	recipe BWM R80/7 - Motobag Enhanced
+	{
+		LeatherStrips=20,
+		RippedSheets=5,
+		Thread=2,
+		keep Needle,
+		
+		Result:ATAMotoBagBMW2,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Drop Leg Pouch
+	{
+		LeatherStrips=10,
+		Thread=1,
+		keep Needle,
+		
+		Result:CBX_Sumk_7_R,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+	}
+
+	recipe Make Sack
+	{
+        	Sheet=1,
+		Thread=1,
+		keep Needle,
+
+        	Result:EmptySandbag,
+        	Time:30.0,
+		Sound:ClothesRipping,
+        	Category:Tailoring,
+	}
+
+	recipe Make Beanie
+	{
+		Yarn=1,
+		keep KnittingNeedles,
+
+        	Result:Hat_Beany,
+        	Time:100.0,
+		Sound:ClothesRipping,
+        	Category:Tailoring,
+	}	
+
+	recipe Make Holster
+	{
+		Belt2=1,
+		Thread=4,
+		keep Needle,
+		LeatherStrips/LeatherStripsDirty=4,
+
+        	Result:HolsterSimple,
+        	Time:100.0,
+		Sound:ClothesRipping,
+        	Category:Tailoring,
+	}
+
+	recipe Make Double Holster
+	{
+		Belt2=1,
+		Thread=8,
+		keep Needle,
+		LeatherStrips/LeatherStripsDirty=8,
+        	Result:HolsterDouble,
+        	Time:100.0,
+		Sound:ClothesRipping,
+        	Category:Tailoring,
+	}
+
+	recipe Craft John Rhoul's Hat
+	{
+		LeatherStrips=3,
+		Thread=4,
+		keep Scissors,
+		keep Needle,
+
+       		Result:Hat_CowboyRhoul,
+       		NeedToBeLearn:true,
+       		Time:70.0,
+      		Category:Tailoring,
+		SkillRequired:Tailoring=8,
+    	}
+	recipe Craft Sturdy Rope
+	{
+		LeatherStrips/DenimStrips/RippedSheets=8,
+       		Result:SheetRope,
+       		Time:70.0,
+      		Category:Tailoring,
+		SkillRequired:Tailoring=4,
+    	}
+
+	recipe Craft Elbow Pads
+	{
+		LeatherStrips=10,
+		Thread=20,
+		keep Needle,
+
+       		Result:RH93_ElbowPads,
+       		Time:70.0,
+      		Category:Tailoring,
+		SkillRequired:Tailoring=9,
+    	}
+
+	recipe Craft Knee Pads
+	{
+		LeatherStrips=10,
+		Thread=20,
+		keep Needle,
+
+       		Result:RH93_KneePads,
+       		Time:70.0,
+      		Category:Tailoring,
+		SkillRequired:Tailoring=9,
+    	}
+
+	recipe Craft Bank Robber Chest Rig
+	{
+		LeatherStrips=10,
+		RippedSheets=5,
+		Thread=2,
+		BlackDye,
+		keep Needle,
+
+       		Result:CBX_Ras_army,
+       		Time:70.0,
+      		Category:Tailoring,
+		SkillRequired:Tailoring=10,
+    	}
+
+	recipe Craft Multi Person Trauma Rig
+	{
+		LeatherStrips=10,
+		Nails=4,
+		RippedSheets=4,
+		Plank=2,
+		Thread=2,
+		BlackDye,
+		keep Needle,
+		NearItem:Tailoring Table,
+       		Result:CBX_Sumk_2_L,
+       		Time:70.0,
+      		Category:Tailoring,
+		SkillRequired:Tailoring=7,
+    	}
+}

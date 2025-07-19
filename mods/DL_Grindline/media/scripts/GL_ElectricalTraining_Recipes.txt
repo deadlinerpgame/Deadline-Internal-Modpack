@@ -1,0 +1,59 @@
+module GL
+{
+    imports
+    {
+   	 Base,
+    }
+
+    recipe Train Electrical (Level 0)
+    {
+        ElectronicsScrap=1,
+	keep Screwdriver,
+
+        Result: ElectronicsScrap,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveElectricity10,
+        Category:Training,
+    }
+
+    recipe Train Electrical (Level 1)
+    {
+        ElectronicsScrap=1,
+	keep Screwdriver,
+
+        Result: ElectronicsScrap,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveElectricity20,
+        Category:Training,
+	SkillRequired:Electricity=1,
+    }
+
+    recipe Train Electrical (Level 2)
+    {
+        ElectronicsScrap=1,
+	keep Screwdriver,
+
+        Result: ElectronicsScrap,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveElectricity30,
+        Category:Training,
+	SkillRequired:Electricity=2,
+    }
+
+    recipe Train Electrical (Level 3)
+    {
+        ElectronicsScrap=1,
+	keep Screwdriver,
+
+        Result: ElectronicsScrap,
+	RemoveResultItem: true,
+        Time:200.0,
+	OnGiveXP:GiveElectricity40,
+        Category:Training,
+	SkillRequired:Electricity=3,
+    }
+
+}

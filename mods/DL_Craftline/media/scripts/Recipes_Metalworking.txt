@@ -1,0 +1,258 @@
+module Base
+{
+
+	recipe Make Box of Nails
+	{
+        	aerx.IronFragments=8,
+        	BlowTorch=2,
+        	keep [Recipe.GetItemTypes.Hammer],
+        	keep WeldingMask,
+		
+		SkillRequired:MetalWelding=6,
+        	Result:NailsBox,
+        	Time:140.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+	recipe Make Jar Lid
+	{
+        	aerx.IronFragments=2,
+        	BlowTorch=1,
+        	keep [Recipe.GetItemTypes.Hammer],
+        	keep WeldingMask,
+		
+		SkillRequired:MetalWelding=6,
+        	Result:JarLid,
+        	Time:140.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Box of Screws
+    	{
+        	aerx.IronFragments=5,
+        	BlowTorch=5,
+        	keep [Recipe.GetItemTypes.Hammer],
+        	keep WeldingMask,
+		SkillRequired:MetalWelding=6,
+
+        	Result:ScrewsBox,
+        	Time:140.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Scrap Junk
+    	{
+        	TinCanEmpty/EmptyBeerCan/PopEmpty/Pop2Empty/Pop3Empty/BeerCanEmpty/Necklace_DogTag,
+        	keep [Recipe.GetItemTypes.Hammer],
+
+        	Result:aerx.IronFragments,
+        	Time:50.0,
+		Sound:Hammering,
+        	Category:Welding,
+	}
+
+    	recipe Convert Regular Chain to Tire Chain
+    	{
+		TW.Chain=1,
+
+        	Result:Base.ATAProtectionWheelsChain,
+        	Time:1.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Tire Chain
+    	{
+		SmallSheetMetal=2,
+		aerx.IronFragments=8,
+		Wire=2,
+		WeldingRods=2,
+        	BlowTorch=5,
+		keep MetalWelderGloves/LeatherWorkGloves/Cut-ResistantGloves,
+		SkillRequired:MetalWelding=8,
+
+        	Result:Base.ATAProtectionWheelsChain,
+        	Time:140.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+    	recipe Make Doorknobs from Bars
+    	{
+		aerx.IronBar=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        	Result:Doorknob=10,
+        	Time:10.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Hinges from Bars
+    	{
+		aerx.IronBar=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+        	Result:Hinge=10,
+        	Time:10.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Doorknobs
+    	{
+		MetalBar/MetalPipe=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        	Result:Doorknob=4,
+        	Time:10.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Hinges
+    	{
+		MetalBar/MetalPipe=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+        	Result:Hinge=4,
+        	Time:10.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+
+
+    	recipe Make Buckles from Bars
+    	{
+		aerx.IronBar=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        	Result:aerx.Buckle=10,
+        	Time:10.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+
+    	recipe Make Buckles
+    	{
+		MetalBar/MetalPipe=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        	Result:aerx.Buckle=4,
+        	Time:10.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+
+
+
+
+    	recipe Make Empty Paint Bucket
+    	{
+		IronBar=2,
+		Wire,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		SkillRequired:MetalWelding=4,
+
+        	Result:Base.PaintbucketEmpty,
+        	Time:140.0,
+        	Sound:Hammering,
+        	Category:Welding,
+    	}
+
+    	recipe Make Welding Rods
+    	{
+		BlowTorch=1,
+		Smithing.IngotA,
+		Smithing.IngotD=2,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		SkillRequired:MetalWelding=4,
+
+        	Result:WeldingRods=2,
+        	Time:140.0,
+        	Sound:Hammering,
+        	Category:Welding,
+    	}
+
+	recipe Melt Ingots into Nails
+    {
+
+	Smithing.IngotA/Smithing.IngotB/Smithing.IngotC/Smithing.IngotD/Smithing.IngotE/Smithing.IngotF/Smithing.IngotG/Smithing.IngotH/Smithing.IngotI/Smithing.IngotJ/Smithing.IngotK/Smithing.IngotT/Smithing.IngotY/Smithing.IngotP/Smithing.IngotM/Smithing.IngotS/Smithing.IngotQ/Smithing.IngotR/Smithing.IngotU/Smithing.IngotV/Smithing.IngotW/Smithing.IngotX/Smithing.IngotL/Smithing.IngotO/Smithing.IngotN/Smithing.IngotZ=1,
+
+		keep [Recipe.GetItemTypes.WeldingMask],
+
+		NoBrokenItems			: false,
+		SkillRequired:MetalWelding=8,
+        	Result           		: NailsBox,
+        	Time             		: 500.0,
+	    	Sound 					: CutSheet,
+		OnGiveXP 				: Give2MWXP,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,S
+
+		CanBeDoneFromFloor      : False,
+		NeedToBeLearn: false,
+		NearItem:Simple Forge,
+    }
+
+	recipe Melt Ingot into Electric Wire
+    {
+
+	Smithing.IngotA=1,
+
+		keep [Recipe.GetItemTypes.WeldingMask],
+
+		NoBrokenItems			: false,
+		SkillRequired:MetalWelding=6,
+        	Result           		: Radio.ElectricWire=8,
+        	Time             		: 500.0,
+	    	Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,S
+
+		CanBeDoneFromFloor      : False,
+		NeedToBeLearn: false,
+		NearItem:Simple Forge,
+    }
+
+
+
+   recipe Cut Sheet Metal
+    {
+       	SheetMetal=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+        Result:SmallSheetMetal=4,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferSheetToSmall,
+	SkillRequired:MetalWelding=5,
+
+    }
+
+   recipe Weld Small Metal Sheets Together
+    {
+       	SmallSheetMetal=4,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+        Result:SheetMetal=1,
+        Time:255.0,
+        Category:Smithing,
+	RemoveResultItem:true,
+	OnCreate:Recipe.OnCreate.TransferSmallToSheet,
+	SkillRequired:MetalWelding=5,
+
+    }
+
+}

@@ -1,0 +1,1214 @@
+module Base
+{
+	model Buckle
+	{
+		mesh = WorldItems/BeltBuckle_Forged,
+		scale = 0.2,
+	}
+
+	model ClayTileUnfired
+    {
+        mesh = WorldItems/TileClay,
+        texture = WorldItems/TileClay_Unfired,
+        scale = 0.16,
+    }
+	model ClayTile
+    {
+        mesh = WorldItems/TileClay,
+        texture = WorldItems/TileClay_Fired,
+        scale = 0.16,
+    }
+
+	model CeramicIngotCastUnfired
+    {
+        mesh = WorldItems/Ceramic_IngotCast,
+        texture = WorldItems/Ceramic_IngotCast_Unfired,
+        scale = 0.09,
+    }
+	model CeramicIngotCast
+    {
+        mesh = WorldItems/Ceramic_IngotCast,
+        texture = WorldItems/Ceramic_IngotCast_Fired,
+        scale = 0.09,
+    }
+
+	model MoldGlass_Fired
+	{
+		mesh = WorldItems/MoldGlass,
+		texture = WorldItems/MoldGlass_Fired,
+		scale = 0.07,
+	}
+	model MoldGlass_Unfired
+	{
+		mesh = WorldItems/MoldGlass,
+		texture = WorldItems/MoldGlass_Unfired,
+		scale = 0.07,
+	}
+
+	model MetalPieces
+    {
+        mesh = WorldItems/MetalPieces,
+        texture = WorldItems/MetalPieces_Iron,
+        scale = 0.1,
+    }
+
+	model AluminumScrap
+    {
+        mesh = WorldItems/Fragments_Aluminum,
+        scale = 0.05,
+    }
+    model Leather_Black
+    {
+        mesh = WorldItems/Leather_Rolled,
+        texture = WorldItems/LeatherRolled_Black,
+        scale = 0.1,
+    }
+
+	model AxeHead_Old
+	{
+		mesh = WorldItems/Axe_Forged_Head,
+		texture = Weapons/1Handed/Axe_OldStyle_Forged,
+		scale = 0.1,
+	}
+
+	model BarbedWireStack
+	{
+		mesh = WorldItems/Bundle_Wire,
+		texture = WorldItems/BarbedWire,
+		scale = 0.1,
+	}
+	model WireStack
+	{
+		mesh = WorldItems/Bundle_Wire,
+		texture = WorldItems/Wire,
+		scale = 0.1,
+	}
+
+	model FabricRoll_Black
+	{
+		mesh = WorldItems/FabricRolled,
+		texture = WorldItems/FabricRoll_Black,
+		scale = 0.14,
+	}
+	model FabricRoll_Blue
+	{
+		mesh = WorldItems/FabricRolled,
+		texture = WorldItems/FabricRoll_Blue,
+		scale = 0.14,
+	}
+	model FabricRoll_DarkBlue
+	{
+		mesh = WorldItems/FabricRolled,
+		texture = WorldItems/FabricRoll_DarkBlue,
+		scale = 0.14,
+	}
+	model FabricRoll_White
+	{
+		mesh = WorldItems/FabricRolled,
+		texture = WorldItems/FabricRoll_White,
+		scale = 0.14,
+	}
+
+    model Leather_Pink_Medium
+    {
+        mesh = WorldItems/Leather_Rolled,
+        texture = WorldItems/LeatherRolled_Pig,
+        scale = 0.08,
+    }
+
+    model Leather_Black_Medium
+    {
+        mesh = WorldItems/Leather_Rolled,
+        texture = WorldItems/LeatherRolled_Black,
+        scale = 0.08,
+    }
+
+	model HatchetHead_Bone
+	{
+		mesh = WorldItems/Bone_Scapula,
+		texture = weapons/1handed/Axe_Bone,
+		scale = 0.075,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+	model SteelIngot
+    {
+        mesh = WorldItems/Ingot_Iron,
+        texture = WorldItems/Ingot_Iron,
+        scale = 0.09,
+    }
+	model IronIngot
+    {
+        mesh = WorldItems/Ingot_Iron,
+        texture = WorldItems/Ingot_IronDull,
+        scale = 0.09,
+    }
+	model PigIronIngot
+    {
+        mesh = WorldItems/Ingot_Iron,
+        texture = WorldItems/Ingot_PigIron,
+        scale = 0.09,
+    }
+	model BrassIngot
+    {
+        mesh = WorldItems/Ingot_Iron,
+        texture = WorldItems/Ingot_Brass,
+        scale = 0.085,
+    }
+	model BrassScrap
+    {
+        mesh = WorldItems/Fragments_Brass,
+        scale = 0.1,
+    }
+	model IronScrap
+    {
+        mesh = WorldItems/Fragments_Iron,
+        scale = 0.05,
+    }
+	model SteelScrap
+    {
+        mesh = WorldItems/Fragments_Steel,
+        scale = 0.1,
+    }
+	model GoldScrap
+    {
+        mesh = WorldItems/Fragments_Gold,
+        scale = 0.05,
+    }
+	model SilverScrap
+    {
+        mesh = WorldItems/Fragments_Silver,
+        scale = 0.05,
+    }
+	model ClayBrickUnfired
+    {
+        mesh = WorldItems/BrickClay,
+        texture = WorldItems/BrickClayUnfired,
+        scale = 0.16,
+    }
+	model ClayBrick
+    {
+        mesh = WorldItems/BrickClay,
+        texture = WorldItems/BrickClayFired,
+        scale = 0.16,
+    }
+
+
+	model WoodenBrickMold
+    {
+        mesh = WorldItems/Mold_Brick,
+        texture = WorldItems/Mold_Brick,
+        scale = 0.16,
+    }
+	model WoodenShingleMold
+    {
+        mesh = WorldItems/Mold_Shingle,
+        texture = WorldItems/Mold_Shingle,
+        scale = 0.16,
+    }
+	model WoodenTileMold
+    {
+        mesh = WorldItems/Mold_Tile,
+        texture = WorldItems/Mold_Tile,
+        scale = 0.16,
+    }
+    	model WoodenCrucibleMold
+    {
+        mesh = WorldItems/WoodenMold_CrucibleCast,
+        texture = WorldItems/WoodenMold_CrucibleCast,
+        scale = 0.1,
+    }
+	model WoodenIngotCastMold
+    {
+        mesh = WorldItems/WoodenMold_IngotCast,
+        texture = WorldItems/WoodenMold_IngotCast,
+        scale = 0.09,
+    }
+	model ClayBarStockMoldUnfired
+    {
+        mesh = WorldItems/LongMetalBar_Cast,
+        texture = WorldItems/LongMetalBar_Cast_Unfired,
+        scale = 0.1,
+    }
+	model ClayBarStockMold
+    {
+        mesh = WorldItems/LongMetalBar_Cast,
+        texture = WorldItems/LongMetalBar_Cast_Fired,
+        scale = 0.1,
+    }
+	model WoodenBarStockCastMold
+    {
+        mesh = WorldItems/WoodenMold_LongMetalBar_Cast,
+        texture = WorldItems/WoodenMold_LongMetalBar_Cast,
+        scale = 0.1,
+    }
+    model CrudeBenchVise
+    {
+        mesh = WorldItems/Vise_Crude,
+        scale = 0.1,
+    }
+	model CrudeBenchViseParts
+    {
+        mesh = WorldItems/Vise_Crude_Parts,
+        scale = 0.1,
+    }
+	model WoodenCrudeBenchVisePartsMold
+    {
+        mesh = WorldItems/WoodenMold_ViceMold_Cast,
+        scale = 0.1,
+    }
+	model ClayCrudeBenchVisePartsMoldUnfired
+    {
+        mesh = WorldItems/CeramicMold_Vise_Crude,
+        texture = WorldItems/CeramicMold_ViseCrude_Unfired,
+        scale = 0.1,
+    }
+	model ClayCrudeBenchVisePartsMold
+    {
+        mesh = WorldItems/CeramicMold_Vise_Crude,
+        texture = WorldItems/CeramicMold_ViseCrude_Fired,
+        scale = 0.1,
+    }
+	model WoodenBenchAnvilMold
+    {
+        mesh = WorldItems/WoodenMold_AnvilJeweller_Cast,
+        scale = 0.1,
+    }
+	model ClayBenchAnvilMoldUnfired
+    {
+        mesh = WorldItems/CeramicMold_AnvilJeweller,
+        texture = WorldItems/CeramicMold_AnvilJeweller_Unfired,
+        scale = 0.1,
+    }
+	model ClayBenchAnvilMold
+    {
+        mesh = WorldItems/CeramicMold_AnvilJeweller,
+        texture = WorldItems/CeramicMold_AnvilJeweller_Fired,
+        scale = 0.1,
+    }
+	model WoodenBlacksmithAnvilMold
+    {
+        mesh = WorldItems/WoodenMold_AnvilJeweller_Cast,
+        scale = 0.25,
+    }
+	model ClayBlacksmithAnvilMoldUnfired
+    {
+        mesh = WorldItems/CeramicMold_AnvilJeweller,
+        texture = WorldItems/CeramicMold_AnvilJeweller_Unfired,
+        scale = 0.25,
+    }
+	model ClayBlacksmithAnvilMold
+    {
+        mesh = WorldItems/CeramicMold_AnvilJeweller,
+        texture = WorldItems/CeramicMold_AnvilJeweller_Fired,
+        scale = 0.25,
+    }
+	model WoodenBlockAnvilMold
+    {
+        mesh = WorldItems/WoodenMold_CeramicCast_AnvilBlock,
+        scale = 0.13,
+    }
+	model ClayBlockAnvilMoldFired
+    {
+        mesh = WorldItems/CeramicCast_AnvilBlock,
+        texture = WorldItems/CeramicCast_AnvilBlock_Fired,
+        scale = 0.13,
+    }
+	model ClayBlockAnvilMoldUnfired
+    {
+        mesh = WorldItems/CeramicCast_AnvilBlock,
+        texture = WorldItems/CeramicCast_AnvilBlock_Unfired,
+        scale = 0.13,
+    }
+	model FlaxPress
+	{
+		mesh = WorldItems/Flax_Press,
+		texture = WorldItems/WoodenMold_IngotCast,
+		scale = 0.1,
+	}
+	model IronBarMold
+	{
+		mesh = WorldItems/Cast_Bar_Metal,
+		texture= WorldItems/Cast_Metal_Iron,
+		scale = 0.125,
+	}
+	model IronIngotMold
+	{
+		mesh = WorldItems/Cast_Ingot_Metal,
+		texture= WorldItems/Cast_Metal_Iron,
+		scale = 0.1,
+	}
+	model SteelBarMold
+	{
+		mesh = WorldItems/Cast_Bar_Metal,
+		texture= WorldItems/Cast_Metal_Steel,
+		scale = 0.125,
+	}
+	model SteelIngotMold
+	{
+		mesh = WorldItems/Cast_Ingot_Metal,
+		texture= WorldItems/Cast_Metal_Steel,
+		scale = 0.1,
+	}
+	model Coke
+	{
+		mesh = WorldItems/Coke,
+		scale = 0.1,
+	}
+
+	model ClayJarUnfired
+	{
+		mesh = WorldItems/ClayJar,
+		texture = WorldItems/ClayJar_Unfired,
+		scale = 0.15,
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0032 0.0000 -0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+			scale = 0.6501,
+		}
+	}
+	model ClayJar
+    {
+        mesh = WorldItems/ClayJar,
+        texture = WorldItems/ClayJar_Fired_Unglazed,
+        scale = 0.15,
+    }
+	model Clay
+	{
+		mesh = WorldItems/Clay,
+		texture = WorldItems/Clay,
+		scale = 0.16,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0186 0.0219 0.0496,
+			rotate = -94.2551 0.0095 -3.3197,
+			scale = 0.3350,
+		}
+	}
+	model ClayTool
+    {
+        mesh = WorldItems/ClaySculptingTool,
+        texture = WorldItems/ClaySculptingTool,
+        scale = 0.1,
+    }
+	model ClayTool2
+    {
+        mesh = WorldItems/ClaySculptingTool_2,
+        texture = WorldItems/ClaySculptingTool2,
+        scale = 0.05,
+    }
+	model ClawhammerHeadForged
+    {
+        mesh = WorldItems/HammerHeadForged,
+        texture = weapons/1handed/Hammer_Forged,
+        scale = 0.125,
+    }
+	model CopperIngot
+    {
+        mesh = WorldItems/Ingot_Iron,
+        texture = WorldItems/Ingot_Copper,
+        scale = 0.09,
+    }
+	model CopperSheet
+    {
+        mesh = WorldItems/Sheet_Copper,
+        texture = WorldItems/Sheet_Copper,
+        scale = 0.1,
+    }
+	model SmallCopperSheet
+    {
+        mesh = WorldItems/Sheet_Copper_Small,
+        texture = WorldItems/Sheet_Copper,
+        scale = 0.05,
+    }
+	model CopperScrap
+    {
+        mesh = WorldItems/Copper_Bits,
+        scale = 0.075,
+    }
+	model IronOre
+    {
+        mesh = WorldItems/IronOre,
+        texture = WorldItems/IronOre_Rock,
+        scale = 0.2,
+    }
+	model IronOre_Crushed
+    {
+        mesh = WorldItems/Ore_Rubble,
+        texture = WorldItems/IronOre_Rock,
+        scale = 0.25,
+    }
+	model CopperOre
+    {
+        mesh = WorldItems/IronOre,
+        texture = WorldItems/CopperOre_Rock,
+        scale = 0.2,
+    }
+	model CopperOre_Crushed
+    {
+        mesh = WorldItems/Ore_Rubble,
+        texture = WorldItems/CopperOre_Rock,
+        scale = 0.25,
+    }
+
+	model CrudeSwordBlade
+    {
+        mesh = WorldItems/SwordSingleEdge_Basic_Blade,
+        texture = weapons/1handed/Sword_SingleEdge_Basic,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 0.0 0.0,
+		}
+    }
+	model CrudeSwordBlade_NoTang
+    {
+        mesh = WorldItems/SwordSingleEdge_Basic_Blade_NoTang,
+        texture = weapons/1handed/Sword_SingleEdge_Basic,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 0.0 0.0,
+		}
+    }
+	model CrudeShortSwordBlade
+    {
+        mesh = WorldItems/Sword_SingleEdgeShort_Blade_Basic,
+        texture = weapons/1handed/Sword_SingleEdge_Basic,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 0.0 0.0,
+		}
+    }
+	model CrudeShortSwordBlade_NoTang
+    {
+        mesh = WorldItems/SwordSingleEdgeShort_Blade_Basic_NoTang,
+        texture = weapons/1handed/Sword_SingleEdge_Basic,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 0.0 0.0,
+		}
+    }
+    model Leather_Brown_Medium
+    {
+        mesh = WorldItems/Leather_Rolled,
+        texture = WorldItems/LeatherRolled_Brown,
+        scale = 0.08,
+    }
+	model RippedSheetsBundle
+	{
+		mesh = WorldItems/Bundle_Rags_Strips,
+		texture = WorldItems/BundleRags,
+		scale = 0.0625,
+	}
+	model LeatherStripsBundle
+	{
+		mesh = WorldItems/Bundle_Rags_Strips,
+		texture = WorldItems/BundleLeather,
+		scale = 0.0625,
+	}
+	model DenimStripsBundle
+	{
+		mesh = WorldItems/Bundle_Rags_Strips,
+		texture = WorldItems/Bundle_Denim,
+		scale = 0.0625,
+	}
+	model GardenFork_Head
+	{
+		mesh = Weapons/1Handed/GardenFork_ForkBroken,
+		texture = Weapons/2Handed/GardenFork,
+	}
+	model GoldBar
+    {
+        mesh = WorldItems/Ingot_Iron,
+        texture = WorldItems/Ingot_Gold,
+        scale = 0.09,
+    }
+	model GoldBarSmall
+    {
+        mesh = WorldItems/Ingot_Iron_Small,
+        texture = WorldItems/Ingot_Gold,
+        scale = 0.045,
+    }
+	model SilverBar
+    {
+        mesh = WorldItems/Ingot_Iron,
+        texture = WorldItems/Ingot_Silver,
+        scale = 0.09,
+    }
+	model SilverBarSmall
+    {
+        mesh = WorldItems/Ingot_Iron_Small,
+        texture = WorldItems/Ingot_Silver,
+        scale = 0.045,
+    }
+	model SmallGoldSheet
+	{
+		mesh = WorldItems/SmallSheetMetal,
+		texture = WorldItems/MetalSheet_Gold,
+		scale = 0.3,
+	}
+	model SmallSilverSheet
+	{
+		mesh = WorldItems/SmallSheetMetal,
+		texture = WorldItems/MetalSheet_Silver,
+		scale = 0.3,
+	}
+	model HacksawBlade
+    {
+        mesh = WorldItems/Saw_Forged_Blade,
+        texture = WorldItems/Saw_Forged,
+        scale = 0.05625,
+	}
+	model HandScytheHeadForged
+    {
+        mesh = WorldItems/HandScythe_Head_Forged,
+		texture = Weapons/1Handed/HandScythe_Forged,
+        scale = 0.125,
+    }
+	model HandAxeHeadForged
+    {
+        mesh =  WorldItems/HandAxe_Forged_Head,
+        texture = weapons/1handed/HandAxe_Forged,
+        scale = 0.125,
+    }
+
+    model Leather_WhitePatches
+    {
+        mesh = WorldItems/Leather_Rolled,
+        texture = WorldItems/LeatherRolled_CowWhitePatches,
+        scale = 0.1,
+    }
+	model HuntingKnifeBladeForged
+    {
+        mesh =  WorldItems/KnifeHunting_Forged_Blade,
+        texture = weapons/1handed/KnifeHunting_Forged,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment knife_stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+    }
+	model IronBarStock
+    {
+        mesh = weapons/2handed/MetalBar_Full_Hand,
+        texture = WorldItems/MetalBar_FullHalfQtr_Iron,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 0.0000,
+		}
+    }
+	model IronBarStockHalf
+    {
+        mesh = weapons/1handed/MetalBar_Half_Hand,
+        texture = WorldItems/MetalBar_FullHalfQtr_Iron,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 0.0000,
+		}
+    }
+	model IronBarStockQuarter
+    {
+        mesh = WorldItems/MetalBar_Quarter,
+        texture = WorldItems/MetalBar_FullHalfQtr_Iron,
+        scale = 0.09,
+    }
+	model IronBarStockPiece
+    {
+        mesh = WorldItems/MetalBar_Tenth,
+        texture = WorldItems/MetalBar_Tenth_Iron,
+        scale = 0.09,
+    }
+	model IronBlock
+    {
+        mesh = WorldItems/Billet_Metal,
+        texture = WorldItems/Billet_Iron,
+        scale = 0.09,
+    }
+	model IronChunk
+    {
+        mesh = WorldItems/Chunk_Metal,
+        texture = WorldItems/Chunk_Iron,
+        scale = 0.09,
+    }
+	model PiercedIronBlock
+    {
+        mesh = WorldItems/Billet_Metal,
+        texture = WorldItems/BilletsHoled_Iron,
+        scale = 0.09,
+    }
+	model PiercedIronChunk
+    {
+        mesh = WorldItems/Chunk_Metal,
+        texture = WorldItems/ChunksHoles_Iron,
+        scale = 0.09,
+    }
+
+    model Leather_White_Small
+    {
+        mesh = WorldItems/Leather_Rolled,
+        texture = WorldItems/LeatherRolled_Sheep,
+        scale = 0.055,
+    }
+
+	model BoneBead_Large
+    {
+        mesh = WorldItems/Cuirass_Bone_Segment,
+        scale = 0.45,
+    }
+	model KitchenKnifeBladeForged
+	{
+		mesh =  WorldItems/KitchenKnife_Forged_Blade,
+		texture = weapons/1handed/KitchenKnife_Forged,
+		scale = 0.125,
+
+		attachment knife_shoulder
+		{
+			offset = 0.0000 0.1500 0.0000,
+			rotate = -90.0000 0.0000 -90.0000,
+		}
+
+		attachment knife_stomach
+		{
+			offset = 0.0000 0.1500 0.0000,
+			rotate = -90.0000 0.0000 -90.0000,
+		}
+
+		attachment stomach
+		{
+			offset = 0.0000 0.1500 0.0000,
+			rotate = -90.0000 0.0000 -90.0000,
+		}
+
+		attachment world
+		{
+			offset = -0.0081 -0.0152 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model CeramicCrucibleUnfired
+    {
+        mesh = WorldItems/Crucible_Ceramic,
+        texture = WorldItems/CrucibleCeramic_Unfired,
+        scale = 0.1,
+    }
+	model CeramicCrucible
+    {
+        mesh = WorldItems/Crucible_Ceramic,
+        texture = WorldItems/CrucibleCeramic_Fired,
+        scale = 0.1,
+    }
+
+	model Handle_Hand
+	{
+		mesh = Weapons/1Handed/Handle_Hand,
+		texture = weapons/1Handed/Handle_Medium_Spiked,
+		scale = 1.0,
+
+		attachment world
+		{
+			offset = -0.0099 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model CrudeHuntingKnifeForgedBlade
+    {
+        mesh = WorldItems/KnifeHunting_Forged_Blade_Basic,
+        texture = weapons/1handed/KnifeHunting_Forged_Basic,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment knife_stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+    }
+	model LongHandle
+	{
+		mesh = Weapons/2Handed/Handle_PickAxe_Hand,
+		texture = Weapons/2Handed/Handle_PickAxe,
+		scale = 1,
+
+		attachment world
+		{
+			offset = -0.0136 0.2399 -0.0000,
+			rotate = -0.0000 0.0000 0.5852,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0080 0.0080 0.0002,
+			rotate = 121.5758 87.4217 -121.6017,
+		}
+	}
+
+	model Handle
+	{
+		mesh = WorldItems/Handle,
+		texture = WorldItems/Handle,
+		scale = 0.4,
+	}
+
+	model SpearLongHeadForged
+	{
+		mesh = weapons/1handed/Spear_Forged_Head_Hand,
+		texture = weapons/2handed/Spear_Forged,
+
+		attachment world
+		{
+			offset = -0.0063 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model SpearShortHeadForged
+	{
+		mesh = weapons/1handed/SpearForged_Basic_Head_Hand,
+		texture = weapons/2handed/SpearForged_Basic,
+
+		attachment world
+		{
+			offset = -0.0126 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model StoneSpearheadLong
+    {
+        mesh = WorldItems/Spear_Stone_High_Head,
+        texture = weapons/2handed/Spear_Stone_High,
+        scale = 0.1,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0228 -0.0018 0.0048,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+		attachment knife_shoulder
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment knife_stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+    }
+	model MaceHead
+    {
+        mesh = WorldItems/Mace_Head,
+        texture = weapons/1handed/Mace,
+        scale = 0.125,
+    }
+
+	model MacheteBladeForged
+	{
+		mesh =  WorldItems/Machete_Forged_Blade,
+		texture = weapons/1handed/Machete_Forged,
+		scale = 0.125,
+
+		attachment knife_shoulder
+		{
+			offset = 0.0000 0.1500 0.0000,
+			rotate = -90.0000 0.0000 -90.0000,
+		}
+
+		attachment knife_stomach
+		{
+			offset = 0.0000 0.1500 0.0000,
+			rotate = -90.0000 0.0000 -90.0000,
+		}
+
+		attachment stomach
+		{
+			offset = 0.0000 0.1500 0.0000,
+			rotate = -90.0000 0.0000 -90.0000,
+		}
+
+		attachment world
+		{
+			offset = -0.0000 -0.0016 -0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+	model MacheteBlade_NoTang
+    {
+        mesh =  WorldItems/Machete_Forged_Blade_NoTang,
+        texture = weapons/1handed/Machete_Forged,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment knife_stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+    }
+	model MeatCleaverBladeForged
+    {
+        mesh =  WorldItems/MeatCleaver_Forged_Blade,
+        texture = weapons/1handed/MeatCleaver_Forged,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment knife_stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+    }
+	model PickAxeHeadForged
+    {
+        mesh = WorldItems/PickAxe_Head_Forged,
+        texture = weapons/2handed/PickAxe_Forged,
+        scale = 0.125,
+    }
+    model Leather_Brown_Small
+    {
+        mesh = WorldItems/Leather_Rolled,
+        texture = WorldItems/LeatherRolled_Brown,
+        scale = 0.055,
+    }
+	model RakeHead
+	{
+		mesh = WorldItems/RakeHead,
+		texture = Weapons/2Handed/Rake,
+		scale = 0.125,
+	}
+	model Sword_Scrap_Shard
+	{
+		mesh = WorldItems/Sword_Basic_Broken_Top,
+        texture = weapons/1handed/Sword_ScrapMetal,
+		scale = 0.1,
+	}
+	model ScytheHeadForged
+    {
+        mesh = WorldItems/ScytheHead_Forged,
+        texture = weapons/2handed/Scythe_Forged,
+        scale = 0.125,
+    }
+    model Leather_White_Medium
+    {
+        mesh = WorldItems/Leather_Rolled,
+        texture = WorldItems/LeatherRolled_Sheep,
+        scale = 0.08,
+    }
+	model ShortSwordBlade
+    {
+        mesh = WorldItems/Sword_SingleEdgeShort_Blade,
+        texture = weapons/1handed/Sword_SingleEdge,
+        scale = 0.095,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 180.0 0.0,
+		}
+    }
+	model ShortSwordBlade_NoTang
+    {
+        mesh = WorldItems/Sword_SingleEdgeShort_Blade_NoTang,
+        texture = weapons/1handed/Sword_SingleEdge,
+        scale = 0.095,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 180.0 0.0,
+		}
+    }
+    model Leather_BrownPatches
+    {
+        mesh = WorldItems/Leather_Rolled,
+        texture = WorldItems/LeatherRolled_CowBrownPatches,
+        scale = 0.1,
+    }
+	model SledgehammerHeadForged
+    {
+        mesh = WorldItems/SledgehammerHeadForged,
+        texture = weapons/2handed/Sledgehammer02_Forged,
+        scale = 0.125,
+    }
+	model SmallHandle
+    {
+        mesh = WorldItems/HandleWooden_Small,
+        scale = 0.1,
+    }
+	model StoneWheel_Big
+	{
+		mesh = WorldItems/StoneWheel_Big,
+		texture = WorldItems/StoneWheel,
+		scale = 0.1,
+	}
+	model StoneWheel_Small
+	{
+		mesh = WorldItems/StoneWheel_Small,
+		texture = WorldItems/StoneWheel,
+		scale = 0.1,
+	}
+	model SpadeHeadForged
+    {
+        mesh =  WorldItems/Spade_Forged_Head,
+        texture = weapons/2handed/Spade_Forged,
+        scale = 0.125,
+        scale = 0.125,
+    }
+	model StoneSpearhead
+    {
+        mesh = WorldItems/Spear_Stone_Basic_Head,
+        texture = weapons/2handed/Spear_Stone_Basic,
+        scale = 0.1,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0228 -0.0018 0.0048,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+		attachment knife_shoulder
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment knife_stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+    }
+	model SteelBarStock
+	{
+		mesh = weapons/2handed/MetalBar_Full_Hand,
+		texture = WorldItems/MetalBar_FullHalfQrt_Steel,
+
+		attachment world
+		{
+			offset = 0.0009 0.0009 0.0117,
+			rotate = 0.0000 90.0000 0.0000,
+		}
+	}
+	model SteelBarStockHalf
+	{
+		mesh = weapons/1handed/MetalBar_Half_Hand,
+		texture = WorldItems/MetalBar_FullHalfQrt_Steel,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0108,
+			rotate = 0.0000 90.0000 0.0000,
+		}
+	}
+	model SteelBarStockQuarter
+    {
+        mesh = WorldItems/MetalBar_Quarter,
+        texture = WorldItems/MetalBar_FullHalfQrt_Steel,
+        scale = 0.09,
+    }
+	model SteelBarStockPiece
+    {
+        mesh = WorldItems/MetalBar_Tenth,
+        texture = WorldItems/MetalBar_Tenth_Steel,
+        scale = 0.09,
+    }
+	model SteelBlock
+    {
+        mesh = WorldItems/Billet_Metal,
+        texture = WorldItems/Billet_Steel,
+        scale = 0.09,
+    }
+	model SteelChunk
+    {
+        mesh = WorldItems/Chunk_Metal,
+        texture = WorldItems/Chunk_Steel,
+        scale = 0.09,
+    }
+	model PiercedSteelBlock
+    {
+        mesh = WorldItems/Billet_Metal,
+        texture = WorldItems/BilletHoled_Steel,
+        scale = 0.09,
+    }
+	model PiercedSteelChunk
+    {
+        mesh = WorldItems/Chunk_Metal,
+        texture = WorldItems/ChunksHoles_Steel,
+        scale = 0.09,
+    }
+	model PiercedSteelIngot
+    {
+        mesh = WorldItems/Ingot_Holed,
+        texture = WorldItems/Ingot_Holed_Steel,
+        scale = 0.085,
+    }
+	model PiercedIronIngot
+    {
+        mesh = WorldItems/Ingot_Holed,
+        texture = WorldItems/Ingot_Holed_Iron,
+        scale = 0.085,
+    }
+	model MetalSheetSmall
+	{
+		mesh = WorldItems/SmallSheetMetal,
+		texture = WorldItems/MetalSheet,
+		scale = 0.3,
+	}
+	model MetalSheet
+	{
+		mesh = WorldItems/MetalSheet,
+		texture = WorldItems/MetalSheet,
+		scale = 0.008,
+	}
+	model StoneMaulHead
+    {
+        mesh = WorldItems/Maul_Stone_Head,
+        texture = weapons/2handed/Maul_Stone,
+        scale = 0.1,
+    }
+	model SwordBlade
+    {
+        mesh = WorldItems/Sword_SingleEdge_Blade,
+        texture = weapons/1handed/Sword_SingleEdge,
+        scale = 0.095,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 180.0 0.0,
+		}
+    }
+	model SwordBlade_NoTang
+    {
+        mesh = WorldItems/Sword_SingleEdge_Blade_NoTang,
+        texture = weapons/1handed/Sword_SingleEdge,
+        scale = 0.095,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 180.0 0.0,
+		}
+    }
+	model BenchAnvil
+    {
+        mesh = WorldItems/Anvil_Jeweller,
+        scale = 0.125,
+    }
+	model BenchAnvilUntreated
+    {
+        mesh = WorldItems/Anvil_Jeweller,
+        texture = WorldItems/Anvil_Jeweller_Rough,
+        scale = 0.125,
+    }
+	model BlockAnvil
+    {
+        mesh = WorldItems/Anvil_Block,
+        scale = 0.13,
+    }
+
+	model LongShaft
+	{
+		mesh = Weapons/2Handed/Shaft_Hand,
+        texture = weapons/2handed/Shaft,
+
+		attachment world
+		{
+			offset = -0.0100 0.2900 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 180.0000 -88.7733 -178.5756,
+		}
+	}
+	model WoodAxeHeadForged
+    {
+        mesh = WorldItems/WoodAxeHead_Forged,
+        texture = weapons/2handed/WoodAxe_Forged,
+        scale = 0.125,
+    }
+	model GlassBlowingPipeFired
+	{
+		mesh = WorldItems/GlassBlowingPipe,
+		texture = WorldItems/GlassBlowingPipe_Fired,
+		scale = 0.08,
+	}
+	model GlassBlowingPipeUnfired
+	{
+		mesh = WorldItems/GlassBlowingPipe,
+		texture = WorldItems/GlassBlowingPipe_Unfired,
+		scale = 0.08,
+	}
+	model ClubHammerForgedHead
+	{
+		mesh = WorldItems/HammerClubHead_Forged,
+		texture = Weapons/1Handed/HammerClub_Forged,
+        scale = 0.12,
+	}
+	model BallPeenHammerHeadForged
+    {
+        mesh = WorldItems/BallPeenHammer_Head,
+        texture = weapons/1handed/BallPeen_Forged,
+        scale = 0.125,
+    }
+
+}

@@ -1,0 +1,181 @@
+module aerx
+{ 
+
+   recipe Make Bone Bead from Small Bones
+    {
+       	aerx.SharpBone_Long/aerx.SmallAnimalBone=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.BoneBead_Large=1,
+        Time:100.0,
+        Category:Carving,
+	NeedToBeLearn:true,
+    }
+
+   recipe Make Bone Bead from Large Bones
+    {
+       	aerx.AnimalBone/aerx.LargeAnimalBone/aerx.JawboneBovide=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.BoneBead_Large=4,
+        Time:100.0,
+        Category:Carving,
+	NeedToBeLearn:true,
+    }
+
+
+   recipe Craft a Bone Cuirass
+    {
+       	aerx.BoneBead_Large=20,
+	LeatherStrips=5,
+	Twine=5,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.Cuirass_Bone=1,
+        Time:100.0,
+        Category:Armor,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft a Bone Left Shin Armor
+    {
+       	aerx.AnimalBone=3,
+	LeatherStrips=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.GreaveBone_Left=1,
+        Time:100.0,
+        Category:Armor,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft a Bone Right Shin Armor
+    {
+       	aerx.AnimalBone=3,
+	LeatherStrips=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.GreaveBone_Right=1,
+        Time:100.0,
+        Category:Armor,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft a Bone Left Forearm Armor
+    {
+       	aerx.SmallAnimalBone=5,
+	LeatherStrips=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.VambraceBone_Left=1,
+        Time:100.0,
+        Category:Armor,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft a Bone Right Forearm Armor
+    {
+       	aerx.SmallAnimalBone=5,
+	LeatherStrips=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.VambraceBone_Right=1,
+        Time:100.0,
+        Category:Armor,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft a Bone Left Shoulder Armor
+    {
+       	aerx.SmallAnimalBone=5,
+	LeatherStrips=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.Shoulderpad_Bone_L=1,
+        Time:100.0,
+        Category:Armor,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft a Bone Right Shoulder Armor
+    {
+       	aerx.SmallAnimalBone=5,
+	LeatherStrips=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.Shoulderpad_Bone_R=1,
+        Time:100.0,
+        Category:Armor,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft a Bone Choker
+    {
+       	aerx.BoneBead_Large=4,
+	LeatherStrips=1,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:Necklace_Choker_Bone=1,
+        Time:100.0,
+        Category:Armor,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft a Bone Left Thigh Armor
+    {
+       	aerx.AnimalBone=3,
+	LeatherStrips=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.ThighBone_L=1,
+        Time:100.0,
+        Category:Armor,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft a Bone Right Thigh Armor
+    {
+       	aerx.AnimalBone=3,
+	LeatherStrips=2,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.ThighBone_R=1,
+        Time:100.0,
+        Category:Armor,
+	NeedToBeLearn:true,
+    }
+
+   recipe Reinforce Gloves with Bones
+    {
+       	aerx.SmallAnimalBone=4,
+	Gloves_LeatherGloves,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.Gloves_BoneGloves=1,
+        Time:100.0,
+        Category:Armor,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft Bone Mask
+    {
+       	aerx.AnimalBone=6,
+	LeatherStrips=1,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.Hat_BoneMask=1,
+        Time:100.0,
+        Category:Armor,
+	NeedToBeLearn:true,
+    }
+
+   recipe Craft Bone Pectoral
+    {
+       	aerx.AnimalBone=6,
+	LeatherStrips=1,
+	Twine=1,
+	keep [Recipe.GetItemTypes.SharpKnife],
+        Result:aerx.Cuirass_BasicBone=1,
+        Time:100.0,
+        Category:Armor,
+	NeedToBeLearn:true,
+    }
+
+}

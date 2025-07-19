@@ -1,0 +1,279 @@
+module Base
+{
+
+	recipe Make Black Paint
+	{
+		FlourPaintBinder/OilPaintBinder/GluePaintBinder,
+		BlackDye,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:PaintBlack,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+	}
+
+	recipe Make Grey Paint
+	{
+		FlourPaintBinder/OilPaintBinder/GluePaintBinder,
+		GreyDye,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:PaintGrey,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+	}
+
+	recipe Make White Paint
+	{
+		FlourPaintBinder/OilPaintBinder/GluePaintBinder,
+		WhiteDye,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:PaintWhite,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+	}
+
+	recipe Make Brown Paint
+	{
+		FlourPaintBinder/OilPaintBinder/GluePaintBinder,
+		BrownDye2,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:PaintBrown,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+	}
+
+	recipe Make Red Paint
+	{
+		FlourPaintBinder/OilPaintBinder/GluePaintBinder,
+		RedDye,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:PaintRed,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+	}
+
+	recipe Make Pink Paint
+	{
+		FlourPaintBinder/OilPaintBinder/GluePaintBinder,
+		PinkDye,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:PaintPink,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+	}
+
+	recipe Make Orange Paint
+	{
+		FlourPaintBinder/OilPaintBinder/GluePaintBinder,
+		OrangeDye,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:PaintOrange,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+	}
+
+	recipe Make Yellow Paint
+	{
+		FlourPaintBinder/OilPaintBinder/GluePaintBinder,
+		YellowDye,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:PaintYellow,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+	}
+
+	recipe Make Green Paint
+	{
+		FlourPaintBinder/OilPaintBinder/GluePaintBinder,
+		GreenDye,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:PaintGreen,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+	}
+
+	recipe Make Blue Paint
+	{
+		FlourPaintBinder/OilPaintBinder/GluePaintBinder,
+		BlueDye,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:PaintBlue,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+	}
+
+	recipe Make Purple Paint
+	{
+		FlourPaintBinder/OilPaintBinder/GluePaintBinder,
+		PurpleDye,
+		PaintbucketEmpty,
+		NearItem:PaintMixingTable,
+		Result:PaintPurple,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Woodwork=4,
+	}
+
+    recipe Mix Paint into Black Hair Dye {
+		PaintBlack,
+		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
+		Water=2,
+       	keep Spoon/WoodenStick,
+       	Result: HairDyeBlack,
+       	Category:Tailoring,
+    	SkillRequired:Tailoring=6,
+		NeedToBeLearn: true,
+    	Sound:MakePlaster,
+        Time: 150,
+    }
+
+	recipe Mix Paint into Red Hair Dye {
+		PaintRed,
+		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
+		Water=2,
+		keep Spoon/WoodenStick,
+		Result: HairDyeRed,
+		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+		NeedToBeLearn: true,
+		Sound:MakePlaster,
+		Time: 150,
+	}
+
+	recipe Mix Paint into Blue Hair Dye {
+		PaintBlue,
+		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
+		Water=2,
+		keep Spoon/WoodenStick,
+		Result: HairDyeBlue,
+		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+		NeedToBeLearn: true,
+		Sound:MakePlaster,
+		Time: 150,
+	}
+
+	recipe Mix Paint into Green Hair Dye {
+		PaintGreen,
+		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
+		Water=2,
+		keep Spoon/WoodenStick,
+		Result: HairDyeGreen,
+		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+		NeedToBeLearn: true,
+		Sound:MakePlaster,
+		Time: 150,
+	}
+
+	recipe Mix Paint into Blonde Hair Dye {
+		PaintYellow,
+		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
+		Water=2,
+		keep Spoon/WoodenStick,
+		Result: HairDyeBlonde,
+		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+		NeedToBeLearn: true,
+		Sound:MakePlaster,
+		Time: 150,
+	}
+
+
+	recipe Mix Paint into Yellow Hair Dye {
+		PaintYellow,
+		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
+		Water=2,
+		keep Spoon/WoodenStick,
+		Result: HairDyeYellow,
+		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+		NeedToBeLearn: true,
+		Sound:MakePlaster,
+		Time: 150,
+	}
+
+	recipe Mix Paint into Brown Hair Dye {
+		PaintBrown/PaintLightBrown,
+		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
+		Water=2,
+		keep Spoon/WoodenStick,
+		Result: HairDyeLightBrown,
+		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+		NeedToBeLearn: true,
+		Sound:MakePlaster,
+		Time: 150,
+	}
+
+	recipe Mix Paint into Strawberry Blonde Hair Dye {
+		PaintYellow,
+		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
+		Water=2,
+		keep Spoon/WoodenStick,
+		Result: HairDyeGinger,
+		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+		NeedToBeLearn: true,
+		Sound:MakePlaster,
+		Time: 150,
+	}
+
+	recipe Mix Paint into White Hair Dye {
+		PaintWhite,
+		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
+		Water=2,
+		keep Spoon/WoodenStick,
+		Result: HairDyeWhite,
+		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+		NeedToBeLearn: true,
+		Sound:MakePlaster,
+		Time: 150,
+	}
+
+
+	recipe Mix Paint into Pink Hair Dye {
+		PaintPink,
+		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
+		Water=2,
+		keep Spoon/WoodenStick,
+		Result: HairDyePink,
+		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+		NeedToBeLearn: true,
+		Sound:MakePlaster,
+		Time: 150,
+	}
+
+}
