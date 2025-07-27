@@ -31,12 +31,6 @@ function DC_ServerManager.ParseLine(slotTabs, line)
 
         table.insert(slotTabs[locType], loc);
     end
-
-    print("LocType ");
-    print(locType);
-
-    print("SlotTabs");
-    print(line);
 end
 
 -- Retrieve the lua from the server and parse it.
@@ -59,28 +53,16 @@ function DC_ServerManager.ParseSlotsConfig(config)
 end
 
 function DC_ServerManager.OnClientCommand(module, command, player, args)
-    print("DC_ServerManager.OnClientCommand");
-
     if module ~= "DeadlineDonatorClothes" then return end;
-
-    print("Module pass");
 
     if command ~= "RequestSlots" then return end;
 
-    print("Command pass");
-
     if not args then return end;
-
-    print("Args pass");
 
     -- Retrieve the config lua.
     local config = getFileReader(config_path, false, false);
     local slotTabs = DC_ServerManager.ParseSlotsConfig(config);
-    print("Returning slot tabs");
-    for k, v in pairs(slotTabs) do
-        print(slotTabs[k]);
-        print(v)
-    end
+
     sendServerCommand(player, "DeadlineDonatorClothes", "ReceiveSlots", { result = slotTabs, item = args.item });
 end
 
