@@ -1,0 +1,25 @@
+name: Upload to Steam Workshop
+
+on:
+  workflow_dispatch:  # Allows manual trigger
+  push:
+    branches:
+      - main           # Change if needed
+
+jobs:
+  workshopUpload:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Upload to Steam Workshop
+        uses: m00nl1ght-dev/steam-workshop-deploy@v3
+        with:
+          username: ${{ secrets.STEAM_USERNAME }}
+          configVdf: ${{ secrets.STEAM_CONFIG_VDF }}
+          path: mods/MyMod                 # Update with your mod's folder path
+          appId: 108600                    # Project Zomboid's App ID
+          publishedFileId: 3522858952     # Your mod's Workshop ID
+          changeNote: "Auto-deployed from GitHub"
