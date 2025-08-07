@@ -1,0 +1,534 @@
+module HCustoms 
+{
+    item Bag_CazadorBackpack
+	{
+	    DisplayCategory             = Bag,
+		Type                        = Container,
+		DisplayName                 = Cazador Backpack,
+		ClothingItem                = Bag_CazadorBackpack,
+        CanBeEquipped               = Back,
+        WeightReduction	            = 90,
+        Weight                      = 2,
+        Capacity                    = 37,
+		Icon                        = CazadorBackpack,
+        OpenSound                   = OpenBag,
+        CloseSound                  = CloseBag,
+        PutInSound                  = PutItemInBag,
+        BloodLocation               = Bag,
+        RunSpeedModifier            = 1.1,
+        CanHaveHoles                = false,
+        AttachmentReplacement       = Bag,
+        AttachmentsProvided  	    = ModularPackFlashlight,
+        ReplaceInSecondHand         = Bag_CazadorBackpack_Lhand holdingbagleft,
+        ReplaceInPrimaryHand        = Bag_CazadorBackpack_HCustomsand holdingbagright,
+        WorldStaticModel            = CazadorBackpack_Ground,
+	}
+
+    item Zoidbag
+    {
+	    DisplayCategory             = Bag,
+		Type                        = Container,
+		DisplayName                 = Zoidbag,
+		ClothingItem                = Bag_Zoidbag,
+        CanBeEquipped               = Back,
+        WeightReduction	            = 70,
+        Weight                      = 1.7,
+        Capacity                    = 25,
+		Icon                        = Zoidbag,
+        OpenSound                   = OpenBag,
+        CloseSound                  = CloseBag,
+        PutInSound                  = PutItemInBag,
+        BloodLocation               = Bag,
+        RunSpeedModifier            = 0.9,
+        CanHaveHoles                = false,
+        AttachmentReplacement       = Bag,
+        ReplaceInSecondHand         = Bag_Zoidbag_Lhand holdingbagleft,
+        ReplaceInPrimaryHand        = Bag_Zoidbag_HCustomsand holdingbagright,
+        WorldStaticModel            = Zoidbag,
+    }
+
+    item DropLegPouchBlack_L
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,
+        DisplayName	                = Drop Leg Pouch Black,
+		ClothingItem                = Bag_DropLegBlack_L,
+        ClothingItemExtra           = HCustoms.DropLegPouchBlack_R,
+        ClothingItemExtraOption     = SwapRight,
+        clothingExtraSubmenu        = SwapLeft,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegBlack,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 888,
+		WorldStaticModel            = DropLegBlack_Ground,	
+    }
+
+    item DropLegPouchBlack_R
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,	
+        DisplayName	                = Drop Leg Pouch Black,
+		ClothingItem                = Bag_DropLegBlack_R,
+        ClothingItemExtra           = HCustoms.DropLegPouchBlack_L,
+        ClothingItemExtraOption     = SwapLeft,
+        clothingExtraSubmenu        = SwapRight,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegBlack,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 898,
+		WorldStaticModel            = DropLegBlack_Ground,	
+    }
+
+    item DropLegPouchBlue_L
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,
+        DisplayName	                = Drop Leg Pouch Blue,
+		ClothingItem                = Bag_DropLegBlue_L,
+        ClothingItemExtra           = HCustoms.DropLegPouchBlue_R,
+        ClothingItemExtraOption     = SwapRight,
+        clothingExtraSubmenu        = SwapLeft,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegBlue,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 888,
+		WorldStaticModel            = DropLegBlue_Ground,	
+    }
+
+    item DropLegPouchBlue_R
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,	
+        DisplayName	                = Drop Leg Pouch Blue,
+		ClothingItem                = Bag_DropLegBlue_R,
+        ClothingItemExtra           = HCustoms.DropLegPouchBlue_L,
+        ClothingItemExtraOption     = SwapLeft,
+        clothingExtraSubmenu        = SwapRight,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegBlue,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 898,
+		WorldStaticModel            = DropLegBlue_Ground,	
+    }
+
+    item DropLegPouchRed_L
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,
+        DisplayName	                = Drop Leg Pouch Red,
+		ClothingItem                = Bag_DropLegRed_L,
+        ClothingItemExtra           = HCustoms.DropLegPouchRed_R,
+        ClothingItemExtraOption     = SwapRight,
+        clothingExtraSubmenu        = SwapLeft,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegRed,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 888,
+		WorldStaticModel            = DropLegRed_Ground,	
+    }
+
+    item DropLegPouchRed_R
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,	
+        DisplayName	                = Drop Leg Pouch Red,
+		ClothingItem                = Bag_DropLegRed_R,
+        ClothingItemExtra           = HCustoms.DropLegPouchRed_L,
+        ClothingItemExtraOption     = SwapLeft,
+        clothingExtraSubmenu        = SwapRight,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegRed,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 898,
+		WorldStaticModel            = DropLegRed_Ground,	
+    }
+
+    item DropLegPouchOlive_L
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,
+        DisplayName	                = Drop Leg Pouch Olive,
+		ClothingItem                = Bag_DropLegOlive_L,
+        ClothingItemExtra           = HCustoms.DropLegPouchOlive_R,
+        ClothingItemExtraOption     = SwapRight,
+        clothingExtraSubmenu        = SwapLeft,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegOlive,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 888,
+		WorldStaticModel            = DropLegOlive_Ground,	
+    }
+
+    item DropLegPouchOlive_R
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,	
+        DisplayName	                = Drop Leg Pouch Olive,
+		ClothingItem                = Bag_DropLegOlive_R,
+        ClothingItemExtra           = HCustoms.DropLegPouchOlive_L,
+        ClothingItemExtraOption     = SwapLeft,
+        clothingExtraSubmenu        = SwapRight,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegOlive,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 898,
+		WorldStaticModel            = DropLegOlive_Ground,	
+    }
+
+    item DropLegPouchTan_L
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,
+        DisplayName	                = Drop Leg Pouch Tan,
+		ClothingItem                = Bag_DropLegTan_L,
+        ClothingItemExtra           = HCustoms.DropLegPouchTan_R,
+        ClothingItemExtraOption     = SwapRight,
+        clothingExtraSubmenu        = SwapLeft,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegTan,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 888,
+		WorldStaticModel            = DropLegTan_Ground,	
+    }
+
+    item DropLegPouchTan_R
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,	
+        DisplayName	                = Drop Leg Pouch Tan,
+		ClothingItem                = Bag_DropLegTan_R,
+        ClothingItemExtra           = HCustoms.DropLegPouchTan_L,
+        ClothingItemExtraOption     = SwapLeft,
+        clothingExtraSubmenu        = SwapRight,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegTan,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 898,
+		WorldStaticModel            = DropLegTan_Ground,	
+    }
+
+    item DropLegPouchWoodland_L
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,
+        DisplayName	                = Drop Leg Pouch Woodland,
+		ClothingItem                = Bag_DropLegWoodland_L,
+        ClothingItemExtra           = HCustoms.DropLegPouchWoodland_R,
+        ClothingItemExtraOption     = SwapRight,
+        clothingExtraSubmenu        = SwapLeft,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegWoodland,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 888,
+		WorldStaticModel            = DropLegWoodland_Ground,	
+    }
+
+    item DropLegPouchWoodland_R
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,	
+        DisplayName	                = Drop Leg Pouch Woodland,
+		ClothingItem                = Bag_DropLegWoodland_R,
+        ClothingItemExtra           = HCustoms.DropLegPouchWoodland_L,
+        ClothingItemExtraOption     = SwapLeft,
+        clothingExtraSubmenu        = SwapRight,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegWoodland,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 898,
+		WorldStaticModel            = DropLegWoodland_Ground,	
+    }
+
+    item DropLegPouchPink_L
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,
+        DisplayName	                = Drop Leg Pouch Pink,
+		ClothingItem                = Bag_DropLegPink_L,
+        ClothingItemExtra           = HCustoms.DropLegPouchPink_R,
+        ClothingItemExtraOption     = SwapRight,
+        clothingExtraSubmenu        = SwapLeft,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegPink,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 888,
+		WorldStaticModel            = DropLegPink_Ground,	
+    }
+
+    item DropLegPouchPink_R
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,	
+        DisplayName	                = Drop Leg Pouch Pink,
+		ClothingItem                = Bag_DropLegPink_R,
+        ClothingItemExtra           = HCustoms.DropLegPouchPink_L,
+        ClothingItemExtraOption     = SwapLeft,
+        clothingExtraSubmenu        = SwapRight,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegPink,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 898,
+		WorldStaticModel            = DropLegPink_Ground,	
+    }
+
+    item DropLegPouchLeather_L
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,
+        DisplayName	                = Drop Leg Pouch Leather,
+		ClothingItem                = Bag_DropLegLeather_L,
+        ClothingItemExtra           = HCustoms.DropLegPouchLeather_R,
+        ClothingItemExtraOption     = SwapRight,
+        clothingExtraSubmenu        = SwapLeft,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegLeather,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 888,
+		WorldStaticModel            = DropLegLeather_Ground,	
+    }
+
+    item DropLegPouchLeather_R
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,	
+        DisplayName	                = Drop Leg Pouch Leather,
+		ClothingItem                = Bag_DropLegLeather_R,
+        ClothingItemExtra           = HCustoms.DropLegPouchLeather_L,
+        ClothingItemExtraOption     = SwapLeft,
+        clothingExtraSubmenu        = SwapRight,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegLeather,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 898,
+		WorldStaticModel            = DropLegLeather_Ground,	
+    }
+
+    item DropLegPouchWhite_L
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,
+        DisplayName	                = Drop Leg Pouch White,
+		ClothingItem                = Bag_DropLegWhite_L,
+        ClothingItemExtra           = HCustoms.DropLegPouchWhite_R,
+        ClothingItemExtraOption     = SwapRight,
+        clothingExtraSubmenu        = SwapLeft,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegWhite,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 888,
+		WorldStaticModel            = DropLegWhite_Ground,	
+    }
+
+    item DropLegPouchWhite_R
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,	
+        DisplayName	                = Drop Leg Pouch White,
+		ClothingItem                = Bag_DropLegWhite_R,
+        ClothingItemExtra           = HCustoms.DropLegPouchWhite_L,
+        ClothingItemExtraOption     = SwapLeft,
+        clothingExtraSubmenu        = SwapRight,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegWhite,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 898,
+		WorldStaticModel            = DropLegWhite_Ground,	
+    }
+
+    item DropLegPouchZoidberg_L
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,
+        DisplayName	                = Drop Leg Pouch Zoidberg,
+		ClothingItem                = Bag_DropLegZoidberg_L,
+        ClothingItemExtra           = HCustoms.DropLegPouchZoidberg_R,
+        ClothingItemExtraOption     = SwapRight,
+        clothingExtraSubmenu        = SwapLeft,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegZoidberg,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 888,
+		WorldStaticModel            = DropLegZoidberg_Ground,	
+    }
+
+    item DropLegPouchZoidberg_R
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,	
+        DisplayName	                = Drop Leg Pouch Zoidberg,
+		ClothingItem                = Bag_DropLegZoidberg_R,
+        ClothingItemExtra           = HCustoms.DropLegPouchZoidberg_L,
+        ClothingItemExtraOption     = SwapLeft,
+        clothingExtraSubmenu        = SwapRight,
+        WeightReduction	            = 85,
+        Weight	                    = 0.1,
+        Capacity	                = 6,
+		Icon                        = DropLegZoidberg,
+        CanHaveHoles                = false,
+        BloodLocation               = Bag,
+		BodyLocation                = 888,
+        CanBeEquipped               = 898,
+		WorldStaticModel            = DropLegZoidberg_Ground,	
+    }
+
+    item Bag_TaskForceDropLeg
+    {
+	    DisplayCategory             = Bag,	
+        Type	                    = Container,
+        DisplayName	                = Task Force Drop Leg Pouch,
+		ClothingItem                = Bag_TaskForceDropLeg,
+        ClothingItemExtra           = HCustoms.Bag_TaskForceDropLeg,
+        ClothingItemExtraOption     = Wear,
+        WeightReduction	            = 80,
+        Capacity	                = 5,
+        Weight	                    = 0.1,
+		Icon                        = TaskForceDropLeg,
+        CanHaveHoles                = false,
+		BodyLocation                = 888,
+        CanBeEquipped               = 888,
+        BloodLocation               = Bag,
+		WorldStaticModel            = TaskForceDropLeg_Ground,	
+    }
+
+    item Bag_TaskForceChestAttachments
+    {
+	    DisplayCategory             = Bag,
+        Type	                    = Container,
+        DisplayName	                = Task Force Chest Rig Attachments,
+		ClothingItem                = Bag_TaskForceChestAttachments,
+        ClothingItemExtra           = HCustoms.Bag_TaskForceChestAttachments,
+        ClothingItemExtraOption     = Wear,
+        WeightReduction	            = 80,
+        Capacity	                = 8,
+        Weight	                    = 0.2,
+        Icon	                    = TaskForceChestAttachments,
+        CanHaveHoles                = false,
+        CanBeEquipped               = 668,
+		BodyLocation                = 668,
+        BloodLocation               = Bag,
+        WorldStaticModel            = TaskForceChestAttachments_Ground,
+    }
+
+    item Bag_FireBreathersPack
+    {
+	    DisplayCategory             = Bag,
+		Type                        = Container,
+		DisplayName                 = Fire Breathers Utility Pack,
+		ClothingItem                = Bag_FireBreathersPack,
+        CanBeEquipped               = Back,
+        WeightReduction	            = 80,
+        Weight	                    = 2,
+        Capacity	                = 25,
+        Icon	                    = FireBreathersPack,
+        OpenSound                   = OpenBag,
+        CloseSound                  = CloseBag,
+        PutInSound                  = PutItemInBag,
+        BloodLocation               = Bag,
+        CanHaveHoles                = false,
+        AttachmentReplacement       = Bag,
+        AttachmentsProvided  	    = ModularPackFlashlight,
+        ReplaceInSecondHand         = Bag_FireBreathersPack_LHand holdingbagleft,
+        ReplaceInPrimaryHand        = Bag_FireBreathersPack_RHand holdingbagright,
+        WorldStaticModel            = FireBreathersPack_Ground,
+    }
+
+    item Bag_WastelandAegisBackpack
+	{
+	    DisplayCategory             = Bag,
+		Type                        = Container,
+		DisplayName                 = Wasteland Aegis Backpack,
+		ClothingItem                = Bag_WastelandAegisBackpack,
+        CanBeEquipped               = Back,
+        WeightReduction	            = 80,
+        Weight                      = 1,
+        Capacity                    = 30,
+		Icon                        = WastelandAegisBackpack,
+        OpenSound                   = OpenBag,
+        CloseSound                  = CloseBag,
+        PutInSound                  = PutItemInBag,
+        BloodLocation               = Bag,
+        RunSpeedModifier            = 1.1,
+        CanHaveHoles                = false,
+        AttachmentReplacement       = Bag,
+        AttachmentsProvided         = ModularPackUtilitySlot4;ModularPackLeft;ModularPackFlashlight,
+        ReplaceInSecondHand         = Bag_WastelandAegisBackpack_Lhand holdingbagleft,
+        ReplaceInPrimaryHand        = Bag_WastelandAegisBackpack_Rhand holdingbagright,
+        WorldStaticModel            = WastelandAegisBackpack_Ground,
+	}
+}

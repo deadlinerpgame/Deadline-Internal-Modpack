@@ -49,4 +49,40 @@ item T1RevolverAmmo
 		WorldStaticModel = 9mmRounds,
 	}
 
+item IGunpowder
+    {
+        DisplayCategory = Material,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseDelta = 0.1,
+        UseWhileEquipped = FALSE,
+        DisplayName	=	Improvised Gunpowder,
+        Icon	=	Blackpowder,
+        WeightEmpty = 0.01,
+        WorldStaticModel = GunpowderJar,
+    }
+
+item T2AmmoRegular
+	{
+		DisplayName = Scrap Round,
+		DisplayCategory = Ammo,
+		Type = Normal,
+		Weight = 0.02,
+		Icon = PistolAmmo,
+		Count = 1,
+		WorldStaticModel = 9mmRounds,
+	}
+
+item T2AmmoShotgun
+	{
+		DisplayName = Scrap Shell,
+		DisplayCategory = Ammo,
+		Type = Normal,
+		Weight = 0.06,
+		Icon = ShotgunAmmo,
+		Count = 1,
+		WorldStaticModel = ShotGunShells,
+	}
+
+
 }
