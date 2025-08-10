@@ -652,7 +652,7 @@ function WRC.Meta.CreateActionsContext(context, myPlayer, players)
         else
             local privateablePlayers = WRC.GetAllPlayersInRange(5, 0)
             if #privateablePlayers == 1 then
-                local name = WRC.Meta.GetName(privateablePlayers[1]:getUsername()) .. " (" .. privateablePlayers[1]:getUsername() .. ")"
+                local name = WRC.Meta.GetName(privateablePlayers[1]:getUsername())
                 actionsContext:addOption("Invite Private: " .. name, privateablePlayers[1]:getUsername(), WRC.Meta.InvitePrivate)
             end
         end

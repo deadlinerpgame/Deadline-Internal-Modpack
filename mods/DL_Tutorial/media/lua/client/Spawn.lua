@@ -35,8 +35,8 @@ local function spawn()
         playerObj:setY(2271);
         playerObj:setZ(1);
     elseif chosenpoint == 3 then
-        playerObj:setX(10507);
-        playerObj:setY(38966);
+        playerObj:setX(10478);
+        playerObj:setY(3863);
         playerObj:setZ(0);
     elseif chosenpoint == 4 then
         playerObj:setX(16477);
@@ -52,8 +52,8 @@ end
 local function onCreateUI()
     UI = NewUI(0.15);
     UI:addText("title1", "Choose a Spawn Location", "Title", "Center");
-    UI:setLineHeightPercent(0.04);    
-    UI:setWidthPercent(0.55);
+    UI:setLineHeightPercent(0.03);    
+    UI:setWidthPercent(0.50);
     UI["title1"]:setBorder(false);
     UI:nextLine();
 
