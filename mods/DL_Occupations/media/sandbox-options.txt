@@ -1,0 +1,19 @@
+VERSION = 1,
+
+option DeadlineOccupations.AddictDecreasePercentage =
+{
+    type = integer, min = 1, max = 99, default = 1,
+    page = DeadlineOccupations, translation = DeadlineOccupations_AddictDecreasePercentage,
+}
+
+option DeadlineOccupations.AddictDecreaseTimeHrs =
+{
+    type = integer, min = 1, max = 9999, default = 1,
+    page = DeadlineOccupations, translation = DeadlineOccupations_AddictDecreaseTimeHrs,
+}
+
+option DeadlineOccupations.AddictDetoxTimeDays =
+{
+    type = integer, min = 1, max = 999, default = 1,
+    page = DeadlineOccupations, translation = DeadlineOccupations_AddictDetoxTimeDays,
+}
