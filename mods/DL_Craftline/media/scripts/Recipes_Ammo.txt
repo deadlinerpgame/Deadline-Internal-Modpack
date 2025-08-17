@@ -45,4 +45,40 @@ module aerx {
 		Category:Firearms,
 	}
 
+	recipe Craft Improvised Gunpowder
+	{
+		aerx.BlackPowder=40,
+		Base.Sugar=1,
+		Base.Disinfectant/Base.WhiskeyFull/Base.BeerCan/Base.BeerBottle/Deadline.BeerLager/Deadline.BeerAle/Deadline.BeerWheatBeer/Deadline.BeerIPA/Deadline.BeerStout/Deadline.BeerStoutCoffee/Deadline.BeerStoutChocolate/Deadline.BeerFritBluebrry/Deadline.BeerFruitCherry/Deadline.BeerFruitStrawberry/Deadline.BeerFruitLemon/Deadline.BeerFruitApple/Deadline.BeerPear/Deadline.CiderApple/Deadline.CiderBlackberry/Deadline.CiderPear/Deadline.LiquerOrange/Deadline.LiquerLemon/Deadline.LiquerLime/Deadline.LiquerCherry/Deadline.LiquerBlueberry/Deadline.LiquerBlackberry/Deadline.LiquerPeach/Deadline.LiquerPear/Deadline.LiquerCoffee=1,
+		keep Base.MortarPestle,
+		keep Base.Pot,
+		OnCreate:Recipe.OnCreate.ReturnBottleOrCan,
+		Result:aerx.IGunpowder=2,
+		Time:50.0,
+		Category:Firearms,
+		
+	}
+
+	recipe Craft Scrap Ammo
+	{
+		aerx.IGunpowder=1,
+		aerx.AluminumFragments/aerx.TnFragments/aerx.CopperFragments/aerx.NickelFragments/aerx.LeadFragments/aerx.IronFragments/aerx.ZincFragments=2,
+		Base.Wire/Base.Nails/Base.Screws=2,
+		keep Base.MortarPestle,
+		Result:aerx.T2AmmoRegular=4,
+		Time:100.0,
+		Category:Firearms,
+	}
+
+	recipe Craft Scrap Shells
+	{
+		aerx.IGunpowder=1,
+		aerx.AluminumFragments/aerx.TnFragments/aerx.CopperFragments/aerx.NickelFragments/aerx.LeadFragments/aerx.IronFragments/aerx.ZincFragments=2,
+		Base.Wire/Base.Nails/Base.Screws=2,
+		keep Base.MortarPestle,
+		Result:aerx.T2AmmoShotgun=4,
+		Time:100.0,
+		Category:Firearms,
+	}
+
 }

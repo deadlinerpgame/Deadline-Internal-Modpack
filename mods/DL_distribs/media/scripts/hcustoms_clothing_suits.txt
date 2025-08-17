@@ -1,0 +1,574 @@
+module  HCustoms 
+{
+    item SpiffoSuit_Stitches
+    {
+        DisplayCategory         =   Clothing,
+        Type                    =   Clothing,
+        DisplayName             =   Spiffo Suit Stitches,
+        ClothingItem            =   SpiffoSuit_Stitches,
+        BodyLocation            =   FullSuit,
+        BloodLocation           =   Trousers;Jumper,
+        Icon                    =   SpiffoSuitStitches,
+        RunSpeedModifier        =   0.9,
+       	ScratchDefense          =   10,
+        Insulation              =   0.85,
+        WindResistance          =   0.6,
+		FabricType              =   Cotton,
+        WorldStaticModel        =   SpiffoSuitStitches_Ground,
+    }
+
+    item WraithSuit
+    {
+        DisplayCategory         =   Clothing,
+        Type                    =   Clothing,
+        DisplayName             =   Wraith Suit,
+        ClothingItem            =   WraithSuit,
+        BodyLocation            =   FullSuit,
+        BloodLocation           =   Jumper;Shoes;Groin,
+		IconsForTexture         =   AshenWraith;CryptWraith;ObsidianWraith,
+        CanHaveHoles            =   true,
+        RunSpeedModifier        =   1.1,
+        BulletDefense           =   15,
+      	BiteDefense             =   25,
+       	ScratchDefense          =   35,
+        Insulation              =   0.7,
+        WindResistance          =   0.7,
+        WaterResistance         =   0.8,
+        FabricType              =   Leather,
+        WorldStaticModel        =   WraithSuit_Ground,
+    }
+
+    item DarkFormSuit
+    {
+        DisplayCategory         =   Clothing,
+        Type                    =   Clothing,
+        DisplayName             =   Dark Form Suit,
+        ClothingItem            =   DarkFormSuit,
+        BodyLocation            =   Torso1Legs1,
+        BloodLocation           =   Jumper;Shoes;Groin,
+		IconsForTexture         =   DarkFormBlue;DarkFormGold;DarkFormMidnight;DarkFormRed;DarkFormStone,
+        CanHaveHoles            =   true,
+        RunSpeedModifier        =   1.1,
+        BulletDefense           =   15,
+      	BiteDefense             =   25,
+       	ScratchDefense          =   35,
+        Insulation              =   0.5,
+        WindResistance          =   0.5,
+        WaterResistance         =   0.5,
+        FabricType              =   Leather,
+        WorldStaticModel        =   DarkFormSuit_Ground,
+    }
+
+    item BigFootSuit
+    {
+        DisplayCategory         = Clothing,
+        Type                    = Clothing,
+        DisplayName             = Big Foot Body,
+        ClothingItem            = BigFootSuit,
+        BodyLocation            = FullSuit,
+        BloodLocation           = Jumper;Shoes;Groin,
+        Icon                    = BigFootSuit,
+        CanHaveHoles            = true,
+        RunSpeedModifier        = 1.1,
+        BulletDefense           = 15,
+      	BiteDefense             = 25,
+       	ScratchDefense          = 35,
+        Insulation              = 0.9,
+        WindResistance          = 0.7,
+        WaterResistance         = 0.8,
+        FabricType              = Leather,
+        WorldStaticModel        = BigFootSuit_Ground,
+    }
+
+    item Hat_BigFootHead
+	{
+	    DisplayCategory         = Accessory,
+		Type                    = Clothing,
+		DisplayName             = Big Foot Head,
+		ClothingItem            = Hat_BigFootHead,
+		BodyLocation            = FullHat,
+		Icon                    = BigFootHead,
+		CanHaveHoles            = false,
+        BloodLocation           = Head,
+        BulletDefense           = 40,
+      	BiteDefense             = 50,
+       	ScratchDefense          = 60,
+        Insulation              = 0.9,
+        WindResistance          = 0.7,
+        WaterResistance         = 0.8,
+		WorldStaticModel        = BigFootHead_Ground,
+    }
+
+    item YetiSuit
+    {
+        DisplayCategory     =   Clothing,
+        Type                =   Clothing,
+        DisplayName         =   Yeti Body,
+        ClothingItem        =   YetiSuit,
+        BodyLocation        =   FullSuit,
+        BloodLocation       =   Jumper;Shoes;Groin,
+        Icon                =   YetiSuit,
+        CanHaveHoles        =   true,
+        RunSpeedModifier    =   1.1,
+        BulletDefense       =   15,
+      	BiteDefense         =   25,
+       	ScratchDefense      =   35,
+        Insulation          =   0.9,
+        WindResistance      =   0.7,
+        WaterResistance     =   0.8,
+        FabricType          =   Leather,
+        WorldStaticModel    =   YetiSuit_Ground,
+    }
+
+    item Hat_YetiHead
+	{
+	    DisplayCategory		= 	Accessory,
+		Type 				= 	Clothing,
+		DisplayName 		= 	Yeti Head,
+		ClothingItem 		= 	Hat_YetiHead,
+		BodyLocation 		= 	FullHat,
+		Icon 				= 	YetiHead,
+		CanHaveHoles 		= 	false,
+        BloodLocation		= 	Head,
+        BulletDefense 		= 	40,
+      	BiteDefense 		= 	50,
+       	ScratchDefense 		= 	60,
+        Insulation 			= 	0.9,
+        WindResistance 		= 	0.7,
+        WaterResistance 	= 	0.8,
+		WorldStaticModel 	= 	YetiHead_Ground,
+    }
+
+    item StayPuftSuit
+    {
+        DisplayCategory     = Clothing,
+        Type                = Clothing,
+        DisplayName         = Stay Puft Suit,
+        ClothingItem        = StayPuftSuit,
+        BodyLocation        = FullSuit,
+        BloodLocation       = Trousers;Jumper,
+        Icon                = StayPuftSuit,
+        CanHaveHoles        = true,
+        RunSpeedModifier    = 0.7,
+        BulletDefense       = 15,
+      	BiteDefense         = 25,
+       	ScratchDefense      = 35,
+        Insulation          = 0.9,
+        WindResistance      = 0.7,
+        WaterResistance     = 0.8,
+        FabricType          = Leather,
+        WorldStaticModel    = StayPuftSuit_Ground,
+    }
+
+	item Hat_StayPuft
+	{
+	    DisplayCategory		= 	Accessory,
+		Type 				= 	Clothing,
+		DisplayName 		= 	Stay Puft Head,
+		ClothingItem 		= 	Hat_StayPuft,
+		BodyLocation 		= 	FullHat,
+		Icon 				= 	StayPuftHead,
+		CanHaveHoles 		= 	false,
+        BloodLocation		= 	Head,
+        BulletDefense       =   10,
+      	BiteDefense         =   20,
+       	ScratchDefense      =   30,
+        Insulation 			= 	0.75,
+        WindResistance 		= 	0.75,
+        WaterResistance 	= 	0.75,
+		Tags                = 	GasMask,
+		WorldStaticModel 	= 	StayPuftHead_Ground,
+    }
+
+    item GenkiSuit
+    {
+        DisplayCategory     = Clothing,
+        Type                = Clothing,
+        DisplayName         = Professor Genki Suit,
+        ClothingItem        = GenkiSuit,
+        BodyLocation        = FullSuit,
+        BloodLocation       = Trousers;Jumper,
+        Icon                = GenkiSuit,
+        CanHaveHoles        = true,
+        RunSpeedModifier    = 0.7,
+        BulletDefense       = 15,
+      	BiteDefense         = 25,
+       	ScratchDefense      = 35,
+        Insulation          = 0.9,
+        WindResistance      = 0.7,
+        WaterResistance     = 0.8,
+        FabricType          = Leather,
+        WorldStaticModel    = GenkiSuit_Ground,
+    }
+
+    item Hat_Genki
+	{
+	    DisplayCategory		= 	Accessory,
+		Type 				= 	Clothing,
+		DisplayName 		= 	Professor Genki Head,
+		ClothingItem 		= 	Hat_Genki,
+		BodyLocation 		= 	FullHat,
+		Icon 				= 	GenkiHead,
+		CanHaveHoles 		= 	false,
+        BloodLocation		= 	Head,
+        BulletDefense       =   10,
+      	BiteDefense         =   20,
+       	ScratchDefense      =   30,
+        Insulation 			= 	0.75,
+        WindResistance 		= 	0.75,
+        WaterResistance 	= 	0.75,
+		Tags                =   GasMask,
+		WorldStaticModel 	= 	GenkiHead_Ground,
+    }
+
+    item MannequinMaleBodyBlack
+	{
+        DisplayCategory             = Clothing,		
+		Type                        = Clothing,
+		DisplayName                 = Mannequin Male Body Black,
+		ClothingItem                = Body_MannequinMaleBlack,
+        ClothingItemExtra           = HCustoms.MannequinMaleBodyWhite,
+        ClothingItemExtraOption     = BodySwap,
+		BodyLocation                = Torso1Legs1,
+        Icon                        = MannequinMaleBlack,
+        CanHaveHoles                = false,
+		WorldStaticModel            = MannequinMaleBlack,		
+	}		
+
+    item MannequinMaleBodyWhite
+	{
+        DisplayCategory             = Clothing,		
+		Type                        = Clothing,
+		DisplayName                 = Mannequin Male Body White,
+		ClothingItem                = Body_MannequinMaleWhite,
+        ClothingItemExtra           = HCustoms.MannequinMaleScarecrow,
+        ClothingItemExtraOption     = BodySwap,
+		BodyLocation                = Torso1Legs1,
+        Icon                        = MannequinMaleWhite,
+        CanHaveHoles                = false,
+		WorldStaticModel            = MannequinMaleWhite,	
+	}	
+
+    item MannequinMaleScarecrow
+	{
+        DisplayCategory             = Clothing,		
+		Type                        = Clothing,
+		DisplayName                 = Mannequin Male Scarecrow,
+		ClothingItem                = Body_MannequinMaleScarecrow,
+        ClothingItemExtra           = HCustoms.MannequinMaleBodyGreen,
+        ClothingItemExtraOption     = BodySwap,
+		BodyLocation                = Torso1Legs1,
+        Icon                        = MannequinMaleScarecrow,
+        CanHaveHoles                = false,
+		WorldStaticModel            = MannequinMaleScarecrow,		
+	}
+
+    item MannequinMaleBodyGreen
+	{
+        DisplayCategory             = Clothing,		
+		Type                        = Clothing,
+		DisplayName                 = Mannequin Male Body Green,
+		ClothingItem                = Body_MannequinMaleGreen,
+        ClothingItemExtra           = HCustoms.MannequinMaleBodyBlack,
+        ClothingItemExtraOption     = BodySwap,
+		BodyLocation                = Torso1Legs1,
+        Icon                        = MannequinMaleGreen,
+        CanHaveHoles                = false,
+		WorldStaticModel            = MannequinMaleGreen,
+	}	
+
+    item MannequinFemaleBodyBlack
+	{
+        DisplayCategory             = Clothing,		
+		Type                        = Clothing,
+		DisplayName                 = Mannequin Female Body Black,
+		ClothingItem                = Body_MannequinFemaleBlack,
+        ClothingItemExtra           = HCustoms.MannequinFemaleBodyWhite,
+        ClothingItemExtraOption     = BodySwap,
+		BodyLocation                = Torso1Legs1,
+        Icon                        = MannequinFemaleBlack,
+        CanHaveHoles                = false,
+		WorldStaticModel            = MannequinFemaleBlack,
+	}		
+
+    item MannequinFemaleBodyWhite
+	{
+        DisplayCategory             = Clothing,		
+		Type                        = Clothing,
+		DisplayName                 = Mannequin Female Body White,
+		ClothingItem                = Body_MannequinFemaleWhite,
+        ClothingItemExtra           = HCustoms.MannequinFemaleScarecrow,
+        ClothingItemExtraOption     = BodySwap,
+		BodyLocation                = Torso1Legs1,
+        Icon                        = MannequinFemaleWhite,
+        CanHaveHoles                = false,
+		WorldStaticModel            = MannequinFemaleWhite,	
+	}	
+
+    item MannequinFemaleScarecrow
+	{
+        DisplayCategory             = Clothing,		
+		Type                        = Clothing,
+		DisplayName                 = Mannequin Female Scarecrow,
+		ClothingItem                = Body_MannequinFemaleScarecrow,
+        ClothingItemExtra           = HCustoms.MannequinFemaleBodyGreen,
+        ClothingItemExtraOption     = BodySwap,
+		BodyLocation                = Torso1Legs1,
+        Icon                        = MannequinFemaleScarecrow,
+        CanHaveHoles                = false,
+		WorldStaticModel            = MannequinFemaleScarecrow,	
+	}
+
+    item MannequinFemaleBodyGreen
+	{
+        DisplayCategory             = Clothing,		
+		Type                        = Clothing,
+		DisplayName                 = Mannequin Female Body Green,
+		ClothingItem                = Body_MannequinFemaleGreen,
+        ClothingItemExtra           = HCustoms.MannequinFemaleBodyBlack,
+        ClothingItemExtraOption     = BodySwap,
+		BodyLocation                = Torso1Legs1,
+        Icon                        = MannequinFemaleGreen,
+        CanHaveHoles                = false,
+		WorldStaticModel            = MannequinFemaleGreen,	
+	}	
+
+    item Suit_WhiteRangerSuit
+    {
+        DisplayCategory     = Clothing,
+        Type                = Clothing,
+        DisplayName         = White Power Ranger Suit,
+        ClothingItem        = Suit_WhiteRangerSuit,
+        BodyLocation        = FullSuit,
+        BloodLocation       = Trousers;Jumper;Shoes;Hands;Neck,
+        Icon                = WhiteRangerSuit,
+        CanHaveHoles        = false,
+        RunSpeedModifier    = 1.1,
+        BulletDefense       = 70,
+      	BiteDefense         = 80,
+       	ScratchDefense      = 90,
+        Insulation          = 0.7,
+        WindResistance      = 0.7,
+        WaterResistance     = 0.7,
+        WorldStaticModel    = WhiteRangerSuit_Ground,
+    }
+
+    item Suit_GreenRangerSuit
+    {
+        DisplayCategory     = Clothing,
+        Type                = Clothing,
+        DisplayName         = Green Power Ranger Suit,
+        ClothingItem        = Suit_GreenRangerSuit,
+        BodyLocation        = FullSuit,
+        BloodLocation       = Trousers;Jumper;Shoes;Hands;Neck,
+        Icon                = GreenRangerSuit,
+        CanHaveHoles        = false,
+        RunSpeedModifier    = 1.1,
+        BulletDefense       = 70,
+      	BiteDefense         = 80,
+       	ScratchDefense      = 90,
+        Insulation          = 0.7,
+        WindResistance      = 0.7,
+        WaterResistance     = 0.7,
+        WorldStaticModel    = GreenRangerSuit_Ground,
+    }
+
+    item Suit_MaleRangerSuit
+    {
+        DisplayCategory     = Clothing,
+        Type                = Clothing,
+        DisplayName         = Power Ranger Suit [M],
+        ClothingItem        = Suit_MaleRangerSuit,
+        BodyLocation        = FullSuit,
+        BloodLocation       = Trousers;Jumper;Shoes;Hands;Neck,
+		IconsForTexture     = RedRangerSuit;BlueRangerSuit;BlackRangerSuit;PinkRangerSuit;YellowRangerSuit,
+        CanHaveHoles        = false,
+        RunSpeedModifier    = 1.1,
+        BulletDefense       = 70,
+      	BiteDefense         = 80,
+       	ScratchDefense      = 90,
+        Insulation          = 0.7,
+        WindResistance      = 0.7,
+        WaterResistance     = 0.7,
+        WorldStaticModel    = MaleRangerSuit_Ground,
+    }
+
+    item Suit_FemaleRangerSuit
+    {
+        DisplayCategory     = Clothing,
+        Type                = Clothing,
+        DisplayName         = Power Ranger Suit [F],
+        ClothingItem        = Suit_FemaleRangerSuit,
+        BodyLocation        = FullSuit,
+        BloodLocation       = Trousers;Jumper;Shoes;Hands;Neck,
+		IconsForTexture     = RedRangerSuit;BlueRangerSuit;BlackRangerSuit;PinkRangerSuit;YellowRangerSuit,
+        CanHaveHoles        = false,
+        RunSpeedModifier    = 1.1,
+        BulletDefense       = 70,
+      	BiteDefense         = 80,
+       	ScratchDefense      = 90,
+        Insulation          = 0.7,
+        WindResistance      = 0.7,
+        WaterResistance     = 0.7,
+        WorldStaticModel    = FemaleRangerSuit_Ground,
+    }
+
+	item Hat_RedRangerHelmet
+	{
+	    DisplayCategory		= 	Accessory,
+		Type 				= 	Clothing,
+		DisplayName 		= 	Red Power Ranger Helmet,
+		ClothingItem 		= 	Hat_RedRangerHelmet,
+		BodyLocation 		= 	FullHat,
+		Icon 				= 	RedRangerHelmet,
+		CanHaveHoles 		= 	false,
+        BloodLocation		= 	Head,
+        BulletDefense 		= 	80,
+      	BiteDefense 		= 	90,
+       	ScratchDefense 		= 	100,
+        Insulation 			= 	0.7,
+        WindResistance 		= 	0.7,
+        WaterResistance 	= 	0.7,
+		Tags                = 	GasMask,
+		WorldStaticModel 	= 	RedRangerHelmet_Ground,
+    }
+
+	item Hat_WhiteRangerHelmet
+	{
+	    DisplayCategory		= 	Accessory,
+		Type 				= 	Clothing,
+		DisplayName 		= 	White Power Ranger Helmet,
+		ClothingItem 		= 	Hat_WhiteRangerHelmet,
+		BodyLocation 		= 	FullHat,
+		Icon 				= 	WhiteRangerHelmet,
+		CanHaveHoles 		= 	false,
+        BloodLocation		= 	Head,
+        BulletDefense 		= 	80,
+      	BiteDefense 		= 	90,
+       	ScratchDefense 		= 	100,
+        Insulation 			= 	0.7,
+        WindResistance 		= 	0.7,
+        WaterResistance 	= 	0.7,
+		Tags                = 	GasMask,
+		WorldStaticModel 	= 	WhiteRangerHelmet_Ground,
+    }
+
+	item Hat_GreenRangerHelmet
+	{
+	    DisplayCategory		= 	Accessory,
+		Type 				= 	Clothing,
+		DisplayName 		= 	Green Power Ranger Helmet,
+		ClothingItem 		= 	Hat_GreenRangerHelmet,
+		BodyLocation 		= 	FullHat,
+		Icon 				= 	GreenRangerHelmet,
+		CanHaveHoles 		= 	false,
+        BloodLocation		= 	Head,
+        BulletDefense 		= 	80,
+      	BiteDefense 		= 	90,
+       	ScratchDefense 		= 	100,
+        Insulation 			= 	0.7,
+        WindResistance 		= 	0.7,
+        WaterResistance 	= 	0.7,
+		Tags                = 	GasMask,
+		WorldStaticModel 	= 	GreenRangerHelmet_Ground,
+    }
+
+	item Hat_BlueRangerHelmet
+	{
+	    DisplayCategory		= 	Accessory,
+		Type 				= 	Clothing,
+		DisplayName 		= 	Blue Power Ranger Helmet,
+		ClothingItem 		= 	Hat_BlueRangerHelmet,
+		BodyLocation 		= 	FullHat,
+		Icon 				= 	BlueRangerHelmet,
+		CanHaveHoles 		= 	false,
+        BloodLocation		= 	Head,
+        BulletDefense 		= 	80,
+      	BiteDefense 		= 	90,
+       	ScratchDefense 		= 	100,
+        Insulation 			= 	0.7,
+        WindResistance 		= 	0.7,
+        WaterResistance 	= 	0.7,
+		Tags                = 	GasMask,
+		WorldStaticModel 	= 	BlueRangerHelmet_Ground,
+    }
+
+	item Hat_BlackRangerHelmet
+	{
+	    DisplayCategory		= 	Accessory,
+		Type 				= 	Clothing,
+		DisplayName 		= 	Black Power Ranger Helmet,
+		ClothingItem 		= 	Hat_BlackRangerHelmet,
+		BodyLocation 		= 	FullHat,
+		Icon 				= 	BlackRangerHelmet,
+		CanHaveHoles 		= 	false,
+        BloodLocation		= 	Head,
+        BulletDefense 		= 	80,
+      	BiteDefense 		= 	90,
+       	ScratchDefense 		= 	100,
+        Insulation 			= 	0.7,
+        WindResistance 		= 	0.7,
+        WaterResistance 	= 	0.7,
+		Tags                = 	GasMask,
+		WorldStaticModel 	= 	BlackRangerHelmet_Ground,
+    }
+
+	item Hat_PinkRangerHelmet
+	{
+	    DisplayCategory		= 	Accessory,
+		Type 				= 	Clothing,
+		DisplayName 		= 	Pink Power Ranger Helmet,
+		ClothingItem 		= 	Hat_PinkRangerHelmet,
+		BodyLocation 		= 	FullHat,
+		Icon 				= 	PinkRangerHelmet,
+		CanHaveHoles 		= 	false,
+        BloodLocation		= 	Head,
+        BulletDefense 		= 	80,
+      	BiteDefense 		= 	90,
+       	ScratchDefense 		= 	100,
+        Insulation 			= 	0.7,
+        WindResistance 		= 	0.7,
+        WaterResistance 	= 	0.7,
+		Tags                = 	GasMask,
+		WorldStaticModel 	= 	PinkRangerHelmet_Ground,
+    }
+
+	item Hat_YellowRangerHelmet
+	{
+	    DisplayCategory		= 	Accessory,
+		Type 				= 	Clothing,
+		DisplayName 		= 	Yellow Power Ranger Helmet,
+		ClothingItem 		= 	Hat_YellowRangerHelmet,
+		BodyLocation 		= 	FullHat,
+		Icon 				= 	YellowRangerHelmet,
+		CanHaveHoles 		= 	false,
+        BloodLocation		= 	Head,
+        BulletDefense 		= 	80,
+      	BiteDefense 		= 	90,
+       	ScratchDefense 		= 	100,
+        Insulation 			= 	0.7,
+        WindResistance 		= 	0.7,
+        WaterResistance 	= 	0.7,
+		Tags                = 	GasMask,
+		WorldStaticModel 	= 	YellowRangerHelmet_Ground,
+    }
+
+    item Suit_NewHazmat
+    {
+        DisplayCategory             = Clothing,
+        Type                        = Clothing,
+        DisplayName                 = New Hazmat Suit,
+        ClothingItem                = Suit_NewHazmat,
+        BodyLocation                = FullSuitHead,
+        BloodLocation               = Trousers;Jumper;Head;Neck;Hands;Shoes,
+        IconsForTexture             = NewHazmatYellow;NewHazmatRed;NewHazmatBlue;NewHazmatGreen;NewHazmatWhite;NewHazmatBlack,
+        CanHaveHoles                = false,
+		BiteDefense                 = 20,
+        ScratchDefense              = 40,
+        Insulation                  = 0.65,
+        WindResistance              = 0.9,
+        WaterResistance             = 0.8,
+		Tags                        = GasMask;HazmatSuit,
+        WorldStaticModel            = NewHazmat_Ground,
+    }    
+}

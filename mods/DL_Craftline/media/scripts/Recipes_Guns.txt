@@ -19,7 +19,7 @@ module Base
 		SkillRequired:MetalWelding=5,
 	}
 
-	recipe Craft Scrap Pistol
+	recipe Craft Junk Pistol
 	{
 		SmallSheetMetal,
 		DuctTape=2,
@@ -39,9 +39,10 @@ module Base
 
 	recipe Craft Slamfire Junk Pipe Shotgun
 	{
-		MetalPipe/MetalBar=3,
+		MetalPipe/MetalBar,
 		Screws/Nails=5,
-		Plank,
+		MetalBar/MetalPipe/WoodenStick,
+		Plank/MetalPipe,
 		DuctTape=2,
 		BlowTorch=3,
 		LeatherStrips/RippedSheets/DenimStrips=1,
@@ -57,9 +58,10 @@ module Base
 
 	recipe Craft Junk Stapler Shotgun
 	{
-		MetalPipe/MetalBar = 3,
+		MetalPipe/MetalBar,
 		Screws/Nails=5,
-		Plank,
+		MetalBar/MetalPipe/WoodenStick,
+		Plank/MetalPipe,
 		DuctTape=2,
 		BlowTorch=3,
 		LeatherStrips/RippedSheets/DenimStrips=1,
@@ -73,22 +75,124 @@ module Base
 		SkillRequired:MetalWelding=5,
 	}
 
-	recipe Craft Junk Stapler Revolver
+	recipe Craft Scrap Pistol
 	{
+		Plank=1,
+		SheetMetal=1,
 		SmallSheetMetal=2,
 		MetalPipe/MetalBar=2,
-		Screws/Nails=10,
+		Screws=4,
 		DuctTape=2,
 		BlowTorch=5,
 		LeatherStrips/RippedSheets/DenimStrips=1,
 		keep Saw,
 		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
 		keep [Recipe.GetItemTypes.WeldingMask],
-		Result:aerx.T1Revolver,
+		Result:aerx.T2Pistol1,
 		Sound:Hammering,
 		Time:400.0,
 		Category:Firearms,
-		SkillRequired:MetalWelding=5,
+		SkillRequired:MetalWelding=7,
+	}
+
+	recipe Craft Scrap Machine Pistol
+	{
+		Plank=2,
+		SheetMetal=4,
+		SmallSheetMetal=3,
+		MetalPipe/MetalBar=2,
+		Screws=6,
+		DuctTape=2,
+		BlowTorch=5,
+		keep Saw,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		Result:aerx.T2MP1,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:MetalWelding=7,
+	}
+
+
+	recipe Craft Scrap SMG
+	{
+		aerx.T2MP1=1,
+		SheetMetal=2,
+		SmallSheetMetal=4,
+		MetalPipe/MetalBar=1,
+		Screws=2,
+		Wire=2,
+		BlowTorch=7,
+		LeatherStrips/RippedSheets/DenimStrips=3,
+		keep Saw,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		Result:aerx.T2SMG1,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:MetalWelding=8;Aiming=2,
+	}
+
+
+	recipe Craft Scrap Rifle
+	{
+		aerx.T2MP1=1,
+		SheetMetal=2,
+		SmallSheetMetal=4,
+		MetalPipe/MetalBar=1,
+		Screws=2,
+		Wire=2,
+		BlowTorch=7,
+		LeatherStrips/RippedSheets/DenimStrips=3,
+		keep Saw,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		Result:aerx.T2Rifle1,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:MetalWelding=8;Aiming=2,
+	}
+
+	recipe Craft Scrap DMR
+	{
+		aerx.T2MP1=1,
+		SheetMetal=2,
+		SmallSheetMetal=4,
+		MetalPipe/MetalBar=1,
+		Screws=2,
+		Wire=2,
+		BlowTorch=7,
+		LeatherStrips/RippedSheets/DenimStrips=3,
+		keep Saw,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		Result:aerx.T2DMR1,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:MetalWelding=8;Aiming=2,
+	}
+
+	recipe Craft Scrap Shotgun
+	{
+		Plank=1,
+		SmallSheetMetal=4,
+		MetalPipe/MetalBar=2,
+		Screws=1,
+		Wire=1,
+		DuctTape=1,
+		BlowTorch=4,
+		keep Saw,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		Result:aerx.T2Shotgun,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:MetalWelding=8,
 	}
 
 }

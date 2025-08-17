@@ -1,0 +1,1186 @@
+module  HCustoms 
+{
+    item SpiffoTail_Stitches
+    {
+        DisplayCategory         =   Clothing,
+        Type                    =   Clothing,
+        DisplayName             =   Spiffo Suit Tail Stitches,
+        ClothingItem            =   SpiffoTail_Stitches,
+        BodyLocation            =   Tail,
+        Icon                    =   SpiffoTailStitches,
+        WorldStaticModel        =   SpiffoTailStitches_Ground,
+    }
+
+	item Gloves_SArmorTacticalGloves
+	{
+        DisplayCategory         =   Clothing,
+        Type                    =   Clothing,
+        DisplayName             =   S Armor Tactical Gloves,
+        ClothingItem            =   Gloves_SArmorTacticalGloves,
+        BodyLocation            =   Hands,
+		BloodLocation           =   Hands,
+        Icon                    =   SArmorTacticalGloves,
+        CanHaveHoles            =   true,
+		ScratchDefense          =   25,
+        BiteDefense             =   15,
+		BulletDefense           =   5,
+        Weight                  =   0.2,
+        Insulation              =   0.75,
+        WindResistance          =   0.75,
+        FabricType              =   Leather,
+		AttachmentType          =   MaskRH,
+		StaticModel             =   SArmorTacticalGloves_Ground,
+        WorldStaticModel        =   SArmorTacticalGloves_Ground,
+	}
+
+	item Gloves_CazadorGloves
+	{
+        DisplayCategory         =   Clothing,
+        Type                    =   Clothing,
+        DisplayName             =   Cazador Gloves,
+        ClothingItem            =   Gloves_CazadorGloves,
+        BodyLocation            =   Hands,
+		BloodLocation           =   Hands,
+        Icon                    =   CazadorGloves,
+        CanHaveHoles            =   true,
+		ScratchDefense          =   25,
+        BiteDefense             =   15,
+		BulletDefense           =   5,
+        Weight                  =   0.2,
+        Insulation              =   0.75,
+        WindResistance          =   0.75,
+        FabricType              =   Leather,
+		AttachmentType          =   MaskRH,
+		StaticModel             =   CazadorGloves_Ground,
+        WorldStaticModel        =   CazadorGloves_Ground,
+	}
+
+    item Glasses_WeldingGogglesOn
+	{
+        DisplayCategory         =   Accessory,
+        Type                    =   Clothing,
+        DisplayName             =   Welding Goggles,
+        ClothingItem            =   Glasses_WeldingGogglesOn,
+        ClothingItemExtra       =   HCustoms.Glasses_WeldingGogglesOff,
+        ClothingItemExtraOption =   TakeOffGoggles,
+        clothingExtraSubmenu    =   PutOnGoggles,
+        BodyLocation            =   Eyes,
+        Icon                    =   WeldingGoggles,
+        CanHaveHoles            =   false,
+		ChanceToFall            =   0,
+		BloodLocation           =   Head,
+        BiteDefense             =   15,
+        ScratchDefense          =   30,
+        Insulation              =   0.15,
+        WindResistance          =   0.4,
+        WaterResistance         =   0.4,
+        Weight                  =   0.2,
+		Tags                    =   WeldingMask,
+        WorldStaticModel        =   WeldingGoggles_Ground,
+	}
+
+    item Glasses_WeldingGogglesOff
+	{
+        DisplayCategory         =   Accessory,
+        Type                    =   Clothing,
+        DisplayName             =   Welding Goggles (Off),
+        ClothingItem            =   Glasses_WeldingGogglesOff,
+        ClothingItemExtra       =   HCustoms.Glasses_WeldingGogglesOn,
+        ClothingItemExtraOption =   PutOnGoggles,
+        clothingExtraSubmenu    =   TakeOffGoggles,
+        BodyLocation            =   Eyes,
+        Icon                    =   WeldingGoggles,
+        CanHaveHoles            =   false,
+		ChanceToFall            =   0,
+        Weight                  =   0.2,
+        WorldStaticModel        =   WeldingGoggles_Ground,
+	}
+
+    item Glasses_MonocleRight
+	{
+        DisplayCategory         =   Accessory,
+        Type                    =   Clothing,
+        DisplayName             =   Monocle (Right),
+        ClothingItem            =   Glasses_MonocleRight,
+        BodyLocation            =   Eyes,
+        Icon                    =   Monocle,
+        CanHaveHoles            =   false,
+		ChanceToFall            =   0,
+		BloodLocation           =   Head,
+        BiteDefense             =   10,
+        ScratchDefense          =   15,
+        Insulation              =   0.15,
+        WindResistance          =   0.4,
+        WaterResistance         =   0.4,
+        Weight                  =   0.1,
+		ClothingItemExtra       =   HCustoms.Glasses_MonocleLeft,
+        ClothingItemExtraOption =   EyeLeft,
+        clothingExtraSubmenu    =   EyeRight,
+        WorldStaticModel        =   Monocle_Ground,
+	}
+
+    item Glasses_MonocleLeft
+	{
+        DisplayCategory         =   Accessory,
+        Type                    =   Clothing,
+        DisplayName             =   Monocle (Left),
+        ClothingItem            =   Glasses_MonocleLeft,
+        BodyLocation            =   Eyes,
+        Icon                    =   Monocle,
+        CanHaveHoles            =   false,
+		ChanceToFall            =   0,
+		BloodLocation           =   Head,
+        BiteDefense             =   10,
+        ScratchDefense          =   15,
+        Insulation              =   0.15,
+        WindResistance          =   0.4,
+        WaterResistance         =   0.4,
+        Weight                  =   0.1,
+		ClothingItemExtra       =   HCustoms.Glasses_MonocleRight,
+        ClothingItemExtraOption =   EyeRight,
+        clothingExtraSubmenu    =   EyeLeft,
+        WorldStaticModel        =   Monocle_Ground,
+	}
+
+    item Gloves_PlateArmorBracers
+    {
+        DisplayCategory         = Clothing,
+        Type                    = Clothing,
+        DisplayName             = Plate Armor Bracers,
+        ClothingItem            = Gloves_PlateArmorBracers,
+        BodyLocation            = Hands,
+        BloodLocation           = Hands;LowerArms,
+        Icon                    = PlateArmorBracers,
+        CanHaveHoles            = false,
+        ScratchDefense          = 60,
+        BiteDefense             = 45,
+        BulletDefense           = 20,
+        Weight                  = 0.6,
+        Insulation              = 0.75,
+        WindResistance          = 0.75,
+        WaterResistance         = 0.5,
+        WorldStaticModel        = PlateArmorBracers_Ground,
+	}
+
+    item Gloves_GunRunnersGloves
+	{
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Gun Runner's Gloves,
+		ClothingItem                = Gloves_GunRunnersGloves,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = GunRunnersGloves,
+        CanHaveHoles                = true,
+		ScratchDefense              = 25,
+        BiteDefense                 = 15,
+		BulletDefense               = 5,
+        Weight                      = 0.2,
+        Insulation                  = 0.75,
+        WindResistance              = 0.75,
+	    AttachmentType              = MaskRH,
+        FabricType                  = Leather,
+	    StaticModel                 = GunRunnersGloves_Ground,
+        WorldStaticModel            = GunRunnersGloves_Ground,
+	}
+
+    item GunRunnersHolsterRight
+    {
+	    DisplayCategory             = Accessory,
+        Weight	                    = 0.2,
+        Type	                    = Clothing,
+        DisplayName	                = Gun Runner's Holster (Right),
+        Icon	                    = GunRunnersHolster,
+        CanHaveHoles                = false,
+ 	    CanBeEquipped               = BeltExtra,
+		BodyLocation                = BeltExtra,
+		ClothingItem                = GunRunnersHolsterRight,
+ 	    ClothingItemExtra           = HCustoms.GunRunnersHolsterLeft,
+        ClothingItemExtraOption     = HolsterLeft,
+        clothingExtraSubmenu        = HolsterRight,
+        AttachmentsProvided         = LegHolsterRight,
+        WorldStaticModel            = GunRunnersHolster_Ground,
+    }
+ 
+    item GunRunnersHolsterLeft
+    {
+	    DisplayCategory             = Accessory,
+        Weight	                    = 0.2,
+        Type	                    = Clothing,
+        DisplayName	                = Gun Runner's Holster (Left),
+        Icon	                    = GunRunnersHolster,
+        CanHaveHoles                = false,
+ 	    CanBeEquipped               = BeltExtra,
+		BodyLocation                = BeltExtra,
+		ClothingItem                = GunRunnersHolsterLeft,
+ 	    ClothingItemExtra           = HCustoms.GunRunnersHolsterRight,
+        ClothingItemExtraOption     = HolsterRight,
+        clothingExtraSubmenu        = HolsterLeft,
+        AttachmentsProvided         = LegHolsterLeft,
+        WorldStaticModel            = GunRunnersHolster_Ground,
+    }
+
+    item GunRunnersHolsterDouble
+    {
+	    DisplayCategory             = Accessory,
+        Weight	                    = 0.4,
+        Type	                    = Clothing,
+        DisplayName	                = Gun Runner's Holsters (Double),
+        Icon	                    = GunRunnersHolsterDouble,
+        CanHaveHoles                = false,
+ 	    CanBeEquipped               = BeltExtra,
+		BodyLocation                = BeltExtra,
+		ClothingItem                = GunRunnersHolsterDouble,
+        AttachmentsProvided         = LegHolsterLeft;LegHolsterRight,
+        WorldStaticModel            = GunRunnersHolsterDouble_Ground,
+    }
+
+    item WristWatch_Left_GunRunners
+	{
+	    DisplayCategory             = Accessory,
+		Type                        = AlarmClockClothing,
+		DisplayName                 = Gun Runner's Watch,
+		ClothingItem                = WristWatch_Left_GunRunners,
+		BodyLocation                = LeftWrist,
+		Icon                        = GunRunnersWatch,
+		Weight                      = 0.1,
+		ClothingItemExtra           = HCustoms.WristWatch_Left_GunRunners,
+        ClothingItemExtraOption     = Wear,
+		Cosmetic                    = FALSE,
+		AlarmSound                  = WatchAlarmLoop,
+		SoundRadius                 = 7,
+		MetalValue                  = 3,
+		Tags                        = Digital,
+		WorldStaticModel            = GunRunnersWatch_Ground,
+	}
+
+    item Gloves_OracleGloves
+	{
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = The Oracle Gloves,
+		ClothingItem                = Gloves_OracleGloves,
+		BodyLocation                = Hands,
+		BloodLocation               = LowerArms;Hands,
+		Icon                        = OracleGloves,
+        CanHaveHoles                = true,
+		ScratchDefense              = 30,
+        BiteDefense                 = 15,
+		BulletDefense               = 5,
+        Weight                      = 0.2,
+        Insulation                  = 0.75,
+        WindResistance              = 0.75,
+        FabricType                  = Leather,
+        WorldStaticModel            = OracleGloves_Ground,  
+	}
+
+    item OracleBodyCape
+    {
+	    DisplayCategory             = Clothing,	
+		Type                        = Clothing,
+		DisplayName                 = The Oracle Body Cape,
+		ClothingItem                = OracleBodyCape,
+		BodyLocation                = TorsoExtra,
+		Icon                        = OracleBodyCape,
+	    CanHaveHoles                = true,
+        BloodLocation               = ShirtNoSleeves;Groin;UpperLegs,
+        Insulation                  = 0.60,
+        WindResistance              = 0.60,
+        NeckProtectionModifier      = 0.8,
+		BiteDefense                 = 10,
+        ScratchDefense              = 20,
+		BulletDefense               = 5,	
+        Weight                      = 0.25,
+        FabricType                  = Leather,	
+        WorldStaticModel            = OracleBodyCape_Ground,		
+    }
+
+    item OracleFurCowl
+    {
+	    DisplayCategory             = Clothing,	
+		Type                        = Clothing,
+		DisplayName                 = The Oracle Fur Cowl,
+		ClothingItem                = OracleFurCowl,
+        ClothingItemExtra           = HCustoms.OracleFurCowlHood,
+        ClothingItemExtraOption     = UpHoodie,
+        clothingExtraSubmenu        = DownHoodie,
+		BodyLocation                = Jacket,
+		Icon                        = OracleFurCowl,
+	    CanHaveHoles                = true,
+        BloodLocation               = UpperBody;Neck;UpperArms,
+        Insulation                  = 0.80,
+        WindResistance              = 0.80,
+        WaterResistance             = 0.60,
+		BiteDefense                 = 30,
+        ScratchDefense              = 40,
+		BulletDefense               = 5,	
+        Weight                      = 0.5,	
+        FabricType                  = Leather,
+        WorldStaticModel            = OracleFurCowl_Ground,		
+    }
+
+    item OracleFurCowlHood
+    {
+	    DisplayCategory             = Accessory,
+		Type                        = Clothing,
+		DisplayName                 = The Oracle Fur Cowl [Hood],
+		ClothingItem                = OracleFurCowlHood,
+        ClothingItemExtra           = HCustoms.OracleFurCowl,
+        ClothingItemExtraOption     = DownHoodie,
+        clothingExtraSubmenu        = UpHoodie,
+		BodyLocation                = JacketHat,
+		Icon                        = OracleFurCowl,
+	    CanHaveHoles                = true,
+        BloodLocation               = UpperBody;Neck;Head;UpperArms,
+        Insulation                  = 0.80,
+        WindResistance              = 0.80,
+        WaterResistance             = 0.60,
+		BiteDefense                 = 30,
+        ScratchDefense              = 40,
+		BulletDefense               = 5,	
+        Weight                      = 0.5,	
+        FabricType                  = Leather,
+        WorldStaticModel            = OracleFurCowl_Ground,		
+    }
+
+    item OracleBelt
+    {
+	    DisplayCategory             = Accessory,	
+        Weight	                    = 0.2,
+        Type	                    = Clothing,
+		DisplayName                 = The Oracle Belt,
+		ClothingItem                = OracleBelt,
+		Icon                        = OracleBelt,
+        CanHaveHoles                = false,
+		BodyLocation                = Belt,
+        AttachmentsProvided         = BeltGear;SmallBeltLeft,
+        WorldStaticModel            = OracleBelt_Ground,		
+    }
+
+    item TaskForceBelt
+    {
+	    DisplayCategory             = Accessory,
+        Weight	                    = 0.2,
+        Type	                    = Clothing,
+        DisplayName	                = Task Force Belt,
+		ClothingItem                = TaskForceBelt,
+        Icon	                    = TaskForceBelt,
+        CanHaveHoles                = false,
+		BodyLocation                = Belt,
+        AttachmentsProvided         = SmallBeltLeft;SmallBeltRight,
+        WorldStaticModel            = TaskForceBelt_Ground,
+    }
+
+    item TaskForceHolster
+    {
+	    DisplayCategory             = Accessory,
+        Weight	                    = 0.1,
+        Type	                    = Clothing,
+        DisplayName	                = Task Force Holster,
+        Icon	                    = TaskForceHolster,
+        CanHaveHoles                = false,
+ 	    CanBeEquipped               = BeltExtra,
+		BodyLocation                = BeltExtra,
+		ClothingItem                = TaskForceHolster,
+        AttachmentsProvided         = LegHolsterRight2,
+        WorldStaticModel            = TaskForceHolster_Ground,
+    }
+
+    item Gloves_TaskForceGloves
+	{
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Task Force Gloves,
+		ClothingItem                = Gloves_TaskForceGloves,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = TaskForceGloves,
+        CanHaveHoles                = true,
+        ScratchDefense              = 30,
+		BiteDefense                 = 20,
+	    BulletDefense               = 5,
+        Weight                      = 0.2,
+        Insulation                  = 0.75,
+        WindResistance              = 0.75,
+        FabricType                  = Leather,
+        WorldStaticModel            = TaskForceGloves_Ground,
+	}
+
+    item Gloves_FireBreathersGloves
+    {
+	    DisplayCategory             = Accessory,
+		Type                        = Clothing,
+		DisplayName                 = Fire Breathers Gloves,
+		ClothingItem                = Gloves_FireBreathersGloves,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = FireBreathersGloves,
+        CanHaveHoles                = true,
+        ScratchDefense              = 30,
+		BiteDefense                 = 20,
+	    BulletDefense               = 10,
+        Weight                      = 0.2,
+        Insulation                  = 0.4,
+        WindResistance              = 0.4,
+        FabricType                  = Leather,
+        WorldStaticModel            = FireBreathersGloves_Ground,
+    }
+
+    item Gloves_WastelandAegisGloves
+    {
+	    DisplayCategory             = Accessory,
+		Type                        = Clothing,
+		DisplayName                 = Wasteland Aegis Gloves,
+		ClothingItem                = Gloves_WastelandAegisGloves,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = WastelandAegisGloves,
+        CanHaveHoles                = true,
+        ScratchDefense              = 30,
+		BiteDefense                 = 20,
+	    BulletDefense               = 10,
+        Weight                      = 0.2,
+        Insulation                  = 0.4,
+        WindResistance              = 0.4,
+        FabricType                  = Leather,
+        WorldStaticModel            = WastelandAegisGloves_Ground,
+    }
+
+    item Gloves_SundayBestGloves
+	{
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Sunday Best Gloves,
+		ClothingItem                = Gloves_SundayBestGloves,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = SundayBestGloves,
+        CanHaveHoles                = true,
+		BulletDefense               = 10,
+        ScratchDefense              = 30,
+		BiteDefense                 = 20,
+        Weight                      = 0.2,
+        Insulation                  = 0.7,
+        WindResistance              = 0.7,
+        FabricType                  = Leather,
+        WorldStaticModel            = SundayBestGloves_Ground,
+	}
+
+    item SundayBestPauldrons
+	{
+	    DisplayCategory             = Accessory,
+		Type                        = Clothing,
+		DisplayName                 = Sunday Best Pauldrons,
+		ClothingItem                = SundayBestPauldrons,
+		BodyLocation                = TorsoExtra,
+		BloodLocation               = UpperBody;UpperArms,
+		Icon                        = SundayBestPauldrons,
+        CanHaveHoles                = true,
+        ScratchDefense              = 25,
+		BiteDefense                 = 15,
+	    BulletDefense               = 5,
+        Weight                      = 0.8,
+        Insulation                  = 0.25,
+        WindResistance              = 0.25,
+        WaterResistance             = 0.25,
+        FabricType                  = Leather,
+        WorldStaticModel            = SundayBestPauldrons_Ground,	
+	}
+
+    item SundayBestKneePads
+    {
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Sunday Best Knee Pads,
+		ClothingItem                = SundayBestKneePads,
+	    CanHaveHoles                = true,
+		BodyLocation                = 714,
+		Icon                        = SundayBestKneePads,
+        BloodLocation               = LowerLegs;UpperLegs,
+		BiteDefense                 = 10,
+        ScratchDefense              = 20,
+		BulletDefense               = 5,
+        Insulation                  = 0.5,
+        WindResistance              = 0.5,
+        WaterResistance             = 0.5,
+        Weight                      = 0.5,
+        FabricType                  = Leather,
+        WorldStaticModel            = SundayBestKneePads_Ground,
+    }
+
+    item Glove_AshRight
+	{
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Mechanical Hand Right,
+		ClothingItem                = Gloves_AshRight,
+		BodyLocation                = HandsRight,
+		BloodLocation               = Hands,
+		Icon                        = GloveAshRight,
+        CanHaveHoles                = false,
+        ScratchDefense              = 40,
+		BiteDefense                 = 30,
+        BulletDefense               = 20,
+        Weight                      = 0.2,
+        Insulation                  = 0.50,
+        WindResistance              = 0.50,
+		StaticModel                 = GloveAsh_Ground,
+        WorldStaticModel            = GloveAsh_Ground,
+	}
+
+    item Glove_AshLeft
+	{
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Mechanical Hand Left,
+		ClothingItem                = Gloves_AshLeft,
+		BodyLocation                = HandsLeft,
+		BloodLocation               = Hands,
+		Icon                        = GloveAshLeft,
+        CanHaveHoles                = false,
+        ScratchDefense              = 40,
+		BiteDefense                 = 30,
+        BulletDefense               = 20,
+        Weight                      = 0.2,
+        Insulation                  = 0.50,
+        WindResistance              = 0.50,
+		StaticModel                 = GloveAsh_Ground,
+        WorldStaticModel            = GloveAsh_Ground,
+	}
+
+    item Gloves_ScrapGloves
+    {
+	    DisplayCategory             = Accessory,
+		Type                        = Clothing,
+		DisplayName                 = Scrap Gloves,
+		ClothingItem                = Gloves_ScrapGloves,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands;LowerArms,
+		Icon                        = ScrapGloves,
+        CanHaveHoles                = true,
+        ScratchDefense              = 35,
+		BiteDefense                 = 25,
+	    BulletDefense               = 15,
+        Weight                      = 0.2,
+        Insulation                  = 0.4,
+        WindResistance              = 0.4,
+        FabricType                  = Leather,
+        WorldStaticModel            = ScrapGloves_Ground,
+    }
+
+    item Gloves_ManhunterGlovesBone
+    {
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Manhunter Gloves Bone,
+		ClothingItem                = Gloves_ManhunterGlovesBone,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = ManhunterGlovesBone,
+        CanHaveHoles                = true,
+        ScratchDefense              = 35,
+		BiteDefense                 = 25,
+	    BulletDefense               = 10,
+        Weight                      = 0.2,
+        Insulation                  = 0.75,
+        WindResistance              = 0.75,
+	    AttachmentType              = MaskRH,
+        FabricType                  = Leather,
+	    StaticModel                 = ManhunterGlovesBone_Ground,
+        WorldStaticModel            = ManhunterGlovesBone_Ground,
+    }
+
+    item Gloves_ManhunterGlovesUlysses
+    {
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Manhunter Gloves Ulysses,
+		ClothingItem                = Gloves_ManhunterGlovesUlysses,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = ManhunterGlovesUlysses,
+        CanHaveHoles                = true,
+        ScratchDefense              = 35,
+		BiteDefense                 = 25,
+	    BulletDefense               = 10,
+        Weight                      = 0.2,
+        Insulation                  = 0.75,
+        WindResistance              = 0.75,
+	    AttachmentType              = MaskRH,
+        FabricType                  = Leather,
+	    StaticModel                 = ManhunterGlovesUlysses_Ground,
+        WorldStaticModel            = ManhunterGlovesUlysses_Ground,
+    }
+
+    item Gloves_ManhunterGlovesNCR
+    {
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Manhunter Gloves NCR,
+		ClothingItem                = Gloves_ManhunterGlovesNCR,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = ManhunterGlovesNCR,
+        CanHaveHoles                = true,
+        ScratchDefense              = 35,
+		BiteDefense                 = 25,
+	    BulletDefense               = 10,
+        Weight                      = 0.2,
+        Insulation                  = 0.75,
+        WindResistance              = 0.75,
+	    AttachmentType              = MaskRH,
+        FabricType                  = Leather,
+	    StaticModel                 = ManhunterGlovesNCR_Ground,
+        WorldStaticModel            = ManhunterGlovesNCR_Ground,
+    }
+
+    item Gloves_ManhunterGloves
+    {
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Manhunter Gloves ,
+		ClothingItem                = Gloves_ManhunterGloves,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = ManhunterGloves,
+        CanHaveHoles                = true,
+        ScratchDefense              = 35,
+		BiteDefense                 = 25,
+	    BulletDefense               = 10,
+        Weight                      = 0.2,
+        Insulation                  = 0.75,
+        WindResistance              = 0.75,
+	    AttachmentType              = MaskRH,
+        FabricType                  = Leather,
+	    StaticModel                 = ManhunterGloves_Ground,
+        WorldStaticModel            = ManhunterGloves_Ground,
+    }
+
+    item Gloves_ManhunterGlovesMilitary
+    {
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Manhunter Gloves Military,
+		ClothingItem                = Gloves_ManhunterGlovesMilitary,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = ManhunterGlovesMilitary,
+        CanHaveHoles                = true,
+        ScratchDefense              = 35,
+		BiteDefense                 = 25,
+	    BulletDefense               = 10,
+        Weight                      = 0.2,
+        Insulation                  = 0.75,
+        WindResistance              = 0.75,
+	    AttachmentType              = MaskRH,
+        FabricType                  = Leather,
+	    StaticModel                 = ManhunterGlovesMilitary_Ground,
+        WorldStaticModel            = ManhunterGlovesMilitary_Ground,
+    }
+
+    item Gloves_ManhunterGlovesTan
+    {
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Manhunter Gloves Tan,
+		ClothingItem                = Gloves_ManhunterGlovesTan,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = ManhunterGlovesTan,
+        CanHaveHoles                = true,
+        ScratchDefense              = 35,
+		BiteDefense                 = 25,
+	    BulletDefense               = 10,
+        Weight                      = 0.2,
+        Insulation                  = 0.75,
+        WindResistance              = 0.75,
+	    AttachmentType              = MaskRH,
+        FabricType                  = Leather,
+	    StaticModel                 = ManhunterGlovesTan_Ground,
+        WorldStaticModel            = ManhunterGlovesTan_Ground,
+    }
+
+    item Gloves_ManhunterGlovesWhite
+    {
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Manhunter Gloves White,
+		ClothingItem                = Gloves_ManhunterGlovesWhite,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = ManhunterGlovesWhite,
+        CanHaveHoles                = true,
+        ScratchDefense              = 35,
+		BiteDefense                 = 25,
+	    BulletDefense               = 10,
+        Weight                      = 0.2,
+        Insulation                  = 0.75,
+        WindResistance              = 0.75,
+	    AttachmentType              = MaskRH,
+        FabricType                  = Leather,
+	    StaticModel                 = ManhunterGlovesWhite_Ground,
+        WorldStaticModel            = ManhunterGlovesWhite_Ground,
+    }
+
+    item Gloves_ManhunterGlovesPurple
+    {
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Manhunter Gloves Purple,
+		ClothingItem                = Gloves_ManhunterGlovesPurple,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = ManhunterGlovesPurple,
+        CanHaveHoles                = true,
+        ScratchDefense              = 35,
+		BiteDefense                 = 25,
+	    BulletDefense               = 10,
+        Weight                      = 0.2,
+        Insulation                  = 0.75,
+        WindResistance              = 0.75,
+	    AttachmentType              = MaskRH,
+        FabricType                  = Leather,
+	    StaticModel                 = ManhunterGlovesPurple_Ground,
+        WorldStaticModel            = ManhunterGlovesPurple_Ground,
+    }
+
+    item ManhunterBeltBone
+    {
+	    DisplayCategory             = Accessory,
+        Weight	                    =	0.2,
+        Type	                    = Clothing,
+        DisplayName	                = Manhunter Belt Bone,
+        Icon	                    =	ManhunterBeltBone,
+		BodyLocation                = Belt,
+		ClothingItem                = ManhunterBeltBone,
+        AttachmentsProvided         = SmallBeltLeft;SmallBeltRight,
+        WorldStaticModel            = ManhunterBeltBone_Ground,
+    }
+
+    item ManhunterBeltUlysses
+    {
+	    DisplayCategory             = Accessory,
+        Weight	                    =	0.2,
+        Type	                    = Clothing,
+        DisplayName	                = Manhunter Belt Ulysses,
+        Icon	                    =	ManhunterBeltUlysses,
+		BodyLocation                = Belt,
+		ClothingItem                = ManhunterBeltUlysses,
+        AttachmentsProvided         = SmallBeltLeft;SmallBeltRight,
+        WorldStaticModel            = ManhunterBeltUlysses_Ground,
+    }
+
+    item ManhunterBeltNCR
+    {
+	    DisplayCategory             = Accessory,
+        Weight	                    =	0.2,
+        Type	                    = Clothing,
+        DisplayName	                = Manhunter Belt NCR,
+        Icon	                    =	ManhunterBeltNCR,
+		BodyLocation                = Belt,
+		ClothingItem                = ManhunterBeltNCR,
+        AttachmentsProvided         = SmallBeltLeft;SmallBeltRight,
+        WorldStaticModel            = ManhunterBeltNCR_Ground,
+    }
+
+    item ManhunterBelt
+    {
+	    DisplayCategory             = Accessory,
+        Weight	                    =	0.2,
+        Type	                    = Clothing,
+        DisplayName	                = Manhunter Belt,
+        Icon	                    =	ManhunterBelt,
+		BodyLocation                = Belt,
+		ClothingItem                = ManhunterBelt,
+        AttachmentsProvided         = SmallBeltLeft;SmallBeltRight,
+        WorldStaticModel            = ManhunterBelt_Ground,
+    }
+
+    item ManhunterBeltMilitary
+    {
+	    DisplayCategory             = Accessory,
+        Weight	                    =	0.2,
+        Type	                    = Clothing,
+        DisplayName	                = Manhunter Belt Military,
+        Icon	                    =	ManhunterBeltMilitary,
+		BodyLocation                = Belt,
+		ClothingItem                = ManhunterBeltMilitary,
+        AttachmentsProvided         = SmallBeltLeft;SmallBeltRight,
+        WorldStaticModel            = ManhunterBeltMilitary_Ground,
+    }
+
+    item ManhunterBeltTan
+    {
+	    DisplayCategory             = Accessory,
+        Weight	                    =	0.2,
+        Type	                    = Clothing,
+        DisplayName	                = Manhunter Belt Tan,
+        Icon	                    =	ManhunterBeltTan,
+		BodyLocation                = Belt,
+		ClothingItem                = ManhunterBeltTan,
+        AttachmentsProvided         = SmallBeltLeft;SmallBeltRight,
+        WorldStaticModel            = ManhunterBeltTan_Ground,
+    }
+
+    item ManhunterBeltWhite
+    {
+	    DisplayCategory             = Accessory,
+        Weight	                    =	0.2,
+        Type	                    = Clothing,
+        DisplayName	                = Manhunter Belt White,
+        Icon	                    =	ManhunterBeltWhite,
+		BodyLocation                = Belt,
+		ClothingItem                = ManhunterBeltWhite,
+        AttachmentsProvided         = SmallBeltLeft;SmallBeltRight,
+        WorldStaticModel            = ManhunterBeltWhite_Ground,
+    }
+
+    item ManhunterBeltPurple
+    {
+	    DisplayCategory             = Accessory,
+        Weight	                    =	0.2,
+        Type	                    = Clothing,
+        DisplayName	                = Manhunter Belt Purple,
+        Icon	                    =	ManhunterBeltPurple,
+		BodyLocation                = Belt,
+		ClothingItem                = ManhunterBeltPurple,
+        AttachmentsProvided         = SmallBeltLeft;SmallBeltRight,
+        WorldStaticModel            = ManhunterBeltPurple_Ground,
+    }
+
+    item ManhunterHolsterBone
+    {
+	    DisplayCategory             = Bag,
+        Weight	                    = 0.2,
+        WeightReduction	            =	70,
+        Capacity	                =	6,
+        Type	                    = Container,
+        DisplayName	                = Manhunter Holster Bone,
+        Icon	                    = ManhunterHolsterBone,
+        OpenSound                   = OpenBag,
+        CloseSound                  = CloseBag,
+        PutInSound                  = PutItemInBag,
+    	CanBeEquipped               = BeltExtra,
+		BodyLocation                = BeltExtra,
+	    ClothingItem                = ManhunterHolsterBone,
+ 	    ClothingItemExtra           = HCustoms.ManhunterHolsterBone,
+        ClothingItemExtraOption     = Wear,
+        AttachmentsProvided         = LegHolsterRight,
+        WorldStaticModel            = ManhunterHolsterBone_Ground,
+    }
+
+    item ManhunterHolsterUlysses
+    {
+	    DisplayCategory             = Bag,
+        Weight	                    =	0.2,
+        WeightReduction	            =	70,
+        Capacity	                =	6,
+        Type	                    = Container,
+        DisplayName	                = Manhunter Holster Ulysses,
+        Icon	                    =	ManhunterHolsterUlysses,
+        OpenSound                   = OpenBag,
+        CloseSound                  = CloseBag,
+        PutInSound                  = PutItemInBag,
+    	CanBeEquipped               = BeltExtra,
+		BodyLocation                = BeltExtra,
+	    ClothingItem                = ManhunterHolsterUlysses,
+ 	    ClothingItemExtra           = HCustoms.ManhunterHolsterUlysses,
+        ClothingItemExtraOption     = Wear,
+        AttachmentsProvided         = LegHolsterRight,
+        WorldStaticModel            = ManhunterHolsterUlysses_Ground,
+    }
+
+    item ManhunterHolsterNCR
+    {
+	    DisplayCategory             = Bag,
+        Weight	                    =	0.2,
+        WeightReduction	            =	70,
+        Capacity	                =	6,
+        Type	                    = Container,
+        DisplayName	                = Manhunter Holster NCR,
+        Icon	                    =	ManhunterHolsterNCR,
+        OpenSound                   = OpenBag,
+        CloseSound                  = CloseBag,
+        PutInSound                  = PutItemInBag,
+    	CanBeEquipped               = BeltExtra,
+		BodyLocation                = BeltExtra,
+	    ClothingItem                = ManhunterHolsterNCR,
+    	ClothingItemExtra           = HCustoms.ManhunterHolsterNCR,
+        ClothingItemExtraOption     = Wear,
+        AttachmentsProvided         = LegHolsterRight,
+        WorldStaticModel            = ManhunterHolsterNCR_Ground,
+    }
+
+    item ManhunterHolster
+    {
+	    DisplayCategory             = Bag,
+        Weight	                    =	0.2,
+        WeightReduction	            =	70,
+        Capacity	                =	6,
+        Type	                    = Container,
+        DisplayName	                = Manhunter Holster,
+        Icon	                    =	ManhunterHolster,
+        OpenSound                   = OpenBag,
+        CloseSound                  = CloseBag,
+        PutInSound                  = PutItemInBag,
+  	    CanBeEquipped               = BeltExtra,
+		BodyLocation                = BeltExtra,
+	    ClothingItem                = ManhunterHolster,
+ 	    ClothingItemExtra           = HCustoms.ManhunterHolster,
+        ClothingItemExtraOption     = Wear,
+        AttachmentsProvided         = LegHolsterRight,
+        WorldStaticModel            = ManhunterHolster_Ground,
+    }
+
+    item ManhunterHolsterMilitary
+    {
+	    DisplayCategory             = Bag,
+        Weight	                    =	0.2,
+        WeightReduction	            =	70,
+        Capacity	                =	6,
+        Type	                    = Container,
+        DisplayName	                = Manhunter Holster Military,
+        Icon	                    =	ManhunterHolsterMilitary,
+        OpenSound                   = OpenBag,
+        CloseSound                  = CloseBag,
+        PutInSound                  = PutItemInBag,
+    	CanBeEquipped               = BeltExtra,
+		BodyLocation                = BeltExtra,
+	    ClothingItem                = ManhunterHolsterMilitary,
+ 	    ClothingItemExtra           = HCustoms.ManhunterHolsterMilitary,
+        ClothingItemExtraOption     = Wear,
+        AttachmentsProvided         = LegHolsterRight,
+        WorldStaticModel            = ManhunterHolsterMilitary_Ground,
+    }
+
+    item ManhunterHolsterTan
+    {
+	    DisplayCategory             = Bag,
+        Weight	                    =	0.2,
+        WeightReduction	            =	70,
+        Capacity	                =	6,
+        Type	                    = Container,
+        DisplayName	                = Manhunter Holster Tan,
+        Icon	                    =	ManhunterHolsterTan,
+        OpenSound                   = OpenBag,
+        CloseSound                  = CloseBag,
+        PutInSound                  = PutItemInBag,
+    	CanBeEquipped               = BeltExtra,
+		BodyLocation                = BeltExtra,
+	    ClothingItem                = ManhunterHolsterTan,
+    	ClothingItemExtra           = HCustoms.ManhunterHolsterTan,
+        ClothingItemExtraOption     = Wear,
+        AttachmentsProvided         = LegHolsterRight,
+        WorldStaticModel            = ManhunterHolsterTan_Ground,
+    }
+
+    item ManhunterHolsterWhite
+    {
+	    DisplayCategory             = Bag,
+        Weight	                    =	0.2,
+        WeightReduction	            =	70,
+        Capacity	                =	6,
+        Type	                    = Container,
+        DisplayName	                = Manhunter Holster White,
+        Icon	                    =	ManhunterHolster,
+        OpenSound                   = OpenBag,
+        CloseSound                  = CloseBag,
+        PutInSound                  = PutItemInBag,
+    	CanBeEquipped               = BeltExtra,
+		BodyLocation                = BeltExtra,
+	    ClothingItem                = ManhunterHolster,
+    	ClothingItemExtra           = HCustoms.ManhunterHolsterWhite,
+        ClothingItemExtraOption     = Wear,
+        AttachmentsProvided         = LegHolsterRight,
+        WorldStaticModel            = ManhunterHolsterWhite_Ground,
+    }
+
+    item ManhunterHolsterPurple
+    {
+	    DisplayCategory             = Bag,
+        Weight	                    =	0.2,
+        WeightReduction	            =	70,
+        Capacity	                =	6,
+        Type	                    = Container,
+        DisplayName	                = Manhunter Holster Purple,
+        Icon	                    = ManhunterHolster,
+        OpenSound                   = OpenBag,
+        CloseSound                  = CloseBag,
+        PutInSound                  = PutItemInBag,
+    	CanBeEquipped               = BeltExtra,
+		BodyLocation                = BeltExtra,
+	    ClothingItem                = ManhunterHolsterPurple,
+    	ClothingItemExtra           = HCustoms.ManhunterHolsterPurple,
+        ClothingItemExtraOption     = Wear,
+        AttachmentsProvided         = LegHolsterRight,
+        WorldStaticModel            = ManhunterHolsterPurple_Ground,
+    }
+
+    item Gloves_Dentist
+    {
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Dentist Gloves,
+		ClothingItem                = Gloves_Dentist,
+		BodyLocation                = Hands,
+		BloodLocation               = Hands,
+		Icon                        = DentistGloves,
+        CanHaveHoles                = true,
+        ScratchDefense              = 30,
+		BiteDefense                 = 20,
+	    BulletDefense               = 5,
+        Weight                      = 0.2,
+        Insulation                  = 0.5,
+        WindResistance              = 0.5,
+        WaterResistance             = 1.0,
+        FabricType                  = Leather,
+        WorldStaticModel            = DentistGloves_Ground,
+    }
+
+    item Apron_DentistApprentice
+	{
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Dentist Apprentice Apron,
+		ClothingItem                = Apron_DentistApprentice,
+        ClothingItemExtra           = HCustoms.Apron_DentistApprenticeLoose,
+        ClothingItemExtraOption     = Loosen,
+        clothingExtraSubmenu        = Tighten,
+		BodyLocation                = TorsoExtra,
+		Icon                        = DentistApprenticeApron,
+        CanHaveHoles                = true,
+		BloodLocation               = Apron,
+    	BiteDefense                 = 5,
+        ScratchDefense              = 10,
+        Insulation                  = 0.50,
+        WindResistance              = 0.50,
+        WaterResistance             = 0.70,
+        Weight                      = 0.8,
+		FabricType                  = Leather,
+		WorldStaticModel            = DentistApprenticeApron_Ground,
+	}
+
+    item Apron_DentistApprenticeLoose
+	{
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Dentist Apprentice Apron [Loose],
+		ClothingItem                = Apron_DentistApprenticeLoose,
+        ClothingItemExtra           = HCustoms.Apron_DentistApprentice,
+        ClothingItemExtraOption     = Tighten,
+        clothingExtraSubmenu        = Loosen,
+		BodyLocation                = TorsoExtra,
+		Icon                        = DentistApprenticeApron,
+        CanHaveHoles                = true,
+		BloodLocation               = Apron,
+    	BiteDefense                 = 5,
+        ScratchDefense              = 10,
+        Insulation                  = 0.50,
+        WindResistance              = 0.50,
+        WaterResistance             = 0.70,
+        Weight                      = 0.8,
+		FabricType                  = Leather,
+		WorldStaticModel            = DentistApprenticeApron_Ground,
+	}
+
+    item Apron_Dentist
+	{
+	    DisplayCategory             = Clothing,
+		Type                        = Clothing,
+		DisplayName                 = Dentist Apron,
+		ClothingItem                = Apron_Dentist,
+		BodyLocation                = TorsoExtra,
+		Icon                        = DentistApron,
+        CanHaveHoles                = true,
+		BloodLocation               = Apron,
+    	BiteDefense                 = 10,
+        ScratchDefense              = 15,
+        Insulation                  = 0.60,
+        WindResistance              = 0.60,
+        WaterResistance             = 1.0,
+        Weight                      = 0.6,
+		FabricType                  = Leather,
+		WorldStaticModel            = DentistApron_Ground,
+	}
+
+    item Gloves_CatGloves
+    {
+	    DisplayCategory             = Clothing,	
+		Type                        = Clothing,
+        DisplayName                 = Cat Gloves, 
+		ClothingItem                = Gloves_CatGloves,
+		BodyLocation                = Hands,
+        BloodLocation               = Hands,
+        IconsForTexture             = CatGlovesYellow;CatGlovesPurple;CatGlovesBlue;CatGlovesGreen;CatGlovesOrange;CatGlovesPink;CatGlovesWhite;CatGlovesBlack,
+        CanHaveHoles                = true,
+        ScratchDefense              = 40,
+        BiteDefense                 = 30,
+	    BulletDefense               = 10,
+        Insulation                  = 0.6,
+        WindResistance              = 0.6,
+        Weight                      = 0.7,
+        FabricType                  = Cotton,      
+        WorldStaticModel            = CatGloves_Ground,		
+    }    
+
+    item Boilersuit_KarateGi
+    {
+	    DisplayCategory             = Clothing,	
+		Type                        = Clothing,
+		DisplayName                 = Karate Gi,
+		ClothingItem                = Boilersuit_KarateGi,
+		BodyLocation                = Boilersuit,
+        BloodLocation               = Trousers;Jumper,
+		IconsForTexture             = KarateGiWhite;KarateGiWhiteWhite;KarateGiBlackWhite;KarateGiBlue;KarateGiRed;KarateGiCobraKai;KarateGiMiyagi,
+	    CanHaveHoles                = true,
+		BiteDefense                 = 20,
+        ScratchDefense              = 30,
+        Insulation                  = 0.3,
+        WindResistance              = 0.3,
+        Weight                      = 0.8,
+        FabricType                  = Cotton,	
+        WorldStaticModel            = KarateGi_Ground,		
+    }    
+
+	item Tie_BowTieFancy
+	{
+	    DisplayCategory             = Accessory,
+		Type                        = Clothing,
+		DisplayName                 = Bow Tie Fancy,
+		ClothingItem                = Tie_BowTieFancy,
+		BodyLocation                = Neck,
+		IconsForTexture             = BowTieFancy1;BowTieFancy2;BowTieFancy3;BowTieFancy4;BowTieFancy5;BowTieFancy6;BowTieFancy7;BowTieFancy8;BowTieFancy9;BowTieFancy10;BowTieFancy11;BowTieFancy12;BowTieFancy13;BowTieFancy14;BowTieFancy15;BowTieFancy16;BowTieFancy17;BowTieFancy18,
+		Weight                      = 0.1,
+		WorldStaticModel            = BowTieFancy_Ground,
+	}
+
+	item Tie_TieFullFancy
+	{
+	    DisplayCategory             = Accessory,
+		Type                        = Clothing,
+		DisplayName                 = Tie Fancy,
+		ClothingItem                = Tie_TieFullFancy,
+        ClothingItemExtra           = HCustoms.Tie_TieLooseFancy,
+        ClothingItemExtraOption     = Loosen,
+        clothingExtraSubmenu        = Tighten,
+		BodyLocation                = Neck,
+		IconsForTexture             = TieFullFancy1;TieFullFancy2;TieFullFancy3;TieFullFancy4;TieFullFancy5;TieFullFancy5;TieFullFancy6;TieFullFancy7;TieFullFancy8;TieFullFancy9;TieFullFancy10;TieFullFancy11;TieFullFancy12;TieFullFancy13;TieFullFancy14;TieFullFancy15;TieFullFancy16;TieFullFancy17;TieFullFancy18;TieFullFancy19;TieFullFancy20,
+		Weight                      = 0.1,
+		WorldStaticModel            = TieFancy_Ground,
+	}
+
+	item Tie_TieLooseFancy
+	{
+	    DisplayCategory             = Accessory,
+		Type                        = Clothing,
+		DisplayName                 = Tie Fancy,
+		ClothingItem                = Tie_TieLooseFancy,
+        ClothingItemExtra           = HCustoms.Tie_TieFullFancy,
+        ClothingItemExtraOption     = Tighten,
+        clothingExtraSubmenu        = Loosen,
+		BodyLocation                = Neck,
+		IconsForTexture             = TieFullFancy1;TieFullFancy2;TieFullFancy3;TieFullFancy4;TieFullFancy5;TieFullFancy5;TieFullFancy6;TieFullFancy7;TieFullFancy8;TieFullFancy9;TieFullFancy10;TieFullFancy11;TieFullFancy12;TieFullFancy13;TieFullFancy14;TieFullFancy15;TieFullFancy16;TieFullFancy17;TieFullFancy18;TieFullFancy19;TieFullFancy20,
+		Weight                      = 0.1,
+		WorldStaticModel            = TieFancy_Ground,
+	}    
+}
