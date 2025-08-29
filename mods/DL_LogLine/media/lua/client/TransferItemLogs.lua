@@ -38,7 +38,7 @@ function ISInventoryTransferAction:perform()
             transferStr = string.format("[%s] Item: %s (%s) | From: %s | To: %s", getPlayer():getUsername(), LogLineUtils.LogSingleItem(self.item), parsedAmountDict, srcStr, destStr);
         end
     else
-        transferStr = string.format("[%s] Item: %s | From: %s | To: %s", getPlayer():getUsername(), LogLineUtils.LogSingleItem(self.item), srcStr, destStr);
+        transferStr = string.format("[%s] Item: %s | From: %s | To: %s", getPlayer():getUsername(), LogLineUtils.LogSingleItem(self.item) or str(self.item), srcStr or " INVALID SRC STR", destStr or " INVALID DEST STR");
     end
 
     print(transferStr);
