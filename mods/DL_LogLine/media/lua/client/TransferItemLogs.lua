@@ -14,8 +14,8 @@ function ISInventoryTransferAction:perform()
     if not self.srcContainer then return end;
     if not self.destContainer then return end;
 
-    local srcStr = LogLineUtils.ContainerToLogStr(self.srcContainer);
-    local destStr = LogLineUtils.ContainerToLogStr(self.destContainer);
+    local srcStr = LogLineUtils.ContainerToLogStr(self.srcContainer) or "";
+    local destStr = LogLineUtils.ContainerToLogStr(self.destContainer) or "";
 
     local transferStr = "";
     if instanceof(self.item, "InventoryContainer") and self.item:getItemContainer() then
@@ -38,7 +38,7 @@ function ISInventoryTransferAction:perform()
             transferStr = string.format("[%s] Item: %s (%s) | From: %s | To: %s", getPlayer():getUsername(), LogLineUtils.LogSingleItem(self.item), parsedAmountDict, srcStr, destStr);
         end
     else
-        transferStr = string.format("[%s] Item: %s | From: %s | To: %s", getPlayer():getUsername(), LogLineUtils.LogSingleItem(self.item), srcStr, destStr);
+        transferStr = string.format("[%s] Item: %s | From: %s | To: %s", getPlayer():getUsername(), LogLineUtils.LogSingleItem(self.item) or str(self.item), srcStr or " INVALID SRC STR", destStr or " INVALID DEST STR");
     end
 
     print(transferStr);

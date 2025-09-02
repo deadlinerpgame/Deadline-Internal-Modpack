@@ -57,6 +57,22 @@ function Recipe.OnCreate.CreateTwigStack(items, result, player)
     result:getModData().ropeItems = ropeItems;
 end
 
+function Recipe.OnCreate.ReturnBottleOrCan(items, result, player)
+    local item, itemType;
+    local ropeItems = {};
+    for i = 0, items:size() - 1 do
+        item = items:get(i);
+        if item then
+            itemType = item:getFullType();
+            if itemType == "Base.Disinfectant" then
+                return
+            else
+
+            end;
+        end;
+    end;
+end
+
 
 function Recipe.OnCreate.ReturnOliveJar(items, result, player)
     local item, itemType;
@@ -1168,10 +1184,22 @@ function Recipe.OnCreate.ReturnMetalFromWeapon(items, result, player)
     if not alloyType then return end
 
     metalValues = {
+        ["aerx.ShortSword_Scrap"] = 10,
+        ["aerx.Sword_Scrap"] = 20,
         ["aerx.CrudeShortSword"] = 10,
         ["aerx.CrudeSword"] = 20,
+        ["aerx.ShortSword"] = 15,
+        ["aerx.Sword"] = 30,
         ["aerx.Mace"] = 10,
         ["aerx.LongMace"] = 10,
+        ["aerx.ClubHammerForged"] = 5,
+        ["aerx.HammerForged"] = 5,
+        ["aerx.BallPeenHammerForged"] = 5,
+        ["base.Pickaxe"] = 5,
+        ["aerx.HandAxeForged"] = 5,
+        ["aerx.WarAxeForged"] = 5,
+        ["aerx.WoodAxeForged"] = 5,
+        ["aerx.CrowbarForged"] = 10,
     }
 
     local itemID = type

@@ -165,7 +165,7 @@ function QueueLine_Server.AddLanguageItem(targetUsername, newLanguage)
         return;
     end
 
-    string addLangStr = string.format("[QueueLine_Server] Add Language for player %s with language %s", targetUsername, newLanguage);
+    local addLangStr = string.format("[QueueLine_Server] Add Language for player %s with language %s", targetUsername, newLanguage);
     print(addLangStr);
 
     local item = 

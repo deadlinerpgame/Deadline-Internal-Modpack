@@ -64,18 +64,6 @@ module SP
 		AllowRottenItem:true,
     }
 
-    recipe Open Sack of Strawberries
-    {
-        SackProduce_Strawberry,
-
-        Result:Strewberrie=16,
-        OnGiveXP:Recipe.OnGiveXP.None,
-        Sound:PutItemInBag,
-        Time:15.0,
-        OnCreate:Recipe.OnCreate.OpenSackProduce,
-        AllowRottenItem:true,
-    }
-
     recipe Open Sack of Coffee Beans
     {
         SackProduce_Coffee,

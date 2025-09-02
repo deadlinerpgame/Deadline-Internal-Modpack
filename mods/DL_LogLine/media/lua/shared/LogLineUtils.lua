@@ -71,8 +71,8 @@ function LogLineUtils.ParseAmountDict(dict, returnStr)
                 returnStr = newStr;
             end
         else
-            local tableHeader = string.format("%s [%s]: %s |", returnStr, k, LogLineUtils.ParseAmountDict(v, returnStr));
-            returnStr = tableHeader; -- Update with the container name before recursively iterating through it.
+            local tableHeader = string.format("%s [%s]: %s |", returnStr, k, LogLineUtils.ParseAmountDict(v, ""));
+            returnStr = returnStr .. tableHeader; -- Update with the container name before recursively iterating through it.
         end
     end
 
@@ -120,8 +120,6 @@ function LogLineUtils.ContainerToLogStr(container)
                 return string.format("%s %s (U: %s, SID: %s)", parent:getForname(), parent:getSurname(), parent:getUsername(), parent:getSteamID());
             end
 
-            
-
             if instanceof(parent, "IsoObject") then
                 local x = parent:getX();
                 local y = parent:getY();
@@ -138,9 +136,18 @@ function LogLineUtils.ContainerToLogStr(container)
         else
             if container:isInCharacterInventory(getPlayer()) then
                 return string.format("%s [inv]", container:getType());
+            else
+                if container:getSourceGrid() then
+                    local srcGrid = container:getSourceGrid();
+                    return string.format("%s (%0d,%0d,%0d)", container:getType(), srcGrid:getX(), srcGrid:getY(), srcGrid:getZ());
+                else
+                    return string.format("%s", container:getType());
+                end
             end
         end
     end
+
+    return container:getType();
 end
 
 function LogLineUtils.LogFromClient(prefix, string)
