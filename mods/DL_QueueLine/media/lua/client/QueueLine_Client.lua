@@ -83,8 +83,7 @@ function QueueLine_Client.OnServerCommand(module, command, args)
                 if not item.type then return end;
 
                 local queueItemFunction = QueueLine_Client.Functions[item.type];
-                local queueFuncArgs = unpack(item.params);
-                local queueFuncStatus, queueFuncError = pcall(queueItemFunction, queueFuncArgs);
+                local queueFuncStatus, queueFuncError = pcall(queueItemFunction, unpack(item.params));
 
                 if queueFuncStatus and not queueFuncError then
                     print("[QueueLine_Client] Queue item redeemed successfully.");
