@@ -117,7 +117,8 @@ function LogLineUtils.ContainerToLogStr(container)
             local parent = container:getParent();
 
             if instanceof(parent, "IsoPlayer") then
-                return string.format("%s %s (U: %s, SID: %s)", parent:getForname(), parent:getSurname(), parent:getUsername(), parent:getSteamID());
+                local steamID = str(parent:getSteamID());
+                return string.format("%s (SID: %s)", parent:getUsername(), steamID or "NO_STEAM");
             end
 
             if instanceof(parent, "IsoObject") then
@@ -128,7 +129,7 @@ function LogLineUtils.ContainerToLogStr(container)
                 local objName = parent:getSprite():getName() or parent:getSprite():getParentObjectName() or "[cannot find obj name]";
 
                 if not x or not y or not z then
-                    return string.format("%s (invalid pos LogLineUtils.ContainerToLogStr)", objName);
+                    return string.format("%s (invalid pos ContainerToLogStr)", objName);
                 end
 
                 return string.format("%s (%0d,%0d,%0d)", objName, x, y, z);
