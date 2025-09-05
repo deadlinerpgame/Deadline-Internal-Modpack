@@ -117,8 +117,8 @@ function LogLineUtils.ContainerToLogStr(container)
             local parent = container:getParent();
 
             if instanceof(parent, "IsoPlayer") then
-                local steamID = str(parent:getSteamID());
-                return string.format("%s (SID: %s)", parent:getUsername(), steamID or "NO_STEAM");
+                local steamID = tostring(parent:getSteamID() or "NO_STEAM");
+                return string.format("%s (SID: %s)", parent:getUsername(), steamID);
             end
 
             if instanceof(parent, "IsoObject") then
