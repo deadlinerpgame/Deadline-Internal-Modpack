@@ -71,7 +71,7 @@ function LogLineUtils.ParseAmountDict(dict, returnStr)
                 returnStr = newStr;
             end
         else
-            local tableHeader = string.format("%s [%s]: %s |", returnStr, k, LogLineUtils.ParseAmountDict(v, ""));
+            local tableHeader = string.format(" [%s]: %s |", k, LogLineUtils.ParseAmountDict(v, ""));
             returnStr = returnStr .. tableHeader; -- Update with the container name before recursively iterating through it.
         end
     end
