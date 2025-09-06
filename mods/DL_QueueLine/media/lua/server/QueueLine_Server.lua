@@ -31,10 +31,8 @@ function QueueLine_Server.GetQueueItemsForUsername(username)
     local returnList = {};
 
     for i, v in ipairs(QueueLine_Server.QueueItems) do
-        print("Iterating through queue item " .. tostring(i));
         local item = QueueLine_Server.QueueItems[i];
         if item then
-            print("Checking item username against given...");
             if item.username == username then
                 table.insert(returnList, item);
             end
@@ -78,8 +76,6 @@ end
 
 function QueueLine_Server.OnClientCommand(module, command, player, args)
     if module ~= "QueueLine" then return end;
-
-    print("[QueueLine_Server] OnClientCommand: " .. command);
 
     if command == "OnConnectQuery" then
         if not args then return end;
