@@ -117,8 +117,12 @@ function LogLineUtils.ContainerToLogStr(container)
             local parent = container:getParent();
 
             if instanceof(parent, "IsoPlayer") then
-                local steamID = tostring(parent:getSteamID() or "NO_STEAM");
-                return string.format("%s (SID: %s)", parent:getUsername(), steamID);
+                if parent:getSteamID() then
+                    local steamIDString = SteamUtils.convertSteamIDToString(parent:getSteamID());
+                    return string.format("%s (SID: %s)", parent:getUsername(), steamIDString);
+                end
+
+                return string.format("%s (NO STEAM)", parent:getUsername());
             end
 
             if instanceof(parent, "IsoObject") then
@@ -151,6 +155,10 @@ function LogLineUtils.ContainerToLogStr(container)
     return container:getType();
 end
 
+
+--- Logs a LogLine style log on the server in its own separate file. Useful for tracking specific issues or data that is too large to reasonably fit into the main log.
+--- @param prefix string The prefix for the log type, this is the name of the LogLine file on the server,<br/> e.g. if Prefix is PlayerAnims, the file will be LogLine_PlayerAnims_[datetimeinfo].txt.
+--- @param string string The actual message to log in the file.
 function LogLineUtils.LogFromClient(prefix, string)
     sendClientCommand("LogLine", "LogClient", { prefix = prefix, message = string });
 end
