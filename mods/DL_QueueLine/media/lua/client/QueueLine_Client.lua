@@ -6,6 +6,8 @@ if isServer() then return end;
 
 WRC = WRC or {};
 WRC.Meta = WRC.Meta or {};
+WRC.SpecialCommands = WRC.SpecialCommands or {};
+WRC.Commands = WRC.Commands or {};
 
 WRC.SpecialCommands["/queuelang"] = {
     handler = "QueueLanguage",

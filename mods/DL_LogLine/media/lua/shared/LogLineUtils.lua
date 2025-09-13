@@ -118,7 +118,7 @@ function LogLineUtils.ContainerToLogStr(container)
 
             if instanceof(parent, "IsoPlayer") then
                 if parent:getSteamID() then
-                    local steamIDString = SteamUtils.convertSteamIDToString(parent:getSteamID());
+                    local steamIDString = parent:getSteamID();
                     return string.format("%s (SID: %s)", parent:getUsername(), steamIDString);
                 end
 
