@@ -69,7 +69,7 @@ TweakWorldObjectContextMenu.tweakContextMenu = function(player, context, worldob
 
         for _, option in pairs(options) do
             if option and option.onSelect == ISWorldObjectContextMenu.onTrade then
-                option.name = getText('Trade')
+                option.name = getText('ContextMenu_TradeWithPlayer')
                 option.onSelect = nil
                 option.notAvailable = false
                 option.toolTip = nil

@@ -1,0 +1,65 @@
+module RC {
+  imports {
+      Base
+  }
+	item Jacked_DenimEmbroidered_Closed
+	{
+		DisplayName = Denim Flower Jacket,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Icon = ShirtDenimLightBlue,
+		BiteDefense = 7,
+		BloodLocation = ShirtLongSleeves,
+		BodyLocation = Jacket,
+		ClothingItem = Jacket_DenimEmbroidered_Closed,
+        ClothingItemExtra = RC.Jacked_DenimEmbroidered_Open,
+        ClothingItemExtraOption = JacketOpen,
+		clothingExtraSubmenu 	= JacketOpen,			
+		FabricType = Denim,
+		Insulation = 0.45,
+		ScratchDefense = 15,
+		WindResistance = 0.55,
+		WorldStaticModel = Shirt_Ground,
+	}
+	item Jacked_DenimEmbroidered_Open
+	{
+		DisplayName = Denim Flower Jacket,
+		DisplayCategory = Clothing,
+		Type = Clothing,
+		Icon = ShirtDenimLightBlue,
+		BiteDefense = 7,
+		BloodLocation = ShirtLongSleeves,
+		BodyLocation = Jacket,
+		ClothingItem = Jacket_DenimEmbroidered_Open,
+        ClothingItemExtra = RC.Jacked_DenimEmbroidered_Closed,
+        ClothingItemExtraOption = ClosedJacket,
+		clothingExtraSubmenu 	= JacketOpen,	
+		FabricType = Denim,
+		Insulation = 0.20,
+		ScratchDefense = 15,
+		WindResistance = 0.25,
+		WorldStaticModel = Shirt_Ground,
+	}	
+     item Jacket_Plaid_Wool_Closed
+    {
+        DisplayCategory = Clothing,		
+        Type = Clothing,
+        DisplayName =  Wyoming Jacket,
+        ClothingItem = Jacket_Plaid_Wool_Closed,
+        ClothingItemExtra = RC.Jacket_Plaid_Wool_Open,
+        ClothingItemExtraOption = JacketOpen,
+		clothingExtraSubmenu 	= JacketOpen,	
+        BodyLocation = Jacket,
+        Icon = WoolJacket,
+        BloodLocation = LongJacket,
+        ScratchDefense = 20,
+        NeckProtectionModifier = 0.5,
+        Insulation = 0.70,
+        WindResistance = 0.40,
+	WaterResistance = 0.25,
+        FabricType = Leather,
+        Weight = 2,
+        WorldStaticModel = JacketLong_Ground,		
+    }	
+		
+}
