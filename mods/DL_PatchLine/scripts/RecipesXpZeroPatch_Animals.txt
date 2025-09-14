@@ -1,0 +1,803 @@
+module Animals
+{
+	/************************Furniture************************/
+
+	recipe Saddle Appaloosa Horse
+	{
+		Saddle,
+		HorseAppaloosa,
+
+		Result:HorseAppaloosaSaddled,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Saddle Black Horse
+	{
+		Saddle,
+		HorseBlack,
+
+		Result:HorseBlackSaddled,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Saddle Blood Bay Horse
+	{
+		Saddle,
+		HorseBloodBay,
+
+		Result:HorseBloodBaySaddled,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Saddle Brown Horse
+	{
+		Saddle,
+		HorseBrown,
+
+		Result:HorseBrownSaddled,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Saddle Dunback Horse
+	{
+		Saddle,
+		HorseDunback,
+
+		Result:HorseDunbackSaddled,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Saddle Grey Horse
+	{
+		Saddle,
+		HorseGrey,
+
+		Result:HorseGreySaddled,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Saddle Painted Black Horse
+	{
+		Saddle,
+		HorsePaintedBlack,
+
+		Result:HorsePaintedBlackSaddled,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Saddle Painted Brown Horse
+	{
+		Saddle,
+		HorsePaintedBrown,
+
+		Result:HorsePaintedBrownSaddled,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Saddle Palamino Horse
+	{
+		Saddle,
+		HorsePalamino,
+
+		Result:HorsePalaminoSaddled,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Saddle White Horse
+	{
+		Saddle,
+		HorseWhite,
+
+		Result:HorseWhiteSaddled,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Saddle Donkey
+	{
+		Saddle,
+		DonkeyBare,
+
+		Result:DonkeySaddled,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Saddle
+	{
+		LeatherStrips=5,
+		Sheet=1,
+		ScrapMetal=5,
+
+		Result:Saddle,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Collect Eggs
+	{
+		keep BirdChickenHenWhite/BirdChickenHenRed,
+		BroccoliSeed/CabbageSeed/CarrotSeed/PotatoSeed/RedRadishSeed/StrewberrieSeed/SunflowerSeeds/TomatoSeed=20,
+
+		Result:Egg,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Collect Eggs
+	{
+		keep BirdChickenHenWhite/BirdChickenHenRed,
+		keep BirdChickenRooster,
+		BroccoliSeed/CabbageSeed/CarrotSeed/PotatoSeed/RedRadishSeed/StrewberrieSeed/SunflowerSeeds/TomatoSeed=20,
+
+		Result:BirdChickenEgg,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Hatch Chicken Egg
+	{
+		BirdChickenEgg,
+		BroccoliSeed/CabbageSeed/CarrotSeed/PotatoSeed/RedRadishSeed/StrewberrieSeed/SunflowerSeeds/TomatoSeed=100,
+
+		Result:BirdChickenChick,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Raise Chick (White Hen)
+	{
+		BirdChickenChick,
+		BroccoliSeed/CabbageSeed/CarrotSeed/PotatoSeed/RedRadishSeed/StrewberrieSeed/SunflowerSeeds/TomatoSeed=100,
+
+		Result:BirdChickenHenWhite,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Raise Chick (Red Hen)
+	{
+		BirdChickenChick,
+		BroccoliSeed/CabbageSeed/CarrotSeed/PotatoSeed/RedRadishSeed/StrewberrieSeed/SunflowerSeeds/TomatoSeed=100,
+
+		Result:BirdChickenHenRed,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Raise Chick (Rooster)
+	{
+		BirdChickenChick,
+		BroccoliSeed/CabbageSeed/CarrotSeed/PotatoSeed/RedRadishSeed/StrewberrieSeed/SunflowerSeeds/TomatoSeed=100,
+
+		Result:BirdChickenRooster,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Slaughter Chicken
+	{
+		BirdChickenHenRed/BirdChickenHenWhite/BirdRooster,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete,
+
+		Result:Base.Chicken,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Slaughter Chick
+	{
+		BirdChickenChick,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete,
+
+		Result:ChickenNuggets,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Milk Cow (Dairy)
+	{
+		keep CowMilk,
+		Cabbage/Broccoli/RedRadish/Carrots/Potato=20,
+
+		Result:Milk,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Milk Cow (Angus)
+	{
+		keep CowBeef,
+		Cabbage/Broccoli/RedRadish/Carrots/Potato=100,
+
+		Result:Milk,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Breed Cows (Angus)
+	{
+		keep CowBeef,
+		keep CowBull,
+		Cabbage/Broccoli/RedRadish/Carrots/Potato=100,
+
+		Result:CalfBeef,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Breed Cows (Dairy)
+	{
+		keep CowMilk,
+		keep CowBull,
+		Cabbage/Broccoli/RedRadish/Carrots/Potato=100,
+
+		Result:CalfMilk,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Raise Calf (Angus)
+	{
+		CalfBeef,
+		Cabbage/Broccoli/RedRadish/Carrots/Potato=200,
+
+		Result:CowBeef,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Raise Calf (Dairy)
+	{
+		CalfMilk,
+		Cabbage/Broccoli/RedRadish/Carrots/Potato=200,
+
+		Result:CowMilk,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Raise Calf (Bull)
+	{
+		CalfBeef/CalfMilk,
+		Cabbage/Broccoli/RedRadish/Carrots/Potato=200,
+
+		Result:CowBull,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Slaughter Cow
+	{
+		CowMilk/CowBeef/CowBull/CalfMilk/CalfBeef,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete,
+
+		Result:Steak,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Shear Sheep
+	{
+		keep SheepEwe/SheepM,
+		Cabbage/Broccoli/RedRadish/Carrots/Potato=10,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete/Scissors,
+
+		Result:Yarn,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Breed Sheep
+	{
+		keep SheepEwe,
+		keep SheepM,
+		Cabbage/Broccoli/RedRadish/Carrots/Potato=100,
+
+		Result:SheepLamb,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Raise Lamb (Ewe)
+	{
+		SheepLamb,
+		Cabbage/Broccoli/RedRadish/Carrots/Potato=100,
+
+		Result:SheepEwe,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Raise Lamb (Ram)
+	{
+		SheepLamb,
+		Cabbage/Broccoli/RedRadish/Carrots/Potato=100,
+
+		Result:SheepM,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Slaughter Sheep
+	{
+		SheepEwe/SheepM/SheepLamb,
+		keep KitchenKnife/HuntingKnife/MeatCleaver/FlintKnife/Machete,
+
+		Result:MuttonChop,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Husky Sit
+	{
+		DogHusky1/DogHusky3,
+
+		Result:DogHusky2,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Husky Stand
+	{
+		DogHusky2/DogHusky3,
+
+		Result:DogHusky1,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Husky Lay Down
+	{
+		DogHusky1/DogHusky2,
+
+		Result:DogHusky3,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Black Husky Sit
+	{
+		DogBlackHusky1/DogBlackHusky3,
+
+		Result:DogBlackHusky2,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Black Husky Stand
+	{
+		DogBlackHusky2/DogBlackHusky3,
+
+		Result:DogBlackHusky1,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Black Husky Lay Down
+	{
+		DogBlackHusky1/DogBlackHusky2,
+
+		Result:DogBlackHusky3,
+		Time:1.0,
+		Override:true,
+		Category:Animals,
+	}
+
+	recipe Gold Chocolate Gelt Coins
+	{
+		ChocolateChips=5,
+		Aluminum=1,
+
+		Result:ChocolateGeltCoinsGold,
+		Time:1.0,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+		Category:Cooking,
+	}
+
+	recipe Silver Chocolate Gelt Coins
+	{
+		ChocolateChips=5,
+		Aluminum=1,
+
+		Result:ChocolateGeltCoinsSilver,
+		Time:1.0,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+		Category:Cooking,
+	}
+
+	recipe Carve Dreidel
+	{
+		UnusableWood=2,
+		keep [Recipe.GetItemTypes.DullKnife]/[Recipe.GetItemTypes.SharpKnife],
+
+		Result:Dreidel,
+		Time:1.0,
+		OnGiveXP:Recipe.OnGiveXP.Carpentry1,
+		Category:Carpentry,
+	}
+
+	recipe Tie Hamsa Charm
+	{
+		ScrapMetal=2,
+		Yarn=1,
+
+		Result:HamsaCharm,
+		Time:1.0,
+		OnGiveXP:Recipe.OnGiveXP.Carpentry1,
+		Category:Carpentry,
+	}
+
+	recipe Wrap Round Present
+	{
+		WrappingPaperChristmas=1,
+		keep Scissors,
+
+		Result:PresentChristmasV1,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Round Present
+	{
+		WrappingPaperMetallic=1,
+		keep Scissors,
+
+		Result:PresentMetallicV1,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Round Present
+	{
+		WrappingPaperBlue=1,
+		keep Scissors,
+
+		Result:PresentBlueV1,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Round Present
+	{
+		WrappingPaperStars=1,
+		keep Scissors,
+
+		Result:PresentStarsV1,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Round Present
+	{
+		WrappingPaperReindeer=1,
+		keep Scissors,
+
+		Result:PresentReindeerV1,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Tall Round Present
+	{
+		WrappingPaperChristmas=1,
+		keep Scissors,
+
+		Result:PresentChristmasV2,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Tall Round Present
+	{
+		WrappingPaperMetallic=1,
+		keep Scissors,
+
+		Result:PresentMetallicV2,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Tall Round Present
+	{
+		WrappingPaperBlue=1,
+		keep Scissors,
+
+		Result:PresentBlueV2,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Tall Round Present
+	{
+		WrappingPaperStars=1,
+		keep Scissors,
+
+		Result:PresentStarsV2,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Tall Round Present
+	{
+		WrappingPaperReindeer=1,
+		keep Scissors,
+
+		Result:PresentReindeerV2,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Small Present
+	{
+		WrappingPaperChristmas=1,
+		keep Scissors,
+
+		Result:PresentChristmasV3,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Small Present
+	{
+		WrappingPaperMetallic=1,
+		keep Scissors,
+
+		Result:PresentMetallicV3,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Small Present
+	{
+		WrappingPaperBlue=1,
+		keep Scissors,
+
+		Result:PresentBlueV3,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Small Present
+	{
+		WrappingPaperStars=1,
+		keep Scissors,
+
+		Result:PresentStarsV3,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Small Present
+	{
+		WrappingPaperReindeer=1,
+		keep Scissors,
+
+		Result:PresentReindeerV3,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Tall Present
+	{
+		WrappingPaperChristmas=1,
+		keep Scissors,
+
+		Result:PresentChristmasV4,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Tall Present
+	{
+		WrappingPaperMetallic=1,
+		keep Scissors,
+
+		Result:PresentMetallicV4,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Tall Present
+	{
+		WrappingPaperBlue=1,
+		keep Scissors,
+
+		Result:PresentBlueV4,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Tall Present
+	{
+		WrappingPaperStars=1,
+		keep Scissors,
+
+		Result:PresentStarsV4,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Tall Present
+	{
+		WrappingPaperReindeer=1,
+		keep Scissors,
+
+		Result:PresentReindeerV4,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Long Present
+	{
+		WrappingPaperChristmas=1,
+		keep Scissors,
+
+		Result:PresentChristmasV5,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Long Present
+	{
+		WrappingPaperMetallic=1,
+		keep Scissors,
+
+		Result:PresentMetallicV5,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Long Present
+	{
+		WrappingPaperBlue=1,
+		keep Scissors,
+
+		Result:PresentBlueV5,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Long Present
+	{
+		WrappingPaperStars=1,
+		keep Scissors,
+
+		Result:PresentStarsV5,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Wrap Long Present
+	{
+		WrappingPaperReindeer=1,
+		keep Scissors,
+
+		Result:PresentReindeerV5,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Roll Wrapping Paper
+	{
+		SheetPaper2=10,
+
+		Result:WrappingPaperChristmas,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Roll Wrapping Paper
+	{
+		SheetPaper2=10,
+
+		Result:WrappingPaperMetallic,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Roll Wrapping Paper
+	{
+		SheetPaper2=10,
+
+		Result:WrappingPaperBlue,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Roll Wrapping Paper
+	{
+		SheetPaper2=10,
+
+		Result:WrappingPaperStars,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+	recipe Roll Wrapping Paper
+	{
+		SheetPaper2=10,
+
+		Result:WrappingPaperReindeer,
+		Time:1.0,
+		Override:true,
+		Category:General,
+	}
+
+}
