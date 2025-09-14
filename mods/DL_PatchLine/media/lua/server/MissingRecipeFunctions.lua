@@ -1,3 +1,11 @@
+if isClient() then return end;
+
+Recipe = {}
+Recipe.GetItemTypes = {}
+Recipe.OnCanPerform = {}
+Recipe.OnCreate = {}
+Recipe.OnGiveXP = {}
+Recipe.OnTest = {}
 
 function Recipe.OnGiveXP.Cooking5(recipe, ingredients, result, player)
     player:getXp():AddXP(Perks.Cooking, 5);
