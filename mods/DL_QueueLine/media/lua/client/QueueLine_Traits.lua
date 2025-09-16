@@ -91,7 +91,7 @@ function WRC.Commands.QueueTimedTrait(args)
         return;
     end
 
-    local hrsInSeconds = hrsVal --* 3600;
+    local hrsInSeconds = hrsVal * 3600;
     local futureTimestamp = getTimestamp() + hrsInSeconds;
 
     sendClientCommand(getPlayer(), "QueueLine", "AddTrait", { username = username, trait = traitStr, timestamp = futureTimestamp });
