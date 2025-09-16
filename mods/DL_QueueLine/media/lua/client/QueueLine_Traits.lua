@@ -5,6 +5,7 @@ if isServer() then return end;
 --]]
 
 QueueLine_Client = QueueLine_Client or {};
+QueueLine_Traits = {};
 
 WRC = WRC or {};
 WRC.Meta = WRC.Meta or {};
@@ -101,7 +102,7 @@ end
 --[[
             Returned queue item functions.
 --]]
-function QueueLine_Client.AddTrait(username, trait, timestamp)
+function QueueLine_Traits.AddTrait(username, trait, timestamp)
 
     if not username or not trait then
         error("[QueueLine_Client] Received add trait queue item with no username or trait.", 1);
@@ -110,23 +111,36 @@ function QueueLine_Client.AddTrait(username, trait, timestamp)
     local currentTime = getTimestamp();
     if timestamp and (currentTime < getTimestamp()) then
         local errorStr = string.format("[QueueLine_Client] Received add trait queue item %s but timestamp is not yet passed: %0d - due: %0d.", trait, currentTime, timestamp);
+        print(errorStr);
         error(errorStr, 1);
+        return;
     end
 
     -- Get trait.
     local matchingTrait = TraitFactory.getTrait(trait);
     if not matchingTrait then
-        error("[QueueLine_Client] Received add trait queue item with invalid trait name: " .. tostring(trait), 1);
+        local errorStr = "[QueueLine_Client] Received add trait queue item with invalid trait name: " .. tostring(trait);
+        print(errorStr);
+        error(errorStr, 1);
+        return;
     end
 
-    local playerFromUsername = getPlayerByUserName(username);
+    local playerFromUsername = getPlayerFromUsername(username);
     if not playerFromUsername then
-        error("[QueueLine_Client] Received add trait queue item with invalid username: " .. tostring(username), 1);
+        local errorStr = "[QueueLine_Client] Received add trait queue item with invalid username: " .. tostring(username);
+        print(errorStr);
+        error(errorStr, 1);
+        return;
     end
 
-    playerFromUsername:getTraits():add(matchingTrait);
+    playerFromUsername:getTraits():add(trait);
     SyncXp(playerFromUsername);
 
     WL_Utils.addInfoToChat("You have been given trait " .. trait .. " from the offline actions queue.");
-    return true;
 end
+
+function QueueLine_Traits.RemoveTrait(username, trait)
+
+end
+
+return QueueLine_Traits;

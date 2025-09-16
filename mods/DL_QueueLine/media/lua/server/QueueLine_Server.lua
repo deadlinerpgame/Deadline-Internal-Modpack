@@ -139,7 +139,10 @@ function QueueLine_Server.OnClientCommand(module, command, player, args)
         if not args.error then args.error = "QueueItemFailedNoErrorMsg" end;
 
         local item = QueueLine_Server.GetItemFromId(args.id);
-        local errorStr = string.format("[QueueLine_Server] [QueueItemFailed] Player %s redeem type %s failed with error: %s", player:getUsername(), item.type, args.error);
+        if not item then
+            print("[QueueLine_Server] [QueueItemFailed] Queue item failed for username " .. args.username .. " but no queue item retrieved for ID: " .. (args.id or "INVALID_ID"));
+        end
+        local errorStr = string.format("[QueueLine_Server] [QueueItemFailed] Player %s redeem type %s failed with error: %s", args.username, item.type, args.error);
         print(errorStr);
     end
 end
