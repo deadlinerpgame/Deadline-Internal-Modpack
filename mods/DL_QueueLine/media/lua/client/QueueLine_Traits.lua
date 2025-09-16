@@ -59,7 +59,7 @@ function WRC.Commands.QueueTrait(args)
     end
 
     sendClientCommand(getPlayer(), "QueueLine", "AddTrait", { username = username, trait = traitStr });
-    local queuedStr = string.format("[QueueLine] Added trait %s to the queue for player %s on their next connection.", trait, username);
+    local queuedStr = string.format("[QueueLine] Added trait %s to the queue for player %s on their next connection.", traitStr, username);
     WL_Utils.addInfoToChat(queuedStr);
 end
 
