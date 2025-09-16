@@ -12,6 +12,7 @@ QueueLine_Server.ItemTypes =
 {
     ADD_LANGUAGE = "ADD_LANGUAGE",
     REMOVE_LANGUAGE = "REMOVE_LANGUAGE",
+    ADD_TRAIT = "ADD_TRAIT",
     ADD_ITEM = {},
     REMOVE_ITEM = {},
     SHOW_NOTIFICATION = {}
@@ -24,8 +25,6 @@ QueueLine_Server.QueueItems = {};
 --]]
 
 function QueueLine_Server.GetQueueItemsForUsername(username)
-    print("[QueueLine_Server] GetQueueItemsForUsername: " .. username);
-
     if not username then return end;
 
     local returnList = {};
@@ -43,8 +42,6 @@ function QueueLine_Server.GetQueueItemsForUsername(username)
 end
 
 function QueueLine_Server.GetItemFromId(id)
-    print("[QueueLine_Server] GetItemFromId: " .. id);
-
     if not id then return end;
 
     for i, v in ipairs(QueueLine_Server.QueueItems) do
@@ -59,8 +56,6 @@ function QueueLine_Server.GetItemFromId(id)
 end
 
 function QueueLine_Server.RemoveItemFromQueue(id)
-    print("[QueueLine_Server] RemoveItemFromQueue: " .. id);
-
     if not id then return end;
 
     for i, v in ipairs(QueueLine_Server.QueueItems) do
@@ -112,6 +107,23 @@ function QueueLine_Server.OnClientCommand(module, command, player, args)
         if player:getAccessLevel() ~= "Admin" then return end;
 
         QueueLine_Server.AddLanguageItem(args.username, args.language);
+    end
+
+    if command == "AddTrait" then
+        if not args then return end;
+        if not args.trait then return end;
+
+        if player:getAccessLevel() ~= "Admin" then return end;
+
+        QueueLine_Server.AddTraitItem(args.username, args.trait, args.timestamp);
+    end
+
+    if command == "AddTimedTrait" then
+        if not args then return end;
+        if not args.trait then return end;
+        if not args.timestamp then return end;
+
+        if player:getAccessLevel() ~= "Admin" then return end;
     end
     
     if command == "RemoveOnSuccess" then
@@ -173,6 +185,35 @@ function QueueLine_Server.AddLanguageItem(targetUsername, newLanguage)
         {
             [1] = targetUsername,
             [2] = newLanguage
+        }
+    };
+
+    table.insert(QueueLine_Server.QueueItems, item);
+    QueueLine_Server.SaveQueue();
+end
+
+function QueueLine_Server.AddTraitItem(targetUsername, trait, timestamp)
+    if not targetUsername or not trait then
+        print("[QueueLine_Server] AddTraitItem - no username or trait passed.");
+        return;
+    end
+
+    local addTraitStr = string.format("[QueueLine_Server] Add Trait for player %s with language %s", targetUsername, trait);
+    if timestamp then
+        addTraitStr = addTraitStr .. string.format(" with start time as %s", timestamp);
+    end
+    print(addTraitStr);
+
+    local item = 
+    {
+        id = tostring(getTimestampMs()) .. "|" .. targetUsername,
+        username = targetUsername,
+        type = QueueLine_Server.ItemTypes.ADD_TRAIT,
+        params =
+        {
+            [1] = targetUsername,
+            [2] = trait,
+            [3] = timestamp
         }
     };
 

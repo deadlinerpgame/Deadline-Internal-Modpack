@@ -26,8 +26,6 @@ function WRC.Commands.QueueLanguage(args)
     end
 
     local username, lang = params[1], params[2];
-    print("USERNAME: " .. username);
-    print("LANG: " .. lang);
 
     if username == "" or lang == "" then
         WL_Utils.addErrorToChat("Invalid format. /queuelang [username] [language]");
@@ -53,6 +51,8 @@ QueueLine_Client.Functions =
 {
     ADD_LANGUAGE = WRC.Meta.AddLanguageTo,
     REMOVE_LANGUAGE = WRC.Meta.RemoveLanguageFrom,
+    ADD_TRAIT = QueueLine_Client.AddTrait,
+    REMOVE_TRAIT = QueueLine_Client.RemoveTrait,
 };
 
 QueueLine_Client.QueueQueriedThisConnect = false;
@@ -77,12 +77,8 @@ function QueueLine_Client.OnServerCommand(module, command, args)
                     return;
                 end
 
-                for i, v in ipairs(item.params) do
-                    print(tostring(i) .. ": " .. tostring(v));
-                end
-
                 -- If the function for the queue item is called successfully, then remove it from queue
-                if not item.type then return end;
+
 
                 local queueItemFunction = QueueLine_Client.Functions[item.type];
                 local queueFuncStatus, queueFuncError = pcall(queueItemFunction, unpack(item.params));
