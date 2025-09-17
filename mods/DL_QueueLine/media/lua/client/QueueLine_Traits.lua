@@ -104,17 +104,20 @@ end
 --]]
 function QueueLine_Traits.AddTrait(username, trait, timestamp)
 
+    print("[QueueLine_Traits] init");
     if not username or not trait then
         error("[QueueLine_Client] Received add trait queue item with no username or trait.", 1);
     end
 
     local currentTime = getTimestamp();
-    if timestamp and (currentTime < getTimestamp()) then
+    if timestamp and (timestamp < getTimestamp()) then
         local errorStr = string.format("[QueueLine_Client] Received add trait queue item %s but timestamp is not yet passed: %0d - due: %0d.", trait, currentTime, timestamp);
         print(errorStr);
         error(errorStr, 1);
         return;
     end
+
+    print("[QueueLine_Traits] 2");
 
     -- Get trait.
     local matchingTrait = TraitFactory.getTrait(trait);
@@ -125,6 +128,8 @@ function QueueLine_Traits.AddTrait(username, trait, timestamp)
         return;
     end
 
+    print("[QueueLine_Traits] 3");
+
     local playerFromUsername = getPlayerFromUsername(username);
     if not playerFromUsername then
         local errorStr = "[QueueLine_Client] Received add trait queue item with invalid username: " .. tostring(username);
@@ -133,9 +138,12 @@ function QueueLine_Traits.AddTrait(username, trait, timestamp)
         return;
     end
 
+    print("[QueueLine_Traits] 4");
+
     playerFromUsername:getTraits():add(trait);
     SyncXp(playerFromUsername);
 
+    print("[QueueLine_Traits] 5");
     WL_Utils.addInfoToChat("You have been given trait " .. trait .. " from the offline actions queue.");
 end
 
