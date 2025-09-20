@@ -111,7 +111,7 @@ function QueueLine_Traits.AddTrait(username, trait, timestamp)
 
     local currentTime = getTimestamp();
     local timestampNum = tonumber(timestamp);
-    if timestampNum and (timestampNum < currentTime) then
+    if timestampNum and (timestampNum > currentTime) then
         local errorStr = string.format("[QueueLine_Client] Received add trait queue item %s but timestamp is not yet passed: %0d - due: %0d.", trait, currentTime, timestamp);
         print(errorStr);
         return;

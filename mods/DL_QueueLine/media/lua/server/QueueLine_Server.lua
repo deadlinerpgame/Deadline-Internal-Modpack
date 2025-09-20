@@ -24,6 +24,23 @@ QueueLine_Server.QueueItems = {};
         FUNCTIONS   
 --]]
 
+function QueueLine_Server.PrettyPrintParams(itemParams)
+    if not itemParams then return "" end;
+
+    local formattedStr = "";
+
+    for k, v in pairs(itemParams) do
+        local param = itemParams[k];
+        
+        if param then
+            formattedStr = formattedStr .. string.format("| %s: %s", tostring(k), tostring(v));
+        end
+    end
+
+    return formattedStr;
+end
+
+
 function QueueLine_Server.GetQueueItemsForUsername(username)
     if not username then return end;
 
@@ -150,6 +167,12 @@ end
 function QueueLine_Server.OnInitGlobalModData(newGame)
     QueueLine_Server.QueueItems = ModData.getOrCreate("QueueLine_CurrentQueue");
     print("[QueueLine_Server] Queue Items initialised with " .. tostring(#QueueLine_Server.QueueItems) .. " items.");
+
+    for i, v in ipairs(QueueLine_Server.QueueItems) do
+        local queueItemStr = string.format("[QueueLine_Server] Queue item %0d - username: %s - type: %s || Params: %s", i, v.username, v.type, QueueLine_Server.PrettyPrintParams(v.params));
+        print(queueItemStr);
+    end
+
 end
 
 function QueueLine_Server.SaveQueue()
@@ -162,7 +185,7 @@ function QueueLine_Server.SaveQueue()
     ModData.transmit("QueueLine_Queue");
 
     for i, v in ipairs(QueueLine_Server.QueueItems) do
-        local queueItemStr = string.format("[QueueLine_Server] Queue item %0d - username: %s - type: %s.", i, v.username, v.type);
+        local queueItemStr = string.format("[QueueLine_Server] Queue item %0d - username: %s - type: %s || Params: %s", i, v.username, v.type, QueueLine_Server.PrettyPrintParams(v.params));
         print(queueItemStr);
     end
 
@@ -223,6 +246,7 @@ function QueueLine_Server.AddTraitItem(targetUsername, trait, timestamp)
     table.insert(QueueLine_Server.QueueItems, item);
     QueueLine_Server.SaveQueue();
 end
+
 
 Events.OnClientCommand.Add(QueueLine_Server.OnClientCommand);
 Events.OnInitGlobalModData.Add(QueueLine_Server.OnInitGlobalModData);
