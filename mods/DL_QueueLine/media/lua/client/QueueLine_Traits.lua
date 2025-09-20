@@ -106,14 +106,14 @@ function QueueLine_Traits.AddTrait(username, trait, timestamp)
 
     print("[QueueLine_Traits] init");
     if not username or not trait then
-        error("[QueueLine_Client] Received add trait queue item with no username or trait.", 1);
+        error("[QueueLine_Client] Received add trait queue item with no username or trait.");
     end
 
     local currentTime = getTimestamp();
-    if timestamp and (timestamp < getTimestamp()) then
+    local timestampNum = tonumber(timestamp);
+    if timestampNum and (timestampNum < currentTime) then
         local errorStr = string.format("[QueueLine_Client] Received add trait queue item %s but timestamp is not yet passed: %0d - due: %0d.", trait, currentTime, timestamp);
         print(errorStr);
-        error(errorStr, 1);
         return;
     end
 
