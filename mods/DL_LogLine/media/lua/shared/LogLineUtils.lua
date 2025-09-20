@@ -15,6 +15,13 @@ function LogLineUtils.JavaArrayToTable(javaTable)
     return returnTable;
 end
 
+function LogLineUtils.PlayerCoordsStr(player)
+    if not player then return end;
+
+    local coordsStr = string.format("[%0d,%0d,%0d]", player:getX(), player:getY(), player:getZ());
+    return coordsStr;
+end
+
 function LogLineUtils.ItemToDictKey(item)
     if not item then return nil end;
 
