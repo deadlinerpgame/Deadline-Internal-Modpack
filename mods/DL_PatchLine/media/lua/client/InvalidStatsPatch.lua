@@ -139,8 +139,21 @@ end
 
 ------------------
 
+-- Because the two events have different arguments passed to them, it is two separate functions.
+-- I could do some lua jiggery pokery to get around this but this is more readable.
 function InvalidStats_OnCreatePlayer(playerNum, player)
+    if not player then return end;
 
+    InvalidStats_CheckPlayer(player);
+end
+
+function InvalidStats_OnClothingUpdated(player)
+    if not player then return end;
+
+    InvalidStats_CheckPlayer(player)
+end
+
+function InvalidStats_CheckPlayer(player)
     if InvalidStats_IsTempInvalid(player) then
         LogLineUtils.LogFromClient(LOGLINE_INVALIDSTATSPREFIX, "Player " .. player:getUsername() .. " temperature is invalid, resetting player and clothing...");
         ResetPlayerTemperature(player);
@@ -150,7 +163,7 @@ function InvalidStats_OnCreatePlayer(playerNum, player)
     if InvalidStats_IsNutritionInvalid(player) then
         ResetPlayerNutrition(player);
     end
-
 end
 
 Events.OnCreatePlayer.Add(InvalidStats_OnCreatePlayer);
+Events.OnClothingUpdated.Add(InvalidStats_OnClothingUpdated);
