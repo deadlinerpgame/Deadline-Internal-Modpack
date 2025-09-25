@@ -4,6 +4,8 @@ LogLineUtils.LogFromClient = LogLineUtils.LogFromClient or {};
 
 LOGLINE_INVALIDSTATSPREFIX = "InvalidStats"
 
+ClothingCheckedAfterChange = false;
+
 --[[
 https://stackoverflow.com/questions/37753694/lua-check-if-a-number-value-is-nan
 "According to IEEE 754, a nan value is considered not equal to any value, including itself."
@@ -49,20 +51,23 @@ function InvalidStats_IsTempInvalid(player)
     if (not playerTemp) or (not playerWetness) then return true end;
 
     if IsNaN(playerTemp) or IsNaN(playerWetness) then return true end;
+
+    -- Now check all clothes in inventory.
+    local playerItems = player:getInventory():getItemsFromCategory("Clothing");
+    if playerItems then
+        for i = 0, playerItems:size() - 1 do
+            local item = playerItems:get(i);
+
+            if item and instanceof(item, "Clothing") then
+                if IsNaN(item:getWetness()) then
+                   return true;
+                end
+            end
+        end
+    end
+
     return false;
 end
-
-------------------
-function CheckAndLogBuggedClothing(player, clothingItem)
-    if not player then return end;
-    if not instanceof(clothingItem, "Clothing") then return end;
-
-    if IsNaN(clothingItem:getTemperature()) then
-        local logStr = string.format("[CHECKANDLOG] Player %s: %s [%s] has IsNaN temperature, val: ", player:getUsername(), clothingItem:getName(), clothingItem:getFullType(), clothingItem:getTemperature());
-        LogLineUtils.LogFromClient(LOGLINE_INVALIDSTATSPREFIX, logStr);
-    end
-end
-
 
 --- Iterates through each worn item of clothing and resets the wetness of it. This should be done AFTER ResetPlayerTemperature as the player's thermoregulator will just be broken again if the clothing items are bugged.
 function ResetPlayerClothing(player)
@@ -73,15 +78,17 @@ function ResetPlayerClothing(player)
         local item = wornItems:get(i):getItem();
         if item then
             if instanceof(item, "Clothing") then
-                -- This is for purely logging purposes to try and find out how it is caused.
-                CheckAndLogBuggedClothing(player, item);
-
                 -- Actual resetting.
-                item:flushWetness();
-                item:setWetness(0.0);
+                if IsNaN(item:getWetness()) then
+                    item:setWetness(0);
+                    item:setTemperature(37);
+                end
             end
         end
     end
+
+    -- Then reset all clothes in inventory too.
+
 end
 
 function ResetPlayerTemperature(player)
@@ -92,14 +99,14 @@ function ResetPlayerTemperature(player)
     if not thermoReg then return end;
 
     thermoReg:reset();
-    bodyDamage:setWetness(0.0);
+    bodyDamage:setWetness(0);
 
     -- Set invidiual body parts as well just in case there's a modded clothing item that the main thermo regulator doesn't catch.
     local bodyParts = bodyDamage:getBodyParts();
     for i = 0, bodyParts:size() - 1 do
         local part = bodyParts:get(i);
         if part then
-            part:setWetness(0.0);
+            part:setWetness(0);
         end
     end
 end
@@ -144,26 +151,38 @@ end
 function InvalidStats_OnCreatePlayer(playerNum, player)
     if not player then return end;
 
-    InvalidStats_CheckPlayer(player);
+    ClothingCheckedAfterChange = false; -- Force a check
 end
 
 function InvalidStats_OnClothingUpdated(player)
     if not player then return end;
 
-    InvalidStats_CheckPlayer(player)
+    if player ~= getPlayer() then return end;
+
+    ClothingCheckedAfterChange = false; -- Force a check.
 end
 
 function InvalidStats_CheckPlayer(player)
     if InvalidStats_IsTempInvalid(player) then
         LogLineUtils.LogFromClient(LOGLINE_INVALIDSTATSPREFIX, "Player " .. player:getUsername() .. " temperature is invalid, resetting player and clothing...");
-        ResetPlayerTemperature(player);
         ResetPlayerClothing(player);
+        ResetPlayerTemperature(player);
     end
 
     if InvalidStats_IsNutritionInvalid(player) then
         ResetPlayerNutrition(player);
     end
+
+    ClothingCheckedAfterChange = true;
+end
+
+
+function InvalidStats_EveryOneMinute()
+    if (not ClothingCheckedAfterChange) then
+        InvalidStats_CheckPlayer(getPlayer());
+    end
 end
 
 Events.OnCreatePlayer.Add(InvalidStats_OnCreatePlayer);
 Events.OnClothingUpdated.Add(InvalidStats_OnClothingUpdated);
+Events.EveryOneMinute.Add(InvalidStats_EveryOneMinute);
