@@ -94,8 +94,10 @@ function WRC.Commands.QueueTimedTrait(args)
     local hrsInSeconds = hrsVal * 3600;
     local futureTimestamp = getTimestamp() + hrsInSeconds;
 
+    local timestampAsDate = os.date("%d/%m/%Y %H:%M:%S", futureTimestamp);
+
     sendClientCommand(getPlayer(), "QueueLine", "AddTrait", { username = username, trait = traitStr, timestamp = futureTimestamp });
-    local queuedStr = string.format("[QueueLine] Added trait %s to the queue for player %s to be activated in %0d hours.", traitStr, username, hrsVal);
+    local queuedStr = string.format("[QueueLine] Added trait %s to the queue for player %s to be activated at %s.", traitStr, username, timestampAsDate);
     WL_Utils.addInfoToChat(queuedStr);
 end
 
@@ -104,20 +106,18 @@ end
 --]]
 function QueueLine_Traits.AddTrait(username, trait, timestamp)
 
-    print("[QueueLine_Traits] init");
     if not username or not trait then
-        error("[QueueLine_Client] Received add trait queue item with no username or trait.");
-    end
-
-    local currentTime = getTimestamp();
-    local timestampNum = tonumber(timestamp);
-    if timestampNum and (timestampNum > currentTime) then
-        local errorStr = string.format("[QueueLine_Client] Received add trait queue item %s but timestamp is not yet passed: %0d - due: %0d.", trait, currentTime, timestamp);
-        print(errorStr);
+        error("[QueueLine_Client] Received add trait queue item with no username or trait.", 1);
         return;
     end
 
-    print("[QueueLine_Traits] 2");
+    --local currentTime = getTimestamp();
+    --local timestampNum = tonumber(timestamp);
+    --[[if timestampNum and (timestampNum > currentTime) then
+        local errorStr = string.format("[QueueLine_Client] Received add trait queue item %s but timestamp is not yet passed: %0d - due: %0d.", trait, currentTime, timestamp);
+        print(errorStr);
+        return;
+    end--]]
 
     -- Get trait.
     local matchingTrait = TraitFactory.getTrait(trait);
@@ -128,8 +128,6 @@ function QueueLine_Traits.AddTrait(username, trait, timestamp)
         return;
     end
 
-    print("[QueueLine_Traits] 3");
-
     local playerFromUsername = getPlayerFromUsername(username);
     if not playerFromUsername then
         local errorStr = "[QueueLine_Client] Received add trait queue item with invalid username: " .. tostring(username);
@@ -137,8 +135,6 @@ function QueueLine_Traits.AddTrait(username, trait, timestamp)
         error(errorStr, 1);
         return;
     end
-
-    print("[QueueLine_Traits] 4");
 
     playerFromUsername:getTraits():add(trait);
     SyncXp(playerFromUsername);

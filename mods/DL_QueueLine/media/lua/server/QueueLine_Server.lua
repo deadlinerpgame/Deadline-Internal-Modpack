@@ -50,7 +50,12 @@ function QueueLine_Server.GetQueueItemsForUsername(username)
         local item = QueueLine_Server.QueueItems[i];
         if item then
             if item.username == username then
-                table.insert(returnList, item);
+                if item.activateTime and item.activateTime <= getTimestamp() then
+                    table.insert(returnList, item);
+                elseif not item.activateTime or item.activateTime == 0 then
+                    table.insert(returnList, item);
+                end
+                
             end
         end
     end
@@ -130,7 +135,10 @@ function QueueLine_Server.OnClientCommand(module, command, player, args)
         if not args then return end;
         if not args.trait then return end;
 
-        if player:getAccessLevel() ~= "Admin" then return end;
+        if player:getAccessLevel() ~= "Admin" then 
+            print("[QueueLine_Server] Player " .. player:getUsername() .. " has called AddTrait but they are not an admin - their access level is " .. player:getAccessLevel());
+            return;
+        end;
 
         QueueLine_Server.AddTraitItem(args.username, args.trait, args.timestamp);
     end
@@ -169,7 +177,7 @@ function QueueLine_Server.OnInitGlobalModData(newGame)
     print("[QueueLine_Server] Queue Items initialised with " .. tostring(#QueueLine_Server.QueueItems) .. " items.");
 
     for i, v in ipairs(QueueLine_Server.QueueItems) do
-        local queueItemStr = string.format("[QueueLine_Server] Queue item %0d - username: %s - type: %s || Params: %s", i, v.username, v.type, QueueLine_Server.PrettyPrintParams(v.params));
+        local queueItemStr = string.format("[QueueLine_Server] Queue item %0d - username: %s - type: %s - activate time: %s || Params: %s", i, v.username, v.type, v.activateTime or "next connect", QueueLine_Server.PrettyPrintParams(v.params));
         print(queueItemStr);
     end
 
@@ -185,7 +193,7 @@ function QueueLine_Server.SaveQueue()
     ModData.transmit("QueueLine_Queue");
 
     for i, v in ipairs(QueueLine_Server.QueueItems) do
-        local queueItemStr = string.format("[QueueLine_Server] Queue item %0d - username: %s - type: %s || Params: %s", i, v.username, v.type, QueueLine_Server.PrettyPrintParams(v.params));
+        local queueItemStr = string.format("[QueueLine_Server] Queue item %0d - username: %s - type: %s - activate time: %s || Params: %s", i, v.username, v.type, v.activateTime or "next connect", QueueLine_Server.PrettyPrintParams(v.params));
         print(queueItemStr);
     end
 
@@ -211,7 +219,7 @@ function QueueLine_Server.AddLanguageItem(targetUsername, newLanguage)
         {
             [1] = targetUsername,
             [2] = newLanguage
-        }
+        },
     };
 
     table.insert(QueueLine_Server.QueueItems, item);
@@ -239,8 +247,8 @@ function QueueLine_Server.AddTraitItem(targetUsername, trait, timestamp)
         {
             [1] = targetUsername,
             [2] = trait,
-            [3] = timestamp
-        }
+        },
+        activateTime = timestamp or 0
     };
 
     table.insert(QueueLine_Server.QueueItems, item);
