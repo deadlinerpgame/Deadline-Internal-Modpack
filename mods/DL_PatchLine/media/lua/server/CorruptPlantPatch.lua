@@ -50,6 +50,8 @@ _G["getVegetablesNumber"] = function(min, max, minAuthorised, maxAuthorised, pla
     if not plant.health then
         plant.health = 0;
     end;
+    
+    local minMaxDifference = maxAuthorised - minAuthorised;
 
     -- Health modifier is: for every 10 HP points over 50, gain 1 more vegetable (base game).
     -- This means you can gain up to 5 extra veg in a harvest if at good HP.
@@ -58,7 +60,8 @@ _G["getVegetablesNumber"] = function(min, max, minAuthorised, maxAuthorised, pla
 		healthModifier = 0;
     end
 
-    -- Next is the server's difficulty modifier.
+    -- Next is the server's difficulty modifier. This affects the min and max authorised value limits.
+    -- e.g. 1 - 3 at modifier -4 becomes -3 to -1. 
     local difficultyModifier = 0;
     if SandboxVars.PlantAbundance == 1 then -- Very Poor
         difficultyModifier = -4;
@@ -74,17 +77,24 @@ _G["getVegetablesNumber"] = function(min, max, minAuthorised, maxAuthorised, pla
     local minV = min + modifierBonus; -- The absolute minimum with modifiers.
     local maxV = max + modifierBonus; -- As above but max.
 
-    local minAuthorisedModified = minAuthorised + modifierBonus;
-    local maxAuthorisedModified = maxAuthorised + modifierBonus;
+    -- We want to make sure that the difficulty modifier doesn't take us below 1. If it does, set it to 1.
+    local minAuthorisedWithDifficulty = minAuthorised + difficultyModifier;
+    local maxAuthorisedWithDifficulty = maxAuthorised + difficultyModifier;
 
-    -- Bring the minimum to within a range of 1 - minAuthorised+modifier unless it would take below 0.
-    -- This has changed from the base game code because it made no sense.
-    if minV > minAuthorisedModified and minAuthorisedModified > 0 then
-        minV = minAuthorisedModified;
+    if minAuthorisedWithDifficulty < 1 then
+        minAuthorisedWithDifficulty = 1;
+    end 
+
+    if maxAuthorisedWithDifficulty < minAuthorisedWithDifficulty or maxAuthorisedWithDifficulty < 1 then
+        maxAuthorisedWithDifficulty = math.ceil(minAuthorisedWithDifficulty + minMaxDifference); -- Maintain the difference between the min and max despite modifiers.
     end
 
-    if maxV > maxAuthorisedModified then
-        maxV = maxAuthorisedModified;
+    if minV > minAuthorisedWithDifficulty then
+        minV = minAuthorisedWithDifficulty
+    end
+
+    if maxV > maxAuthorisedWithDifficulty then
+        maxV = maxAuthorisedWithDifficulty;
     end
 
     local nbOfVegetable = ZombRand(minV, maxV + 1);
