@@ -1,5 +1,7 @@
 require 'Foraging/forageSystem'
 
+
+
 Events.onAddForageDefs.Add(function()
 
 
@@ -279,7 +281,7 @@ Events.onAddForageDefs.Add(function()
 	forageSystem.addItemDef(ZincFragments);
 	forageSystem.addItemDef(LeadFragments);
 
-forageSystem.addItemDef(Clay);
-forageSystem.addItemDef(Stone);
+	forageSystem.addItemDef(Clay);
+	forageSystem.addItemDef(Stone);
 
 end)
