@@ -1,16 +1,87 @@
 require 'Foraging/forageSystem'
 
+FaunaSpawnChances =
+{
+	["Fauna.Armadillo"] = 0.03,
+	["Fauna.Racoon_sitted"] = 0.03,
+	["Fauna.Racooon"] = 0.03,
+	["Fauna.Pig"] = 0.053,
+	["Fauna.Pig_sleeping"] = 0.03,
+	["Fauna.Black_cat"] = 0.15,
+	["Fauna.BlackWhite_cat"] = 0.15,
+	["Fauna.European_cat"] = 0.15,
+	["Fauna.F_Tabby_cat"] = 0.15,
+	["Fauna.F_Hen"] = 0.3,
+	["Fauna.F_Hen_white"] = 0.3,
+	["Fauna.F_Chick_01"] = 0.5,
+	["Fauna.F_Chick_02"] = 0.5,
+	["Fauna.F_Chick_03"] = 0.5,
+	["Fauna.F_Rooster"] = 0.5,
+	["Fauna.F_Cow_f_bw"] = 0.35,
+	["Fauna.F_Cow_f_bb"] = 0.35,
+	["Fauna.F_Bull"] = 0.3,
+	["Fauna.F_Sheep"] = 0.4,
+	["Fauna.F_Sheep_01"] = 0.4,
+	["Fauna.F_Mutton"] = 0.4,
+	["Fauna.F_Horse"] = 0.01,
+	["Fauna.F_Horse_01"] = 0.01,
+	["Fauna.F_Foal"] = 0.005,
+	["Fauna.German_shepard"] = 0.02,
+	["Fauna.Belgian_shepard_01"] = 0.02,
+	["Fauna.Belgian_shepard_02"] = 0.02,
+	["Fauna.F_rat_01"] = 0.5,
+	["Fauna.F_rat_02"] = 0.5,
+	["Fauna.F_opossum_01"] = 0.5,
+	["Fauna.F_opossum_02"] = 0.5,
+	["Fauna.F_Bunny_01"] = 0.65,
+	["Fauna.F_Bunny_02"] = 0.65,
+	["Fauna.F_Skunk"] = 0.3,
+};
 
-local function doGenericItemSpawn(_character, _inventory, _itemDef, _items)
-	for item in iterList(_items) do
-		if item:IsDrainable() then
-			item:setUsedDelta(ZombRandFloat(0.0, 1.0)); -- Randomize the item uses remaining
-		end;
-		local conditionMax = item:getConditionMax();
-		if conditionMax > 0 then
-			item:setCondition(ZombRand(conditionMax) + 1); -- Randomize the weapon condition
-		end;
-	end;
+
+local function doFaunaSpawn(_character, _inventory, _itemDef, _items)
+
+	print("[Deadline_FaunaDistribs] doFaunaSpawn ");
+	print("Character: " .. (_character:getUsername() or "invalid_char"));
+
+	local levelMultiplier = SandboxVars.FaunaDistribs.LevelChance;
+	if not levelMultiplier then
+		levelMultiplier = 0.01;
+	end
+
+	local characterMultiplier = 1;
+	-- Get character skill level.
+	if _character then
+		local forageLvl = _character:getPerkLevel(Perks.PlantScavenging) or 1;
+		if forageLvl ~= 0 then
+			characterMultiplier = levelMultiplier * forageLvl;
+		end
+	end
+
+	print("[Deadline_FaunaDistribs] Character multiplier is: " .. tostring(characterMultiplier));
+
+	-- Now calculate the actual chance out of 100.
+	local type = _itemDef.type;
+	if not type then
+		print("[Deadline_FaunaDistribs] ItemDef does not have type, spawning nothing.");
+		return nil;
+	end
+
+	local chance = FaunaSpawnChances[_itemDef.type];
+	if not chance then
+		print("[Deadline_FaunaDistribs] Could not find item type " .. tostring(item:getFullType()) .. " despite it calling doFaunaSpawn.");
+		return nil;
+	end
+
+	local rolledChance = ZombRandFloat(0.0, 1.0);
+
+	print("[Deadline_FaunaDistribs] Rolled chance: " .. tostring(rolledChance)  .. " + multiplier " .. tostring(characterMultiplier) .. " v. " .. tostring(chance));
+
+	if rolledChance + characterMultiplier > chance then -- No dice
+		print("[Deadline_FaunaDistribs] Failed chance, spawn nothing.");
+		return nil;
+	end
+
 	return _items; --custom spawn scripts must return an arraylist of items (or nil)
 end
 
@@ -24,8 +95,8 @@ Events.onAddForageDefs.Add(function()
 	skill = 9,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=5, Vegitation=3, FarmLand=3, Farm=3, TrailerPark=0,	TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=0,	TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -42,8 +113,8 @@ local Racoon_sitted = {
 	skill = 7,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=5, Vegitation=3, FarmLand=3, Farm=3, TrailerPark=0,	TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=0,	TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -59,8 +130,8 @@ local Racoon = {
 	skill = 9,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=5, Vegitation=3, FarmLand=3, Farm=3, TrailerPark=0,	TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=0,	TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -76,8 +147,8 @@ local Pig = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=0,	TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=0,	TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -93,8 +164,8 @@ local Pig_sleeping = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=0,	TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=0,	TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -110,8 +181,8 @@ local Black_cat = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=5, Nav=30},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=10},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -127,8 +198,8 @@ local BlackWhite_cat = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=5, Nav=30},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=10},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -144,8 +215,8 @@ local European_cat = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=5, Nav=30},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=10},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -161,8 +232,8 @@ local F_Tabby_cat = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=5, Nav=30},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=10},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -178,8 +249,8 @@ local F_Hen = {
 	skill = 4,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -195,8 +266,8 @@ local F_Hen_white = {
 	skill = 4,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -212,8 +283,8 @@ local F_Chick_01 = {
 	skill = 6,
 	categories = { "Animals" },
 	dayChance = -25,
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -229,8 +300,8 @@ local F_Chick_02 = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -246,8 +317,8 @@ local F_Chick_03 = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -263,8 +334,8 @@ local F_Rooster = {
 	skill = 7,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -280,8 +351,8 @@ local F_Cow_f_bw = {
 	skill = 8,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -297,8 +368,8 @@ local F_Cow_f_bb = {
 	skill = 8,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -314,8 +385,8 @@ local F_Bull = {
 	skill = 10,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -331,8 +402,8 @@ local F_Sheep = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -348,8 +419,8 @@ local F_Sheep_01 = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -365,8 +436,8 @@ local F_Mutton = {
 	skill = 8,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -382,8 +453,8 @@ local F_Horse = {
 	skill = 8,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -399,8 +470,8 @@ local F_Horse_01 = {
 	skill = 8,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -416,8 +487,8 @@ local F_Foal = {
 	skill = 9,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=5, Farm=5, TrailerPark=3, TownZone=0, Nav=0},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=0},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -433,8 +504,8 @@ local German_shepard = {
 	skill = 7,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=5, Nav=3},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=1},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -450,8 +521,8 @@ local F_Australian_puppy = {
 	skill = 7,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=5, Nav=3},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=1},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -467,8 +538,8 @@ local F_Australian_puppy_sitting = {
 	skill = 7,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=5, Nav=3},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=1},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -484,8 +555,8 @@ local Belgian_shepard_01 = {
 	skill = 7,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=5, Nav=3},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=1},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -501,8 +572,8 @@ local Belgian_shepard_02 = {
 	skill = 7,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=5, Nav=3},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=1},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -518,8 +589,8 @@ local F_rat_01 = {
 	skill = 4,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=5, Nav=3},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=1},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -535,8 +606,8 @@ local F_rat_02 = {
 	skill = 4,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=5, Nav=3},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=1},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -552,8 +623,8 @@ local F_opossum_01 = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=5, Nav=3},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=1},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -569,8 +640,8 @@ local F_opossum_02 = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=5, Nav=3},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=1},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -586,8 +657,8 @@ local F_Bunny_01 = {
 	skill = 5,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=0, Nav=3},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=1},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -603,8 +674,8 @@ local F_Bunny_02 = {
 	skill = 5,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=3, Vegitation=3, FarmLand=3, Farm=5, TrailerPark=3, TownZone=0, Nav=3},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=1},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
@@ -620,8 +691,8 @@ local F_Skunk = {
 	skill = 5,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=5, Vegitation=5, FarmLand=3, Farm=3, TrailerPark=3, TownZone=0, Nav=3},
-	spawnFuncs = { doGenericItemSpawn },
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=0, Nav=1},
+	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
 	itemSizeModifier = 0.5,
