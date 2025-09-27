@@ -44,10 +44,7 @@ local function doFaunaSpawn(_character, _inventory, _itemDef, _items)
 	print("[Deadline_FaunaDistribs] doFaunaSpawn ");
 	print("Character: " .. (_character:getUsername() or "invalid_char"));
 
-	local levelMultiplier = SandboxVars.FaunaDistribs.LevelChance;
-	if not levelMultiplier then
-		levelMultiplier = 0.01;
-	end
+	local levelMultiplier = 0.05;
 
 	local characterMultiplier = 1;
 	-- Get character skill level.
@@ -185,7 +182,7 @@ local Black_cat = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=10},
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=5},
 	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
@@ -202,7 +199,7 @@ local BlackWhite_cat = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=10},
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=5},
 	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
@@ -219,7 +216,7 @@ local European_cat = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=10},
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=5},
 	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
@@ -236,7 +233,7 @@ local F_Tabby_cat = {
 	skill = 6,
 	dayChance = -25,
 	categories = { "Animals" },
-	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=10},
+	zones = {Forest=1, Vegitation=1, FarmLand=1, Farm=1, TrailerPark=1, TownZone=1, Nav=5},
 	spawnFuncs = { doFaunaSpawn },
 	forceOutside = false,
 	canBeAboveFloor = true,
