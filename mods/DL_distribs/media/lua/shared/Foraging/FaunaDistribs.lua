@@ -54,7 +54,7 @@ local function doFaunaSpawn(_character, _inventory, _itemDef, _items)
 	if _character then
 		local forageLvl = _character:getPerkLevel(Perks.PlantScavenging) or 1;
 		if forageLvl ~= 0 then
-			characterMultiplier = levelMultiplier * forageLvl;
+			characterMultiplier = (levelMultiplier * forageLvl);
 		end
 	end
 
@@ -64,22 +64,26 @@ local function doFaunaSpawn(_character, _inventory, _itemDef, _items)
 	local type = _itemDef.type;
 	if not type then
 		print("[Deadline_FaunaDistribs] ItemDef does not have type, spawning nothing.");
-		return nil;
+		return ArrayList.new();
 	end
 
 	local chance = FaunaSpawnChances[_itemDef.type];
 	if not chance then
 		print("[Deadline_FaunaDistribs] Could not find item type " .. tostring(item:getFullType()) .. " despite it calling doFaunaSpawn.");
-		return nil;
+		return ArrayList.new();
 	end
 
-	local rolledChance = ZombRandFloat(0.0, 1.0);
+	local rolledChance = ZombRand(0, 100);
+	local actualChance = rolledChance - characterMultiplier; -- subtract it IOT get as low as possible (makes the maths easy!)
 
-	print("[Deadline_FaunaDistribs] Rolled chance: " .. tostring(rolledChance)  .. " + multiplier " .. tostring(characterMultiplier) .. " v. " .. tostring(chance));
+	local neededChance = math.ceil(chance * 100);
 
-	if rolledChance + characterMultiplier > chance then -- No dice
-		print("[Deadline_FaunaDistribs] Failed chance, spawn nothing.");
-		return nil;
+	local chanceStr = string.format("[Deadline_FaunaDistribs] Rolled chance: %s, needed: %s", tostring(actualChance), tostring(neededChance));
+	print(chanceStr);
+
+	if actualChance > neededChance then
+		print("[Deadline_FaunaDistribs] Failed roll. Do not spawn fauna.");
+		return ArrayList.new();
 	end
 
 	return _items; --custom spawn scripts must return an arraylist of items (or nil)
