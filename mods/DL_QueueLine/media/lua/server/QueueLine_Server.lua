@@ -12,6 +12,7 @@ QueueLine_Server.ItemTypes =
 {
     ADD_LANGUAGE = "ADD_LANGUAGE",
     REMOVE_LANGUAGE = "REMOVE_LANGUAGE",
+    ADD_TRAIT = "ADD_TRAIT",
     ADD_ITEM = {},
     REMOVE_ITEM = {},
     SHOW_NOTIFICATION = {}
@@ -23,9 +24,24 @@ QueueLine_Server.QueueItems = {};
         FUNCTIONS   
 --]]
 
-function QueueLine_Server.GetQueueItemsForUsername(username)
-    print("[QueueLine_Server] GetQueueItemsForUsername: " .. username);
+function QueueLine_Server.PrettyPrintParams(itemParams)
+    if not itemParams then return "" end;
 
+    local formattedStr = "";
+
+    for k, v in pairs(itemParams) do
+        local param = itemParams[k];
+        
+        if param then
+            formattedStr = formattedStr .. string.format("| %s: %s", tostring(k), tostring(v));
+        end
+    end
+
+    return formattedStr;
+end
+
+
+function QueueLine_Server.GetQueueItemsForUsername(username)
     if not username then return end;
 
     local returnList = {};
@@ -34,7 +50,12 @@ function QueueLine_Server.GetQueueItemsForUsername(username)
         local item = QueueLine_Server.QueueItems[i];
         if item then
             if item.username == username then
-                table.insert(returnList, item);
+                if item.activateTime and item.activateTime <= getTimestamp() then
+                    table.insert(returnList, item);
+                elseif not item.activateTime or item.activateTime == 0 then
+                    table.insert(returnList, item);
+                end
+                
             end
         end
     end
@@ -43,8 +64,6 @@ function QueueLine_Server.GetQueueItemsForUsername(username)
 end
 
 function QueueLine_Server.GetItemFromId(id)
-    print("[QueueLine_Server] GetItemFromId: " .. id);
-
     if not id then return end;
 
     for i, v in ipairs(QueueLine_Server.QueueItems) do
@@ -59,8 +78,6 @@ function QueueLine_Server.GetItemFromId(id)
 end
 
 function QueueLine_Server.RemoveItemFromQueue(id)
-    print("[QueueLine_Server] RemoveItemFromQueue: " .. id);
-
     if not id then return end;
 
     for i, v in ipairs(QueueLine_Server.QueueItems) do
@@ -113,6 +130,26 @@ function QueueLine_Server.OnClientCommand(module, command, player, args)
 
         QueueLine_Server.AddLanguageItem(args.username, args.language);
     end
+
+    if command == "AddTrait" then
+        if not args then return end;
+        if not args.trait then return end;
+
+        if player:getAccessLevel() ~= "Admin" then 
+            print("[QueueLine_Server] Player " .. player:getUsername() .. " has called AddTrait but they are not an admin - their access level is " .. player:getAccessLevel());
+            return;
+        end;
+
+        QueueLine_Server.AddTraitItem(args.username, args.trait, args.timestamp);
+    end
+
+    if command == "AddTimedTrait" then
+        if not args then return end;
+        if not args.trait then return end;
+        if not args.timestamp then return end;
+
+        if player:getAccessLevel() ~= "Admin" then return end;
+    end
     
     if command == "RemoveOnSuccess" then
         if not args then return end;
@@ -127,7 +164,10 @@ function QueueLine_Server.OnClientCommand(module, command, player, args)
         if not args.error then args.error = "QueueItemFailedNoErrorMsg" end;
 
         local item = QueueLine_Server.GetItemFromId(args.id);
-        local errorStr = string.format("[QueueLine_Server] [QueueItemFailed] Player %s redeem type %s failed with error: %s", player:getUsername(), item.type, args.error);
+        if not item then
+            print("[QueueLine_Server] [QueueItemFailed] Queue item failed for username " .. args.username .. " but no queue item retrieved for ID: " .. (args.id or "INVALID_ID"));
+        end
+        local errorStr = string.format("[QueueLine_Server] [QueueItemFailed] Player %s redeem type %s failed with error: %s", args.username, item.type, args.error);
         print(errorStr);
     end
 end
@@ -135,6 +175,12 @@ end
 function QueueLine_Server.OnInitGlobalModData(newGame)
     QueueLine_Server.QueueItems = ModData.getOrCreate("QueueLine_CurrentQueue");
     print("[QueueLine_Server] Queue Items initialised with " .. tostring(#QueueLine_Server.QueueItems) .. " items.");
+
+    for i, v in ipairs(QueueLine_Server.QueueItems) do
+        local queueItemStr = string.format("[QueueLine_Server] Queue item %0d - username: %s - type: %s - activate time: %s || Params: %s", i, v.username, v.type, v.activateTime or "next connect", QueueLine_Server.PrettyPrintParams(v.params));
+        print(queueItemStr);
+    end
+
 end
 
 function QueueLine_Server.SaveQueue()
@@ -147,7 +193,7 @@ function QueueLine_Server.SaveQueue()
     ModData.transmit("QueueLine_Queue");
 
     for i, v in ipairs(QueueLine_Server.QueueItems) do
-        local queueItemStr = string.format("[QueueLine_Server] Queue item %0d - username: %s - type: %s.", i, v.username, v.type);
+        local queueItemStr = string.format("[QueueLine_Server] Queue item %0d - username: %s - type: %s - activate time: %s || Params: %s", i, v.username, v.type, v.activateTime or "next connect", QueueLine_Server.PrettyPrintParams(v.params));
         print(queueItemStr);
     end
 
@@ -173,12 +219,42 @@ function QueueLine_Server.AddLanguageItem(targetUsername, newLanguage)
         {
             [1] = targetUsername,
             [2] = newLanguage
-        }
+        },
     };
 
     table.insert(QueueLine_Server.QueueItems, item);
     QueueLine_Server.SaveQueue();
 end
+
+function QueueLine_Server.AddTraitItem(targetUsername, trait, timestamp)
+    if not targetUsername or not trait then
+        print("[QueueLine_Server] AddTraitItem - no username or trait passed.");
+        return;
+    end
+
+    local addTraitStr = string.format("[QueueLine_Server] Add Trait for player %s with language %s", targetUsername, trait);
+    if timestamp then
+        addTraitStr = addTraitStr .. string.format(" with start time as %s", timestamp);
+    end
+    print(addTraitStr);
+
+    local item = 
+    {
+        id = tostring(getTimestampMs()) .. "|" .. targetUsername,
+        username = targetUsername,
+        type = QueueLine_Server.ItemTypes.ADD_TRAIT,
+        params =
+        {
+            [1] = targetUsername,
+            [2] = trait,
+        },
+        activateTime = timestamp or 0
+    };
+
+    table.insert(QueueLine_Server.QueueItems, item);
+    QueueLine_Server.SaveQueue();
+end
+
 
 Events.OnClientCommand.Add(QueueLine_Server.OnClientCommand);
 Events.OnInitGlobalModData.Add(QueueLine_Server.OnInitGlobalModData);

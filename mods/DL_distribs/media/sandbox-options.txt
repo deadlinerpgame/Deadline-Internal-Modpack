@@ -1,0 +1,25 @@
+VERSION = 1,
+
+option FaunaDistribs.DayChance =
+{
+    type = double, min = 0, max = 100, default = 1,
+    page = FaunaDistribs, translation = FaunaDistribs_DayChance,
+}
+
+option FaunaDistribs.NightChance =
+{
+    type = double, min = 0, max = 100, default = 1,
+    page = FaunaDistribs, translation = FaunaDistribs_NightChance,
+}
+
+option FaunaDistribs.SpawnableAnimals = 
+{
+    type = string, default = Fauna.Armadillo;Fauna.Racoon_sitted;Fauna.Racoon;Fauna.Pig;Fauna.Pig_sleeping;Fauna.Black_cat;Fauna.BlackWhite_cat;Fauna.European_cat;Fauna.F_Tabby_cat;Fauna.F_Hen;Fauna.F_Hen_white;Fauna.F_Chick_01;Fauna.F_Chick_02;Fauna.F_Chick_03;Fauna.F_Rooster;Fauna.F_Cow_f_bw;Fauna.F_Cow_f_bb;Fauna.F_Bull;Fauna.F_Sheep;Fauna.F_Sheep_01;Fauna.F_Mutton;Fauna.F_Horse;Fauna.F_Horse_01;Fauna.F_Foal;Fauna.German_shepard;Fauna.Belgian_shepard_01;Fauna.Belgian_shepard_02;Fauna.F_rat_01;Fauna.F_rat_02;Fauna.F_opossum_01;Fauna.F_opossum_02;Fauna.F_Bunny_01;Fauna.F_Bunny_02;Fauna.F_Skunk",
+    page = FaunaDistribs, translation = FaunaDistribs_SpawnableAnimals,
+}
+
+option FaunaDistribs.LevelChance = 
+{
+    type = double, min = 0, max = 100, default = 0.025,
+    page = FaunaDistribs, translation = FaunaDistribs_LevelChance,
+}
