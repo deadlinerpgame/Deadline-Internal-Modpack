@@ -24,13 +24,45 @@ WRC.SpecialCommands["/ps"] = {
     usage = "/ps [show message (yes = 1, 0 = no)] [distance] [sound name]",
     help = "/playsound alternative with more functionality.",
     adminOnly = true,
-};
+}
 
-function WRC.Commands.PlaySoundEx(args, showMsg)
+WRC.SpecialCommands["/pslooped"] = {
+    handler = "PlaySoundLooped",
+    tabHandlers = {},
+    usage = "/psloop(ed) [show message (yes = 1, 0 = no)] [distance] [sound name]",
+    help = "/ps with the specified sound name set to automatically loop on completion.",
+    adminOnly = true,
+}
+
+WRC.SpecialCommands["/psloop"] = {
+    handler = "PlaySoundLooped",
+    tabHandlers = {},
+    usage = "/psloop(ed) [show message (yes = 1, 0 = no)] [distance] [sound name]",
+    help = "/ps with the specified sound name set to automatically loop on completion.",
+    adminOnly = true,
+}
+
+WRC.SpecialCommands["/ss"] = {
+    handler = "StopSoundEx",
+    tabHandlers = {},
+    usage = "/ss",
+    help = "Alternative to stop sound which also stops looping sounds.",
+    adminOnly = true,
+}
+
+function SoundQOL.StopSoundEx(args)
+    SoundQOL.IsCustomSoundPlaying = nil;
+    SoundQOL.CustomSoundString = nil;
+    SoundQOL.ShouldLoop = false;
+
+    SoundQOL.SoundPlayingCheck();
+end
+
+function WRC.Commands.PlaySoundEx(args, doLoop)
     local params = WRC.SplitString(args);
 
     if #params ~= 3 then
-        WL_Utils.addErrorToChat("Invalid format. /ps [distance] [sound name]");
+        WL_Utils.addErrorToChat("Invalid format. /ps [show message (yes = 1, 0 = no)] [distance] [sound name]");
         return;
     end
 
@@ -50,17 +82,32 @@ function WRC.Commands.PlaySoundEx(args, showMsg)
 
     local srcPos = { x = getPlayer():getX(), y = getPlayer():getY(), z = getPlayer(): getZ() };
 
+    if not doLoop then doLoop = 0 end;
+
     -- Now call request to play sound.
-    sendClientCommand(getPlayer(), "PatchLine", "PlaySoundEx", { range = rangeNum, soundStr = sound, fromPos = srcPos, showMsg = msgAsNum });
-    local queuedStr = string.format("[PlaySoundEx] Request made to play song \"%s\" for all players within %0d tiles (message shown: %0d).", sound, rangeNum, msgAsNum);
+    sendClientCommand(getPlayer(), "PatchLine", "PlaySoundEx", { range = rangeNum, soundStr = sound, fromPos = srcPos, showMsg = msgAsNum, looped = doLoop });
+    
+    local msgShownStr = "";
+    if msgAsNum and msgAsNum == 1 then
+        msgShownStr = "<SPACE> <RGB:0.8,0.8,0.8>  ( <RGB:0.2,0.2,0.8> with notif <RGB:0.8,0.8,0.8> )";
+    else
+        msgShownStr = "<SPACE> <RGB:0.8,0.8,0.8> <SPACE> ( <RGB:0.8,0.2,0.2> no notif <RGB:0.8,0.8,0.8> )";
+    end
+
+    local queuedStr = string.format("<RGB:0.2,0.2,0.8> [PlaySoundEx] <RGB:0.8,0.8,0.8> <SPACE> Request made to play song <RGB:0.2,0.2,0.8> <SPACE> \"%s\" <RGB:0.8,0.8,0.8> <SPACE> for all players within <RGB:0.2,0.2,0.8> %0d <RGB:0.8,0.8,0.8> <SPACE> tiles %s.", sound, rangeNum, msgShownStr);
     WL_Utils.addInfoToChat(queuedStr);
 end
+
+function WRC.Commands.PlaySoundLooped(args)
+    WRC.Commands.PlaySoundEx(args, 1);
+end
+
 
 function WRC.Commands.StopSoundEx(args)
     local params = WRC.SplitString(args);
 
     if #params ~= 1 then
-        WL_Utils.addErrorToChat("Invalid format. /stopsoundex [range (1-999)]");
+        WL_Utils.addErrorToChat("Invalid format. <RGB:0.8,0.8,0.8> <SPACE> /stopsoundex [range (1-999)]");
         return;
     end
 
@@ -76,12 +123,13 @@ function WRC.Commands.StopSoundEx(args)
 
     sendClientCommand(getPlayer(), "PatchLine", "StopSoundEx", { range = rangeNum, pos = fromPos });
 
-    local queuedStr = string.format("[StopSoundEx] Request made to stop sound for all players within %0d tiles.", rangeNum);
+    local queuedStr = string.format("[StopSoundEx] <RGB:0.8,0.8,0.8> <SPACE> Request made to stop sound for all players within <RGB:0.2,0.2,0.8> <SPACE> %0d <RGB:0.8,0.8,0.8> <SPACE> tiles.", rangeNum);
     WL_Utils.addInfoToChat(queuedStr);
 end
 
 function SoundQOL.SoundPlayingCheck()
     if not SoundQOL.IsCustomSoundPlaying or SoundQOL.IsCustomSoundPlaying == false then
+        getSoundManager():stop();
         Events.EveryOneMinute.Remove(SoundQOL.SoundPlayingCheck);
         return;
     end
@@ -90,9 +138,17 @@ function SoundQOL.SoundPlayingCheck()
         getSoundManager():stop();
         SoundQOL.IsCustomSoundPlaying = false;
         Events.EveryOneMinute.Remove(SoundQOL.SoundPlayingCheck);
+        return;
     end
 
     if not getSoundManager():isPlayingUISound(SoundQOL.CustomSoundString) then
+
+        if SoundQOL.ShouldLoop and SoundQOL.ShouldLoop == 1 then
+            SoundQOL.StartSoundEx(SqoundQOL.CustomSoundString, 0, 1);
+            return;
+        end
+
+        getSoundManager():stop();
         getCore():setOptionMusicVolume(SoundQOL.PreviousVolume or 0);
         SoundQOL.IsCustomSoundPlaying = false;
         SoundQOL.CustomSoundString = nil;
@@ -100,7 +156,9 @@ function SoundQOL.SoundPlayingCheck()
     end
 end
 
-function SoundQOL.StartSoundEx(sound, showMsg)
+function SoundQOL.StartSoundEx(sound, showMsg, looped)
+
+    if not looped then looped = 0 end;
     --[[
         PlaySound(String name, boolean loop, float maxGain) - we're using this one, and we don't want loops.
         PlaySound(String name, boolean loop, float pitchVar, float maxGain)
@@ -108,10 +166,13 @@ function SoundQOL.StartSoundEx(sound, showMsg)
     getSoundManager():stop();
 
     getSoundManager():playUISound(sound); -- I don't think we can play this as music, Java looks to use GameSoundClip for music.
+
     SoundQOL.IsCustomSoundPlaying = true;
+    SoundQOL.CustomSoundString = sound;
+    SoundQOL.ShouldLoop = looped;
 
     if showMsg and showMsg == 1 then
-        WL_Utils.addInfoToChat("[PlaySoundEx] Music has started. Type /stopsound to stop music playing.");
+        getPlayer():addLineChatElement("Event audio started. Type /ss to stop the audio.");
     end
 
     -- Game music was still playing, so mute it temporarily.
@@ -125,25 +186,24 @@ function SoundQOL.OnServerCommand(module, command, args)
     if module ~= "PatchLine" then return end;
 
     if command == "PlaySoundEx_Error" then
-        WL_Utils.addErrorToChat("[PlaySoundEx] There was an error retrieving players to play a sound for. This has been logged in the server logs.");
+        WL_Utils.addErrorToChat("[PlaySoundEx] <PUSHRGB:0.8,0.8,0.8> <SPACE> There was an error retrieving players to play a sound for. This has been logged in the server logs.<POPRGB>");
         return;
     end
 
     if command == "PlaySoundEx_NoPlayers" then
-        WL_Utils.addErrorToChat("[PlaySoundEx] No players within range to play sound for.");
+        WL_Utils.addErrorToChat("[PlaySoundEx] <RGB:0.8,0.8,0.8> <SPACE> No players within range to play sound for.");
         return;
     end
 
     if command == "StopSoundEx_NoPlayers" then
-        WL_Utils.addErrorToChat("[StopSoundEx] No players within range to stop sound for.");
+        WL_Utils.addErrorToChat("[StopSoundEx] <RGB:0.8,0.8,0.8> <SPACE> No players within range to stop sound for.");
         return;
     end
 
     if command == "PlaySoundEx_PlayInRange" then
-        local currentVolume = getCore():getOptionMusicVolume();
-        if not currentVolume or currentVolume <= 0 then return end -- No point playing it for someone with music disabled.
+        SoundQOL.PreviousVolume = getCore():getOptionMusicVolume();
 
-        SoundQOL.StartSoundEx(args.sound, args.showMsg);
+        SoundQOL.StartSoundEx(args.sound, args.showMsg, args.looped);
     end
 
     if command == "StopSoundEx_StopInRange" then

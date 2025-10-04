@@ -43,6 +43,7 @@ function SoundQOL_Server.OnClientCommand(module, command, player, args)
         if not args.soundStr then return end;
         if not args.showMsg then args.showMsg = 1 end;
         if not args.pos then args.pos = { x = player:getX(), y = player:getY(), z = player:getZ() } end;
+        if not args.looped then args.looped = 0 return end;
         
         local playersInRange = SoundQOL_Server.GetPlayersInRange(args.range, args.pos);
         if not playersInRange or #playersInRange == 0 then
@@ -50,7 +51,7 @@ function SoundQOL_Server.OnClientCommand(module, command, player, args)
             return
         end
 
-        local logStr = string.format("/playsoundex %0d %0d %s by %s", tonumber(args.showMsg), tonumber(args.range), args.soundStr, player:getUsername());
+        local logStr = string.format("/playsoundex %0d %0d %s by %s (looped: %s)", tonumber(args.showMsg), tonumber(args.range), args.soundStr, player:getUsername(), tostring(args.looped));
         writeLog("LogLine_SoundQOL", logStr);
         print(logStr);
 
@@ -58,7 +59,7 @@ function SoundQOL_Server.OnClientCommand(module, command, player, args)
             local iteratedPlayer = playersInRange[i];
             print("Playing for player " .. iteratedPlayer:getUsername());
             if iteratedPlayer then
-                sendServerCommand(iteratedPlayer, "PatchLine", "PlaySoundEx_PlayInRange", { sound = args.soundStr, showMsg = args.showMsg });
+                sendServerCommand(iteratedPlayer, "PatchLine", "PlaySoundEx_PlayInRange", { sound = args.soundStr, showMsg = args.showMsg, looped = args.looped });
             end
         end
     end
