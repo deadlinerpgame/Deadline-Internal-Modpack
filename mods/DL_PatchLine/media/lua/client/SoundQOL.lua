@@ -43,7 +43,7 @@ WRC.SpecialCommands["/psloop"] = {
 }
 
 WRC.SpecialCommands["/ss"] = {
-    handler = "StopSoundEx",
+    handler = "StopSoundLocal",
     tabHandlers = {},
     usage = "/ss",
     help = "Alternative to stop sound which also stops looping sounds.",
@@ -62,7 +62,7 @@ function WRC.Commands.PlaySoundEx(args, doLoop)
     local params = WRC.SplitString(args);
 
     if #params ~= 3 then
-        WL_Utils.addErrorToChat("Invalid format. /ps [show message (yes = 1, 0 = no)] [distance] [sound name]");
+        WL_Utils.addErrorToChat("Invalid format. /ps(looped) [show message (yes = 1, 0 = no)] [distance] [sound name]");
         return;
     end
 
@@ -94,12 +94,18 @@ function WRC.Commands.PlaySoundEx(args, doLoop)
         msgShownStr = "<SPACE> <RGB:0.8,0.8,0.8> <SPACE> ( <RGB:0.8,0.2,0.2> no notif <RGB:0.8,0.8,0.8> )";
     end
 
-    local queuedStr = string.format("<RGB:0.2,0.2,0.8> [PlaySoundEx] <RGB:0.8,0.8,0.8> <SPACE> Request made to play song <RGB:0.2,0.2,0.8> <SPACE> \"%s\" <RGB:0.8,0.8,0.8> <SPACE> for all players within <RGB:0.2,0.2,0.8> %0d <RGB:0.8,0.8,0.8> <SPACE> tiles %s.", sound, rangeNum, msgShownStr);
+    local queuedStr = string.format("<RGB:0.2,0.2,0.8> [PlaySoundEx] <RGB:0.8,0.8,0.8> <SPACE> Request made to play song <RGB:0.2,0.2,0.8> <SPACE> %s <RGB:0.8,0.8,0.8> <SPACE> for all players within <RGB:0.2,0.2,0.8> <SPACE> %0d <RGB:0.8,0.8,0.8> <SPACE> tiles %s.", sound, rangeNum, msgShownStr);
     WL_Utils.addInfoToChat(queuedStr);
 end
 
 function WRC.Commands.PlaySoundLooped(args)
     WRC.Commands.PlaySoundEx(args, 1);
+end
+
+function WRC.Commands.StopSoundLocal(args)
+    getSoundManager():stop();
+    SoundQOL.IsCustomSoundPlaying = false;
+    SoundQOL.CustomSoundStartedTimestamp = 0;
 end
 
 
@@ -141,10 +147,10 @@ function SoundQOL.SoundPlayingCheck()
         return;
     end
 
-    if not getSoundManager():isPlayingUISound(SoundQOL.CustomSoundString) then
+    if not getSoundManager():isPlayingUISound(SoundQOL.CustomSoundString) and SoundQOL.IsCustomSoundPlaying then
 
         if SoundQOL.ShouldLoop and SoundQOL.ShouldLoop == 1 then
-            SoundQOL.StartSoundEx(SqoundQOL.CustomSoundString, 0, 1);
+            SoundQOL.StartSoundEx(SoundQOL.CustomSoundString, 0, 1);
             return;
         end
 
@@ -210,7 +216,6 @@ function SoundQOL.OnServerCommand(module, command, args)
         getSoundManager():stop();
         SoundQOL.IsCustomSoundPlaying = false;
         SoundQOL.CustomSoundStartedTimestamp = 0;
-        
     end
 end
 
