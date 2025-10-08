@@ -82,18 +82,18 @@ module Craftline
 
 
     // Pistol
-    recipe Place Scrap Pistol Rounds in Box
+    recipe Place Scrap Rounds in Box
     {
         aerx.T2AmmoRegular=30,
 
-        Result:T2AmmoBox_Pistol,
+        Result:T2AmmoBox_Regular,
         Sound:BoxOfRoundsOpenOne,
         Time:30,
     }
 
-    recipe Open Box of Scrap Pistol Rounds
+    recipe Open Box of Scrap Rounds
     {
-        T2AmmoBox_Pistol,
+        T2AmmoBox_Regular,
 
         Result:aerx.T2AmmoRegular=30,
         Sound:BoxOfShellsOpenOne,
