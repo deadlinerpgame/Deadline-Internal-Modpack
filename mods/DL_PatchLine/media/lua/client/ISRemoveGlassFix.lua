@@ -1,9 +1,8 @@
 local _ISRemoveGlassPerform_original = ISRemoveGlass.perform;
 
 function ISRemoveGlass:perform()
-    _ISRemoveGlassPerform_original(self);
-
     sendClientCommand(self.character, "ISRemoveGlassPatch", "RemoveGlassFromBodyPart", { target = self.character, bodyPart = self.bodyPart });
+     _ISRemoveGlassPerform_original(self);
 end
 
 local function ISRemoveGlassPatch_OnServerCommand(module, command, args)
