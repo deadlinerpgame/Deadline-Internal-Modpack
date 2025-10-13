@@ -49,6 +49,22 @@ module SolarPanels
         Category:SolarPanels,
     }
 
+    recipe Make Floor-Mounted Solar Panel
+    {
+        keep [Recipe.GetItemTypes.Screwdriver],
+        ISA.SolarPanel,
+        ElectricWire = 3,
+        Base.MetalBar = 2,
+        Base.Screws = 4,
+	keep Wrench,
+	keep Screwdriver,
+        CanBeDoneFromFloor:false,
+        Time:120,
+        SkillRequired:Electricity=6,
+        Result: Moveables.solarmod_tileset_01_9,
+        Category:SolarPanels,
+    }
+
 	recipe Craft a Battery Bank
 	{
 		ElectricWire=2,
