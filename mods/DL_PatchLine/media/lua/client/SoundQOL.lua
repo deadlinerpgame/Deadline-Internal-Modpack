@@ -82,7 +82,20 @@ function WRC.Commands.PlaySoundFixed(args)
         return;
     end
 
-    WRC.Commands.PlaySoundEx({showMsg, 50, sound}, false);
+    local srcPos = { x = getPlayer():getX(), y = getPlayer():getY(), z = getPlayer(): getZ() };
+
+    -- Now call request to play sound.
+    sendClientCommand(getPlayer(), "PatchLine", "PlaySoundEx", { range = 50, soundStr = sound, fromPos = srcPos, showMsg = msgAsNum, looped = false });
+    
+    local msgShownStr = "";
+    if msgAsNum and msgAsNum == 1 then
+        msgShownStr = "<SPACE> <RGB:0.8,0.8,0.8>  ( <RGB:0.2,0.2,0.8> with notif <RGB:0.8,0.8,0.8> )";
+    else
+        msgShownStr = "<SPACE> <RGB:0.8,0.8,0.8> <SPACE> ( <RGB:0.8,0.2,0.2> no notif <RGB:0.8,0.8,0.8> )";
+    end
+
+    local queuedStr = string.format("<RGB:0.2,0.2,0.8> [PlaySound] <RGB:0.8,0.8,0.8> <SPACE> Request made to play song <RGB:0.2,0.2,0.8> <SPACE> %s <RGB:0.8,0.8,0.8> <SPACE> for all players within <RGB:0.2,0.2,0.8> <SPACE> 50 <RGB:0.8,0.8,0.8> <SPACE> tiles %s.", sound, msgShownStr);
+    WL_Utils.addInfoToChat(queuedStr);
 end
 
 function WRC.Commands.PlaySoundEx(args, doLoop)
@@ -145,7 +158,20 @@ function WRC.Commands.PlaySoundLooped(args)
         return;
     end
 
-    WRC.Commands.PlaySoundEx({showMsg, 50, sound}, true);
+    local srcPos = { x = getPlayer():getX(), y = getPlayer():getY(), z = getPlayer(): getZ() };
+
+    -- Now call request to play sound.
+    sendClientCommand(getPlayer(), "PatchLine", "PlaySoundEx", { range = 50, soundStr = sound, fromPos = srcPos, showMsg = msgAsNum, looped = true });
+    
+    local msgShownStr = "";
+    if msgAsNum and msgAsNum == 1 then
+        msgShownStr = "<SPACE> <RGB:0.8,0.8,0.8>  ( <RGB:0.2,0.2,0.8> with notif <RGB:0.8,0.8,0.8> )";
+    else
+        msgShownStr = "<SPACE> <RGB:0.8,0.8,0.8> <SPACE> ( <RGB:0.8,0.2,0.2> no notif <RGB:0.8,0.8,0.8> )";
+    end
+
+    local queuedStr = string.format("<RGB:0.2,0.2,0.8> [PlaySoundLooped] <RGB:0.8,0.8,0.8> <SPACE> Request made to play song <RGB:0.2,0.2,0.8> <SPACE> 50 <RGB:0.8,0.8,0.8> <SPACE> for all players within <RGB:0.2,0.2,0.8> <SPACE> %0d <RGB:0.8,0.8,0.8> <SPACE> tiles %s.", sound, msgShownStr);
+    WL_Utils.addInfoToChat(queuedStr);
 end
 
 function WRC.Commands.StopSoundLocal(args)
