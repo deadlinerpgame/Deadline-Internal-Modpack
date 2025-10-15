@@ -18,27 +18,35 @@ WRC.SpecialCommands["/stopsoundex"] = {
     adminOnly = true,
 }
 
-WRC.SpecialCommands["/ps"] = {
+WRC.SpecialCommands["/psx"] = {
     handler = "PlaySoundEx",
     tabHandlers = {};
     usage = "/ps [show message (yes = 1, 0 = no)] [distance] [sound name]",
-    help = "/playsound alternative with more functionality.",
+    help = "/playsound alternative with more functionality including variable range.",
+    adminOnly = true,
+}
+
+WRC.SpecialCommands["/ps"] = {
+    handler = "PlaySoundFixed",
+    tabHandlers = {};
+    usage = "/ps [show message (yes = 1, 0 = no)] [sound name]",
+    help = "/playsound alternative with range of 50.",
     adminOnly = true,
 }
 
 WRC.SpecialCommands["/pslooped"] = {
     handler = "PlaySoundLooped",
     tabHandlers = {},
-    usage = "/psloop(ed) [show message (yes = 1, 0 = no)] [distance] [sound name]",
-    help = "/ps with the specified sound name set to automatically loop on completion.",
+    usage = "/ps(looped) [show message (yes = 1, 0 = no)]  [sound name]",
+    help = "/ps with the specified sound name and distance of 50 set to automatically loop on completion.",
     adminOnly = true,
 }
 
-WRC.SpecialCommands["/psloop"] = {
-    handler = "PlaySoundLooped",
+WRC.SpecialCommands["/psxlooped"] = {
+    handler = "PlaySoundExLooped",
     tabHandlers = {},
-    usage = "/psloop(ed) [show message (yes = 1, 0 = no)] [distance] [sound name]",
-    help = "/ps with the specified sound name set to automatically loop on completion.",
+    usage = "/psx(looped) [show message (yes = 1, 0 = no)] [distance] [sound name]",
+    help = "/psx with the specified sound name set to automatically loop on completion.",
     adminOnly = true,
 }
 
@@ -58,11 +66,30 @@ function SoundQOL.StopSoundEx(args)
     SoundQOL.SoundPlayingCheck();
 end
 
+function WRC.Commands.PlaySoundFixed(args)
+    local params = WRC.SplitString(args);
+
+    if #params ~= 2 then
+        WL_Utils.addErrorToChat("Invalid format. /ps(looped) [show message (yes = 1, 0 = no)] [sound name]");
+        return;
+    end
+
+    local showMsg, sound = params[1], params[2];
+
+    local msgAsNum = tonumber(showMsg);
+    if not msgAsNum or (msgAsNum < 0 or msgAsNum > 1) then
+        WL_Utils.addErrorToChat("Show message must either be 1 (show message) or 0 (do not show message)");
+        return;
+    end
+
+    WRC.Commands.PlaySoundEx({showMsg, 50, sound}, false);
+end
+
 function WRC.Commands.PlaySoundEx(args, doLoop)
     local params = WRC.SplitString(args);
 
     if #params ~= 3 then
-        WL_Utils.addErrorToChat("Invalid format. /ps(looped) [show message (yes = 1, 0 = no)] [distance] [sound name]");
+        WL_Utils.addErrorToChat("Invalid format. /psx(looped) [show message (yes = 1, 0 = no)] [distance] [sound name]");
         return;
     end
 
@@ -98,8 +125,27 @@ function WRC.Commands.PlaySoundEx(args, doLoop)
     WL_Utils.addInfoToChat(queuedStr);
 end
 
-function WRC.Commands.PlaySoundLooped(args)
+function WRC.Commands.PlaySoundExLooped(args)
     WRC.Commands.PlaySoundEx(args, 1);
+end
+
+function WRC.Commands.PlaySoundLooped(args)
+    local params = WRC.SplitString(args);
+
+    if #params ~= 2 then
+        WL_Utils.addErrorToChat("Invalid format. /ps(looped) [show message (yes = 1, 0 = no)] [sound name]");
+        return;
+    end
+
+    local showMsg, sound = params[1], params[2];
+
+    local msgAsNum = tonumber(showMsg);
+    if not msgAsNum or (msgAsNum < 0 or msgAsNum > 1) then
+        WL_Utils.addErrorToChat("Show message must either be 1 (show message) or 0 (do not show message)");
+        return;
+    end
+
+    WRC.Commands.PlaySoundEx({showMsg, 50, sound}, true);
 end
 
 function WRC.Commands.StopSoundLocal(args)
@@ -107,7 +153,6 @@ function WRC.Commands.StopSoundLocal(args)
     SoundQOL.IsCustomSoundPlaying = false;
     SoundQOL.CustomSoundStartedTimestamp = 0;
 end
-
 
 function WRC.Commands.StopSoundEx(args)
     local params = WRC.SplitString(args);
