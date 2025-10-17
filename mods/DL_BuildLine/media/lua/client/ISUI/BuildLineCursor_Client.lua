@@ -44,10 +44,8 @@ function BL_Funcs.onClickTile(char, square)
 
             outputString = outputString .. additionalStr .. "\n";
 
-            for k, v in pairs(DIRECTION_DICT) do
-                local textureDir = obj:getSprite():getName();
-                outputString = outputString .. "      Direction: " .. tostring(obj:getDir()) .. " | Sprite: " .. textureDir .. "\n";
-            end
+            local textureDir = obj:getSprite():getName();
+            outputString = outputString .. "      Direction: " .. tostring(obj:getDir()) .. " | Sprite: " .. textureDir .. "\n";
         end 
         outputString = outputString .. "\n\n";
     end
