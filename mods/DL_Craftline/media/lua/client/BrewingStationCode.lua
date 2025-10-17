@@ -113,7 +113,7 @@ function OnRightClickTile(player, context, worldobjects)
             elseif modData.isBrewing == true then
                 local progresspercentage = getProductionProgress(modData.BrewingStartTime, modData.TimeNeeded)
                     local currentTime = getGameTime():getWorldAgeHours()
-                    local elapsedTime = currentTime - modData.methaneStartTime
+                    local elapsedTime = currentTime - modData.BrewingStartTime
                     local timeLeft = modData.TimeNeeded - elapsedTime
                     timeLeft = tonumber(string.format("%.1f", timeLeft))
                     local ProductionProgressOption = context:addOption("Production Progress " .. progresspercentage .. "%" .. " / Hours Required " .. timeLeft, worldobjects, dummy, player, object)
