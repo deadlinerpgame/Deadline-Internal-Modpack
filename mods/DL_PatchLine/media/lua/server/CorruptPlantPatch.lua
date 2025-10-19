@@ -5,16 +5,36 @@ if isClient() then return end;
 local original_badPlant = badPlant or {};
 
 function badPlant(water, waterMax, diseaseLvl, plant, nextGrowing, updateNbOfGrow)
-    if not plant then return end;
 
-    if not water then 
-        water = 30;
-        plant.health = 50;
+    local buggedProp = nil;
+
+    if not plant then
+        print("[PatchLine - badPlantPatch] Called with nil plant!");
+        return 
     end;
 
-    if not diseaseLvl then diseaseLvl = 0 end;
+    if not water then 
+        water = 1;
+        buggedProp = "water";
+    end;
 
-	if not waterMax then waterMax = 1 end;
+    if not diseaseLvl then 
+        buggedProp = "diseaseLvl";
+        diseaseLvl = 0;
+    end;
+
+	if not waterMax then
+        waterMax = 1;
+        buggedProp = "waterMax";
+    end;
+
+    if buggedProp and buggedProp ~= "" then
+        print("[PatchLine] badPlant called with nil prop: " .. tostring(buggedProp));
+        if plant:getSquare() then
+            local square = plant:getSquare();
+            print("[PatchLine - badPlantPatch]" .. tostring(square:getX()) .. "," .. tostring(square:getY()) .. "," .. tostring(square:getZ()));
+        end
+    end
 
 	-- if we're here, it's because we didn't take well care of our plant, so we notice it, we'll have less xp from this plant
 	if water <= -1 or waterMax <= -1 then

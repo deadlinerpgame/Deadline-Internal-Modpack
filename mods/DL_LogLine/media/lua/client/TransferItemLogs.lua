@@ -1,4 +1,6 @@
-LogLineUtils = require("LogLineUtils");
+LogLineUtils = LogLineUtils or {};
+LogLineUtils.LogFromClient = LogLineUtils.LogFromClient or {};
+
 if isServer() then return end;
 
 TransferMechanisms = {

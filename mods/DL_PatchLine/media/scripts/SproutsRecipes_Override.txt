@@ -1,0 +1,111 @@
+module Sprout
+{
+    imports
+    {
+        Base
+    }
+
+    recipe Make Cow Feed
+	{
+        Corn=6,
+        Wheat=12,
+        Sugar=1,
+
+        keep Bowl,
+	    keep MortarPestle,
+
+        Result:CowFeed,
+        Time:50.0,
+	    Category:Farming,
+        Override:true,
+	}
+
+    recipe Make Chicken Feed
+	{
+        Corn=6,
+        Wheat=6,
+        SoyBean=6,
+        keep Bowl,
+	
+	    keep MortarPestle,
+
+        Result:ChickenFeed,
+        Time:50.0,
+	    Category:Farming,
+        Override:true,
+	}
+
+    recipe Make Sheep Feed
+	{
+        Corn=6,
+	    Wheat=6,
+	    keep Bowl,
+	
+	    keep MortarPestle,
+
+        Result:SheepFeed,
+        Time:50.0,
+	    Category:Farming,
+        Override:true,
+	}
+
+    recipe Make Cattle Feed
+	{
+        Corn=12,
+        Wheat=12,
+        Sugar=2,
+        keep Bowl,
+        
+        keep MortarPestle,
+
+        Result:CattleFeed,
+        Time:50.0,
+	    Category:Farming,
+        Override:true,
+	}
+
+    recipe Make Mutton Feed
+	{
+        Corn=4,
+        Wheat=4,
+        Hops=4,
+        keep Bowl,
+        
+        keep MortarPestle,
+
+        Result:MuttonFeed,
+        Time:50.0,
+	    Category:Farming,
+        Override:true,
+	}
+
+    recipe Make Pig Feed
+	{
+        Corn=6,
+        Wheat=6,
+        Tomato=2,
+        keep Bowl,
+        
+        keep MortarPestle,
+
+        Result:PigFeed,
+        Time:50.0,
+	    Category:Farming,
+        Override:true,
+	}
+
+    recipe Make Bird Feed
+	{
+        Corn=1,
+        Wheat=1,
+        Apple=1,
+        keep Bowl,
+        
+        keep MortarPestle,
+
+        Result:BirdFeed,
+        Time:50.0,
+	    Category:Farming,
+        Override:true,
+	}
+}
