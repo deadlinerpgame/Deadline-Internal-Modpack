@@ -11088,7 +11088,7 @@ local distributionTable = {
                 "Hammer", 8,
                 "HandAxe", 4,
                 "LeadPipe", 10,
-                "Machete", 1
+                "Machete", 1,
                 "Nails", 20,
                 "Nails", 10,
                 "NailsBox", 10,
