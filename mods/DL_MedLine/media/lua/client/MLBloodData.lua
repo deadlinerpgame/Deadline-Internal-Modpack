@@ -59,12 +59,17 @@ function MLBloodData:allocateBloodType()
     MedLine_Logging.log("[allocateBloodType] Blood type allocated and stopping.\n");
 end
 
-function MLBloodData:getBloodData()
+function MLBloodData:getBloodType()
     return self.bloodType;
 end
 
+---Changes the blood type for the BloodData if not already changed and prevents it being changed again.
+---@param newType string The string value of the new blood type, e.g. "A+", "O-".
+---@param override boolean Whether or not to override the previously set restriction.
 function MLBloodData:changeBloodType(newType, override)
     if not override and self:hasChangedBloodType() then return end;
+
+    MedLine_Logging.log("Blood type is being changed from " .. self.bloodType.type .. " to " .. newType " [override: " .. override .. "]");
 
     local matchingType = nil;
     for _, bloodType in pairs(MedLine_Dict.BLOOD_TYPES) do
@@ -76,6 +81,8 @@ function MLBloodData:changeBloodType(newType, override)
     -- Conceivably if something intercepts the ISChat options and prevents the full blood types dict being added, then this will error.
     -- Setting a player's blood type to an invalid one or nil could be disasterous.
     if not matchingType then return end;
+
+    MedLine_Logging.log("Blood type changed completed.");
 
     self.bloodType = matchingType;
     self.bloodTypeChanged = true;
@@ -112,6 +119,63 @@ function MLBloodData:setNowAboveThreshold()
     self.hasLapsedBelow = false;
 end
 
+function MLBloodData:getRecoveryDaysRemaining()
+    if not self.bloodLossStartedUnix or not self.bloodLossTimeoutUnix then return 0 end;
+
+    local remainingSeconds = self.bloodLossTimeoutUnix - getTimestamp();
+    return Math.floor(remainingSeconds / 86400);
+end
+
+function MLBloodData:getRecoveryDaysRemainingAsString()
+    local daysRemaining = self:getRecoveryDaysRemaining();
+    if not daysRemaining then return "Not Recovering" end;
+
+    if daysRemaining <= 1 then return "Less than a day remaining." end;
+
+    return daysRemaining .. " days remaining";
+end
+
+function MLBloodData:isRecoveringFromBloodLoss()
+    -- If there is a timeout and that timeout is in the future, return true.
+    return (self.bloodLossTimeoutUnix and self.bloodLossTimeoutUnix > 0) and (self.bloodLossTimeoutUnix > getTimestamp());
+end
+
+-- Sets the moodle levels accordingly.
+function MLBloodData:getRecoveryMoodleValue()
+    if not self:isRecoveringFromBloodLoss() then return end;
+
+    local totalSecondsDiff = self.bloodLossTimeoutUnix - self.bloodLossStartedUnix;
+    local relativePosition = self.bloodLossTimeoutUnix - getTimestamp();
+
+    local timeDiff = Math.floor((relativePosition / totalSecondsDiff) * 100); -- % of days remaining.
+     
+    -- This will give % of time remaining. As there are 4 levels to the moodle, split into 25%;
+    if timeDiff > 75 then
+        return 0.1;
+    end
+
+    if timeDiff <= 75 and timeDiff > 50 then
+        return 0.2;
+    end
+
+    if timeDiff <= 50 and timeDiff > 25 then
+        return 0.3;
+    end
+
+    if timeDiff > 0.0 then
+        return 0.4;
+    end;
+
+    return 0.5; -- This is the default "neutral" value which means no more time remaining.
+end
+
+function MLBloodData:setHasRecoveredFromBloodLoss()
+    self.bloodLossStartedUnix = nil;
+    self.bloodLossTimeoutUnix = nil;
+    self.hasLapsedBelow = nil;
+    self:save();
+end
+
 --[[
 
 --]]
@@ -126,8 +190,14 @@ function MLBloodData:save()
         return;
     end
 
+    MedLine_Logging.log("Saving MedLine blood data...");
+    MedLine_Logging.dumpTables(self.character:getModData().MedLine.BloodData);
+
     self.character:getModData().MedLine.BloodData = self;
     self.character:transmitModData();
+
+    MedLine_Logging.log("Saved.");
+    MedLine_Logging.dumpTables(self.character:getModData().MedLine.BloodData);
 end
 
 function MLBloodData:tostring()
