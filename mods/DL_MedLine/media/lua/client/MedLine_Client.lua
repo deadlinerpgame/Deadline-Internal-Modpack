@@ -212,14 +212,16 @@ function MedLine_Client.getRecoveryDaysRemaining()
     if not bloodData.bloodLossStartedUnix or not bloodData.bloodLossTimeoutUnix then return 0 end;
 
     local remainingSeconds = bloodData.bloodLossTimeoutUnix - getTimestamp();
-    return Math.floor(remainingSeconds / 86400);
+    return remainingSeconds / 86400;
 end
 
 function MedLine_Client.getRecoveryDaysRemainingAsString()
     local daysRemaining = MedLine_Client.getRecoveryDaysRemaining();
     if not daysRemaining then return "Not Recovering" end;
 
-    if daysRemaining <= 1 then return "Less than a day remaining." end;
+    if daysRemaining <= 0.9 then return "Less than a day remaining." end;
+
+    if daysRemaining > 0.9 and daysRemaining < 1.2 then return "Approximately a day remaining." end;
 
     return daysRemaining .. " days remaining";
 end
@@ -367,10 +369,51 @@ function MedLine_Client.hasItemsForBloodDraw(player)
     return MedLine_Client.recursiveItemCheckEx(player, MedLine_Client.bloodDrawItems);
 end
 
-function MedLine_Client.hasItemsForBloodTransfusion(player)
+function MedLine_Client.getBloodBagOfType(player, targetBloodType)
     if not player then return end;
+    if not targetBloodType or not targetBloodType.type then
+        MedLine_Logging.log("getBloodBagOfType - no targetBloodType");
+        error("getBloodBagOfType invalid targetBloodType", 1);
+    end
+
+    local bloodBags = player:getInventory():getAllTypeRecurse("MedLine.BloodBag_Full");
+
+    for i = 0, bloodBags:size() - 1 do
+        local bag = bloodBags:get(i);
+        if bag then
+            local modData = bag:getModData().bloodBagInfo;
+            if modData then
+                if modData.bloodType.type == targetBloodType.type then
+                    return bag;
+                end
+            end
+        end
+    end
+
+    return nil;
+end
+
+function MedLine_Client.hasItemsForBloodTransfusion(player, targetBloodtype)
+    if not player then return end;
+    if not targetBloodType then
+        MedLine_Logging.log("hasItemsForBloodTransfusion - no targetBloodType");
+        error("hasItemsForBloodTransfusion", 1);
+    end;
     
-    return MedLine_Client.recursiveItemCheckEx(player, MedLine_Client.bloodTransfusionItems);
+    if not MedLine_Client.recursiveItemCheckEx(player, MedLine_Client.bloodTransfusionItems) then return false end;
+
+    local bagList = player:getInventory():getAllTypeRecurse("MedLine.BloodBag_Full");
+    for i = 0, bagList:size() - 1 do
+        local bag = bagList:get(i);
+        if bag then
+            local modData = bag:getModData().bloodBagInfo;
+            if modData then
+                if modData.bloodType and modData.bloodType.type and modData.bloodType.type == targetBloodtype.type then
+                    return true;
+                end
+            end
+        end
+    end
 end
 
 

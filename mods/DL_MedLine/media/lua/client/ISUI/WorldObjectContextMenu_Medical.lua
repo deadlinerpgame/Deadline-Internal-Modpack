@@ -45,6 +45,10 @@ end
 
 function MedLine_Events.populateMedicalCheck_BloodDraw(player, context, subMenu, medicalCheckOpt, requiredSkillLevel)
     
+    MedLine_Logging.log("populateMedicalCheck_BloodDraw");
+    MedLine_Logging.log("Param 1 - " .. medicalCheckOpt.param1:getUsername());
+    MedLine_Logging.log("Param 2 - " .. medicalCheckOpt.param2:getUsername());
+
     local newOpt = subMenu:addOption(getText("ContextMenu_MedLine_DrawBlood"), context, MedLine_Events.onClickDrawBlood, player, medicalCheckOpt);
     local tooltip = ISWorldObjectContextMenu.addToolTip();
 
@@ -56,7 +60,7 @@ function MedLine_Events.populateMedicalCheck_BloodDraw(player, context, subMenu,
     tooltip.description = tooltip.description .. "This will produce 1x blood bag of that player's blood type. <LINE> <LINE>";
     tooltip.description = tooltip.description .. "This is a lengthy and time consuming action and will be cancelled by movement. <LINE> <LINE>";
 
-     -- Check if the player has the required skill to give blood.
+     -- Check if the player has the required skill to take blood.
     local currentSkill = player:getPerkLevel(Perks.Doctor);
     local isValid = true;
 
@@ -93,6 +97,54 @@ end
 
 function MedLine_Events.populateMedicalCheck_BloodTransfusion(player, context, subMenu, medicalCheckOpt, requiredSkillLevel)
 
+    MedLine_Logging.log("populateMedicalCheck_BloodTransfusion");
+    MedLine_Logging.log("Param 1 - " .. medicalCheckOpt.param1:getUsername());
+    MedLine_Logging.log("Param 2 - " .. medicalCheckOpt.param2:getUsername());
+
+    local newOpt = subMenu:addOption(getText("ContextMenu_MedLine_GiveBlood"), context, MedLine_Events.onClickGiveBlood, player, medicalCheckOpt);
+    local tooltip = ISWorldObjectContextMenu.addToolTip();
+
+    newOpt.toolTip = tooltip;
+
+    tooltip:setName(getText("ContextMenu_MedLine_GiveBlood"));
+    tooltip:setWidth(180);
+    tooltip.description = "Transfuses blood from a blood bag to speed up the recovery from blood loss. <LINE> <LINE>";
+    tooltip.description = tooltip.description .. "This requires 1x bloodbag of the same blood type as the player. <LINE> <LINE>";
+
+     -- Check if the player has the required skill to give blood.
+    local currentSkill = player:getPerkLevel(Perks.Doctor);
+    local isValid = true;
+
+    local meetsSkillLevel = currentSkill >= requiredSkillLevel;
+    if not meetsSkillLevel then
+        isValid = false;
+    end
+
+    local skillString = string.format("Medical:   %s %s / %s <LINE>", meetsSkillLevel and " <RGB:0,1,0> " or " <RGB:1,0,0> ", tostring(currentSkill), tostring(requiredSkillLevel));
+    tooltip.description = tooltip.description .. skillString;
+
+    local targetBloodType = MedLine_Client.getBloodType(medicalCheckOpt.param2);
+    local matchingBag = MedLine_Client.getBloodBagOfType(player, targetBloodType);
+
+    if not matchingBag then
+        isValid = false;
+        tooltip.description = tooltip.description .. ("<LINE> <LINE>");
+        tooltip.description = tooltip.description .. "<RED>Missing Item: 1x blood bag of type " .. tostring(targetBloodType.type) .. ".<LINE>";
+    end
+
+    tooltip.description = tooltip.description .. (drawString or "INVALID_DRAW_STRING");
+
+    if MedLine_Client.doesPlayerHaveBloodLoss(medicalCheckOpt.param2) then
+        isValid = false;
+        tooltip.description = tooltip.description .. ("<LINE> <LINE>");
+        tooltip.description = tooltip.description .. "<RED> This player is already recovering from blood loss. You cannot draw more blood from them.<LINE>";
+    end
+
+    if not isValid then
+        newOpt.notAvailable = true;
+    end
+
+    return newOpt;
 end
 
 
