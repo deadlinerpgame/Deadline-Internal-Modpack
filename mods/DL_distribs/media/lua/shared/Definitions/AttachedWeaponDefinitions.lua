@@ -34,6 +34,7 @@ AttachedWeaponDefinitions.katanaStomach = {
 	addHoles = true,
 	daySurvived = 60,
 	weapons = {
+		"Base.Katana",
 	},
 }
 
@@ -58,6 +59,7 @@ AttachedWeaponDefinitions.meatCleaverBack = {
 	addHoles = true,
 	daySurvived = 20,
 	weapons = {
+		"Base.Machete",
 		"Base.HandAxe",
 	},
 }
@@ -251,6 +253,7 @@ AttachedWeaponDefinitions.MacheteShoulder = {
 	addHoles = true,
 	daySurvived = 20,
 	weapons = {
+		"Base.Machete",
 	},
 }
 
@@ -487,7 +490,7 @@ AttachedWeaponDefinitions.knivesBelt = {
 
 -- crowbar or machete in back
 AttachedWeaponDefinitions.bladeInBack = {
-	chance = 20,
+	chance = 10,
 	outfit = {"Bandit"},
 	weaponLocation = {"Blade On Back"},
 	bloodLocations = nil,
@@ -495,18 +498,20 @@ AttachedWeaponDefinitions.bladeInBack = {
 	daySurvived = 0,
 	weapons = {
 		"Base.Crowbar",
+		"Base.Machete",
 	},
 }
 
 -- machete in back
 AttachedWeaponDefinitions.macheteInBack = {
-	chance = 20,
+	chance = 10,
 	outfit = {"HockeyPsycho"},
 	weaponLocation = {"Blade On Back"},
 	bloodLocations = nil,
 	addHoles = false,
 	daySurvived = 0,
 	weapons = {
+		"Base.Machete",
 	},
 }
 

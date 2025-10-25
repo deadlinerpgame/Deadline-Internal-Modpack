@@ -3,13 +3,49 @@ module Base
 
 item CorpseTicket
     {
+	    DisplayCategory = Food,
+		Type				=		Food,
+		DisplayName			=		Sheet of Paper,
+        ReplaceOnRotten = Base.CorpseTicket2,
+		Icon				=		Paper,
+		Weight				=		75,
+		IsCookable			= 		false,
+		MinutesToCook   	= 		999999,
+		MinutesToBurn   	= 		999999,
+		HungerChange 		=		0.1,
+		DaysFresh 			=		1,
+		DaysTotallyRotten 	=		25,
+		DangerousUncooked 	= 		true,
+        
+    }
+
+item CorpseTicket2
+    {
+	    DisplayCategory = Food,
+		Type				=		Food,
+		DisplayName			=		Unlocked Corpse Token,
+        ReplaceOnRotten = Base.CorpseTicket3,
+		Icon				=		Paper,
+		Weight				=		75,
+		IsCookable			= 		false,
+		MinutesToCook   	= 		999999,
+		MinutesToBurn   	= 		999999,
+		HungerChange 		=		0.1,
+		DaysFresh 			=		1,
+		DaysTotallyRotten 	=		14,
+		DangerousUncooked 	= 		true,
+    }
+
+item CorpseTicket3
+    {
         DisplayCategory = Literature,
-        Weight	=	50,
+        Weight	=	0.1,
         Type	=	Literature,
-        DisplayName	=	Sheet of Paper,
+        DisplayName	=	Unlocked Corpse Token,
         Icon	=	Paper,
         CanBeWrite  =   true,
         PageToWrite =   1,
         WorldStaticModel = SheetOfPaper,
     }
+
 }

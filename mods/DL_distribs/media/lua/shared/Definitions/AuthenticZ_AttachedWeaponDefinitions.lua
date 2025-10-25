@@ -826,14 +826,14 @@ AttachedWeaponDefinitions.M16Cherry = {
 }
 
 AttachedWeaponDefinitions.Katana= {
-	chance = 100,
+	chance = 25,
 	outfit = {"AuthenticBlackMamba"},
 	weaponLocation = {"Big Weapon On Back"},
 	bloodLocations = nil,
 	addHoles = false,
 	daySurvived = 0,
 	weapons = {
-
+	"Base.Katana",
 	},
 }
 -- melee on back!
@@ -900,6 +900,7 @@ AttachedWeaponDefinitions.bladeInBackAZ = {
 	daySurvived = 0,
 	weapons = {
 		"Base.Crowbar",
+		
 	},
 }
 -- crowbar in back
@@ -916,13 +917,14 @@ AttachedWeaponDefinitions.Crowbar = {
 }
 -- machete in back
 AttachedWeaponDefinitions.macheteInBack2 = {
-	chance = 20,
+	chance = 10,
 	outfit = {"AuthenticJasonPart3","AuthenticB4BEvangelo"}, 
 	weaponLocation = {"Blade On Back"},
 	bloodLocations = nil,
 	addHoles = false,
 	daySurvived = 0,
 	weapons = {
+		"Base.Machete",
 	},
 }
 -- Pickaxe on back

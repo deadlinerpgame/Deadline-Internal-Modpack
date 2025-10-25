@@ -1,0 +1,35 @@
+module DeadlineClothes {
+  imports {
+      Base
+  }
+	item F8_Bag1
+    {
+        DisplayCategory = Bag,
+        WeightReduction	=	60,
+        Weight	=	1,
+        Type	=	Container,
+        Capacity	=	15,
+        DisplayName	=	Dax's Backpack,
+        Icon = DaxBackpack,
+        CanBeEquipped = Back,
+        OpenSound   =   OpenBag,
+        CloseSound   =   CloseBag,
+        PutInSound   =   PutItemInBag,
+        ClothingItem = F8_Bag1,
+        BloodLocation = Bag,
+        AttachmentReplacement = Bag,
+        ReplaceInSecondHand = Bag_Schoolbag_LHand holdingbagleft,
+        ReplaceInPrimaryHand = Bag_Schoolbag_RHand holdingbagright,
+        WorldStaticModel = F8_Bag1_Ground,
+        SoundParameter = EquippedBaggageContainer SchoolBag,
+    }
+
+
+    model F8_Bag1_Ground
+    {
+        mesh = WorldItems/Clothes/F8_Bag1_Ground,
+        texture = clothes/Backpacks/F8_Bag1,
+        scale = 1,
+    }
+	
+}
