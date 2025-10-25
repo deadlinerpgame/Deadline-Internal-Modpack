@@ -1,7 +1,10 @@
 require "MedLine_Client";
+require "MedLine_Dict";
+require "WL"
 
 MedLine_Events = {};
 MedLine_Client = MedLine_Client or {};
+MedLine_Dict = MedLine_Dict or {};
 
 function MedLine_Events.EveryOneMinute()
     local player = getPlayer();
@@ -18,13 +21,13 @@ function MedLine_Events.EveryOneMinute()
     local health = bodyDamage:getOverallBodyHealth();
     
     -- If the health is over the threshhold and their blood data does not show they have lapsed below
-    if health > threshhold and bloodData and (not bloodData:hasLapsedBelowThreshold()) then return end;
+    if health > threshhold and bloodData and (not MedLine_Client.hasLapsedBelowThreshold()) then return end;
 
-    if health > threshhold and bloodData and bloodData:hasLapsedBelowThreshold() then
-        bloodData:setNowAboveThreshold();
+    if health > threshhold and bloodData and MedLine_Client.hasLapsedBelowThreshold() then
+        MedLine_Client.setNowAboveThreshold();
     end;
 
-    if health <= threshhold and bloodData and not bloodData:hasLapsedBelowThreshold() then
+    if health <= threshhold and bloodData and not MedLine_Client.hasLapsedBelowThreshold() then
         MedLine_Client.initiateBloodLossStart();
     end
 end
@@ -33,9 +36,7 @@ function MedLine_Events.EveryTenMinutes()
     local player = getPlayer();
     if not player then return end;
 
-    if not MedLine_Client.getBloodData() then return end;
-
-    if not MedLine_Client.isRecoveringFromBloodLoss() then return end;
+    if not MedLine_Client.doesPlayerHaveBloodLoss(player) then return end;
 
     MedLine_Client.checkBloodLossRecovery();
 
@@ -51,11 +52,21 @@ function MedLine_Events.OnWeaponSwing(player, weapon)
     if not player then return end;
     if not weapon then return end;
 
-    if not MedLine_Client.isRecoveringFromBloodLossEx(player) then return end;
+    if not MedLine_Client.doesPlayerHaveBloodLoss(player) then return end;
 
     -- If it's not a weapon (somehow) this will go horribly, so exit out.
     -- Potentially if player has something without a hand model equipped for farming etc? No idea. Better safe than sorry due to PZ jank.
     if not instanceof(weapon, "HandWeapon") or not weapon:IsWeapon() or weapon:isRanged() then return end;
+
+    -- Quick sync check to make sure max stamina is set properly.
+    local enduranceCap = SandboxVars.MedLine.BloodLoss_MaxBloodLossEndurance or 0.8;
+
+    -- Set stats to cap endurance at max of 80.
+    local stats = player:getStats();
+    stats:setEndurancelast(enduranceCap);
+    if stats:getEndurance() > enduranceCap then
+        stats:setEndurance(enduranceCap);
+    end
 
     local sandboxEnduranceMult = SandboxVars.MedLine.BloodLoss_WeaponSwingEnduranceAffected;
 
@@ -101,24 +112,118 @@ function MedLine_Events.OnPlayerUpdate()
     local player = getPlayer();
     if not player then return end;
 
-    if not MedLine_Client.isRecoveringFromBloodLoss() then
+    if not MedLine_Client.doesPlayerHaveBloodLoss(player) then
         Events.OnPlayerUpdate.Remove(MedLine_Events.OnPlayerUpdate);
         MedLine_Client.setBloodLossStopped();
         return;
     end
 
+    local enduranceCap = SandboxVars.MedLine.BloodLoss_MaxBloodLossEndurance or 0.8;
+
     -- Set stats to cap endurance at max of 80.
     local stats = player:getStats();
-    stats:setEndurancelast(0.8);
-    if stats:getEndurance() > 0.8 then
-        stats:setEndurance(0.8);
+    stats:setEndurancelast(enduranceCap);
+    if stats:getEndurance() > enduranceCap then
+        stats:setEndurance(enduranceCap);
+    end
+end
+
+function MedLine_Events.onClickBloodActionModal(otherPlayer, btn, src, mode)
+    if not src or not mode then return end;
+
+    if btn.internal == "NO" then return end;
+
+    if not otherPlayer then return end;
+
+    if mode == MedLine_Dict.EventModes.BloodActions.draw then
+        WL_Utils.addInfoToChat("You have accepted the blood draw. " .. tostring(otherPlayer:getUsername()) .. " is now drawing blood.");
     end
 
+    sendClientCommand(getPlayer(), "MedLine", "AcceptBloodAction", { src = src, mode = mode });
+    getSoundManager():playUISound("UISelectListItem");
+end
+
+function MedLine_Events.OnServerCommand(module, command, args)
+    if module ~= "MedLine" then return end;
+    
+    if command == "ShowBloodActionModal" then
+        -- src = player:getOnlineID(), srcName = player:getDescriptor():getForename(), mode = mode
+        local mode = args.mode;
+
+        MedLine_Logging.log("ShowBloodActionModal called from " .. args.src .. " with mode " .. tostring(mode) .. " for " .. getPlayer():getUsername());
+
+        if mode == MedLine_Dict.EventModes.BloodActions.draw then
+            
+            local srcPlayer = getPlayerByOnlineID(args.src);
+            if not srcPlayer then
+                MedLine_Logging.log("ShowBloodActionModal but player with online ID does not exist - " .. tostring(args.src));
+                return;
+            end
+
+            local posX = (getCore():getScreenWidth() / 2) - (350 / 2);
+            local posY = (getCore():getScreenHeight() / 2) - (200 / 2);
+            local modal = ISModalDialog:new(posX, posY, 350, 200, getText("IGUI_ConfirmBloodDraw", args.srcName), true, srcPlayer, MedLine_Events.onClickBloodActionModal, srcPlayer:getPlayerNum(), srcPlayer:getUsername(), mode);
+            modal:initialise();
+            modal:addToUIManager();
+        end
+    end
+
+    if command == "OnReceiveAcceptedBloodAction" then
+        print("OnReceiveAcceptedBloodAction");
+        local target = args.target;
+        local mode = args.mode;
+
+        if not target or not mode then return end;
+
+        if mode == MedLine_Dict.EventModes.BloodActions.draw then
+            local targetPlayer = getPlayerFromUsername(target);
+            if not targetPlayer then return end;
+
+            MedLine_Client.waitingForBloodActionPerms = false;
+            ISTimedActionQueue.add(MLDrawBloodAction:new(getPlayer(), targetPlayer));
+        end
+    end
+
+    if command == "StartBloodDrawBloodLoss" then
+        local bloodDrawDays = SandboxVars.MedLine.BloodLoss_RecoveryTimeDaysDonation or 2;
+        MedLine_Client.initiateBloodLossStart(bloodDrawDays);
+    end
 end
 
 Events.EveryOneMinute.Add(MedLine_Events.EveryOneMinute);
 Events.EveryTenMinutes.Add(MedLine_Events.EveryTenMinutes);
 Events.OnWeaponSwing.Add(MedLine_Events.OnWeaponSwing);
+Events.OnServerCommand.Add(MedLine_Events.OnServerCommand);
 
+function MedLine_Events.OnReceiveGlobalModData(key, data)
+    print("OnReceiveGlobalModData " .. key .. " ");
+
+    if key == MedLine_Dict.ModDataKeys.UserData then
+        print("OnReceiveGlobalModData for MedLine UserData");
+        MedLine_Client.CachedMedicalData = data;
+    end
+    local modData = MedLine_Client.getBloodData();
+
+end
+
+function MedLine_Events.OnInitGlobalModData(newGame)
+    MedLine_Client.CachedMedicalData = ModData.getOrCreate(MedLine_Dict.ModDataKeys.UserData);
+    ModData.request(MedLine_Dict.ModDataKeys.UserData);
+end
+
+Events.OnReceiveGlobalModData.Add(MedLine_Events.OnReceiveGlobalModData);
+Events.OnInitGlobalModData.Add(MedLine_Events.OnInitGlobalModData);
+
+--[[function MedLine_Events.OnGameBoot()
+    for _, bloodType in ipairs(MedLine_Dict.BLOOD_TYPES) do
+        local typeString = bloodType.traitStr;
+        local traitTitle = "Blood Type: " .. tostring(bloodType.type);
+        TraitFactory.addTrait(getText(typeString), traitTitle, 0, "Your character's blood type.", false);
+        print("Adding trait " .. typeString);
+    end
+end
+
+
+Events.OnGameBoot.Add(MedLine_Events.OnGameBoot);--]]
 
 return MedLine_Events;
