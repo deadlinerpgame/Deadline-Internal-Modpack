@@ -58,9 +58,11 @@ function MedLine_Client.doesPlayerHaveBloodLoss(player)
 
     local num = player:getPlayerNum();
     local bloodLossMoodle = MF.getMoodle("BloodLoss", num);
-    
-    if bloodLossMoodle:getValue() ~= 0.5 then return true end;
-    return false;
+
+    local value = bloodLossMoodle:getValue();
+    if not value or value == 0.5 then return false end;
+
+    return true;
 end
 
 
@@ -113,15 +115,18 @@ end
 function MedLine_Client.saveMedicalData()
     local username = getPlayer():getUsername();
 
+    getPlayer():transmitModData();
     sendClientCommand(getPlayer(), "MedLine", "SyncMedicalData", { character = username, data = getPlayer():getModData().MedLine.BloodData or {} });
 end
 
 function MedLine_Client.OnCreatePlayer(playerNum, player)
+    if player ~= getPlayer() then return end;
+    
     -- This is simply because due to multiplayer tomfoolery players may have corrupted mod data, so find the most common function and if it doesn't exist, make it.
     if not modData or not MedLine_Client.getBloodType(player) then
         MedLine_Client.initialiseMedicalData();
-    else
-        MedLine_Client.checkBloodLossRecovery();
+    elseif MedLine_Client.doesPlayerHaveBloodLoss(player) then
+        Events.OnPlayerUpdate.Add(MedLine_Events.OnPlayerUpdate);
     end
 end
 
@@ -231,6 +236,7 @@ function MedLine_Client.initiateBloodLossStart(timeInDays)
 
     local bloodLossMoodle = MF.getMoodle("BloodLoss", getPlayer():getPlayerNum());
     bloodLossMoodle:setValue(0);
+    MedLine_Client.saveMedicalData();
 
     -- Now handle events.
     Events.OnPlayerUpdate.Add(MedLine_Events.OnPlayerUpdate);
@@ -387,9 +393,7 @@ function MedLine_Client.setBloodBagData(item, fromPlayer)
     
     item:setCustomName(false);
 
-    local tooltipStr = string.format("Blood Bag - taken from: %s, type: %s", bloodData.takenFromDisplay, bloodType.type);
     item:setName("Blood Bag - Full (" .. bloodType.type .. ")");
-    item:setTooltip(tooltipStr);
     item:getModData().bloodBagInfo =
     {
         bloodData = bloodData,
@@ -405,12 +409,12 @@ end
 
 function MedLine_Client.getRecoveryMoodleValue()
     local bloodData = MedLine_Client.getBloodData();
-    if not bloodData then return end;
+    if not bloodData then return 0.5 end;
 
-    if not MedLine_Client.isRecoveringFromBloodLoss() then return end;
+    if not bloodData.bloodLossTimeoutUnix or not bloodData.bloodLossStartedUnix then return 0.5 end;
 
-    local totalSecondsDiff = bloodLoss.bloodLossTimeoutUnix - bloodLoss.bloodLossStartedUnix;
-    local relativePosition = bloodLoss.bloodLossTimeoutUnix - getTimestamp();
+    local totalSecondsDiff = bloodData.bloodLossTimeoutUnix - bloodData.bloodLossStartedUnix;
+    local relativePosition = bloodData.bloodLossTimeoutUnix - getTimestamp();
 
     local timeDiff = Math.floor((relativePosition / totalSecondsDiff) * 100); -- % of days remaining.
      

@@ -28,7 +28,7 @@ function MedLine_Events.EveryOneMinute()
     end;
 
     if health <= threshhold and bloodData and not MedLine_Client.hasLapsedBelowThreshold() then
-        MedLine_Client.initiateBloodLossStart();
+        MedLine_Client.initiateBloodLossStart(SandboxVars.MedLine.BloodLoss_RecoveryTimeDays or 7);
     end
 end
 

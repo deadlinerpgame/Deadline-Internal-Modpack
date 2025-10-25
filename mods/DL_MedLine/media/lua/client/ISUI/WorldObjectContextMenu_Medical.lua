@@ -77,7 +77,7 @@ function MedLine_Events.populateMedicalCheck_BloodDraw(player, context, subMenu,
 
     tooltip.description = tooltip.description .. (drawString or "INVALID_DRAW_STRING");
 
-    if MedLine_Client.doesPlayerHaveBloodLoss(medicalCheckOpt.param2) then
+    if MedLine_Client.doesPlayerHaveBloodLoss(medicalCheckOpt.param1) then
         isValid = false;
         tooltip.description = tooltip.description .. ("<LINE> <LINE>");
         tooltip.description = tooltip.description .. "<RED> This player is already recovering from blood loss. You cannot draw more blood from them.<LINE>";

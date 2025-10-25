@@ -108,7 +108,9 @@ function MedLine_Server.OnClientCommand(module, command, player, args)
         item:setCustomName(false);
         local tooltipStr = string.format("Blood Bag - taken from: %s, type: %s", bloodData.takenFromDisplay, bloodType.type);
         item:setName("Blood Bag - Full (" .. bloodType.type .. ")");
+
         item:setTooltip(tooltipStr);
+
         item:getModData().bloodBagInfo =
         {
             bloodData = bloodData,
