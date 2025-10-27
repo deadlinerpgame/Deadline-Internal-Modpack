@@ -61,6 +61,17 @@ function badPlant(water, waterMax, diseaseLvl, plant, nextGrowing, updateNbOfGro
     end
 end
 
+
+local original_SFarmingSystem_harvest = SFarmingSystem.harvest;
+
+function SFarmingSystem:harvest(luaObject, player)
+    luaObject.harvestedByLvl = player:getPerkLevel(Perks.Farming);
+
+    original_SFarmingSystem_harvest(luaObject, player);
+
+    luaObject.harvestedByLvl = nil;
+end
+
 PatchLine_GetVegetablesNumberOriginal = _G["getVegetablesNumber"];
 
 _G["getVegetablesNumber"] = function(min, max, minAuthorised, maxAuthorised, plant)
@@ -126,6 +137,25 @@ _G["getVegetablesNumber"] = function(min, max, minAuthorised, maxAuthorised, pla
     -- Lower harvest by 1 per every 10 aphid level.
 	local aphidModifier = math.floor(plant.aphidLvl / 10);
 	nbOfVegetable = nbOfVegetable - aphidModifier;
+
+
+    -- Now modify number of vegetables by level between 6 and 10.
+    -- And remove 1 from harvest if won't take to 0.
+    if plant.harvestedByLvl then
+        local lvl = plant.harvestedByLvl;
+        if lvl < 6 and nbOfVegetable > 1 then
+            nbOfVegetable = nbOfVegetable - 1;
+        end
+
+        if lvl > 6 then
+            -- For every level from 6 add 10%, so at nbOfVegetable = 5, with farming 10, this would be:
+            -- 5 * (0.1 * 4) = 5 * 0.4 = 2
+            local lvlsOverThreshold = lvl - 6;
+            local totalExtraHarvest = nbOfVegetable * (0.1 * lvlsOverThreshold);
+
+            nbOfVegetable = nbOfVegetable + totalExtraHarvest;
+        end
+    end
 
     if nbOfVegetable < 1 and aphidModifier > 5 then -- This means if you don't treat the aphid level you will get 0 crops on an unlucky roll.
         return 0;

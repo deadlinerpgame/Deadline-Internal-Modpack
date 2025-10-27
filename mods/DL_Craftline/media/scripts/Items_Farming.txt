@@ -1,0 +1,49 @@
+module Craftline
+{
+    imports
+    {
+        Base
+    }
+
+    item GardeningSprayBonemeal
+ 	{
+ 	    DisplayCategory     =       Gardening,
+    	Type				=		Drainable,
+		DisplayName			=		Fungi Treatment Spray,
+		Icon				=		TZ_GardeningSprayCan,
+		Weight				=		1.0,
+    	UseDelta			=		0.2,
+    	ReplaceOnDeplete 	= 		GardeningSprayEmpty,
+	    UseWhileEquipped    =       false,
+    	StaticModel         =       GardenSpray,
+    	WorldStaticModel    =       GardenSprayGround,
+  	}
+
+    recipe Make Fungi Treatment Spray
+    {
+        GardeningSprayEmpty,
+        Water=5,
+        [Recipe.GetItemTypes.Skulls]=1,
+
+        keep MortarPestle,
+        SkillRequired:Farming=10,
+        Category:Farming,
+        Time:150.0,
+        
+        Result:GardeningSprayBonemeal,
+    }
+
+    recipe Make Fungi Treatment Spray
+    {
+        GardeningSprayEmpty,
+        Water=5,
+        [Recipe.GetItemTypes.Bones]=5,
+
+        keep MortarPestle,
+        SkillRequired:Farming=10,
+        Category:Farming,
+        Time:150.0,
+        
+        Result:GardeningSprayBonemeal,
+    }
+}
