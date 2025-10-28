@@ -1,0 +1,77 @@
+module Craftline
+{
+    imports
+    {
+        Base
+    }
+
+    item GardeningSprayBonemeal
+ 	{
+ 	    DisplayCategory     =       Gardening,
+    	Type				=		Drainable,
+		DisplayName			=		Fungi Treatment Spray,
+		Icon				=		TZ_GardeningSprayCan,
+		Weight				=		1.0,
+    	UseDelta			=		0.2,
+    	ReplaceOnDeplete 	= 		GardeningSprayEmpty,
+	    UseWhileEquipped    =       false,
+    	StaticModel         =       GardenSpray,
+    	WorldStaticModel    =       GardenSprayGround,
+  	}
+
+    recipe Make Fungi Treatment Spray
+    {
+        GardeningSprayEmpty,
+        Water=5,
+        aerx.JawboneBovide/aerx.Chicken_Hen_Skull/aerx.Chicken_Rooster_Skull/aerx.Chicken_Chick_Skull/aerx.Pig_Skull/aerx.Piglet_Skull/aerx.Sheep_Skull/aerx.Ram_Skull/aerx.Lamb_Skull/aerx.Cow_Skull/aerx.Bull_Skull/aerx.Calf_Skull/aerx.Turkey_PoultSkull/aerx.Turkey_Skull/aerx.Raccoon_Skull/aerx.Rabbit_KittenSkull/aerx.Rabbit_Skull/aerx.DeerDoe_Skull/aerx.DeerFawn_Skull/aerx.DeerStag_Skull,
+
+        keep MortarPestle,
+        SkillRequired:Farming=10,
+        Category:Farming,
+        Time:150.0,
+        
+        Result:GardeningSprayBonemeal,
+    }
+
+    recipe Make Fungi Treatment Spray
+    {
+        GardeningSprayEmpty,
+        Water=5,
+        aerx.AnimalBone=5,
+
+        keep MortarPestle,
+        SkillRequired:Farming=10,
+        Category:Farming,
+        Time:150.0,
+        
+        Result:GardeningSprayBonemeal,
+    }
+
+    recipe Make Fungi Treatment Spray
+    {
+        GardeningSprayEmpty,
+        Water=5,
+        aerx.SmallAnimalBone=10,
+
+        keep MortarPestle,
+        SkillRequired:Farming=10,
+        Category:Farming,
+        Time:150.0,
+        
+        Result:GardeningSprayBonemeal,
+    }
+
+    recipe Make Fungi Treatment Spray
+    {
+        GardeningSprayEmpty,
+        Water=5,
+        aerx.LargeAnimalBone=3,
+
+        keep MortarPestle,
+        SkillRequired:Farming=10,
+        Category:Farming,
+        Time:150.0,
+        
+        Result:GardeningSprayBonemeal,
+    }
+}
