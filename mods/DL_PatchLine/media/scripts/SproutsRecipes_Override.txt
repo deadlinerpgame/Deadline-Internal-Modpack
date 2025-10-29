@@ -108,4 +108,83 @@ module Sprout
 	    Category:Farming,
         Override:true,
 	}
+
+    recipe Make Sweet Wine
+	{
+		Grapes=10,
+		Water=5,
+       	Sugar=2,
+		Yeast=1,
+
+		WineEmpty/WineEmpty2=5,
+       	keep Pot,
+		keep Spoon,
+       	keep Cask,
+
+       	Result:Wine1=5,
+       	Time:500.0,
+       	Category:Cooking,
+    	OnGiveXP:Recipe.OnGiveXP.Cooking15,
+		Override:true,
+	}
+
+	recipe Make Tart Wine
+	{
+		Grapes=10,
+		Water=5,
+       	BerryBlue=5,
+       	Sugar=2,
+		Yeast=1,
+
+		WineEmpty/WineEmpty2=5,
+       	keep Pot,
+		keep Spoon,
+       	keep Cask,
+
+       	Result:Wine2=5,
+       	Time:500.0,
+       	Category:Cooking,
+       	OnGiveXP:Recipe.OnGiveXP.Cooking15,
+	   	Override:true,
+	}
+
+	recipe Make Full-Bodied Wine
+	{
+		Grapes=10,
+		Water=5,
+       	Strewberrie=5,
+       	Sugar=2,
+		Yeast=1,
+
+		WineEmpty/WineEmpty2=5,
+       	keep Pot,
+		keep Spoon,
+       	keep Cask,
+
+       	Result:Wine3=5,
+       	Time:500.0,
+       	Category:Cooking,
+       	OnGiveXP:Recipe.OnGiveXP.Cooking15,
+		Override:true,
+	}
+
+	recipe Make Floral Wine
+	{
+		Grapes=10,
+		Water=5,
+       	Rosehips=5,
+       	Sugar=2,
+		Yeast=1,
+
+		WineEmpty/WineEmpty2=5,
+       	keep Pot,
+		keep Spoon,
+    	keep Cask,
+
+       	Result:Wine4=5,
+       	Time:500.0,
+       	Category:Cooking,
+       	OnGiveXP:Recipe.OnGiveXP.Cooking15,
+		Override:true,
+	}
 }

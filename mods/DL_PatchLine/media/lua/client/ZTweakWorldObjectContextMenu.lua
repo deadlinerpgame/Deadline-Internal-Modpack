@@ -4,10 +4,12 @@
 -- that can be found in the LICENSE file.
 --
 
-TweakWorldObjectContextMenu = {}
+--[[TweakWorldObjectContextMenu = {}
 
--- tweakContextMenu adds context menu tweaks.
-TweakWorldObjectContextMenu.tweakContextMenu = function(player, context, worldobjects, test)
+local original_tweakContextMenu = TweakWorldObjectContextMenu.tweakContextMenu;
+Events.OnFillWorldObjectContextMenu.Remove(TweakWorldObjectContextMenu.tweakContextMenu);
+
+function TweakWorldObjectContextMenu.tweakContextMenu(player, context, worldobjects, test)
     if test and ISWorldObjectContextMenu.Test then return true end
 
     local character = getSpecificPlayer(player)
@@ -23,7 +25,7 @@ TweakWorldObjectContextMenu.tweakContextMenu = function(player, context, worldob
         end
     end
 
-    if SandboxVars.ServerTweaker.ContextMenuClickedPlayersInvisibleFix and not SandboxVars.ServerTweaker.ContextMenuClickedPlayersSelection then
+    if SandboxVars.ServerTweaker and SandboxVars.ServerTweaker.ContextMenuClickedPlayersInvisibleFix and not SandboxVars.ServerTweaker.ContextMenuClickedPlayersSelection then
         local clickedPlayer = nil
 
         for _, v in ipairs(worldobjects) do
@@ -47,7 +49,7 @@ TweakWorldObjectContextMenu.tweakContextMenu = function(player, context, worldob
 
         if clickedPlayer then
             for _, option in pairs(context.options) do
-                if option and option.name == getText("ContextMenu_Trade", clickedPlayer:getDisplayName()) then
+                if option and option.onSelect == ISWorldObjectContextMenu.onTrade then
                     context:removeOptionByName(option.name)
                 end
 
@@ -129,7 +131,7 @@ TweakWorldObjectContextMenu.tweakContextMenu = function(player, context, worldob
 
         if openutils.ObjectLen(traders) == 0 then
             for _, option in pairs(options) do
-                if option and option.name == getText('ContextMenu_TradeWithPlayer') then
+                if option and option.onSelect == ISWorldObjectContextMenu.onTrade then
                     context:removeOptionByName(option.name)
                     break
                 end
@@ -220,4 +222,5 @@ TweakWorldObjectContextMenu.CanHealPlayer = function(character, clickedPlayer)
     return true
 end
 
-Events.OnFillWorldObjectContextMenu.Add(TweakWorldObjectContextMenu.tweakContextMenu)
+Events.OnFillWorldObjectContextMenu.Add(TweakWorldObjectContextMenu.tweakContextMenu);
+print("PatchLine  | TweakWorldObjectContextMenu override.");--]]

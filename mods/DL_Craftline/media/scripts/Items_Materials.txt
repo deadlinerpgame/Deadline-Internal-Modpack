@@ -798,6 +798,8 @@ item ClayBarMoldUnfired
 		ReplaceOnUseOn = WaterSource-ClayJarWater,
 		ReplaceTypes = WaterSource 	item ClayJarWater,
 		CanStoreWater	=	TRUE,
+		RainFactor = 0.05,
+		Tooltip = Tooltip_item_RainFromGround,
 	}
 
 	item ClayJarWater
@@ -806,6 +808,8 @@ item ClayBarMoldUnfired
 		Type = Drainable,
 		Weight = 5,
 		CanStoreWater = TRUE,
+		RainFactor = 0.05,
+		Tooltip = Tooltip_item_RainFromGround,
 		FillFromDispenserSound = GetWaterFromDispenserPlasticMedium,
 		FillFromTapSound = GetWaterFromTapPlasticMedium,
 		IsWaterSource = TRUE,

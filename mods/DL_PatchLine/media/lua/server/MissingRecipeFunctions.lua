@@ -6,6 +6,7 @@ Recipe.OnCanPerform = {}
 Recipe.OnCreate = {}
 Recipe.OnGiveXP = {}
 Recipe.OnTest = {}
+Recipe.iveryXP = {};
 
 function Recipe.OnGiveXP.Cooking5(recipe, ingredients, result, player)
     player:getXp():AddXP(Perks.Cooking, 5);
