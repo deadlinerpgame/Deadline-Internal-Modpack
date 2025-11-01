@@ -274,6 +274,48 @@ function Recipe.OnCreate.TransferMaceheadToLongMace(items, result, player)
     end
 end
 
+function AdjustWeaponStatsFromMWLevel(item, level)
+	if not item then return end;
+	if not level or level < 8 then return end;
+
+	local levelModifier = 0.5;
+	local baseLevel = 1;
+
+	if not instanceof(item, "HandWeapon") then
+		print("[Craftline Blacksmithing] AdjustWeaponStatsFromMWLevel called on nonhandweapon item: " .. item:getName());
+		return;
+	end
+
+	local totalModifier = baseLevel + ((level - 7) * levelModifier);
+	if totalModifier < 1 then
+		print("[Craftline Blacksmithing] Total level modifier is less than 1 so would nerf the weapon.");
+		return;
+	end
+
+	local currentMaxDamage = item:getMaxDamage();
+	local currentEnduranceMod = item:getEnduranceMod();
+	local currentConditionMax = item:getConditionMax();
+	local currentConditionLowerChanceOneIn = item:getConditionLowerChance();
+
+	item:setMaxDamage(currentMaxDamage * totalModifier);
+	print("Set max damage: " .. tostring(currentMaxDamage * totalModifier));
+
+	item:setEnduranceMod(currentEnduranceMod / totalModifier);
+	print("Set current endurance mod: " .. tostring(currentEnduranceMod / totalModifier));
+
+	item:setConditionMax(currentConditionMax * totalModifier);
+	print("Set condition max: " .. tostring(currentConditionMax * totalModifier));
+
+	item:setCondition(item:getConditionMax());
+	print("Set condition: " .. tostring(item:getConditionMax()));
+
+	item:setConditionLowerChance(currentConditionLowerChanceOneIn * totalModifier);
+	print("Set condition lower chance: " .. tostring(currentConditionLowerChanceOneIn * totalModifier));
+
+	item:getModData()["CraftLine_ForgedBy"] = player:getDescriptor():getForename();
+end
+
+
 
 
 function Recipe.OnCreate.TransferCBladeToCSword(items, result, player)
@@ -296,6 +338,7 @@ function Recipe.OnCreate.TransferCBladeToCSword(items, result, player)
                 local bar = player:getInventory():AddItem("aerx.CrudeSword")
                 bar:getModData().AlloyType = "Made from " .. cleanAlloyName
                 bar:setName(cleanAlloyName .. " " .. bar:getName())
+                AdjustWeaponStatsFromMWLevel(bar, player:getPerkLevel(Perks.MetalWelding));
             end
         else
             print("Not recognized ingot: " .. itemType)
