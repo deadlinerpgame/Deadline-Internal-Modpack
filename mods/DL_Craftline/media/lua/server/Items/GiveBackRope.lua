@@ -276,41 +276,69 @@ end
 
 function AdjustWeaponStatsFromMWLevel(item, level)
 	if not item then return end;
-	if not level or level < 8 then return end;
-
-	local levelModifier = 0.5;
-	local baseLevel = 1;
+	if not level or level < SandboxVars.CraftLine.BlacksmithModifierMinLevel then return end;
 
 	if not instanceof(item, "HandWeapon") then
 		print("[Craftline Blacksmithing] AdjustWeaponStatsFromMWLevel called on nonhandweapon item: " .. item:getName());
 		return;
 	end
 
-	local totalModifier = baseLevel + ((level - 7) * levelModifier);
-	if totalModifier < 1 then
-		print("[Craftline Blacksmithing] Total level modifier is less than 1 so would nerf the weapon.");
-		return;
-	end
+    if item:isRanged() and SandboxVars.CraftLine.BlacksmithStatMeleeOnly then return end;
 
-	local currentMaxDamage = item:getMaxDamage();
-	local currentEnduranceMod = item:getEnduranceMod();
-	local currentConditionMax = item:getConditionMax();
-	local currentConditionLowerChanceOneIn = item:getConditionLowerChance();
+    local statModPerLevel = SandboxVars.CraftLine.BlacksmithStatModPerLevel or 0.1;
+    local levelDiff = (SandboxVars.CraftLine.BlacksmithModifierMinLevel - level) + 1; -- So level 8 gets benefits.
 
-	item:setMaxDamage(currentMaxDamage * totalModifier);
-	print("Set max damage: " .. tostring(currentMaxDamage * totalModifier));
+    local totalModifier = statModPerLevel * levelDiff;
 
-	item:setEnduranceMod(currentEnduranceMod / totalModifier);
-	print("Set current endurance mod: " .. tostring(currentEnduranceMod / totalModifier));
+    if SandboxVars.CraftLine.BlacksmithAllowModifyWeight then
+        local currentWeight = item:getWeight();
+        local newWeight = currentWeight * (1 - totalModifier);
+        print("AdjustWeaponStat - Weight: " .. tostring(newWeight));
+        item:setWeight(newWeight);
+    end
 
-	item:setConditionMax(currentConditionMax * totalModifier);
-	print("Set condition max: " .. tostring(currentConditionMax * totalModifier));
+    if SandboxVars.CraftLine.BlacksmithAllowModifyMinDamage then
+        local minDamage = item:getMinDamage();
+        local newMinDmg = minDamage * (1 + totalModifier);
+        print("AdjustWeaponStat - MinDmg: " .. tostring(newMinDmg));
+        item:setMinDamage(newMinDmg);
+    end
 
-	item:setCondition(item:getConditionMax());
-	print("Set condition: " .. tostring(item:getConditionMax()));
+    if SandboxVars.CraftLine.BlacksmithAllowModifyMaxDamage then
+        local maxDamage = item:getMaxDamage();
+        local newMaxDmg = maxDamage * (1 + totalModifier);
+        print("AdjustWeaponStat - MaxDmg: " .. tostring(newMaxDmg));
+        item:setMinDamage(newMaxDmg);
+    end
 
-	item:setConditionLowerChance(currentConditionLowerChanceOneIn * totalModifier);
-	print("Set condition lower chance: " .. tostring(currentConditionLowerChanceOneIn * totalModifier));
+    if SandboxVars.CraftLine.BlacksmithAllowModifyChanceOneIn then
+        local lowerChance = item:getConditionLowerChance();
+        local newChance = lowerChance * (1 + totalModifier);
+        print("AdjustWeaponStat - ChanceOneIn: " .. tostring(newChance));
+        item:setConditionLowerChance(newChance);
+    end
+
+    if SandboxVars.CraftLine.BlacksmithAllowModifyMaxCondition then
+        local maxCondition = item:getConditionMax();
+        local newChance = maxCondition * (1 + totalModifier);
+        print("AdjustWeaponStat - Max Condition: " .. tostring(newChance));
+        item:setConditionMax(newChance);
+        item:setCondition(newChance);
+    end
+
+    if SandboxVars.CraftLine.BlacksmithAllowModifyEnduranceMod then
+        local enduranceMod = item:getEnduranceMod();
+        local newChance = enduranceMod * (1 - totalModifier);
+        print("AdjustWeaponStat - EnduranceMod: " .. tostring(newChance));
+        item:setEnduranceMod(newChance);
+    end
+
+    if SandboxVars.CraftLine.BlacksmithAllowCritChance then
+        local critChance = item:getCriticalChance();
+        local newChance = critChance * (1 + totalModifier);
+        print("AdjustWeaponStat - Crit Chance: " .. tostring(newChance));
+        item:setCriticalChance(newChance);
+    end
 
 	item:getModData()["CraftLine_ForgedBy"] = player:getDescriptor():getForename();
 end
