@@ -9,6 +9,10 @@ if self.item == nil or self.item:getModData()["AlloyType"] == nil then
 end
 
 local text = "" .. self.item:getModData()["AlloyType"]
+
+if self.item:getModData()["CraftLine_ForgedBy"] then
+    text = text .. "\n\n Forged By:" .. self.item:getModData()["CraftLine_ForgedBy"];
+end
 local rows = 1
 local stage = 1
 local old_y = 0
