@@ -1,0 +1,20 @@
+module aerx
+{
+    imports
+    {
+        Base
+    }
+
+    recipe Craft Flanged Mace
+    {
+       	aerx.MaceHead=1,
+	    aerx.SmallHandle=1,
+	    keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_Mace_Flanged=1,
+        Time:300.0,
+	    OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:ShortBlunt,
+        SkillRequired:MetalWelding=10,
+        NearItem:Advanced Forge,
+    }
+}

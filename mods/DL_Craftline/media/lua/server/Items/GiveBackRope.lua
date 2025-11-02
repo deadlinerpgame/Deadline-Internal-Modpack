@@ -1447,3 +1447,30 @@ function Recipe.OnCreate.GiveSixteenIronEightZEightN(items, result, player)
         player:getInventory():AddItem("aerx.NickelFragments");
     end
 end
+
+function Recipe.OnCreate.ForgeMetalWeaponWithAlloy(items, result, player)
+    print("Recipe ForgeMetalWeaponWithAlloy");
+    local alloyFullStr = nil;
+    local alloyName = nil;
+
+    -- Iterate through the recipe items and find one with an alloy name.
+    for i = 0, items:size() - 1 do
+        local item = items:get(i);
+
+        print("Checking item " .. item:getName());
+
+        if item and item:getModData()["AlloyType"] then
+            print("Has alloy type");
+            alloyFullStr = item:getModData()["AlloyType"];
+            alloyName = alloyFullStr:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "");
+            break;
+        end
+    end
+
+    if result then
+        print("Setting result data...");
+        result:getModData()["AlloyType"] = alloyFullStr;
+        result:setName(string.format("%s %s", alloyName, result:getName()));
+    end
+    print("Done");
+end
