@@ -7,6 +7,10 @@ function DeadlineDice.getDiceRoll()
     return ZombRand(1, 21)
 end
 
+function DeadlineDice.getDiceRoll6()
+    return ZombRand(1, 7)
+end
+
 function DeadlineDice.getModifiers(skill, diceScore)
     local modifiers = {}
     local skill = skill:lower()
@@ -20,6 +24,8 @@ function DeadlineDice.getModifiers(skill, diceScore)
         initiative = DeadlineDice.getInitiativeModifiers,
         -- Attack (Close)
         attack = DeadlineDice.getAttackCloseModifiers,
+        -- Throw
+        throwing = DeadlineDice.getThrowModifiers,
         -- Attack (Improvised)
         --attackimprovised = DeadlineDice.getAttackImprovisedModifiers,
         -- Attack (Unarmed)
