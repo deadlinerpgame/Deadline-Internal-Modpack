@@ -274,7 +274,7 @@ function Recipe.OnCreate.TransferMaceheadToLongMace(items, result, player)
     end
 end
 
-function AdjustWeaponStatsFromMWLevel(item, level)
+function AdjustWeaponStatsFromMWLevel(item, level, player)
 	if not item then return end;
 	if not level or level < SandboxVars.CraftLine.BlacksmithModifierMinLevel then return end;
 
@@ -285,42 +285,46 @@ function AdjustWeaponStatsFromMWLevel(item, level)
 
     if item:isRanged() and SandboxVars.CraftLine.BlacksmithStatMeleeOnly then return end;
 
-    local statModPerLevel = SandboxVars.CraftLine.BlacksmithStatModPerLevel or 0.1;
-    local levelDiff = (SandboxVars.CraftLine.BlacksmithModifierMinLevel - level) + 1; -- So level 8 gets benefits.
+    local statModPerLevel = (SandboxVars.CraftLine.BlacksmithStatModPerLevel / 100) or 0.1;
+    print("Stat mod per level is " .. tostring(statModPerLevel));
+
+    local levelDiff = (level - SandboxVars.CraftLine.BlacksmithModifierMinLevel) + 1; -- So level 8 gets benefits.
+    print("Level diff is " .. tostring(levelDiff));
 
     local totalModifier = statModPerLevel * levelDiff;
+    print("Total modifier" .. tostring(totalModifier));
 
     if SandboxVars.CraftLine.BlacksmithAllowModifyWeight then
         local currentWeight = item:getWeight();
-        local newWeight = currentWeight * (1 - totalModifier);
+        local newWeight = Math.ceil(currentWeight * (1 - totalModifier));
         print("AdjustWeaponStat - Weight: " .. tostring(newWeight));
         item:setWeight(newWeight);
     end
 
     if SandboxVars.CraftLine.BlacksmithAllowModifyMinDamage then
         local minDamage = item:getMinDamage();
-        local newMinDmg = minDamage * (1 + totalModifier);
+        local newMinDmg = Math.ceil(minDamage * (1 + totalModifier));
         print("AdjustWeaponStat - MinDmg: " .. tostring(newMinDmg));
         item:setMinDamage(newMinDmg);
     end
 
     if SandboxVars.CraftLine.BlacksmithAllowModifyMaxDamage then
         local maxDamage = item:getMaxDamage();
-        local newMaxDmg = maxDamage * (1 + totalModifier);
+        local newMaxDmg = Math.ceil(maxDamage * (1 + totalModifier));
         print("AdjustWeaponStat - MaxDmg: " .. tostring(newMaxDmg));
         item:setMinDamage(newMaxDmg);
     end
 
     if SandboxVars.CraftLine.BlacksmithAllowModifyChanceOneIn then
         local lowerChance = item:getConditionLowerChance();
-        local newChance = lowerChance * (1 + totalModifier);
+        local newChance = Math.ceil(lowerChance * (1 + totalModifier));
         print("AdjustWeaponStat - ChanceOneIn: " .. tostring(newChance));
         item:setConditionLowerChance(newChance);
     end
 
     if SandboxVars.CraftLine.BlacksmithAllowModifyMaxCondition then
         local maxCondition = item:getConditionMax();
-        local newChance = maxCondition * (1 + totalModifier);
+        local newChance = Math.ceil(maxCondition * (1 + totalModifier));
         print("AdjustWeaponStat - Max Condition: " .. tostring(newChance));
         item:setConditionMax(newChance);
         item:setCondition(newChance);
@@ -328,14 +332,14 @@ function AdjustWeaponStatsFromMWLevel(item, level)
 
     if SandboxVars.CraftLine.BlacksmithAllowModifyEnduranceMod then
         local enduranceMod = item:getEnduranceMod();
-        local newChance = enduranceMod * (1 - totalModifier);
+        local newChance = Math.ceil(enduranceMod * (1 - totalModifier));
         print("AdjustWeaponStat - EnduranceMod: " .. tostring(newChance));
         item:setEnduranceMod(newChance);
     end
 
     if SandboxVars.CraftLine.BlacksmithAllowCritChance then
         local critChance = item:getCriticalChance();
-        local newChance = critChance * (1 + totalModifier);
+        local newChance = Math.ceil(critChance * (1 + totalModifier));
         print("AdjustWeaponStat - Crit Chance: " .. tostring(newChance));
         item:setCriticalChance(newChance);
     end
@@ -366,7 +370,6 @@ function Recipe.OnCreate.TransferCBladeToCSword(items, result, player)
                 local bar = player:getInventory():AddItem("aerx.CrudeSword")
                 bar:getModData().AlloyType = "Made from " .. cleanAlloyName
                 bar:setName(cleanAlloyName .. " " .. bar:getName())
-                AdjustWeaponStatsFromMWLevel(bar, player:getPerkLevel(Perks.MetalWelding));
             end
         else
             print("Not recognized ingot: " .. itemType)
@@ -1472,5 +1475,6 @@ function Recipe.OnCreate.ForgeMetalWeaponWithAlloy(items, result, player)
         result:getModData()["AlloyType"] = alloyFullStr;
         result:setName(string.format("%s %s", alloyName, result:getName()));
     end
-    print("Done");
+
+    AdjustWeaponStatsFromMWLevel(result, player:getPerkLevel(Perks.MetalWelding), player);
 end

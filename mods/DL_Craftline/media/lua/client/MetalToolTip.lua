@@ -11,7 +11,7 @@ end
 local text = "" .. self.item:getModData()["AlloyType"]
 
 if self.item:getModData()["CraftLine_ForgedBy"] then
-    text = text .. "| Forged By:" .. self.item:getModData()["CraftLine_ForgedBy"];
+    text = text .. "  |  Forged By:  " .. self.item:getModData()["CraftLine_ForgedBy"];
 end
 local rows = 1
 local stage = 1

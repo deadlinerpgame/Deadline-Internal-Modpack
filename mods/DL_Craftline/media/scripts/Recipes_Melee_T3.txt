@@ -5,7 +5,7 @@ module aerx
         Base
     }
 
-    recipe Craft Flanged Mace
+    recipe Forge Flanged Mace
     {
        	aerx.MaceHead=1,
 	    aerx.SmallHandle=1,
@@ -14,6 +14,136 @@ module aerx
         Time:300.0,
 	    OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
         Category:ShortBlunt,
+        SkillRequired:MetalWelding=10,
+        NearItem:Advanced Forge,
+    }
+
+    recipe Forge Spiked Mace
+    {
+       	aerx.MaceHead=1,
+	    aerx.SmallHandle=1,
+	    keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_Mace_Spiked=1,
+        Time:300.0,
+	    OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:ShortBlunt,
+        SkillRequired:MetalWelding=10,
+        NearItem:Advanced Forge,
+    }
+
+    recipe Forge Greatsword
+    {
+       	aerx.IronBar=3,
+	    aerx.Handle=1,
+	    keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_Greatsword=1,
+        Time:500.0,
+	    OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:LongBlade,
+        SkillRequired:MetalWelding=10,
+        NearItem:Advanced Forge,
+    }
+
+    recipe Forge Longsword
+    {
+        aerx.SwordBlade=1,
+        aerx.SmallHandle=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_Longsword=1,
+        Time:300.0,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:LongBlade,
+        SkillRequired:MetalWelding=8,
+        NearItem:Advanced Forge,
+    }
+
+    recipe Forge Spear
+    {
+        aerx.IronBar=2,
+        aerx.LongHandle=2,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_Spear=1,
+        Time:300.0,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Spear,
+        SkillRequired:MetalWelding=10,
+        NearItem:Advanced Forge,
+    }
+
+    recipe Forge Ornate Halberd
+    {
+        aerx.IronBar=5,
+        aerx.LongHandle=2,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_HalberdC=1,
+        Time:500.0,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Spear,
+        SkillRequired:MetalWelding=10,
+        NearItem:Advanced Forge,
+    }
+    
+    recipe Forge Long-Pointed Halberd
+    {
+        aerx.IronBar=3,
+        aerx.LongHandle=2,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_HalberdA=1,
+        Time:500.0,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Spear,
+        SkillRequired:MetalWelding=10,
+        NearItem:Advanced Forge,
+    }
+
+    recipe Forge Curved Halberd
+    {
+        aerx.IronBar=2,
+        aerx.LongHandle=2,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_HalberdB=1,
+        Time:500.0,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Spear,
+        SkillRequired:MetalWelding=10,
+        NearItem:Advanced Forge,
+    }
+
+    recipe Forge Glaive
+    {
+        aerx.IronBar=2,
+        aerx.LongHandle=2,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_HalberdD=1,
+        Time:500.0,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Spear,
+        SkillRequired:MetalWelding=10,
+        NearItem:Advanced Forge,
+    }
+
+    recipe Forge Warpick
+    {
+        aerx.SledgehammerHead=1,
+        aerx.IronBar=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_Warpick=1,
+        Time:500.0,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Axe,
+        SkillRequired:MetalWelding=10,
+        NearItem:Advanced Forge,
+    }
+
+    recipe Forge Warhammer
+    {
+        aerx.SledgehammerHead=1,
+        aerx.IronBar=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_Warhammer=1,
+        Time:500.0,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Axe,
         SkillRequired:MetalWelding=10,
         NearItem:Advanced Forge,
     }
