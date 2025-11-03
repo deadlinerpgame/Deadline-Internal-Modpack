@@ -187,4 +187,21 @@ module Sprout
        	OnGiveXP:Recipe.OnGiveXP.Cooking15,
 		Override:true,
 	}
+
+	recipe Make Yoghurt
+	{
+      	Vinegar=1,
+		Milk=5,
+		Water=10,
+
+		keep Spoon,
+		keep Bowl,
+		keep RippedSheets,
+
+       	Result:Yoghurt=2,
+       	Time:500.0,
+       	Category:Cooking,
+       	OnGiveXP:Recipe.OnGiveXP.Cooking15,
+		Override:true,
+	}
 }
