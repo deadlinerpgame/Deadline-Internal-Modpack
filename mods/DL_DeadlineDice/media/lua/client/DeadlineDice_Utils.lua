@@ -35,7 +35,7 @@ function DeadlineDice.getModifiers(skill, diceScore)
         -- Attack (Ranged - Improvised)
         --attackrangedimprovised = DeadlineDice.getAttackRangedImprovisedModifiers,
         -- Defend (Close)
-        defendcloseagilitycheck = DeadlineDice.getDefendCloseModifiers,
+        defendclose = DeadlineDice.getDefendCloseModifiers,
         -- escape
         escapecheck = DeadlineDice.getEscapeModifiers,
         -- Defend (Ranged)

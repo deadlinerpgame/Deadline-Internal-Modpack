@@ -94,11 +94,13 @@ local function isThrowable(item)
     return throwables[itemType] or false
 end
 
-
+    if isThrowable(currentItem) then
+       return DeadlineDice.getAttackBombModifiers(modifiers, character)
+    end
 
 local traitModifiers = {Marksman = 2,ShakyHands = -2,HobbyFirearms = 1, SkilledFirearms = 2}
 
-    return DeadlineDice.addTraitModifiers2(modifiers, character, traitModifiers)
+    return DeadlineDice.addTraitModifiers(modifiers, character, traitModifiers)
 
 end
 
@@ -212,57 +214,6 @@ function DeadlineDice.getDefendCloseModifiers(modifiers, character)
         HobbyNimble = 1,
         SkilledSprinting = 2,
         SkilledNimble = 2,
-        SlowReflexes = -2,
-    }
-
-    return DeadlineDice.addTraitModifiers2(modifiers, character, traitModifiers)
-end
-
--- Throw
-
-function DeadlineDice.getThrowModifiers(modifiers, character)
-
-local currentItem = character:getPrimaryHandItem() or character:getSecondaryHandItem()
-
-local function isThrowable(item)
-    local itemType = item:getType()
-
-    local throwables = {
-        SmokeBomb = true,
-        SmokeBombSensorV1 = true,
-        SmokeBombSensorV2 = true,
-        SmokeBombSensorV3 = true,
-        SmokeBombRemote = true,
-        PipeBombRemote = true,
-        FlameTrapRemote = true,
-        AerosolbombRemote = true,
-        PipeBombTriggered = true,
-        PipeBombSensorV1 = true,
-        PipeBombSensorV2 = true,
-        PipeBombSensorV3 = true,
-        PipeBomb = true,
-        Molotov = true,
-        FlameTrapTriggered = true,
-        FlameTrapSensorV1 = true,
-        FlameTrapSensorV2 = true,
-        FlameTrapSensorV3 = true,
-        FlameTrap = true,
-        Aerosolbomb = true,
-        AerosolbombTriggered = true,
-        AerosolbombV1 = true,
-        AerosolbombV2 = true,
-        AerosolbombV3 = true,
-    }
-    return throwables[itemType] or false
-end
-
---[[
-    if isThrowable(currentItem) then
-       return DeadlineDice.getAttackBombModifiers(modifiers, character)
-    end
-]]
-    local traitModifiers = {
-        Lobber = 2,
     }
 
     return DeadlineDice.addTraitModifiers2(modifiers, character, traitModifiers)
@@ -295,6 +246,7 @@ function DeadlineDice.getHideModifiers(modifiers, character)
         Inconspicuous = 2,
         Clumsy = -1,
         Conspicuous = -2,
+        Burglar = 2,
     }
 
     return DeadlineDice.addTraitModifiers2(modifiers, character, traitModifiers)
