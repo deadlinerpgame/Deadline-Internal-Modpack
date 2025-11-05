@@ -43,7 +43,7 @@ MeltingReference = {
 	["aerx.GoldScrap"] = {gold = 1,},
 	["aerx.SilverScrap"] = {silver = 1,},
 
-	["Base.PieceOfCharcoal"] = {charcoal = 1,},
+	["Base.PieceOfCharcoal"] = {charcoal = 10,},
 
 }
 
@@ -219,8 +219,8 @@ AlloyRules = {
 	{
 		name = "Steel Ingot",
 		criteria = {
-			iron = { min = 75, max = 85 },
-			charcoal = { min = 15, max = 25 },
+			iron = { min = 70, max = 80 },
+			charcoal = { min = 20, max = 30 },
 		},
 		output = { pure = false, item = "Smithing.IngotD"},
 	},
@@ -370,12 +370,22 @@ function Recipe.OnCreate.MeltMetal(items, result, player)
 	resultAlloy = MetalCheck(alloyPercent)
 	tablePLZ("MetalCheck: ", resultAlloy)
 
-	local endProduct = player:getInventory():AddItem(resultAlloy.output.item)
-	endProduct:getModData().AlloyType = resultAlloy.name
-	endProduct:setName(resultAlloy['name'])
+	if resultAlloy.name == "Steel Ingot" then
+		if player:getPerkLevel(Perks.MetalWelding) < 10 then
+			for _, alloy in pairs(AlloyRules) do
+				if alloy.name == "Crude Iron Ingot" then
+					resultAlloy = alloy;
+					break;
+				end
+			end
+		end
+	end
 
-	crucible:getItemContainer():removeAllItems()
+	local endProduct = player:getInventory():AddItem(resultAlloy.output.item);
+	endProduct:getModData().AlloyType = resultAlloy.name;
+	endProduct:setName(resultAlloy['name']);
 
+	crucible:getItemContainer():removeAllItems();
 end
 
 function MetalCheck(metals)

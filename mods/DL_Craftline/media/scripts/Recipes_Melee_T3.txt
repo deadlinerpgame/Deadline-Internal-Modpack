@@ -5,6 +5,45 @@ module aerx
         Base
     }
 
+    recipe Forge Greatsword Blade
+    {
+        aerx.IronBar=3,
+        Charcoal=5,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_Greatsword_Blade,
+        Time:250,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Material,
+        SkillRequired:MetalWelding=8,
+        NearItem:Advanced Furnace,
+    }
+
+    recipe Forge Longsword Blade
+    {
+        aerx.IronBar=2,
+        Charcoal=3,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_Longsword_Blade,
+        Time:250,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Material,
+        SkillRequired:MetalWelding=8,
+        NearItem:Advanced Furnace,
+    }
+
+    recipe Forge Long Pointed Halberd Head
+    {
+        aerx.IronBar=2,
+        Charcoal=3,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_HalberdA_Head,
+        Time:250,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Material,
+        SkillRequired:MetalWelding=8,
+        NearItem:Advanced Furnace,
+    }
+
     recipe Forge Flanged Mace
     {
        	aerx.MaceHead=1,
@@ -33,7 +72,7 @@ module aerx
 
     recipe Forge Greatsword
     {
-       	aerx.IronBar=3,
+       	aerx.T3_Greatsword_Blade,
 	    aerx.Handle=1,
 	    keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.T3_Greatsword=1,
@@ -72,8 +111,8 @@ module aerx
 
     recipe Forge Ornate Halberd
     {
-        aerx.IronBar=5,
-        aerx.LongHandle=2,
+        aerx.T3_HalberdC_Head=1,
+        aerx.LongHandle=1,
         keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.T3_HalberdC=1,
         Time:500.0,
@@ -85,8 +124,8 @@ module aerx
     
     recipe Forge Long-Pointed Halberd
     {
-        aerx.IronBar=3,
-        aerx.LongHandle=2,
+        aerx.T3_HalberdA_Head=1,
+        aerx.LongHandle=1,
         keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.T3_HalberdA=1,
         Time:500.0,
@@ -98,8 +137,8 @@ module aerx
 
     recipe Forge Curved Halberd
     {
-        aerx.IronBar=2,
-        aerx.LongHandle=2,
+        aerx.T3_HalberdB_Head=1,
+        aerx.LongHandle=1,
         keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.T3_HalberdB=1,
         Time:500.0,
@@ -111,8 +150,8 @@ module aerx
 
     recipe Forge Glaive
     {
-        aerx.IronBar=2,
-        aerx.LongHandle=2,
+        aerx.T3_HalberdD_Head=1,
+        aerx.LongHandle=1,
         keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.T3_HalberdD=1,
         Time:500.0,

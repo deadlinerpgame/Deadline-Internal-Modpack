@@ -348,6 +348,41 @@ function AdjustWeaponStatsFromMWLevel(item, level, player)
 end
 
 
+local ALLOY_BUFFS = {
+    ["Steel"] = 
+    {
+        conditionMax = 1.25;
+    }
+
+};
+
+function AdjustDurabilityFromAlloy(result, alloyName)
+    if not result then return end;
+
+    if not alloyName then return end;
+
+    local matchingAlloy = nil;
+    for buffAlloyName, buffValues in pairs(ALLOY_BUFFS) do
+        if string.lower(alloyName) == string.lower(buffAlloyName) then
+            matchingAlloy = buffValues;
+        end
+    end
+
+    if not matchingAlloy then
+        print("[AdjustDurabilityFromAlloy] No matching alloy for " .. alloyName .. " found.");
+        return;
+    end
+
+    if matchingAlloy.conditionMax then
+        local currentMaxCondition = result:getConditionMax();
+        local newMax = Math.floor(currentMaxCondition * matchingAlloy.conditionMax);
+        result:setConditionMax(newMax);
+        result:setCondition(newMax);
+
+        print("Adjusted item " .. result:getDisplayName() .. " durability from " .. tostring(currentMaxCondition) .. " to " .. tostring(newMax) .. " because of alloy.");
+    end
+end
+
 
 
 function Recipe.OnCreate.TransferCBladeToCSword(items, result, player)
@@ -1456,6 +1491,8 @@ function Recipe.OnCreate.ForgeMetalWeaponWithAlloy(items, result, player)
     local alloyFullStr = nil;
     local alloyName = nil;
 
+    local madeFromSteel = false;
+
     -- Iterate through the recipe items and find one with an alloy name.
     for i = 0, items:size() - 1 do
         local item = items:get(i);
@@ -1466,6 +1503,9 @@ function Recipe.OnCreate.ForgeMetalWeaponWithAlloy(items, result, player)
             print("Has alloy type");
             alloyFullStr = item:getModData()["AlloyType"];
             alloyName = alloyFullStr:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "");
+            if alloyName == "Steel" then
+                madeFromSteel = true;
+            end
             break;
         end
     end
@@ -1476,5 +1516,11 @@ function Recipe.OnCreate.ForgeMetalWeaponWithAlloy(items, result, player)
         result:setName(string.format("%s %s", alloyName, result:getName()));
     end
 
-    AdjustWeaponStatsFromMWLevel(result, player:getPerkLevel(Perks.MetalWelding), player);
+    if instanceof(result, "HandWeapon") then
+        AdjustWeaponStatsFromMWLevel(result, player:getPerkLevel(Perks.MetalWelding), player);
+    end
+
+    if madeFromSteel and instanceof(result, "HandWeapon") or instanceof(result, "Clothing") then
+        AdjustDurabilityFromAlloy(result, alloyName);
+    end
 end
