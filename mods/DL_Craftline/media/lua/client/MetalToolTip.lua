@@ -8,11 +8,7 @@ if self.item == nil or self.item:getModData()["AlloyType"] == nil then
     return old_ISToolTipInv_render(self)
 end
 
-local text = "" .. self.item:getModData()["AlloyType"]
-
-if self.item:getModData()["CraftLine_ForgedBy"] then
-    text = text .. "  |  Forged By:  " .. self.item:getModData()["CraftLine_ForgedBy"];
-end
+local text = "" .. self.item:getModData()["AlloyType"];
 local rows = 1
 local stage = 1
 local old_y = 0

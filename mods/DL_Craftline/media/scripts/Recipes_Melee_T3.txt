@@ -44,6 +44,45 @@ module aerx
         NearItem:Advanced Furnace,
     }
 
+    recipe Forge Curved Halberd Head
+    {
+        aerx.IronBar=2,
+        Charcoal=3,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_HalberdB_Head,
+        Time:250,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Material,
+        SkillRequired:MetalWelding=8,
+        NearItem:Advanced Furnace,
+    }
+
+    recipe Forge Ornate Halberd Head
+    {
+        aerx.IronBar=2,
+        Charcoal=3,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_HalberdC_Head,
+        Time:250,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Material,
+        SkillRequired:MetalWelding=8,
+        NearItem:Advanced Furnace,
+    }
+
+    recipe Forge Glaive Head
+    {
+        aerx.IronBar=2,
+        Charcoal=3,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_HalberdD_Head,
+        Time:250,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Material,
+        SkillRequired:MetalWelding=8,
+        NearItem:Advanced Furnace,
+    }
+
     recipe Forge Flanged Mace
     {
        	aerx.MaceHead=1,
@@ -73,6 +112,7 @@ module aerx
     recipe Forge Greatsword
     {
        	aerx.T3_Greatsword_Blade,
+        aerx.IronBar=1,
 	    aerx.Handle=1,
 	    keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.T3_Greatsword=1,
@@ -85,7 +125,8 @@ module aerx
 
     recipe Forge Longsword
     {
-        aerx.SwordBlade=1,
+        aerx.T3_Longsword_Blade=1,
+        aerx.IronBar=1,
         aerx.SmallHandle=1,
         keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.T3_Longsword=1,
