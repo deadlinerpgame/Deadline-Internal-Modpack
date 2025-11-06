@@ -10,49 +10,46 @@ MedLine_Server = {};
 ---     bloodType
 --- }
 MedLine_Server.BloodData = {};
-MedLine_Server.UserData = {};
+
+CachedUserData = {};
 
 function MedLine_Server.OnInitGlobalModData(newGame)
     print("MedLine_Server - OnInitGlobalModData");
-    MedLine_Server.UserData = ModData.getOrCreate(MedLine_Dict.ModDataKeys.UserData);
-
-    print("MedLine_Server - UserData keys:");
-    for k, _ in pairs(MedLine_Server.UserData) do
-        print(k);
-
-        for i, v in ipairs(MedLine_Server.UserData[k]) do
-            print(" -> " .. tostring(i) .. ": " .. tostring(v));
-        end
-    end
+    CachedUserData = ModData.getOrCreate(MedLine_Dict.ModDataKeys.UserData);
+    print("CachedUserData has " .. tostring(#CachedUserData) .. " stored items.");
 end
 
 function MedLine_Server.SaveUserData()
-    print("MedLine_Server - SaveUserData with " .. tostring(#MedLine_Server.UserData) .. " entries.");
-    ModData.add(MedLine_Dict.ModDataKeys.UserData, MedLine_Server.UserData);
+    print("MedLine_Server - SaveUserData.");
+    ModData.add(MedLine_Dict.ModDataKeys.UserData, CachedUserData);
     ModData.transmit(MedLine_Dict.ModDataKeys.UserData);
 end
 
-function MedLine_Server.OnReceiveGlobalModData(key, data)
-
+function MedLine_Server.OnServerStartSave()
+    MedLine_Server.SaveUserData();
 end
 
 function MedLine_Server.OnClientCommand(module, command, player, args)
     if module ~= "MedLine" then return end;
 
     if command == "SyncMedicalData" then
+        print("SyncMedicalData called from player " .. player:getUsername());
         local character = args.character; -- Username
         local data = args.data;
-        if not character or not data then return end;
-
-        if not MedLine_Server.UserData then
-            MedLine_Server.UserData = {};
+        if not character or not data then
+            MedLine_Logging.log("SyncMedicalData for player " .. player:getUsername() .. " has either nil character or nil data.");
+            return;  
         end
 
-        if not MedLine_Server.UserData[character] then
-            table.insert(MedLine_Server.UserData[character], data);
-        else
-            MedLine_Server.UserData[character] = data;
+        if not CachedUserData then
+            CachedUserData = {};
         end
+
+        if CachedUserData[character] then
+            print("Updating player " .. character .. " medical data.");
+        end
+
+        CachedUserData[character] = data;
         MedLine_Server.SaveUserData();
     end
 
@@ -119,9 +116,30 @@ function MedLine_Server.OnClientCommand(module, command, player, args)
 
         sendServerCommand(fromPlayer, "MedLine", "StartBloodDrawBloodLoss", {});
     end
+
+    if command == "ReduceBloodLossDuration" then
+        print("ReduceBloodLossDuration");
+        local targetUsername = args.target;
+        print("ReduceBloodLossDuration for player " .. args.target);
+        if not targetUsername then return end;
+
+        local allPlayers = getOnlinePlayers();
+
+        for i = 0, allPlayers:size() - 1 do
+            local iteratedPlayer = allPlayers:get(i);
+            if iteratedPlayer then
+                if iteratedPlayer:getUsername() == targetUsername then
+                    MedLine_Logging.log("Sending server command to " .. iteratedPlayer:getUsername() .. " ReduceBloodLossDuration with efficiency " .. tostring(args.efficiency));
+                    sendServerCommand(iteratedPlayer, "MedLine", "ReduceBloodLossDuration", { src = player:getOnlineID(), efficiency = args.efficiency });
+                    return;
+                end
+            end
+        end
+    end
 end
 
 Events.OnInitGlobalModData.Add(MedLine_Server.OnInitGlobalModData);
 Events.OnReceiveGlobalModData.Add(MedLine_Server.OnReceiveGlobalModData);
 
 Events.OnClientCommand.Add(MedLine_Server.OnClientCommand);
+Events.OnServerStartSaving.Add(MedLine_Server.OnServerStartSave);

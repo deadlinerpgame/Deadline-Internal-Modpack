@@ -48,6 +48,9 @@ function MedLine_Client.getBloodType(player)
         end
     end
 
+    if returnType == nil then
+        MedLine_Logging.log("Attempted to get blood type " .. player:getUsername() .. " from player but could not find it.");
+    end
     return returnType;
 end
 
@@ -115,30 +118,19 @@ end
 function MedLine_Client.saveMedicalData()
     local username = getPlayer():getUsername();
 
-    getPlayer():transmitModData();
     sendClientCommand(getPlayer(), "MedLine", "SyncMedicalData", { character = username, data = getPlayer():getModData().MedLine.BloodData or {} });
 end
 
 function MedLine_Client.OnCreatePlayer(playerNum, player)
-    if player ~= getPlayer() then return end;
-    
-    -- This is simply because due to multiplayer tomfoolery players may have corrupted mod data, so find the most common function and if it doesn't exist, make it.
-    if not modData or not MedLine_Client.getBloodType(player) then
-        MedLine_Client.initialiseMedicalData();
-    elseif MedLine_Client.doesPlayerHaveBloodLoss(player) then
-        Events.OnPlayerUpdate.Add(MedLine_Events.OnPlayerUpdate);
-    end
+    print("OnCreatePlayer for " .. player:getUsername());
+    ModData.request(MedLine_Dict.ModDataKeys.UserData);
+    print("Mod data requested for userdata.");
 end
 
 function MedLine_Client.getBloodData()
     return getPlayer():getModData().MedLine.BloodData or {};
 end
 
-function MedLine_Client.getBloodDataEx(player)
-    if not player then return nil end;
-
-    return MedLine_Client.CachedMedicalData[player:getUsername()] or nil;
-end
 
 function MedLine_Client.changeBloodType(newType, override)
     if not override and MedLine_Client.hasPrevChangedBloodType() then return end;
@@ -268,6 +260,41 @@ function MedLine_Client.setBloodLossStopped()
     stats:setEndurancelast(1.0);
 end
 
+function MedLine_Client.reduceBloodLossByPercentage(efficiency)
+
+    if not efficiency then
+        MedLine_Logging.log("reduceBloodLossByPercentage called with nil efficiency.");
+        return;
+    end
+
+    local totalReduction = SandboxVars.BloodLoss_TransfusionPercentageReduction or 50;
+    local actualEfficiency = (totalReduction / 100) * (efficiency / 100);
+
+    if not totalReduction or actualEfficiency then
+        MedLine_Logging.log("reduceBloodLossByPercentage totalReduction or actualEfficiency is nil.");
+        return;
+    end
+
+    -- We are going to reduce the remaining blood loss time by X% which is expressed in terms of IRL days.
+    -- If 5 days remaining, then at 50% actual efficiency this is reduced to 5 days * 0.5 = 2.5 days of blood loss remaining.
+
+    -- To do that, we simply get the current timestamp and that value to the days remaining.
+    local bloodData = MedLine_Client.getBloodData();
+    if not bloodData then
+        MedLine_Logging.log("Could not find blood data.");
+        return;
+    end
+
+    local totalSecondsDiff = bloodData.bloodLossTimeoutUnix - bloodData.bloodLossStartedUnix;
+    print("reduceBloodLossByPercentage totalSecondsDiff is " .. tostring(totalSecondsDiff));
+
+    local relativePosition = bloodData.bloodLossTimeoutUnix - getTimestamp();
+    print("reduceBloodLossByPercentage relativePosition is " .. tostring(relativePosition));
+
+    local newRemainingTime = relativePosition * actualEfficiency;
+    print("New remaining time is " .. tostring(newRemainingTime));
+
+end
 
 function MedLine_Client.stopBloodLossEventHooks()
     Events.OnPlayerUpdate.Remove(MedLine_Events.OnPlayerUpdate);
@@ -288,8 +315,11 @@ function MedLine_Client.isRecoveringFromBloodLoss()
 end
 
 function MedLine_Client.checkBloodLossRecovery()
+    print("Checking for blood loss recovery.");
     local bloodData = MedLine_Client.getBloodData();
     if not bloodData then return end;
+
+    if not bloodData.bloodLossTimeoutUnix or bloodData.bloodLossTimeoutUnix < getTimestamp() then return end;
 
     local moodleVal = MedLine_Client.getRecoveryMoodleValue();
     if not moodleVal then moodleVal = 0.5; end;
@@ -424,6 +454,8 @@ end
 function MedLine_Client.setBloodBagData(item, fromPlayer)
     if not item or not fromPlayer then return end;
 
+    MedLine_Logging.log("setBloodBagData for player " .. fromPlayer:getUsername());
+
     local bloodData =
     {
         takenFrom = fromPlayer:getOnlineID(),
@@ -433,6 +465,8 @@ function MedLine_Client.setBloodBagData(item, fromPlayer)
 
     local bloodType = MedLine_Client.getBloodType(fromPlayer);
     if not bloodType then return end;
+
+    MedLine_Logging.log("Blood type for player " .. fromPlayer:getUsername() .. " is " .. bloodType.type);
     
     item:setCustomName(false);
 

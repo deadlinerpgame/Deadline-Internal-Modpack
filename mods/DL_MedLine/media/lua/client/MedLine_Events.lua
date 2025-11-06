@@ -6,9 +6,27 @@ MedLine_Events = {};
 MedLine_Client = MedLine_Client or {};
 MedLine_Dict = MedLine_Dict or {};
 
+local HasCheckedForCachedMedicalData = false;
+local MinutesSinceRetrievedMedicalData = 0;
+local HasSentOwnMedicalDataAfterDelay = false;
+
 function MedLine_Events.EveryOneMinute()
     local player = getPlayer();
     if not player then return end;
+
+    if not HasCheckedForCachedMedicalData then
+        ModData.request(MedLine_Dict.ModDataKeys.UserData);
+        HasCheckedForCachedMedicalData = true;
+    end
+
+    -- Save after 5 IG minutes, this should be sufficient to allow for back and forth transmission without causing too much of a delay or initial spam.
+    -- This is done because there's a lot of back and forth communication with the server on initial connect.
+    if HasCheckedForCachedMedicalData and MinutesSinceRetrievedMedicalData < 5 then
+        MinutesSinceRetrievedMedicalData = MinutesSinceRetrievedMedicalData + 1;
+    elseif HasCheckedForCachedMedicalData and MinutesSinceRetrievedMedicalData == 5 and not HasSentOwnMedicalDataAfterDelay then
+        MedLine_Client.saveMedicalData();
+        HasSentOwnMedicalDataAfterDelay = true;
+    end
 
     local bloodData = MedLine_Client.getBloodData();
     if not bloodData or bloodData == {} then
@@ -188,6 +206,29 @@ function MedLine_Events.OnServerCommand(module, command, args)
         local bloodDrawDays = SandboxVars.MedLine.BloodLoss_RecoveryTimeDaysDonation or 2;
         MedLine_Client.initiateBloodLossStart(bloodDrawDays);
     end
+
+    if command == "ReduceBloodLossDuration" then
+        if not args.efficiency then
+            print("Efficiency not set for ReduceBloodLossDuration");
+            return;
+        end
+
+        MedLine_Client.reduceBloodLossByPercentage(args.efficiency);
+    end
+
+    if command == "SyncMedicalDataFromServer" then
+        local targetPlayer = getPlayerFromUsername(args.target);
+        if not targetPlayer then
+            MedLine_Logging.log("[SyncMedicalDataFromServer] Received sync request but could not find player " .. args.target);
+            return;
+        end
+
+        if not targetPlayer:getModData().MedLine then
+            targetPlayer:getModData().MedLine = {};
+        end
+
+        targetPlayer:getModData().MedLine.BloodData = args.medicalData;
+    end
 end
 
 Events.EveryOneMinute.Add(MedLine_Events.EveryOneMinute);
@@ -200,14 +241,33 @@ function MedLine_Events.OnReceiveGlobalModData(key, data)
 
     if key == MedLine_Dict.ModDataKeys.UserData then
         print("OnReceiveGlobalModData for MedLine UserData");
-        MedLine_Client.CachedMedicalData = data;
-    end
-    local modData = MedLine_Client.getBloodData();
 
+        for username, medicalData in pairs(data) do
+            local matchingPlayer = getPlayerFromUsername(username);
+            if matchingPlayer then
+                print("Updating medical data for player " .. matchingPlayer:getUsername());
+                if not matchingPlayer:getModData().MedLine then
+                    matchingPlayer:getModData().MedLine = {};
+                end
+
+                matchingPlayer:getModData().MedLine.BloodData = medicalData;
+
+                if matchingPlayer == getPlayer() then
+                    -- Check for blood loss once it has synced.
+                    MedLine_Client.checkBloodLossRecovery();
+                end
+            end
+        end
+
+        -- At the end, if no of own bloodData.
+        if not getPlayer():getModData().MedLine or not getPlayer():getModData().MedLine.BloodData then
+            print("Player does not have blood data or medline table, initialising medical data.");
+            MedLine_Client.initialiseMedicalData(getPlayer());
+        end
+    end
 end
 
 function MedLine_Events.OnInitGlobalModData(newGame)
-    MedLine_Client.CachedMedicalData = ModData.getOrCreate(MedLine_Dict.ModDataKeys.UserData);
     ModData.request(MedLine_Dict.ModDataKeys.UserData);
 end
 
