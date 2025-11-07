@@ -275,7 +275,7 @@ function MedLine_Events.OnReceiveGlobalModData(key, data)
 
         if not MedLine_Client.getBloodType(getPlayer()) then
             print("Unable to find blood type trait for player, giving it.");
-            local bloodType = matchingPlayer:getModData().MedLine.BloodData.bloodType;
+            local bloodType = getPlayer():getModData().MedLine.BloodData.bloodType;
             if not bloodType then
                 print("Unable to find blood type mod data.");
                 return;
