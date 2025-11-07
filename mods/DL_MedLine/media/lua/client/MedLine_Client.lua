@@ -68,6 +68,17 @@ function MedLine_Client.doesPlayerHaveBloodLoss(player)
     return true;
 end
 
+function MedLine_Client.hasPlayerHadTransfusion(player)
+
+    if not player then return end;
+
+    if not player:getModData().MedLine then return end;
+
+    local bloodData = player:getModData().MedLine.BloodData or nil;
+    if not bloodData then return end;
+
+    return bloodData.hasReceivedTransfusion or false;
+end
 
 function MedLine_Client.allocateBloodType(player)
     if not player then player = getPlayer() end;

@@ -159,6 +159,12 @@ function MedLine_Events.populateMedicalCheck_BloodTransfusion(player, context, s
         tooltip.description = tooltip.description .. "<RED> This player is not suffering from blood loss, a transfusion would not do anything to help.<LINE>";
     end
 
+    if MedLine_Client.hasPlayerHadTransfusion(medicalCheckOpt.param2) then
+        isValid = false;
+        tooltip.description = tooltip.description .. ("<LINE> <LINE>");
+        tooltip.description = tooltip.description .. "<RED> This player has already had a transfusion and will not benefit from another.<LINE> They will recover fully in time.<LINE>";
+    end
+
     if not isValid then
         newOpt.notAvailable = true;
     end
@@ -205,6 +211,12 @@ function MedLine_Events.populateMedicalCheck_SalineTransfusion(player, context, 
         isValid = false;
         tooltip.description = tooltip.description .. ("<LINE> <LINE>");
         tooltip.description = tooltip.description .. "<RED> This player is not suffering from blood loss, a transfusion would not do anything to help.<LINE>";
+    end
+
+    if MedLine_Client.hasPlayerHadTransfusion(medicalCheckOpt.param2) then
+        isValid = false;
+        tooltip.description = tooltip.description .. ("<LINE> <LINE>");
+        tooltip.description = tooltip.description .. "<RED> This player has already had a transfusion and will not benefit from another.<LINE> They will recover fully in time.<LINE>";
     end
 
     if not isValid then
