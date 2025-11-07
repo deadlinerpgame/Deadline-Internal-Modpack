@@ -10,6 +10,7 @@ local HasCheckedForCachedMedicalData = false;
 local MinutesSinceRetrievedMedicalData = 0;
 local HasSentOwnMedicalDataAfterDelay = false;
 
+
 function MedLine_Events.EveryOneMinute()
     local player = getPlayer();
     if not player then return end;
@@ -163,6 +164,8 @@ end
 
 function MedLine_Events.OnServerCommand(module, command, args)
     if module ~= "MedLine" then return end;
+
+    MedLine_Logging.log("MedLine Server Event Received: " .. command);
     
     if command == "ShowBloodActionModal" then
         -- src = player:getOnlineID(), srcName = player:getDescriptor():getForename(), mode = mode

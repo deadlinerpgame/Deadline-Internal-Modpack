@@ -130,7 +130,7 @@ function MedLine_Server.OnClientCommand(module, command, player, args)
             if iteratedPlayer then
                 if iteratedPlayer:getUsername() == targetUsername then
                     MedLine_Logging.log("Sending server command to " .. iteratedPlayer:getUsername() .. " ReduceBloodLossDuration with efficiency " .. tostring(args.efficiency));
-                    sendServerCommand(iteratedPlayer, "MedLine", "ReduceBloodLossDuration", { src = player:getOnlineID(), efficiency = args.efficiency });
+                    sendServerCommand(iteratedPlayer, "MedLine", "ReduceBloodLossDuration", { efficiency = args.efficiency });
                     return;
                 end
             end

@@ -399,6 +399,15 @@ function MedLine_Client.hasItemsForBloodDraw(player)
     return MedLine_Client.recursiveItemCheckEx(player, MedLine_Client.bloodDrawItems);
 end
 
+function MedLine_Client.getSalineBag(player)
+    if not player then return end;
+
+    local salineBags = player:getInventory():getAllTypeRecurse("MedLine.BloodBag_Saline");
+    if not salineBags or salineBags:size() == 0 then return nil end;
+
+    return salineBags:get(0) or nil;
+end
+
 function MedLine_Client.getBloodBagOfType(player, targetBloodType)
     if not player then return end;
     if not targetBloodType or not targetBloodType.type then
