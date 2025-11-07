@@ -20,11 +20,11 @@ function MedLine_Events.EveryOneMinute()
         HasCheckedForCachedMedicalData = true;
     end
 
-    -- Save after 5 IG minutes, this should be sufficient to allow for back and forth transmission without causing too much of a delay or initial spam.
+    -- Save after 1 IG minutes, this should be sufficient to allow for back and forth transmission without causing too much of a delay or initial spam.
     -- This is done because there's a lot of back and forth communication with the server on initial connect.
-    if HasCheckedForCachedMedicalData and MinutesSinceRetrievedMedicalData < 5 then
+    if HasCheckedForCachedMedicalData and MinutesSinceRetrievedMedicalData < 1 then
         MinutesSinceRetrievedMedicalData = MinutesSinceRetrievedMedicalData + 1;
-    elseif HasCheckedForCachedMedicalData and MinutesSinceRetrievedMedicalData == 5 and not HasSentOwnMedicalDataAfterDelay then
+    elseif HasCheckedForCachedMedicalData and MinutesSinceRetrievedMedicalData == 1 and not HasSentOwnMedicalDataAfterDelay then
         MedLine_Client.saveMedicalData();
         HasSentOwnMedicalDataAfterDelay = true;
     end
@@ -155,7 +155,7 @@ function MedLine_Events.onClickBloodActionModal(otherPlayer, btn, src, mode)
     if not otherPlayer then return end;
 
     if mode == MedLine_Dict.EventModes.BloodActions.draw then
-        WL_Utils.addInfoToChat("You have accepted the blood draw. " .. tostring(otherPlayer:getUsername()) .. " is now drawing blood.");
+        WL_Utils.addInfoToChat("You have accepted the blood draw. " .. tostring(otherPlayer:getDescriptor():getForename()) .. " is now drawing blood.");
     end
 
     sendClientCommand(getPlayer(), "MedLine", "AcceptBloodAction", { src = src, mode = mode });
@@ -245,8 +245,6 @@ Events.OnWeaponSwing.Add(MedLine_Events.OnWeaponSwing);
 Events.OnServerCommand.Add(MedLine_Events.OnServerCommand);
 
 function MedLine_Events.OnReceiveGlobalModData(key, data)
-    print("OnReceiveGlobalModData " .. key .. " ");
-
     if key == MedLine_Dict.ModDataKeys.UserData then
         print("OnReceiveGlobalModData for MedLine UserData");
 

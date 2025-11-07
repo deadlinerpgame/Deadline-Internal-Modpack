@@ -55,27 +55,27 @@ function MedLine_Client.getBloodType(player)
 end
 
 function MedLine_Client.doesPlayerHaveBloodLoss(player)
-    if not player then return end;
-    if not player:getPlayerNum() then return end;
-    if not MF then return end;
+    if not player then return false end;
 
-    local num = player:getPlayerNum();
-    local bloodLossMoodle = MF.getMoodle("BloodLoss", num);
+    if not player:getModData().MedLine then return false end;
+    if not player:getModData().MedLine.BloodData then return false end;
 
-    local value = bloodLossMoodle:getValue();
-    if not value or value == 0.5 then return false end;
+    local bloodData = player:getModData().MedLine.BloodData;
+    if not bloodData.bloodLossTimeoutUnix then return false end;
 
-    return true;
+    if bloodData.bloodLossTimeoutUnix > getTimestamp() then return true end;
+
+    return false;
 end
 
 function MedLine_Client.hasPlayerHadTransfusion(player)
 
-    if not player then return end;
+    if not player then return false end;
 
-    if not player:getModData().MedLine then return end;
+    if not player:getModData().MedLine then return false end;
 
     local bloodData = player:getModData().MedLine.BloodData or nil;
-    if not bloodData then return end;
+    if not bloodData then return false end;
 
     return bloodData.hasReceivedTransfusion or false;
 end
