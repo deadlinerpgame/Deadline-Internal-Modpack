@@ -251,6 +251,7 @@ function MedLine_Client.setBloodLossStopped()
 
     local bloodLossMoodle = MF.getMoodle("BloodLoss", getPlayer():getPlayerNum());
     bloodLossMoodle:setValue(0.5);
+    
 
     MedLine_Client.setHasRecoveredFromBloodLoss();
 
@@ -294,6 +295,15 @@ function MedLine_Client.reduceBloodLossByPercentage(efficiency)
     local newRemainingTime = relativePosition * actualEfficiency;
     print("New remaining time is " .. tostring(newRemainingTime));
 
+    MF.getMoodle("BloodTransfusion", getPlayer():getPlayerNum()):setValue(0.6);
+
+    print("Updating blood loss timeout unix from: " .. tostring(bloodData.bloodLossTimeoutUnix));
+    bloodData.bloodLossTimeoutUnix = bloodData.bloodLossStartedUnix + newRemainingTime;
+    print("Blood loss unix timeout is now: " .. bloodData.bloodLossTimeoutUnix);
+
+    bloodData.hasReceivedTransfusion = true;
+
+    MedLine_Client.saveMedicalData();
 end
 
 function MedLine_Client.stopBloodLossEventHooks()
@@ -340,6 +350,10 @@ function MedLine_Client.checkBloodLossRecovery()
     local moodleVal = MedLine_Client.getRecoveryMoodleValue();
     if not moodleVal then moodleVal = 0.5; end;
     MF.getMoodle("BloodLoss", getPlayer():getPlayerNum()):setValue(moodleVal);
+
+    if bloodData.hasReceivedTransfusion then
+        MF.getMoodle("BloodTransfusion", getPlayer():getPlayerNum()):setValue(0.6);
+    end
 end
 
 --[[

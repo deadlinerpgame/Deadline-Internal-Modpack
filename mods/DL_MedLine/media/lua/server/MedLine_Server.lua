@@ -136,6 +136,31 @@ function MedLine_Server.OnClientCommand(module, command, player, args)
             end
         end
     end
+
+    if command == "ADMIN_OverrideBloodLoss" then
+        local targetUsername = args.username;
+        local hours = args.time;
+
+        if not targetUsername or not hours then
+            MedLine_Logging.log("ADMIN_OverrideBloodLoss - invalid username or hours provided.");
+            return;
+        end
+
+        CachedUserData[targetUsername].bloodLossStartedUnix = getTimestamp();
+        CachedUserData[targetUsername].bloodLossTimeoutUnix = getTimestamp() + (hours * 3600);
+        MedLine_Server.SaveUserData();
+
+        for i = 0, allPlayers:size() - 1 do
+            local iteratedPlayer = allPlayers:get(i);
+            if iteratedPlayer then
+                if iteratedPlayer:getUsername() == targetUsername then
+                    MedLine_Logging.log("Sending server command to " .. iteratedPlayer:getUsername() .. " ADMIN_OverrideBloodLoss.");
+                    sendServerCommand(iteratedPlayer, "MedLine", "ADMIN_OverrideBloodLoss_ForceClientEvents");
+                    return;
+                end
+            end
+        end
+    end
 end
 
 Events.OnInitGlobalModData.Add(MedLine_Server.OnInitGlobalModData);

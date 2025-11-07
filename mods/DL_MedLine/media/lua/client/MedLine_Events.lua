@@ -166,6 +166,11 @@ function MedLine_Events.OnServerCommand(module, command, args)
     if module ~= "MedLine" then return end;
 
     MedLine_Logging.log("MedLine Server Event Received: " .. command);
+
+    if command == "ADMIN_OverrideBloodLoss_ForceClientEvents" then
+        MedLine_Logging.log("Received admin override for blood loss, forcing client event start.");
+        Events.OnPlayerUpdate.Add(MedLine_Events.OnPlayerUpdate);
+    end
     
     if command == "ShowBloodActionModal" then
         -- src = player:getOnlineID(), srcName = player:getDescriptor():getForename(), mode = mode
