@@ -319,15 +319,27 @@ function MedLine_Client.checkBloodLossRecovery()
     local bloodData = MedLine_Client.getBloodData();
     if not bloodData then return end;
 
-    if not bloodData.bloodLossTimeoutUnix or bloodData.bloodLossTimeoutUnix < getTimestamp() then return end;
+    if not bloodData.bloodLossTimeoutUnix then
+        return;
+    end
+
+    local currentTime = getTimestamp();
+
+    if bloodData.bloodLossTimeoutUnix > currentTime then -- If unix > current then we're not there yet.
+        if isDebugEnabled() then
+            print("BloodLossRecovery: timeout unix is " .. tostring(bloodData.bloodLossTimeoutUnix) .. " vs current time " .. getTimestamp());
+            return;
+        end
+    end;
+
+    if currentTime >= bloodData.bloodLossTimeoutUnix then
+        MedLine_Client.setBloodLossStopped();
+        return;
+    end
 
     local moodleVal = MedLine_Client.getRecoveryMoodleValue();
     if not moodleVal then moodleVal = 0.5; end;
     MF.getMoodle("BloodLoss", getPlayer():getPlayerNum()):setValue(moodleVal);
-
-    if moodleVal == 0.5 then
-        MedLine_Client.setBloodLossStopped();
-    end
 end
 
 --[[
