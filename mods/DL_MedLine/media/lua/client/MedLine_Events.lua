@@ -131,11 +131,7 @@ function MedLine_Events.OnPlayerUpdate()
     local player = getPlayer();
     if not player then return end;
 
-    if not MedLine_Client.doesPlayerHaveBloodLoss(player) then
-        Events.OnPlayerUpdate.Remove(MedLine_Events.OnPlayerUpdate);
-        MedLine_Client.setBloodLossStopped();
-        return;
-    end
+    if not player:getModData().MedLine.BloodData.bloodLossTimeoutUnix then return end;
 
     local enduranceCap = SandboxVars.MedLine.BloodLoss_MaxBloodLossEndurance or 0.8;
 

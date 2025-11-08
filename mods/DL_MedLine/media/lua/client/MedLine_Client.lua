@@ -64,7 +64,6 @@ function MedLine_Client.doesPlayerHaveBloodLoss(player)
     if not bloodData.bloodLossTimeoutUnix then return false end;
 
     if bloodData.bloodLossTimeoutUnix > getTimestamp() then return true end;
-
     return false;
 end
 
@@ -282,7 +281,7 @@ function MedLine_Client.reduceBloodLossByPercentage(efficiency)
     local totalReduction = SandboxVars.BloodLoss_TransfusionPercentageReduction or 50;
     local actualEfficiency = (totalReduction / 100) * (efficiency / 100);
 
-    if not totalReduction or actualEfficiency then
+    if not totalReduction or not actualEfficiency then
         MedLine_Logging.log("reduceBloodLossByPercentage totalReduction or actualEfficiency is nil.");
         return;
     end
@@ -318,7 +317,7 @@ function MedLine_Client.reduceBloodLossByPercentage(efficiency)
 end
 
 function MedLine_Client.stopBloodLossEventHooks()
-    Events.OnPlayerUpdate.Remove(MedLine_Events.OnPlayerUpdate);
+    --Events.OnPlayerUpdate.Remove(MedLine_Events.OnPlayerUpdate);
 end
 
 function MedLine_Client.hasChangedBloodType()
