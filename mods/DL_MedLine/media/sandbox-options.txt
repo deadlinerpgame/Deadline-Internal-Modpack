@@ -15,6 +15,16 @@ option MedLine.BloodLoss_RecoveryTimeDaysPVP = {
     page = MedLine, translation = MedLine_BloodLoss_RecoveryTimeDaysPVP,
 }
 
+option MedLine.BloodLoss_DiceHPThreshold = {
+    type = integer, default = 3, min = 1, max = 10,
+    page = MedLine, translation = MedLine_BloodLoss_DiceHPThreshold,
+}
+
+option MedLine.BloodLoss_DiceHPDisadvantage = {
+    type = integer, default = 2, min = 0, max = 10,
+    page = MedLine, translation = MedLine_BloodLoss_DiceHPDisadvantage,
+}
+
 option MedLine.BloodLoss_RecoveryTimeDaysDonation = {
     type = integer, default = 2, min = 1, max = 99,
     page = MedLine, translation = MedLine_BloodLoss_RecoveryTimeDaysDonation,

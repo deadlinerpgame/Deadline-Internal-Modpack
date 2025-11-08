@@ -32,6 +32,10 @@ end
 function MedLine_Server.OnClientCommand(module, command, player, args)
     if module ~= "MedLine" then return end;
 
+    if command == "DICE_ShowCriticalHealthPopup" then
+        sendServerCommand(player, "MedLine", "DICE_ShowCriticalHealthPopup", { hp = args.hp });
+    end
+
     if command == "SyncMedicalData" then
         print("SyncMedicalData called from player " .. player:getUsername());
         local character = args.character; -- Username

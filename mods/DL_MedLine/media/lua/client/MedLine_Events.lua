@@ -158,10 +158,50 @@ function MedLine_Events.onClickBloodActionModal(otherPlayer, btn, src, mode)
     getSoundManager():playUISound("UISelectListItem");
 end
 
+function MedLine_Events.onClickDiceHpModal(player, btn)
+
+    local message = "";
+    if btn.internal == "NO" then
+        message = getPlayer():getDescriptor():getForename() .. " has cancelled the dice HP blood loss dialog.";
+    else
+        message = getPlayer():getDescriptor():getForename() .. " is now suffering from blood loss.";
+        MedLine_Client.initiateBloodLossStart(SandboxVars.MedLine.BloodLoss_RecoveryTimeDaysPVP or 5);
+    end;
+
+    local args =
+    {
+        sourcePlayerID = getPlayer():getOnlineID(),
+        message = message,
+        coords =
+        {
+            x = getPlayer():getX(),
+            y = getPlayer():getY(),
+            z = getPlayer():getZ()
+        },
+        mode = "loud",
+    };
+
+    sendClientCommand('DeadlineDice', 'requestSendMessage', args);
+
+    sendClientCommand(getPlayer():getUsername(), 'ISLogSystem', 'writeLog', {
+        loggerName = "Dice",
+        logText = message
+    });
+end
+
+
 function MedLine_Events.OnServerCommand(module, command, args)
     if module ~= "MedLine" then return end;
 
     MedLine_Logging.log("MedLine Server Event Received: " .. command);
+
+    if command == "DICE_ShowCriticalHealthPopup" then
+        local posX = (getCore():getScreenWidth() / 2) - (350 / 2);
+        local posY = (getCore():getScreenHeight() / 2) - (200 / 2);
+        local modal = ISModalDialog:new(posX, posY, 350, 200, getText("IGUI_CriticalDiceHpModal"), true, getPlayer(), MedLine_Events.onClickDiceHpModal, getPlayer():getPlayerNum());
+        modal:initialise();
+        modal:addToUIManager();
+    end
 
     if command == "ADMIN_OverrideBloodLoss_ForceClientEvents" then
         MedLine_Logging.log("Received admin override for blood loss, forcing client event start.");

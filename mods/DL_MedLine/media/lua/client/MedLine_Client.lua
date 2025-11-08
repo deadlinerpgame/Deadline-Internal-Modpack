@@ -166,6 +166,7 @@ function MedLine_Client.changeBloodType(newType, override)
     SyncXp(player);
     
     MedLine_Client.getBloodData().hasPrevChangedBloodType = true;
+    MedLine_Client.getBloodData().bloodType = matchingType;
     MedLine_Client.saveMedicalData();
 
     MedLine_Logging.log("Blood type changed completed.");
@@ -253,6 +254,9 @@ function MedLine_Client.setHasRecoveredFromBloodLoss()
     bloodData.bloodLossStartedUnix = nil;
     bloodData.bloodLossTimeoutUnix = nil;
     bloodData.hasLapsedBelow = nil;
+    bloodData.hasReceivedTransfusion = false;
+
+    MedLine_Client.saveMedicalData();
 end
 
 function MedLine_Client.setBloodLossStopped()
@@ -262,6 +266,7 @@ function MedLine_Client.setBloodLossStopped()
     local bloodLossMoodle = MF.getMoodle("BloodLoss", getPlayer():getPlayerNum());
     bloodLossMoodle:setValue(0.5);
     
+    MF.getMoodle("BloodTransfusion", getPlayer():getPlayerNum()):setValue(0.5);
 
     MedLine_Client.setHasRecoveredFromBloodLoss();
 
@@ -345,17 +350,17 @@ function MedLine_Client.checkBloodLossRecovery()
 
     local currentTime = getTimestamp();
 
-    if bloodData.bloodLossTimeoutUnix > currentTime then -- If unix > current then we're not there yet.
-        if isDebugEnabled() then
-            print("BloodLossRecovery: timeout unix is " .. tostring(bloodData.bloodLossTimeoutUnix) .. " vs current time " .. getTimestamp());
-            return;
-        end
-    end;
-
     if currentTime >= bloodData.bloodLossTimeoutUnix then
         MedLine_Client.setBloodLossStopped();
         return;
     end
+
+    if bloodData.bloodLossTimeoutUnix > currentTime then -- If unix > current then we're not there yet.
+        if isDebugEnabled() then
+            print("BloodLossRecovery: timeout unix is " .. tostring(bloodData.bloodLossTimeoutUnix) .. " vs current time " .. getTimestamp());
+            print("Difference is " .. tostring(bloodData.bloodLossTimeoutUnix - currentTime) .. " seconds.");
+        end
+    end;
 
     local moodleVal = MedLine_Client.getRecoveryMoodleValue();
     if not moodleVal then moodleVal = 0.5; end;
@@ -448,7 +453,7 @@ function MedLine_Client.getBloodBagOfType(player, targetBloodType)
     if not player then return end;
     if not targetBloodType or not targetBloodType.type then
         MedLine_Logging.log("getBloodBagOfType - no targetBloodType");
-        error("getBloodBagOfType invalid targetBloodType", 1);
+        return;
     end
 
     local bloodBags = player:getInventory():getAllTypeRecurse("MedLine.BloodBag_Full");
