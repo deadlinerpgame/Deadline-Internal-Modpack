@@ -2604,6 +2604,13 @@ function ISDeadlineDiceUI:resetHitPoints()
     DeadlineDice.hitPoints = 12
     end
 
+    if getPlayer():getModData().MedLine and getPlayer():getModData().MedLine.BloodData then
+        if bloodData.bloodLossTimeoutUnix and bloodData.bloodLossTimeoutUnix > getTimestamp() then
+            DeadlineDice.hitPoints = DeadlineDice.hitPoints - (SandboxVars.MedLine.BloodLoss_DiceHPDisadvantage or 2);
+            print("DeadlineDice - MedLine blood loss integration.");
+        end
+    end
+
     local playerName = self.character:getDescriptor():getForename()
     table.insert(self.sayQueue, playerName .. " has reset their hit points to: " .. tostring(DeadlineDice.hitPoints))
     localtext = self.character:getUsername() .. " has reset their Hit Points to: " .. tostring(DeadlineDice.hitPoints)

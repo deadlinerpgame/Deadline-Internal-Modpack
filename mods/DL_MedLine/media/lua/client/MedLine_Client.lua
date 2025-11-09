@@ -42,7 +42,13 @@ function MedLine_Client.getBloodType(player)
 
     local returnType = nil;
 
-    for _, bloodType in ipairs(MedLine_Dict.BLOOD_TYPES) do
+    if not player:getModData().MedLine then return nil end;
+
+    if not player:getModData().MedLine.BloodData then return nil end;
+
+    return player:getModData().MedLine.BloodData.bloodType;
+
+    --[[for _, bloodType in ipairs(MedLine_Dict.BLOOD_TYPES) do
         if player:HasTrait(bloodType.traitStr) then
             returnType = bloodType;
         end
@@ -51,7 +57,7 @@ function MedLine_Client.getBloodType(player)
     if returnType == nil then
         MedLine_Logging.log("Attempted to get blood type " .. player:getUsername() .. " from player but could not find it.");
     end
-    return returnType;
+    return returnType;--]]
 end
 
 function MedLine_Client.doesPlayerHaveBloodLoss(player)
@@ -115,12 +121,15 @@ function MedLine_Client.allocateBloodType(player)
         end
     end
 
-    getPlayer():getModData().MedLine.BloodData.bloodType = allocatedBloodType;
-
-    if allocatedBloodType and allocatedBloodType.traitStr then
-        getPlayer():getTraits():add(allocatedBloodType.traitStr);
-        SyncXp(getPlayer());
+    if not allocatedBloodType then
+        MedLine_Logging.log("[allocateBloodType] Unable to allocate blood type.");
+        error("CRITICAL MEDLINE ERROR - UNABLE TO ALLOCATE PLAYER BLOODTYPE!!");
+        return;
     end
+
+    getPlayer():getModData().MedLine.BloodData.bloodType = allocatedBloodType;
+    getPlayer():getTraits():add(allocatedBloodType.traitStr);
+    SyncXp(getPlayer());
     
     MedLine_Logging.log("[allocateBloodType] Blood type allocated and stopping.\n");
 end

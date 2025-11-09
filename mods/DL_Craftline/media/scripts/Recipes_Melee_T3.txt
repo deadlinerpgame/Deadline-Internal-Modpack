@@ -18,6 +18,20 @@ module aerx
         NearItem:Advanced Furnace,
     }
 
+    recipe Forge Shortsword Blade
+    {
+        aerx.IronBar=2,
+        Charcoal=3,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_Shortsword_Blade,
+        Time:250,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:Material,
+        SkillRequired:MetalWelding=8,
+        NearItem:Advanced Furnace,
+    }
+
+
     recipe Forge Longsword Blade
     {
         aerx.IronBar=2,
@@ -133,6 +147,20 @@ module aerx
         Time:300.0,
         OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
         Category:LongBlade,
+        SkillRequired:MetalWelding=10,
+        NearItem:Advanced Forge,
+    }
+
+    recipe Forge Shortsword
+    {
+        aerx.T3_Shortsword_Blade=1,
+        aerx.IronBar=1,
+        aerx.SmallHandle=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:aerx.T3_Shortsword=1,
+        Time:300.0,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Category:ShortBlade,
         SkillRequired:MetalWelding=8,
         NearItem:Advanced Forge,
     }

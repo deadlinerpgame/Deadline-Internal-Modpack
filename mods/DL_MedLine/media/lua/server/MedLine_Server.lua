@@ -58,6 +58,7 @@ function MedLine_Server.OnClientCommand(module, command, player, args)
     end
 
     if command == "RequestBloodAction" then
+        MedLine_Logging.log("RequestBloodAction Modal");
         local tgtUsername = args.target;
         local mode = args.mode; -- 1 == draw, 2 == transfuse.
         if not tgtUsername then return end;

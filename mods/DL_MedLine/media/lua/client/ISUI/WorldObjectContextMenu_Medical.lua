@@ -34,12 +34,10 @@ end
 function MedLine_Events.onClickDrawBlood(self, player, medicalCheckOpt)
     if not player or not medicalCheckOpt then return end;
 
-    local target = medicalCheckOpt.param2;
-
     getPlayer():faceThisObject(target);
         
     getPlayer():setHaloNote(getText("IGUI_BloodDrawRequested"), 150, 150, 150, 200);
-    sendClientCommand(player, "MedLine", "RequestBloodAction", { target = target:getUsername(), mode = MedLine_Dict.EventModes.BloodActions.draw });
+    sendClientCommand(medicalCheckOpt.param1, "MedLine", "RequestBloodAction", { target = medicalCheckOpt.param2:getUsername(), mode = MedLine_Dict.EventModes.BloodActions.draw });
 end
 
 function MedLine_Events.onClickGiveBlood(self, player, medicalCheckOpt, matchingBag)
@@ -67,7 +65,7 @@ function MedLine_Events.populateMedicalCheck_BloodDraw(player, context, subMenu,
     MedLine_Logging.log("Param 1 - " .. medicalCheckOpt.param1:getUsername());
     MedLine_Logging.log("Param 2 - " .. medicalCheckOpt.param2:getUsername());
 
-    local newOpt = subMenu:addOption(getText("ContextMenu_MedLine_DrawBlood"), context, MedLine_Events.onClickDrawBlood, player, medicalCheckOpt);
+    local newOpt = subMenu:addOption(getText("ContextMenu_MedLine_DrawBlood"), context, MedLine_Events.onClickDrawBlood, medicalCheckOpt.param1, medicalCheckOpt);
     local tooltip = ISWorldObjectContextMenu.addToolTip();
 
     newOpt.toolTip = tooltip;
@@ -79,7 +77,7 @@ function MedLine_Events.populateMedicalCheck_BloodDraw(player, context, subMenu,
     tooltip.description = tooltip.description .. "This is a lengthy and time consuming action and will be cancelled by movement. <LINE> <LINE>";
 
      -- Check if the player has the required skill to take blood.
-    local currentSkill = player:getPerkLevel(Perks.Doctor);
+    local currentSkill = medicalCheckOpt.param1:getPerkLevel(Perks.Doctor);
     local isValid = true;
 
     local meetsSkillLevel = currentSkill >= requiredSkillLevel;
@@ -125,7 +123,7 @@ function MedLine_Events.populateMedicalCheck_BloodTransfusion(player, context, s
 
     print("Target blood type for player " .. medicalCheckOpt.param2:getUsername() .. " is " .. (targetBloodType.type or "NOT FOUND"));
 
-    local newOpt = subMenu:addOption(getText("ContextMenu_MedLine_GiveBlood"), context, MedLine_Events.onClickGiveBlood, player, medicalCheckOpt, matchingBag);
+    local newOpt = subMenu:addOption(getText("ContextMenu_MedLine_GiveBlood"), context, MedLine_Events.onClickGiveBlood, medicalCheckOpt.param1, medicalCheckOpt, matchingBag);
     local tooltip = ISWorldObjectContextMenu.addToolTip();
 
     newOpt.toolTip = tooltip;
@@ -136,7 +134,7 @@ function MedLine_Events.populateMedicalCheck_BloodTransfusion(player, context, s
     tooltip.description = tooltip.description .. "This requires 1x bloodbag of the same blood type as the player. <LINE> <LINE>";
 
      -- Check if the player has the required skill to give blood.
-    local currentSkill = player:getPerkLevel(Perks.Doctor);
+    local currentSkill = medicalCheckOpt.param1:getPerkLevel(Perks.Doctor);
     local isValid = true;
 
     local meetsSkillLevel = currentSkill >= requiredSkillLevel;
@@ -179,7 +177,7 @@ function MedLine_Events.populateMedicalCheck_SalineTransfusion(player, context, 
 
     local matchingBag = MedLine_Client.getSalineBag(medicalCheckOpt.param1);
 
-    local newOpt = subMenu:addOption(getText("ContextMenu_MedLine_GiveSaline"), context, MedLine_Events.onClickGiveSaline, player, medicalCheckOpt, matchingBag);
+    local newOpt = subMenu:addOption(getText("ContextMenu_MedLine_GiveSaline"), context, MedLine_Events.onClickGiveSaline, medicalCheckOpt.param1, medicalCheckOpt, matchingBag);
     local tooltip = ISWorldObjectContextMenu.addToolTip();
 
     newOpt.toolTip = tooltip;
@@ -190,7 +188,7 @@ function MedLine_Events.populateMedicalCheck_SalineTransfusion(player, context, 
     tooltip.description = tooltip.description .. "This requires 1x bag of normal saline. <LINE> <LINE>";
 
      -- Check if the player has the required skill to give blood.
-    local currentSkill = player:getPerkLevel(Perks.Doctor);
+    local currentSkill = medicalCheckOpt.param1:getPerkLevel(Perks.Doctor);
     local isValid = true;
 
     local meetsSkillLevel = currentSkill >= requiredSkillLevel;
