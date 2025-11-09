@@ -1967,6 +1967,7 @@ function ISDeadlineDiceUI:initialise()
     end
 
     if getPlayer():getModData().MedLine and getPlayer():getModData().MedLine.BloodData then
+        local bloodData = getPlayer():getModData().MedLine.BloodData;
         if bloodData.bloodLossTimeoutUnix and bloodData.bloodLossTimeoutUnix > getTimestamp() then
             DeadlineDice.hitPoints = DeadlineDice.hitPoints - (SandboxVars.MedLine.BloodLoss_DiceHPDisadvantage or 2);
             print("DeadlineDice - MedLine blood loss integration.");
@@ -2605,6 +2606,7 @@ function ISDeadlineDiceUI:resetHitPoints()
     end
 
     if getPlayer():getModData().MedLine and getPlayer():getModData().MedLine.BloodData then
+        local bloodData = getPlayer():getModData().MedLine.BloodData;
         if bloodData.bloodLossTimeoutUnix and bloodData.bloodLossTimeoutUnix > getTimestamp() then
             DeadlineDice.hitPoints = DeadlineDice.hitPoints - (SandboxVars.MedLine.BloodLoss_DiceHPDisadvantage or 2);
             print("DeadlineDice - MedLine blood loss integration.");
