@@ -183,7 +183,7 @@ function MedLine_Events.onClickDiceHpModal(player, btn)
 
     sendClientCommand('DeadlineDice', 'requestSendMessage', args);
 
-    sendClientCommand(getPlayer():getUsername(), 'ISLogSystem', 'writeLog', {
+    sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {
         loggerName = "Dice",
         logText = message
     });
