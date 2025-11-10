@@ -1,0 +1,66 @@
+VERSION = 1,
+
+option MedLine.BloodLoss_HealthThreshold = {
+    type = integer, default = 35, min = 1, max = 99,
+    page = MedLine, translation = MedLine_BloodLoss_HealthThreshold,
+}
+
+option MedLine.BloodLoss_RecoveryTimeDays = {
+    type = integer, default = 3, min = 1, max = 99,
+    page = MedLine, translation = MedLine_BloodLoss_RecoveryTimeDays,
+}
+
+option MedLine.BloodLoss_RecoveryTimeDaysPVP = {
+    type = integer, default = 5, min = 1, max = 99,
+    page = MedLine, translation = MedLine_BloodLoss_RecoveryTimeDaysPVP,
+}
+
+option MedLine.BloodLoss_DiceHPThreshold = {
+    type = integer, default = 3, min = 1, max = 10,
+    page = MedLine, translation = MedLine_BloodLoss_DiceHPThreshold,
+}
+
+option MedLine.BloodLoss_DiceHPDisadvantage = {
+    type = integer, default = 2, min = 0, max = 10,
+    page = MedLine, translation = MedLine_BloodLoss_DiceHPDisadvantage,
+}
+
+option MedLine.BloodLoss_RecoveryTimeDaysDonation = {
+    type = integer, default = 2, min = 1, max = 99,
+    page = MedLine, translation = MedLine_BloodLoss_RecoveryTimeDaysDonation,
+}
+
+option MedLine.BloodLoss_TransfusionPercentageReduction = {
+    type = integer, default = 50, min = 1, max = 99,
+    page = MedLine, translation = MedLine_BloodLoss_TransfusionPercentageReduction,
+}
+
+option MedLine.BloodLoss_SalineEfficiency = {
+    type = integer, default = 50, min = 1, max = 100,
+    page = MedLine, translation = MedLine_BloodLoss_SalineEfficiency,
+}
+
+option MedLine.BloodLoss_WeaponSwingEnduranceAffected = {
+    type = double, default = 1.15, min = 1.0, max = 100.0,
+    page = MedLine, translation = MedLine_BloodLoss_WeaponSwingEnduranceAffected,
+}
+
+option MedLine.BloodLoss_MaxBloodLossEndurance = {
+    type = double, default = 0.8, min = 0.1, max = 1.0,
+    page = MedLine, translation = MedLine_BloodLoss_MaxBloodLossEndurance,
+}
+
+option MedLine.LevelOpts_BloodDrawMedicalLevel = {
+    type = integer, default = 10, min = 1, max = 10,
+    page = MedLine, translation = MedLine_LevelOpts_BloodDrawMedicalLevel,
+}
+
+option MedLine.LevelOpts_BloodTransfusionMedicalLevel = {
+    type = integer, default = 8, min = 1, max = 10,
+    page = MedLine, translation = MedLine_LevelOpts_BloodTransfusionMedicalLevel,
+}
+
+option MedLine.LevelOpts_SalineTransfusionMedicalLevel = {
+    type = integer, default = 6, min = 1, max = 10,
+    page = MedLine, translation = MedLine_LevelOpts_SalineTransfusionMedicalLevel,
+}

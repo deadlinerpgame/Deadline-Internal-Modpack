@@ -54,7 +54,7 @@ function Craftline_Farming.OnFillWorldObjectContextMenu(playerNum, context, worl
 
     if not treatSubMenu then
         print("treatSubMenu not found - adding as suboption")
-        treatSubMenu = treatProblemOption.subOption;
+        treatSubMenu = treatProblemOption.subOption or context:getNew(context);
         print(treatSubMenu);
     end
 

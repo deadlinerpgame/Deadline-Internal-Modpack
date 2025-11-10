@@ -1966,6 +1966,14 @@ function ISDeadlineDiceUI:initialise()
         DeadlineDice.hitPoints = 12
     end
 
+    if getPlayer():getModData().MedLine and getPlayer():getModData().MedLine.BloodData then
+        local bloodData = getPlayer():getModData().MedLine.BloodData;
+        if bloodData.bloodLossTimeoutUnix and bloodData.bloodLossTimeoutUnix > getTimestamp() then
+            DeadlineDice.hitPoints = DeadlineDice.hitPoints - (SandboxVars.MedLine.BloodLoss_DiceHPDisadvantage or 2);
+            print("DeadlineDice - MedLine blood loss integration.");
+        end
+    end
+
 end
 
 function ISDeadlineDiceUI:update()
@@ -2494,6 +2502,14 @@ function ISDeadlineDiceUI:increaseHitPoints()
     elseif not getPlayer():HasTrait("Sturdy") and not getPlayer():HasTrait("Fragile") then
         maxHitPoints = 12
     end
+
+    if getPlayer():getModData().MedLine and getPlayer():getModData().MedLine.BloodData then
+        local bloodData = getPlayer():getModData().MedLine.BloodData;
+        if bloodData.bloodLossTimeoutUnix and bloodData.bloodLossTimeoutUnix > getTimestamp() then
+            maxHitPoints = maxHitPoints - (SandboxVars.MedLine.BloodLoss_DiceHPDisadvantage or 2);
+            print("DeadlineDice - MedLine blood loss integration.");
+        end
+    end
     
     DeadlineDice.hitPoints = math.min(DeadlineDice.hitPoints + 1, maxHitPoints)
 
@@ -2562,6 +2578,12 @@ DeadlineDice.hpTracker[self.character:getUsername()] = newValue
 
     DeadlineDice.lastHealthClick = getTimestamp()
 
+    local diceBloodLossThreshold = SandboxVars.MedLine.BloodLoss_DiceHPThreshold or 3;
+    if DeadlineDice.hitPoints <= diceBloodLossThreshold then
+        table.insert(self.sayQueue, playerName .. " has dropped to critical HP and has been given the blood loss popup dialog.");
+        sendClientCommand(getPlayer(), "MedLine", "DICE_ShowCriticalHealthPopup", { hp = diceBloodLossThreshold });
+    end
+
     self:updateHitPointsBars()
 end
 
@@ -2579,6 +2601,12 @@ function ISDeadlineDiceUI:decreaseHitPoints()
     sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {loggerName = "Dice", logText = localtext})
     DeadlineDice.lastHealthClick = getTimestamp()
 
+    local diceBloodLossThreshold = SandboxVars.MedLine.BloodLoss_DiceHPThreshold or 3;
+    if DeadlineDice.hitPoints <= diceBloodLossThreshold then
+        table.insert(self.sayQueue, playerName .. " has dropped to critical HP and has been given the blood loss popup dialog.");
+        sendClientCommand(getPlayer(), "MedLine", "DICE_ShowCriticalHealthPopup", { hp = diceBloodLossThreshold });
+    end
+
     self:updateHitPointsBars()
 end
 
@@ -2589,6 +2617,14 @@ function ISDeadlineDiceUI:resetHitPoints()
     DeadlineDice.hitPoints = 10
     else
     DeadlineDice.hitPoints = 12
+    end
+
+    if getPlayer():getModData().MedLine and getPlayer():getModData().MedLine.BloodData then
+        local bloodData = getPlayer():getModData().MedLine.BloodData;
+        if bloodData.bloodLossTimeoutUnix and bloodData.bloodLossTimeoutUnix > getTimestamp() then
+            DeadlineDice.hitPoints = DeadlineDice.hitPoints - (SandboxVars.MedLine.BloodLoss_DiceHPDisadvantage or 2);
+            print("DeadlineDice - MedLine blood loss integration.");
+        end
     end
 
     local playerName = self.character:getDescriptor():getForename()

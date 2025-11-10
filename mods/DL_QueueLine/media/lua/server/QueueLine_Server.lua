@@ -49,7 +49,7 @@ function QueueLine_Server.GetQueueItemsForUsername(username)
     for i, v in ipairs(QueueLine_Server.QueueItems) do
         local item = QueueLine_Server.QueueItems[i];
         if item then
-            if item.username == username then
+            if string.lower(item.username) == string.lower(username) then
                 if item.activateTime and item.activateTime <= getTimestamp() then
                     table.insert(returnList, item);
                 elseif not item.activateTime or item.activateTime == 0 then

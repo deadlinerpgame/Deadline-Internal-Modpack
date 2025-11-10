@@ -8,7 +8,7 @@ module aerx {
 		DisplayCategory = Weapon,
 		Type = Weapon,
 		Weight = 2,
-		Icon = Sword_Forged_02,
+		Icon = T3Greatsword,
 		AttachmentType = Sword,
 		BaseSpeed = 1,
 		Categories = LongBlade,
@@ -22,12 +22,12 @@ module aerx {
 		HitAngleMod = -30,
 		KnockBackOnNoDeath = TRUE,
 		KnockdownMod = 0,
-		MaxDamage = 3,
+		MaxDamage = 8,
 		MaxHitCount = 3,
 		MaxRange = 1.4,
 		MinAngle = 0.8,
-		MinDamage = 2,
-		MinRange = 0.61,
+		MinDamage = 4,
+		MinRange = 0.6,
 		MinimumSwingTime = 3,
 		PushBackMod = 0.5,
 		RunAnim = Run_Weapon2,
@@ -37,7 +37,7 @@ module aerx {
 		SwingTime = 3,
 		TreeDamage = 1,
 		TwoHandWeapon = TRUE,
-		WeaponLength = 0.6,
+		WeaponLength = 1.4,
 		WeaponSprite = M_Greatsword,
 		Tags = CutPlant;SharpKnife,
 		BreakSound = MacheteBreak,
@@ -49,18 +49,29 @@ module aerx {
 		SwingSound = MacheteSwing,
 	}
 
+	item T3_Greatsword_Blade
+	{
+		DisplayName = Greatsword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 4,
+		Icon = SwordBlade_Forged_01,
+		StaticModel = T3_GreatswordBlade,
+		WorldStaticModel = T3_GreatswordBlade,
+	}
+
 	item T3_Longsword
 	{
 		DisplayName = Longsword,
 		DisplayCategory = Weapon,
 		Type = Weapon,
 		Weight = 2,
-		Icon = Sword_Forged_02,
+		Icon = T3Longsword,
 		AttachmentType = Sword,
 		BaseSpeed = 1,
 		Categories = LongBlade,
-		ConditionLowerChanceOneIn = 20,
-		ConditionMax = 13,
+		ConditionLowerChanceOneIn = 10,
+		ConditionMax = 8,
 		CritDmgMultiplier = 5,
 		CriticalChance = 20,
 		DamageCategory = Slash,
@@ -85,7 +96,7 @@ module aerx {
 		TreeDamage = 1,
 		TwoHandWeapon = TRUE,
 		WeaponLength = 0.6,
-		WeaponSprite = M_Longsword,
+		WeaponSprite = M_T3_Longsword,
 		Tags = CutPlant;SharpKnife,
 		BreakSound = MacheteBreak,
 		DoorHitSound = MacheteHit,
@@ -96,6 +107,16 @@ module aerx {
 		SwingSound = MacheteSwing,
 	}
 
+	item T3_Longsword_Blade
+	{
+		DisplayName = Longsword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = SwordBlade_Forged_01,
+		StaticModel = T3_LongswordBlade,
+		WorldStaticModel = T3_LongswordBlade,
+	}
 
 	item T3_Shortsword
 	{
@@ -103,23 +124,23 @@ module aerx {
 		DisplayCategory = Weapon,
 		Type = Weapon,
 		Weight = 1.5,
-		Icon = ShortHandle,
+		Icon = T3Shortsword,
 		AttachmentType = Nightstick,
 		BaseSpeed = 1.1,
-		Categories = SmallBlunt,
-		ConditionLowerChanceOneIn = 13,
-		ConditionMax = 10,
+		Categories = SmallBlade,
+		ConditionLowerChanceOneIn = 45,
+		ConditionMax = 15,
 		CritDmgMultiplier = 2,
 		CriticalChance = 25,
 		DoorDamage = 5,
 		IdleAnim = Idle_Weapon2,
 		KnockBackOnNoDeath = TRUE,
 		KnockdownMod = 0,
-		MaxDamage = 1.1,
+		MaxDamage = 2.2,
 		MaxHitCount = 1,
 		MaxRange = 1.23,
 		MinAngle = 0.65,
-		MinDamage = 0.6,
+		MinDamage = 1.5,
 		MinRange = 0.61,
 		MinimumSwingTime = 3,
 		PushBackMod = 0.5,
@@ -132,14 +153,26 @@ module aerx {
 		SwingTime = 3,
 		TreeDamage = 0,
 		WeaponLength = 0.35,
-		WeaponSprite = M_Shortsword,
-		Tags = Mallet;RepairWithGlue;RepairWithTape,
-		BreakSound = HammerBreak,
-		DoorHitSound = HammerHit,
-		DropSound = HammerDrop,
-		HitFloorSound = HammerHit,
-		HitSound = HammerHit,
-		SwingSound = HammerSwing,
+		WeaponSprite = M_T3_Shortsword,
+		Tags = CutPlant;SharpKnife,
+		BreakSound = MacheteBreak,
+		DoorHitSound = MacheteHit,
+		DropSound = MacheteDrop,
+		HitFloorSound = MacheteHit,
+		HitSound = MacheteHit,
+		ImpactSound = MacheteHit,
+		SwingSound = MacheteSwing,
+	}
+
+	item T3_Shortsword_Blade
+	{
+		DisplayName = Shortsword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = SwordBlade_Forged_01,
+		StaticModel = T3_ShortswordBlade,
+		WorldStaticModel = T3_ShortswordBlade,
 	}
 
 
@@ -149,13 +182,13 @@ module aerx {
 		DisplayCategory = WeaponCrafted,
 		Type = Weapon,
 		Weight = 2.4,
-		Icon = Spear_Sharpbone,
+		Icon = T3_Spear,
 		AttachmentType = Shovel,
 		Categories = Spear,
-		ConditionLowerChanceOneIn = 7,
+		ConditionLowerChanceOneIn = 12,
 		ConditionMax = 6,
 		CritDmgMultiplier = 5,
-		CriticalChance = 20,
+		CriticalChance = 30,
 		DamageCategory = Slash,
 		DamageMakeHole = TRUE,
 		DoorDamage = 5,
@@ -193,11 +226,11 @@ module aerx {
 
 	item T3_HalberdA
 	{
-		DisplayName = Halberd,
+		DisplayName = Long-Pointed Halberd,
 		DisplayCategory = WeaponCrafted,
 		Type = Weapon,
 		Weight = 2.4,
-		Icon = Spear_Sharpbone,
+		Icon = T3HalberdA,
 		AttachmentType = Shovel,
 		Categories = Spear,
 		ConditionLowerChanceOneIn = 7,
@@ -212,10 +245,11 @@ module aerx {
 		KnockdownMod = 0,
 		MaxDamage = 1.6,
 		MaxHitCount = 2,
-		MaxRange = 1.45,
+		MaxRange = 1.85,
+		WeaponLength = 1.85,
 		MinAngle = 0.8,
 		MinDamage = 1,
-		MinRange = 0.98,
+		MinRange = 1.15,
 		MinimumSwingTime = 2,
 		PushBackMod = 0.3,
 		RunAnim = Run_Weapon2,
@@ -225,7 +259,7 @@ module aerx {
 		SwingAmountBeforeImpact = 0.02,
 		SwingAnim = Spear,
 		SwingTime = 2,
-		TreeDamage = 0,
+		TreeDamage = 1,
 		TwoHandWeapon = TRUE,
 		WeaponSprite = M_HalberdA,
 		Tags = FishingSpear;RepairWithGlue;RepairWithTape,
@@ -239,13 +273,24 @@ module aerx {
 
 	}
 
+	item T3_HalberdA_Head
+	{
+		DisplayName = Long-Pointed Halberd Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = SwordBlade_Forged_01,
+		StaticModel = T3_HalberdHead_A,
+		WorldStaticModel = T3_HalberdHead_A,
+	}
+
 	item T3_HalberdB
 	{
-		DisplayName = Halberd,
+		DisplayName = Curved Halberd,
 		DisplayCategory = WeaponCrafted,
 		Type = Weapon,
 		Weight = 2.4,
-		Icon = Spear_Sharpbone,
+		Icon = T3_OrnateHalberd,
 		AttachmentType = Shovel,
 		Categories = Spear,
 		ConditionLowerChanceOneIn = 7,
@@ -260,7 +305,8 @@ module aerx {
 		KnockdownMod = 0,
 		MaxDamage = 1.6,
 		MaxHitCount = 2,
-		MaxRange = 1.45,
+		MaxRange = 1.85,
+		WeaponLength = 1.85,
 		MinAngle = 0.8,
 		MinDamage = 1,
 		MinRange = 0.98,
@@ -284,12 +330,22 @@ module aerx {
         HitSound	=	WoodenLanceHit,
         SwingSound	=	WoodenLanceSwing,
         SoundMap = SpearStab WoodenLanceStab,
-
+	}
+	
+	item T3_HalberdB_Head
+	{
+		DisplayName = Curved Halberd Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = SwordBlade_Forged_01,
+		StaticModel = T3_HalberdHead_B,
+		WorldStaticModel = T3_HalberdHead_B,
 	}
 
 	item T3_HalberdC
 	{
-		DisplayName = Halberd,
+		DisplayName = Ornate Halberd,
 		DisplayCategory = WeaponCrafted,
 		Type = Weapon,
 		Weight = 2.4,
@@ -308,7 +364,8 @@ module aerx {
 		KnockdownMod = 0,
 		MaxDamage = 1.6,
 		MaxHitCount = 2,
-		MaxRange = 1.45,
+		MaxRange = 1.85,
+		WeaponLength = 1.85,
 		MinAngle = 0.8,
 		MinDamage = 1,
 		MinRange = 0.98,
@@ -335,13 +392,24 @@ module aerx {
 
 	}
 
+	item T3_HalberdC_Head
+	{
+		DisplayName = Ornate Halberd Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = SwordBlade_Forged_01,
+		StaticModel = T3_HalberdHead_C,
+		WorldStaticModel = T3_HalberdHead_C,
+	}
+
 	item T3_HalberdD
 	{
-		DisplayName = Halberd,
+		DisplayName = Glaive,
 		DisplayCategory = WeaponCrafted,
 		Type = Weapon,
 		Weight = 2.4,
-		Icon = Spear_Sharpbone,
+		Icon = T3_Glaive,
 		AttachmentType = Shovel,
 		Categories = Spear,
 		ConditionLowerChanceOneIn = 7,
@@ -356,7 +424,8 @@ module aerx {
 		KnockdownMod = 0,
 		MaxDamage = 1.6,
 		MaxHitCount = 2,
-		MaxRange = 1.45,
+		MaxRange = 1.85,
+		WeaponLength = 1.85,
 		MinAngle = 0.8,
 		MinDamage = 1,
 		MinRange = 0.98,
@@ -381,6 +450,17 @@ module aerx {
         SwingSound	=	WoodenLanceSwing,
         SoundMap = SpearStab WoodenLanceStab,
 
+	}
+
+	item T3_HalberdD_Head
+	{
+		DisplayName = Glaive Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = SwordBlade_Forged_01,
+		StaticModel = T3_HalberdHead_D,
+		WorldStaticModel = T3_HalberdHead_D,
 	}
 
 	item T3_Mace_Flanged

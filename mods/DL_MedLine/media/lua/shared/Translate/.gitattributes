@@ -1,0 +1,9 @@
+# Translation files are encoded differently per-language
+# see https://github.com/TheIndieStone/ProjectZomboidTranslations/blob/master/.gitattributes
+# see https://github.com/TheIndieStone/ProjectZomboidTranslations/issues/155
+EN/*.txt text working-tree-encoding=utf-8 encoding=utf-8,
+
+# exception: keep the language definition/credits utf-8
+*/credits.txt text working-tree-encoding=utf-8 encoding=utf-8
+*/language.txt text working-tree-encoding=utf-8 encoding=utf-8
+*/Translated by.txt text working-tree-encoding=utf-8 encoding=utf-8
