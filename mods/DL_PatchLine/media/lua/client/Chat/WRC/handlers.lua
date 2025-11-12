@@ -479,6 +479,7 @@ function WRC.Handlers.AddLineInChat(chatMessage, tabID)
                 datetimeStr = chatMessage:getDatetimeStr(),
             })
             if hasBracketsOrParentheses(radioFormatted) then
+                print(radioFormatted)
                 WL_Utils.addErrorToChat("OOC messages and environment messages will not be transmitted by radio. Do not attempt to cirumvent this.")
             else
                 WRC.ISChatOriginal.addLineInChat(radioMessage, WRC.RadioTabId)
@@ -497,6 +498,7 @@ function WRC.Handlers.AddLineInChat(chatMessage, tabID)
                     datetimeStr = chatMessage:getDatetimeStr(),
                 })
             if hasBracketsOrParentheses(radioFormatted) then
+                print(radioFormatted)
                 WL_Utils.addErrorToChat("OOC messages and environment messages will not be transmitted by radio. Do not attempt to cirumvent this.")
             else
                 WRC.ISChatOriginal.addLineInChat(radioMessage, WRC.RadioTabId)
