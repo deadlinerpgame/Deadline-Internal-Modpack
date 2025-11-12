@@ -1,0 +1,84 @@
+module ScrapSmith
+{
+    imports
+    {
+        Base,
+    }
+
+    item scrapsmith_desertSaber
+    {
+        DisplayName	=	Desert Saber,
+        WeaponSprite	=	scrapsmith_desertSaber,
+        Icon	=	scrapsmith_desertSaber,
+        Type	=	Weapon,
+		AttachmentType = scrapsmith_blade,
+        Categories	=	LongBlade,
+        DisplayCategory = WeaponCrafted,
+        TwoHandWeapon = FALSE,
+        RequiresEquippedBothHands  = FALSE,
+        EquippedNoSprint = FALSE,
+        Tags = CutPlant;HasMetal,
+        EnduranceMod = 1.0,
+        Weight	=	1.9,
+        CantAttackWithLowestEndurance = FALSE,
+        MetalValue = 35,
+        ConditionLowerChanceOneIn	=	12,
+        ConditionMax	=	16,
+        HitAngleMod = -30,
+        BaseSpeed = 1.05,
+        MinAngle	=	0.70,
+        MinRange	=	0.61,
+        MaxRange	=	1.25,
+		MinDamage								=	2.4,
+        MaxDamage								=	3.8,
+        DoorDamage	=	8,
+        TreeDamage  =   3,
+        CritDmgMultiplier = 3,
+        CriticalChance	=	20,
+        DamageCategory = Slash,
+        DamageMakeHole = TRUE,
+        MaxHitCount	=	3,
+        PushBackMod	=	0.25,
+        KnockBackOnNoDeath	=	FALSE,
+        SplatBloodOnNoDeath	=	TRUE,
+        SplatNumber	=	1,
+        SwingAnim	=	Bat,
+        BreakSound  =   KatanaBreak,
+        HitFloorSound	=	KatanaHit,
+        ImpactSound	=	KatanaHit,
+        DoorHitSound = KatanaHit,
+        HitSound	=	KatanaHit,
+        SwingSound	=	KatanaSwing,
+        RunAnim	=	Run_Weapon2,
+        IdleAnim	=	Idle_Weapon2,
+
+    }
+	recipe Assemble Desert Saber
+    {
+        scrapsmith_curvedShortswordBlade=1,
+        aerx.IronBar=1,
+        aerx.Handle=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Time : 250.0,
+        StopOnWalk : TRUE,
+        StopOnRun : TRUE,
+        Result : scrapsmith_desertSaber,
+        Category : LongBlade,
+        SkillRequired:MetalWelding=9,
+        NearItem:Advanced Forge,
+    }
+}
+
+module Base
+{
+	model scrapsmith_desertSaber
+	{
+		mesh = weapons/1handed/scrapsmith_desertSaber,
+
+		attachment world
+		{
+			offset = -0.0060 -0.2930 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+}
