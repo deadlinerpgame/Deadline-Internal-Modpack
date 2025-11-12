@@ -471,10 +471,21 @@ function MedLine_Client.getBloodBagOfType(player, targetBloodType)
         local bag = bloodBags:get(i);
         if bag then
             local modData = bag:getModData().bloodBagInfo;
+
             if modData then
+
                 if modData.bloodType.type == targetBloodType.type then
                     return bag;
                 end
+
+                -- If it doesn't find the matching blood type, find one in the can receive list
+                for _, v in ipairs(targetBloodType.canReceiveFrom) do
+                    if modData.bloodType.type == v then
+                        return bag;
+                    end;
+                end
+
+                
             end
         end
     end
