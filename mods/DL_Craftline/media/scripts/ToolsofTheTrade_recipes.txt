@@ -1,0 +1,251 @@
+module ToolsOfTheTrade {
+	imports {
+		Base
+	}
+	recipe Switch to Stabbing
+	{
+        GladiusSlash,
+
+        Result:GladiusStab,
+        Time:10.0,
+		OnCreate:Recipe.OnCreate.TransferCondition,
+        AllowDestroyedItem:true,
+	}
+	recipe Switch to Slashing
+	{
+		GladiusStab,
+
+		Result:GladiusSlash,
+		Time:10.0,
+		OnCreate:Recipe.OnCreate.TransferCondition,
+        AllowDestroyedItem:true,
+	}
+	recipe Switch Stance
+	{
+        DefilerAxe,
+
+        Result:DefilerSledgehammer,
+        Time:10.0,
+		OnCreate:Recipe.OnCreate.SwitchToHead1,
+        AllowDestroyedItem:true,
+	}
+	recipe Switch Stance
+	{
+		DefilerSledgehammer,
+
+		Result:DefilerAxe,
+		Time:10.0,
+		OnCreate:Recipe.OnCreate.SwitchToHead2,
+        AllowDestroyedItem:true,
+	}
+	recipe Switch Stance
+	{
+		DespoilerAxe,
+
+		Result:DespoilerSledgehammer,
+		Time:10.0,
+		OnCreate:Recipe.OnCreate.SwitchToHead1,
+        AllowDestroyedItem:true,
+	}
+	recipe Switch Stance
+	{
+		DespoilerSledgehammer,
+
+		Result:DespoilerAxe,
+		Time:10.0,
+		OnCreate:Recipe.OnCreate.SwitchToHead2,
+        AllowDestroyedItem:true,
+	}
+	recipe Make A Defiler
+	{
+		Sledgehammer/Sledgehammer2/aerx.SledgehammerHead/aerx.SledgehammerForged,
+		aerx.WoodAxeHead/WoodAxe/aerx.WoodAxeForged=2,
+		aerx.LongHandle=1,
+       		aerx.IronBar=1,
+		Coke/Charcoal=5,
+		DuctTape=5,
+		Woodglue=5,
+		RippedSheets=5,
+		keep [Recipe.GetItemTypes.Saw],
+		keep [Recipe.GetItemTypes.Hammer],
+		
+        Result:DefilerSledgehammer,
+		SkillRequired:MetalWelding=9,
+        Sound:Sawing,
+		Time:450.0,
+        Category:LongBlunt,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.MakeTwoHeaded,
+	}
+	recipe Make A Despoiler
+	{
+		Sledgehammer/Sledgehammer2/aerx.SledgehammerHead/aerx.SledgehammerForged,
+		aerx.WoodAxeHead/WoodAxe/aerx.WoodAxeForged=2,
+		aerx.LongHandle=1,
+       		aerx.IronBar=1,
+		Coke/Charcoal=5,
+		DuctTape=5,
+		Woodglue=5,
+		RippedSheets=5,
+		keep [Recipe.GetItemTypes.Saw],
+		keep [Recipe.GetItemTypes.Hammer],
+
+        Result:DespoilerSledgehammer,
+		SkillRequired:MetalWelding=9,
+        Time:450.0,
+        Category:LongBlunt,
+		OnGiveXP:Recipe.OnGiveXP.None,
+		OnCreate:Recipe.OnCreate.MakeTwoHeaded,
+	}
+
+    	recipe Craft Bearded Axe
+    {
+	aerx.WoodAxeHead=1,
+       	aerx.LongHandle=1,
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:ToolsOfTheTrade.BeardedAxe=1,
+	OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Time:100.0,
+        Category:Axes,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+    	recipe Craft Cavalry Sabre
+    {
+        aerx.IronBar=2,
+        Charcoal=5,
+	aerx.Handle=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:ToolsOfTheTrade.BeardedAxe=1,
+	OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Time:100.0,
+        Category:LongBlade,
+	SkillRequired:MetalWelding=10,
+	NearItem:Advanced Forge,
+    }
+    recipe Craft Executioners Sword
+    {
+        aerx.IronBar=3,
+        Charcoal=5,
+	aerx.Handle=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:ToolsOfTheTrade.ExecutionersSword=1,
+	OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Time:100.0,
+        Category:LongBlade,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+    recipe Craft Fairbairn-Sykes Knife
+    {
+        aerx.IronBar=1,
+        Charcoal=5,
+	aerx.SmallHandle=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:ToolsOfTheTrade.FairbairnSykesKnife=1,
+	OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Time:100.0,
+        Category:ShortBlade,
+	SkillRequired:MetalWelding=8,
+	NearItem:Advanced Forge,
+    }
+
+    	recipe Craft Gladius
+    {
+        aerx.IronBar=2,
+        Charcoal=5,
+	aerx.Handle=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:ToolsOfTheTrade.GladiusStab=1,
+	OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Time:100.0,
+        Category:ShortBlade,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+    	recipe Craft Harpoon Spear
+    {
+        aerx.IronBar=2,
+        Charcoal=5,
+	aerx.LongHandle=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:ToolsOfTheTrade.HarpoonSpear=1,
+	OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Time:100.0,
+        Category:Spear,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+   recipe Craft Kanabo
+    {
+       	Log=3
+	LeatherStrips=2,
+	Screws=20,
+	keep [Recipe.GetItemTypes.Saw],
+	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+	keep Wrench,
+        Result:aerx.Kanabo=1,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:Woodwork=8,
+    }
+
+    recipe Craft Kukri
+    {
+        aerx.IronBar=2,
+        Charcoal=5,
+	aerx.Handle=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:ToolsOfTheTrade.Kukri=1,
+	OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Time:100.0,
+        Category:LongBlade,
+	SkillRequired:MetalWelding=9,
+	NearItem:Advanced Forge,
+    }
+
+    recipe Craft Railway Spike Hammer
+    {
+        aerx.IronBar=2,
+        Charcoal=5,
+	aerx.LongHandle=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:ToolsOfTheTrade.RailwaySpikeHammer=1,
+	OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Time:100.0,
+        Category:LongBlunt,
+	SkillRequired:MetalWelding=8,
+	NearItem:Advanced Forge,
+    }
+
+    recipe Craft Shaolin Spade
+    {
+        aerx.IronBar=2,
+        Charcoal=5,
+	aerx.LongHandle=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:ToolsOfTheTrade.ShaolinSpade=1,
+	OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Time:100.0,
+        Category:Spear,
+	SkillRequired:MetalWelding=8,
+	NearItem:Advanced Forge,
+    }
+    recipe Craft Trident
+    {
+        aerx.IronBar=2,
+        Charcoal=5,
+	aerx.LongHandle=1,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Result:ToolsOfTheTrade.Trident=1,
+	OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        Time:100.0,
+        Category:Spear,
+	SkillRequired:MetalWelding=8,
+	NearItem:Advanced Forge,
+    }
+
+}
