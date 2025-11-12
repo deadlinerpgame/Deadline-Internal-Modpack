@@ -1,31 +1,34 @@
 VERSION = 1,
 
-option BuildingMenu.DeadlineCategoryDivider
-{
+option BuildingMenu.DeadlineCategoryDivider {
     type = boolean,
     default = false,
     page = BuildingMenu,
     translation = BuildingMenu_DeadlineCategoryDivider,
 }
 
-option BuildingMenu.DeadlinePertWallsSubCategory
-{
+option BuildingMenu.DeadlineWallsSubCategory {
     type = boolean,
     default = true,
     page = BuildingMenu,
-    translation = BuildingMenu_DeadlinePertWallsSubCategory,
+    translation = BuildingMenu_DeadlineWallsSubCategory,
 }
 
-option BuildingMenu.DeadlineTablesSubCategory
-{
+option BuildingMenu.DeadlineFloorsSubCategory {
+    type = boolean,
+    default = true,
+    page = BuildingMenu,
+    translation = BuildingMenu_DeadlineWallsSubCategory,
+}
+
+option BuildingMenu.DeadlineTablesSubCategory {
     type = boolean,
     default = true,
     page = BuildingMenu,
     translation = BuildingMenu_DeadlineTablesSubCategory,
 }
 
-option BuildingMenu.DeadlineBookshelvesSubCategory
-{
+option BuildingMenu.DeadlineBookshelvesSubCategory {
     type = boolean,
     default = true,
     page = BuildingMenu,
