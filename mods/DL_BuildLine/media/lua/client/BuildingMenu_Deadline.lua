@@ -10,13 +10,19 @@ require("BuildingMenu04_CategoriesDefinitions")
 
         !! CURRENT CATEGORIES !!
             > WALLS
+            > FLOORS:
+                - Wooden
+                - Carpet
+                - Checkered: small, large
+                - Tile: diagonal, smooth, exterior
             > FURNITURE
                 - TABLES: Low tables, Small tables, Large tables
                 - BOOKSHELVES
 
 --]]
 
---[[ >>>>>>>> WALLS <<<<<<<< --]]
+
+--[[ >>>>>>>> FWALLS <<<<<<<< --]]
 
 local function addDeadlineWallsToMenu()
 -- MELOS - Tiled Vines Blue
@@ -19205,6 +19211,1828 @@ local function addDeadlineWallsToMenu()
 end
 
 
+
+--[[ >>>>>>>> FFLOORS <<<<<<<< --]]
+
+local function addDeadlineFloorsToMenu()
+    local Deadlinefloors = {
+-- FWOODEN
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineFloors_Wooden",
+            subCategoryIcon = "floors_interior_tilesandwood_01_40",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "BZMsBikerGarage01_4"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_40"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_41"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_42"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_43"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_44"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_45"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_48"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_49"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_50"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_51"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_52"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_40"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_41"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_42"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_43"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_44"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_45"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_46"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_47"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_48"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_49"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_50"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_51"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_52"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_53"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_54"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_55"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_56"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_57"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_58"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_59"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_60"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_61"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_62"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_63"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_64"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_65"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_66"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_67"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_68"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_69"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_70"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_71"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_72"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_73"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_74"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_75"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "pert_floors_01_48"
+                    }
+                ),
+            }
+        },
+-- FCARPETS
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineFloors_Carpets",
+            subCategoryIcon = "floors_interior_carpet_01_0",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "BZM_Arcade_BERT_01_1" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "BZM_Arcade_BERT_01_0" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "LC_Arcade_01_9" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "LC_Arcade_01_8" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_0" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_1" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_2" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_3" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_4" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_5" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_6" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_7" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_8" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_9" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_10" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_11" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_12" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_13" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floor_carpet_motif_15" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floors_interior_carpet_erika_01_0" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floors_interior_carpet_erika_01_1" }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Blue_Carpet",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.FloorRugRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    { sprite = "floors_interior_carpet_erika_01_2" }
+                ),
+
+            }
+        },
+-- FCHECKERED SMALL
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineFloors_Tile_Checkered_Small",
+            subCategoryIcon = "floors_interior_tilesandwood_01_2",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "LC_Fancyfloor_21"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "LC_Fancyfloor_16"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "LC_Fancyfloor_19"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "LC_Fancyfloor_10"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_0"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_1"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_2"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_5"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_3"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_2"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_3"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_10"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_8"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_12"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_10"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_14"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_15"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_9"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_11"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_13"
+                    }
+                ),
+            }
+        },
+-- FCHECKERED LARGE
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineFloors_Tile_Checkered_Large",
+            subCategoryIcon = "floors_interior_tilesandwood_01_7",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_6"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_7"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_21"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_23"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_28"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_29"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_30"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_31"
+                    }
+                ),
+            }
+        },
+-- FTILE DIAGONAL
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineFloors_Tile_Diagonal",
+            subCategoryIcon = "floors_interior_tilesandwood_01_0",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_7"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_6"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_5"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_9"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_4"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_12"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_14"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_27"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_26"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_25"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_24"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_0"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_1"
+                    }
+                ),
+            }
+        },
+-- FTILE SMOOTH
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineFloors_Tile_Smooth",
+            subCategoryIcon = "floors_interior_tilesandwood_01_16",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_34"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_39"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_76"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_80"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.TwoSpriteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_81"
+                    }
+                ),
+            }
+        },
+-- FTILE EXTERIOR
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineFloors_Tile_Exterior",
+            subCategoryIcon = "floors_exterior_tilesandstone_01_0",
+            objects = {
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_exterior_tilesandstone_01_7"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "LC_Fancyfloor_8"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "LC_Fancyfloor_9"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "LC_Fancyfloor_13"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "LC_Fancyfloor_14"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_exterior_tilesandstone_erika_01_0"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_20"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_21"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_22"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_interior_tilesandwood_erika_01_23"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "custom_floors_interior_tilesandwood_011_11"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_exterior_tilesandstone_01_1"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_exterior_tilesandstone_01_8"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_exterior_tilesandstone_01_9"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_exterior_tilesandstone_01_10"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_exterior_tilesandstone_01_11"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_exterior_tilesandstone_01_2"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_exterior_tilesandstone_01_12"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_exterior_tilesandstone_01_13"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_exterior_tilesandstone_01_14"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_BuildingMenuObj_Exterior_Tile",
+                    "Tooltip_Floor_Generic",
+                    BuildingMenu.onBuildFloor,
+                    BuildingMenu.ConcreteFloorRecipe,
+                    true,
+                    {
+                        completionSound = "DropSoilFromGravelBag"
+                    },
+                    {
+                        sprite = "floors_exterior_tilesandstone_01_15"
+                    }
+                ),
+            }
+        }
+    }
+
+-- Add floor category
+    for k, subCatData in pairs(Deadlinefloors) do
+        BuildingMenu.addObjectsToCategories(
+            "Deadline",
+            "IGUI_BuildingMenuCat_DeadlineFloors",
+            "floors_interior_tilesandwood_01_40",
+            subCatData.subcategoryName,
+            subCatData.subCategoryIcon,
+            subCatData.objects
+        )
+    end
+end
+
+
+
 --[[ >>>>>> FURNITURE <<<<<< --]]
 
 -- >> TABLES: LOW, SMALL, LARGE
@@ -20418,6 +22246,7 @@ local function addDeadlineTablesToMenu()
             }
         },
     }
+-- Add Furniture Category 
     for k, subCatData in pairs(DeadlineTables) do
         BuildingMenu.addObjectsToCategories(
             "Deadline",
@@ -20447,6 +22276,7 @@ local function addDeadlineBookshelvesToMenu()
                     {
                         completionSound = "BuildWoodenStructureLarge",
                         needToBeAgainstWall = true,
+                        blockAllTheSquare = false,
                     },
                     {
                         sprite = "furniture_shelving_01_0",
@@ -20461,6 +22291,7 @@ local function addDeadlineBookshelvesToMenu()
                     {
                         completionSound = "BuildWoodenStructureLarge",
                         needToBeAgainstWall = true,
+                        blockAllTheSquare = false,
                     },
                     {
                         sprite = "furniture_shelving_01_2",
@@ -20478,6 +22309,7 @@ local function addDeadlineBookshelvesToMenu()
                     {
                         completionSound = "BuildWoodenStructureLarge",
                         needToBeAgainstWall = true,
+                        blockAllTheSquare = false,
                     },
                     {
                         sprite = "furniture_shelving_erika_01_88",
@@ -20492,6 +22324,7 @@ local function addDeadlineBookshelvesToMenu()
                     {
                         completionSound = "BuildWoodenStructureLarge",
                         needToBeAgainstWall = true,
+                        blockAllTheSquare = false,
                     },
                     {
                         sprite = "furniture_shelving_erika_01_90",
@@ -20510,6 +22343,7 @@ local function addDeadlineBookshelvesToMenu()
                         completionSound = "BuildWoodenStructureLarge",
                         needToBeAgainstWall = true,
                         buildHigh = true,
+                        blockAllTheSquare = false,
                     },
                     {
                         sprite = "furniture_shelving_erika_01_96",
@@ -20525,6 +22359,7 @@ local function addDeadlineBookshelvesToMenu()
                         completionSound = "BuildWoodenStructureLarge",
                         needToBeAgainstWall = true,
                         buildHigh = true,
+                        blockAllTheSquare = false,
                     },
                     {
                         sprite = "furniture_shelving_erika_01_98",
@@ -20810,9 +22645,187 @@ local function addDeadlineBookshelvesToMenu()
                         southSprite = "furniture_shelving_01_51",
                     }
                 ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        buildLow = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "furniture_02_Simon_MD_88",
+                        northSprite = "furniture_02_Simon_MD_89",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        buildLow = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "furniture_02_Simon_MD_90",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_WallPillar_Name",
+                    "Tooltip_WallPillar_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SmallWoodWallRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canPassThrough = true,
+                        canBarricade = false,
+                        isCorner = true,
+                        modData = { wallType = "pillar" }
+                    },
+                    { 
+                        sprite = "furniture_02_Simon_MD_91"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        buildLow = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "furniture_02_Simon_MD_92",
+                        northSprite = "furniture_02_Simon_MD_93",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        buildLow = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "furniture_02_Simon_MD_94",
+                        northSprite = "furniture_02_Simon_MD_95",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        buildLow = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "furniture_02_Simon_MD_97",
+                        northSprite = "furniture_02_Simon_MD_98",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        buildLow = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "furniture_02_Simon_MD_99",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_BookshelfStairs_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        buildLow = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "furniture_03_Simon_MD_15",
+                        northSprite = "furniture_03_Simon_MD_10",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_BookshelfStairs_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        buildLow = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "furniture_03_Simon_MD_14",
+                        northSprite = "furniture_03_Simon_MD_11",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_BookshelfStairsEnd_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        buildLow = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "furniture_03_Simon_MD_13",
+                        northSprite = "furniture_03_Simon_MD_12",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_BookshelfStairsEnd_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        buildLow = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "honeywood_Simon_MD_139",
+                        northSprite = "honeywood_Simon_MD_140",
+                        eastSprite = "honeywood_Simon_MD_141",
+                        southSprite = "honeywood_Simon_MD_142",
+                    }
+                ),
             }
         },
     }
+-- Add Bookshelves Category
     for k, subCatData in pairs(DeadlineBookshelves) do
         BuildingMenu.addObjectsToCategories(
             "Deadline",
@@ -20831,8 +22844,14 @@ end
 
 --[[ >>>>>> FOR THE SANDBOX OPTIONS ON "media\sandbox-options.txt" <<<<<<--]]
 local function addCategoriesToBuildingMenu()
-    if SandboxVars.BuildingMenu.DeadlinePertWallsSubCategory then
+    if SandboxVars.BuildingMenu.DeadlineSurvivalStructuralSubCategory then
+        addDeadlineSurvivalStructuralToMenu()
+    end
+    if SandboxVars.BuildingMenu.DeadlineWallsSubCategory then
         addDeadlineWallsToMenu()
+    end
+    if SandboxVars.BuildingMenu.DeadlineFloorsSubCategory then
+        addDeadlineFloorsToMenu()
     end
     if SandboxVars.BuildingMenu.DeadlineTablesSubCategory then
         addDeadlineTablesToMenu()
