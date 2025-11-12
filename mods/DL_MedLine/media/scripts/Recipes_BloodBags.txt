@@ -8,7 +8,7 @@ module MedLine
     recipe Craft Empty Bloodbag
     {
        	Garbagebag/Plasticbag=8,
-        Water=5,
+        Water=10,
         keep Pot,
         Result:BloodBag_Empty,
         Time:500.0,
@@ -20,8 +20,8 @@ module MedLine
     recipe Make Bag of Normal Saline
     {
        	BloodBag_Empty=1,
-        Water=5,
-        Salt;1,
+        Water=10,
+        Salt=3,
         Result:BloodBag_Empty,
         Time:300.0,
         Category:Medical,
