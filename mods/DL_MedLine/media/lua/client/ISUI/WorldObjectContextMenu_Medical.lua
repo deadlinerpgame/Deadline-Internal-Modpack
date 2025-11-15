@@ -60,11 +60,6 @@ end
 
 
 function MedLine_Events.populateMedicalCheck_BloodDraw(player, context, subMenu, medicalCheckOpt, requiredSkillLevel)
-    
-    MedLine_Logging.log("populateMedicalCheck_BloodDraw");
-    MedLine_Logging.log("Param 1 - " .. medicalCheckOpt.param1:getUsername());
-    MedLine_Logging.log("Param 2 - " .. medicalCheckOpt.param2:getUsername());
-
     local newOpt = subMenu:addOption(getText("ContextMenu_MedLine_DrawBlood"), context, MedLine_Events.onClickDrawBlood, medicalCheckOpt.param1, medicalCheckOpt);
     local tooltip = ISWorldObjectContextMenu.addToolTip();
 
@@ -114,14 +109,10 @@ end
 
 function MedLine_Events.populateMedicalCheck_BloodTransfusion(player, context, subMenu, medicalCheckOpt, requiredSkillLevel)
 
-    MedLine_Logging.log("populateMedicalCheck_BloodTransfusion");
-    MedLine_Logging.log("Param 1 - " .. medicalCheckOpt.param1:getUsername());
-    MedLine_Logging.log("Param 2 - " .. medicalCheckOpt.param2:getUsername());
-
     local targetBloodType = MedLine_Client.getBloodType(medicalCheckOpt.param2);
     local matchingBag = MedLine_Client.getBloodBagOfType(medicalCheckOpt.param1, targetBloodType);
 
-    print("Target blood type for player " .. medicalCheckOpt.param2:getUsername() .. " is " .. (targetBloodType.type or "NOT FOUND"));
+    MedLine_Logging.log("Target blood type for player " .. medicalCheckOpt.param2:getUsername() .. " is " .. (targetBloodType.type or "NOT FOUND"));
 
     local newOpt = subMenu:addOption(getText("ContextMenu_MedLine_GiveBlood"), context, MedLine_Events.onClickGiveBlood, medicalCheckOpt.param1, medicalCheckOpt, matchingBag);
     local tooltip = ISWorldObjectContextMenu.addToolTip();
@@ -171,10 +162,6 @@ function MedLine_Events.populateMedicalCheck_BloodTransfusion(player, context, s
 end
 
 function MedLine_Events.populateMedicalCheck_SalineTransfusion(player, context, subMenu, medicalCheckOpt, requiredSkillLevel)
-    MedLine_Logging.log("populateMedicalCheck_SalineTransfusion");
-    MedLine_Logging.log("Param 1 - " .. medicalCheckOpt.param1:getUsername());
-    MedLine_Logging.log("Param 2 - " .. medicalCheckOpt.param2:getUsername());
-
     local matchingBag = MedLine_Client.getSalineBag(medicalCheckOpt.param1);
 
     local newOpt = subMenu:addOption(getText("ContextMenu_MedLine_GiveSaline"), context, MedLine_Events.onClickGiveSaline, medicalCheckOpt.param1, medicalCheckOpt, matchingBag);

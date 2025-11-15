@@ -4,23 +4,18 @@ MedLine_Dict = MedLine_Dict or {};
 
 MedLine_Server = {};
 
---- BloodData - stores blood type and state of a player.
---- ["username"] = 
---- {
----     bloodType
---- }
 MedLine_Server.BloodData = {};
 
 CachedUserData = {};
 
 function MedLine_Server.OnInitGlobalModData(newGame)
-    print("MedLine_Server - OnInitGlobalModData");
+    MedLine_Logging.log("MedLine_Server - OnInitGlobalModData");
     CachedUserData = ModData.getOrCreate(MedLine_Dict.ModDataKeys.UserData);
-    print("CachedUserData has " .. tostring(#CachedUserData) .. " stored items.");
+    MedLine_Logging.log("CachedUserData has " .. tostring(#CachedUserData) .. " stored items.");
 end
 
 function MedLine_Server.SaveUserData()
-    print("MedLine_Server - SaveUserData.");
+    MedLine_Logging.log("MedLine_Server - SaveUserData.");
     ModData.add(MedLine_Dict.ModDataKeys.UserData, CachedUserData);
     ModData.transmit(MedLine_Dict.ModDataKeys.UserData);
 end
@@ -37,7 +32,7 @@ function MedLine_Server.OnClientCommand(module, command, player, args)
     end
 
     if command == "SyncMedicalData" then
-        print("SyncMedicalData called from player " .. player:getUsername());
+        MedLine_Logging.log("SyncMedicalData called from player " .. player:getUsername());
         local character = args.character; -- Username
         local data = args.data;
         if not character or not data then
@@ -50,7 +45,7 @@ function MedLine_Server.OnClientCommand(module, command, player, args)
         end
 
         if CachedUserData[character] then
-            print("Updating player " .. character .. " medical data.");
+            MedLine_Logging.log("Updating player " .. character .. " medical data.");
         end
 
         CachedUserData[character] = data;
@@ -123,9 +118,9 @@ function MedLine_Server.OnClientCommand(module, command, player, args)
     end
 
     if command == "ReduceBloodLossDuration" then
-        print("ReduceBloodLossDuration");
+        MedLine_Logging.log("ReduceBloodLossDuration");
         local targetUsername = args.target;
-        print("ReduceBloodLossDuration for player " .. args.target);
+        MedLine_Logging.log("ReduceBloodLossDuration for player " .. args.target);
         if not targetUsername then return end;
 
         local allPlayers = getOnlinePlayers();
