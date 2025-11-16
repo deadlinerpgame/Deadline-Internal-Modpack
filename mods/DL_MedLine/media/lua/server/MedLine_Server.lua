@@ -7,6 +7,7 @@ MedLine_Server = {};
 MedLine_Server.BloodData = {};
 
 CachedUserData = {};
+HasPrunedUserDataThisRestart = false;
 
 function MedLine_Server.OnInitGlobalModData(newGame)
     MedLine_Logging.log("MedLine_Server - OnInitGlobalModData");
@@ -16,6 +17,27 @@ end
 
 function MedLine_Server.SaveUserData()
     MedLine_Logging.log("MedLine_Server - SaveUserData.");
+
+    if not HasPrunedUserDataThisRestart then
+        MedLine_Logging.log("User data has not been pruned this restart, removing characters last saved more than a month ago.");
+
+        for username, data in pairs(CachedUserData) do
+            if not data.lastSavedUnix then
+                data.lastSavedUnix = getTimestamp()
+            end
+
+            local lastSavedDiff = getTimestamp() - data.lastSavedUnix;
+            local monthInSeconds = 2628000;
+
+            if lastSavedDiff > monthInSeconds then
+                MedLine_Logging.log("Player " .. username .. " was last updated at unix " .. tostring(data.lastSavedUnix) .. " (over 1 month ago) - pruning.");
+                CachedUserData[username] = nil;
+            end
+        end
+
+        HasPrunedUserDataThisRestart = true;
+    end
+
     ModData.add(MedLine_Dict.ModDataKeys.UserData, CachedUserData);
     ModData.transmit(MedLine_Dict.ModDataKeys.UserData);
 end

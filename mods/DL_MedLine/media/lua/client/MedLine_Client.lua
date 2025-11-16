@@ -147,6 +147,8 @@ function MedLine_Client.saveMedicalData()
         return
     end
 
+    getPlayer():getModData().MedLine.BloodData.lastSavedUnix = getTimestamp();
+
     sendClientCommand(getPlayer(), "MedLine", "SyncMedicalData", { character = username, data = getPlayer():getModData().MedLine.BloodData or {} });
 end
 

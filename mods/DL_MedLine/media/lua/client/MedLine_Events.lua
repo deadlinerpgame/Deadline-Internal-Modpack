@@ -160,6 +160,7 @@ function MedLine_Events.onClickDiceHpModal(player, btn)
     else
         message = getPlayer():getDescriptor():getForename() .. " is now suffering from blood loss.";
         MedLine_Client.initiateBloodLossStart(SandboxVars.MedLine.BloodLoss_RecoveryTimeDaysPVP or 5);
+        getPlayer():getModData().MedLine.BloodData.bloodLossCausedByPVP = true;
     end;
 
     local args =
