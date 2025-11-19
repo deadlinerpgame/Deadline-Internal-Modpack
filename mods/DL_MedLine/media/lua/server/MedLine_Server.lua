@@ -54,7 +54,6 @@ function MedLine_Server.OnClientCommand(module, command, player, args)
     end
 
     if command == "SyncMedicalData" then
-        MedLine_Logging.log("SyncMedicalData called from player " .. player:getUsername());
         local character = args.character; -- Username
         local data = args.data;
         if not character or not data then

@@ -359,6 +359,15 @@ function MedLine_Client.checkBloodLossRecovery()
     if not bloodData then return end;
 
     if not bloodData.bloodLossTimeoutUnix then
+
+        if MF.getMoodle("BloodLoss", getPlayer():getPlayerNum()):getValue() ~= 0.5 then
+            MF.getMoodle("BloodLoss", getPlayer():getPlayerNum()):setValue(0.5);
+        end
+
+        if MF.getMoodle("BloodTransfusion", getPlayer():getPlayerNum()):getValue() ~= 0.5 then
+            MF.getMoodle("BloodTransfusion", getPlayer():getPlayerNum()):setValue(0.5);
+        end
+
         return;
     end
 

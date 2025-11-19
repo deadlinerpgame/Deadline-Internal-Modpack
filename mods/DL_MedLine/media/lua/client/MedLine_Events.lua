@@ -36,11 +36,11 @@ function MedLine_Events.EveryOneMinute()
     -- If the health is over the threshhold and their blood data does not show they have lapsed below
     if health > threshhold and bloodData and (not MedLine_Client.hasLapsedBelowThreshold()) then return end;
 
-    if health > threshhold and bloodData and MedLine_Client.hasLapsedBelowThreshold() then
+    if health > threshhold and MedLine_Client.hasLapsedBelowThreshold() then
         MedLine_Client.setNowAboveThreshold();
     end;
 
-    if health <= threshhold and bloodData and not MedLine_Client.hasLapsedBelowThreshold() then
+    if health <= threshhold and not MedLine_Client.hasLapsedBelowThreshold() then
         MedLine_Client.initiateBloodLossStart(SandboxVars.MedLine.BloodLoss_RecoveryTimeDays or 7);
     end
 end

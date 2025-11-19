@@ -35,6 +35,34 @@ module MedLine
 		WorldStaticModel= M_BloodBag_Saline,
 	}
 
+	item PotWithMeltedPlastic
+	{
+		DisplayName = Cooking Pot with Plastic,
+		DisplayCategory = Water,
+		Type = Normal,
+		Weight = 5,
+		Icon = Pot_Water,
+		StaticModel = CookingPot,
+		WorldStaticModel = CookingPotWater_Ground,
+	}
+
+	item PotWithBagsForMelting
+	{
+		DisplayName = Cooking Pot with Plastic Bags,
+		DisplayCategory = Material,
+		Type = Food,
+		Weight = 3,
+		Icon = Pot_Water,
+		IsCookable = TRUE,
+		StaticModel = CookingPot,
+        MinutesToCook = 45,
+        MinutesToBurn = 120,
+        ReplaceOnCooked = MedLine.PotWithMeltedPlastic,
+		WorldStaticModel = CookingPotWater_Ground,
+	}
+
+	
+
 	model M_BloodBag_Empty
 	{
 		mesh = WorldItems/BloodBag,
