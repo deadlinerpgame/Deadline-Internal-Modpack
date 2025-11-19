@@ -258,9 +258,9 @@ function MedLine_Events.prepareMedCheckLossTooltip(medicalCheckOpt)
             remainingString = "Approx. " .. remainingString;
         end
 
-        return string.format("<RED> %s is suffering from blood loss. <LINE> %s", medicalCheckOpt.param2:getDescriptor():getForename(), remainingString);
+        return string.format("<RED> %s is suffering from blood loss. <LINE> %s <LINE> <LINE> Click on the player's name in the Medical Check sub-menu to perform a medical check.", medicalCheckOpt.param2:getDescriptor():getForename(), remainingString);
     else
-        return "<GREEN> " .. medicalCheckOpt.param2:getDescriptor():getForename() .. " does not appear to be suffering from blood loss. <LINE> ";
+        return "<GREEN> " .. medicalCheckOpt.param2:getDescriptor():getForename() .. " does not appear to be suffering from blood loss. <LINE> <LINE> Click on the player's name in the Medical Check sub-menu to perform a medical check.";
     end
 end
 
