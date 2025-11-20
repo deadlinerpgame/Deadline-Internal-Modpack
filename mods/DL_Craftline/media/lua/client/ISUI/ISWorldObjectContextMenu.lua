@@ -2374,7 +2374,7 @@ ISWorldObjectContextMenu.onTrade = function(worldobjects, player, otherPlayer)
     ui:initialise();
     ui:addToUIManager();
     ui.pendingRequest = true;
-    ui.blockingMessage = getText("IGUI_TradingUI_WaitingAnswer", otherPlayer:getDisplayName());
+    ui.blockingMessage = getText("IGUI_TradingUI_WaitingAnswer", otherPlayer:getDescriptor():getForename());
     requestTrading(player, otherPlayer);
 end
 

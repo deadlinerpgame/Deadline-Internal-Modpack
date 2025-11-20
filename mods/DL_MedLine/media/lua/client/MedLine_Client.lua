@@ -137,13 +137,23 @@ end
 function MedLine_Client.saveMedicalData()
     local username = getPlayer():getUsername();
 
+    if not getPlayer():getModData().MedLine then
+        MedLine_Logging.log("saveMedicalData called with no MedLine object. Terminating early.");
+        return
+    end
+
+    if not getPlayer():getModData().MedLine.BloodData then
+        MedLine_Logging.log("saveMedicalData called with no BloodData object. Terminating early.");
+        return
+    end
+
+    getPlayer():getModData().MedLine.BloodData.lastSavedUnix = getTimestamp();
+
     sendClientCommand(getPlayer(), "MedLine", "SyncMedicalData", { character = username, data = getPlayer():getModData().MedLine.BloodData or {} });
 end
 
 function MedLine_Client.OnCreatePlayer(playerNum, player)
-    print("OnCreatePlayer for " .. player:getUsername());
     ModData.request(MedLine_Dict.ModDataKeys.UserData);
-    print("Mod data requested for userdata.");
 end
 
 function MedLine_Client.getBloodData()
@@ -253,7 +263,7 @@ function MedLine_Client.initiateBloodLossStart(timeInDays)
     MedLine_Client.saveMedicalData();
 
     -- Now handle events.
-    Events.OnPlayerUpdate.Add(MedLine_Events.OnPlayerUpdate);
+    --Events.OnPlayerUpdate.Add(MedLine_Events.OnPlayerUpdate);
 end
 
 function MedLine_Client.setHasRecoveredFromBloodLoss()
@@ -311,19 +321,15 @@ function MedLine_Client.reduceBloodLossByPercentage(efficiency)
     end
 
     local totalSecondsDiff = bloodData.bloodLossTimeoutUnix - bloodData.bloodLossStartedUnix;
-    print("reduceBloodLossByPercentage totalSecondsDiff is " .. tostring(totalSecondsDiff));
 
     local relativePosition = bloodData.bloodLossTimeoutUnix - getTimestamp();
-    print("reduceBloodLossByPercentage relativePosition is " .. tostring(relativePosition));
 
     local newRemainingTime = relativePosition * actualEfficiency;
-    print("New remaining time is " .. tostring(newRemainingTime));
 
     MF.getMoodle("BloodTransfusion", getPlayer():getPlayerNum()):setValue(0.6);
 
-    print("Updating blood loss timeout unix from: " .. tostring(bloodData.bloodLossTimeoutUnix));
     bloodData.bloodLossTimeoutUnix = bloodData.bloodLossStartedUnix + newRemainingTime;
-    print("Blood loss unix timeout is now: " .. bloodData.bloodLossTimeoutUnix);
+    MedLine_Logging.log("Blood loss unix timeout is now: " .. bloodData.bloodLossTimeoutUnix);
 
     bloodData.hasReceivedTransfusion = true;
 
@@ -349,22 +355,32 @@ function MedLine_Client.isRecoveringFromBloodLoss()
 end
 
 function MedLine_Client.checkBloodLossRecovery()
-    print("Checking for blood loss recovery.");
     local bloodData = MedLine_Client.getBloodData();
     if not bloodData then return end;
 
     if not bloodData.bloodLossTimeoutUnix then
+
+        if MF.getMoodle("BloodLoss", getPlayer():getPlayerNum()):getValue() ~= 0.5 then
+            MF.getMoodle("BloodLoss", getPlayer():getPlayerNum()):setValue(0.5);
+        end
+
+        if MF.getMoodle("BloodTransfusion", getPlayer():getPlayerNum()):getValue() ~= 0.5 then
+            MF.getMoodle("BloodTransfusion", getPlayer():getPlayerNum()):setValue(0.5);
+        end
+
         return;
     end
 
     local currentTime = getTimestamp();
 
     if currentTime >= bloodData.bloodLossTimeoutUnix then
+        MedLine_Logging.log("Checking for blood loss recovery - blood loss timeout so stopping.");
         MedLine_Client.setBloodLossStopped();
         return;
     end
 
     if bloodData.bloodLossTimeoutUnix > currentTime then -- If unix > current then we're not there yet.
+        MedLine_Logging.log("Client has blood loss.");
         if isDebugEnabled() then
             print("BloodLossRecovery: timeout unix is " .. tostring(bloodData.bloodLossTimeoutUnix) .. " vs current time " .. getTimestamp());
             print("Difference is " .. tostring(bloodData.bloodLossTimeoutUnix - currentTime) .. " seconds.");
@@ -372,11 +388,13 @@ function MedLine_Client.checkBloodLossRecovery()
     end;
 
     local moodleVal = MedLine_Client.getRecoveryMoodleValue();
+    MedLine_Logging.log("Blood loss moodle val is " .. moodleVal);
     if not moodleVal then moodleVal = 0.5; end;
     MF.getMoodle("BloodLoss", getPlayer():getPlayerNum()):setValue(moodleVal);
 
     if bloodData.hasReceivedTransfusion then
         MF.getMoodle("BloodTransfusion", getPlayer():getPlayerNum()):setValue(0.6);
+        MedLine_Logging.log("Setting blood transfusion moodle value.");
     end
 end
 
@@ -492,30 +510,6 @@ function MedLine_Client.getBloodBagOfType(player, targetBloodType)
 
     return nil;
 end
-
-function MedLine_Client.hasItemsForBloodTransfusion(player, targetBloodtype)
-    if not player then return end;
-    if not targetBloodType then
-        MedLine_Logging.log("hasItemsForBloodTransfusion - no targetBloodType");
-        error("hasItemsForBloodTransfusion", 1);
-    end;
-    
-    if not MedLine_Client.recursiveItemCheckEx(player, MedLine_Client.bloodTransfusionItems) then return false end;
-
-    local bagList = player:getInventory():getAllTypeRecurse("MedLine.BloodBag_Full");
-    for i = 0, bagList:size() - 1 do
-        local bag = bagList:get(i);
-        if bag then
-            local modData = bag:getModData().bloodBagInfo;
-            if modData then
-                if modData.bloodType and modData.bloodType.type and modData.bloodType.type == targetBloodtype.type then
-                    return true;
-                end
-            end
-        end
-    end
-end
-
 
 --[[
 
