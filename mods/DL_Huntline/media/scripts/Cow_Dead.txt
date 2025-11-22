@@ -10,15 +10,23 @@ module Base {
 
     item Cow_Dead
 	{
-        WorldStaticModel = Cow_Dead,
-	DisplayCategory = Food,
-	Weight	=	30.0,
-	Type	=	Normal,
-	DaysFresh 			=		10,
-	DaysTotallyRotten 	=	 	15,
 	DisplayName = Cow Carcass,
+	DisplayCategory = Food,
+	Type	=	Food,
+	Weight	=	30.0,
 	Icon = DeadPerson_MaleZombie,
-
+	DaysFresh 			=		5,
+	DaysTotallyRotten 	=	 	5,
+        WorldStaticModel = Cow_Dead,
+	Tags = HeavyItem,
+	CantBeFrozen = TRUE,
+	Poison = true,
+	PoisonDetectionLevel = 7,
+	PoisonPower = 500,
+	HungerChange = -100,
+	ThirstChange = -100,
+	UnhappyChange = 99,
+	ReplaceOnRotten = DummyItem,
 	}
 
 

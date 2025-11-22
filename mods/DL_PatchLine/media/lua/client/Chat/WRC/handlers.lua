@@ -467,6 +467,8 @@ function WRC.Handlers.AddLineInChat(chatMessage, tabID)
     -- Clone the message if it was my one message.
     -- If in the radio tab, once for each radio that is on and broadcasting
     -- If in the general tab and the radio is synced, into the radio tab for that frequency
+    local player = getSpecificPlayer(0)
+
     if currentTabId == WRC.RadioTabId and not wasZombieYell and isMe then
         local radios = WRU_Utils.getPlayerRadios(getPlayer(), true, true)
         for _, radio in ipairs(radios) do
@@ -478,8 +480,9 @@ function WRC.Handlers.AddLineInChat(chatMessage, tabID)
                 radioChannel = chatMessage:getRadioChannel(),
                 datetimeStr = chatMessage:getDatetimeStr(),
             })
-            if hasBracketsOrParentheses(radioFormatted) then
-                print(radioFormatted)
+            print(radioFormatted)
+            if hasBracketsOrParentheses(radioFormatted, player) then
+                
                 WL_Utils.addErrorToChat("OOC messages and environment messages will not be transmitted by radio. Do not attempt to cirumvent this.")
             else
                 WRC.ISChatOriginal.addLineInChat(radioMessage, WRC.RadioTabId)
@@ -497,8 +500,9 @@ function WRC.Handlers.AddLineInChat(chatMessage, tabID)
                     radioChannel = chatMessage:getRadioChannel(),
                     datetimeStr = chatMessage:getDatetimeStr(),
                 })
-            if hasBracketsOrParentheses(radioFormatted) then
                 print(radioFormatted)
+            if hasBracketsOrParentheses(radioFormatted, player) then
+                
                 WL_Utils.addErrorToChat("OOC messages and environment messages will not be transmitted by radio. Do not attempt to cirumvent this.")
             else
                 WRC.ISChatOriginal.addLineInChat(radioMessage, WRC.RadioTabId)
@@ -662,7 +666,7 @@ function WRC.Handlers.DrawRadioPlaceholder(chatInstance)
         local frequencies = {}
         local radios = WRU_Utils.getPlayerRadios(me, true, true)
         for _, radio in ipairs(radios) do
-           -- table.insert(frequencies, tostring(WRU_Utils.getRadioFrequency(radio)/1000) .. " MHz")
+            table.insert(frequencies, tostring(WRU_Utils.getRadioFrequency(radio)/1000) .. " MHz")
         end
         local trasmitMessage = "TX on: " .. table.concat(frequencies, ", ")
         local width = getTextManager():MeasureStringX(UIFont.Medium, message .. ", " .. trasmitMessage)
