@@ -2,7 +2,12 @@ require "ISUI/ISWorldObjectContextMenu"
 
 local _orig_onTrade = ISWorldObjectContextMenu.onTrade
 
+print("[PatchLine] Overriding ISWorldObjectContextMenu.onTrade");
 ISWorldObjectContextMenu.onTrade = function(worldobjects, player, otherPlayer)
-    _orig_onTrade(worldobjects, player, otherPlayer);
-    ISWorldObjectContextMenu.instance.blockingMessage = getText("IGUI_TradingUI_WaitingAnswer", otherPlayer:getDescriptor():getForename());
+    local ui = ISTradingUI:new(50,50,500,500, player, otherPlayer)
+    ui:initialise();
+    ui:addToUIManager();
+    ui.pendingRequest = true;
+    ui.blockingMessage = getText("IGUI_TradingUI_WaitingAnswer", otherPlayer:getDescriptor():getForename());
+    requestTrading(player, otherPlayer);
 end

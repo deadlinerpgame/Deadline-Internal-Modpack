@@ -56,6 +56,11 @@ function MLGiveSalineAction:perform()
 
     -- Set the temp debuff
     self.item:getContainer():DoRemoveItem(self.item);
+
+    -- Give empty bag of saline.
+    local emptySaline = InventoryItemFactory.CreateItem("MedLine.BloodBag_Saline");
+    self.doctor:getInventory():DoAddItem(emptySaline);
+
     sendClientCommand(self.doctor, "MedLine", "ReduceBloodLossDuration", { target = self.patient:getUsername(), efficiency = (SandboxVars.MedLine.BloodLoss_SalineEfficiency or 50) });
 end
 

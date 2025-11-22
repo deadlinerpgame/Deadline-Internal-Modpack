@@ -1,38 +1,32 @@
 require "MedLine_Client";
 require "MedLine_Dict";
-require "WL"
+require "WL";
 
 MedLine_Events = {};
 MedLine_Client = MedLine_Client or {};
 MedLine_Dict = MedLine_Dict or {};
 
 local HasCheckedForCachedMedicalData = false;
-local MinutesSinceRetrievedMedicalData = 0;
-local HasSentOwnMedicalDataAfterDelay = false;
-
 
 function MedLine_Events.EveryOneMinute()
     local player = getPlayer();
     if not player then return end;
 
     if not HasCheckedForCachedMedicalData then
-        ModData.request(MedLine_Dict.ModDataKeys.UserData);
-        HasCheckedForCachedMedicalData = true;
-    end
 
-    -- Save after 1 IG minutes, this should be sufficient to allow for back and forth transmission without causing too much of a delay or initial spam.
-    -- This is done because there's a lot of back and forth communication with the server on initial connect.
-    if HasCheckedForCachedMedicalData and MinutesSinceRetrievedMedicalData < 1 then
-        MinutesSinceRetrievedMedicalData = MinutesSinceRetrievedMedicalData + 1;
-    elseif HasCheckedForCachedMedicalData and MinutesSinceRetrievedMedicalData == 1 and not HasSentOwnMedicalDataAfterDelay then
-        MedLine_Client.saveMedicalData();
-        HasSentOwnMedicalDataAfterDelay = true;
-    end
+        local bloodData = MedLine_Client.getBloodData();
+        -- Check that the player has medical data first.
+        if not bloodData or bloodData == {} then
+            MedLine_Client.initialiseMedicalData();
+            return; -- If not, terminate here so that it can be created safely to prevent errors.
+        end
 
-    local bloodData = MedLine_Client.getBloodData();
-    if not bloodData or bloodData == {} then
-        MedLine_Client.initialiseMedicalData();
-    end;
+        if bloodData then
+            MedLine_Client.saveMedicalData();
+            ModData.request(MedLine_Dict.ModDataKeys.UserData);
+            HasCheckedForCachedMedicalData = true;
+        end
+    end
 
     local bodyDamage = player:getBodyDamage();
     local threshhold = SandboxVars.MedLine.BloodLoss_HealthThreshold or 25;
@@ -42,11 +36,11 @@ function MedLine_Events.EveryOneMinute()
     -- If the health is over the threshhold and their blood data does not show they have lapsed below
     if health > threshhold and bloodData and (not MedLine_Client.hasLapsedBelowThreshold()) then return end;
 
-    if health > threshhold and bloodData and MedLine_Client.hasLapsedBelowThreshold() then
+    if health > threshhold and MedLine_Client.hasLapsedBelowThreshold() then
         MedLine_Client.setNowAboveThreshold();
     end;
 
-    if health <= threshhold and bloodData and not MedLine_Client.hasLapsedBelowThreshold() then
+    if health <= threshhold and not MedLine_Client.hasLapsedBelowThreshold() then
         MedLine_Client.initiateBloodLossStart(SandboxVars.MedLine.BloodLoss_RecoveryTimeDays or 7);
     end
 end
@@ -166,6 +160,7 @@ function MedLine_Events.onClickDiceHpModal(player, btn)
     else
         message = getPlayer():getDescriptor():getForename() .. " is now suffering from blood loss.";
         MedLine_Client.initiateBloodLossStart(SandboxVars.MedLine.BloodLoss_RecoveryTimeDaysPVP or 5);
+        getPlayer():getModData().MedLine.BloodData.bloodLossCausedByPVP = true;
     end;
 
     local args =
@@ -231,7 +226,7 @@ function MedLine_Events.OnServerCommand(module, command, args)
     end
 
     if command == "OnReceiveAcceptedBloodAction" then
-        print("OnReceiveAcceptedBloodAction");
+        MedLine_Logging.log("OnReceiveAcceptedBloodAction");
         local target = args.target;
         local mode = args.mode;
 
@@ -253,7 +248,7 @@ function MedLine_Events.OnServerCommand(module, command, args)
 
     if command == "ReduceBloodLossDuration" then
         if not args.efficiency then
-            print("Efficiency not set for ReduceBloodLossDuration");
+            MedLine_Logging.log("Efficiency not set for ReduceBloodLossDuration");
             return;
         end
 
@@ -282,12 +277,11 @@ Events.OnServerCommand.Add(MedLine_Events.OnServerCommand);
 
 function MedLine_Events.OnReceiveGlobalModData(key, data)
     if key == MedLine_Dict.ModDataKeys.UserData then
-        print("OnReceiveGlobalModData for MedLine UserData");
 
         for username, medicalData in pairs(data) do
             local matchingPlayer = getPlayerFromUsername(username);
             if matchingPlayer then
-                print("Updating medical data for player " .. matchingPlayer:getUsername());
+                MedLine_Logging.log("Updating medical data for player " .. matchingPlayer:getUsername());
                 if not matchingPlayer:getModData().MedLine then
                     matchingPlayer:getModData().MedLine = {};
                 end
@@ -303,20 +297,20 @@ function MedLine_Events.OnReceiveGlobalModData(key, data)
 
         -- At the end, if no of own bloodData.
         if not getPlayer():getModData().MedLine or not getPlayer():getModData().MedLine.BloodData then
-            print("Player does not have blood data or medline table, initialising medical data.");
+            MedLine_Logging.log("Player does not have blood data or medline table, initialising medical data.");
             MedLine_Client.initialiseMedicalData(getPlayer());
         end
 
         if not MedLine_Client.getBloodType(getPlayer()) then
-            print("Unable to find blood type trait for player, giving it.");
+            MedLine_Logging.log("Unable to find blood type trait for player, giving it.");
             local bloodType = getPlayer():getModData().MedLine.BloodData.bloodType;
             if not bloodType then
-                print("Unable to find blood type mod data.");
+                MedLine_Logging.log("Unable to find blood type mod data.");
                 return;
             end
 
             getPlayer():getTraits():add(bloodType.traitStr);
-            print("Blood type trait added.");
+            MedLine_Logging.log("Blood type trait added.");
         end
     end
 end
@@ -328,16 +322,6 @@ end
 Events.OnReceiveGlobalModData.Add(MedLine_Events.OnReceiveGlobalModData);
 Events.OnInitGlobalModData.Add(MedLine_Events.OnInitGlobalModData);
 
---[[function MedLine_Events.OnGameBoot()
-    for _, bloodType in ipairs(MedLine_Dict.BLOOD_TYPES) do
-        local typeString = bloodType.traitStr;
-        local traitTitle = "Blood Type: " .. tostring(bloodType.type);
-        TraitFactory.addTrait(getText(typeString), traitTitle, 0, "Your character's blood type.", false);
-        print("Adding trait " .. typeString);
-    end
-end
-
-
-Events.OnGameBoot.Add(MedLine_Events.OnGameBoot);--]]
+Events.OnPlayerUpdate.Add(MedLine_Events.OnPlayerUpdate);
 
 return MedLine_Events;
