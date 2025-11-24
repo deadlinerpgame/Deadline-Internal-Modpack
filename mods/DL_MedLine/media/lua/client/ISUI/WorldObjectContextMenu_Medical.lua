@@ -314,12 +314,16 @@ function MedLine_Events.OnFillWorldObjectContextMenu(playerNum, context, worldOb
 
     -- Get all players for the world objects.
     local playerList = MedLine_Events.getPlayersFromWorldObjects(worldObjects);
+    if not playerList or playerList == {} then
+        context:removeOptionByName(getText("ContextMenu_Medical_Check"));
+        return;
+    end
 
     local medicalCheckPlayerList = context:getNew(context);
     context:addSubMenu(medicalCheckOpt, medicalCheckPlayerList);
 
     for i, v in ipairs(playerList) do
-        local playerOpt = medicalCheckPlayerList:addOption(playerList[i]:getDescriptor():getForename(), context, ISWorldObjectContextMenu.onMedicalCheck, medicalCheckOpt.param1, medicalCheckOpt.param2);
+        local playerOpt = medicalCheckPlayerList:addOption(playerList[i]:getDescriptor():getForename(), context, ISWorldObjectContextMenu.onMedicalCheck, medicalCheckOpt.param1, playerList[i]);
 
         local playerMedicalSubMenu = context:getNew(context);
         context:addSubMenu(playerOpt, playerMedicalSubMenu);
