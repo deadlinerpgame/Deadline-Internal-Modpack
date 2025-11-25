@@ -29,7 +29,6 @@ function LogLine_RollbackTracking.EveryOneMinute()
 
     if getTimestamp() > LogLine_RollbackTracking.NextSaveTime then
         getPlayer():save();
-        sendAddedRemovedItems(true);
 
         local saveTime = LogLine_RollbackTracking.getNextSaveTime();
         print("Next save time is" .. tostring(saveTime));
