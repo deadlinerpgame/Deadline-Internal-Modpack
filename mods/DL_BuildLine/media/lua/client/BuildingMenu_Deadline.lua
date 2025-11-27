@@ -10,21 +10,1012 @@ require("BuildingMenu04_CategoriesDefinitions")
 
         !! CURRENT CATEGORIES !!
             > WALLS
+            > FENCING
+                - High metal
             > FLOORS:
                 - Wooden
                 - Carpet
                 - Checkered: small, large
                 - Tile: diagonal, smooth, exterior
+            > CONTAINERS
+                - Metal lockers
             > FURNITURE
                 - TABLES: Low tables, Small tables, Large tables
                 - BOOKSHELVES
 
 --]]
 
-
 --[[ >>>>>>>> FWALLS <<<<<<<< --]]
 
 local function addDeadlineWallsToMenu()
+-- AZA - Mossy Stone Brick Wall
+        local AZAMossyStoneWall = {
+ -- WALL NORMAL
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalLogWall_Name",
+                "Tooltip_SurvivalLogWall_Desc",
+                BuildingMenu.onBuildWall,
+                BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureLarge",
+                    isThumpable = true,
+                    canScrap = false,
+                    canBarricade = false,
+                    modData = { wallType = "wall" }
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_0",
+                    northSprite = "AZA_MossyStoneBrickWall_01_1",
+                    corner = "AZA_MossyStoneBrickWall_01_2",
+                    pillar = "AZA_MossyStoneBrickWall_01_3"
+                }
+            ),
+ -- WALL CORNER
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalLogWallCorner_Name",
+                "Tooltip_SurvivalLogWallCorner_Desc",
+                BuildingMenu.onBuildWall,
+                BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureLarge",
+                    isThumpable = true,
+                    canScrap = false,
+                    canBarricade = false,
+                    modData = { wallType = "wall" }
+                },
+                {
+                    corner = "AZA_MossyStoneBrickWall_01_2",
+                    pillar = "AZA_MossyStoneBrickWall_01_3"
+                }
+            ),
+ -- WALL PILLAR CORNER
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalLogWallPillar_Name",
+                "Tooltip_SurvivalLogWallPillar_Desc",
+                BuildingMenu.onBuildWall,
+                BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureLarge",
+                    canPassThrough = true,
+                    canBarricade = false,
+                    isCorner = true,
+                    modData = { wallType = "pillar" }
+                },
+                { 
+                    sprite = "AZA_MossyStoneBrickWall_01_3",
+                }
+            ),
+ -- DOOR FRAMES
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalLogWallDoor_Name",
+                "Tooltip_SurvivalLogWallDoor_Desc",
+                BuildingMenu.onBuildDoorFrame,
+                BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureLarge",
+                    modData = { wallType = "doorframe" }
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_4",
+                    northSprite = "AZA_MossyStoneBrickWall_01_5",
+                    pillar = "AZA_MossyStoneBrickWall_01_3"
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalLogWallDoor_Name",
+                "Tooltip_SurvivalLogWallDoor_Desc",
+                BuildingMenu.onBuildDoorFrame,
+                BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureLarge",
+                    modData = { wallType = "doorframe" }
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_12",
+                    northSprite = "AZA_MossyStoneBrickWall_01_13",
+                    pillar = "AZA_MossyStoneBrickWall_01_3"
+                }
+            ),
+ -- WINDOW FRAMES
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalLogWallWindow_Name",
+                "Tooltip_SurvivalLogWallWindow_Desc",
+                BuildingMenu.onBuildWall,
+                BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureLarge",
+                    isThumpable = true,
+                    canBarricade = true,
+                    hoppable = true,
+                    modData = { wallType = "windowsframe" }
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_8",
+                    northSprite = "AZA_MossyStoneBrickWall_01_9",
+                    pillar = "AZA_MossyStoneBrickWall_01_3"
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalLogWallWindow_Name",
+                "Tooltip_SurvivalLogWallWindow_Desc",
+                BuildingMenu.onBuildWall,
+                BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureLarge",
+                    isThumpable = true,
+                    canBarricade = true,
+                    hoppable = true,
+                    modData = { wallType = "windowsframe" }
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_28",
+                    northSprite = "AZA_MossyStoneBrickWall_01_29",
+                    pillar = "AZA_MossyStoneBrickWall_01_3"
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalLogWallWindow_Name",
+                "Tooltip_SurvivalLogWallWindow_Desc",
+                BuildingMenu.onBuildWall,
+                BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureLarge",
+                    isThumpable = true,
+                    canBarricade = true,
+                    hoppable = true,
+                    modData = { wallType = "windowsframe" }
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_36",
+                    northSprite = "AZA_MossyStoneBrickWall_01_37",
+                    pillar = "AZA_MossyStoneBrickWall_01_3"
+                }
+            ),
+ -- WALL DECORATIONS (SHORT WALL PANNELS)
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannel_Name",
+                "Tooltip_SurvivalWallPannel_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_48",
+                    northSprite = "AZA_MossyStoneBrickWall_01_49",
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannelCorner_Name",
+                "Tooltip_SurvivalWallPannelCorner_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                    isCorner = true,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_50",
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannelPillar_Name",
+                "Tooltip_SurvivalWallPannelPillar_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_51"
+                }
+            ),
+ -- WALL DECORATIONS (TALL WALL PANNELS)
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannel_Name",
+                "Tooltip_SurvivalWallPannel_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_52",
+                    northSprite = "AZA_MossyStoneBrickWall_01_53", 
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannelCorner_Name",
+                "Tooltip_SurvivalWallPannelCorner_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                    isCorner = true,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_54",
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannelPillar_Name",
+                "Tooltip_SurvivalWallPannelPillar_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_55"
+                }
+            ),
+ -- WALL DECORATIONS (SHORT AND HIGH MOLDING WALL PANNELS + DOOR)
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannel_Name",
+                "Tooltip_SurvivalWallPannel_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_16",
+                    northSprite = "AZA_MossyStoneBrickWall_01_17", 
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannelCorner_Name",
+                "Tooltip_SurvivalWallPannelCorner_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                    isCorner = true,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_18",
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannelPillar_Name",
+                "Tooltip_SurvivalWallPannelPillar_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_19"
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannelDoor_Name",
+                "Tooltip_SurvivalWallPannelDoor_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_24",
+                    northSprite = "AZA_MossyStoneBrickWall_01_25"
+                }
+            ),
+ -- WALL DECORATIONS (LOW AND HIGH MOLDING WALL PANNELS + DOOR)
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannel_Name",
+                "Tooltip_SurvivalWallPannel_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_32",
+                    northSprite = "AZA_MossyStoneBrickWall_01_33",
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannelCorner_Name",
+                "Tooltip_SurvivalWallPannelCorner_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                    isCorner = true,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_34",
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannelPillar_Name",
+                "Tooltip_SurvivalWallPannelPillar_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_35"
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannelDoor_Name",
+                "Tooltip_SurvivalWallPannelDoor_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_40",
+                    northSprite = "AZA_MossyStoneBrickWall_01_41"
+                }
+            ),
+ -- WALL DECORATIONS (LOW AND HIGH MOLDING WALL PANNELS + DOOR)
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannel_Name",
+                "Tooltip_SurvivalWallPannel_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_20",
+                    northSprite = "AZA_MossyStoneBrickWall_01_21",
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannelCorner_Name",
+                "Tooltip_SurvivalWallPannelCorner_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                    isCorner = true,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_22",
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannelPillar_Name",
+                "Tooltip_SurvivalWallPannelPillar_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_23"
+                }
+            ),
+            BuildingMenu.createObject(
+                "Tooltip_SurvivalWallPannelDoor_Name",
+                "Tooltip_SurvivalWallPannelDoor_Desc",
+                BuildingMenu.onBuildWallOverlay,
+                BuildingMenu.WallDecorationRecipe,
+                true,
+                {
+                    completionSound = "BuildWoodenStructureSmall",
+                    needToBeAgainstWall = true,
+                    blockAllTheSquare = false,
+                    canPassThrough = true,
+                    canBarricade = false,
+                },
+                {
+                    sprite = "AZA_MossyStoneBrickWall_01_44",
+                    northSprite = "AZA_MossyStoneBrickWall_01_45"
+                }
+            ),
+        }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineWalls",
+        nil,
+        "IGUI_DeadlineWalls_azamossystonebrickwall",
+        "AZA_MossyStoneBrickWall_01_0",
+        AZAMossyStoneWall
+    )
+
+-- B42 - Log wall
+        local logWallNormal = {
+ -- WALL NORMAL
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWall_Name",
+                    "Tooltip_SurvivalLogWall_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canScrap = false,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    {
+                        sprite = "walls_logs_52",
+                        northSprite = "walls_logs_53",
+                        corner = "walls_logs_54",
+                        pillar = "walls_logs_55"
+                    }
+                ),
+ -- WALL CORNER
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallCorner_Name",
+                    "Tooltip_SurvivalLogWallCorner_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canScrap = false,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    {
+                        corner = "walls_logs_54",
+                        pillar = "walls_logs_55"
+                    }
+                ),
+ -- WALL PILLAR CORNER
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallPillar_Name",
+                    "Tooltip_SurvivalLogWallPillar_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canPassThrough = true,
+                        canBarricade = false,
+                        isCorner = true,
+                        modData = { wallType = "pillar" }
+                    },
+                    { 
+                        sprite = "walls_logs_55",
+                    }
+                ),
+ -- DOOR FRAMES
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallDoor_Name",
+                    "Tooltip_SurvivalLogWallDoor_Desc",
+                    BuildingMenu.onBuildDoorFrame,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        modData = { wallType = "doorframe" }
+                    },
+                    {
+                        sprite = "walls_logs_50",
+                        northSprite = "walls_logs_51",
+                        pillar = "walls_logs_55"
+                    }
+                ),
+ -- WINDOW FRAMES
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallWindow_Name",
+                    "Tooltip_SurvivalLogWallWindow_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBarricade = true,
+                        hoppable = true,
+                        modData = { wallType = "windowsframe" }
+                    },
+                    {
+                        sprite = "walls_logs_48",
+                        northSprite = "walls_logs_49",
+                        pillar = "walls_logs_55"
+                    }
+                ),
+ -- ROOF WALLS
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_56", northSprite = "walls_logs_69" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_57", northSprite = "walls_logs_68" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_58", northSprite = "walls_logs_67" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_71", northSprite = "walls_logs_63" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_70", northSprite = "walls_logs_62" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_72", northSprite = "walls_logs_63" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_66", northSprite = "walls_logs_59" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_65", northSprite = "walls_logs_60" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_64", northSprite = "walls_logs_61" }
+                ),
+            }
+        BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineWalls",
+        "walls_logs_52",
+        "IGUI_DeadlineWalls_wallslogs",
+        "walls_logs_52",
+        logWallNormal
+    )
+-- B42 - Log light
+        local logWallLight = {
+ -- WALL NORMAL
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWall_Name",
+                    "Tooltip_SurvivalLogWall_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canScrap = false,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    {
+                        sprite = "walls_logs_0",
+                        northSprite = "walls_logs_1",
+                        corner = "walls_logs_2",
+                        pillar = "walls_logs_3"
+                    }
+                ),
+ -- WALL CORNER
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallCorner_Name",
+                    "Tooltip_SurvivalLogWallCorner_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canScrap = false,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    {
+                        corner = "walls_logs_2",
+                        pillar = "walls_logs_3"
+                    }
+                ),
+ -- WALL PILLAR CORNER
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallPillar_Name",
+                    "Tooltip_SurvivalLogWallPillar_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canPassThrough = true,
+                        canBarricade = false,
+                        isCorner = true,
+                        modData = { wallType = "pillar" }
+                    },
+                    { 
+                        sprite = "walls_logs_3",
+                    }
+                ),
+ -- WALL PILLAR SIDES
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallPillar_Name",
+                    "Tooltip_SurvivalLogWallPillar_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canPassThrough = true,
+                        canBarricade = false,
+                        isCorner = true,
+                        modData = { wallType = "pillar" }
+                    },
+                    { 
+                        sprite = "walls_logs_12",
+                        northSprite = "walls_logs_13"
+                    }
+                ),
+ -- WALL WITH CORNER
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWall_Name",
+                    "Tooltip_SurvivalLogWall_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canScrap = false,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { 
+                        sprite = "walls_logs_4",
+                        northSprite = "walls_logs_5"
+                    }
+                ),
+ -- DOOR FRAMES
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallDoor_Name",
+                    "Tooltip_SurvivalLogWallDoor_Desc",
+                    BuildingMenu.onBuildDoorFrame,
+                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        modData = { wallType = "doorframe" }
+                    },
+                    {
+                        sprite = "walls_logs_10",
+                        northSprite = "walls_logs_11",
+                    }
+                ),
+ -- WINDOW FRAMES
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallWindow_Name",
+                    "Tooltip_SurvivalLogWallWindow_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBarricade = true,
+                        hoppable = true,
+                        modData = { wallType = "windowsframe" }
+                    },
+                    {
+                        sprite = "walls_logs_8",
+                        northSprite = "walls_logs_9",
+                    }
+                ),
+ -- ROOF WALLS
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_16", northSprite = "walls_logs_29" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_17", northSprite = "walls_logs_28" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_18", northSprite = "walls_logs_27" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_31", northSprite = "walls_logs_23" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_30", northSprite = "walls_logs_22" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_32", northSprite = "walls_logs_33" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_26", northSprite = "walls_logs_19" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_25", northSprite = "walls_logs_20" }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_SurvivalLogWallRoofSlope_Name",
+                    "Tooltip_SurvivalLogWallRoofSlope_Desc",
+                    BuildingMenu.onBuildWall,
+                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureSmall",
+                        isThumpable = true,
+                        canBarricade = false,
+                        modData = { wallType = "wall" }
+                    },
+                    { sprite = "walls_logs_24", northSprite = "walls_logs_21" }
+                ),
+            }
+        BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineWalls",
+        nil,
+        "IGUI_DeadlineWalls_wallslogslight",
+        "walls_logs_0",
+        logWallLight
+    )
+
 -- MELOS - Tiled Vines Blue
     local melosWallsTVBl = {
  -- WALL NORMAL
@@ -4921,7 +5912,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWall_Name",
             "Tooltip_WallWall_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -4942,7 +5933,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallCorner_Name",
             "Tooltip_WallCorner_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -4961,7 +5952,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallPillar_Name",
             "Tooltip_WallPillar_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -4979,7 +5970,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallDoor_Name",
             "Tooltip_WallDoor_Desc",
             BuildingMenu.onBuildDoorFrame,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -4995,7 +5986,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallDoor_Name",
             "Tooltip_WallDoor_Desc",
             BuildingMenu.onBuildSpecialObject,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5011,7 +6002,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallDoor_Name",
             "Tooltip_WallDoor_Desc",
             BuildingMenu.onBuildSpecialObject,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5027,7 +6018,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallDoor_Name",
             "Tooltip_WallDoor_Desc",
             BuildingMenu.onBuildSpecialObject,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5043,7 +6034,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallDoor_Name",
             "Tooltip_WallDoor_Desc",
             BuildingMenu.onBuildSpecialObject,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5059,7 +6050,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallDoor_Name",
             "Tooltip_WallDoor_Desc",
             BuildingMenu.onBuildSpecialObject,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5076,7 +6067,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5095,7 +6086,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5114,7 +6105,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5133,7 +6124,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5152,7 +6143,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5171,7 +6162,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5190,7 +6181,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5209,7 +6200,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5228,7 +6219,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5247,7 +6238,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5267,7 +6258,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5281,7 +6272,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5295,7 +6286,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5309,7 +6300,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5323,7 +6314,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5337,7 +6328,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5351,7 +6342,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5365,7 +6356,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5379,7 +6370,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5393,7 +6384,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5407,7 +6398,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5421,7 +6412,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5435,7 +6426,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5449,7 +6440,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5463,7 +6454,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5477,7 +6468,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5491,7 +6482,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5505,7 +6496,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5519,7 +6510,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5533,7 +6524,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5547,7 +6538,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5561,7 +6552,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5575,7 +6566,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5589,7 +6580,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5603,7 +6594,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5617,7 +6608,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5631,7 +6622,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5646,7 +6637,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmaller_Name",
             "Tooltip_WallSmaller_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5666,7 +6657,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerCorner_Name",
             "Tooltip_WallSmallerCorner_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5685,7 +6676,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerPillar_Name",
             "Tooltip_WallSmallerPillar_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5703,7 +6694,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmaller_Name",
             "Tooltip_WallSmaller_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5723,7 +6714,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerCorner_Name",
             "Tooltip_WallSmallerCorner_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5742,7 +6733,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerPillar_Name",
             "Tooltip_WallSmallerPillar_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5760,7 +6751,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmaller_Name",
             "Tooltip_WallSmaller_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5780,7 +6771,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerCorner_Name",
             "Tooltip_WallSmallerCorner_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5799,7 +6790,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerPillar_Name",
             "Tooltip_WallSmallerPillar_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5817,7 +6808,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmaller_Name",
             "Tooltip_WallSmaller_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5837,7 +6828,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerCorner_Name",
             "Tooltip_WallSmallerCorner_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5856,7 +6847,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerPillar_Name",
             "Tooltip_WallSmallerPillar_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5874,7 +6865,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmaller_Name",
             "Tooltip_WallSmaller_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5894,7 +6885,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerCorner_Name",
             "Tooltip_WallSmallerCorner_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5913,7 +6904,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerPillar_Name",
             "Tooltip_WallSmallerPillar_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5942,7 +6933,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWall_Name",
             "Tooltip_WallWall_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5963,7 +6954,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallCorner_Name",
             "Tooltip_WallCorner_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -5982,7 +6973,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallPillar_Name",
             "Tooltip_WallPillar_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6000,7 +6991,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallDoor_Name",
             "Tooltip_WallDoor_Desc",
             BuildingMenu.onBuildDoorFrame,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6016,7 +7007,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallDoor_Name",
             "Tooltip_WallDoor_Desc",
             BuildingMenu.onBuildSpecialObject,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6032,7 +7023,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallDoor_Name",
             "Tooltip_WallDoor_Desc",
             BuildingMenu.onBuildSpecialObject,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6048,7 +7039,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallDoor_Name",
             "Tooltip_WallDoor_Desc",
             BuildingMenu.onBuildSpecialObject,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6064,7 +7055,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallDoor_Name",
             "Tooltip_WallDoor_Desc",
             BuildingMenu.onBuildSpecialObject,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6080,7 +7071,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallDoor_Name",
             "Tooltip_WallDoor_Desc",
             BuildingMenu.onBuildSpecialObject,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6097,7 +7088,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6116,7 +7107,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6135,7 +7126,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6154,7 +7145,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6173,7 +7164,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6192,7 +7183,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6211,7 +7202,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6230,7 +7221,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6249,7 +7240,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6268,7 +7259,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallWindow_Name",
             "Tooltip_WallWindow_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6288,7 +7279,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6302,7 +7293,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6316,7 +7307,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6330,7 +7321,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6344,7 +7335,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6358,7 +7349,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6372,7 +7363,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6386,7 +7377,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6400,7 +7391,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6414,7 +7405,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6428,7 +7419,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6442,7 +7433,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6456,7 +7447,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6470,7 +7461,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6484,7 +7475,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6498,7 +7489,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6512,7 +7503,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6526,7 +7517,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6540,7 +7531,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6554,7 +7545,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6568,7 +7559,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6582,7 +7573,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6596,7 +7587,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6610,7 +7601,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6624,7 +7615,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6638,7 +7629,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6652,7 +7643,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6667,7 +7658,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmaller_Name",
             "Tooltip_WallSmaller_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6687,7 +7678,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerCorner_Name",
             "Tooltip_WallSmallerCorner_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6706,7 +7697,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerPillar_Name",
             "Tooltip_WallSmallerPillar_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6724,7 +7715,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmaller_Name",
             "Tooltip_WallSmaller_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6744,7 +7735,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerCorner_Name",
             "Tooltip_WallSmallerCorner_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6763,7 +7754,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerPillar_Name",
             "Tooltip_WallSmallerPillar_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6781,7 +7772,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmaller_Name",
             "Tooltip_WallSmaller_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6801,7 +7792,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerCorner_Name",
             "Tooltip_WallSmallerCorner_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6820,7 +7811,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerPillar_Name",
             "Tooltip_WallSmallerPillar_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6838,7 +7829,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmaller_Name",
             "Tooltip_WallSmaller_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6858,7 +7849,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerCorner_Name",
             "Tooltip_WallSmallerCorner_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6877,7 +7868,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerPillar_Name",
             "Tooltip_WallSmallerPillar_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6895,7 +7886,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmaller_Name",
             "Tooltip_WallSmaller_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6915,7 +7906,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerCorner_Name",
             "Tooltip_WallSmallerCorner_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.BigWoodWallRecipe,
+            BuildingMenu.SurvivalHobbyBigWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -6934,7 +7925,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallSmallerPillar_Name",
             "Tooltip_WallSmallerPillar_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.SurvivalHobbySmallWoodWallRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureLarge",
@@ -19211,6 +20202,948 @@ local function addDeadlineWallsToMenu()
 end
 
 
+--[[ >>>>>>>> FFENCING <<<<<<<< --]]
+
+local function addDeadlineHighMetalFencesToMenu()
+-- VANILLA METAL FENCE    
+    local vanillametalfence = {
+ -- MIDDLE PART
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceBlackRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false,
+            },
+            {
+                sprite = "fencing_01_66",
+                northSprite = "fencing_01_65",
+                corner = "fencing_01_68",
+                pillar = "fencing_01_69"
+            }
+        ),
+ -- CORNERS (SEPARATED)
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceBlackRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "fencing_01_67",
+                northSprite = "fencing_01_64",
+                corner = "fencing_01_68",
+                pillar = "fencing_01_69"
+            }
+        ),
+ -- CORNER
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Corner",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceBlackRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                corner = "fencing_01_68",
+                pillar = "fencing_01_69"
+            }
+        ),
+ -- PILLAR
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Post",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFencePostBlackRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            { sprite = "fencing_01_69" }
+        ),
+ -- DOOR
+        BuildingMenu.createObject(
+            "Tooltip_MetalFenceDoor_Name",
+            "Tooltip_MetalFenceDoor_Desc",
+            BuildingMenu.onBuildDoor,
+            BuildingMenu.HighMetalBarsDoorBlackRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBarricade = true,
+                dontNeedFrame = true,
+                modData = { wallType = "doorframe" }
+            },
+            {
+                sprite = "fixtures_doors_fences_01_20",
+                northSprite = "fixtures_doors_fences_01_22",
+                openSprite = "fixtures_doors_fences_01_21",
+                openNorthSprite = "fixtures_doors_fences_01_23"
+            }
+        ),
+    }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineFencing",
+        "melos_tiles_fencing_01_2",
+        "IGUI_BuildingMenuSubCat_DeadlineFencing_HighMetal",
+        "fencing_01_66",
+        vanillametalfence
+    )
+-- MELOS WHITE METAL BAR FENCE
+    local melosfencehighmetalbarwhite = {
+ -- MIDDLE PART
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceWhiteRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_2",
+                northSprite = "melos_tiles_fencing_01_1",
+                corner = "melos_tiles_fencing_01_4",
+                pillar = "melos_tiles_fencing_01_5"
+            }
+        ),
+ -- CORNERS (SEPARATED)
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceWhiteRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_3",
+                northSprite = "melos_tiles_fencing_01_0",
+                corner = "melos_tiles_fencing_01_4",
+                pillar = "melos_tiles_fencing_01_5"
+            }
+        ),
+ -- CORNER
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Corner",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceWhiteRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                corner = "melos_tiles_fencing_01_4",
+                pillar = "melos_tiles_fencing_01_5"
+            }
+        ),
+ -- PILLAR
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Post",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFencePostWhiteRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            { sprite = "melos_tiles_fencing_01_5" }
+        ),
+ -- DOOR
+        BuildingMenu.createObject(
+            "Tooltip_MetalFenceDoor_Name",
+            "Tooltip_MetalFenceDoor_Desc",
+            BuildingMenu.onBuildDoor,
+            BuildingMenu.HighMetalBarsDoorWhiteRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBarricade = true,
+                dontNeedFrame = true,
+                modData = { wallType = "doorframe" }
+            },
+            {
+                sprite = "melos_tiles_fencing_01_12",
+                northSprite = "melos_tiles_fencing_01_13",
+                openSprite = "melos_tiles_fencing_01_14",
+                openNorthSprite = "melos_tiles_fencing_01_15"
+            }
+        ),
+    }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineFencing",
+        nil,
+        "IGUI_BuildingMenuSubCat_DeadlineFencing_HighMetal",
+        "melos_tiles_fencing_01_2",
+        melosfencehighmetalbarwhite
+    )
+-- MELOS GREEN METAL BAR FENCE
+    local melosfencehighmetalbarGreen = {
+ -- MIDDLE PART
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceGreenRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_18",
+                northSprite = "melos_tiles_fencing_01_17",
+                corner = "melos_tiles_fencing_01_20",
+                pillar = "melos_tiles_fencing_01_21"
+            }
+        ),
+ -- CORNERS (SEPARATED)
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceGreenRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_19",
+                northSprite = "melos_tiles_fencing_01_16",
+                corner = "melos_tiles_fencing_01_20",
+                pillar = "melos_tiles_fencing_01_21"
+            }
+        ),
+ -- CORNER
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Corner",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceGreenRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                corner = "melos_tiles_fencing_01_20",
+                pillar = "melos_tiles_fencing_01_21"
+            }
+        ),
+ -- PILLAR
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Post",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFencePostGreenRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            { sprite = "melos_tiles_fencing_01_21" }
+        ),
+ -- DOOR
+        BuildingMenu.createObject(
+            "Tooltip_MetalFenceDoor_Name",
+            "Tooltip_MetalFenceDoor_Desc",
+            BuildingMenu.onBuildDoor,
+            BuildingMenu.HighMetalBarsDoorGreenRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBarricade = true,
+                dontNeedFrame = true,
+                modData = { wallType = "doorframe" }
+            },
+            {
+                sprite = "melos_tiles_fencing_01_28",
+                northSprite = "melos_tiles_fencing_01_29",
+                openSprite = "melos_tiles_fencing_01_30",
+                openNorthSprite = "melos_tiles_fencing_01_31"
+            }
+        ),
+    }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineFencing",
+        nil,
+        "IGUI_BuildingMenuSubCat_DeadlineFencing_HighMetal",
+        "melos_tiles_fencing_01_18",
+        melosfencehighmetalbarGreen
+    )
+-- MELOS YELLOW METAL BAR FENCE
+    local melosfencehighmetalbarYellow = {
+ -- MIDDLE PART
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceYellowRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_34",
+                northSprite = "melos_tiles_fencing_01_33",
+                corner = "melos_tiles_fencing_01_36",
+                pillar = "melos_tiles_fencing_01_37"
+            }
+        ),
+ -- CORNERS (SEPARATED)
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceYellowRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_35",
+                northSprite = "melos_tiles_fencing_01_32",
+                corner = "melos_tiles_fencing_01_36",
+                pillar = "melos_tiles_fencing_01_37"
+            }
+        ),
+ -- CORNER
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Corner",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceYellowRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                corner = "melos_tiles_fencing_01_36",
+                pillar = "melos_tiles_fencing_01_37"
+            }
+        ),
+ -- PILLAR
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Post",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFencePostYellowRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            { sprite = "melos_tiles_fencing_01_37" }
+        ),
+ -- DOOR
+        BuildingMenu.createObject(
+            "Tooltip_MetalFenceDoor_Name",
+            "Tooltip_MetalFenceDoor_Desc",
+            BuildingMenu.onBuildDoor,
+            BuildingMenu.HighMetalBarsDoorYellowRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBarricade = true,
+                dontNeedFrame = true,
+                modData = { wallType = "doorframe" }
+            },
+            {
+                sprite = "melos_tiles_fencing_01_44",
+                northSprite = "melos_tiles_fencing_01_45",
+                openSprite = "melos_tiles_fencing_01_46",
+                openNorthSprite = "melos_tiles_fencing_01_47"
+            }
+        ),
+    }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineFencing",
+        nil,
+        "IGUI_BuildingMenuSubCat_DeadlineFencing_HighMetal",
+        "melos_tiles_fencing_01_34",
+        melosfencehighmetalbarYellow
+    )
+-- MELOS RED METAL BAR FENCE
+    local melosfencehighmetalbarRed = {
+ -- MIDDLE PART
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceRedRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_50",
+                northSprite = "melos_tiles_fencing_01_49",
+                corner = "melos_tiles_fencing_01_52",
+                pillar = "melos_tiles_fencing_01_53"
+            }
+        ),
+ -- CORNERS (SEPARATED)
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceRedRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_51",
+                northSprite = "melos_tiles_fencing_01_48",
+                corner = "melos_tiles_fencing_01_52",
+                pillar = "melos_tiles_fencing_01_53"
+            }
+        ),
+ -- CORNER
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Corner",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceRedRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                corner = "melos_tiles_fencing_01_52",
+                pillar = "melos_tiles_fencing_01_53"
+            }
+        ),
+ -- PILLAR
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Post",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFencePostRedRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            { sprite = "melos_tiles_fencing_01_53" }
+        ),
+ -- DOOR
+        BuildingMenu.createObject(
+            "Tooltip_MetalFenceDoor_Name",
+            "Tooltip_MetalFenceDoor_DescCheeky",
+            BuildingMenu.onBuildDoor,
+            BuildingMenu.HighMetalBarsDoorRedRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBarricade = true,
+                dontNeedFrame = true,
+                modData = { wallType = "doorframe" }
+            },
+            {
+                sprite = "melos_tiles_fencing_01_60",
+                northSprite = "melos_tiles_fencing_01_61",
+                openSprite = "melos_tiles_fencing_01_62",
+                openNorthSprite = "melos_tiles_fencing_01_63"
+            }
+        ),
+    }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineFencing",
+        nil,
+        "IGUI_BuildingMenuSubCat_DeadlineFencing_HighMetal",
+        "melos_tiles_fencing_01_50",
+        melosfencehighmetalbarRed
+    )
+-- MELOS BLACK METAL BAR FENCE
+    local melosfencehighmetalbarBlack = {
+ -- MIDDLE PART
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_66",
+                northSprite = "melos_tiles_fencing_01_65",
+                corner = "melos_tiles_fencing_01_68",
+                pillar = "melos_tiles_fencing_01_69"
+            }
+        ),
+ -- CORNERS (SEPARATED)
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceBlackRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_67",
+                northSprite = "melos_tiles_fencing_01_64",
+                corner = "melos_tiles_fencing_01_68",
+                pillar = "melos_tiles_fencing_01_69"
+            }
+        ),
+ -- CORNER
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Corner",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceBlackRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                corner = "melos_tiles_fencing_01_68",
+                pillar = "melos_tiles_fencing_01_69"
+            }
+        ),
+ -- PILLAR
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Post",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFencePostBlackRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            { sprite = "melos_tiles_fencing_01_69" }
+        ),
+ -- DOOR
+        BuildingMenu.createObject(
+            "Tooltip_MetalFenceDoor_Name",
+            "Tooltip_MetalFenceDoor_Desc",
+            BuildingMenu.onBuildDoor,
+            BuildingMenu.HighMetalBarsDoorBlackRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBarricade = true,
+                dontNeedFrame = true,
+                modData = { wallType = "doorframe" }
+            },
+            {
+                sprite = "melos_tiles_fencing_01_76",
+                northSprite = "melos_tiles_fencing_01_77",
+                openSprite = "melos_tiles_fencing_01_78",
+                openNorthSprite = "melos_tiles_fencing_01_79"
+            }
+        ),
+    }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineFencing",
+        nil,
+        "IGUI_BuildingMenuSubCat_DeadlineFencing_HighMetal",
+        "melos_tiles_fencing_01_66",
+        melosfencehighmetalbarBlack
+    )
+-- MELOS GREY METAL BAR FENCE
+    local melosfencehighmetalbarGrey = {
+ -- MIDDLE PART
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceGreyRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_82",
+                northSprite = "melos_tiles_fencing_01_81",
+                corner = "melos_tiles_fencing_01_84",
+                pillar = "melos_tiles_fencing_01_85"
+            }
+        ),
+ -- CORNERS (SEPARATED)
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceGreyRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_83",
+                northSprite = "melos_tiles_fencing_01_80",
+                corner = "melos_tiles_fencing_01_84",
+                pillar = "melos_tiles_fencing_01_85"
+            }
+        ),
+ -- CORNER
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Corner",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceGreyRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                corner = "melos_tiles_fencing_01_84",
+                pillar = "melos_tiles_fencing_01_85"
+            }
+        ),
+ -- PILLAR
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Post",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFencePostGreyRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            { sprite = "melos_tiles_fencing_01_85" }
+        ),
+ -- DOOR
+        BuildingMenu.createObject(
+            "Tooltip_MetalFenceDoor_Name",
+            "Tooltip_MetalFenceDoor_Desc",
+            BuildingMenu.onBuildDoor,
+            BuildingMenu.HighMetalBarsDoorGreyRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBarricade = true,
+                dontNeedFrame = true,
+                modData = { wallType = "doorframe" }
+            },
+            {
+                sprite = "melos_tiles_fencing_01_92",
+                northSprite = "melos_tiles_fencing_01_93",
+                openSprite = "melos_tiles_fencing_01_94",
+                openNorthSprite = "melos_tiles_fencing_01_95"
+            }
+        ),
+    }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineFencing",
+        nil,
+        "IGUI_BuildingMenuSubCat_DeadlineFencing_HighMetal",
+        "melos_tiles_fencing_01_82",
+        melosfencehighmetalbarGrey
+    )
+-- MELOS BLUE METAL BAR FENCE
+    local melosfencehighmetalbarBlue = {
+ -- MIDDLE PART
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceBlueRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_98",
+                northSprite = "melos_tiles_fencing_01_97",
+                corner = "melos_tiles_fencing_01_100",
+                pillar = "melos_tiles_fencing_01_101"
+            }
+        ),
+ -- CORNERS (SEPARATED)
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceBlueRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_99",
+                northSprite = "melos_tiles_fencing_01_96",
+                corner = "melos_tiles_fencing_01_100",
+                pillar = "melos_tiles_fencing_01_101"
+            }
+        ),
+ -- CORNER
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Corner",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFenceBlueRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                corner = "melos_tiles_fencing_01_100",
+                pillar = "melos_tiles_fencing_01_101"
+            }
+        ),
+ -- PILLAR
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Post",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFencePostBlueRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            { sprite = "melos_tiles_fencing_01_101" }
+        ),
+ -- DOOR
+        BuildingMenu.createObject(
+            "Tooltip_MetalFenceDoor_Name",
+            "Tooltip_MetalFenceDoor_Desc",
+            BuildingMenu.onBuildDoor,
+            BuildingMenu.HighMetalBarsDoorBlueRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBarricade = true,
+                dontNeedFrame = true,
+                modData = { wallType = "doorframe" }
+            },
+            {
+                sprite = "melos_tiles_fencing_01_108",
+                northSprite = "melos_tiles_fencing_01_109",
+                openSprite = "melos_tiles_fencing_01_110",
+                openNorthSprite = "melos_tiles_fencing_01_111"
+            }
+        ),
+    }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineFencing",
+        nil,
+        "IGUI_BuildingMenuSubCat_DeadlineFencing_HighMetal",
+        "melos_tiles_fencing_01_98",
+        melosfencehighmetalbarBlue
+    )
+-- MELOS PURPLE METAL BAR FENCE
+    local melosfencehighmetalbarPurple = {
+ -- MIDDLE PART
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFencePurpleRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_114",
+                northSprite = "melos_tiles_fencing_01_113",
+                corner = "melos_tiles_fencing_01_116",
+                pillar = "melos_tiles_fencing_01_117"
+            }
+        ),
+ -- CORNERS (SEPARATED)
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFencePurpleRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                isThumpable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "melos_tiles_fencing_01_115",
+                northSprite = "melos_tiles_fencing_01_112",
+                corner = "melos_tiles_fencing_01_116",
+                pillar = "melos_tiles_fencing_01_117"
+            }
+        ),
+ -- CORNER
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Corner",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFencePurpleRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                corner = "melos_tiles_fencing_01_116",
+                pillar = "melos_tiles_fencing_01_117"
+            }
+        ),
+ -- PILLAR
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Tall_Wrought_Iron_Fence_Post",
+            "Tooltip_High_Metal_Fence_Generic",
+            BuildingMenu.onBuildMetalWall,
+            BuildingMenu.HighMetalBarsFencePostPurpleRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            { sprite = "melos_tiles_fencing_01_117" }
+        ),
+ -- DOOR
+        BuildingMenu.createObject(
+            "Tooltip_MetalFenceDoor_Name",
+            "Tooltip_MetalFenceDoor_Desc",
+            BuildingMenu.onBuildDoor,
+            BuildingMenu.HighMetalBarsDoorPurpleRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                canBarricade = true,
+                dontNeedFrame = true,
+                modData = { wallType = "doorframe" }
+            },
+            {
+                sprite = "melos_tiles_fencing_01_124",
+                northSprite = "melos_tiles_fencing_01_125",
+                openSprite = "melos_tiles_fencing_01_126",
+                openNorthSprite = "melos_tiles_fencing_01_127"
+            }
+        ),
+    }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineFencing",
+        nil,
+        "IGUI_BuildingMenuSubCat_DeadlineFencing_HighMetal",
+        "melos_tiles_fencing_01_114",
+        melosfencehighmetalbarPurple
+    )
+end
+
+
 
 --[[ >>>>>>>> FFLOORS <<<<<<<< --]]
 
@@ -20110,6 +22043,40 @@ local function addDeadlineFloorsToMenu()
 
             }
         },
+-- FTILE STONE > TO ADD 
+ --       {
+ --           subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineFloors_Tile_Stone_Exterior",
+ --           subCategoryIcon = "floors_exterior_natural_01_10",
+ --           objects = {
+ --               BuildingMenu.createObject(
+ --                   "Tooltip_BuildingMenuObj_Exterior_Tile",
+ --                   "Tooltip_Floor_Generic",
+ --                   BuildingMenu.onBuildFloor,
+ --                   BuildingMenu.ConcreteFloorRecipe,
+ --                   true,
+ --                   {
+ --                       completionSound = "DropSoilFromGravelBag"
+ --                   },
+ --                   {
+ --                       sprite = "floors_exterior_tilesandstone_01_7"
+ --                   }
+ --               ),
+ --               BuildingMenu.createObject(
+ --                   "Tooltip_BuildingMenuObj_Exterior_Tile",
+ --                   "Tooltip_Floor_Generic",
+ --                   BuildingMenu.onBuildFloor,
+ --                   BuildingMenu.ConcreteFloorRecipe,
+ --                   true,
+ --                   {
+ --                       completionSound = "DropSoilFromGravelBag"
+ --                   },
+ --                   {
+ --                       sprite = "LC_Fancyfloor_8"
+ --                   }
+ --               ),
+ --           }
+ --       }
+ --   } 
 -- FCHECKERED SMALL
         {
             subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineFloors_Tile_Checkered_Small",
@@ -21024,6 +22991,1062 @@ local function addDeadlineFloorsToMenu()
             "Deadline",
             "IGUI_BuildingMenuCat_DeadlineFloors",
             "floors_interior_tilesandwood_01_40",
+            subCatData.subcategoryName,
+            subCatData.subCategoryIcon,
+            subCatData.objects
+        )
+    end
+end
+
+
+
+--[[ >>>>>> CONTAINERS <<<<<< --]]
+
+-- >> CONTAINERS: COUNTERS, METAL LOCKERS
+local function addDeadlineContainersToMenu()
+    local DeadlineContainers = {
+-- FCOUNTERS
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineContainers_Counters",
+            subCategoryIcon = "fixtures_counters_erika_01_3",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_3",
+                        northSprite = "fixtures_counters_erika_01_5",
+                        eastSprite = "fixtures_counters_erika_01_7",
+                        southSprite = "fixtures_counters_erika_01_1"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_2",
+                        northSprite = "fixtures_counters_erika_01_4",
+                        eastSprite = "fixtures_counters_erika_01_6",
+                        southSprite = "fixtures_counters_erika_01_0"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_11",
+                        northSprite = "fixtures_counters_erika_01_13",
+                        eastSprite = "fixtures_counters_erika_01_15",
+                        southSprite = "fixtures_counters_erika_01_9"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_10",
+                        northSprite = "fixtures_counters_erika_01_12",
+                        eastSprite = "fixtures_counters_erika_01_14",
+                        southSprite = "fixtures_counters_erika_01_8"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_19",
+                        northSprite = "fixtures_counters_erika_01_21",
+                        eastSprite = "fixtures_counters_erika_01_23",
+                        southSprite = "fixtures_counters_erika_01_17"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_18",
+                        northSprite = "fixtures_counters_erika_01_20",
+                        eastSprite = "fixtures_counters_erika_01_22",
+                        southSprite = "fixtures_counters_erika_01_16"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_27",
+                        northSprite = "fixtures_counters_erika_01_29",
+                        eastSprite = "fixtures_counters_erika_01_31",
+                        southSprite = "fixtures_counters_erika_01_25"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_26",
+                        northSprite = "fixtures_counters_erika_01_28",
+                        eastSprite = "fixtures_counters_erika_01_30",
+                        southSprite = "fixtures_counters_erika_01_24"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_35",
+                        northSprite = "fixtures_counters_erika_01_37",
+                        eastSprite = "fixtures_counters_erika_01_39",
+                        southSprite = "fixtures_counters_erika_01_33"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_34",
+                        northSprite = "fixtures_counters_erika_01_36",
+                        eastSprite = "fixtures_counters_erika_01_38",
+                        southSprite = "fixtures_counters_erika_01_32"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_43",
+                        northSprite = "fixtures_counters_erika_01_45",
+                        eastSprite = "fixtures_counters_erika_01_47",
+                        southSprite = "fixtures_counters_erika_01_41"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_42",
+                        northSprite = "fixtures_counters_erika_01_44",
+                        eastSprite = "fixtures_counters_erika_01_46",
+                        southSprite = "fixtures_counters_erika_01_40"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_51",
+                        northSprite = "fixtures_counters_erika_01_53",
+                        eastSprite = "fixtures_counters_erika_01_55",
+                        southSprite = "fixtures_counters_erika_01_49"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_50",
+                        northSprite = "fixtures_counters_erika_01_52",
+                        eastSprite = "fixtures_counters_erika_01_54",
+                        southSprite = "fixtures_counters_erika_01_48"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_59",
+                        northSprite = "fixtures_counters_erika_01_61",
+                        eastSprite = "fixtures_counters_erika_01_63",
+                        southSprite = "fixtures_counters_erika_01_57"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_58",
+                        northSprite = "fixtures_counters_erika_01_60",
+                        eastSprite = "fixtures_counters_erika_01_62",
+                        southSprite = "fixtures_counters_erika_01_56"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_67",
+                        northSprite = "fixtures_counters_erika_01_69",
+                        eastSprite = "fixtures_counters_erika_01_71",
+                        southSprite = "fixtures_counters_erika_01_65"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_66",
+                        northSprite = "fixtures_counters_erika_01_68",
+                        eastSprite = "fixtures_counters_erika_01_80",
+                        southSprite = "fixtures_counters_erika_01_64"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_75",
+                        northSprite = "fixtures_counters_erika_01_77",
+                        eastSprite = "fixtures_counters_erika_01_79",
+                        southSprite = "fixtures_counters_erika_01_73"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_74",
+                        northSprite = "fixtures_counters_erika_01_76",
+                        eastSprite = "fixtures_counters_erika_01_78",
+                        southSprite = "fixtures_counters_erika_01_72"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_83",
+                        northSprite = "fixtures_counters_erika_01_85",
+                        eastSprite = "fixtures_counters_erika_01_87",
+                        southSprite = "fixtures_counters_erika_01_81"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_82",
+                        northSprite = "fixtures_counters_erika_01_84",
+                        eastSprite = "fixtures_counters_erika_01_86",
+                        southSprite = "fixtures_counters_erika_01_80"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_91",
+                        northSprite = "fixtures_counters_erika_01_93",
+                        eastSprite = "fixtures_counters_erika_01_95",
+                        southSprite = "fixtures_counters_erika_01_89"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_90",
+                        northSprite = "fixtures_counters_erika_01_92",
+                        eastSprite = "fixtures_counters_erika_01_94",
+                        southSprite = "fixtures_counters_erika_01_88"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_99",
+                        northSprite = "fixtures_counters_erika_01_101",
+                        eastSprite = "fixtures_counters_erika_01_103",
+                        southSprite = "fixtures_counters_erika_01_97"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_98",
+                        northSprite = "fixtures_counters_erika_01_100",
+                        eastSprite = "fixtures_counters_erika_01_102",
+                        southSprite = "fixtures_counters_erika_01_96"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_107",
+                        northSprite = "fixtures_counters_erika_01_109",
+                        eastSprite = "fixtures_counters_erika_01_111",
+                        southSprite = "fixtures_counters_erika_01_105"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_106",
+                        northSprite = "fixtures_counters_erika_01_108",
+                        eastSprite = "fixtures_counters_erika_01_110",
+                        southSprite = "fixtures_counters_erika_01_104"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_115",
+                        northSprite = "fixtures_counters_erika_01_117",
+                        eastSprite = "fixtures_counters_erika_01_119",
+                        southSprite = "fixtures_counters_erika_01_113"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_114",
+                        northSprite = "fixtures_counters_erika_01_116",
+                        eastSprite = "fixtures_counters_erika_01_118",
+                        southSprite = "fixtures_counters_erika_01_112"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_123",
+                        northSprite = "fixtures_counters_erika_01_125",
+                        eastSprite = "fixtures_counters_erika_01_127",
+                        southSprite = "fixtures_counters_erika_01_121"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_122",
+                        northSprite = "fixtures_counters_erika_01_124",
+                        eastSprite = "fixtures_counters_erika_01_126",
+                        southSprite = "fixtures_counters_erika_01_120"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_131",
+                        northSprite = "fixtures_counters_erika_01_133",
+                        eastSprite = "fixtures_counters_erika_01_135",
+                        southSprite = "fixtures_counters_erika_01_129"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_130",
+                        northSprite = "fixtures_counters_erika_01_132",
+                        eastSprite = "fixtures_counters_erika_01_134",
+                        southSprite = "fixtures_counters_erika_01_128"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_139",
+                        northSprite = "fixtures_counters_erika_01_141",
+                        eastSprite = "fixtures_counters_erika_01_143",
+                        southSprite = "fixtures_counters_erika_01_137"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_138",
+                        northSprite = "fixtures_counters_erika_01_140",
+                        eastSprite = "fixtures_counters_erika_01_142",
+                        southSprite = "fixtures_counters_erika_01_136"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_147",
+                        northSprite = "fixtures_counters_erika_01_149",
+                        eastSprite = "fixtures_counters_erika_01_151",
+                        southSprite = "fixtures_counters_erika_01_145"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_146",
+                        northSprite = "fixtures_counters_erika_01_148",
+                        eastSprite = "fixtures_counters_erika_01_150",
+                        southSprite = "fixtures_counters_erika_01_144"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_155",
+                        northSprite = "fixtures_counters_erika_01_157",
+                        eastSprite = "fixtures_counters_erika_01_159",
+                        southSprite = "fixtures_counters_erika_01_153"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_154",
+                        northSprite = "fixtures_counters_erika_01_156",
+                        eastSprite = "fixtures_counters_erika_01_158",
+                        southSprite = "fixtures_counters_erika_01_152"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_163",
+                        northSprite = "fixtures_counters_erika_01_165",
+                        eastSprite = "fixtures_counters_erika_01_167",
+                        southSprite = "fixtures_counters_erika_01_161"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.CounterRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "fixtures_counters_erika_01_162",
+                        northSprite = "fixtures_counters_erika_01_164",
+                        eastSprite = "fixtures_counters_erika_01_166",
+                        southSprite = "fixtures_counters_erika_01_160"
+                    }
+                ),
+            }
+        },
+-- FMETAL SHELVING
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineContainers_MetalShelving",
+            subCategoryIcon = "ivery_shelving_01_30",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildDoubleMetalShelf,
+                    BuildingMenu.MetalCounterBigRecipeDouble,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        renderFloorHelper = false,
+                        buildHigh = true,
+                    },
+                    {
+                        sprite = "ivery_shelving_01_1",
+                        sprite2 = "ivery_shelving_01_0",
+                        northSprite = "ivery_shelving_01_24",
+                        northSprite2 = "ivery_shelving_01_25"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildDoubleMetalShelf,
+                    BuildingMenu.MetalCounterBigRecipeDouble,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        renderFloorHelper = false,
+                        buildHigh = true,
+                    },
+                    {
+                        sprite = "ivery_shelving_01_3",
+                        sprite2 = "ivery_shelving_01_2",
+                        northSprite = "ivery_shelving_01_26",
+                        northSprite2 = "ivery_shelving_01_27"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildDoubleMetalShelf,
+                    BuildingMenu.MetalCounterBigRecipeDouble,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        renderFloorHelper = false,
+                        buildHigh = true,
+                    },
+                    {
+                        sprite = "ivery_shelving_01_5",
+                        sprite2 = "ivery_shelving_01_4",
+                        northSprite = "ivery_shelving_01_28",
+                        northSprite2 = "ivery_shelving_01_29"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildDoubleMetalShelf,
+                    BuildingMenu.MetalCounterBigRecipeDouble,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        renderFloorHelper = false,
+                        buildHigh = true,
+                    },
+                    {
+                        sprite = "ivery_shelving_01_7",
+                        sprite2 = "ivery_shelving_01_6",
+                        northSprite = "ivery_shelving_01_30",
+                        northSprite2 = "ivery_shelving_01_31"
+                    }
+                ),
+            } 
+        },
+-- FMETALLOCKERS
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineContainers_MetalLockers",
+            subCategoryIcon = "furniture_storage_erika_02_28",
+            objects = {
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        blockAllTheSquare = false,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_erika_02_28",
+                        northSprite = "furniture_storage_erika_02_29",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        blockAllTheSquare = false,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_erika_02_40",
+                        northSprite = "furniture_storage_erika_02_41",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        blockAllTheSquare = false,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_02_12",
+                        northSprite = "furniture_storage_02_13",
+                        eastSprite = "furniture_storage_02_14",
+                        southSprite = "furniture_storage_02_15",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        blockAllTheSquare = false,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_erika_02_36",
+                        northSprite = "furniture_storage_erika_02_37",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        blockAllTheSquare = false,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_02_4",
+                        northSprite = "furniture_storage_02_5",
+                        eastSprite = "furniture_storage_02_6",
+                        southSprite = "furniture_storage_02_7",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        blockAllTheSquare = false,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_erika_02_44",
+                        northSprite = "furniture_storage_erika_02_45",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        blockAllTheSquare = false,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "BZMsBikerGarage01_12",
+                        northSprite = "BZMsBikerGarage01_13",
+                        eastSprite = "BZMsBikerGarage01_14",
+                        southSprite = "BZMsBikerGarage01_15",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        blockAllTheSquare = false,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_erika_02_24",
+                        northSprite = "furniture_storage_erika_02_25",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        blockAllTheSquare = false,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_erika_02_32",
+                        northSprite = "furniture_storage_erika_02_33",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        blockAllTheSquare = false,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "location_community_medical_ddd_01_0",
+                        northSprite = "location_community_medical_ddd_01_1",
+                        eastSprite = "location_community_medical_ddd_01_2",
+                        southSprite = "location_community_medical_ddd_01_3",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        blockAllTheSquare = false,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "location_community_medical_ddd_01_4",
+                        northSprite = "location_community_medical_ddd_01_5",
+                        eastSprite = "location_community_medical_ddd_01_6",
+                        southSprite = "location_community_medical_ddd_01_7",
+                    }
+                ),
+            }
+        },        
+    }
+-- Add Containers Category 
+    for k, subCatData in pairs(DeadlineContainers) do
+        BuildingMenu.addObjectsToCategories(
+            "Deadline",
+            "IGUI_BuildingMenuCat_DeadlineContainers",
+            "fixtures_counters_erika_01_147",
             subCatData.subcategoryName,
             subCatData.subCategoryIcon,
             subCatData.objects
@@ -22844,14 +25867,17 @@ end
 
 --[[ >>>>>> FOR THE SANDBOX OPTIONS ON "media\sandbox-options.txt" <<<<<<--]]
 local function addCategoriesToBuildingMenu()
-    if SandboxVars.BuildingMenu.DeadlineSurvivalStructuralSubCategory then
-        addDeadlineSurvivalStructuralToMenu()
-    end
-    if SandboxVars.BuildingMenu.DeadlineWallsSubCategory then
+    if SandboxVars.BuildingMenu.DeadlineWallsCategory then
         addDeadlineWallsToMenu()
     end
-    if SandboxVars.BuildingMenu.DeadlineFloorsSubCategory then
+    if SandboxVars.BuildingMenu.DeadlineHighMetalFencesSubCategory then
+        addDeadlineHighMetalFencesToMenu()
+    end
+    if SandboxVars.BuildingMenu.DeadlineFloorsCategory then
         addDeadlineFloorsToMenu()
+    end
+    if SandboxVars.BuildingMenu.DeadlineContainersCategory then
+        addDeadlineContainersToMenu()
     end
     if SandboxVars.BuildingMenu.DeadlineTablesSubCategory then
         addDeadlineTablesToMenu()
