@@ -4,41 +4,56 @@ require "MedLine_Client";
 MedLine_Events = MedLine_Events or {};
 MedLine_Client = MedLine_Client or {};
 
-function MedLine_Events.getPlayersFromWorldObjects(worldObjects)
+local function getPlayersFromWorldObjects(worldObjects)
     
     local playerList = {};
     local override = isDebugEnabled() or isAdmin();
 
     local possiblePlayersTable = {};
 
+    -- First, go through the world objects and get potential nearby players to show.
     for _, object in ipairs(worldObjects) do
         if object and object:getSquare() then
             local square = object:getSquare();
 
-            local movingObjs = square:getMovingObjects();
+            -- For animations where the player isn't centered, check squares nearby.
+            local squareX = square:getX();
+            local squareY = square:getY();
+            local squareZ = square:getZ();
+ 
+            for x = squareX - 1, squareX + 1 do
+                for y = squareY - 1, squareY + 1 do
+                    local currentCell = getCell() or square:getCell(); -- Just in case?
+                   
+                    local nearbySquare = currentCell:getGridSquare(x, y, squareZ);
 
-            for i = 0, movingObjs:size() - 1 do
-                local movObj = movingObjs:get(i);
-                if instanceof(movObj, "IsoPlayer") and movObj ~= getPlayer() then
-                    table.insert(possiblePlayersTable, movingObjs:get(i));
+                    -- Now that we've got the nearby square, check the moving objects.
+                    if nearbySquare and nearbySquare:getMovingObjects() then
+                        local movingObjects = nearbySquare:getMovingObjects();
+                        for i = 0, movingObjects:size() - 1 do
+                            local movObj = movingObjects:get(i);
+
+                            -- All players who aren't the current client player.
+                            if instanceof(movObj, "IsoPlayer") and movObj ~= getPlayer() then
+                                table.insert(possiblePlayersTable, movObj);
+                            end
+                        end
+                    end
+                   
                 end
             end
         end
     end
 
-    print("Moving object iterable list:");
+    -- Then, rule them out one by one.
     for _, possiblePlayer in ipairs(possiblePlayersTable) do
         if (not possiblePlayer:isInvisible()) or override then
 
-            local found = false;
-            for i, v in ipairs(playerList) do
-                if possiblePlayer == v then
-                    found = true;
-                end
-            end
-
-            if not found then
-                table.insert(playerList, possiblePlayer);
+            -- Make sure close enough.
+            local distance = getPlayer():getDistanceSq(possiblePlayer);
+            if distance <= 15 then
+                local userName = possiblePlayer:getUsername();
+                playerList[userName] = possiblePlayer;
             end
         end
     end
@@ -303,24 +318,28 @@ function MedLine_Events.OnFillWorldObjectContextMenu(playerNum, context, worldOb
     if test then return end;
     if not worldObjects then return end;
 
-    local player = getPlayerByOnlineID(playerNum) or getPlayer();
-    if not player then return end;
+    local player = getPlayer();
 
     local medicalCheckOpt = context:getOptionFromName(getText("ContextMenu_Medical_Check"));
-    if not medicalCheckOpt then return end;
+    if medicalCheckOpt then
+        context:removeOptionByName(getText("ContextMenu_Medical_Check"));
+        medicalCheckOpt = nil;
+    end
 
-    if medicalCheckOpt.notAvailable then return end;
-    medicalCheckOpt.onSelect = nil;
 
     -- Get all players for the world objects.
-    local playerList = MedLine_Events.getPlayersFromWorldObjects(worldObjects);
+    local playerList = getPlayersFromWorldObjects(worldObjects);
+    print("Player list has been retrieved.");
 
     local medicalCheckPlayerList = context:getNew(context);
-    context:addSubMenu(medicalCheckOpt, medicalCheckPlayerList);
 
-    for i, v in ipairs(playerList) do
-        local playerOpt = medicalCheckPlayerList:addOption(playerList[i]:getDescriptor():getForename(), context, ISWorldObjectContextMenu.onMedicalCheck, medicalCheckOpt.param1, medicalCheckOpt.param2);
+    for k, v in pairs(playerList) do
+        if not medicalCheckOpt then
+            medicalCheckOpt = context:addOptionOnTop(getText("ContextMenu_Medical_Check"), worldObjects, nil);
+            context:addSubMenu(medicalCheckOpt, medicalCheckPlayerList);
+        end
 
+        local playerOpt = medicalCheckPlayerList:addOption(v:getDescriptor():getForename(), context, ISWorldObjectContextMenu.onMedicalCheck, getPlayer(), v);
         local playerMedicalSubMenu = context:getNew(context);
         context:addSubMenu(playerOpt, playerMedicalSubMenu);
         MedLine_Events.populatePlayerMedicalCheckOpt(player, context, playerMedicalSubMenu, playerOpt);
