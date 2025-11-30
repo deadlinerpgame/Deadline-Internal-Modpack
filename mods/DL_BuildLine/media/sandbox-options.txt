@@ -7,18 +7,32 @@ option BuildingMenu.DeadlineCategoryDivider {
     translation = BuildingMenu_DeadlineCategoryDivider,
 }
 
-option BuildingMenu.DeadlineWallsSubCategory {
+option BuildingMenu.DeadlineWallsCategory {
     type = boolean,
     default = true,
     page = BuildingMenu,
-    translation = BuildingMenu_DeadlineWallsSubCategory,
+    translation = BuildingMenu_DeadlineWallsCategory,
 }
 
-option BuildingMenu.DeadlineFloorsSubCategory {
+option BuildingMenu.DeadlineHighMetalFencesSubCategory {
     type = boolean,
     default = true,
     page = BuildingMenu,
-    translation = BuildingMenu_DeadlineWallsSubCategory,
+    translation = BuildingMenu_DeadlineHighMetalFencesSubCategory,
+}
+
+option BuildingMenu.DeadlineFloorsCategory {
+    type = boolean,
+    default = true,
+    page = BuildingMenu,
+    translation = BuildingMenu_DeadlineFloorsCategory,
+}
+
+option BuildingMenu.DeadlineContainersCategory {
+    type = boolean,
+    default = true,
+    page = BuildingMenu,
+    translation = BuildingMenu_ContainersCategory,
 }
 
 option BuildingMenu.DeadlineTablesSubCategory {
@@ -33,4 +47,18 @@ option BuildingMenu.DeadlineBookshelvesSubCategory {
     default = true,
     page = BuildingMenu,
     translation = BuildingMenu_DeadlineBookshelvesSubCategory,
+}
+
+option BuildingMenu.DeadlineSurvivalWallsHobbyCategory {
+    type = boolean,
+    default = true,
+    page = BuildingMenu,
+    translation = BuildingMenu_DeadlineSurvivalWallsHobbyCategory,
+}
+
+option BuildingMenu.DeadlineSurvivalWallsLowLevelCategory {
+    type = boolean,
+    default = true,
+    page = BuildingMenu,
+    translation = BuildingMenu_DeadlineSurvivalWallsLowLevelCategory,
 }
