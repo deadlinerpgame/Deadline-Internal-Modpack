@@ -1,0 +1,93 @@
+module 2TK_models {
+
+item 2TK_Horse
+    {
+	Type = Clothing,
+    DisplayCategory = Horse,
+	ClothingItem = Horse,
+	BodyLocation = Horse,
+	Weight    =    60,
+    RunSpeedModifier = 4.0,
+    DisplayName    =    Horse,
+    Icon    =    DLHorse,
+    WorldStaticModel = 2TK_Horse,
+
+}
+
+item 2TK_Horse_01
+    {
+	Type = Clothing,
+    DisplayCategory = Horse,
+	ClothingItem = Horse_01,
+	BodyLocation = Horse,
+	Weight    =    60,
+    RunSpeedModifier = 4.0,
+    DisplayName    =    Athena's Horse,
+    Icon    =    DLHorse,
+    WorldStaticModel = 2TK_Horse_01,
+
+}
+
+item 2TK_Horse_02
+    {
+	Type = Clothing,
+    DisplayCategory = Horse,
+	ClothingItem = Horse_02,
+	BodyLocation = Horse,
+	Weight    =    60,
+    RunSpeedModifier = 4.0,
+    DisplayName    =    Black Horse,
+    Icon    =    DLHorse,
+    WorldStaticModel = 2TK_Horse_02,
+
+}
+item 2TK_Horse_03
+    {
+	Type = Clothing,
+    DisplayCategory = Horse,
+	ClothingItem = Horse_03,
+	BodyLocation = Horse,
+	Weight    =    60,
+    RunSpeedModifier = 4.0,
+    DisplayName    =    Grey Horse,
+    Icon    =    DLHorse,
+    WorldStaticModel = 2TK_Horse_03,
+
+}
+item 2TK_Horse_04
+    {
+	Type = Clothing,
+    DisplayCategory = Horse,
+	ClothingItem = Horse_04,
+	BodyLocation = Horse,
+	Weight    =    60,
+    RunSpeedModifier = 4.0,
+    DisplayName    =    White Horse,
+    Icon    =    DLHorse,
+    WorldStaticModel = 2TK_Horse_04,
+
+}
+
+item 2TK_Horse_Carcass
+    {
+	DisplayName = Horse Carcass,
+	DisplayCategory = Food,
+	Type	=	Food,
+	Weight	=	30.0,
+	Icon = DLHorseDead,
+	DaysFresh 			=		5,
+	DaysTotallyRotten 	=	 	5,
+        WorldStaticModel = 2TK_Horse_Dead,
+	Tags = HeavyItem,
+	CantBeFrozen = TRUE,
+	Poison = true,
+	PoisonDetectionLevel = 7,
+	PoisonPower = 500,
+	HungerChange = -100,
+	ThirstChange = -100,
+	UnhappyChange = 99,
+	ReplaceOnRotten = DummyItem,
+
+}
+
+}
