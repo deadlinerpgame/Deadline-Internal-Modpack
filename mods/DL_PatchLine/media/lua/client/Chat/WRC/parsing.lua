@@ -550,37 +550,60 @@ local ignoreTags = {
 
 }
 
-function hasBracketsOrParentheses(s)
+function hasBracketsOrParentheses(s, player)
+    local player = getSpecificPlayer(0)
+    local ignoreForename = nil
+    if player ~= nil then
+        ignoreForename = player:getDescriptor():getForename()
+    end
+
     local squareDepth = 0
     local parenDepth = 0
     local found = false
     local i = 1
 
     while i <= #s do
-        local c = s:sub(i,i)
-        if c == "[" then
-            local matched = false
-            for _, tag in ipairs(ignoreTags) do
-                if s:sub(i, i + #tag - 1) == tag then
-                    i = i + #tag - 1
-                    matched = true
+        repeat
+            if ignoreForename then
+                local len = #ignoreForename
+                if len > 0 and s:sub(i, i + len - 1) == ignoreForename then
+                    i = i + len
                     break
                 end
             end
-            if not matched then
+
+            local c = s:sub(i,i)
+
+            if c == "[" then
+                local matched = false
+                for _, tag in ipairs(ignoreTags) do
+                    if s:sub(i, i + #tag - 1) == tag then
+                        i = i + #tag
+                        matched = true
+                        break
+                    end
+                end
+                if matched then
+                    break
+                end
+
                 squareDepth = squareDepth + 1
                 found = true
-            end
-        elseif c == "]" then
-            squareDepth = math.max(squareDepth - 1, 0)
-        elseif c == "(" then
-            parenDepth = parenDepth + 1
-            found = true
-        elseif c == ")" then
-            parenDepth = math.max(parenDepth - 1, 0)
-        end
 
-        i = i + 1
+            elseif c == "]" then
+                squareDepth = math.max(squareDepth - 1, 0)
+
+            elseif c == "(" then
+                parenDepth = parenDepth + 1
+                found = true
+
+            elseif c == ")" then
+                parenDepth = math.max(parenDepth - 1, 0)
+            end
+
+            i = i + 1
+            break
+        until true
     end
 
     return found

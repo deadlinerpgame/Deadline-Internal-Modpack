@@ -2394,6 +2394,7 @@ function ISDeadlineDiceUI:getScore(labelText)
     else
         resultString = resultString .. modifierString .. " = " .. tostring(totalScore)
     end
+        localtext = playerName .. " " .. resultString
         sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {loggerName = "Dice", logText = localtext})
         -- Combine the strings
 

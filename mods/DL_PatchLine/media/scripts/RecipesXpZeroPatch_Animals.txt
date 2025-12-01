@@ -6,6 +6,7 @@ module Animals
 	{
 		Saddle,
 		HorseAppaloosa,
+		a,
 
 		Result:HorseAppaloosaSaddled,
 		Time:1.0,
@@ -17,6 +18,7 @@ module Animals
 	{
 		Saddle,
 		HorseBlack,
+		a,
 
 		Result:HorseBlackSaddled,
 		Time:1.0,
@@ -28,6 +30,7 @@ module Animals
 	{
 		Saddle,
 		HorseBloodBay,
+		a,
 
 		Result:HorseBloodBaySaddled,
 		Time:1.0,
@@ -39,6 +42,7 @@ module Animals
 	{
 		Saddle,
 		HorseBrown,
+		a,
 
 		Result:HorseBrownSaddled,
 		Time:1.0,
@@ -50,6 +54,7 @@ module Animals
 	{
 		Saddle,
 		HorseDunback,
+		a,
 
 		Result:HorseDunbackSaddled,
 		Time:1.0,
@@ -61,6 +66,7 @@ module Animals
 	{
 		Saddle,
 		HorseGrey,
+		a,
 
 		Result:HorseGreySaddled,
 		Time:1.0,
@@ -72,6 +78,7 @@ module Animals
 	{
 		Saddle,
 		HorsePaintedBlack,
+		a,
 
 		Result:HorsePaintedBlackSaddled,
 		Time:1.0,
@@ -83,6 +90,7 @@ module Animals
 	{
 		Saddle,
 		HorsePaintedBrown,
+		a,
 
 		Result:HorsePaintedBrownSaddled,
 		Time:1.0,
@@ -94,6 +102,7 @@ module Animals
 	{
 		Saddle,
 		HorsePalamino,
+		a,
 
 		Result:HorsePalaminoSaddled,
 		Time:1.0,
@@ -105,6 +114,7 @@ module Animals
 	{
 		Saddle,
 		HorseWhite,
+		a,
 
 		Result:HorseWhiteSaddled,
 		Time:1.0,
@@ -123,17 +133,21 @@ module Animals
 		Category:Animals,
 	}
 
-	recipe Saddle
-	{
-		LeatherStrips=5,
-		Sheet=1,
-		ScrapMetal=5,
-
-		Result:Saddle,
-		Time:1.0,
-		Override:true,
-		Category:Animals,
-	}
+    recipe Saddle
+    {
+        LeatherStrips=5,
+        Thread=20,
+        Sheet=1,
+        ScrapMetal=5,
+        aerx.Buckle=6,
+	Deadline.Kevlar=1,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=10,
+        Result:Saddle,
+        Time:70.0,
+        Category:Tailoring,
+        Override:true,
+        SkillRequired:Tailoring=9,
+    }
 
 	recipe Collect Eggs
 	{

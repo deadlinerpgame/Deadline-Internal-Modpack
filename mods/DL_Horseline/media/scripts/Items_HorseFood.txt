@@ -1,0 +1,40 @@
+module DeadlineHorse {
+
+
+item FoodHorseA
+    {
+	DisplayName = Horse Feed,
+	DisplayCategory = Food,
+	Type	=	Food,
+	Weight	=	2.0,
+	Icon = HorseFeedA,
+	DaysFresh 			=		10,
+	DaysTotallyRotten 	=	 	10,
+        WorldStaticModel = 2TK_Horse_Dead,
+	CantBeFrozen = false,
+	HungerChange = -200,
+	ThirstChange = 0,
+	UnhappyChange = 55,
+	ReplaceOnRotten = DummyItem,
+
+}
+
+item FoodHorseB
+    {
+	DisplayName = Horse Feed,
+	DisplayCategory = Food,
+	Type	=	Food,
+	Weight	=	3.0,
+	Icon = HorseFeedB,
+	DaysFresh 			=		10,
+	DaysTotallyRotten 	=	 	10,
+        WorldStaticModel = 2TK_Horse_Dead,
+	CantBeFrozen = false,
+	HungerChange = -300,
+	ThirstChange = 0,
+	UnhappyChange = 75,
+	ReplaceOnRotten = DummyItem,
+
+}
+
+}

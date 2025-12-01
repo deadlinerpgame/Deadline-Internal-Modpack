@@ -13,12 +13,21 @@ module Base {
         WorldStaticModel = Deer_Dead,
 	DisplayCategory = Food,
 	Weight	=	20.0,
-	Type	=	Normal,
-	DaysFresh 			=		10,
-	DaysTotallyRotten 	=	 	15,
+	Type	=	Food,
+	DaysFresh 			=		5,
+	DaysTotallyRotten 	=	 	5,
 	DisplayName = Deer Carcass,
 	Icon = DeadPerson_MaleZombie,
-
+	RequiresEquippedBothHands = true,
+	Tags = HeavyItem,
+	CantBeFrozen = TRUE,
+	Poison = true,
+	PoisonDetectionLevel = 7,
+	PoisonPower = 500,
+	HungerChange = -100,
+	ThirstChange = -100,
+	UnhappyChange = 99,
+	ReplaceOnRotten = DummyItem,
 	}
 
 
