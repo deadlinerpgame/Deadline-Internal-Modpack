@@ -1,0 +1,56 @@
+module Diamond
+{
+        item poncho
+    {
+        DisplayCategory         =   Clothing,
+        Type                    =   Clothing,
+        DisplayName             =   Old Poncho,
+        ClothingItem            =   poncho,
+        ClothingItemExtra       =   ponchohood,
+        ClothingItemExtraOption =   UpHoodie,
+        clothingExtraSubmenu    =   DownHoodie,
+        BodyLocation            =   Jacket,
+        BloodLocation           =   LongJacket,
+        Icon                    =   poncho,
+	    CanHaveHoles            =   true,
+        RunSpeedModifier        =   1.1,
+        CombatSpeedModifier     =   0.97,
+        BiteDefense             =   15,
+        ScratchDefense          =   25,
+        BulletDefense           =   5,
+        NeckProtectionModifier  =   0.5,
+        Insulation              =   0.65,
+        WindResistance          =   0.35,
+        WaterResistance         =   0.45,
+        Weight                  =   1.5,
+        FabricType              =   Leather,
+        WorldStaticModel        =   Poncho_Ground,
+    }
+
+    item ponchohood
+    {
+        DisplayCategory         =   Clothing,
+        Type                    =   Clothing,
+        DisplayName             =   Old Poncho,
+        ClothingItem            =   ponchohood,
+        ClothingItemExtra       =   poncho,
+        ClothingItemExtraOption =   DownHoodie,
+        clothingExtraSubmenu    =   UpHoodie,
+        BodyLocation            =   JacketHat,
+        BloodLocation           =   LongJacket;FullHelmet,
+        Icon                    =   poncho,
+	    CanHaveHoles            =   true,
+        RunSpeedModifier        =   1.1,
+        CombatSpeedModifier     =   0.97,
+        BiteDefense             =   15,
+        ScratchDefense          =   25,
+        BulletDefense           =   5,
+        NeckProtectionModifier  =   0.8,
+        Insulation              =   0.55,
+        WindResistance          =   0.25,
+        WaterResistance         =   0.35,
+        Weight                  =   1.5,
+        FabricType              =   Leather,
+        WorldStaticModel        =   Poncho_Ground,
+    }
+}

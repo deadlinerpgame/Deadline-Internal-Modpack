@@ -16,6 +16,7 @@ end
 
 function DrinkWaterGround:new(character, horse, waterX, waterY, waterZ)
     local o = ISBaseTimedAction.new(self, character);
+    o.character = getPlayer();
     o.horse = horse;
     o.waterX = waterX;
     o.waterY = waterY;
