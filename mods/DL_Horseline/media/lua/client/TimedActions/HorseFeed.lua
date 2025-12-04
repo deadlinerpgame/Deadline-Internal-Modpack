@@ -53,8 +53,7 @@ function HorseFeed:perform()
    
     modifyModData( self.character,  self.horse, {
         hunger = newHunger,
-        thirst = newThirst,
-        thirstTimestamp = currentTime
+        thirst = newThirst
     })
 
     ISBaseTimedAction.perform(self)

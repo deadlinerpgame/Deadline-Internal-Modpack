@@ -75,6 +75,7 @@ function HorseMount:new(character, item, mount, sq, xpos, ypos, zpos, rotation)
     o.item = item
     o.mount = mount
     o.sq = sq
+    o.character = getPlayer();
     o.characterInv = character:getInventory()
     o.itemInv = item:getContainer()
     o.xpos = xpos

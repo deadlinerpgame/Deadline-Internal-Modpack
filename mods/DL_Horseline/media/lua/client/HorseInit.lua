@@ -10,12 +10,12 @@ HORSE_FEED_TYPES = {
     "Base.Apple",
     "Base.Banana",
     "Base.Carrots",
+    "Base.SugarBeet",
+    "Base.BellPepper",
+    "Base.Pear",
+    "Sprout.Wheat",
     "DeadlineHorse.FoodHorseA",
     "DeadlineHorse.FoodHorseB",
---    "Base.SugarBeet",
---    "Base.BellPepper",
---    "Base.Pear",
---    "Sprout.Wheat",
 
 }
 
@@ -45,7 +45,7 @@ local function initHorseStats(item)
         data.maxThirst = 300
         data.stamina = 300
         data.maxStamina = 300
-        data.owner = ""
+        data.owner = "THEREISNOCLAIMANT"
         data.riders = {}
         data.oldName = ""
 
@@ -92,12 +92,17 @@ local function horseContextMenu(player, context, items)
                 local player = getPlayer()
                 local mounted = item:getContainer() == player:getInventory()
         if not mounted then
-            if data.owner == "" then
+            
+            if data.owner == "" or data.owner == "THEREISNOCLAIMANT" then
                 context:addOption("Claim", player, claimHorse, item)
             elseif data.owner == player:getUsername() then
                 context:addOption("Mount", item, doMount, player)
                 context:addOption("Rename", player, renameHorse, item)
                 context:addOption("Unclaim", player, unclaimHorse, item)
+                if player:getAccessLevel() == "admin" then
+                    context:addOption("ADMIN Mount", item, doMount, player)
+                    context:addOption("ADMIN Unclaim", player, unclaimHorseAdmin, item)
+                end
             end
              local menuOption = context:addOption("Feed", worldobjects); 
              local subMenu = ISContextMenu:getNew(context);
@@ -107,7 +112,7 @@ local function horseContextMenu(player, context, items)
             local scriptManager = getScriptManager()
             local name = scriptManager:getItem(foodType):getDisplayName()
             local opt
-            local hunger
+            local hunger    
             if foodItem and (not foodItem:IsFood() or not foodItem:isRotten()) then
                 opt = subMenu:addOption(name, player, onFeedHorse, item, foodItem)
                 hunger = (Math.abs(foodItem:getHungerChange() * 100))
@@ -250,7 +255,7 @@ end
             local c = InventoryItemFactory.CreateItem("2TK_models.2TK_Horse_Carcass")
 	        c:setAge(0)
             square:AddWorldInventoryItem(c, 0,0,0)
-            print(square)
+
             player:setWornItem("Horse", nil, false)
             triggerEvent("OnClothingUpdated", player)
             ISInventoryPage.renderDirty = true
@@ -272,14 +277,14 @@ end
     end
 
     if isSprinting and not data._exhaustedDebuff then
-        data.hunger = data.hunger - (0.9 * delta)
-        data.thirst = data.thirst - (1.5 * delta)
+        data.hunger = data.hunger - (0.3 * delta)
+        data.thirst = data.thirst - (0.5 * delta)
     elseif isRunning and not data._exhaustedDebuff then
-        data.hunger = data.hunger - (0.5 * delta)
-        data.thirst = data.thirst - (0.7 * delta)
+        data.hunger = data.hunger - (0.2 * delta)
+        data.thirst = data.thirst - (0.3 * delta)
     else
-        data.hunger = data.hunger - (0.05 * delta)
-        data.thirst = data.thirst - (0.1 * delta)
+        data.hunger = data.hunger - (0.02 * delta)
+        data.thirst = data.thirst - (0.05 * delta)
     end
 
     if data.hunger >= 300 and data.thirst >= 300 and not isMoving then
@@ -340,15 +345,15 @@ end
     local DECELERATION_RATE = 0.7
 
 
-    if isSprinting and data.thirst > 0 then
-        data.maxHorseSpeed = 1.5
-    elseif isRunning and data.thirst > 0 then
-        data.maxHorseSpeed = 1.2
-    elseif data._exhaustedDebuff then
-        data.maxHorseSpeed = 0.0
-    else
-        data.maxHorseSpeed = 0.7
-    end
+        if isSprinting then
+            data.maxHorseSpeed = 1.3 * data.speedModifier
+        elseif isRunning then
+            data.maxHorseSpeed = 1.1 * data.speedModifier
+        elseif data._exhaustedDebuff then
+            data.maxHorseSpeed = 0.0
+        else
+            data.maxHorseSpeed = 1.15
+        end
 
     if isMoving then
         data.horseSpeed = math.min(data.maxHorseSpeed, data.horseSpeed + (ACCELERATION_RATE * delta))
@@ -482,7 +487,6 @@ function modifyModData(player, item, data)
     end
     local square = wi:getSquare()
     local x, y, z = math.floor(square:getX()), math.floor(square:getY()), math.floor(square:getZ())
-
     local args = {
         x = x,
         y = y,
@@ -490,6 +494,7 @@ function modifyModData(player, item, data)
         id = item:getID(),
         data = data
     }
+    sendClientCommand("DeadlineHorse", "RequestSyncHorseData", args)
 end
 
 function getHunger(modData)
@@ -528,7 +533,17 @@ function unclaimHorse(player, item)
     localtext = player:getUsername() .. " has unclaimed a horse with name " .. item:getName() .. " at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
     sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {loggerName = "Horses", logText = localtext})
     modifyModData(player, item, {
-        owner = "",
+        owner = "THEREISNOCLAIMANT",
+        riders = {},
+    })
+end
+
+function unclaimHorseAdmin(player, item)
+    player:Say("Horse unclaimed")
+    localtext = player:getUsername() .. " has admin unclaimed a horse with name " .. item:getName() .. " at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
+    sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {loggerName = "Horses", logText = localtext})
+    modifyModData(player, item, {
+        owner = "THEREISNOCLAIMANT",
         riders = {},
     })
 end
