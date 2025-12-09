@@ -8,8 +8,10 @@ function Craftline_Farming.onTreatFungi(worldObjects, uses, sq, playerObj, item)
     if not ISFarmingMenu.walkToPlant(playerObj, sq) then
 		return;
 	end
-	ISWorldObjectContextMenu.equip(playerObj, playerObj:getPrimaryHandItem(), ISFarmingMenu.GardeningSprayCigarettes, true)
-	ISTimedActionQueue.add(DLTreatFungiAction:new(playerObj, item, uses, CFarmingSystem.instance:getLuaObjectOnSquare(sq), 10 * (uses * 5)));
+    local fungiCan = playerObj:getInventory():getFirstTypeEvalArgRecurse("GardeningSprayBonemeal", predicateDrainableUsesInt, 1);
+    if not fungiCan then return end;
+    ISWorldObjectContextMenu.equip(playerObj, playerObj:getPrimaryHandItem(), fungiCan, true);
+    ISTimedActionQueue.add(DLTreatFungiAction:new(playerObj, item, uses, CFarmingSystem.instance:getLuaObjectOnSquare(sq), 10 * (uses * 5)));
 end
 
 function Craftline_Farming.OnFillWorldObjectContextMenu(playerNum, context, worldObjects, test)

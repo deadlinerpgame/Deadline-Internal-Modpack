@@ -12,11 +12,12 @@ module Craftline
 		DisplayName			=		Fungi Treatment Spray,
 		Icon				=		TZ_GardeningSprayCan,
 		Weight				=		1.0,
-    	UseDelta			=		0.2,
+    	UseDelta			=		0.1,
     	ReplaceOnDeplete 	= 		GardeningSprayEmpty,
 	    UseWhileEquipped    =       false,
     	StaticModel         =       GardenSpray,
     	WorldStaticModel    =       GardenSprayGround,
+        IsWaterSource       =       true,
   	}
 
     recipe Make Fungi Treatment Spray

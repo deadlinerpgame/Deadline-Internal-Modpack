@@ -1,3 +1,5 @@
+require "WRC";
+
 if isServer() then return end;
 
 --[[

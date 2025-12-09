@@ -151,6 +151,55 @@ local function initBuildingMenuRecipes()
         }
     }
 
+-- SURVIVAL BIG WALL RECIPE
+    BuildingMenu.SurvivalHobbyBigWoodWallRecipe = {
+         neededTools = {
+            "Hammer",
+            "Paintbrush",
+        }, 
+        neededMaterials = { -- Contains Groups of Materials
+            { -- Material that is required and have no alternatives
+                Material = "Base.Plank",
+                Amount = SurvivalbigWallWoodCount,
+            },
+            { -- Material that is required and have no alternatives
+                Material = "Base.Nails",
+                Amount = SurvivalbigWallNailsCount,
+            },
+        },
+        skills = {
+            {
+                Skill = "Woodwork",
+                Level = survivalCarpentryLevel6,
+                Xp = BuildingMenu.round(survivalCarpentryLevel6 * carpentryXpPerLevel)
+            }
+        }
+    }
+-- SURVIVAL SMALL WALL RECIPE
+    BuildingMenu.SurvivalHobbySmallWoodWallRecipe = {
+         neededTools = {
+            "Hammer",
+            "Paintbrush",
+        }, 
+        neededMaterials = { -- Contains Groups of Materials
+            { -- Material that is required and have no alternatives
+                Material = "Base.Plank",
+                Amount = SurvivalsmallWallWoodCount,
+            },
+            { -- Material that is required and have no alternatives
+                Material = "Base.Nails",
+                Amount = SurvivalsmallWallNailsCount,
+            },
+        },
+        skills = {
+            {
+                Skill = "Woodwork",
+                Level = survivalCarpentryLevel6,
+                Xp = BuildingMenu.round(survivalCarpentryLevel6 * carpentryXpPerLevel)
+            }
+        }
+    }
+
 -- SURVIVAL WHITE BIG WALL RECIPE
     BuildingMenu.SurvivalWhiteBigWoodWallLevel6Recipe = {
          neededTools = {
@@ -326,7 +375,19 @@ local function initBuildingMenuRecipes()
         } ]]
     }
 
-
+-- SANDBAG/GRAVELBAG RECIPE
+    BuildingMenu.SandbagRecipe = {
+        neededMaterials = { -- Contains Groups of Materials
+            {
+                Material = { "Base.Stone", "Base.SharpedStone" }, -- Alternative Items: Within this group these items can be combined to meet the requirement
+                Amount = 5
+            },
+            {
+                Material = { "Base.SackPotatoes", "Base.EmptySandbag", "Base.EmptySandbag_Secondary", "Base.SackCabbages", "Base.SackOnions", "Base.SackCarrots" }, -- Alternative Items: Within this group these items can be combined to meet the requirement
+                Amount = 2
+            },
+        },
+    }
 
 
 
@@ -1576,34 +1637,776 @@ local function initBuildingMenuRecipes()
         }
 
 
-
--- Random thing used as example
-    BuildingMenu.RedBrownBigWoodWallRecipe = {
+-- [[ TENTS ]]
+-- BLUE TENT WALL
+    BuildingMenu.BlueBigFabricWallRecipe = {
         neededTools = {
-            "Hammer",
-            "Paintbrush"
+            "BlowTorch",
+            "WeldingMask",
+            "Needle"
         },
         neededMaterials = {
             {
-                Material = "Base.Plank",
-                Amount = bigWallWoodCount
+                {
+                    Material = "Base.MetalBar",
+                    Amount = 2
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 2
+                },
             },
             {
-                BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Nails, bigWallNailsCount, "Material")
+                {
+                    Material = "Base.Tarp",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.RippedSheets",
+                    Amount = 15
+                },
+                {
+                    Material = "Base.DenimStrips",
+                    Amount = 8
+                }
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.Thread",
+                Amount = 5
+            },
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
             }
         },
         skills = {
             {
-                Skill = "Woodwork",
-                Level = bigObjectsCarpentrySkill,
-                Xp = BuildingMenu.round(bigObjectsCarpentrySkill * carpentryXpPerLevel)
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
+            },
+            {
+                Skill = "Tailoring",
+                Level = 4,
+                Xp = 15
             }
         }
     }
-    BuildingMenu.addPaintToRecipe(BuildingMenu.RedBrownBigWoodWallRecipe, {
-        { type = "Base.PaintRed", amount = 1 },
-        { type = "Base.PaintBrown", amount = 1 },
+    BuildingMenu.addPaintToRecipe(BuildingMenu.BlueBigFabricWallRecipe, {
+        { type = "Base.PaintBlue", amount = 1 },
     })
+
+    BuildingMenu.BlueSmallFabricWallRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Needle"
+        },
+        neededMaterials = {
+            {
+                {
+                    Material = "Base.MetalBar",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 1
+                },
+            },
+            {
+                {
+                    Material = "Base.Tarp",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.RippedSheets",
+                    Amount = 8
+                },
+                {
+                    Material = "Base.DenimStrips",
+                    Amount = 4
+                }
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.Thread",
+                Amount = 3
+            },
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
+            },
+            {
+                Skill = "Tailoring",
+                Level = 3,
+                Xp = 10
+            }
+        }
+    }
+    BuildingMenu.addPaintToRecipe(BuildingMenu.BlueSmallFabricWallRecipe, {
+        { type = "Base.PaintBlue", amount = 1 },
+    })
+
+    BuildingMenu.BlueSmallFabricRopeWallRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Needle"
+        },
+        neededMaterials = {
+            {
+                {
+                    Material = "Base.MetalBar",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 1
+                },
+            },
+            {
+                {
+                    Material = "Base.Tarp",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.RippedSheets",
+                    Amount = 8
+                },
+                {
+                    Material = "Base.DenimStrips",
+                    Amount = 4
+                }
+            },
+            {
+                BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Ropes, 1, "Material")
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.Thread",
+                Amount = 3
+            },
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
+            },
+            {
+                Skill = "Tailoring",
+                Level = 3,
+                Xp = 10
+            }
+        }
+    }
+    BuildingMenu.addPaintToRecipe(BuildingMenu.BlueSmallFabricRopeWallRecipe, {
+        { type = "Base.PaintBlue", amount = 1 },
+    })
+-- GREY TENT WALL
+    BuildingMenu.GreyBigFabricWallRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Needle"
+        },
+        neededMaterials = {
+            {
+                {
+                    Material = "Base.MetalBar",
+                    Amount = 2
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 2
+                },
+            },
+            {
+                {
+                    Material = "Base.Tarp",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.RippedSheets",
+                    Amount = 15
+                },
+                {
+                    Material = "Base.DenimStrips",
+                    Amount = 8
+                }
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.Thread",
+                Amount = 5
+            },
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
+            },
+            {
+                Skill = "Tailoring",
+                Level = 4,
+                Xp = 15
+            }
+        }
+    }
+    BuildingMenu.addPaintToRecipe(BuildingMenu.GreyBigFabricWallRecipe, {
+        { type = "Base.PaintGrey", amount = 1 },
+    })
+
+    BuildingMenu.GreySmallFabricWallRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Needle"
+        },
+        neededMaterials = {
+            {
+                {
+                    Material = "Base.MetalBar",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 1
+                },
+            },
+            {
+                {
+                    Material = "Base.Tarp",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.RippedSheets",
+                    Amount = 8
+                },
+                {
+                    Material = "Base.DenimStrips",
+                    Amount = 4
+                }
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.Thread",
+                Amount = 3
+            },
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
+            },
+            {
+                Skill = "Tailoring",
+                Level = 3,
+                Xp = 10
+            }
+        }
+    }
+    BuildingMenu.addPaintToRecipe(BuildingMenu.GreySmallFabricWallRecipe, {
+        { type = "Base.PaintGrey", amount = 1 },
+    })
+
+    BuildingMenu.GreySmallFabricRopeWallRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Needle"
+        },
+        neededMaterials = {
+            {
+                {
+                    Material = "Base.MetalBar",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 1
+                },
+            },
+            {
+                {
+                    Material = "Base.Tarp",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.RippedSheets",
+                    Amount = 8
+                },
+                {
+                    Material = "Base.DenimStrips",
+                    Amount = 4
+                }
+            },
+            {
+                BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Ropes, 1, "Material")
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.Thread",
+                Amount = 3
+            },
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
+            },
+            {
+                Skill = "Tailoring",
+                Level = 3,
+                Xp = 10
+            }
+        }
+    }
+    BuildingMenu.addPaintToRecipe(BuildingMenu.GreySmallFabricRopeWallRecipe, {
+        { type = "Base.PaintGrey", amount = 1 },
+    })
+-- PURPLE TENT WALL
+    BuildingMenu.PurpleBigFabricWallRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Needle"
+        },
+        neededMaterials = {
+            {
+                {
+                    Material = "Base.MetalBar",
+                    Amount = 2
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 2
+                },
+            },
+            {
+                {
+                    Material = "Base.Tarp",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.RippedSheets",
+                    Amount = 15
+                },
+                {
+                    Material = "Base.DenimStrips",
+                    Amount = 8
+                }
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.Thread",
+                Amount = 5
+            },
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
+            },
+            {
+                Skill = "Tailoring",
+                Level = 4,
+                Xp = 15
+            }
+        }
+    }
+    BuildingMenu.addPaintToRecipe(BuildingMenu.PurpleBigFabricWallRecipe, {
+        { type = "Base.PaintPurple", amount = 1 },
+    })
+
+    BuildingMenu.PurpleSmallFabricWallRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Needle"
+        },
+        neededMaterials = {
+            {
+                {
+                    Material = "Base.MetalBar",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 1
+                },
+            },
+            {
+                {
+                    Material = "Base.Tarp",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.RippedSheets",
+                    Amount = 8
+                },
+                {
+                    Material = "Base.DenimStrips",
+                    Amount = 4
+                }
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.Thread",
+                Amount = 3
+            },
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
+            },
+            {
+                Skill = "Tailoring",
+                Level = 3,
+                Xp = 10
+            }
+        }
+    }
+    BuildingMenu.addPaintToRecipe(BuildingMenu.PurpleSmallFabricWallRecipe, {
+        { type = "Base.PaintPurple", amount = 1 },
+    })
+
+    BuildingMenu.PurpleSmallFabricRopeWallRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Needle"
+        },
+        neededMaterials = {
+            {
+                {
+                    Material = "Base.MetalBar",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 1
+                },
+            },
+            {
+                {
+                    Material = "Base.Tarp",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.RippedSheets",
+                    Amount = 8
+                },
+                {
+                    Material = "Base.DenimStrips",
+                    Amount = 4
+                }
+            },
+            {
+                BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Ropes, 1, "Material")
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.Thread",
+                Amount = 3
+            },
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
+            },
+            {
+                Skill = "Tailoring",
+                Level = 3,
+                Xp = 10
+            }
+        }
+    }
+    BuildingMenu.addPaintToRecipe(BuildingMenu.PurpleSmallFabricRopeWallRecipe, {
+        { type = "Base.PaintPurple", amount = 1 },
+    })
+-- WHITE TENT TALL
+    BuildingMenu.WhiteBigFabricWallRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Needle"
+        },
+        neededMaterials = {
+            {
+                {
+                    Material = "Base.MetalBar",
+                    Amount = 2
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 2
+                },
+            },
+            {
+                {
+                    Material = "Base.Tarp",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.RippedSheets",
+                    Amount = 15
+                },
+                {
+                    Material = "Base.DenimStrips",
+                    Amount = 8
+                }
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.Thread",
+                Amount = 5
+            },
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
+            },
+            {
+                Skill = "Tailoring",
+                Level = 4,
+                Xp = 15
+            }
+        }
+    }
+    BuildingMenu.addPaintToRecipe(BuildingMenu.WhiteBigFabricWallRecipe, {
+        { type = "Base.PaintWhite", amount = 1 },
+    })
+
+    BuildingMenu.WhiteSmallFabricWallRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Needle"
+        },
+        neededMaterials = {
+            {
+                {
+                    Material = "Base.MetalBar",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 1
+                },
+            },
+            {
+                {
+                    Material = "Base.Tarp",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.RippedSheets",
+                    Amount = 8
+                },
+                {
+                    Material = "Base.DenimStrips",
+                    Amount = 4
+                }
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.Thread",
+                Amount = 3
+            },
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
+            },
+            {
+                Skill = "Tailoring",
+                Level = 3,
+                Xp = 10
+            }
+        }
+    }
+    BuildingMenu.addPaintToRecipe(BuildingMenu.WhiteSmallFabricWallRecipe, {
+        { type = "Base.PaintWhite", amount = 1 },
+    })
+
+    BuildingMenu.WhiteSmallFabricRopeWallRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Needle"
+        },
+        neededMaterials = {
+            {
+                {
+                    Material = "Base.MetalBar",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 1
+                },
+            },
+            {
+                {
+                    Material = "Base.Tarp",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.RippedSheets",
+                    Amount = 8
+                },
+                {
+                    Material = "Base.DenimStrips",
+                    Amount = 4
+                }
+            },
+            {
+                BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Ropes, 1, "Material")
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.Thread",
+                Amount = 3
+            },
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
+            },
+            {
+                Skill = "Tailoring",
+                Level = 3,
+                Xp = 10
+            }
+        }
+    }
+    BuildingMenu.addPaintToRecipe(BuildingMenu.WhiteSmallFabricRopeWallRecipe, {
+        { type = "Base.PaintWhite", amount = 1 },
+    })
+
 
 end
 
