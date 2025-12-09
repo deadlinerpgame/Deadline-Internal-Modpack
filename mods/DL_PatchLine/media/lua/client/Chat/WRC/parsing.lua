@@ -446,6 +446,7 @@ local ignoreTags = {
     "[Quiet]",
     "[Whisper]",
     "[Radio]",
+    "[Shout]",
     "[radio]",
     "[en]",
     "[asl]",

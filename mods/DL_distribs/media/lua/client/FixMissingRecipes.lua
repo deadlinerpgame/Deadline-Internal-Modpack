@@ -209,8 +209,9 @@ function grantProfessionRecipes()
         player:learnRecipe("Reinforce Gloves with Bones")
         player:learnRecipe("Craft Bone Mask")
         player:learnRecipe("Craft Bone Pectoral")
-    elseif profession == "forager" then
+    elseif player:HasTrait("ProfForager2") then
         player:learnRecipe("Herbalist")
+        player:learnRecipe("Identify Insect")
 
     elseif profession == "tinkerer" then
         player:learnRecipe("Make Duct Tape from Glue")

@@ -99,10 +99,10 @@ function Recipe.OnCreate.ButcherPig(items, result, player)
     addItems(inv, "aerx.AnimalBone", 5)
     addItems(inv, "aerx.SmallAnimalBone", 9)
 
-    local baconCount = hasTrait and 12 or 9
+    local baconCount = hasTrait and 2 or 1
     local lardCount = hasTrait and 3 or 2
 
-    addItems(inv, "farming.Bacon", baconCount)
+    addItems(inv, "Base.Ham", baconCount)
     addItems(inv, "Base.Lard", lardCount)
 end
 
@@ -117,10 +117,10 @@ function Recipe.OnCreate.ButcherPigHalf(items, result, player)
     addItems(inv, "aerx.AnimalBone", 2)
     addItems(inv, "aerx.SmallAnimalBone", 4)
 
-    local baconCount = hasTrait and 6 or 4
+    local baconCount = hasTrait and 1 or 0
     local lardCount = hasTrait and 2 or 1
 
-    addItems(inv, "farming.Bacon", baconCount)
+    addItems(inv, "Base.Ham", baconCount)
     addItems(inv, "Base.Lard", lardCount)
 end
 
@@ -138,8 +138,8 @@ function Recipe.OnCreate.ButcherRabbit(items, result, player)
     addItems(inv, "aerx.AnimalBone", 1)
     addItems(inv, "aerx.SmallAnimalBone", 3)
 
-    local meatCount = hasTrait and 5 or 3
-    local lardCount = hasTrait and 2 or 1
+    local meatCount = hasTrait and 2 or 1
+    local lardCount = hasTrait and 1 or 0
 
     addItems(inv, "Base.Rabbitmeat", meatCount)
     addItems(inv, "Base.Lard", lardCount)
@@ -157,7 +157,7 @@ function Recipe.OnCreate.ButcherRabbitHalf(items, result, player)
     addItems(inv, "aerx.AnimalBone", 1)
     addItems(inv, "aerx.SmallAnimalBone", 2)
 
-    local meatCount = hasTrait and 3 or 2
+    local meatCount = hasTrait and 1 or 1
     local lardCount = hasTrait and 1 or 0
 
     addItems(inv, "Base.Rabbitmeat", meatCount)

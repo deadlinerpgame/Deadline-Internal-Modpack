@@ -10,7 +10,6 @@ HORSE_FEED_TYPES = {
     "Base.Apple",
     "Base.Banana",
     "Base.Carrots",
-    "Base.SugarBeet",
     "Base.BellPepper",
     "Base.Pear",
     "Sprout.Wheat",
@@ -141,8 +140,7 @@ local function horseContextMenu(player, context, items)
                 i.notAvailable = true
             end
         end
-            
-        elseif mounted then
+        elseif mounted and not player:isPlayerMoving() and not player:isRunning() and not player:isSprinting() then
             context:addOption("Dismount", item, doDismount, player)
         end
         local nearWater, X, Y, Z = checkWater(player)
@@ -415,6 +413,7 @@ function doDismount(item, player)
         rot = rot - 360
     end
     ISTimedActionQueue.add(HorseMount:new(player, item, false, sq, x, y, z, rot))
+    SpeedFramework.SetPlayerSpeed(player, nil)
 end
 
 

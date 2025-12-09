@@ -617,6 +617,7 @@ addTrait("proftinkerer2", {
 addTrait("profforager2", {
     name = "Waste Not, Want Not",
     description = " can identify bugs before consuming them which removes the Unhappiness malus.\nAble to make some bug-based recipes. ",
+    recipes = {"Identify Insect"},    
     profession = true,
 })
 

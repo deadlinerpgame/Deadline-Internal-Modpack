@@ -17,6 +17,7 @@ end
 
 
 
+
 function Recipe.OnTest.OE_IsPoisonousFood(item)
 	if not item:IsFood() then
 		return true;
@@ -47,5 +48,35 @@ function Recipe.OnTest.OE_IsRottenFood(item)
         return true;
     else
         return false;
+    end
+end
+
+
+function Recipe.OnCreate.ProfForager2_TestCritter(item)
+    if item:getUnhappyChange() > 0 then
+        return true;
+    else
+        return false;
+    end
+end
+
+
+function Recipe.OnCreate.ProfForager2_PrepareCritter(items, result, player, selectedItem)
+    local itemType = selectedItem:getFullType()
+    player:getInventory():Remove(result)
+    local newItem = InventoryItemFactory.CreateItem(itemType)
+    
+    if newItem then
+        newItem:setUnhappyChange(0)
+        newItem:setPoisonPower(0)
+        newItem:setPoisonDetectionLevel(0)
+
+        if selectedItem:isCooked() then
+            newItem:setCooked(true)
+        end
+        if selectedItem:isFresh() then
+            newItem:setAge(selectedItem:getAge())
+        end
+        player:getInventory():AddItem(newItem)
     end
 end

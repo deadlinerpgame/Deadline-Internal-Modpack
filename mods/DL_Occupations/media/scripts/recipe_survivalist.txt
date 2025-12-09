@@ -2,6 +2,19 @@ module Base
 {
 
  
+
+recipe Identify Insect
+    {
+        AmericanLadyCaterpillar/BandedWoolyBearCaterpillar/Centipede/Centipede2/Maggots/Maggots2/Millipede/Millipede2/MonarchCaterpillar/Pillbug/SawflyLarva/SilkMothCaterpillar/SwallowtailCaterpillar/Termites,
+
+        Result: Maggots,
+	RemoveResultItem:true,
+        Time: 2.0,
+	OnTest: Recipe.OnCreate.ProfForager2_TestCritter,
+        OnCreate: Recipe.OnCreate.ProfForager2_PrepareCritter,
+	NeedToBeLearn:true,
+        Category: Survivalist,
+    }
  	 
   
 recipe Find Bait in Rotten Food

@@ -207,7 +207,7 @@ function startMethaneProduction(worldobjects, player, tile)
     modData.isProducingMethane = true
     modData.methaneStartTime = getGameTime():getWorldAgeHours()
     modData.tileState = 1
-    modData.TimeNeeded = 180
+    modData.TimeNeeded = 90
     tile:transmitModData() -- Ensure data persists across sessions
     updateTileState(tile, "inUse")  -- Set to in-use sprite
 
@@ -247,7 +247,7 @@ end
 
 -- Function to check if 3 days have passed
 function isMethaneProductionComplete(startTime)
-    return getGameTime():getWorldAgeHours() >= startTime + (180)
+    return getGameTime():getWorldAgeHours() >= startTime + (90)
 end
 
 
