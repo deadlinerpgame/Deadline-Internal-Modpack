@@ -88,6 +88,16 @@ function MedLine_Events.onClickGiveSaline(self, player, medicalCheckOpt, matchin
     ISTimedActionQueue.add(MLGiveSalineAction:new(player, medicalCheckOpt.param2, matchingBag));
 end
 
+function MedLine_Events.adminRemoveBloodLoss(self, player, medicalCheckOpt)
+    if not player or not medicalCheckOpt then return end;
+
+    local target = medicalCheckOpt.param2;
+    getPlayer():faceThisObject(target);
+
+    sendClientCommand(getPlayer(), "MedLine", "ADMIN_OverrideBloodLoss", { username = target:getUsername(), time = 0 });
+    getPlayer():setHaloNote(getText("IGUI_ADMINOverrideBloodLoss"), 150, 150, 150, 200);
+end
+
 
 function MedLine_Events.populateMedicalCheck_BloodDraw(player, context, subMenu, medicalCheckOpt, requiredSkillLevel)
     local newOpt = subMenu:addOption(getText("ContextMenu_MedLine_DrawBlood"), context, MedLine_Events.onClickDrawBlood, medicalCheckOpt.param1, medicalCheckOpt);
@@ -241,6 +251,15 @@ function MedLine_Events.populateMedicalCheck_SalineTransfusion(player, context, 
     return newOpt;
 end
 
+function MedLine_Events.populateMedicalCheck_AdminRemoveBloodLoss(player, context, subMenu, medicalCheckOpt)
+    if (not isAdmin() and not isDebugEnabled()) then return end;
+
+    if not MedLine_Client.doesPlayerHaveBloodLoss(medicalCheckOpt.param2) then return end;
+
+    local newOpt = subMenu:addOption(getText("ContextMenu_MedLine_AdminRemoveBloodLoss"), context, MedLine_Events.adminRemoveBloodLoss, medicalCheckOpt.param1, medicalCheckOpt);
+    return newOpt;
+end
+
 function MedLine_Events.prepareMedCheckLossTooltip(medicalCheckOpt)
     local targetMedicalData = medicalCheckOpt.param2:getModData().MedLine.BloodData;
     if targetMedicalData.bloodLossTimeoutUnix and targetMedicalData.bloodLossTimeoutUnix > getTimestamp() then
@@ -259,13 +278,13 @@ function MedLine_Events.prepareMedCheckLossTooltip(medicalCheckOpt)
 
         -- First, check if remaining time is less than a day.
         if remainingTimeAsHours > 24 then
-            remainingString = (showExact and tostring(remainingTimeAsHours) .. "hrs remaining until recovery.") or tostring(Math.ceil(remainingTimeAsHours / 24)) .. " days remaining until recovery.";
+            remainingString = (showExact and tostring(remainingTimeAsHours) .. " hrs remaining until recovery.") or tostring(Math.ceil(remainingTimeAsHours / 24)) .. " days remaining until recovery.";
         else -- If less than a day, show as hours.
             -- If less than 2 hrs (should be 1 but this is rounded so 2 is easier for clarity and rounding problems), show as minutes.
             if showExact and remainingTimeAsHours < 2 then
-                remainingString = (showExact and tostring(remainingTime / 60) .. "min(s) remaining until recovery.");
+                remainingString = (showExact and tostring(math.round(remainingTime / 60)) .. " min(s) remaining until recovery.");
             else
-                remainingString = tostring(remainingTimeAsHours) .. "hrs remaining until recovery.";
+                remainingString = tostring(remainingTimeAsHours) .. " hrs remaining until recovery.";
             end
         end
 
@@ -306,6 +325,11 @@ function MedLine_Events.populatePlayerMedicalCheckOpt(player, context, subMenu, 
     local drawOpt = MedLine_Events.populateMedicalCheck_BloodDraw(player, context, subMenu, medicalCheckOpt, requiredSkillLevel_Draw);
     local transfusionOpt = MedLine_Events.populateMedicalCheck_BloodTransfusion(player, context, subMenu, medicalCheckOpt, requiredSkillLevel_Transfusion);
     local salineOpt = MedLine_Events.populateMedicalCheck_SalineTransfusion(player, context, subMenu, medicalCheckOpt, requiredSkillLevel_SalineTransfusion);
+
+    if isAdmin() or isDebugEnabled() then
+        local healBloodLoss = MedLine_Events.populateMedicalCheck_AdminRemoveBloodLoss(player, context, subMenu, medicalCheckOpt);
+    end
+
 end
 
 ---1. Blood Draw (taking blood from somebody)

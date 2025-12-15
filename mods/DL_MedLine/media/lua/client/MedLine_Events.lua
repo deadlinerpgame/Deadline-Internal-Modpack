@@ -201,6 +201,7 @@ function MedLine_Events.OnServerCommand(module, command, args)
     if command == "ADMIN_OverrideBloodLoss_ForceClientEvents" then
         MedLine_Logging.log("Received admin override for blood loss, forcing client event start.");
         Events.OnPlayerUpdate.Add(MedLine_Events.OnPlayerUpdate);
+        getPlayer():setHaloNote(getText("IGUI_MyBloodLossOverwritten"), 150, 150, 150, 200);
     end
     
     if command == "ShowBloodActionModal" then

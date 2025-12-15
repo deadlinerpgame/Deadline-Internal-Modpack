@@ -388,7 +388,9 @@ function MedLine_Client.checkBloodLossRecovery()
     end;
 
     local moodleVal = MedLine_Client.getRecoveryMoodleValue();
-    MedLine_Logging.log("Blood loss moodle val is " .. moodleVal);
+    
+    MedLine_Logging.log("Blood loss is due to expire at " .. tostring(bloodData.bloodLossTimeoutUnix));
+
     if not moodleVal then moodleVal = 0.5; end;
     MF.getMoodle("BloodLoss", getPlayer():getPlayerNum()):setValue(moodleVal);
 
