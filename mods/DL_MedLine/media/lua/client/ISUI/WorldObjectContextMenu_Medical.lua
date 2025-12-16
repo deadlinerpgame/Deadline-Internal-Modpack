@@ -64,10 +64,24 @@ end
 function MedLine_Events.onClickDrawBlood(self, player, medicalCheckOpt)
     if not player or not medicalCheckOpt then return end;
 
-    getPlayer():faceThisObject(target);
+    getPlayer():faceThisObject(medicalCheckOpt.param2);
+
+    if not medicalCheckOpt.param2:getModData().canNextRequestBlood or medicalCheckOpt.param2:getModData().canNextRequestBlood < getTimestamp() then
+        getPlayer():setHaloNote(getText("IGUI_BloodDrawRequested"), 150, 150, 150, 200);
+        sendClientCommand(medicalCheckOpt.param1, "MedLine", "RequestBloodAction", { target = medicalCheckOpt.param2:getUsername(), mode = MedLine_Dict.EventModes.BloodActions.draw });
+        medicalCheckOpt.param2:getModData().canNextRequestBlood = getTimestamp() + 300;
+    else
+        local secondsLeft = medicalCheckOpt.param2:getModData().canNextRequestBlood - getTimestamp();
+        local minutesLeft = math.floor(secondsLeft / 60);
+
+        if minutesLeft <= 1 then
+            getPlayer():setHaloNote(getText("I have to wait less than a minute to request blood again."), 180, 150, 150, 200);
+            return;
+        end
+
+        getPlayer():setHaloNote(getText("I can request blood again in " .. tostring(minutesLeft) .. " minutes."), 250, 150, 150, 200);
         
-    getPlayer():setHaloNote(getText("IGUI_BloodDrawRequested"), 150, 150, 150, 200);
-    sendClientCommand(medicalCheckOpt.param1, "MedLine", "RequestBloodAction", { target = medicalCheckOpt.param2:getUsername(), mode = MedLine_Dict.EventModes.BloodActions.draw });
+    end
 end
 
 function MedLine_Events.onClickGiveBlood(self, player, medicalCheckOpt, matchingBag)
