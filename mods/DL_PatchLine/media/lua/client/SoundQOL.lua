@@ -212,7 +212,10 @@ function SoundQOL.SoundPlayingCheck()
     end
 
     if not SoundQOL.CustomSoundString then
-        getSoundManager():stop();
+        if SoundQOL.SoundInstance then
+            getSoundManager():stopUISound(SoundQOL.SoundInstance);
+            SoundQOL.SoundInstance = nil;
+        end
         SoundQOL.IsCustomSoundPlaying = false;
         Events.EveryOneMinute.Remove(SoundQOL.SoundPlayingCheck);
         return;
@@ -225,7 +228,10 @@ function SoundQOL.SoundPlayingCheck()
             return;
         end
 
-        getSoundManager():stop();
+        if SoundQOL.SoundInstance then
+            getSoundManager():stopUISound(SoundQOL.SoundInstance);
+        end
+
         getCore():setOptionMusicVolume(SoundQOL.PreviousVolume or 0);
         SoundQOL.IsCustomSoundPlaying = false;
         SoundQOL.CustomSoundString = nil;
@@ -240,9 +246,9 @@ function SoundQOL.StartSoundEx(sound, showMsg, looped)
         PlaySound(String name, boolean loop, float maxGain) - we're using this one, and we don't want loops.
         PlaySound(String name, boolean loop, float pitchVar, float maxGain)
     --]]
-    getSoundManager():stop();
+    --getSoundManager():stop();
 
-    getSoundManager():playUISound(sound); -- I don't think we can play this as music, Java looks to use GameSoundClip for music.
+    SoundQOL.SoundInstance = getSoundManager():playUISound(sound); -- I don't think we can play this as music, Java looks to use GameSoundClip for music.
 
     SoundQOL.IsCustomSoundPlaying = true;
     SoundQOL.CustomSoundString = sound;
