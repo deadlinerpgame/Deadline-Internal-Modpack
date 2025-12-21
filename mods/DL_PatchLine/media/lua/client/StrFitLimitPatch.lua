@@ -47,11 +47,11 @@ Events.AddXP.Add(function(player, perk, amount)
     local currentTime = getGameTime():getWorldAgeHours()
 
 
-    if currentTime - modData.xpCooldown_fitness_timestamp >= 170 then
+    if currentTime - modData.xpCooldown_fitness_timestamp >= 90 then
         modData.xpCooldown_fitness_xp = 0
         modData.xpCooldown_fitness_timestamp = currentTime
     end
-    if currentTime - modData.xpCooldown_strength_timestamp >= 170 then
+    if currentTime - modData.xpCooldown_strength_timestamp >= 90 then
         modData.xpCooldown_strength_xp = 0
         modData.xpCooldown_strength_timestamp = currentTime
     end

@@ -248,7 +248,7 @@ function startLagerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 1
-    modData.TimeNeeded = 90
+    modData.TimeNeeded = 45
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -342,7 +342,7 @@ function startAleProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 2
-    modData.TimeNeeded = 120
+    modData.TimeNeeded = 60
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -437,7 +437,7 @@ function startWheatBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 3
-    modData.TimeNeeded = 135
+    modData.TimeNeeded = 70
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -531,7 +531,7 @@ function startIPAProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 4
-    modData.TimeNeeded = 150
+    modData.TimeNeeded = 75
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -625,7 +625,7 @@ function startStoutProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 5
-    modData.TimeNeeded = 180
+    modData.TimeNeeded = 90
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -731,7 +731,7 @@ function startStoutCoffeeProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 6
-    modData.TimeNeeded = 180
+    modData.TimeNeeded = 90
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -836,7 +836,7 @@ function startStoutChocolateProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 7
-    modData.TimeNeeded = 180
+    modData.TimeNeeded = 90
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -941,7 +941,7 @@ function startCherryBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 8
-    modData.TimeNeeded = 120
+    modData.TimeNeeded = 60
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -1047,7 +1047,7 @@ function startBlueberryBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 9
-    modData.TimeNeeded = 120
+    modData.TimeNeeded = 60
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -1153,7 +1153,7 @@ function startStrawberryBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 10
-    modData.TimeNeeded = 120
+    modData.TimeNeeded = 60
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -1258,7 +1258,7 @@ function startLemonBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 11
-    modData.TimeNeeded = 120
+    modData.TimeNeeded = 60
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -1363,7 +1363,7 @@ function startPearBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 12
-    modData.TimeNeeded = 120
+    modData.TimeNeeded = 60
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -1468,7 +1468,7 @@ function startAppleBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 13
-    modData.TimeNeeded = 120
+    modData.TimeNeeded = 60
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()

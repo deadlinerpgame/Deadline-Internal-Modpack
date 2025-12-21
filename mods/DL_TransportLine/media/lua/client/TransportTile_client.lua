@@ -4,6 +4,31 @@ require "ISUI/ISButton"
 require "ISUI/ISTextEntryBox"
 require "ISUI/ISLabel"
 
+
+
+local spriteOptions = {
+    { name = "None", path = nil },
+    { name = "Ladder Down", path = 'media/ui/spriteladderdown.png' },
+    { name = "Ladder Up", path = 'media/ui/spriteladderup.png' },
+    { name = "Stairs Down", path = 'media/ui/spritestairsdown.png' },
+    { name = "Stairs Up", path = 'media/ui/spritestairsup.png' },
+    { name = "Tunnel", path = 'media/ui/spritetunnel.png' },
+}
+
+
+local transportSquares = {}
+local spriteCache = {}
+local lastPlayerPos = { x = 0, y = 0, z = 0 }
+
+local function getSprite(path)
+    if not spriteCache[path] then
+        local sprite = IsoSprite.new()
+        sprite:LoadFramesNoDirPageSimple(path)
+        spriteCache[path] = sprite
+    end
+    return spriteCache[path]
+end
+
 local function isAdminOrDebug(p)
     if not p then return false end
     local admin = (p.isAdmin and p:isAdmin()) or (p.getAccessLevel and p:getAccessLevel() ~= "None")
@@ -14,7 +39,7 @@ end
 DDTransportBox = ISPanel:derive("DDTransportBox")
 
 function DDTransportBox:new(square, pid, title)
-    local w, h = 300, 190
+    local w, h = 250, 310
     local sx, sy = getCore():getScreenWidth(), getCore():getScreenHeight()
     local o = ISPanel.new(self, sx/2 - w/2, sy/2 - h/2, w, h)
     o.backgroundColor = { r=0, g=0, b=0, a=0.85 }
@@ -34,6 +59,10 @@ function DDTransportBox:initialise()
     local dx = (md.ddTeleDest and md.ddTeleDest.x) or 0
     local dy = (md.ddTeleDest and md.ddTeleDest.y) or 0
     local dz = (md.ddTeleDest and md.ddTeleDest.z) or 0
+    local dr = md.ddTeleR or 0
+    local dg = md.ddTeleG or 1
+    local db = md.ddTeleB or 0
+    local sprite = md.ddTeleSprite or nil
 
     self.prev = {
         has  = md.ddTeleDest ~= nil,
@@ -41,6 +70,10 @@ function DDTransportBox:initialise()
         x    = tonumber(dx) or dx or 0,
         y    = tonumber(dy) or dy or 0,
         z    = tonumber(dz) or dz or self.sq:getZ(),
+        r    = tonumber(dr) or dr or 0,
+        g    = tonumber(dg) or dg or 1,
+        b    = tonumber(db) or db or 0,
+        sprite = md.ddTeleSprite or nil,
     }
 
     local pad, rowH = 10, 24
@@ -69,6 +102,44 @@ function DDTransportBox:initialise()
     self.zEntry:initialise(); self.zEntry:instantiate(); self:addChild(self.zEntry)
     y = y + rowH + 10
 
+    -- SPRITE DROPDOWN
+    self:addChild(ISLabel:new(pad + 35, y, rowH, "Sprite:", 1,1,1,1, UIFont.Small, false))
+
+    self.spriteCombo = ISComboBox:new(pad + 60, y, self.width - pad*2 - 60, rowH, self, nil)
+    self.spriteCombo:initialise()
+    self.spriteCombo:instantiate()
+
+    -- Populate dropdown
+    local selectedIndex = 1
+    local currentSprite = md.ddTeleSprite
+
+    for i, opt in ipairs(spriteOptions) do
+        self.spriteCombo:addOption(opt.name)
+        if currentSprite == opt.path then
+            selectedIndex = i
+        end
+    end
+
+    self.spriteCombo.selected = selectedIndex
+    self:addChild(self.spriteCombo)
+
+    y = y + rowH + 6
+
+    self:addChild(ISLabel:new(pad + 35, y, rowH, "R (0-1):", 1,1,1,1, UIFont.Small, false))
+    self.rEntry = ISTextEntryBox:new(tostring(dr), pad+50, y-2, self.width - pad*2 - 50, rowH)
+    self.rEntry:initialise(); self.rEntry:instantiate(); self:addChild(self.rEntry)
+    y = y + rowH + 6
+
+    self:addChild(ISLabel:new(pad + 35, y, rowH, "G (0-1):", 1,1,1,1, UIFont.Small, false))
+    self.gEntry = ISTextEntryBox:new(tostring(dg), pad+50, y-2, self.width - pad*2 - 50, rowH)
+    self.gEntry:initialise(); self.gEntry:instantiate(); self:addChild(self.gEntry)
+    y = y + rowH + 6
+
+    self:addChild(ISLabel:new(pad + 35, y, rowH, "B (0-1):", 1,1,1,1, UIFont.Small, false))
+    self.bEntry = ISTextEntryBox:new(tostring(db), pad+50, y-2, self.width - pad*2 - 50, rowH)
+    self.bEntry:initialise(); self.bEntry:instantiate(); self:addChild(self.bEntry)
+    y = y + rowH + 10
+
     local btnW, btnH = 80, 24
     self.okBtn = ISButton:new(self.width - pad - btnW*2 - 6, y, btnW, btnH, "OK", self, DDTransportBox.onOK)
     self.okBtn:initialise(); self.okBtn:instantiate(); self:addChild(self.okBtn)
@@ -80,11 +151,13 @@ function DDTransportBox:initialise()
 end
 
 
-function DDTransportBox:addModData( sx, sy, sz, x, y, z)
+function DDTransportBox:addModData( sx, sy, sz, x, y, z, r, g, b, sprite)
 	ModData.request("TransportTile")
 	local modTable = ModData.getOrCreate("TransportTile")
-	local x1, y1, x2, y2, z1, x2 = sx, sy, sz, x, y, z
-	local newEntry = {atX=x1, atY=y1, atZ=z1, toX=x2, toY=y2, toZ=z2}
+	local x1, y1, x2, y2, z1, z2 = sx, sy, sz, x, y, z
+    local r1, g1, b1 = r, g, b
+    local nsprite = sprite
+	local newEntry = {atX=x1, atY=y1, atZ=z1, toX=x2, toY=y2, toZ=z2, R=r1, G=g1, B=b1, sprite=sprite}
 	modTable[text] = newEntry;
 	ModData.add("TransportTile", modTable)
 	ModData.transmit("TransportTile")
@@ -98,17 +171,32 @@ function DDTransportBox:onOK()
     local x   = tonumber(self.xEntry:getText() or "")
     local y   = tonumber(self.yEntry:getText() or "")
     local z   = tonumber(self.zEntry:getText() or "")
+    local r   = tonumber(self.rEntry:getText() or "")
+    local g   = tonumber(self.gEntry:getText() or "")
+    local b   = tonumber(self.bEntry:getText() or "")
     if not (name ~= "" and x and y and z) then
         if p then p:Say("Enter Name and valid X, Y, Z") end
         return
     end
 
     x, y, z = math.floor(x), math.floor(y), math.floor(z)
-
+    
     -- write modData
     local md = self.sq:getModData()
     md.ddTeleName = name
     md.ddTeleDest = { x = x, y = y, z = z }
+    md.ddTeleR = r
+    md.ddTeleG = g
+    md.ddTeleB = b
+
+    local chosen = self.spriteCombo:getOptionText(self.spriteCombo.selected)
+    
+    for _, opt in ipairs(spriteOptions) do
+        if opt.name == chosen then
+            md.ddTeleSprite = opt.path
+            break
+        end
+    end
 
     if self.sq.transmitModData then
         self.sq:transmitModData()
@@ -121,7 +209,7 @@ function DDTransportBox:onOK()
     local sx, sy, sz = self.sq:getX(), self.sq:getY(), self.sq:getZ()
 
     local localtext
-    DDTransportBox:addModData(sx, sy, sz, x, y, z)
+    DDTransportBox:addModData(sx, sy, sz, x, y, z, r, g, b)
             print(sx)
         print(sy)
     if self.prev and self.prev.has then
@@ -164,6 +252,7 @@ local function clearSquareTransport(sq)
     local md = sq:getModData()
     md.ddTeleName = nil
     md.ddTeleDest = nil
+    md.ddTeleSprite = nil
     if sq.transmitModData then
         sq:transmitModData()
     elseif sq.transmitModdata then
@@ -238,3 +327,62 @@ end
 Events.EveryOneMinute.Add(requestModData)
 Events.OnConnected.Add(syncTiles)
 
+
+local function updateTransportSquares()
+    local p = getSpecificPlayer(0)
+    if not p then return end
+    
+    local cell = getCell()
+    if not cell then return end
+    
+    local px, py, pz = math.floor(p:getX()), math.floor(p:getY()), math.floor(p:getZ())
+    
+    if math.abs(px - lastPlayerPos.x) < 1 
+       and math.abs(py - lastPlayerPos.y) < 1
+       and pz == lastPlayerPos.z then
+        return
+    end
+    
+    lastPlayerPos = { x = px, y = py, z = pz }
+    transportSquares = {}
+    
+    local radius = 35
+    for x = px - radius, px + radius do
+        for y = py - radius, py + radius do
+            local sq = cell:getGridSquare(x, y, pz)
+            if sq then
+                local md = sq:getModData()
+                if md and md.ddTeleDest then
+                    table.insert(transportSquares, {
+                        x = x, y = y, z = pz,
+                        sprite = md.ddTeleSprite,
+                        r = md.ddTeleR or 0,
+                        g = md.ddTeleG or 1,
+                        b = md.ddTeleB or 0,
+                        sq = sq
+                    })
+                end
+            end
+        end
+    end
+end
+
+local function DrawTeleportSquares(z)
+    for _, t in ipairs(transportSquares) do
+        if t.z == z then
+            if t.sprite then
+                local sprite = getSprite(t.sprite)
+                sprite:RenderGhostTileColor(t.x, t.y, t.z, t.r, t.g, t.b, 0.2)
+            else
+                local floor = t.sq:getFloor()
+                if floor then
+                    floor:setHighlightColor(0, 1, 0, 0.5)
+                    floor:setHighlighted(true)
+                end
+            end
+        end
+    end
+end
+
+Events.OnPostFloorLayerDraw.Add(DrawTeleportSquares)
+Events.OnTick.Add(updateTransportSquares)

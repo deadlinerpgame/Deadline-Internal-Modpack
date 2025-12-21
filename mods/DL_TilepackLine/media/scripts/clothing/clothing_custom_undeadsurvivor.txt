@@ -1,0 +1,50 @@
+module DeadlineClothes
+{	
+	imports {
+		Base
+		}
+
+	item PrepperTrousersCustom
+    {
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Custom Prepper Trousers,
+        ClothingItem = PrepperPantsCustom,
+        BodyLocation = Pants,
+        Icon = PrepperTrousers,
+        BloodLocation = Trousers,
+        BiteDefense = 15,
+        ScratchDefense = 25,
+        Insulation = 0.3,
+        WindResistance = 0.3,
+        WaterResistance = 0.60,
+        FabricType = Cotton,
+		AttachmentsProvided = PrepperHolster, 
+        WorldStaticModel = PrepperTrousers_Ground,
+		ClothingItemExtra = DeadlineClothes.PrepperTrousersTuckedCustom,
+        ClothingItemExtraOption = TuckIn,
+    }
+	
+	item PrepperTrousersTuckedCustom
+    {
+        DisplayCategory = Clothing,
+        Type = Clothing,
+        DisplayName = Custom Prepper Trousers Tucked,
+        ClothingItem = PrepperTrousersTuckedCustom,
+        BodyLocation = Pants,
+        Icon = PrepperTrousers,
+        BloodLocation = Trousers,
+        BiteDefense = 15,
+        ScratchDefense = 25,
+        Insulation = 0.3,
+        WindResistance = 0.3,
+        WaterResistance = 0.60,
+        FabricType = Cotton,
+		AttachmentsProvided = PrepperHolster, 
+        WorldStaticModel = PrepperTrousers_Ground,
+		ClothingItemExtra = DeadlineClothes.PrepperTrousersCustom,
+        ClothingItemExtraOption = TuckOut,
+    }
+	
+}
+	
