@@ -13,7 +13,7 @@ module farming
 		Icon				=		TZ_GardeningSprayCan,
 		Weight				=		1.0,
     	UseDelta			=		0.1,
-    	ReplaceOnDeplete 	= 		GardeningSprayEmpty,
+    	ReplaceOnDeplete 	= 		farming.GardeningSprayEmpty,
 	    UseWhileEquipped    =       false,
     	StaticModel         =       GardenSpray,
     	WorldStaticModel    =       GardenSprayGround,
@@ -73,5 +73,21 @@ module farming
         Time:150.0,
         
         Result:GardeningSprayBonemeal,
+    }
+
+    recipe Clean out Fungi Treatment Spray (empties if bugged)
+    {
+        Craftline.GardeningSprayBonemeal,
+        Result:GardeningSprayEmpty,
+        Category:Farming,
+        Time:1.0,
+    }
+
+    recipe Clean out Fungi Treatment Spray (empties if bugged)
+    {
+        Base.GardeningSprayBonemeal,
+        Result:GardeningSprayEmpty,
+        Category:Farming,
+        Time:1.0,
     }
 }

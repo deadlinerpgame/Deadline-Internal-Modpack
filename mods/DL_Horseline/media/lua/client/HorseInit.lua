@@ -98,14 +98,16 @@ local function horseContextMenu(player, context, items)
                 context:addOption("Mount", item, doMount, player)
                 context:addOption("Rename", player, renameHorse, item)
                 context:addOption("Unclaim", player, unclaimHorse, item)
-                if player:getAccessLevel() == "admin" then
-                    context:addOption("ADMIN Mount", item, doMount, player)
-                    context:addOption("ADMIN Unclaim", player, unclaimHorseAdmin, item)
-                end
             end
-             local menuOption = context:addOption("Feed", worldobjects); 
-             local subMenu = ISContextMenu:getNew(context);
-             context:addSubMenu(menuOption, subMenu);
+
+            if player:getAccessLevel() == "admin" or isDebugEnabled() then
+                context:addOption("ADMIN Mount", item, doMount, player)
+                context:addOption("ADMIN Unclaim", player, unclaimHorseAdmin, item)
+            end
+            local menuOption = context:addOption("Feed", worldobjects); 
+            local subMenu = ISContextMenu:getNew(context);
+            context:addSubMenu(menuOption, subMenu);
+            
         for _, foodType in ipairs(HORSE_FEED_TYPES) do
             local foodItem = player:getInventory():FindAndReturn(foodType)
             local scriptManager = getScriptManager()
