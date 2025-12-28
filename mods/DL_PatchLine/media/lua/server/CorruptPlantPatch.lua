@@ -168,3 +168,29 @@ _G["getVegetablesNumber"] = function(min, max, minAuthorised, maxAuthorised, pla
         return nbOfVegetable;
     end
 end
+
+local original_rottenThis = SPlantGlobalObject["rottenThis"];
+
+SPlantGlobalObject.rottenThis = function(self)
+    if not self.typeOfSeed then return end;
+
+    local isoObject = self:getObject();
+    if not isoObject then return end;
+
+    local cropName = tostring(self.typeOfSeed);
+    local spriteName = tostring(self.spriteName);
+    local coordString = string.format("%0d,%0d,%0d", isoObject:getX(), isoObject:getY(), isoObject:getZ());
+    local state, nbOfGrow, health, badCare, exterior = self.state, self.nbOfGrow, self.health, tostring(self.badCare), tostring(self.exterior);
+    local diseaseString = string.format("Mildew: %0d | Flies: %0d | DWF: %0d", self.mildewLvl or 0, self.fliesLvl or 0, self.aphidLvl or 0);
+    local lastWaterHr, nextGrowing = tostring(self.lastWaterHour) or "never", self.nextGrowing or "not";
+    local waterNeeded, waterMax = self.waterNeeded, self.waterNeededMax or 0;
+
+    local logStr = string.format(
+        "Crop %s (sprite: %s) at (%s) called rottenThis with stats: [State: %s] [Nb of Grow: %0d] [Disease: %s] [Water Needed: %0d] [Water Needed Max: %0d] [Last Water Hour: %0d] [Next Growing: %0d] [Health: %0d] [Bad Care: %s] [Exterior: %s]",
+        cropName, spriteName, coordString, state, nbOfGrow, diseaseString, waterNeeded, waterMax, lastWaterHr, nextGrowing, health, badCare, exterior
+    );
+
+    writeLog("PlantDebugging", logStr);
+
+    original_rottenThis(self);
+end
