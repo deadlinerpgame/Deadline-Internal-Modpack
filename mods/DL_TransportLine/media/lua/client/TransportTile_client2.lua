@@ -25,9 +25,9 @@ Events.OnPlayerUpdate.Add(function(p)
     DD_lastTileKeyByPID[pid] = key
 
     local info = DD_ReadSquareTransport(p:getSquare())
-    if info then
+    if info and isKeyDown(Keyboard.KEY_Y) then
         print(string.format("[Transport] Standing on '%s' -> %d,%d,%d", info.name, info.x, info.y, info.z))
-        p:Say("Moving to " .. info.name)
+        p:setHaloNote("Moving to " .. info.name)
         local md   = p and p:getSquare():getModData()
         local dest = md and md.ddTeleDest and { x = md.ddTeleDest.x, y = md.ddTeleDest.y, z = md.ddTeleDest.z }
         DD_TeleportWithFade(pid, dest, 1, 1)
