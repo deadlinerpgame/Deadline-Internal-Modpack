@@ -21,13 +21,13 @@ Events.OnPlayerUpdate.Add(function(p)
 
     if isKeyDown(Keyboard.KEY_F) then -- Check for transport.
         local x,y,z = math.floor(p:getX()), math.floor(p:getY()), p:getZ()
-        local currentTileKey = string.format("0%d,%0d,%0d", x, y, z);
+        local pid = p:getOnlineID() or 0;
 
         local info = DD_ReadSquareTransport(p:getSquare());
         if not info then return end;
 
         print(string.format("[Transport] Standing on '%s' -> %d,%d,%d", info.name, info.x, info.y, info.z))
-        p:setHaloNote("Moving to " .. info.name)
+        p:setHaloNote("Moving to " .. info.name, 255, 255, 255, 300);
         local md   = p and p:getSquare():getModData()
         local dest = md and md.ddTeleDest and { x = md.ddTeleDest.x, y = md.ddTeleDest.y, z = md.ddTeleDest.z }
         DD_TeleportWithFade(pid, dest, 1, 1);
@@ -45,7 +45,7 @@ Events.OnPlayerUpdate.Add(function(p)
         local info = DD_ReadSquareTransport(p:getSquare());
         if not info then return end;
 
-        p:setHaloNote("Travel to: " .. info.name .. " - press F to enter.", 196, 145, 51, 5);
+        p:setHaloNote("Travel to: " .. info.name .. " - press F to enter.", 255, 255, 255, 300);
         nextTileNotification = getTimestamp() + 15;
     end
 end)
