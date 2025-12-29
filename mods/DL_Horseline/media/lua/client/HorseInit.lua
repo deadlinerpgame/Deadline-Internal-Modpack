@@ -97,7 +97,7 @@ local function addWaterItemsToHorse(player, context, menuOption, horse)
         return;
     end
 
-    for i = 0, waterItems:size() do
+    for i = 0, waterItems:size() - 1 do
         local waterItem = waterItems:get(i);
         subMenu:addOption(waterItem:getDisplayName(), player, onFeedHorse, horse, waterItem);
     end
