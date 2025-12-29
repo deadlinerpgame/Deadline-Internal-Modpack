@@ -19,7 +19,7 @@ local nextTileNotification = 0;
 Events.OnPlayerUpdate.Add(function(p)
     if not p then return end
 
-    if isKeyDown(Keyboard.Key_F) then -- Check for transport.
+    if isKeyDown(Keyboard.KEY_F) then -- Check for transport.
         local x,y,z = math.floor(p:getX()), math.floor(p:getY()), p:getZ()
         local currentTileKey = string.format("0%d,%0d,%0d", x, y, z);
 
