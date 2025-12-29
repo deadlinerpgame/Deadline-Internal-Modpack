@@ -9,7 +9,7 @@ function Recipe.OnCreate.OE_SawLogs(items, result, player)
 
         local square = player:getSquare();
         for i = 1, plankCount do
-            square:AddWorldInventoryItem("Base.Plank", 0, 0, 0, true);
+            square:AddWorldInventoryItem("Base.Plank", 0, 0, 0);
         end
 
 	    player:getStats():setStress(player:getStats():getStress() - 0.2);
