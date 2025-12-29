@@ -179,37 +179,31 @@ end
 -- Function to start methane production, stores state in tile's ModData
 function startMethaneProduction(worldobjects, player, tile)
     local playerInventory = getSpecificPlayer(player):getInventory()
-    local wasteCount = 0
+    local wasteCount = 0;
 
     local items = playerInventory:getItems()
-    for i = 0, items:size() - 1 do
-        local item = items:get(i)
-        if item:getFullType() == "Base.WasteItem" then -- Adjust to match the actual item ID
-            wasteCount = wasteCount + 1
-        end
-    end
 
-    -- Check if the player has enough waste to start production
-    if wasteCount < 6 then
-        getSpecificPlayer(player):Say("I need 6 waste bags to start methane production.")
+    local allWasteBags = playerInventory:getAllTypeRecurse("Base.WasteItem");
+    if not allWasteBags or allWasteBags:size() < 6 then
+        getSpecificPlayer(player):setHaloNote("I need 6 waste bags to start methane production.", 255, 0, 0, 300);
         return
     end
 
-    -- Consume the waste items and start production
-    for i = 1, 6 do
-        local wasteItem = playerInventory:getFirstType("Base.WasteItem") -- Adjust this to the actual waste item ID
-        if wasteItem then
-            playerInventory:Remove(wasteItem)
+    -- Remove the waste items.
+    for i = 0, 5 do
+        local iteratedWasteItem = allWasteBags:get(i);
+        if iteratedWasteItem then
+            iteratedWasteItem:getContainer():Remove(iteratedWasteItem);
         end
     end
 
-    local modData = tile:getModData()
+    local modData = tile:getModData();
     modData.isProducingMethane = true
     modData.methaneStartTime = getGameTime():getWorldAgeHours()
     modData.tileState = 1
-    modData.TimeNeeded = 90
+    modData.TimeNeeded = SandboxVars.CraftLine.MethaneWorldHours or 90;
     tile:transmitModData() -- Ensure data persists across sessions
-    updateTileState(tile, "inUse")  -- Set to in-use sprite
+    updateTileState(tile, "inUse");  -- Set to in-use sprite
 
     -- Add the tile's unique identifier to the active production tracking list
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
@@ -247,54 +241,52 @@ end
 
 -- Function to check if 3 days have passed
 function isMethaneProductionComplete(startTime)
-    return getGameTime():getWorldAgeHours() >= startTime + (90)
+    local methaneWorldHours = SandboxVars.CraftLine.MethaneWorldHours or 90;
+    return getGameTime():getWorldAgeHours() >= (startTime + methaneWorldHours);
 end
 
+local function predicateGetUsedDeltaLessThan(item, count)
+	return item:getUsedDelta() <= count;
+end
 
 -- Function to fill the propane tank, modifies the tile's ModData
 function fillPropaneTank(worldobjects, player, tile)
     local player = getSpecificPlayer(0)
     local inv = player:getInventory()
-    local propaneTank = inv:getFirstTypeRecurse('Base.PropaneTank') -- Use the correct item ID
+    local propaneTank = inv:getFirstTypeEvalArgRecurse("Base.PropaneTank", predicateGetUsedDeltaLessThan, 0.0625); -- Use the correct item ID
 
     if not propaneTank then
-        player:Say("I need a propane tank to collect the methane.")
-        return
-    end
-
-    if propaneTank:getUsedDelta() > 0.0625 then
-        player:Say("I need an empty propane tank.")
+        player:Say("I need an empty propane tank to collect the methane.");
         return
     end
 
     -- Fill the propane tank
-    propaneTank:setUsedDelta(math.min(propaneTank:getUsedDelta() + 1))
-    local modData = tile:getModData()
-    modData.isProducingMethane = false -- Reset production state for this tile
-    updateTileState(tile, "inactive")  -- Set to in-use sprite
-    modData.tileState = 0
-    tile:transmitModData() -- Ensure data persists across sessions
+    propaneTank:setUsedDelta(math.min(propaneTank:getUsedDelta() + 1));
+    local modData = tile:getModData();
+    modData.isProducingMethane = false; -- Reset production state for this tile
+    updateTileState(tile, "inactive");  -- Set to in-use sprite
+    modData.tileState = 0;
+    tile:transmitModData(); -- Ensure data persists across sessions
 end
 
 function fillMethaneTank(worldobjects, player, tile)
     local player = getSpecificPlayer(0)
     local inv = player:getInventory()
-    local propaneTank = inv:getFirstTypeRecurse('Base.EmptyMethaneTank')
+    local propaneTank = inv:getFirstTypeRecurse("Base.EmptyMethaneTank")
 
     if not propaneTank then
-        player:Say("I need a methane tank to collect the methane.")
-        return
+        player:Say("I need an empty methane tank to collect the methane.");
+        return;
     end
 
-
     -- Fill the propane tank
-    inv:Remove(propaneTank)
-    inv:AddItem('Base.MethaneTank')
-    local modData = tile:getModData()
-    modData.isProducingMethane = false -- Reset production state for this tile
-    updateTileState(tile, "inactive")  -- Set to in-use sprite
-    modData.tileState = 0
-    tile:transmitModData() -- Ensure data persists across sessions
+    inv:Remove(propaneTank);
+    inv:AddItem('Base.MethaneTank');
+    local modData = tile:getModData();
+    modData.isProducingMethane = false; -- Reset production state for this tile
+    updateTileState(tile, "inactive");  -- Set to in-use sprite
+    modData.tileState = 0;
+    tile:transmitModData(); -- Ensure data persists across sessions
 end
 
 

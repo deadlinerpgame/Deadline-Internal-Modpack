@@ -137,7 +137,12 @@ function LogLineUtils.ContainerToLogStr(container)
                 local y = parent:getY();
                 local z = parent:getZ();
 
-                local objName = parent:getSprite():getName() or parent:getSprite():getParentObjectName() or "[cannot find obj name]";
+                local objName = "[cannot find obj name]";
+                if container:getVehiclePart() then
+                    objName = container:getVehicle():getVehicleType();
+                else
+                    objName = parent:getSprite():getName() or parent:getSprite():getParentObjectName();
+                end
 
                 if not x or not y or not z then
                     return string.format("%s (invalid pos ContainerToLogStr)", objName);
@@ -147,7 +152,7 @@ function LogLineUtils.ContainerToLogStr(container)
             end
         else
             if container:isInCharacterInventory(getPlayer()) then
-                return string.format("%s [inv]", container:getType());
+                return string.format("%s [inv, %0d,%0d,%0d]", container:getType(), getPlayer():getX(), getPlayer():getY(), getPlayer():getZ());
             else
                 if container:getSourceGrid() then
                     local srcGrid = container:getSourceGrid();

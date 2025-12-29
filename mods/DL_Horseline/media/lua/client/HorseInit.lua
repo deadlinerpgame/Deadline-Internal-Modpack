@@ -75,8 +75,33 @@ local function onTickHorseInit()
     end
 end
 
-Events.OnTick.Add(onTickHorseInit)
+Events.OnTick.Add(onTickHorseInit);
 
+local function predicateEvalWaterItem(item)
+    return item:canStoreWater() and item:IsDrainable() and item:getUsedDelta() > 0.0;
+end
+
+local function addWaterItemsToHorse(player, context, menuOption, horse)
+
+    local subMenu = context:getNew(context);
+    context:addSubMenu(menuOption, subMenu);
+    
+    -- Get all water items.
+    local waterItems = player:getInventory():getAllEvalRecurse(predicateEvalWaterItem);
+
+    if (not waterItems) or (waterItems:size() == 0) then
+        menuOption.notAvailable = true;
+
+        local noWaterItems = subMenu:addOption("You do not have any water containers.", player, nil);
+        noWaterItems.notAvailable = true;
+        return;
+    end
+
+    for i = 0, waterItems:size() - 1 do
+        local waterItem = waterItems:get(i);
+        subMenu:addOption(waterItem:getDisplayName(), player, onFeedHorse, horse, waterItem);
+    end
+end
 
 local function horseContextMenu(player, context, items)
     for _, entry in ipairs(items) do
@@ -88,67 +113,71 @@ local function horseContextMenu(player, context, items)
         if item and HORSE_ITEM_TYPES[item:getFullType()] then
             local data = item:getModData()
             if data and data._initialized then
+
                 local player = getPlayer()
                 local mounted = item:getContainer() == player:getInventory()
-        if not mounted then
+                if not mounted then
             
-            if data.owner == "" or data.owner == "THEREISNOCLAIMANT" then
-                context:addOption("Claim", player, claimHorse, item)
-            elseif data.owner == player:getUsername() then
-                context:addOption("Mount", item, doMount, player)
-                context:addOption("Rename", player, renameHorse, item)
-                context:addOption("Unclaim", player, unclaimHorse, item)
-            end
+                    if data.owner == "" or data.owner == "THEREISNOCLAIMANT" then
+                        context:addOption("Claim", player, claimHorse, item)
+                    elseif data.owner == player:getUsername() then
+                        context:addOption("Mount", item, doMount, player)
+                        context:addOption("Rename", player, renameHorse, item)
+                        context:addOption("Unclaim", player, unclaimHorse, item)
+                    end
 
-            if player:getAccessLevel() == "admin" or isDebugEnabled() then
-                context:addOption("ADMIN Mount", item, doMount, player)
-                context:addOption("ADMIN Unclaim", player, unclaimHorseAdmin, item)
-            end
-            local menuOption = context:addOption("Feed", worldobjects); 
-            local subMenu = ISContextMenu:getNew(context);
-            context:addSubMenu(menuOption, subMenu);
-            
-        for _, foodType in ipairs(HORSE_FEED_TYPES) do
-            local foodItem = player:getInventory():FindAndReturn(foodType)
-            local scriptManager = getScriptManager()
-            local name = scriptManager:getItem(foodType):getDisplayName()
-            local opt
-            local hunger    
-            if foodItem and (not foodItem:IsFood() or not foodItem:isRotten()) then
-                opt = subMenu:addOption(name, player, onFeedHorse, item, foodItem)
-                hunger = (Math.abs(foodItem:getHungerChange() * 100))
-                local tip = ISToolTip:new()
-                tip:initialise()
-                tip.description = "Will restore up to " .. hunger .. " hunger."
-                opt.toolTip = tip
-            else
-                opt = subMenu:addOption(name)
-                opt.notAvailable = true
-            end
+                    if player:getAccessLevel() == "admin" or isDebugEnabled() then
+                        context:addOption("ADMIN Mount", item, doMount, player)
+                        context:addOption("ADMIN Unclaim", player, unclaimHorseAdmin, item)
+                    end
 
-        end
+                    local menuOption = context:addOption("Feed", worldobjects); 
+                    local subMenu = ISContextMenu:getNew(context);
+                    context:addSubMenu(menuOption, subMenu);
+                
+                    for _, foodType in ipairs(HORSE_FEED_TYPES) do
+                        local foodItem = player:getInventory():FindAndReturn(foodType)
+                        local scriptManager = getScriptManager()
+                        local name = scriptManager:getItem(foodType):getDisplayName()
+                        local opt
+                        local hunger    
+                        if foodItem and (not foodItem:IsFood() or not foodItem:isRotten()) then
+                            opt = subMenu:addOption(name, player, onFeedHorse, item, foodItem)
+                            hunger = (Math.abs(foodItem:getHungerChange() * 100))
+                            local tip = ISToolTip:new()
+                            tip:initialise()
+                            tip.description = "Will restore up to " .. hunger .. " hunger."
+                            opt.toolTip = tip
+                        else
+                            opt = subMenu:addOption(name)
+                            opt.notAvailable = true
+                        end
+                    end
 
-             local menuOption = context:addOption("Give Water", worldobjects); 
-             local subMenu = ISContextMenu:getNew(context);
-             context:addSubMenu(menuOption, subMenu);
-        for _, foodType in ipairs(HORSE_WATER_TYPES) do
-            local foodItem = player:getInventory():FindAndReturn(foodType)
-            local scriptManager = getScriptManager()
-            local name = scriptManager:getItem(foodType):getDisplayName()
-            if foodItem and (not foodItem:IsFood() or not foodItem:isRotten()) then
-                subMenu:addOption(name, player, onFeedHorse, item, foodItem)
-            else
-                local i = subMenu:addOption(name)
-                i.notAvailable = true
-            end
-        end
-        elseif mounted and not player:isPlayerMoving() and not player:isRunning() and not player:isSprinting() then
-            context:addOption("Dismount", item, doDismount, player)
-        end
-        local nearWater, X, Y, Z = checkWater(player)
-        if nearWater then
-            context:addOption("Drink", player, onDrinkGroundWater, item, x, y, z)
-        end
+                    local menuOption = context:addOption("Give Water", worldobjects);
+
+                    addWaterItemsToHorse(player, context, menuOption, item);
+
+                    --[[for _, foodType in ipairs(HORSE_WATER_TYPES) do
+                        local foodItem = player:getInventory():FindAndReturn(foodType)
+                        local scriptManager = getScriptManager()
+                        local name = scriptManager:getItem(foodType):getDisplayName()
+                        if foodItem and (not foodItem:IsFood() or not foodItem:isRotten()) then
+                            subMenu:addOption(name, player, onFeedHorse, item, foodItem)
+                        else
+                            local i = subMenu:addOption(name)
+                            i.notAvailable = true
+                        end
+                    end--]]
+
+                elseif mounted and not player:isPlayerMoving() and not player:isRunning() and not player:isSprinting() then
+                    context:addOption("Dismount", item, doDismount, player)
+                end
+
+                local nearWater, X, Y, Z = checkWater(player);
+                if nearWater then
+                    context:addOption("Drink", player, onDrinkGroundWater, item, x, y, z)
+                end
 
                 context:addOption("Horse Stats", nil, nil)
 
@@ -157,6 +186,7 @@ local function horseContextMenu(player, context, items)
                 context:addOption("Hunger: " .. math.floor(data.hunger) .. " / " .. math.floor(data.maxHunger), nil, nil)
                 context:addOption("Thirst: " .. math.floor(data.thirst) .. " / " .. math.floor(data.maxThirst), nil, nil)
                 context:addOption("Speed: " .. string.format("%.2f", data.speedModifier) .. "x", nil, nil)
+
             else
                 context:addOption("Reassure Horse", player, reassureHorse, item)
             end

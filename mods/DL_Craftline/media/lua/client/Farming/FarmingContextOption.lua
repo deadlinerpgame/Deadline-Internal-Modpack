@@ -35,7 +35,7 @@ function Craftline_Farming.OnFillWorldObjectContextMenu(playerNum, context, worl
     local fungiTreatmentItem = nil;
 
     if not handItem or handItem:getType() ~= "GardeningSprayBonemeal" or (handItem:getDrainableUsesInt() == 0) then
-        fungiTreatmentItem = player:getInventory():getFirstTypeEvalArgRecurse("GardeningSprayBonemeal", predicateDrainableUsesInt, 1)
+        fungiTreatmentItem = player:getInventory():getFirstTypeEvalArgRecurse("GardeningSprayBonemeal", predicateDrainableUsesInt, 1);
     else
         fungiTreatmentItem = handItem;
     end
@@ -48,22 +48,19 @@ function Craftline_Farming.OnFillWorldObjectContextMenu(playerNum, context, worl
     local treatProblemOption = context:getOptionFromName(getText("ContextMenu_Treat_Problem"));
     local treatSubMenu = nil;
     if not treatProblemOption then
-        print("treatProblem doesn't exist. Create it.");
         treatProblemOption = context:addOption(getText("ContextMenu_Treat_Problem"), worldObjects, nil);
         treatSubMenu = context:getNew(context);
         context:addSubMenu(treatProblemOption, treatSubMenu);
     end
 
     if not treatSubMenu then
-        print("treatSubMenu not found - adding as suboption")
-        treatSubMenu = treatProblemOption.subOption or context:getNew(context);
-        print(treatSubMenu);
+        treatSubMenu = context:getNew(context);
+        context:addSubMenu(treatProblemOption, treatSubMenu);
     end
 
     local dwfOption = treatSubMenu:addOption(getText("Farming_Devil_Water_Fungi"), worldObjects, nil);
     local subMenuDWF = context:getNew(context);
     local use = fungiTreatmentItem and fungiTreatmentItem:getDrainableUsesInt() or -1;
-    print("drainable uses: " .. tostring(use));
 
     if use > 0 then
         context:addSubMenu(dwfOption, subMenuDWF);
@@ -81,7 +78,7 @@ function Craftline_Farming.OnFillWorldObjectContextMenu(playerNum, context, worl
     else
         dwfOption.notAvailable = true;
         local tooltip = ISWorldObjectContextMenu.addToolTip();
-        local spray = InventoryItemFactory.CreateItem("Craftline.GardeningSprayBonemeal"):getDisplayName();
+        local spray = InventoryItemFactory.CreateItem("Farming.GardeningSprayBonemeal"):getDisplayName();
         tooltip.description = getText("Farming_MissingItem", spray);
         dwfOption.toolTip = tooltip;
     end

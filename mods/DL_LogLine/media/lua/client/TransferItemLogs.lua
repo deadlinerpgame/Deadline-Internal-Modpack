@@ -8,6 +8,18 @@ TransferMechanisms = {
     ToPlayer = 1,
 }
 
+local original_ISDropWorldItemAction_perform = ISDropWorldItemAction.perform;
+function ISDropWorldItemAction:perform()
+    original_ISDropWorldItemAction_perform(self);
+
+    local srcStr = LogLineUtils.ContainerToLogStr(self.item) or "";
+    local locationStr = string.format("(%0d,%0d,%0d)", self.xoffset, self.yoffset, self.zoffset);
+    local logStr = string.format("[%s] Item: %s | From: %s | To: floor %s", self.character:getUsername(), srcStr, self.character:getUsername(), locationStr);
+
+    print(transferStr);
+    LogLineUtils.LogFromClient("ItemTransfer", transferStr);
+end
+
 local original_ISInventoryTransferAction_perform = ISInventoryTransferAction.perform;
 function ISInventoryTransferAction:perform()
     original_ISInventoryTransferAction_perform(self);
