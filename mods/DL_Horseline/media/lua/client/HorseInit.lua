@@ -78,7 +78,8 @@ end
 Events.OnTick.Add(onTickHorseInit);
 
 local function predicateEvalWaterItem(item)
-    return item:isWaterContainer() and item:getUsedDelta() > 0.0;
+    if not item:isWaterContainer() then return false end;
+    return item:IsDrainable() and item:getUsedDelta() > 0.0;
 end
 
 local function addWaterItemsToHorse(player, context, menuOption, horse)

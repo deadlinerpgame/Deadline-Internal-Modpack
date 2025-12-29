@@ -184,7 +184,7 @@ function startMethaneProduction(worldobjects, player, tile)
     local items = playerInventory:getItems()
 
     local allWasteBags = playerInventory:getAllTypeRecurse("Base.WasteItem");
-    if not allWasteBags or #allWasteBags < 6 then
+    if not allWasteBags or allWasteBags:size() < 6 then
         getSpecificPlayer(player):setHaloNote("I need 6 waste bags to start methane production.");
         return
     end
