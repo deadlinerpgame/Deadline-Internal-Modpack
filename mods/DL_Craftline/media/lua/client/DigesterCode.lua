@@ -190,7 +190,7 @@ function startMethaneProduction(worldobjects, player, tile)
     end
 
     -- Remove the waste items.
-    for i = 0, allWasteBags:size() - 1 do
+    for i = 0, 5 do
         local iteratedWasteItem = allWasteBags:get(i);
         if iteratedWasteItem then
             iteratedWasteItem:getContainer():Remove(iteratedWasteItem);
@@ -201,7 +201,7 @@ function startMethaneProduction(worldobjects, player, tile)
     modData.isProducingMethane = true
     modData.methaneStartTime = getGameTime():getWorldAgeHours()
     modData.tileState = 1
-    modData.TimeNeeded = SandboxVars.CraftLine.MethaneWorldHours;
+    modData.TimeNeeded = SandboxVars.CraftLine.MethaneWorldHours or 90;
     tile:transmitModData() -- Ensure data persists across sessions
     updateTileState(tile, "inUse");  -- Set to in-use sprite
 

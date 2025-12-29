@@ -14,23 +14,39 @@ local function DD_ReadSquareTransport(sq)
     return nil
 end
 
+local nextTileNotification = 0;
+
 Events.OnPlayerUpdate.Add(function(p)
     if not p then return end
 
-    -- only fire when the player changes tile
-    local pid = p:getOnlineID() or 0
-    local x, y, z = math.floor(p:getX()), math.floor(p:getY()), p:getZ()
-    local key = x .. "," .. y .. "," .. z
-    if DD_lastTileKeyByPID[pid] == key then return end
-    DD_lastTileKeyByPID[pid] = key
+    if isKeyDown(Keyboard.Key_F) then -- Check for transport.
+        local x,y,z = math.floor(p:getX()), math.floor(p:getY()), p:getZ()
+        local currentTileKey = string.format("0%d,%0d,%0d", x, y, z);
 
-    local info = DD_ReadSquareTransport(p:getSquare())
-    if info and wasKeyDown(Keyboard.KEY_F) then
+        local info = DD_ReadSquareTransport(p:getSquare());
+        if not info then return end;
+
         print(string.format("[Transport] Standing on '%s' -> %d,%d,%d", info.name, info.x, info.y, info.z))
         p:setHaloNote("Moving to " .. info.name)
         local md   = p and p:getSquare():getModData()
         local dest = md and md.ddTeleDest and { x = md.ddTeleDest.x, y = md.ddTeleDest.y, z = md.ddTeleDest.z }
-        DD_TeleportWithFade(pid, dest, 1, 1)
+        DD_TeleportWithFade(pid, dest, 1, 1);
+        return;
+    else
+        -- Check should notify?
+        -- only fire when the player changes tile
+        local pid = p:getOnlineID() or 0
+        local x, y, z = math.floor(p:getX()), math.floor(p:getY()), p:getZ()
+        local key = x .. "," .. y .. "," .. z
+
+        if DD_lastTileKeyByPID[pid] == key and nextTileNotification > getTimestamp() then return end;
+        DD_lastTileKeyByPID[pid] = key;
+        
+        local info = DD_ReadSquareTransport(p:getSquare());
+        if not info then return end;
+
+        p:setHaloNote("Travel to: " .. info.name .. " - press F to enter.", 196, 145, 51, 5);
+        nextTileNotification = getTimestamp() + 15;
     end
 end)
 
