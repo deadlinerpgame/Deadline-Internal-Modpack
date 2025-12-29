@@ -190,8 +190,8 @@ function startMethaneProduction(worldobjects, player, tile)
     end
 
     -- Remove the waste items.
-    for i = 1, 6 do
-        local iteratedWasteItem = allWasteBags[i];
+    for i = 0, allWasteBags:size() - 1 do
+        local iteratedWasteItem = allWasteBags:get(i);
         if iteratedWasteItem then
             iteratedWasteItem:getContainer():Remove(iteratedWasteItem);
         end
@@ -241,7 +241,8 @@ end
 
 -- Function to check if 3 days have passed
 function isMethaneProductionComplete(startTime)
-    return getGameTime():getWorldAgeHours() >= startTime + SandboxVars.CraftLine.MethaneWorldHours;
+    local methaneWorldHours = SandboxVars.CraftLine.MethaneWorldHours or 90;
+    return getGameTime():getWorldAgeHours() >= (startTime + methaneWorldHours);
 end
 
 local function predicateGetUsedDeltaLessThan(item, count)

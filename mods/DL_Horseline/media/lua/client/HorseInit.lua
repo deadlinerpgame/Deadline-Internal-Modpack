@@ -78,24 +78,24 @@ end
 Events.OnTick.Add(onTickHorseInit);
 
 local function predicateEvalWaterItem(item)
-    if not item:isWaterContainer() then return false end;
-    return item:IsDrainable() and item:getUsedDelta() > 0.0;
+    return item:canStoreWater() and item:IsDrainable() and item:getUsedDelta() > 0.0;
 end
 
 local function addWaterItemsToHorse(player, context, menuOption, horse)
 
     local subMenu = context:getNew(context);
+    context:addSubMenu(menuOption, subMenu);
     
     -- Get all water items.
     local waterItems = player:getInventory():getAllEvalRecurse(predicateEvalWaterItem);
 
     if (not waterItems) or (waterItems:size() == 0) then
-        subMenu.notAvailable = true;
+        menuOption.notAvailable = true;
+
+        local noWaterItems = subMenu:addOption("You do not have any water containers.", player, nil);
+        noWaterItems.notAvailable = true;
         return;
     end
-
-    -- No point adding the sub menu if there's no water items.
-    context:addSubMenu(menuOption, subMenu);
 
     for i = 0, waterItems:size() do
         local waterItem = waterItems:get(i);
