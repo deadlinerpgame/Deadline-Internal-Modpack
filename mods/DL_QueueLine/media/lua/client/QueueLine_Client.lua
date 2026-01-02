@@ -19,6 +19,47 @@ WRC.SpecialCommands["/queuelang"] = {
     adminOnly = true,
 }
 
+WRC.SpecialCommands["/queueitem"] = {
+    handler = "QueueItem",
+    tabHandlers = {},
+    usage = "/queueitem [username] [item full type (e.g. Base.Plank)] [quantity]",
+    help = "Adds an item to the offline action queue to be given to the username specified on their next connection.",
+    adminOnly = true,
+}
+
+function WRC.Commands.QueueItem(args)
+    local params = WRC.SplitString(args);
+
+    if #params ~= 3 then
+        WL_Utils.addErrorToChat("Invalid format. /queueitem [username] [item full type] [quantity]");
+        return;
+    end
+
+    local username, item, quantityStr = params[1], params[2], params[3];
+
+    if username == "" or lang == "" then
+        WL_Utils.addErrorToChat("Invalid format. /queueitem [username] [item full type] [quantity]");
+        return;
+    end
+
+    local quantity = tonumber(quantityStr);
+    if not quantity or quantity > 99 or quantity < 1 then
+        WL_Utils.addErrorToChat("Quantity must be between 1 and 99.");
+        return;
+    end
+
+    local itemMock = InventoryItemFactory.CreateItem(item);
+    if not itemMock then
+        WL_Utils.addErrorToChat("Unable to find item. Please ensure you have given the full name, e.g. Base.Plank.");
+        return;
+    end
+
+    sendClientCommand(getPlayer(), "QueueLine", "AddItem", { username = username, item = item, quantity = quantity });
+    local queuedStr = string.format("[QueueLine] Added item %s (amount: %0d) to the queue for player %s on their next connection.", item, quantity, username);
+    WL_Utils.addInfoToChat(queuedStr);
+end
+
+
 function WRC.Commands.QueueLanguage(args)
     local params = WRC.SplitString(args);
 
@@ -57,6 +98,7 @@ QueueLine_Client.Functions =
     REMOVE_LANGUAGE = WRC.Meta.RemoveLanguageFrom,
     ADD_TRAIT = QueueLine_Traits.AddTrait,
     REMOVE_TRAIT = QueueLine_Traits.RemoveTrait,
+    ADD_ITEM = QueueLine_Client.AddItem,
 };
 
 QueueLine_Client.QueueQueriedThisConnect = false;
@@ -99,6 +141,26 @@ function QueueLine_Client.OnServerCommand(module, command, args)
             end
         end
     end
+end
+
+function QueueLine_Client.AddItem(username, item, quantity)
+    if username ~= getPlayer():getUsername() then
+        error("Attempted to give item to invalid player, terminating.", 1);
+        return;
+    end
+
+    local itemMock = InventoryItemFactory.CreateItem(item);
+    if not itemMock then
+        error("Attempted to give invalid item.", 1);
+        return;
+    end
+
+    for _ = 1, quantity do
+        getPlayer():getInventory():AddItem(item);
+    end
+
+    local itemStr = string.format("[QueueLine] You have been given %0d of %s from the offline action queue.", quantity, item);
+    WL_Utils.addInfoToChat(itemStr);
 end
 
 function QueueLine_Client.DEBUG_AddLanguage(language)

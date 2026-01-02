@@ -13,7 +13,7 @@ QueueLine_Server.ItemTypes =
     ADD_LANGUAGE = "ADD_LANGUAGE",
     REMOVE_LANGUAGE = "REMOVE_LANGUAGE",
     ADD_TRAIT = "ADD_TRAIT",
-    ADD_ITEM = {},
+    ADD_ITEM = "ADD_ITEM",
     REMOVE_ITEM = {},
     SHOW_NOTIFICATION = {}
 }
@@ -131,6 +131,15 @@ function QueueLine_Server.OnClientCommand(module, command, player, args)
         QueueLine_Server.AddLanguageItem(args.username, args.language);
     end
 
+    if command == "AddItem" then
+        if not args then return end;
+        if not args.username or not args.item or not args.quantity then return end;
+
+        if player:getAccessLevel() ~= "Admin" then return end;
+
+        QueueLine_Server.AddItem(args.username, args.item, args.quantity);
+    end
+
     if command == "AddTrait" then
         if not args then return end;
         if not args.trait then return end;
@@ -142,6 +151,7 @@ function QueueLine_Server.OnClientCommand(module, command, player, args)
 
         QueueLine_Server.AddTraitItem(args.username, args.trait, args.timestamp);
     end
+
 
     if command == "AddTimedTrait" then
         if not args then return end;
@@ -255,6 +265,31 @@ function QueueLine_Server.AddTraitItem(targetUsername, trait, timestamp)
     QueueLine_Server.SaveQueue();
 end
 
+function QueueLine_Server.AddItem(targetUsername, item, quantity)
+    if not targetUsername or not item or not quantity then
+        print("[QueueLine_Server] AddItem - invalid params passed, either no username, item or quantity.");
+        return;
+    end
+
+    local logStr = string.format("[QueueLine_Server] Add item %s (quantity: %0d) for player %s.", item, quantity, targetUsername);
+    print(logStr);
+
+    local item = 
+    {
+        id = tostring(getTimestampMs()) .. "|" .. targetUsername,
+        username = targetUsername,
+        type = QueueLine_Server.ItemTypes.ADD_ITEM,
+        params =
+        {
+            [1] = targetUsername,
+            [2] = item,
+            [3] = quantity
+        },
+    };
+
+    table.insert(QueueLine_Server.QueueItems, item);
+    QueueLine_Server.SaveQueue();
+end
 
 Events.OnClientCommand.Add(QueueLine_Server.OnClientCommand);
 Events.OnInitGlobalModData.Add(QueueLine_Server.OnInitGlobalModData);
