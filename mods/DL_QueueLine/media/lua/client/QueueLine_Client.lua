@@ -92,13 +92,13 @@ QueueLine_Client = {};
 
 QueueLine_Traits = QueueLine_Traits or {};
 
-QueueLine_Client.Functions = 
+QueueLine_Client.Functions =
 {
     ADD_LANGUAGE = WRC.Meta.AddLanguageTo,
     REMOVE_LANGUAGE = WRC.Meta.RemoveLanguageFrom,
     ADD_TRAIT = QueueLine_Traits.AddTrait,
     REMOVE_TRAIT = QueueLine_Traits.RemoveTrait,
-    ADD_ITEM = QueueLine_Client.AddItem,
+    ADD_ITEM = QueueLine_Client.AddItem
 };
 
 QueueLine_Client.QueueQueriedThisConnect = false;
