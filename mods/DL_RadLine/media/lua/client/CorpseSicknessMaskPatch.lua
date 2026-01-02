@@ -5,7 +5,7 @@ local function CorpseSicknessMaskCheck(player)
     local hazMatMoodle = MF.getMoodle("MoodleHazmat");
 
     if gasMaskMoodle:getValue() > 0.0 or hazMatMoodle:getValue() > 0.0 then
-        player:getStats():setSickness(0.0);
+        player:getBodyDamage():setFoodSicknessLevel(0.0);
     end
 end
 
