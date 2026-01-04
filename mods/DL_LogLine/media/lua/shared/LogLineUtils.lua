@@ -139,7 +139,7 @@ function LogLineUtils.ContainerToLogStr(container)
 
                 local objName = "[cannot find obj name]";
                 if container:getVehiclePart() then
-                    objName = container:getVehicle():getVehicleType();
+                    objName = container:getVehiclePart():getVehicle():getVehicleType();
                 else
                     objName = parent:getSprite():getName() or parent:getSprite():getParentObjectName();
                 end
