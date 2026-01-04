@@ -16,8 +16,8 @@ function ISDropWorldItemAction:perform()
     local locationStr = string.format("(%0d,%0d,%0d)", self.xoffset, self.yoffset, self.zoffset);
     local logStr = string.format("[%s] Item: %s | From: %s | To: floor %s", self.character:getUsername(), srcStr, self.character:getUsername(), locationStr);
 
-    print(transferStr);
-    LogLineUtils.LogFromClient("ItemTransfer", transferStr);
+    print(logStr);
+    LogLineUtils.LogFromClient("ItemTransfer", logStr);
 end
 
 local original_ISInventoryTransferAction_perform = ISInventoryTransferAction.perform;
