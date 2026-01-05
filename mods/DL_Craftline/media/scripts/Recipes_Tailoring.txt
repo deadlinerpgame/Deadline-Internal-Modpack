@@ -166,4 +166,49 @@ module Base
       		Category:Tailoring,
 		SkillRequired:Tailoring=7,
     	}
+	recipe Create a Cotton Fabric Roll
+	{
+		Thread=100,
+		keep Needle,
+		NearItem:Tailoring Table,
+       		Result:FabricRoll_Cotton,
+       		Time:120.0,
+      		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+    	}
+
+	recipe Create a Blue Denim Fabric Roll
+	{
+		Thread=50,
+		Base.DenimStrips=50,
+		keep Needle,
+		NearItem:Tailoring Table,
+       		Result:FabricRoll_DenimBlue,
+       		Time:120.0,
+      		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+    	}
+
+	recipe Create a Dark Blue Denim Fabric Roll
+	{
+		Thread=50,
+		Base.DenimStrips=50,
+		keep Needle,
+		NearItem:Tailoring Table,
+       		Result:FabricRoll_DenimDarkBlue,
+       		Time:120.0,
+      		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+    	}
+	recipe Create a Black Denim Fabric Roll
+	{
+		Thread=50,
+		Base.DenimStrips=50,
+		keep Needle,
+		NearItem:Tailoring Table,
+       		Result:FabricRoll_DenimBlack,
+       		Time:120.0,
+      		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+    	}
 }

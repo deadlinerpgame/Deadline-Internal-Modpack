@@ -16,6 +16,10 @@ Events.OnGameBoot.Add(function()
             return string.find(key, "^lootcountertimer") ~= nil;
         end);
 
+        PARP.Hooks:add("includeModDataEntryInRestoreDump", function(key, value, modData)
+            return string.find(key, "^lootcounter_timestamp") ~= nil;
+        end);
+
         PARP.Hooks:add("allowModDataEntryRestore", function(key, value, modData, configVars)
             return string.find(key, "^lootcounter") ~= nil;
         end);
@@ -23,4 +27,9 @@ Events.OnGameBoot.Add(function()
         PARP.Hooks:add("allowModDataEntryRestore", function(key, value, modData, configVars)
             return string.find(key, "^lootcountertimer") ~= nil;
         end);
+
+        PARP.Hooks:add("allowModDataEntryRestore", function(key, value, modData, configVars)
+            return string.find(key, "^lootcounter_timestamp") ~= nil;
+        end);
+
 end);

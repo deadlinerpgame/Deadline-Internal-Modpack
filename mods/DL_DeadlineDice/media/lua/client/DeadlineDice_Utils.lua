@@ -200,6 +200,6 @@ function DeadlineDice.areCoordinatesWithinRange(coord1, coord2, range)
     local dy = coord1.y - coord2.y
     local dz = coord1.z - coord2.z
     local distanceSquared = dx * dx + dy * dy + dz * dz
-    local rangeSquared = range * range
+    local rangeSquared = 900
     return distanceSquared <= rangeSquared
 end

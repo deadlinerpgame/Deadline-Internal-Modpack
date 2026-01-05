@@ -677,4 +677,3 @@ function ISInventoryTransferAction:isValid()
 end
 
 
-

@@ -1,0 +1,34 @@
+module aerx {
+  imports {
+      Base
+ }
+    recipe Make Fur Jacket Short
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+        LeatherStrips = 6,
+        Thread = 4,
+        Deadline.Kevlar = 2,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.FurJacketShort,
+        Time: 360.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 8,
+    }
+
+    recipe Shorten Great Fur Coat to Jacket
+    {
+        Base.FurCoat_Fur,
+        Thread = 2,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.FurJacketShort,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 7,
+    }
+
+
+}

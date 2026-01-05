@@ -9,10 +9,37 @@ module Base
 		DisplayCategory     =       Ammo,
 		Icon	            =	    556_Stanag_Mag,
 		MaxAmmo             =       30,
-		AmmoType            =       Base.556Bullets,
+		AmmoType            =       Base.DL_556Bullets,
 		GunType             =       Base.AssaultRifle,
 		StaticModel         =       GunMagazine,
 		WorldStaticModel    =       Gun_Magazine_Ground,
 		Tags                =       GunMagazine,
 	}
+
+    item DL_556Bullets
+    {
+        Count	=	5,
+        Weight	=	0.02,
+        AlwaysWelcomeGift	=	TRUE,
+        Type	=	Normal,
+        DisplayName	=	5.56x45mm Round,
+        DisplayCategory = Ammo,
+        Icon	=	HBVAI_556Loose,
+        MetalValue = 1,
+				StaticModel = RifleBullet,
+				WorldStaticModel = RifleAmmo,
+    }
+
+    item DL_556Box
+    {
+        Weight	=	0.3,
+        AlwaysWelcomeGift	=	TRUE,
+        Type	=	Normal,
+        DisplayName	=	Box of 5.56x45mm Rounds,
+        DisplayCategory = Ammo,
+        Icon	=	556BulletsBox,
+        MetalValue = 40,
+				StaticModel = Ammobox,
+				WorldStaticModel = 556BulletsAmmobox,
+    }
 }
