@@ -78,7 +78,7 @@ function Craftline_Farming.OnFillWorldObjectContextMenu(playerNum, context, worl
     else
         dwfOption.notAvailable = true;
         local tooltip = ISWorldObjectContextMenu.addToolTip();
-        local spray = InventoryItemFactory.CreateItem("Farming.GardeningSprayBonemeal"):getDisplayName();
+        local spray = InventoryItemFactory.CreateItem("farming.GardeningSprayBonemeal"):getDisplayName();
         tooltip.description = getText("Farming_MissingItem", spray);
         dwfOption.toolTip = tooltip;
     end
