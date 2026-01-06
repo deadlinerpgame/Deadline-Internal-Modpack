@@ -4,6 +4,11 @@ require "ISUI/ISScrollingListBox"
 require "ISUI/ISResizeWidget"
 require "defines"
 
+require "LogLineUtils";
+LogLineUtils = LogLineUtils or {};
+LogLineUtils.LogFromClient = LogLineUtils.LogFromClient or {};
+LOGLINE_DCPREFIX = "DonatorClothes";
+
 ISDonatorClothesUI = ISPanelJoypad:derive("ISDonatorClothesUI");
 ISDonatorComboPanel = ISPanelJoypad:derive("ISDonatorComboPanel")
 
@@ -747,6 +752,14 @@ function ISDonatorClothesConfirmation:onSecondConfirm(button, x, y)
         local wornItems = self.parent.desc:getWornItems();
         wornItems:addItemsToItemContainer(getPlayer():getInventory());
 
+        local logLineStr = string.format("Player %s has redeemed a donator ticket with the following clothing items: ", getPlayer():getUsername());
+        for i = 0, wornItems:size() - 1 do
+            local item = wornItems:get(i):getItem();
+            logLineStr = logLineStr .. string.format("| %s [%s]", item:getName(), item:getFullType());
+        end
+
+        LogLineUtils.LogFromClient(LOGLINE_DCPREFIX, logLineStr);
+
         self:setVisible(false);
         self:close(); 
         self:removeFromUIManager();
@@ -759,6 +772,7 @@ function ISDonatorClothesConfirmation:onSecondConfirm(button, x, y)
         local container = ticketItem:getContainer() or getPlayer():getInventory();
         container:DoRemoveItem(ticketItem);
         container:requestSync();
+
     end
 end
 

@@ -17,7 +17,6 @@ module Base
 		WorldStaticModel = GreaveMagazine_Right,
         Insulation = 0.35,
         WindResistance = 0.3,
-		RunSpeedModifier = 0.80,
 		DamagedSound = ArmourBreakRubber,
 	}
 
@@ -37,7 +36,6 @@ module Base
 		WorldStaticModel = GreaveMagazine_Left,
         Insulation = 0.35,
         WindResistance = 0.3,
-		RunSpeedModifier = 0.80,
 		DamagedSound = ArmourBreakRubber,
 	}
 
@@ -57,7 +55,7 @@ module Base
 		WorldStaticModel = ThighArmor_R,
         Insulation = 0.35,
         WindResistance = 0.3,
-		RunSpeedModifier = 0.80,
+		RunSpeedModifier = 0.98,
 		DamagedSound = ArmourBreakRubber,
 
 	}
@@ -78,7 +76,7 @@ module Base
 		WorldStaticModel = ThighArmor_L,
         Insulation = 0.35,
         WindResistance = 0.3,
-		RunSpeedModifier = 0.80,
+		RunSpeedModifier = 0.98,
 		DamagedSound = ArmourBreakRubber,
 
 	}
@@ -99,7 +97,7 @@ module Base
 		WorldStaticModel = VambraceMagazine_Right,
         Insulation = 0.35,
         WindResistance = 0.3,
-		CombatSpeedModifier = 0.95,
+		CombatSpeedModifier = 0.99,
 		DamagedSound = ArmourBreakRubber,
 	}
 
@@ -119,7 +117,7 @@ module Base
 		WorldStaticModel = VambraceMagazine_Left,
         Insulation = 0.35,
         WindResistance = 0.3,
-		CombatSpeedModifier = 0.97,
+		CombatSpeedModifier = 0.99,
 		DamagedSound = ArmourBreakRubber,
 	}
 
@@ -136,11 +134,9 @@ module Base
         WorldStaticModel = Shoulderpad_Articulated_L_Metal,
         BiteDefense = 5,
         ScratchDefense = 10,
-        CombatSpeedModifier = 0.95,
+        CombatSpeedModifier = 0.99,
         DamagedSound = ArmourBreakRubber,
         Weight = 3,
-		DiscomfortModifier = 0.20,
-        Tooltip = Tooltip_item_NoBackpack,
 		Tags = IgnoreZombieDensity;HasMetal,
 		ConditionMax = 5,
 		ConditionLowerChanceOneIn = 5,
@@ -159,7 +155,7 @@ module Base
         WorldStaticModel = Shoulderpad_Articulated_R_Metal,
         BiteDefense = 5,
         ScratchDefense = 10,
-        CombatSpeedModifier = 0.92,
+        CombatSpeedModifier = 0.99,
         DamagedSound = ArmourBreakRubber,
         Weight = 3,
     }
@@ -176,9 +172,9 @@ module Base
         CanHaveHoles = true,
         BiteDefense = 10,
         ScratchDefense = 15,
-        CombatSpeedModifier = 0.95,
+        CombatSpeedModifier = 0.97,
+	RunSpeedModifier = 0.98,
         DamagedSound = ArmourBreakRubber,
-	RunSpeedModifier = 0.90,
 	WindResistance = 0.80,
 	WorldStaticModel = Cuirass_Bone,
         Weight = 6,

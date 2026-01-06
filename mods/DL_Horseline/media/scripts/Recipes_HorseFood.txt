@@ -1,0 +1,45 @@
+module DeadlineHorse {
+  imports {
+      Base
+ }
+
+	recipe Craft Horse Feed (Cook)
+	{
+		Apple/Pear/Banana=6,
+		Potato/Corn=6,
+		BellPepper=3,
+		Base.EmptySandbag
+		keep Base.MortarPestle,
+		Result:DeadlineHorse.FoodHorseA,
+		Time:250.0,
+		Category:Horses,
+		SkillRequired:Cooking=6,
+	}
+
+	recipe Craft Large Horse Feed (Cook)
+	{
+		Rice=3,
+		Apple/Pear/Banana=8,
+		Potato/Corn=8,
+		BellPepper=4,
+		Base.EmptySandbag
+		keep Base.MortarPestle,
+		Result:DeadlineHorse.FoodHorseB,
+		Time:250.0,
+		Category:Horses,
+		SkillRequired:Cooking=8,
+	}
+
+	recipe Craft Horse Feed (Farming)
+	{
+		Apple/Pear/Banana=8,
+		Potato/Corn=8,
+		BellPepper=5,
+		Base.EmptySandbag
+		keep Base.MortarPestle,
+		Result:DeadlineHorse.FoodHorseA,
+		Time:500.0,
+		Category:Horses,
+		SkillRequired:Farming=6,
+	}
+}

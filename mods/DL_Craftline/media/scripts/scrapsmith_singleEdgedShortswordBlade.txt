@@ -1,0 +1,44 @@
+module ScrapSmith
+{
+    imports
+    {
+        Base,
+    }
+
+    item scrapsmith_singleEdgedShortswordBlade
+    {
+        WorldStaticModel = scrapsmith_singleEdgedShortswordBlade,
+        Icon 		= scrapsmith_singleEdgedShortswordBlade,
+        Count 		= 1,
+        Weight 		= 0.1,
+        Type	=	Normal,
+        DisplayName 		= Single Edged Shortsword Blade,
+        DisplayCategory 		= Material,
+        UseWhileEquipped	=	FALSE,
+    }
+
+    recipe Forge Single Edged Shortsword Blade
+    {
+        aerx.IronBar=2,
+        Charcoal=3,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Time : 250.0,
+        Category : LongBlade,
+        OnGiveXP : Recipe.OnGiveXP.MetalWelding25,
+        SkillRequired : MetalWelding=6,
+        StopOnWalk : TRUE,
+        StopOnRun : TRUE,
+        Result : scrapsmith_singleEdgedShortswordBlade,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        NearItem:Advanced Furnace,
+    }
+}
+
+module Base
+{
+	model scrapsmith_singleEdgedShortswordBlade
+	{
+		mesh = WorldItems/weaponParts/scrapsmith_singleEdgedShortswordBlade,
+		texture	= other/scrapsmith_lightlyCorrodedSteel,
+    }
+}

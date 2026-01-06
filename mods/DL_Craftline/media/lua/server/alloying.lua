@@ -43,6 +43,8 @@ MeltingReference = {
 	["aerx.GoldScrap"] = {gold = 1,},
 	["aerx.SilverScrap"] = {silver = 1,},
 
+	["Base.PieceOfCharcoal"] = {charcoal = 10,},
+
 }
 
 
@@ -56,6 +58,7 @@ local MetalReference = {
 	gold = 0,
 	zinc = 0,
 	nickel = 0,
+	charcoal = 0,
 }
 
 local AlloyRules = {}
@@ -214,6 +217,14 @@ AlloyRules = {
     output = { pure = false, item = 'Smithing.IngotO',},
     },
 	{
+		name = "Steel Ingot",
+		criteria = {
+			iron = { min = 70, max = 80 },
+			charcoal = { min = 20, max = 30 },
+		},
+		output = { pure = false, item = "Smithing.IngotD"},
+	},
+	{
 	name = "Crude Copper Ingot",
     criteria = {
 		copper = { min = 50, max = 99,},
@@ -299,8 +310,8 @@ AlloyRules = {
 function Recipe.OnCreate.MeltMetal(items, result, player)
 	player:getInventory():AddItem('aerx.CeramicCrucible')
 --[[ Part 1, creates the table for the resulting ingot ]]--
-	local alloyTally = {total = 0, copper = 0, tin = 0, aluminum = 0, iron = 0, lead = 0, silver = 0, gold = 0, zinc = 0, nickel = 0,}
-	local alloyPercent = {total = 0, copper = 0, tin = 0, aluminum = 0, iron = 0, lead = 0, silver = 0, gold = 0, zinc = 0, nickel = 0,}
+	local alloyTally = {total = 0, copper = 0, tin = 0, aluminum = 0, iron = 0, lead = 0, silver = 0, gold = 0, zinc = 0, nickel = 0, charcoal = 0}
+	local alloyPercent = {total = 0, copper = 0, tin = 0, aluminum = 0, iron = 0, lead = 0, silver = 0, gold = 0, zinc = 0, nickel = 0, charcoal = 0}
 	local crucible = {}
 	local crucibleContents = {}
 
@@ -359,15 +370,25 @@ function Recipe.OnCreate.MeltMetal(items, result, player)
 	resultAlloy = MetalCheck(alloyPercent)
 	tablePLZ("MetalCheck: ", resultAlloy)
 
-	local endProduct = player:getInventory():AddItem(resultAlloy.output.item)
-	endProduct:getModData().AlloyType = resultAlloy.name
-		endProduct:setName(resultAlloy['name'])
+	if resultAlloy.name == "Steel Ingot" then
+		if player:getPerkLevel(Perks.MetalWelding) < 10 then
+			for _, alloy in pairs(AlloyRules) do
+				if alloy.name == "Crude Iron Ingot" then
+					resultAlloy = alloy;
+					break;
+				end
+			end
+		end
+	end
 
-			crucible:getItemContainer():removeAllItems()
+	local endProduct = player:getInventory():AddItem(resultAlloy.output.item);
+	endProduct:getModData().AlloyType = resultAlloy.name;
+	endProduct:setName(resultAlloy['name']);
 
+	crucible:getItemContainer():removeAllItems();
 end
 
- function MetalCheck(metals)
+function MetalCheck(metals)
     for _, alloy in pairs(AlloyRules) do
         if meetsCriteria(metals, alloy.criteria) then
             return alloy

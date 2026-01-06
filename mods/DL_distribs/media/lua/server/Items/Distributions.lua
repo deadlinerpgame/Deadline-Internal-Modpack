@@ -9506,6 +9506,7 @@ local distributionTable = {
         rolls = 2,
         items = {
             "Bandage", 10,
+            "Machete", 4,
             "Bandaid", 10,
             "BeefJerky", 20,
             "CannedBolognese", 20,
@@ -9577,6 +9578,7 @@ local distributionTable = {
             "LeafRake", 10,
             "LugWrench", 6,
             "PickAxe", 0.5,
+            "Machete", 0.01,
             "PipeWrench", 6,
             "Rake", 10,
             "Rope", 8,
@@ -9605,6 +9607,7 @@ local distributionTable = {
         items = {
             "BaseballBat", 8,
             "Crowbar", 8,
+            "Machete", 4,
 
         },
         junk = {
@@ -11009,7 +11012,7 @@ local distributionTable = {
                 "Crisps2", 10,
                 "Crisps3", 10,
                 "Crisps4", 10,
-
+                "Machete", 1,
                 "PeanutButter", 10,
                 "TinnedBeans", 10,
                 "TinnedSoup", 10,
@@ -11057,7 +11060,7 @@ local distributionTable = {
                 "Crisps2", 10,
                 "Crisps3", 10,
                 "Crisps4", 10,
-
+                "Machete", 1,
                 "PeanutButter", 10,
                 "TinnedBeans", 10,
                 "TinnedSoup", 10,
@@ -11085,7 +11088,7 @@ local distributionTable = {
                 "Hammer", 8,
                 "HandAxe", 4,
                 "LeadPipe", 10,
-
+                "Machete", 1,
                 "Nails", 20,
                 "Nails", 10,
                 "NailsBox", 10,

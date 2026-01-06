@@ -3,93 +3,104 @@ module Base
    recipe Smith Ingot into Bars
     {
        	Smithing.IngotA/Smithing.IngotB/Smithing.IngotC/Smithing.IngotD/Smithing.IngotE/Smithing.IngotF/Smithing.IngotG/Smithing.IngotH/Smithing.IngotI/Smithing.IngotJ/Smithing.IngotK/Smithing.IngotT/Smithing.IngotY/Smithing.IngotP/Smithing.IngotM/Smithing.IngotS/Smithing.IngotQ/Smithing.IngotR/Smithing.IngotU/Smithing.IngotV/Smithing.IngotW/Smithing.IngotX/Smithing.IngotL/Smithing.IngotO/Smithing.IngotN/Smithing.IngotZ,
-	Log/Coke/Charcoal=1,
-	keep IronBarMold/ClayBarMold=4,
+		Log/Coke/Charcoal=1,
+		keep IronBarMold/ClayBarMold=4,
         Result:aerx.IronBar=4,
-        Time:255.0,
+        Time:255.0,	
         Category:Smithing,
-	RemoveResultItem:true,
-	OnCreate:Recipe.OnCreate.TransferIngotToBars,
-	SkillRequired:MetalWelding=4,
-	NearItem:Simple Forge,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.TransferIngotToBars,
+		SkillRequired:MetalWelding=4,
+		NearItem:Simple Forge,
     }
 
 
    recipe Melt Down Crude Ingot
     {
         Smithing.IngotTestingAlloy,
-	Log/Coke/Charcoal=1,
-	keep aerx.CeramicCrucible,
+		Log/Coke/Charcoal=1,
+		keep aerx.CeramicCrucible,
         Result:aerx.IronScrap,
         Time:255.0,
         Category:Smithing,
-	RemoveResultItem:true,
-	OnCreate:Recipe.OnCreate.MeltIngot,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.MeltIngot,
     }
 
    recipe Smith Bar into Set of Coins (25)
     {
        	aerx.IronBar=1,
-	Log/Coke/Charcoal=1,
-	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		Log/Coke/Charcoal=1,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:DLM.CrCoin=25,
         Time:255.0,
         Category:Smithing,
-	RemoveResultItem:true,
-	OnCreate:Recipe.OnCreate.TransferBarsToCoins,
-	SkillRequired:MetalWelding=9,
-	NearItem:Simple Forge,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.TransferBarsToCoins,
+		SkillRequired:MetalWelding=9,
+		NearItem:Simple Forge,
     }
 
    recipe Smith Bar into (Iron) Bar
     {
        	aerx.IronBar=1,
-	Log/Coke/Charcoal=1,
-	keep aerx.ClayBarMold,
-	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		Log/Coke/Charcoal=1,
+		keep aerx.ClayBarMold,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:MetalBar=1,
         Time:255.0,
         Category:Smithing,
-	RemoveResultItem:true,
-	OnCreate:Recipe.OnCreate.TransferBarsToVBar,
-	SkillRequired:MetalWelding=5,
-	NearItem:Simple Forge,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.TransferBarsToVBar,
+		SkillRequired:MetalWelding=5,
+		NearItem:Simple Forge,
     }
 
    recipe Smith Bar into (Iron) Pipe
     {
        	aerx.IronBar=1,
-	Log/Coke/Charcoal=1,
-	keep aerx.ClayBarMold,
-	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		Log/Coke/Charcoal=1,
+		keep aerx.ClayBarMold,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:MetalPipe=1,
         Time:255.0,
         Category:Smithing,
-	RemoveResultItem:true,
-	OnCreate:Recipe.OnCreate.TransferBarsToPipes,
-	SkillRequired:MetalWelding=5,
-	NearItem:Simple Forge,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.TransferBarsToPipes,
+		SkillRequired:MetalWelding=5,
+		NearItem:Simple Forge,
     }
 
    recipe Smith Bar into Sheet Metal
     {
        	aerx.IronBar=1,
-	Log/Coke/Charcoal=1,
-	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		Log/Coke/Charcoal=1,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:SheetMetal=1,
         Time:255.0,
         Category:Smithing,
-	RemoveResultItem:true,
-	OnCreate:Recipe.OnCreate.TransferBarsToSheetMetal,
-	SkillRequired:MetalWelding=5,
-	NearItem:Simple Forge,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.TransferBarsToSheetMetal,
+		SkillRequired:MetalWelding=5,
+		NearItem:Simple Forge,
     }
+
+	recipe Smith Metal Sheet into Iron Pipe
+	{
+		SheetMetal=1,
+		Result:aerx.IronBar=1,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		Time:200.0,
+		Category:Smithing,
+		SkillRequired:MetalWelding=6,
+		NearItem:Simple Forge,
+	}
 
 
    recipe Craft Crude Shortsword Blade
     {
        	aerx.IronBar=1,
-	Coke/Charcoal=5,
+	Coke/Charcoal=3,
 	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.CrudeShortSwordBlade=1,
         Time:255.0,
@@ -103,7 +114,7 @@ module Base
    recipe Craft Shortsword Blade
     {
        	aerx.IronBar=1,
-	Coke/Charcoal=5,
+	Coke/Charcoal=3,
 	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.ShortSwordBlade=1,
         Time:255.0,
@@ -117,7 +128,7 @@ module Base
    recipe Craft Mace Head
     {
        	aerx.IronBar=1,
-	Coke/Charcoal=5,
+	Coke/Charcoal=3,
 	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.MaceHead=1,
         Time:255.0,
@@ -132,7 +143,7 @@ module Base
    recipe Craft Crude Sword Blade
     {
        	aerx.IronBar=2,
-	Coke/Charcoal=10,
+	Coke/Charcoal=5,
 	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.CrudeSwordBlade=1,
         Time:255.0,
@@ -146,7 +157,7 @@ module Base
    recipe Craft Sword Blade
     {
        	aerx.IronBar=2,
-	Coke/Charcoal=10,
+	Coke/Charcoal=5,
 	keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:aerx.SwordBlade=1,
         Time:255.0,

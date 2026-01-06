@@ -16,7 +16,7 @@ local function saveGameDateOnStartup()
     local year = 1997
 
     -- Append in-game date/time as raw values to server_start_time.txt
-    local filePath = "logs/" .. "server_start_time.txt", 
+    local filePath = "logs/" .. "server_start_time.txt";
     local file = getFileWriter(filePath, true, false)
     file:write(string.format(" | In-Game Date: %d-%02d-%02d %02d:%02d\n", year, month, day, hours, minutes))
     file:close()

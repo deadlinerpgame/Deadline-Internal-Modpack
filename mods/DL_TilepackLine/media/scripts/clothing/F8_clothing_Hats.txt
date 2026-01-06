@@ -1,0 +1,31 @@
+module DeadlineClothes {
+  imports {
+      Base
+  }
+	item F8_Hat1
+	{
+	DisplayCategory = Accessory,
+	Type = Clothing,
+	DisplayName = Engineer's Hat,
+	ClothingItem = F8_Hat1,
+	WorldStaticModel = F8_Hat1_Ground,
+	BodyLocation = Hat,
+	Icon = EngineerHat,
+	CanHaveHoles = false,
+	BloodLocation = Head,
+	BiteDefense = 100,
+        ScratchDefense = 100,
+        Insulation = 0.15,
+        WindResistance = 0.25,
+        WaterResistance = 0.5,
+
+	}
+
+    model F8_Hat1_Ground
+    {
+        mesh = WorldItems/Clothes/F8_Hat1_Ground,
+        texture = clothes/F8_Hat1,
+        scale = 1,
+    }
+	
+}

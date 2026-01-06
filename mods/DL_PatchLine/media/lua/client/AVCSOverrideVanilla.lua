@@ -5,9 +5,12 @@
 	K15's Mods - https://steamcommunity.com/id/KI5/myworkshopfiles/?appid=108600
 ]]--
 
+
 if not isClient() and isServer() then
 	return
 end
+
+if not AVCS then return end; -- If AVCS not loaded.
 
 require "ISUI/ISModalDialog"
 require "luautils"

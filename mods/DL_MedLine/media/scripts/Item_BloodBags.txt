@@ -1,0 +1,102 @@
+module MedLine
+{
+    imports
+    {
+        Base
+    }
+
+    item BloodBag_Full
+	{
+		DisplayName = Blood Bag - Full,
+		DisplayCategory = Medical,
+		Type = Normal,
+		Weight = 1.5,
+		Icon = BloodBag_Full,
+		WorldStaticModel = M_Bloodbag,
+	}
+
+    item BloodBag_Empty
+	{
+		DisplayName = Blood Bag - Empty,
+		DisplayCategory = Medical,
+		Type = Normal,
+		Weight = 0.05,
+		Icon = BloodBag_Empty,
+		WorldStaticModel= M_BloodBag_Empty,
+	}
+
+	item BloodBag_Saline
+	{
+		DisplayName = Bag of Normal Saline,
+		DisplayCategory = Medical,
+		Type = Normal,
+		Weight = 0.05,
+		Icon = BloodBag_Saline,
+		WorldStaticModel= M_BloodBag_Saline,
+	}
+
+	item PotWithMeltedPlastic
+	{
+		DisplayName = Cooking Pot with Plastic,
+		DisplayCategory = Water,
+		Type = Normal,
+		Weight = 5,
+		Icon = Pot_Water,
+		StaticModel = CookingPot,
+		WorldStaticModel = CookingPotWater_Ground,
+	}
+
+	item PotWithBagsForMelting
+	{
+		DisplayName = Cooking Pot with Plastic Bags,
+		DisplayCategory = Material,
+		Type = Food,
+		Weight = 3,
+		Icon = Pot_Water,
+		IsCookable = TRUE,
+		StaticModel = CookingPot,
+        MinutesToCook = 45,
+        MinutesToBurn = 120,
+        ReplaceOnCooked = MedLine.PotWithMeltedPlastic,
+		WorldStaticModel = CookingPotWater_Ground,
+	}
+
+	
+
+	model M_BloodBag_Empty
+	{
+		mesh = WorldItems/BloodBag,
+		texture = WorldItems/BloodBag_Empty,
+
+		attachment world
+		{
+			offset = 0 0 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+    }
+
+	model M_BloodBag_Full
+	{
+		mesh = WorldItems/BloodBag,
+		texture = WorldItems/BloodBag_Full,
+
+		attachment world
+		{
+			offset = 0 0 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+    }
+
+	model M_BloodBag_Saline
+	{
+		mesh = WorldItems/BloodBag,
+		texture = WorldItems/BloodBag_Empty,
+
+		attachment world
+		{
+			offset = 0 0 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+    }
+
+}

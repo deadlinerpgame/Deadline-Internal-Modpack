@@ -1,0 +1,44 @@
+module ScrapSmith
+{
+    imports
+    {
+        Base,
+    }
+
+    item scrapsmith_curvedShortswordBlade
+    {
+        WorldStaticModel = scrapsmith_curvedShortswordBlade,
+        Icon 		= scrapsmith_curvedShortswordBlade,
+        Count 		= 1,
+        Weight 		= 1.0,
+        Type	=	Normal,
+        DisplayName 		= Curved Shortsword Blade,
+        DisplayCategory 		= Material,
+        UseWhileEquipped	=	FALSE,
+    }
+
+    recipe Forge Curved Shortsword Blade
+    {
+        aerx.IronBar=3,
+        Charcoal=5,
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        Time : 250.0,
+        Category : LongBlade,
+        OnGiveXP : Recipe.OnGiveXP.MetalWelding25,
+        SkillRequired : MetalWelding=6,
+        StopOnWalk : TRUE,
+        StopOnRun : TRUE,
+        Result : scrapsmith_curvedShortswordBlade,
+        OnCreate:Recipe.OnCreate.ForgeMetalWeaponWithAlloy,
+        NearItem:Advanced Furnace,
+    }
+}
+
+module Base
+{
+	model scrapsmith_curvedShortswordBlade
+	{
+		mesh = WorldItems/weaponParts/scrapsmith_curvedShortswordBlade,
+		texture	= other/scrapsmith_lightlyCorrodedSteel,
+    }
+}

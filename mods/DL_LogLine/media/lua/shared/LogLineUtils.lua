@@ -15,6 +15,13 @@ function LogLineUtils.JavaArrayToTable(javaTable)
     return returnTable;
 end
 
+function LogLineUtils.PlayerCoordsStr(player)
+    if not player then return end;
+
+    local coordsStr = string.format("[%0d,%0d,%0d]", player:getX(), player:getY(), player:getZ());
+    return coordsStr;
+end
+
 function LogLineUtils.ItemToDictKey(item)
     if not item then return nil end;
 
@@ -71,7 +78,7 @@ function LogLineUtils.ParseAmountDict(dict, returnStr)
                 returnStr = newStr;
             end
         else
-            local tableHeader = string.format("%s [%s]: %s |", returnStr, k, LogLineUtils.ParseAmountDict(v, ""));
+            local tableHeader = string.format(" ([%s]: %s) |", k, LogLineUtils.ParseAmountDict(v, ""));
             returnStr = returnStr .. tableHeader; -- Update with the container name before recursively iterating through it.
         end
     end
@@ -117,7 +124,12 @@ function LogLineUtils.ContainerToLogStr(container)
             local parent = container:getParent();
 
             if instanceof(parent, "IsoPlayer") then
-                return string.format("%s %s (U: %s, SID: %s)", parent:getForname(), parent:getSurname(), parent:getUsername(), parent:getSteamID());
+                if parent:getSteamID() then
+                    local steamIDString = parent:getSteamID();
+                    return string.format("%s (SID: %s)", parent:getUsername(), steamIDString);
+                end
+
+                return string.format("%s (NO STEAM)", parent:getUsername());
             end
 
             if instanceof(parent, "IsoObject") then
@@ -125,17 +137,24 @@ function LogLineUtils.ContainerToLogStr(container)
                 local y = parent:getY();
                 local z = parent:getZ();
 
-                local objName = parent:getSprite():getName() or parent:getSprite():getParentObjectName() or "[cannot find obj name]";
+                local objName = "[cannot find obj name - " .. tostring(parent) .. "]";
+                if container:getVehiclePart() then
+                    if container:getVehiclePart():getVehicle() then
+                        objName = container:getVehiclePart():getVehicle():getScript():getName();
+                    end
+                else
+                    objName = parent:getSprite():getName() or parent:getSprite():getParentObjectName();
+                end
 
                 if not x or not y or not z then
-                    return string.format("%s (invalid pos LogLineUtils.ContainerToLogStr)", objName);
+                    return string.format("%s (invalid pos ContainerToLogStr)", objName);
                 end
 
                 return string.format("%s (%0d,%0d,%0d)", objName, x, y, z);
             end
         else
             if container:isInCharacterInventory(getPlayer()) then
-                return string.format("%s [inv]", container:getType());
+                return string.format("%s [inv, %0d,%0d,%0d]", container:getType(), getPlayer():getX(), getPlayer():getY(), getPlayer():getZ());
             else
                 if container:getSourceGrid() then
                     local srcGrid = container:getSourceGrid();
@@ -150,6 +169,10 @@ function LogLineUtils.ContainerToLogStr(container)
     return container:getType();
 end
 
+
+--- Logs a LogLine style log on the server in its own separate file. Useful for tracking specific issues or data that is too large to reasonably fit into the main log.
+--- @param prefix string The prefix for the log type, this is the name of the LogLine file on the server,<br/> e.g. if Prefix is PlayerAnims, the file will be LogLine_PlayerAnims_[datetimeinfo].txt.
+--- @param string string The actual message to log in the file.
 function LogLineUtils.LogFromClient(prefix, string)
     sendClientCommand("LogLine", "LogClient", { prefix = prefix, message = string });
 end

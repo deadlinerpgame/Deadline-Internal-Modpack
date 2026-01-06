@@ -53,7 +53,7 @@ addTrait("Thinskinned", {
 
 addTrait("Unlucky", {
     name = "Unlucky",
-    description = "What could go wrong for you, often does. Reroll critical damage rolls and take the worst.",
+    description = "What could go wrong for you, often does. Rolling a 2 is a critical failure!",
     cost = -4,
 })
 
@@ -617,6 +617,7 @@ addTrait("proftinkerer2", {
 addTrait("profforager2", {
     name = "Waste Not, Want Not",
     description = " can identify bugs before consuming them which removes the Unhappiness malus.\nAble to make some bug-based recipes. ",
+    recipes = {"Identify Insect"},    
     profession = true,
 })
 
@@ -1100,7 +1101,7 @@ addTrait("KeenHearing", {
 
 addTrait("Lucky", {
     name = "Lucky",
-    description = "Sometimes, things just go your way. Reroll critical damage rolls and take the best.",
+    description = "Sometimes, things just go your way. Rolling a 19 is a critical hit!",
     cost = 4,
 })
 
@@ -1154,7 +1155,7 @@ addTrait("Resolute", {
 
 addTrait("SharpShooter", {
     name = "Sharp Shooter (Dice Effects Only)",
-    description = "Adds +1 to Ranged Damage.",
+    description = "Adds +1 Damage with Guns.",
     cost = 3,
 })
 

@@ -1,0 +1,42 @@
+module MedLine
+{
+    imports
+    {
+        Base
+    }
+
+    recipe Prepare Plastic for Recycling
+    {
+        Garbagebag/Plasticbag=5,
+        Pot=1,
+        Water=5,
+        Time:150.0,
+        Category:Medical,
+        Result:PotWithBagsForMelting,
+        SkillRequired:Doctor=6,
+    }
+
+    recipe Craft Empty Bloodbag
+    {
+       	PotWithMeltedPlastic,
+        Water=10,
+        Result:BloodBag_Empty,
+        Time:500.0,
+        Category:Medical,
+        OnCreate:Recipe.OnCreate.GiveEmptyPot,
+        SkillRequired:Doctor=8,
+        NearItem:Distiller,
+    }
+
+    recipe Make Bag of Normal Saline
+    {
+       	BloodBag_Empty=1,
+        Water=10,
+        Salt=3,
+        Result:BloodBag_Saline,
+        Time:300.0,
+        Category:Medical,
+        SkillRequired:Doctor=6,
+        NearItem:Distiller,
+    }
+}

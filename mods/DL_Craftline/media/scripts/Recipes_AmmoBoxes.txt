@@ -1,0 +1,98 @@
+module Craftline
+{
+    imports
+    {
+        Base
+    }
+
+    recipe Place Junk Shotgun Shells in Box
+    {
+        aerx.T1ShotgunAmmo=24,
+
+        Result:T1AmmoBox_Shotgun,
+        Sound:BoxOfRoundsOpenOne,
+        Time:24,
+    }
+    
+    recipe Open Box of Junk Shotgun Shells
+    {
+        T1AmmoBox_Shotgun,
+
+        Result:aerx.T1ShotgunAmmo=24,
+        Sound:BoxOfShellsOpenOne,
+        Time:24,
+    }
+
+    recipe Place Junk Revolver Rounds in Box
+    {
+        aerx.T1RevolverAmmo=30,
+
+        Result:T1AmmoBox_Revolver,
+        Sound:BoxOfRoundsOpenOne,
+        Time:30,
+    }
+
+    recipe Open Box of Junk Revolver Rounds
+    {
+        T1AmmoBox_Revolver,
+
+        Result:aerx.T1RevolverAmmo=30,
+        Sound:BoxOfShellsOpenOne,
+        Time:30,
+    }
+
+    recipe Place Junk Pistol Rounds in Box
+    {
+        aerx.T1PistolAmmo=30,
+
+        Result:T1AmmoBox_Pistol,
+        Sound:BoxOfRoundsOpenOne,
+        Time:30,
+    }
+
+    recipe Open Box of Junk Pistol Rounds
+    {
+        T1AmmoBox_Pistol,
+
+        Result:aerx.T1PistolAmmo=30,
+        Sound:BoxOfShellsOpenOne,
+        Time:30,
+    }
+
+    recipe Place Scrap Shotgun Shells in Box
+    {
+        aerx.T2AmmoShotgun=24,
+
+        Result:T2AmmoBox_Shotgun,
+        Sound:BoxOfRoundsOpenOne,
+        Time:24,
+    }
+
+    recipe Open Box of Scrap Shotgun Shells
+    {
+        T2AmmoBox_Shotgun,
+
+        Result:aerx.T2AmmoShotgun=24,
+        Sound:BoxOfShellsOpenOne,
+        Time:30,
+    }
+
+
+    recipe Place Scrap Rounds in Box
+    {
+        aerx.T2AmmoRegular=30,
+
+        Result:T2AmmoBox_Regular,
+        Sound:BoxOfRoundsOpenOne,
+        Time:30,
+    }
+
+    recipe Open Box of Scrap Rounds
+    {
+        T2AmmoBox_Regular,
+
+        Result:aerx.T2AmmoRegular=30,
+        Sound:BoxOfShellsOpenOne,
+        Time:30,
+    }
+}

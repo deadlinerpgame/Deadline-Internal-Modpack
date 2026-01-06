@@ -1,0 +1,14 @@
+module Base
+{
+    recipe Make Sturdy Stick
+    {
+        Plank,
+        keep [Recipe.GetItemTypes.Saw],
+
+        Result:WoodenStick=8,
+        Sound:Sawing,
+        Time:50.0,
+        CanBeDoneFromFloor:true,
+        Override: true,
+    }
+}

@@ -1,10 +1,17 @@
 function Recipe.OnCreate.OE_SawLogs(items, result, player)
     if player:HasTrait("profcarpenter") then
-        player:getInventory():AddItem("Base.Plank");
+        local plankCount = 1;
+
 	    local chance = player:getPerkLevel(Perks.Woodwork)*10;
 	    if ZombRand(0,100) < chance then
-	        player:getInventory():AddItem("Base.Plank");
+            plankCount = plankCount + 1;
 	    end
+
+        local square = player:getSquare();
+        for i = 1, plankCount do
+            square:AddWorldInventoryItem("Base.Plank", 0, 0, 0);
+        end
+
 	    player:getStats():setStress(player:getStats():getStress() - 0.2);
 		print(player:getStats():getStress());
 	    player:getBodyDamage():setBoredomLevel(player:getBodyDamage():getBoredomLevel() - 10);
@@ -13,6 +20,7 @@ function Recipe.OnCreate.OE_SawLogs(items, result, player)
 		print(player:getBodyDamage():getUnhappynessLevel())
     end
 end
+
 
 
 
@@ -47,5 +55,35 @@ function Recipe.OnTest.OE_IsRottenFood(item)
         return true;
     else
         return false;
+    end
+end
+
+
+function Recipe.OnCreate.ProfForager2_TestCritter(item)
+    if item:getUnhappyChange() > 0 then
+        return true;
+    else
+        return false;
+    end
+end
+
+
+function Recipe.OnCreate.ProfForager2_PrepareCritter(items, result, player, selectedItem)
+    local itemType = selectedItem:getFullType()
+    player:getInventory():Remove(result)
+    local newItem = InventoryItemFactory.CreateItem(itemType)
+    
+    if newItem then
+        newItem:setUnhappyChange(0)
+        newItem:setPoisonPower(0)
+        newItem:setPoisonDetectionLevel(0)
+
+        if selectedItem:isCooked() then
+            newItem:setCooked(true)
+        end
+        if selectedItem:isFresh() then
+            newItem:setAge(selectedItem:getAge())
+        end
+        player:getInventory():AddItem(newItem)
     end
 end

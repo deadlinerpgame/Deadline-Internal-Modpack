@@ -115,7 +115,9 @@ function HuntLineRabbit.OnZombieDead(zed)
 
 	local sq = zed:getSquare()
 	print("[SERVER] Dropping 'Base.Rabbit_Dead' at:", sq:getX(), sq:getY(), sq:getZ())
-	sq:AddWorldInventoryItem("Base.Rabbit_Dead", ZombRand(0, 1.5), ZombRand(0, 1.5), 0)
+	local item = InventoryItemFactory.CreateItem("Base.Rabbit_Dead")
+	item:setAge(0)
+	sq:AddWorldInventoryItem(item, ZombRand(0, 0), ZombRand(0, 0), 0)
 
 end
 Events.OnZombieDead.Remove(HuntLineRabbit.OnZombieDead)

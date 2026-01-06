@@ -1,0 +1,1027 @@
+module ivery
+{
+	/************************Furniture************************/
+
+	recipe Have Neelawe Sit
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCNeelaweSitting,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Have Neelawe Stand
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCNeelaweStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Have Asahi Sit
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCAsahiSitting,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Have Asahi Stand
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCAsahiStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Have Xiyang Sit
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCXiyangSitting,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Have Xiyang Stand
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCXiyangStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Have Mateo Sit
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCMateoSitting,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Have Mateo Stand
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCMateoStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Have Lucy Sit
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCLucySitting,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Have Lucy Stand
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCLucyStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Have Kailey Sit
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCKaileySitting,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Have Kailey Stand
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCKaileyStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Have James Sit
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCJamesSitting,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Have James Stand
+	{
+		keep Pencil/Pen/RedPen/BluePen,
+
+		Result:ivery_NPCJamesStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Antonia Up
+	{
+		keep Pencil,
+
+		Result:AntoniaStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Antonia Walk
+	{
+		AntoniaSitting,
+
+		Result:AntoniaStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Antonia Sit
+	{
+		AntoniaStanding,
+
+		Result:AntoniaSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Asahi Up
+	{
+		keep Pencil,
+
+		Result:AsahiStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Asahi Walk
+	{
+		AsahiSitting,
+
+		Result:AsahiStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Asahi Sit
+	{
+		AsahiStanding,
+
+		Result:AsahiSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Xiyang Up
+	{
+		keep Pencil,
+
+		Result:XiyangStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Xiyang Walk
+	{
+		XiyangSitting,
+
+		Result:XiyangStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Xiyang Sit
+	{
+		XiyangStanding,
+
+		Result:XiyangSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Neelawe Up
+	{
+		keep Pencil,
+
+		Result:NeelaweStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Neelawe Walk
+	{
+		NeelaweSitting,
+
+		Result:NeelaweStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Neelawe Sit
+	{
+		NeelaweStanding,
+
+		Result:NeelaweSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Dress Xiyang Up
+	{
+		XiyangStanding,
+
+		Result:HalloweenXiyangStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Take Xiyang's Candy
+	{
+		HalloweenXiyangStanding,
+
+		Result:XiyangStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Kermit Xiyang Up
+	{
+		HalloweenXiyangSitting,
+
+		Result:HalloweenXiyangStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Sit Kermit Xiyang Down
+	{
+		HalloweenXiyangStanding,
+
+		Result:HalloweenXiyangSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Dress Neelawe Up
+	{
+		NeelaweStanding,
+
+		Result:HalloweenNeelaweStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Take Neelawe's Candy
+	{
+		HalloweenNeelaweStanding,
+
+		Result:NeelaweStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Cat Neelawe Up
+	{
+		HalloweenNeelaweSitting,
+
+		Result:HalloweenNeelaweStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Sit Cat Neelawe Down
+	{
+		HalloweenNeelaweStanding,
+
+		Result:HalloweenNeelaweSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Dress Asahi Up
+	{
+		AsahiStanding,
+
+		Result:HalloweenAsahiStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Take Asahi's Candy
+	{
+		HalloweenAsahiStanding,
+
+		Result:AsahiStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Princess Asahi Up
+	{
+		HalloweenAsahiSitting,
+
+		Result:HalloweenAsahiStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Sit Princess Asahi Down
+	{
+		HalloweenAsahiStanding,
+
+		Result:HalloweenAsahiSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Alexander Up
+	{
+		keep Pencil,
+
+		Result:AlexanderStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Alexander Walk
+	{
+		AlexanderSitting,
+
+		Result:AlexanderStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Alexander Sit
+	{
+		AlexanderStanding,
+
+		Result:AlexanderSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Finley Up
+	{
+		keep Pencil,
+
+		Result:FinleyStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Finley Walk
+	{
+		FinleySitting,
+
+		Result:FinleyStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Finley Sit
+	{
+		FinleyStanding,
+
+		Result:FinleySitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Sammy Up
+	{
+		keep Pencil,
+
+		Result:SammyStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Sammy Walk
+	{
+		SammySitting,
+
+		Result:SammyStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Sammy Sit
+	{
+		SammyStanding,
+
+		Result:SammySitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Madison Up
+	{
+		keep Pencil,
+
+		Result:MadisonStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Madison Walk
+	{
+		MadisonSitting,
+
+		Result:MadisonStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Madison Sit
+	{
+		MadisonStanding,
+
+		Result:MadisonSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Matthew Up
+	{
+		keep Pencil,
+
+		Result:MatthewStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Matthew Walk
+	{
+		MatthewSitting,
+
+		Result:MatthewStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Matthew Sit
+	{
+		MatthewStanding,
+
+		Result:MatthewSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Mateo Up
+	{
+		keep Pencil,
+
+		Result:MateoStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Mateo Walk
+	{
+		MateoSitting,
+
+		Result:MateoStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Mateo Sit
+	{
+		MateoStanding,
+
+		Result:MateoSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Capped Mateo Walk
+	{
+		MateoCapSitting,
+
+		Result:MateoCapStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Capped Mateo Sit
+	{
+		MateoCapStanding,
+
+		Result:MateoCapSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Give Mateo His Cap
+	{
+		MateoStanding,
+		Hat_BaseballCapArmy,
+
+		Result:MateoCapStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Harper Up
+	{
+		keep Pencil,
+
+		Result:HarperStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Harper Walk
+	{
+		HarperSitting,
+
+		Result:HarperStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Harper Sit
+	{
+		HarperStanding,
+
+		Result:HarperSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake James Up
+	{
+		keep Pencil,
+
+		Result:JamesStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help James Walk
+	{
+		JamesSitting,
+
+		Result:JamesStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help James Sit
+	{
+		JamesStanding,
+
+		Result:JamesSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Charles Up
+	{
+		keep Pencil,
+
+		Result:CharlesStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Charles Walk
+	{
+		CharlesSitting,
+
+		Result:CharlesStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Charles Sit
+	{
+		CharlesStanding,
+
+		Result:CharlesSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Damien Up
+	{
+		keep Pencil,
+
+		Result:DamienStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Damien Walk
+	{
+		DamienSitting,
+
+		Result:DamienStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Damien Sit
+	{
+		DamienStanding,
+
+		Result:DamienSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Yuna Up
+	{
+		keep Pencil,
+
+		Result:YunaStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Yuna Walk
+	{
+		YunaSitting,
+
+		Result:YunaStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Yuna Sit
+	{
+		YunaStanding,
+
+		Result:YunaSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Kora Up
+	{
+		keep Pencil,
+
+		Result:KoraStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Kora Walk
+	{
+		KoraSitting,
+
+		Result:KoraStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Kora Sit
+	{
+		KoraStanding,
+
+		Result:KoraSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Brie Up
+	{
+		keep Pencil,
+
+		Result:BrieStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Brie Walk
+	{
+		BrieSitting,
+
+		Result:BrieStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Brie Sit
+	{
+		BrieStanding,
+
+		Result:BrieSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Panna Up
+	{
+		keep Pencil,
+
+		Result:PannaStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Panna Walk
+	{
+		PannaSitting,
+
+		Result:PannaStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Panna Sit
+	{
+		PannaStanding,
+
+		Result:PannaSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Cammie Up
+	{
+		keep Pencil,
+
+		Result:CammieStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Cammie Walk
+	{
+		CammieSitting,
+
+		Result:CammieStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Cammie Sit
+	{
+		CammieStanding,
+
+		Result:CammieSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Kabir Up
+	{
+		keep Pencil,
+
+		Result:KabirStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Kabir Walk
+	{
+		KabirSitting,
+
+		Result:KabirStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Kabir Sit
+	{
+		KabirStanding,
+
+		Result:KabirSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Jessica Walk
+	{
+		JessicaSitting,
+
+		Result:JessicaStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Jessica Sit
+	{
+		JessicaStanding,
+
+		Result:JessicaSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Jessica Up
+	{
+		keep Pencil,
+
+		Result:JessicaStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Erica Walk
+	{
+		EricaSitting,
+
+		Result:EricaStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Erica Sit
+	{
+		EricaStanding,
+
+		Result:EricaSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Erica Up
+	{
+		keep Pencil,
+
+		Result:EricaStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+	recipe Help Hana Walk
+	{
+		HanaSitting,
+
+		Result:HanaStanding,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Help Hana Sit
+	{
+		HanaStanding,
+
+		Result:HanaSitting,
+		Time:1.0,
+		Override:true,
+		Category:NPCs,
+	}
+
+	recipe Wake Hana Up
+	{
+		keep Pencil,
+
+		Result:HanaStanding,
+		Time:1.0,
+		Override:true,
+		NeedToBeLearn:true,
+		Category:NPCs,
+	}
+
+}
+

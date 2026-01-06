@@ -274,6 +274,115 @@ function Recipe.OnCreate.TransferMaceheadToLongMace(items, result, player)
     end
 end
 
+function AdjustWeaponStatsFromMWLevel(item, level, player)
+	if not item then return end;
+	if not level or level < SandboxVars.CraftLine.BlacksmithModifierMinLevel then return end;
+
+	if not instanceof(item, "HandWeapon") then
+		print("[Craftline Blacksmithing] AdjustWeaponStatsFromMWLevel called on nonhandweapon item: " .. item:getName());
+		return;
+	end
+
+    if item:isRanged() and SandboxVars.CraftLine.BlacksmithStatMeleeOnly then return end;
+
+    local statModPerLevel = (SandboxVars.CraftLine.BlacksmithStatModPerLevel / 100) or 0.1;
+    print("Stat mod per level is " .. tostring(statModPerLevel));
+
+    local levelDiff = (level - SandboxVars.CraftLine.BlacksmithModifierMinLevel) + 1; -- So level 8 gets benefits.
+    print("Level diff is " .. tostring(levelDiff));
+
+    local totalModifier = statModPerLevel * levelDiff;
+    print("Total modifier" .. tostring(totalModifier));
+
+    if SandboxVars.CraftLine.BlacksmithAllowModifyWeight then
+        local currentWeight = item:getWeight();
+        local newWeight = Math.ceil(currentWeight * (1 - totalModifier));
+        print("AdjustWeaponStat - Weight: " .. tostring(newWeight));
+        item:setWeight(newWeight);
+    end
+
+    if SandboxVars.CraftLine.BlacksmithAllowModifyMinDamage then
+        local minDamage = item:getMinDamage();
+        local newMinDmg = Math.ceil(minDamage * (1 + totalModifier));
+        print("AdjustWeaponStat - MinDmg: " .. tostring(newMinDmg));
+        item:setMinDamage(newMinDmg);
+    end
+
+    if SandboxVars.CraftLine.BlacksmithAllowModifyMaxDamage then
+        local maxDamage = item:getMaxDamage();
+        local newMaxDmg = Math.ceil(maxDamage * (1 + totalModifier));
+        print("AdjustWeaponStat - MaxDmg: " .. tostring(newMaxDmg));
+        item:setMinDamage(newMaxDmg);
+    end
+
+    if SandboxVars.CraftLine.BlacksmithAllowModifyChanceOneIn then
+        local lowerChance = item:getConditionLowerChance();
+        local newChance = Math.ceil(lowerChance * (1 + totalModifier));
+        print("AdjustWeaponStat - ChanceOneIn: " .. tostring(newChance));
+        item:setConditionLowerChance(newChance);
+    end
+
+    if SandboxVars.CraftLine.BlacksmithAllowModifyMaxCondition then
+        local maxCondition = item:getConditionMax();
+        local newChance = Math.ceil(maxCondition * (1 + totalModifier));
+        print("AdjustWeaponStat - Max Condition: " .. tostring(newChance));
+        item:setConditionMax(newChance);
+        item:setCondition(newChance);
+    end
+
+    if SandboxVars.CraftLine.BlacksmithAllowModifyEnduranceMod then
+        local enduranceMod = item:getEnduranceMod();
+        local newChance = Math.ceil(enduranceMod * (1 - totalModifier));
+        print("AdjustWeaponStat - EnduranceMod: " .. tostring(newChance));
+        item:setEnduranceMod(newChance);
+    end
+
+    if SandboxVars.CraftLine.BlacksmithAllowCritChance then
+        local critChance = item:getCriticalChance();
+        local newChance = Math.ceil(critChance * (1 + totalModifier));
+        print("AdjustWeaponStat - Crit Chance: " .. tostring(newChance));
+        item:setCriticalChance(newChance);
+    end
+
+	item:getModData()["CraftLine_ForgedBy"] = player:getDescriptor():getForename();
+end
+
+
+local ALLOY_BUFFS = {
+    ["Steel"] = 
+    {
+        conditionMax = 1.25;
+    }
+
+};
+
+function AdjustDurabilityFromAlloy(result, alloyName)
+    if not result then return end;
+
+    if not alloyName then return end;
+
+    local matchingAlloy = nil;
+    for buffAlloyName, buffValues in pairs(ALLOY_BUFFS) do
+        if string.lower(alloyName) == string.lower(buffAlloyName) then
+            matchingAlloy = buffValues;
+        end
+    end
+
+    if not matchingAlloy then
+        print("[AdjustDurabilityFromAlloy] No matching alloy for " .. alloyName .. " found.");
+        return;
+    end
+
+    if matchingAlloy.conditionMax then
+        local currentMaxCondition = result:getConditionMax();
+        local newMax = Math.floor(currentMaxCondition * matchingAlloy.conditionMax);
+        result:setConditionMax(newMax);
+        result:setCondition(newMax);
+
+        print("Adjusted item " .. result:getDisplayName() .. " durability from " .. tostring(currentMaxCondition) .. " to " .. tostring(newMax) .. " because of alloy.");
+    end
+end
+
 
 
 function Recipe.OnCreate.TransferCBladeToCSword(items, result, player)
@@ -1374,5 +1483,44 @@ function Recipe.OnCreate.GiveSixteenIronEightZEightN(items, result, player)
         player:getInventory():AddItem("aerx.NickelFragments");
         player:getInventory():AddItem("aerx.NickelFragments");
         player:getInventory():AddItem("aerx.NickelFragments");
+    end
+end
+
+function Recipe.OnCreate.ForgeMetalWeaponWithAlloy(items, result, player)
+    print("Recipe ForgeMetalWeaponWithAlloy");
+    local alloyFullStr = nil;
+    local alloyName = nil;
+
+    local madeFromSteel = false;
+
+    -- Iterate through the recipe items and find one with an alloy name.
+    for i = 0, items:size() - 1 do
+        local item = items:get(i);
+
+        print("Checking item " .. item:getName());
+
+        if item and item:getModData()["AlloyType"] then
+            print("Has alloy type");
+            alloyFullStr = item:getModData()["AlloyType"];
+            alloyName = alloyFullStr:gsub("^Made from%s*", ""):gsub("%s*Ingot$", "");
+            if alloyName == "Steel" then
+                madeFromSteel = true;
+            end
+            break;
+        end
+    end
+
+    if result then
+        print("Setting result data...");
+        result:getModData()["AlloyType"] = alloyFullStr;
+        result:setName(string.format("%s %s", alloyName, result:getName()));
+    end
+
+    if instanceof(result, "HandWeapon") then
+        AdjustWeaponStatsFromMWLevel(result, player:getPerkLevel(Perks.MetalWelding), player);
+    end
+
+    if madeFromSteel and instanceof(result, "HandWeapon") or instanceof(result, "Clothing") then
+        AdjustDurabilityFromAlloy(result, alloyName);
     end
 end
