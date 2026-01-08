@@ -126,7 +126,7 @@ local function horseContextMenu(player, context, items)
                         context:addOption("Unclaim", player, unclaimHorse, item)
                     end
 
-                    if player:getAccessLevel() == "admin" or isDebugEnabled() then
+                    if player:getAccessLevel() == "Admin" or isDebugEnabled() then
                         context:addOption("ADMIN Mount", item, doMount, player)
                         context:addOption("ADMIN Unclaim", player, unclaimHorseAdmin, item)
                     end
