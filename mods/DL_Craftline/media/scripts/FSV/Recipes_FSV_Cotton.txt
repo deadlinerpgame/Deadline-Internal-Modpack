@@ -1,0 +1,119 @@
+module aerx {
+  imports {
+      Base
+ }
+
+    recipe Make Vintage Great Coat
+    {
+        LeatherStrips = 10,
+        Thread = 5,
+	Kevlar = 2,
+	aerx.FabricRoll_Cotton = 3,
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,   
+        Dyepack = 4,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Cotton_LongestCoat_VintageMil,
+        Time: 480.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Cotton Frilled Blouse
+    {
+        aerx.FabricRoll_Cotton = 3,
+        Thread = 4,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Cotton_Blouse,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 8,
+    }
+
+    recipe Modify Blouse to V-Neck
+    {
+        Base.Cotton_Blouse,
+        Thread = 2,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Cotton_Blouse_V,
+        Time: 60.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Crop V-Neck Blouse
+    {
+        Base.Cotton_Blouse_V,
+        keep Scissors,
+
+        Result: Base.Cotton_Blouse_V_Cropped,
+        Time: 30.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Further Crop Blouse
+    {
+        Base.Cotton_Blouse_V_Cropped,
+        keep Scissors,
+
+        Result: Base.Cotton_Blouse_V_Cropped_Tiny,
+        Time: 30.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+
+
+
+    recipe Make Lumberjack Shirt
+    {
+        aerx.FabricRoll_Cotton = 3,
+        Thread = 3,
+	Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Lumberjack_Shirt_10,
+        Time: 280.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Remove Sleeves From Lumberjack Shirt
+    {
+        Base.Lumberjack_Shirt_10,
+        Thread = 2,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Lumberjack_Sleeveless_Shirt_10,
+        Time: 30.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+
+    recipe Crop Lumberjack Shirt
+    {
+        Base.Lumberjack_Shirt_10,
+        keep Scissors,
+
+        Result: Base.Lumberjack_Cropped_Shirt_10,
+        Time: 30.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+
+}

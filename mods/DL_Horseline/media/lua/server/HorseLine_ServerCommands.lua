@@ -37,8 +37,16 @@ function DeadlineHorseServerCommands.DoSyncHorseData(args)
         for k, v in pairs(args.data) do
             md[k] = v
         end
-        item:transmitModData()
-        wi:transmitCompleteItemToClients()
+
+        local xoff = wi:getWorldPosX() - square:getX()
+        local yoff = wi:getWorldPosY() - square:getY()
+        local zoff = wi:getWorldPosZ() - square:getZ()
+        square:transmitRemoveItemFromSquare(wi)
+        square:removeWorldObject(wi)
+        square:AddWorldInventoryItem(item, xoff, yoff, zoff)
+
+        --wi:transmitCompleteItemToClients()
+        sendServerCommand('DeadlineHorse', 'SyncHorseModData', args)
 
 end
 

@@ -1,0 +1,250 @@
+module aerx {
+  imports {
+      Base
+ }
+
+    recipe Make Long Trench Coat
+    {
+        aerx.FabricRoll_Cotton = 5,
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=2,
+        Thread = 5,
+        Deadline.Kevlar = 2,
+        Dyepack = 4,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TrenchCoat,
+        Time: 360.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+
+    recipe Make Bathrobe
+    {
+        aerx.FabricRoll_Cotton = 4,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.LongCoat_Bathrobe,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+
+    recipe Make Slim Suit Jacket
+    {
+        aerx.FabricRoll_Cotton = 4,
+ 	Deadline.Kevlar = 1,
+        Thread = 4,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Slim_SuitJacket,
+        Time: 280.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Slim Suit Jacket White
+    {
+        aerx.FabricRoll_Cotton = 4,
+ 	Deadline.Kevlar = 1,
+        Thread = 4,
+        WhiteDye = 1,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Slim_SuitJacket_White,
+        Time: 280.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+
+    recipe Make Bulky Suit Jacket
+    {
+        aerx.FabricRoll_Cotton = 5,
+ 	Deadline.Kevlar = 1,
+        Thread = 4,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Suit_Jacket_2B,
+        Time: 300.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Bulky Suit Jacket White
+    {
+        aerx.FabricRoll_Cotton = 5,
+ 	Deadline.Kevlar = 1,
+        Thread = 4,
+        WhiteDye = 1,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Suit_Jacket_White_2B,
+        Time: 300.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Bulky Suit Jacket Pinstripe
+    {
+        aerx.FabricRoll_Cotton = 5,
+ 	Deadline.Kevlar = 1,
+        Thread = 4,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Suit_Jacket_Pinstripe,
+        Time: 300.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Bulky Suit Jacket Plaid
+    {
+        aerx.FabricRoll_Cotton = 5,
+ 	Deadline.Kevlar = 1,
+        Thread = 4,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Plaid_Suit_Jacket_2B,
+        Time: 300.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+
+    recipe Make Suit Pants
+    {
+        aerx.FabricRoll_Cotton = 5,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Suit_Pants,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 8,
+    }
+
+    recipe Make Suit Pants White
+    {
+        aerx.FabricRoll_Cotton = 3,
+ 	Deadline.Kevlar = 1,
+        Thread = 3,
+        WhiteDye = 1,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Suit_Pants_White,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Suit Pants Pinstripe
+    {
+        aerx.FabricRoll_Cotton = 3,
+ 	Deadline.Kevlar = 1,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Suit_Pants_Pinstripe,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 8,
+    }
+
+    recipe Make Suit Pants Plaid
+    {
+        aerx.FabricRoll_Cotton = 3,
+ 	Deadline.Kevlar = 1,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Plaid_Suit_Pants,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+
+    recipe Make Armoured Suit Jacket
+    {
+        aerx.FabricRoll_Cotton = 5,
+        Thread = 5,
+        Deadline.Kevlar = 2,
+        LeatherStrips = 4,
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1, 
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.JW_Suit_Jacket,
+        Time: 400.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Armoured Suit Pants
+    {
+        aerx.FabricRoll_Cotton = 4,
+        Thread = 4,
+        Deadline.Kevlar = 2,
+        LeatherStrips = 3,
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1, 
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.JW_Suit_Pants,
+        Time: 320.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+
+    recipe Make Suspenders
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1, 
+        Thread = 4,
+        Dyepack = 1,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.Suspender,
+        Time: 60.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+}

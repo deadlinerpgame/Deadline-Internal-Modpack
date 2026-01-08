@@ -1,0 +1,679 @@
+module aerx {
+  imports {
+      Base
+ }
+
+    recipe Make Tanned Leather Jacket
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 3,
+        LeatherStrips = 5,
+        Thread = 4,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+        Deadline.Kevlar = 1,
+
+        Result: Base.TannedLeather_Jacket,
+        Time: 280.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Crop Tanned Leather Jacket
+    {
+        Base.TannedLeather_Jacket,
+        Thread = 2,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TannedLeather_Jacket_Cropped,
+        Time: 60.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Make Long Tanned Leather Jacket
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 4,
+        LeatherStrips = 6,
+        Thread = 4,
+        keep Needle,
+        keep Scissors,
+        Deadline.Kevlar = 1,
+
+        Result: Base.TannedLeather_Jacket_MidLength,
+        Time: 320.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+
+
+
+
+    recipe Make Tanned Leather Great Coat
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 6,
+        LeatherStrips = 8,
+        Thread = 5,
+        Deadline.Kevlar = 2,
+        Dyepack = 4,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TannedLeather_LongestCoat,
+        Time: 420.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Shorten Great Coat to Long Coat
+    {
+        Base.TannedLeather_LongestCoat,
+        Thread = 2,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TannedLeather_LongerCoat,
+        Time: 60.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Shorten Long Coat to Coat
+    {
+        Base.TannedLeather_LongerCoat,
+        Thread = 2,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TannedLeather_LongCoat,
+        Time: 60.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Make Tanned Leather Trench Coat Long
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 5,
+        LeatherStrips = 7,
+        Thread = 5,
+        Dyepack = 4,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+        Deadline.Kevlar = 2,
+
+        Result: Base.TannedLeather_TrenchCoat_Long_O,
+        Time: 380.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Shorten Tanned Leather Trench Coat
+    {
+        Base.TannedLeather_TrenchCoat_Long_O,
+        Thread = 2,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TannedLeather_TrenchCoat_Short_O,
+        Time: 60.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+
+
+    recipe Make Tanned Leather Great Coat Winter
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan = 6,
+        aerx.SheepLeather_Fur_Tan = 1,
+        LeatherStrips = 10,
+        Thread = 6,
+        Deadline.Kevlar = 2,
+        Dyepack = 4,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TannedLeather_LongestCoat_Winter,
+        Time: 540.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Shorten Winter Great Coat to Long
+    {
+        Base.TannedLeather_LongestCoat_Winter,
+        Thread = 2,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TannedLeather_LongerCoat_Winter,
+        Time: 60.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+
+
+
+
+    recipe Make Tanned Leather Corset
+    {
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan = 2,
+        LeatherStrips = 4,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.TannedLeather_Corset,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Tanned Leather Corset Underbust
+    {
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan = 1,
+        LeatherStrips = 3,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.TannedLeather_Corset_UB,
+        Time: 150.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Tanned Leather Corset with Straps
+    {
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan = 2,
+        LeatherStrips = 5,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.TannedLeather_Corset_Strap,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Tanned Leather Corset Underbust with Straps
+    {
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan = 1,
+        LeatherStrips = 4,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.TannedLeather_Corset_UB_Strap,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+
+
+
+    recipe Make Tanned Leather Top
+    {
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan = 2,
+        LeatherStrips = 3,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.TannedLeather_Top,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Tanned Leather Top Skimpy
+    {
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan = 2,
+        LeatherStrips = 2,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.TannedLeather_TopSkimpy,
+        Time: 90.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Crop Tanned Leather Top
+    {
+        Base.TannedLeather_Top,
+        keep Scissors,
+
+        Result: Base.TannedLeather_CropTop,
+        Time: 30.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Make Tanned Leather Bandeau
+    {
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan = 1,
+        LeatherStrips = 2,
+        Thread = 2,
+        Dyepack = 1,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.TannedLeather_Bandeau,
+        Time: 60.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Crop Tanned Leather Bandeau
+    {
+        Base.TannedLeather_Bandeau,
+        keep Scissors,
+
+        Result: Base.TannedLeather_Bandeau_Tiny,
+        Time: 20.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Make Tanned Leather Waistcoat
+    {
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan = 3,
+        LeatherStrips = 4,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.TannedLeather_WaistCoat,
+        Time: 150.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+
+
+
+
+
+    recipe Make Tanned Leather Pants
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+        LeatherStrips = 4,
+        Thread = 4,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TMesh_TannedLeather_Pants,
+        Time: 240.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Cut Tanned Leather Pants to Long Shorts
+    {
+        Base.TMesh_TannedLeather_Pants,
+        keep Scissors,
+
+        Result: Base.TMesh_TannedLeather_LongShorts,
+        Time: 30.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Cut Long Shorts to Shorts
+    {
+        Base.TMesh_TannedLeather_LongShorts,
+        keep Scissors,
+
+        Result: Base.TMesh_TannedLeather_Shorts,
+        Time: 30.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Cut Shorts to Hot Pants
+    {
+        Base.TMesh_TannedLeather_Shorts,
+        keep Scissors,
+
+        Result: Base.TMesh_TannedLeather_ShortShorts,
+        Time: 30.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Cut Hot Pants to Mini Pants
+    {
+        Base.TMesh_TannedLeather_ShortShorts,
+        keep Scissors,
+
+        Result: Base.TMesh_TannedLeather_ShorterShorts,
+        Time: 30.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+
+
+    recipe Make Tanned Leather Skinny Pants
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+        LeatherStrips = 3,
+        Thread = 4,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TSkin_TannedLeather_Pants_High,
+        Time: 240.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 8,
+    }
+
+
+
+    recipe Make Tanned Leather Leotard
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+        LeatherStrips = 4,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.TannedLeather_Leotard,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 8,
+    }
+
+    recipe Make Tanned Leather Underbust Bodysuit
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+        LeatherStrips = 3,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.TannedLeather_LeotardUB,
+        Time: 150.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 8,
+    }
+
+
+
+
+
+    recipe Make Tanned Leather Mini Skirt
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+        LeatherStrips = 3,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TannedLeather_Skirt_Mesh_HW,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 8,
+    }
+
+    recipe Make Tanned Leather Frilled Skirt
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+        LeatherStrips = 4,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TannedLeather_Skirt_MeshFrilled_HW,
+        Time: 150.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 8,
+    }
+
+    recipe Make Tanned Leather Micro Skirt
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+        LeatherStrips = 2,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TannedLeather_SkirtMicro_Mesh,
+        Time: 60.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 8,
+    }
+
+    recipe Add Frills to Micro Skirt
+    {
+        Base.TannedLeather_SkirtMicro_Mesh,
+        LeatherStrips = 1,
+        Thread = 1,
+        keep Needle,
+
+        Result: Base.TannedLeather_SkirtMicro_MeshFrilled,
+        Time: 45.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+
+
+    recipe Make Tanned Leather Long Skirt
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 3,
+        LeatherStrips = 4,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.TannedLeather_Long_Skirt,
+        Time: 150.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Shorten Long Skirt
+    {
+        Base.TannedLeather_Long_Skirt,
+        keep Scissors,
+
+        Result: Base.TannedLeather_Skirt_Mid,
+        Time: 30.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Shorten Mid Skirt
+    {
+        Base.TannedLeather_Skirt_Mid,
+        keep Scissors,
+
+        Result: Base.TannedLeather_Skirt_Short,
+        Time: 30.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Shorten Short Skirt
+    {
+        Base.TannedLeather_Skirt_Short,
+        keep Scissors,
+
+        Result: Base.TannedLeather_Skirt_Shorter,
+        Time: 30.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Make Tanned Leather Loincloth
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+        LeatherStrips = 2,
+        Thread = 1,
+        keep Needle,
+
+        Result: Base.TannedLeather_Loincloth,
+        Time: 60.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+
+
+
+
+    recipe Make Tanned Leather Fauld
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 3,
+        LeatherStrips = 4,
+        Thread = 3,
+        Deadline.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.Armour_Faulds,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Shorten Fauld
+    {
+        Base.Armour_Faulds,
+        Thread = 1,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.Armour_Faulds_Short,
+        Time: 45.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Make Tanned Leather Arm Guards
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+        LeatherStrips = 3,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.Armour_Armguards_R,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Make Tanned Leather Arm Guards Long
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+        LeatherStrips = 4,
+        Thread = 3,
+        Deadline.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.Armour_ArmguardsLong_R,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Tanned Leather Leg Sleeves
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+        LeatherStrips = 3,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.TannedLeather_SleevesLeg_L,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Make Tanned Leather Arm Sleeves
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+        LeatherStrips = 2,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.TannedLeather_Sleeves_L,
+        Time: 90.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+
+
+    recipe Make Tanned Leather Pouch Strap
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+        LeatherStrips = 4,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.Armour_PouchStrap,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 8,
+    }
+
+    recipe Make Flat Cowboy Hat
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+        LeatherStrips = 3,
+        Thread = 2,
+        Dyepack = 1,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.Hat_Cowboy_Flat,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 8,
+    }
+
+
+}

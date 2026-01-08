@@ -1,0 +1,707 @@
+module aerx {
+  imports {
+      Base
+ }
+    recipe Make Fine Heeled Boots
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 3,
+        LeatherStrips = 4,
+        Thread = 3,
+	DeadLine.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Boots_HF_New,
+        Time: 240.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Extend Heeled Boots to Knee-high
+    {
+        Base.FF_Boots_HF_New,
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+        LeatherStrips = 4,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_HF_New_Long,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Extend Heeled Boots to Above Knee
+    {
+        Base.FF_Boots_HF_New_Long,
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+        LeatherStrips = 3,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_HF_New_Longer,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Extend Heeled Boots to Thigh-high
+    {
+        Base.FF_Boots_HF_New_Longer,
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+        LeatherStrips = 4,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_HF_New_Longest,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+
+
+
+    recipe Make Fine Leather Boots
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+        LeatherStrips = 5,
+        Thread = 3,
+	DeadLine.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Boots_Leather,
+        Time: 240.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Shorten Fine Leather Boots
+    {
+        Base.FF_Boots_Leather,
+        keep Scissors,
+
+        Result: Base.FF_Boots_Leather_Short,
+        Time: 30.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 6,
+    }
+
+    recipe Make Fine Heeled Platform Boots
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 3,
+	aerx.FabricRoll_Cotton = 2,
+        LeatherStrips = 6,
+        Thread = 3,
+	DeadLine.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Boots_HighHeels,
+        Time: 280.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+
+
+    recipe Make Cowboy Boots
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+	DeadLine.Kevlar = 1,
+        LeatherStrips = 5,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Boots_Cowboy_Plain,
+        Time: 280.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Ornate Cowboy Boots
+    {
+        Base.FF_Boots_Cowboy_Plain,
+        LeatherStrips = 4,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Boots_Cowboy,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+
+
+    recipe Make Fine Ankle Boots
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+	aerx.FabricRoll_Cotton = 2,
+	DeadLine.Kevlar = 1,
+        LeatherStrips = 4,
+        Thread = 3,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Shoe_Boots_Ankle,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Fine Ankle Boots Platform
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+	aerx.FabricRoll_Cotton = 3,
+        LeatherStrips = 5,
+        Thread = 3,
+	DeadLine.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Shoe_Boots_Ankle_Platform,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+
+    recipe Make Fine Common Shoes High Top
+    {
+        aerx.FabricRoll_Cotton = 2,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.FF_Boots_Common,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+
+
+
+
+    recipe Make Fine Winter Boots
+    {
+        aerx.SheepLeather_Fur_Tan = 1,
+        LeatherStrips = 3,
+        Thread = 3,
+	DeadLine.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Boots_UGG,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Fine Winter Boots Low Ankle Heeled
+    {
+        aerx.SheepLeather_Fur_Tan = 1,
+        aerx.FabricRoll_Cotton = 2,
+        LeatherStrips = 2,
+        Thread = 2,
+	DeadLine.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Boots_UGG_DwarfHeel,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Fine Winter Boots High Top Heeled
+    {
+        aerx.SheepLeather_Fur_Tan = 1,
+        aerx.FabricRoll_Cotton = 2,
+        LeatherStrips = 3,
+        Thread = 3,
+    DeadLine.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Boots_UGG_Heel,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Extend Winter Boots to Knee-high
+    {
+        Base.FF_Boots_UGG,
+        aerx.SheepLeather_Fur_Tan = 1,
+        aerx.FabricRoll_Cotton = 2,
+        LeatherStrips = 2,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_UGG_Kneehigh,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Extend Winter Boots to Knee-high Heeled
+    {
+        Base.FF_Boots_UGG_Heel,
+        aerx.SheepLeather_Fur_Tan = 1,
+        aerx.FabricRoll_Cotton = 2,
+        LeatherStrips = 2,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_UGG_KneehighHeel,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Extend Winter Boots to Thigh-high
+    {
+        Base.FF_Boots_UGG_Kneehigh,
+        aerx.SheepLeather_Fur_Tan = 1,
+        aerx.FabricRoll_Cotton = 2,
+        LeatherStrips = 3,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_UGG_Thighhigh,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Extend Winter Boots to Thigh-high Heeled
+    {
+        Base.FF_Boots_UGG_KneehighHeel,
+        aerx.SheepLeather_Fur_Tan = 1,
+        aerx.FabricRoll_Cotton = 2,
+        LeatherStrips = 3,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_UGG_ThighhighHeel,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+
+
+
+    recipe Make Fine Platform Boots Ankle
+    {
+        LeatherStrips = 5,
+        Thread = 3,
+        aerx.FabricRoll_Cotton = 4,
+     DeadLine.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Boots_Platform_Ankle,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Fine Platform Boots Low Ankle
+    {
+        LeatherStrips = 4,
+        Thread = 3,
+        aerx.FabricRoll_Cotton = 4,
+    DeadLine.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Boots_Platform_AnkleLow,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Extend Platform Boots to Knee-high
+    {
+        Base.FF_Boots_Platform_Ankle,
+        LeatherStrips = 4,
+        aerx.FabricRoll_Cotton = 2,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_Platform_Kneehigh,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Extend Platform Boots to Above Knee
+    {
+        Base.FF_Boots_Platform_Kneehigh,
+        LeatherStrips = 3,
+        aerx.FabricRoll_Cotton = 2,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_Platform_Kneehigher,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Extend Platform Boots to Thigh-high
+    {
+        Base.FF_Boots_Platform_Kneehigher,
+        LeatherStrips = 4,
+        aerx.FabricRoll_Cotton = 2,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_Platform_Thighhigh,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+
+
+
+
+    recipe Make Fine Platform Punk Boots Knee-high
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+	aerx.FabricRoll_Cotton = 3,
+        LeatherStrips = 6,
+        Thread = 3,
+	DeadLine.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Boots_PlatformPunk_Kneehigh,
+        Time: 240.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Extend Platform Punk Boots to Above Knee
+    {
+        Base.FF_Boots_PlatformPunk_Kneehigh,
+        LeatherStrips = 3,
+        Thread = 2,
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+	aerx.FabricRoll_Cotton = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_PlatformPunk_Kneehigher,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Extend Platform Punk Boots to Thigh-high
+    {
+        Base.FF_Boots_PlatformPunk_Kneehigher,
+        LeatherStrips = 4,
+        Thread = 2,
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+	aerx.FabricRoll_Cotton = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_PlatformPunk_Thighhigh,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+
+    recipe Make Pointy Boots Snakeskin Low Ankle
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+	aerx.FabricRoll_Cotton = 2,
+        LeatherStrips = 4,
+        Thread = 3,
+	DeadLine.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Boots_Pointy_AnkleLow,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Extend Pointy Boots Snakeskin to Ankle
+    {
+        Base.FF_Boots_Pointy_AnkleLow,
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+	aerx.FabricRoll_Cotton = 2,
+        LeatherStrips = 2,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_Pointy_Ankle,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Extend Pointy Boots Snakeskin to Knee-high
+    {
+        Base.FF_Boots_Pointy_Ankle,
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+	aerx.FabricRoll_Cotton = 2,
+        LeatherStrips = 3,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_Pointy_Kneehigh,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+
+    recipe Make Pointy Boots Skull Low Ankle
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+	aerx.FabricRoll_Cotton = 2,
+        LeatherStrips = 4,
+        Thread = 3,
+	DeadLine.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Boots_PointySkull_AnkleLow,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Extend Pointy Boots Skull to Knee-high
+    {
+        Base.FF_Boots_PointySkull_AnkleLow,
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+	aerx.FabricRoll_Cotton = 2,
+        LeatherStrips = 4,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_Boots_PointySkull_Kneehigh,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+
+
+
+    recipe Make Fine Leather Boots Low Ankle Heeled
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 3,
+	aerx.FabricRoll_Cotton = 1,
+        LeatherStrips = 4,
+        Thread = 3,
+	DeadLine.Kevlar = 1,
+        keep Needle,
+
+        Result: Base.FF_BootsRE_Leather_DwarfHeel,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Make Fine Leather Boots High Top Heeled
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 3,
+	aerx.FabricRoll_Cotton = 1,
+        LeatherStrips = 5,
+        Thread = 3,
+	DeadLine.Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_BootsRE_Leather_Heel,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 10,
+    }
+
+    recipe Extend Leather Boots to Knee-high Heeled
+    {
+        Base.FF_BootsRE_Leather_Heel,
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+	aerx.FabricRoll_Cotton = 1,
+        LeatherStrips = 4,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_BootsRE_Leather_KneehighHeel,
+        Time: 180.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Extend Leather Boots to Thigh-high Heeled
+    {
+        Base.FF_BootsRE_Leather_KneehighHeel,
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 1,
+	aerx.FabricRoll_Cotton = 1,
+        LeatherStrips = 5,
+        Thread = 2,
+        keep Needle,
+
+        Result: Base.FF_BootsRE_Leather_ThighhighHeel,
+        Time: 200.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+
+
+
+
+
+    recipe Make Fine Common Shoes
+    {
+        aerx.FabricRoll_Cotton = 2,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.FF_Shoe_Common,
+        Time: 90.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Make Fine Sneakers
+    {
+        aerx.FabricRoll_Cotton = 2,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.FF_Shoe_Trainers,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Make Fine Sneakers Black
+    {
+        aerx.FabricRoll_Cotton = 2,
+        Thread = 2,
+        BlackDye = 1,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.FF_Shoe_TrainersBlack,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Make Fine Sneakers White
+    {
+        aerx.FabricRoll_Cotton = 2,
+        Thread = 2,
+        WhiteDye = 1,
+        keep Needle,
+        keep Scissors,
+
+        Result: Base.FF_Shoe_TrainersWhite,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Make Fine Mary Jane Shoes
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+        aerx.FabricRoll_Cotton = 1,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Shoe_Women,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Make Fine Mary Jane Shoes Platform
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+        aerx.FabricRoll_Cotton = 2,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Shoe_Women_Platform,
+        Time: 150.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Make Fine Women's Shoes
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+        aerx.FabricRoll_Cotton = 1,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Shoe_Women_2,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+    recipe Make Fine Moccasins
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
+        aerx.FabricRoll_Cotton = 1,
+        Thread = 2,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
+        keep Needle,
+
+        Result: Base.FF_Shoe_Moccasin,
+        Time: 120.0,
+        Category: Tailoring,
+        SkillRequired: Tailoring = 9,
+    }
+
+
+}

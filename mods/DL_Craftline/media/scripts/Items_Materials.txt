@@ -34,6 +34,29 @@ module aerx {
 		WorldStaticModel = AluminumScrap,
 	}
 
+	item AluminumChunk
+	{
+		DisplayName = Aluminum Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1
+		Icon = AluminumScrap,
+		Tags	             =  meltable,
+		WorldStaticModel = AluminumScrap,
+	}
+
+		item TinChunk
+	{
+		DisplayName = Tin Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
 		item TinScrap
 	{
 		DisplayName = Tin Scrap,
@@ -52,6 +75,18 @@ module aerx {
 		DisplayCategory = Metals,
 		Type = Normal,
 		Weight = 0.01,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
+	item CopperChunk
+	{
+		DisplayName = Copper Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1,
 		Icon = MetalBits,
 		MetalValue = 5,
 		Tags	             =  meltable,
@@ -145,8 +180,8 @@ module aerx {
     {
         DisplayCategory = Material,
         Weight	=	10.0,
-	Type	= Drainable,
-	UseDelta = 0.05,
+		Type	= Drainable,
+		UseDelta = 0.05,
         DisplayName	=   Cotton Fabric Roll,
         Icon	=	FabricRoll_Cotton_White,
         WorldStaticModel = FabricRoll_White,
@@ -301,6 +336,18 @@ module aerx {
 		WorldStaticModel = SteelIngot,
 	}
 
+	item NickelChunk
+	{
+		DisplayName = Nickel Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1,
+		Icon = BrassScrap,
+		WorldStaticModel = BrassScrap,
+		Tags	             =  meltable,
+
+	}
+
 	item NickelScrap
 	{
 		DisplayName = Nickel Scrap,
@@ -325,6 +372,17 @@ module aerx {
 
 	}
 
+	item LeadChunk
+	{
+		DisplayName = Lead Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1,
+		Icon = IronScrap,
+		WorldStaticModel = IronScrap,
+		Tags	             =  meltable,
+	}
+
 	item LeadScrap
 	{
 		DisplayName = Lead Scrap,
@@ -345,6 +403,18 @@ module aerx {
 		Icon = IronScrap,
 		WorldStaticModel = IronScrap,
 		Tags	             =  meltable,
+	}
+
+	item IronChunk
+	{
+		DisplayName = Iron Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1,
+		Icon = IronScrap,
+		WorldStaticModel = IronScrap,
+		Tags	             =  meltable,
+
 	}
 
 	item IronScrap
@@ -389,6 +459,18 @@ module aerx {
 		DisplayCategory = Metals,
 		Type = Normal,
 		Weight = 0.01,
+		Icon = SilverScrap,
+		WorldStaticModel = SilverScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item ZincChunk
+	{
+		DisplayName = Zinc Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1,
 		Icon = SilverScrap,
 		WorldStaticModel = SilverScrap,
 		Tags	             =  meltable,

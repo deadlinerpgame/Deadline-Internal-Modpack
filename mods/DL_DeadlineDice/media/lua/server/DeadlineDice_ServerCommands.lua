@@ -177,6 +177,9 @@ function DeadlineDiceServerCommands.doDisableStartCombat(args)
     local sourcePlayer = getPlayerByOnlineID(args.sourcePlayerID)
     if not sourcePlayer then return end
 
+    local me = getPlayer()
+    if not me or me == sourcePlayer then return end
+
     for i = 0, getOnlinePlayers():size() - 1 do
         local otherPlayer = getOnlinePlayers():get(i)
         if otherPlayer and otherPlayer ~= sourcePlayer then
@@ -188,7 +191,9 @@ function DeadlineDiceServerCommands.doDisableStartCombat(args)
 
             if DeadlineDice.areCoordinatesWithinRange(args.coords, localCoords, args.range) then
                 ISDeadlineDiceUI.instance.startCombat:setEnable(false)
-                DeadlineDice.orderTracker = args.order
+                DeadlineDice.orderTracker = args.order or {}
+                DeadlineDice.initiativeTracker = args.tracker or {}
+                DeadlineDice.hpTracker = args.hptracker or {}
                 DeadlineDice.CombatActive = true
                 DeadlineDice.turnStartTime = getTimestampMs()
                 DeadlineDice.turnTimerActive = true
@@ -202,6 +207,9 @@ function DeadlineDiceServerCommands.doSyncTurnOrder(args)
     local sourcePlayer = getPlayerByOnlineID(args.sourcePlayerID)
     if not sourcePlayer then return end
 
+    local me = getPlayer()
+    if not me or me == sourcePlayer then return end
+
     for i = 0, getOnlinePlayers():size() - 1 do
         local otherPlayer = getOnlinePlayers():get(i)
         if otherPlayer and otherPlayer ~= sourcePlayer then
@@ -212,8 +220,13 @@ function DeadlineDiceServerCommands.doSyncTurnOrder(args)
             }
 
             if DeadlineDice.areCoordinatesWithinRange(args.coords, localCoords, args.range) then
-                DeadlineDice.orderTracker = args.order
-                ISDeadlineDiceUI.instance:updateInitiativeDisplay()
+                DeadlineDice.orderTracker = args.order or {}
+                if args.tracker then
+                    DeadlineDice.initiativeTracker = args.tracker
+                end
+                if args.hptracker then
+                    DeadlineDice.hpTracker = args.hptracker
+                end
                 DeadlineDice.CombatActive = true
                 DeadlineDice.turnStartTime = getTimestampMs()
                 DeadlineDice.turnTimerActive = true
@@ -226,6 +239,9 @@ function DeadlineDiceServerCommands.doSyncTurnDuration(args)
     
     local sourcePlayer = getPlayerByOnlineID(args.sourcePlayerID)
     if not sourcePlayer then return end
+    
+    local me = getPlayer()
+    if not me or me == sourcePlayer then return end
 
     for i = 0, getOnlinePlayers():size() - 1 do
         local otherPlayer = getOnlinePlayers():get(i)
@@ -249,6 +265,10 @@ function DeadlineDiceServerCommands.doFinishCombat(args)
     local sourcePlayer = getPlayerByOnlineID(args.sourcePlayerID)
     if not sourcePlayer then return end
     DeadlineDice.ShowCircle(false)
+
+    local me = getPlayer()
+    if not me or me == sourcePlayer then return end
+
     for i = 0, getOnlinePlayers():size() - 1 do
         local otherPlayer = getOnlinePlayers():get(i)
         if otherPlayer and otherPlayer ~= sourcePlayer then
@@ -278,6 +298,9 @@ function DeadlineDiceServerCommands.doSyncHP(args)
     local sourcePlayer = getPlayerByOnlineID(args.sourcePlayerID)
     if not sourcePlayer then return end
 
+    local me = getPlayer()
+    if not me or me == sourcePlayer then return end
+
     for i = 0, getOnlinePlayers():size() - 1 do
         local otherPlayer = getOnlinePlayers():get(i)
         if otherPlayer and otherPlayer ~= sourcePlayer then
@@ -286,9 +309,10 @@ function DeadlineDiceServerCommands.doSyncHP(args)
                 y = otherPlayer:getY(),
                 z = otherPlayer:getZ()
             }
-
-            DeadlineDice.hpTracker = DeadlineDice.hpTracker or {}
-            DeadlineDice.hpTracker[args.username] = args.hp
+            if DeadlineDice.areCoordinatesWithinRange(args.coords, localCoords, args.range) then
+                DeadlineDice.hpTracker = DeadlineDice.hpTracker or {}
+                DeadlineDice.hpTracker[args.username] = args.hp
+            end
         end
     end
 end
