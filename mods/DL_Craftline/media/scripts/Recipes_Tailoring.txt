@@ -8,7 +8,7 @@ module Base
 		Salt,
 		keep Needle,
 		keep [Recipe.GetItemTypes.SharpKnife]/SharpedStone/MeatCleaver,
-		
+		NearItem:Tailoring Table,
 		Result:HoodieDOWN_BearHeaddress,
 		Sound:Sewing,
 		Time:200.0,
@@ -21,9 +21,40 @@ module Base
 		LeatherStrips=20,
 		RippedSheets=5,
 		Thread=2,
+		aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=5,
 		keep Needle,
-		
+		NearItem:Tailoring Table,
 		Result:ATAMotoBagBMW2,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Xarley-Davitsan Sportstep - holster
+	{
+		LeatherStrips=20,
+		RippedSheets=5,
+		Thread=2,
+		aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=5,
+		keep Needle,
+		NearItem:Tailoring Table,
+		Result:ATAMotoHarleyHolster,
+		Sound:Sewing,
+		Time:200.0,
+		SkillRequired:Tailoring=9,
+		Category:Tailoring,
+	}
+
+	recipe Xarley-Davitsan Sportstep - motobag
+	{
+		LeatherStrips=20,
+		RippedSheets=5,
+		Thread=2,
+		aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=5,
+		keep Needle,
+		NearItem:Tailoring Table,
+		Result:ATAMotoHarleyBag,
 		Sound:Sewing,
 		Time:200.0,
 		SkillRequired:Tailoring=9,
@@ -95,6 +126,7 @@ module Base
 	{
 		LeatherStrips=3,
 		Thread=4,
+		Dyepack = 1,
 		keep Scissors,
 		keep Needle,
 
@@ -210,5 +242,48 @@ module Base
        		Time:120.0,
       		Category:Tailoring,
 		SkillRequired:Tailoring=6,
+    	}
+
+	recipe Make Denim Strip Bundle
+	{
+			DenimStrips=50,
+       		Result:DenimStripsBundle,
+       		Time:120.0,
+      		Category:Tailoring,
+    	}
+	recipe Make Leather Strip Bundle
+	{
+			LeatherStrips=50,
+       		Result:LeatherStripsBundle,
+       		Time:120.0,
+      		Category:Tailoring,
+    	}
+	recipe Make Ripped Sheets Strip Bundle
+	{
+			RippedSheets=50,
+       		Result:RippedSheetsBundle,
+       		Time:120.0,
+      		Category:Tailoring,
+    	}
+	recipe Make Denim Strip from Bundle
+	{
+       		DenimStripsBundle,
+			Result:DenimStrips=50,
+       		Time:120.0,
+      		Category:Tailoring,
+    	}
+	recipe Make Leather Strip from Bundle
+	{
+       		LeatherStripsBundle,
+			Result:LeatherStrips=50,
+       		Time:120.0,
+      		Category:Tailoring,
+    	}
+	recipe Make Ripped Sheets Strip from Bundle
+	{
+			RippedSheetsBundle,
+			Result:RippedSheets=50,
+       		Time:120.0,
+      		Category:Tailoring,
     	}
 }

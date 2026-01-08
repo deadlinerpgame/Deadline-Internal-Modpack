@@ -137,7 +137,7 @@ function LogLineUtils.ContainerToLogStr(container)
                 local y = parent:getY();
                 local z = parent:getZ();
 
-                local objName = "[cannot find obj name - " .. tostring(parent) .. "]";
+                local objName = "[cannot find obj name]";
                 if container:getVehiclePart() then
                     if container:getVehiclePart():getVehicle() then
                         objName = container:getVehiclePart():getVehicle():getScript():getName();
@@ -150,7 +150,21 @@ function LogLineUtils.ContainerToLogStr(container)
                     return string.format("%s (invalid pos ContainerToLogStr)", objName);
                 end
 
-                return string.format("%s (%0d,%0d,%0d)", objName, x, y, z);
+                if instanceof(parent, "IsoDeadBody") then
+                    objName = "corpse (";
+
+                    if parent:isZombie() then
+                        objName = objName .. "zombie";
+                    end
+
+                    if parent:isPlayer() then
+                        objName = objName .. "player";
+                    end
+
+                    objName = objName .. ")";
+                end
+ 
+                return string.format("%s (%0d,%0d,%0d)", objName or "INVALID_OBJ_NAME", x, y, z);
             end
         else
             if container:isInCharacterInventory(getPlayer()) then

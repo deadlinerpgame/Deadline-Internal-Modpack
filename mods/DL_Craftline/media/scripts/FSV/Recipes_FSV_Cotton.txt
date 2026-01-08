@@ -7,9 +7,11 @@ module aerx {
     {
         LeatherStrips = 10,
         Thread = 5,
-	Kevlar = 3,
+	Kevlar = 2,
 	aerx.FabricRoll_Cotton = 3,
 	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,   
+        Dyepack = 4,
+        NearItem:Tailoring Table,
         keep Needle,
         keep Scissors,
 
@@ -23,6 +25,8 @@ module aerx {
     {
         aerx.FabricRoll_Cotton = 3,
         Thread = 4,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
         keep Needle,
         keep Scissors,
 
@@ -53,7 +57,7 @@ module aerx {
         Result: Base.Cotton_Blouse_V_Cropped,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 4,
+        SkillRequired: Tailoring = 6,
     }
 
     recipe Further Crop Blouse
@@ -64,7 +68,7 @@ module aerx {
         Result: Base.Cotton_Blouse_V_Cropped_Tiny,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 4,
+        SkillRequired: Tailoring = 6,
     }
 
 
@@ -75,6 +79,8 @@ module aerx {
         aerx.FabricRoll_Cotton = 3,
         Thread = 3,
 	Kevlar = 1,
+        Dyepack = 2,
+        NearItem:Tailoring Table,
         keep Needle,
         keep Scissors,
 
@@ -106,7 +112,7 @@ module aerx {
         Result: Base.Lumberjack_Cropped_Shirt_10,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 4,
+        SkillRequired: Tailoring = 6,
     }
 
 
