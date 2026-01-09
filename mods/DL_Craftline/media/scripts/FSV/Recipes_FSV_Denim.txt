@@ -8,14 +8,14 @@ module aerx {
         aerx.FabricRoll_DenimBlue = 1,
         Thread = 2,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Denim_Bandeau,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
     recipe Crop Denim Bandeau
@@ -26,7 +26,7 @@ module aerx {
         Result: Base.Denim_Bandeau_Tiny,
         Time: 20.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
     recipe Make Denim Top
@@ -34,14 +34,14 @@ module aerx {
         aerx.FabricRoll_DenimBlue = 2,
         Thread = 3,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Denim_Top,
         Time: 90.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
     recipe Crop Denim Top
@@ -52,7 +52,7 @@ module aerx {
         Result: Base.Denim_CropTop,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
 
@@ -61,14 +61,14 @@ module aerx {
         aerx.FabricRoll_DenimBlue = 4,
         Thread = 4,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Denim_Skirt_Longer,
         Time: 150.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 8,
+        SkillRequired:Tailoring = 8,
     }
 
     recipe Cut Denim Longer Skirt to Long Skirt - Above Knee
@@ -79,7 +79,7 @@ module aerx {
         Result: Base.Denim_Skirt_Long,
         Time: 150.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
     recipe Make Meshed Denim Longer Skirt
@@ -87,14 +87,14 @@ module aerx {
         aerx.FabricRoll_DenimBlue = 4,
         Thread = 4,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Mesh_Denim_Skirt_Longer,
         Time: 150.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 9,
+        SkillRequired:Tailoring = 9,
     }
 
     recipe Make Denim Mini Skirt
@@ -102,14 +102,14 @@ module aerx {
         aerx.FabricRoll_DenimBlue = 2,
         Thread = 2,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Denim_Skirt_Short,
         Time: 150.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
     recipe Make High Waisted Denim Skirt
@@ -117,14 +117,14 @@ module aerx {
         aerx.FabricRoll_DenimBlue = 2,
         Thread = 3,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Denim_Skirt_Mesh_HW,
         Time: 120.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
 
@@ -133,14 +133,14 @@ module aerx {
         aerx.FabricRoll_DenimBlue = 2,
         Thread = 4,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Denim_SkirtPleated,
         Time: 180.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 7,
+        SkillRequired:Tailoring = 7,
     }
 
 
@@ -150,13 +150,13 @@ module aerx {
         aerx.FabricRoll_DenimBlue = 1,
         Thread = 2,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.Denim_SkirtPleated_Frilled,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 7,
+        SkillRequired:Tailoring = 7,
     }
 
 
@@ -169,14 +169,14 @@ module aerx {
         Thread = 4,
         Deadline.Kevlar = 1,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Denim_Jacket,
         Time: 280.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring = 10,
     }
 
     recipe Crop Denim Jacket
@@ -189,7 +189,7 @@ module aerx {
         Result: Base.Denim_Jacket_Cropped,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
     recipe Shorten Denim Jacket
@@ -202,7 +202,7 @@ module aerx {
         Result: Base.Denim_JacketShort,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
     recipe Remove Sleeves From Denim Jacket
@@ -214,7 +214,7 @@ module aerx {
         Result: Base.Denim_VestJacket,
         Time: 45.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
     recipe Crop Denim Vest
@@ -227,7 +227,7 @@ module aerx {
         Result: Base.Denim_VestJacketCropped,
         Time: 45.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
     recipe Shorten Denim Vest
@@ -240,7 +240,7 @@ module aerx {
         Result: Base.Denim_VestJacketShort,
         Time: 45.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
 
@@ -251,14 +251,14 @@ module aerx {
         Thread = 7,
         Deadline.Kevlar = 2,
         Dyepack = 4,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Denim_LongCoat,
         Time: 360.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring = 10,
     }
 
     recipe Shorten Denim Great Coat
@@ -271,7 +271,7 @@ module aerx {
         Result: Base.Denim_LongCoatShort,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 8,
+        SkillRequired:Tailoring = 8,
     }
 
     recipe Remove Sleeves From Denim Long Coat
@@ -284,7 +284,7 @@ module aerx {
         Result: Base.Denim_LongCoatShortSleeveless,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
 
@@ -295,14 +295,14 @@ module aerx {
         Thread = 5,
         Deadline.Kevlar = 2,
         Dyepack = 4,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Denim_TrenchCoat_Long_O,
         Time: 320.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring = 10,
     }
 
     recipe Shorten Denim Trench Coat
@@ -315,7 +315,7 @@ module aerx {
         Result: Base.Denim_TrenchCoat_Short_O,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
 
@@ -326,14 +326,14 @@ module aerx {
         Thread = 4,
         Deadline.Kevlar = 1,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Mesh_Denim_Pants,
         Time: 240.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring = 10,
     }
 
     recipe Make Fine Jeans Flared
@@ -342,14 +342,14 @@ module aerx {
         Thread = 4,
         Deadline.Kevlar = 1,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Mesh_Denim_PantsFlared,
         Time: 280.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring = 10,
     }
 
 
@@ -363,7 +363,7 @@ module aerx {
         Result: Base.Mesh_Denim_PantsChaps,
         Time: 180.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 8,
+        SkillRequired:Tailoring = 8,
     }
 
 
@@ -375,7 +375,7 @@ module aerx {
         Result: Base.Mesh_Denim_LongShorts,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
     recipe Cut Long Shorts to Shorts
@@ -386,7 +386,7 @@ module aerx {
         Result: Base.Mesh_Denim_Shorts,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
     recipe Cut Shorts to Hot Pants
@@ -397,7 +397,7 @@ module aerx {
         Result: Base.Mesh_Denim_ShortShorts,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
     recipe Cut Hot Pants to Mini Pants
@@ -408,7 +408,7 @@ module aerx {
         Result: Base.Mesh_Denim_ShorterShorts,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
 
@@ -419,14 +419,14 @@ module aerx {
         Thread = 4,
         Deadline.Kevlar = 1,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Skin_Denim_Pants_High,
         Time: 240.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring = 10,
     }
 
 
@@ -435,14 +435,14 @@ module aerx {
         aerx.FabricRoll_Denim = 2,
         Thread = 3,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Denim_Shorts_High,
         Time: 120.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
 
@@ -451,14 +451,14 @@ module aerx {
         aerx.FabricRoll_Denim = 4,
         Thread = 4,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Denim_Overshirt,
         Time: 240.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring = 10,
     }
 
 
@@ -469,14 +469,14 @@ module aerx {
         aerx.FabricRoll_Denim = 3,
         Thread = 3,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.Denim_Shirt_10,
         Time: 280.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 
 
@@ -490,6 +490,6 @@ module aerx {
         Result: Base.Denim_Sleeveless_Shirt_10,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring = 6,
     }
 }
