@@ -9,7 +9,7 @@ module aerx {
         LeatherStrips = 5,
         Thread = 4,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
         Deadline.Kevlar = 1,
@@ -17,7 +17,7 @@ module aerx {
         Result: Base.TannedLeather_Jacket,
         Time: 280.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
     recipe Crop Tanned Leather Jacket
@@ -30,7 +30,7 @@ module aerx {
         Result: Base.TannedLeather_Jacket_Cropped,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
     recipe Make Long Tanned Leather Jacket
@@ -38,6 +38,7 @@ module aerx {
         aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 4,
         LeatherStrips = 6,
         Thread = 4,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
         Deadline.Kevlar = 1,
@@ -45,7 +46,7 @@ module aerx {
         Result: Base.TannedLeather_Jacket_MidLength,
         Time: 320.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
 
@@ -59,14 +60,14 @@ module aerx {
         Thread = 5,
         Deadline.Kevlar = 2,
         Dyepack = 4,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.TannedLeather_LongestCoat,
         Time: 420.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
     recipe Shorten Great Coat to Long Coat
@@ -79,7 +80,7 @@ module aerx {
         Result: Base.TannedLeather_LongerCoat,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
     recipe Shorten Long Coat to Coat
@@ -92,7 +93,7 @@ module aerx {
         Result: Base.TannedLeather_LongCoat,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
     recipe Make Tanned Leather Trench Coat Long
@@ -101,7 +102,7 @@ module aerx {
         LeatherStrips = 7,
         Thread = 5,
         Dyepack = 4,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
         Deadline.Kevlar = 2,
@@ -109,7 +110,7 @@ module aerx {
         Result: Base.TannedLeather_TrenchCoat_Long_O,
         Time: 380.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
     recipe Shorten Tanned Leather Trench Coat
@@ -122,7 +123,7 @@ module aerx {
         Result: Base.TannedLeather_TrenchCoat_Short_O,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
 
@@ -135,14 +136,14 @@ module aerx {
         Thread = 6,
         Deadline.Kevlar = 2,
         Dyepack = 4,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.TannedLeather_LongestCoat_Winter,
         Time: 540.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
     recipe Shorten Winter Great Coat to Long
@@ -155,7 +156,7 @@ module aerx {
         Result: Base.TannedLeather_LongerCoat_Winter,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
 
@@ -168,13 +169,13 @@ module aerx {
         LeatherStrips = 4,
         Thread = 3,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.TannedLeather_Corset,
         Time: 180.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
     recipe Make Tanned Leather Corset Underbust
@@ -183,13 +184,13 @@ module aerx {
         LeatherStrips = 3,
         Thread = 3,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.TannedLeather_Corset_UB,
         Time: 150.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
     recipe Make Tanned Leather Corset with Straps
@@ -198,13 +199,13 @@ module aerx {
         LeatherStrips = 5,
         Thread = 3,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.TannedLeather_Corset_Strap,
         Time: 200.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
     recipe Make Tanned Leather Corset Underbust with Straps
@@ -213,13 +214,13 @@ module aerx {
         LeatherStrips = 4,
         Thread = 3,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.TannedLeather_Corset_UB_Strap,
         Time: 180.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
 
@@ -231,13 +232,13 @@ module aerx {
         LeatherStrips = 3,
         Thread = 2,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.TannedLeather_Top,
         Time: 120.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
     recipe Make Tanned Leather Top Skimpy
@@ -246,13 +247,13 @@ module aerx {
         LeatherStrips = 2,
         Thread = 2,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.TannedLeather_TopSkimpy,
         Time: 90.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
     recipe Crop Tanned Leather Top
@@ -263,7 +264,7 @@ module aerx {
         Result: Base.TannedLeather_CropTop,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
     recipe Make Tanned Leather Bandeau
@@ -272,13 +273,13 @@ module aerx {
         LeatherStrips = 2,
         Thread = 2,
         Dyepack = 1,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.TannedLeather_Bandeau,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
     recipe Crop Tanned Leather Bandeau
@@ -289,7 +290,7 @@ module aerx {
         Result: Base.TannedLeather_Bandeau_Tiny,
         Time: 20.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
     recipe Make Tanned Leather Waistcoat
@@ -298,13 +299,13 @@ module aerx {
         LeatherStrips = 4,
         Thread = 3,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.TannedLeather_WaistCoat,
         Time: 150.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
 
@@ -317,13 +318,14 @@ module aerx {
         aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan = 2,
         LeatherStrips = 4,
         Thread = 4,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.TMesh_TannedLeather_Pants,
         Time: 240.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 9,
+        SkillRequired:Tailoring=9,
     }
 
     recipe Cut Tanned Leather Pants to Long Shorts
@@ -334,7 +336,7 @@ module aerx {
         Result: Base.TMesh_TannedLeather_LongShorts,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
     recipe Cut Long Shorts to Shorts
@@ -345,7 +347,7 @@ module aerx {
         Result: Base.TMesh_TannedLeather_Shorts,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
     recipe Cut Shorts to Hot Pants
@@ -356,7 +358,7 @@ module aerx {
         Result: Base.TMesh_TannedLeather_ShortShorts,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
     recipe Cut Hot Pants to Mini Pants
@@ -367,7 +369,7 @@ module aerx {
         Result: Base.TMesh_TannedLeather_ShorterShorts,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
 
@@ -378,14 +380,14 @@ module aerx {
         LeatherStrips = 3,
         Thread = 4,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.TSkin_TannedLeather_Pants_High,
         Time: 240.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 8,
+        SkillRequired:Tailoring=8,
     }
 
 
@@ -396,13 +398,13 @@ module aerx {
         LeatherStrips = 4,
         Thread = 3,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.TannedLeather_Leotard,
         Time: 180.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 8,
+        SkillRequired:Tailoring=8,
     }
 
     recipe Make Tanned Leather Underbust Bodysuit
@@ -411,13 +413,13 @@ module aerx {
         LeatherStrips = 3,
         Thread = 3,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.TannedLeather_LeotardUB,
         Time: 150.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 8,
+        SkillRequired:Tailoring=8,
     }
 
 
@@ -430,14 +432,14 @@ module aerx {
         LeatherStrips = 3,
         Thread = 2,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.TannedLeather_Skirt_Mesh_HW,
         Time: 120.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 8,
+        SkillRequired:Tailoring=8,
     }
 
     recipe Make Tanned Leather Frilled Skirt
@@ -446,14 +448,14 @@ module aerx {
         LeatherStrips = 4,
         Thread = 3,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.TannedLeather_Skirt_MeshFrilled_HW,
         Time: 150.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 8,
+        SkillRequired:Tailoring=8,
     }
 
     recipe Make Tanned Leather Micro Skirt
@@ -462,14 +464,14 @@ module aerx {
         LeatherStrips = 2,
         Thread = 2,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.TannedLeather_SkirtMicro_Mesh,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 8,
+        SkillRequired:Tailoring=8,
     }
 
     recipe Add Frills to Micro Skirt
@@ -482,7 +484,7 @@ module aerx {
         Result: Base.TannedLeather_SkirtMicro_MeshFrilled,
         Time: 45.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
 
@@ -493,14 +495,14 @@ module aerx {
         LeatherStrips = 4,
         Thread = 3,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
         keep Scissors,
 
         Result: Base.TannedLeather_Long_Skirt,
         Time: 150.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
     recipe Shorten Long Skirt
@@ -511,7 +513,7 @@ module aerx {
         Result: Base.TannedLeather_Skirt_Mid,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
     recipe Shorten Mid Skirt
@@ -522,7 +524,7 @@ module aerx {
         Result: Base.TannedLeather_Skirt_Short,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
     recipe Shorten Short Skirt
@@ -533,7 +535,7 @@ module aerx {
         Result: Base.TannedLeather_Skirt_Shorter,
         Time: 30.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
     recipe Make Tanned Leather Loincloth
@@ -546,7 +548,7 @@ module aerx {
         Result: Base.TannedLeather_Loincloth,
         Time: 60.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
 
@@ -560,13 +562,13 @@ module aerx {
         Thread = 3,
         Deadline.Kevlar = 1,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.Armour_Faulds,
         Time: 200.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 9,
+        SkillRequired:Tailoring=9,
     }
 
     recipe Shorten Fauld
@@ -579,7 +581,7 @@ module aerx {
         Result: Base.Armour_Faulds_Short,
         Time: 45.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 6,
+        SkillRequired:Tailoring=6,
     }
 
     recipe Make Tanned Leather Arm Guards
@@ -588,13 +590,13 @@ module aerx {
         LeatherStrips = 3,
         Thread = 2,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.Armour_Armguards_R,
         Time: 120.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 9,
+        SkillRequired:Tailoring=9,
     }
 
     recipe Make Tanned Leather Arm Guards Long
@@ -604,13 +606,13 @@ module aerx {
         Thread = 3,
         Deadline.Kevlar = 1,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.Armour_ArmguardsLong_R,
         Time: 180.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 10,
+        SkillRequired:Tailoring=10,
     }
 
     recipe Make Tanned Leather Leg Sleeves
@@ -619,13 +621,13 @@ module aerx {
         LeatherStrips = 3,
         Thread = 2,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.TannedLeather_SleevesLeg_L,
         Time: 120.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 9,
+        SkillRequired:Tailoring=9,
     }
 
     recipe Make Tanned Leather Arm Sleeves
@@ -634,13 +636,13 @@ module aerx {
         LeatherStrips = 2,
         Thread = 2,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.TannedLeather_Sleeves_L,
         Time: 90.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 9,
+        SkillRequired:Tailoring=9,
     }
 
 
@@ -651,13 +653,13 @@ module aerx {
         LeatherStrips = 4,
         Thread = 2,
         Dyepack = 2,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.Armour_PouchStrap,
         Time: 120.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 8,
+        SkillRequired:Tailoring=8,
     }
 
     recipe Make Flat Cowboy Hat
@@ -666,13 +668,13 @@ module aerx {
         LeatherStrips = 3,
         Thread = 2,
         Dyepack = 1,
-        NearItem:Tailoring Table,
+        NearItem:TailoringWorkbench,
         keep Needle,
 
         Result: Base.Hat_Cowboy_Flat,
         Time: 120.0,
         Category: Tailoring,
-        SkillRequired: Tailoring = 8,
+        SkillRequired:Tailoring=8,
     }
 
 
