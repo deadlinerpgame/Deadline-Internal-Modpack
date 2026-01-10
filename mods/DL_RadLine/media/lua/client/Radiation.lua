@@ -82,6 +82,18 @@ function IsSuitSetEquipped(suitSet)
     return true
 end
 
+function IsItemGasMask(item)
+    if not item then return false end;
+    local itemType = item:getFullType();
+
+    if string.find(Type, "Gas") then return true end;
+    if string.find(Type, "PrepperMask") or string.find(Type, "StalkerMask") then return true end;
+    if string.find(Type, "Respirator") and string.find(Type, "Face") then return true end;
+    if string.find(Type, "NBCMask") then return true end;
+
+    return false;
+end
+
 function IsGasMaskEquipped()
     local player = getPlayer()
     local inv = player:getWornItems()
@@ -89,9 +101,9 @@ function IsGasMaskEquipped()
     for i = 0, inv:size() - 1 do
         local wornItem = inv:getItemByIndex(i)
         local Type = wornItem:getFullType()
-        if wornItem and (string.find(Type, "Gas")) then
-            MF.getMoodle("MoodleGasMask"):setValue(0.1)
-            return true 
+        if wornItem and IsItemGasMask(wornItem) then
+            MF.getMoodle("MoodleGasMask"):setValue(0.1);
+            return true;
         end
     end
 

@@ -157,6 +157,7 @@ function MedLine_Events.onClickDiceHpModal(player, btn)
     local message = "";
     if btn.internal == "NO" then
         message = getPlayer():getDescriptor():getForename() .. " has cancelled the dice HP blood loss dialog.";
+        getPlayer():getModData().MedLine.BloodData.diceBLPopupGiven = nil;
     else
         message = getPlayer():getDescriptor():getForename() .. " is now suffering from blood loss.";
         MedLine_Client.initiateBloodLossStart(SandboxVars.MedLine.BloodLoss_RecoveryTimeDaysPVP or 5);
