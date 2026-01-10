@@ -86,11 +86,10 @@ function IsItemGasMask(item)
     if not item then return false end;
     local itemType = item:getFullType();
 
-    if string.find(Type, "Gas") then return true end;
-    if string.find(Type, "PrepperMask") or string.find(Type, "StalkerMask") then return true end;
-    if string.find(Type, "Respirator") and string.find(Type, "Face") then return true end;
-    if string.find(Type, "NBCMask") then return true end;
-
+    if string.find(itemType, "Gas") then return true end;
+    if string.find(itemType, "PrepperMask") or string.find(itemType, "StalkerMask") then return true end;
+    if string.find(itemType, "Respirator") and string.find(itemType, "Face") then return true end;
+    if string.find(itemType, "NBCMask") then return true end;
     return false;
 end
 
