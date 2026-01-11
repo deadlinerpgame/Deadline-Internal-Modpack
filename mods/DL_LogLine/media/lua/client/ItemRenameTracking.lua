@@ -41,7 +41,7 @@ function ISRenameEverything:onRenameStackClick(button, player, items)
 
     for i = 0, items:size() - 1 do
         local iteratedItem = items:get(i);
-        logStr = logStr .. "," .. iteratedItem and iteratedItem:getFullType() or "INVALID_ITEM_IN_STACK";
+        logStr = logStr .. "," .. (iteratedItem and iteratedItem:getFullType() or "INVALID_ITEM_IN_STACK");
     end
 
     logStr = logStr .. string.format(") (POS: %s)", coordsStr);
