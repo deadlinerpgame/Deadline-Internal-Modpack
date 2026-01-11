@@ -2564,7 +2564,8 @@ DeadlineDice.hpTracker[self.character:getUsername()] = newValue
             z = getPlayer():getZ()
         },
         username = self.character:getUsername(),
-        hp = newValue
+        hp = newValue,
+        range = 30
 
     })
     local playerName = self.character:getDescriptor():getForename()
