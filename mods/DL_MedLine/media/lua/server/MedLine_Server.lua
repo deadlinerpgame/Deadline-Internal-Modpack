@@ -171,6 +171,7 @@ function MedLine_Server.OnClientCommand(module, command, player, args)
         CachedUserData[targetUsername].bloodLossTimeoutUnix = getTimestamp() + (hours * 3600);
         MedLine_Server.SaveUserData();
 
+        local allPlayers = getOnlinePlayers();
         for i = 0, allPlayers:size() - 1 do
             local iteratedPlayer = allPlayers:get(i);
             if iteratedPlayer then

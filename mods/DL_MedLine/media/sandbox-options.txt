@@ -25,6 +25,11 @@ option MedLine.BloodLoss_DiceHPDisadvantage = {
     page = MedLine, translation = MedLine_BloodLoss_DiceHPDisadvantage,
 }
 
+option MedLine.BloodLoss_DiceRollDisadvantage = {
+    type = integer, default = 2, min = 0, max = 10,
+    page = MedLine, translation = MedLine_BloodLoss_DiceRollDisadvantage,
+}
+
 option MedLine.BloodLoss_RecoveryTimeDaysDonation = {
     type = integer, default = 2, min = 1, max = 99,
     page = MedLine, translation = MedLine_BloodLoss_RecoveryTimeDaysDonation,
@@ -69,3 +74,4 @@ option MedLine.LevelOpts_SeeRemainingLossTime = {
     type = integer, default = 6, min = 1, max = 10,
     page = MedLine, translation = MedLine_LevelOpts_SeeRemainingLossTime,
 }
+
