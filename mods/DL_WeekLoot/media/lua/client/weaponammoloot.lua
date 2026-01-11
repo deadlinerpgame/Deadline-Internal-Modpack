@@ -71,9 +71,9 @@ local function onZombieDead(zombie)
     if killer ~= player then return end
     
     local modData = player:getModData()
-    print(modData.lootcounter)
+
     modData.lootcounter = modData.lootcounter or 0
-    
+    print(modData.lootcounter)
     if modData.lootcounter < 5 then
         local roll = ZombRand(100) + 1
         
@@ -91,8 +91,12 @@ end
 
 local function onEveryHour()
     local player = getPlayer()
-    if not player then return end
-    
+    if not player then return end   
+    local modData = player:getModData()
+    if modData.lootcounter and modData.lootcountertimer and modData.lootcounter_timestamp then
+    print("Loot Counter(of 5): " .. modData.lootcounter .. "|Timer: " .. modData.lootcountertimer .. "|Timestamp: " .. modData.lootcounter_timestamp)
+    end
+
     local modData = player:getModData()
     if modData.lootcountertimer and modData.lootcounter_timestamp then
         local currentTime = getGameTime():getWorldAgeHours()
