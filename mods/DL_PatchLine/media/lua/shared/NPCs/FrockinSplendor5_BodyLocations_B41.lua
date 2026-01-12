@@ -78,7 +78,6 @@ end
  group:setExclusive("BathRobeCoat", "JacketHat_Bulky")
  
  group:setExclusive("BathRobeCoat", "TorsoExtra")
- group:setExclusive("BathRobeCoat", "TorsoExtraVest")
 
  
  group:setExclusive("BathRobeCoat", "Boilersuit")
@@ -110,7 +109,6 @@ end
  group:setExclusive("JacketOpen", "JacketHat_Bulky")
  group:setExclusive("JacketOpen", "Jacket_Bulky")
  group:setExclusive("JacketOpen", "TorsoExtra")
- group:setExclusive("JacketOpen", "TorsoExtraVest")
  group:setExclusive("JacketSuit", "JacketOpen")
  group:setExclusive("JacketSuit", "BathRobeCoat")
  
@@ -134,7 +132,6 @@ end
  group:setExclusive("JacketShort", "JacketHat_Bulky")
  group:setExclusive("JacketShort", "Jacket_Bulky")
  group:setExclusive("JacketShort", "TorsoExtra")
- group:setExclusive("JacketShort", "TorsoExtraVest")
  group:setExclusive("JacketSuit", "JacketShort")
  group:setExclusive("JacketSuit", "BathRobeCoat")
  
@@ -146,7 +143,6 @@ end
  group:setHideModel("Jacket_Bulky", "Belt")
  group:setHideModel("JacketSuit", "Belt")
  group:setHideModel("TorsoExtra", "Belt")
- group:setHideModel("TorsoExtraVest", "Belt")
  group:setHideModel("BathRobe", "Belt")
  group:setHideModel("BathRobe", "BeltExtra")
  group:setHideModel("FullSuit", "Belt")
