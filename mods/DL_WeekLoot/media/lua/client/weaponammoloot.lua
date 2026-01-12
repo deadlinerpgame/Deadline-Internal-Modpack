@@ -74,7 +74,7 @@ local function onZombieDead(zombie)
     print(modData.lootcounter)
     modData.lootcounter = modData.lootcounter or 0
     
-    if modData.lootcounter < 5 then
+    if modData.lootcounter < 5 or (not modData.lootcounter_timestamp) then
         local roll = ZombRand(100) + 1
         
         if roll == 1 then
