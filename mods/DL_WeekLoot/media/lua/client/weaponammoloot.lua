@@ -73,8 +73,8 @@ local function onZombieDead(zombie)
     local modData = player:getModData()
 
     modData.lootcounter = modData.lootcounter or 0
-    print(modData.lootcounter)
-    if modData.lootcounter < 5 then
+    
+    if modData.lootcounter < 5 or (not modData.lootcounter_timestamp) then
         local roll = ZombRand(100) + 1
         
         if roll == 1 then
