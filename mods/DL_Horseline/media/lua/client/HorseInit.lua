@@ -223,7 +223,10 @@ local function updateHorseStatsTick()
     if not inventory then return end
 
     local horse = player:getWornItem("Horse")
-    if not horse then return end
+    if not horse then 
+        lastHorseUpdateTime = 0
+        return 
+    end
 
     local data = horse:getModData()
     if not data or not data._initialized then return end
