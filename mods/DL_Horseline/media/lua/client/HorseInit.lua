@@ -77,6 +77,18 @@ end
 
 Events.OnTick.Add(onTickHorseInit);
 
+
+local function assignHorseGUID(item, player)
+    if not item or not player then return end
+    local data = item:getModData()
+    if not data or data.horseGUID then return end
+    
+    local username = player:getUsername()
+    local hourTimestamp = getGameTime():getWorldAgeHours()
+    data.horseGUID = username .. "_" .. math.floor(hourTimestamp)
+
+end
+
 local function predicateEvalWaterItem(item)
     return item:canStoreWater() and item:IsDrainable() and item:getUsedDelta() > 0.0;
 end
@@ -127,8 +139,10 @@ local function horseContextMenu(player, context, items)
                     end
 
                     if player:getAccessLevel() == "Admin" or isDebugEnabled() then
+                        context:addOption("Horse Owner: " .. data.owner, item, doMount, player)
                         context:addOption("ADMIN Mount", item, doMount, player)
                         context:addOption("ADMIN Unclaim", player, unclaimHorseAdmin, item)
+                        context:addOption("ADMIN Edit", player, openHorseStatsEditor, item)
                     end
 
                     local menuOption = context:addOption("Feed", worldobjects); 
@@ -238,10 +252,12 @@ if data.stamina <= 0 and not data._exhaustedDebuff then
     data._exhaustedStartTime = getTimestampMs()
 
     -- Play sound
-    if isClient() then
-        getSoundManager():PlayWorldSound("horse_stop_01", player:getSquare(), 0, 5, 5, false)
-    else
-        getSoundManager():playUISound("horse_stop_01")
+    if not player:isInvisible() and not player:isGhostMode() then
+        if isClient() then
+            getSoundManager():PlayWorldSound("horse_stop_01", player:getSquare(), 0, 5, 5, false)
+        else
+            getSoundManager():playUISound("horse_stop_01")
+        end
     end
         player:setBlockMovement(true)
 
@@ -263,13 +279,13 @@ if data._exhaustedDebuff and data._exhaustedPhase == "stunned" then
 end
 
     if data.health <= 0 then
-        
-        if isClient() then
-            getSoundManager():PlayWorldSound("horse_stop_01", player:getSquare(), 0, 5, 5, false)
-        else
-            getSoundManager():playUISound("horse_stop_01")
+        if not player:isInvisible() and not player:isGhostMode() then
+            if isClient() then
+                getSoundManager():PlayWorldSound("horse_stop_01", player:getSquare(), 0, 5, 5, false)
+            else
+                getSoundManager():playUISound("horse_stop_01")
+            end
         end
-
         if inventory:contains("2TK_models.2TK_Horse") or inventory:contains("2TK_models.2TK_Horse_01") or inventory:contains("2TK_models.2TK_Horse_02") or inventory:contains("2TK_models.2TK_Horse_03") or inventory:contains("2TK_models.2TK_Horse_04") then
             if inventory:contains("2TK_models.2TK_Horse") then inventory:Remove("2TK_Horse") 
             elseif inventory:contains("2TK_models.2TK_Horse_01") then inventory:Remove("2TK_Horse_01") 
@@ -357,12 +373,14 @@ if variants and  now - lastHorseStepTime >= stepInterval then
 
 
 
-      local sound = variants[ZombRand(#variants) + 1]      
-      if isClient() and sound then
-         getSoundManager():PlayWorldSound(sound, player:getSquare(), 0, 5, 5, false);  
-      else
-         getSoundManager():playUISound(tostring(sound))
-      end
+      local sound = variants[ZombRand(#variants) + 1]  
+    if not player:isInvisible() and not player:isGhostMode() then
+        if isClient() and sound then
+            getSoundManager():PlayWorldSound(sound, player:getSquare(), 0, 5, 5, false);  
+        else
+            getSoundManager():playUISound(tostring(sound))
+        end
+    end
 end
     if lastHorseUpdateTime == 0 then
         lastHorseUpdateTime = now
@@ -426,8 +444,10 @@ Events.OnTick.Add(updateHorseStatsTick)
 
 
 function doMount(item, player)
-
-    localtext = player:getUsername() .. " has mounted a horse with name " .. item:getName() .. " at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
+    assignHorseGUID(item, player)
+    local data = item:getModData()
+    local guid = data.horseGUID or "NO_GUID"
+    localtext = player:getUsername() .. " has mounted a horse with name " .. item:getName() .. " [GUID: " .. guid .. "] at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
     sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {loggerName = "Horses", logText = localtext})
     ISTimedActionQueue.add(HorseMount:new(player, item, true))
 
@@ -435,7 +455,10 @@ end
 
 
 function doDismount(item, player)
-    localtext = player:getUsername() .. " has dismounted a horse with name " .. item:getName() .. " at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
+    assignHorseGUID(item, player)
+    local data = item:getModData()
+    local guid = data.horseGUID or "NO_GUID"
+    localtext = player:getUsername() .. " has dismounted a horse with name " .. item:getName() .. " [GUID: " .. guid .. "] at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
     sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {loggerName = "Horses", logText = localtext})
 
     local sq = player:getSquare()
@@ -550,8 +573,11 @@ end
 
 
 function claimHorse(player, item)
+    assignHorseGUID(item, player)
+    local data = item:getModData()
+    local guid = data.horseGUID or "NO_GUID"
     player:Say("Horse claimed.")
-    localtext = player:getUsername() .. " has claimed a horse with name " .. item:getName() .. " at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
+    localtext = player:getUsername() .. " has claimed a horse with name " .. item:getName() .. " [GUID: " .. guid .. "] at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
     sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {loggerName = "Horses", logText = localtext})
     modifyModData(player, item, {
         owner = player:getUsername(),
@@ -560,8 +586,11 @@ function claimHorse(player, item)
 end
 
 function unclaimHorse(player, item)
+    assignHorseGUID(item, player)
+    local data = item:getModData()
+    local guid = data.horseGUID or "NO_GUID"
     player:Say("Horse unclaimed")
-    localtext = player:getUsername() .. " has unclaimed a horse with name " .. item:getName() .. " at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
+    localtext = player:getUsername() .. " has unclaimed a horse with name " .. item:getName() .. " [GUID: " .. guid .. "] at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
     sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {loggerName = "Horses", logText = localtext})
     modifyModData(player, item, {
         owner = "THEREISNOCLAIMANT",
@@ -570,8 +599,10 @@ function unclaimHorse(player, item)
 end
 
 function unclaimHorseAdmin(player, item)
-    player:Say("Horse unclaimed")
-    localtext = player:getUsername() .. " has admin unclaimed a horse with name " .. item:getName() .. " at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
+    assignHorseGUID(item, player)
+    local data = item:getModData()
+    local guid = data.horseGUID or "NO_GUID"
+    localtext = player:getUsername() .. " has admin unclaimed a horse with name " .. item:getName() .. " [GUID: " .. guid .. "] at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
     sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {loggerName = "Horses", logText = localtext})
     modifyModData(player, item, {
         owner = "THEREISNOCLAIMANT",
@@ -611,6 +642,9 @@ end
 
 
 function renameHorse(player, item)
+    assignHorseGUID(item, player)
+    local data = item:getModData()
+    local guid = data.horseGUID or "NO_GUID"
     local prompt = "Enter a new name for your horse:"
     local defaultName = item:getName()
     local md = item:getModData()
@@ -627,7 +661,7 @@ function renameHorse(player, item)
         if newName and newName ~= "" then
             item:setName(newName)
             player:Say("You have renamed your horse to " .. newName)
-            localtext = player:getUsername() .. " has renamed a horse from " .. md.oldName .. " to " .. newName ..  " at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
+            localtext = player:getUsername() .. " has renamed a horse from " .. md.oldName .. " to " .. newName .. " [GUID: " .. guid .. "] at coordinates " .. math.floor(getPlayer():getX()) .. " " .. math.floor(getPlayer():getY()) .. " " .. math.floor(getPlayer():getZ()) .. " "
             sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {loggerName = "Horses", logText = localtext})    
         end
     end
@@ -644,6 +678,134 @@ function renameHorse(player, item)
     modal:addToUIManager()
     item:setCustomName(true)
 
+end
+
+
+HorseStatsEditor = ISPanel:derive("HorseStatsEditor")
+
+function HorseStatsEditor:initialise()
+    ISPanel.initialise(self)
+end
+
+function HorseStatsEditor:createChildren()
+    ISPanel.createChildren(self)
+    
+    local y = 20
+    local labelWidth = 100
+    local inputWidth = 120
+    local inputHeight = 25
+    local spacing = 35
+    
+    self.title = ISLabel:new(self.width / 2 - 50, y, 25, "Edit Horse Stats", 1, 1, 1, 1, UIFont.Medium, true)
+    self:addChild(self.title)
+    y = y + spacing + 10
+    
+    self.healthLabel = ISLabel:new(20, y, inputHeight, "Health:", 1, 1, 1, 1, UIFont.Small, true)
+    self:addChild(self.healthLabel)
+    self.healthEntry = ISTextEntryBox:new(tostring(self.data.health or 0), labelWidth + 30, y, inputWidth, inputHeight)
+    self.healthEntry:initialise()
+    self.healthEntry:instantiate()
+    self.healthEntry:setOnlyNumbers(true)
+    self:addChild(self.healthEntry)
+    y = y + spacing
+    
+    self.maxHealthLabel = ISLabel:new(20, y, inputHeight, "Max Health:", 1, 1, 1, 1, UIFont.Small, true)
+    self:addChild(self.maxHealthLabel)
+    self.maxHealthEntry = ISTextEntryBox:new(tostring(self.data.maxHealth or 0), labelWidth + 30, y, inputWidth, inputHeight)
+    self.maxHealthEntry:initialise()
+    self.maxHealthEntry:instantiate()
+    self.maxHealthEntry:setOnlyNumbers(true)
+    self:addChild(self.maxHealthEntry)
+    y = y + spacing
+    
+    self.hungerLabel = ISLabel:new(20, y, inputHeight, "Hunger:", 1, 1, 1, 1, UIFont.Small, true)
+    self:addChild(self.hungerLabel)
+    self.hungerEntry = ISTextEntryBox:new(tostring(self.data.hunger or 0), labelWidth + 30, y, inputWidth, inputHeight)
+    self.hungerEntry:initialise()
+    self.hungerEntry:instantiate()
+    self.hungerEntry:setOnlyNumbers(true)
+    self:addChild(self.hungerEntry)
+    y = y + spacing
+    
+    self.thirstLabel = ISLabel:new(20, y, inputHeight, "Thirst:", 1, 1, 1, 1, UIFont.Small, true)
+    self:addChild(self.thirstLabel)
+    self.thirstEntry = ISTextEntryBox:new(tostring(self.data.thirst or 0), labelWidth + 30, y, inputWidth, inputHeight)
+    self.thirstEntry:initialise()
+    self.thirstEntry:instantiate()
+    self.thirstEntry:setOnlyNumbers(true)
+    self:addChild(self.thirstEntry)
+    y = y + spacing
+
+    self.speedLabel = ISLabel:new(20, y, inputHeight, "Speed:", 1, 1, 1, 1, UIFont.Small, true)
+    self:addChild(self.speedLabel)
+    self.speedEntry = ISTextEntryBox:new(string.format("%.2f", self.data.speedModifier or 1.0), labelWidth + 30, y, inputWidth, inputHeight)
+    self.speedEntry:initialise()
+    self.speedEntry:instantiate()
+    self:addChild(self.speedEntry)
+    y = y + spacing + 10
+    
+    self.saveButton = ISButton:new(20, y, 100, 25, "Save", self, HorseStatsEditor.onSave)
+    self.saveButton:initialise()
+    self.saveButton:instantiate()
+    self:addChild(self.saveButton)
+    
+
+    self.cancelButton = ISButton:new(self.width - 120, y, 100, 25, "Cancel", self, HorseStatsEditor.onCancel)
+    self.cancelButton:initialise()
+    self.cancelButton:instantiate()
+    self:addChild(self.cancelButton)
+end
+
+function HorseStatsEditor:onSave()
+    local newHealth = tonumber(self.healthEntry:getText()) or self.data.health
+    local newMaxHealth = tonumber(self.maxHealthEntry:getText()) or self.data.maxHealth
+    local newHunger = tonumber(self.hungerEntry:getText()) or self.data.hunger
+    local newThirst = tonumber(self.thirstEntry:getText()) or self.data.thirst
+    local newSpeed = tonumber(self.speedEntry:getText()) or self.data.speedModifier
+    
+    modifyModData(self.player, self.item, {
+        health = newHealth,
+        maxHealth = newMaxHealth,
+        hunger = newHunger,
+        thirst = newThirst,
+        speedModifier = newSpeed,
+    })
+    
+    self.player:Say("Horse stats updated.")
+    self:close()
+end
+
+function HorseStatsEditor:onCancel()
+    self:close()
+end
+
+function HorseStatsEditor:close()
+    self:setVisible(false)
+    self:removeFromUIManager()
+end
+
+function HorseStatsEditor:new(player, item)
+    local width = 280
+    local height = 300
+    local x = (getCore():getScreenWidth() - width) / 2
+    local y = (getCore():getScreenHeight() - height) / 2
+    
+    local o = ISPanel:new(x, y, width, height)
+    setmetatable(o, self)
+    self.__index = self
+    o.backgroundColor = {r=0.1, g=0.1, b=0.1, a=0.9}
+    o.borderColor = {r=0.5, g=0.5, b=0.5, a=1}
+    o.player = player
+    o.item = item
+    o.data = item:getModData()
+    o.moveWithMouse = true
+    return o
+end
+
+function openHorseStatsEditor(player, item)
+    local editor = HorseStatsEditor:new(player, item)
+    editor:initialise()
+    editor:addToUIManager()
 end
 
 

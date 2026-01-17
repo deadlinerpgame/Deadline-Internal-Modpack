@@ -11,13 +11,11 @@ function HorseMount:isValid()
         end
         return self.item:getWorldItem() ~= nil
     else
-        if not isItemTransactionConsistent(self.item, self.characterInv, self.floorInv) then
-            return false
-        end
+        -- Dismount: just check the horse is still worn and we have a valid square
         if self.character:getWornItem("Horse") ~= self.item then
             return false
         end
-        return true
+        return self.sq ~= nil
     end
 end
 
@@ -55,15 +53,14 @@ function HorseMount:perform()
         if worldItem then
             worldItem:setWorldZRotation(self.rotation)
             worldItem:getWorldItem():setIgnoreRemoveSandbox(true)
+            worldItem:getWorldItem():transmitCompleteItemToServer()
         end
-        worldItem:getWorldItem():transmitCompleteItemToServer()
         self.characterInv:Remove(self.item)
         self.character:setWornItem("Horse", nil, false)
-        removeItemTransaction(self.item, self.characterInv, self.floorInv)
         self.item:setJobDelta(0.0)
         triggerEvent("OnClothingUpdated", self.character)
         ISInventoryPage.renderDirty = true
-        self.itemInv:setDrawDirty(true)
+        self.characterInv:setDrawDirty(true)
 
 
     end
@@ -75,7 +72,7 @@ function HorseMount:new(character, item, mount, sq, xpos, ypos, zpos, rotation)
     o.item = item
     o.mount = mount
     o.sq = sq
-    o.character = getPlayer();
+    o.character = character
     o.characterInv = character:getInventory()
     o.itemInv = item:getContainer()
     o.xpos = xpos
