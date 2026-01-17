@@ -40,6 +40,7 @@ function OnRightClickTile(player, context, worldobjects)
                     local AleOption = context:addOption("Brew Ale", worldobjects, startAleProduction, player, object)
                     local WheatBeerOption = context:addOption("Brew Wheat Beer", worldobjects, startWheatBeerProduction, player, object)
                     local IPAOption = context:addOption("Brew Indian Pale Ale", worldobjects, startIPAProduction, player, object)
+                    local VodkaOption = context:addOption("Brew Vodka", worldobjects, startVodkaProduction, player, object)
                     local StoutTypesOption = context:insertOptionAfter(getText("Brew Indian Pale Ale"), getText("Brew Stout"));
                     local StoutTypesMenu = ISContextMenu:getNew(context);
                     context:addSubMenu(StoutTypesOption, StoutTypesMenu);  
@@ -70,6 +71,7 @@ function OnRightClickTile(player, context, worldobjects)
                     addTooltip(LemonFruitBeerOption, "Lemon Beer", {"1 x Hops", "2 x Wheat", "5 x Water", "1 x Yeast", "1 x Lemon"}, "16 hours")
                     addTooltip(AppleFruitBeerOption, "Apple Beer", {"1 x Hops", "2 x Wheat", "5 x Water", "1 x Yeast", "1 x Apple"}, "16 hours")
                     addTooltip(PearFruitBeerOption, "Pear Beer", {"1 x Hops", "2 x Wheat", "5 x Water", "1 x Yeast", "1 x Pear"}, "16 hours")
+                    addTooltip(VodkaOption, "Vodka", {"3 x Potatoes", "1 x Sugar", "5 x Water", "1 x Yeast"}, "16 hours")
             break
             elseif modData.BrewingType == 1 and isBrewComplete(modData.BrewingStartTime, 90) then
                 context:addOption("Bottle Lager", worldobjects, giveLager, player, object)
@@ -109,6 +111,8 @@ function OnRightClickTile(player, context, worldobjects)
             break
             elseif modData.BrewingType == 12 and isBrewComplete(modData.BrewingStartTime, 120) then
                 context:addOption("Bottle Pear Beer", worldobjects, giveBeerPear, player, object)
+            elseif modData.BrewingType == 13 and isBrewComplete(modData.BrewingStartTime, 120) then
+                context:addOption("Bottle Vodka", worldobjects, giveVodka, player, object)            
             break
             elseif modData.isBrewing == true then
                 local progresspercentage = getProductionProgress(modData.BrewingStartTime, modData.TimeNeeded)
@@ -1477,6 +1481,100 @@ end
 
 ----------
 
+function startVodkaProduction(worldobjects, player, tile)
+    local playerInventory = getSpecificPlayer(player):getInventory()
+    local requiredWaterUnits = 5
+    local sugarNeeded = 1
+    local potatoNeeded = 3
+    local yeastNeeded = 1
+    local totalWaterUnits = 0
+    local items = playerInventory:getItems()
+    local cookingLevel = getSpecificPlayer(player):getPerkLevel(Perks.Cooking)
+
+    if cookingLevel < 6 then
+        getSpecificPlayer(player):Say("I don't know how to do this.")
+        return
+    end
+
+    for i = 0, items:size() - 1 do
+        local item = items:get(i)
+        if isWaterContainer(item) then
+            totalWaterUnits = totalWaterUnits + calculateTotalWaterUnits(item)
+        end
+    end
+
+    if totalWaterUnits < requiredWaterUnits then
+        getSpecificPlayer(player):Say("I don't have enough water.")
+        return
+    end
+
+    local SugarCount = playerInventory:getItemCountFromTypeRecurse("base.Sugar") -- addd different types of sugar? Brown? - Milo
+    if SugarCount < sugarNeeded then
+        getSpecificPlayer(player):Say("I need more sugar to start production.")
+        return
+    end
+    local PotatoCount = playerInventory:getItemCountFromTypeRecurse("farming.Potato")
+    if PotatoCount < potatoNeeded then
+        getSpecificPlayer(player):Say("I need more potatos to start production.")
+        return
+    end
+    local YeastCount = playerInventory:getItemCountFromTypeRecurse("Base.Yeast")
+    if YeastCount < yeastNeeded then
+        getSpecificPlayer(player):Say("I need more yeast to start production.")
+        return
+    end
+
+    local remainingWaterUnits = requiredWaterUnits
+    for i = 0, items:size() - 1 do
+        local item = items:get(i)
+        if isWaterContainer(item) then
+            local availableWaterUnits = calculateTotalWaterUnits(item)
+            if availableWaterUnits >= remainingWaterUnits then
+                local useDelta = item:getUseDelta()
+                item:setUsedDelta(item:getUsedDelta() - (remainingWaterUnits / (1 / useDelta)))
+                remainingWaterUnits = 0
+                break
+            else
+                local useDelta = item:getUseDelta()
+                item:setUsedDelta(item:getUsedDelta() - (availableWaterUnits / (1 / useDelta)))
+                remainingWaterUnits = remainingWaterUnits - availableWaterUnits
+            end
+        end
+    end
+
+    -- Consume hops
+    for i = 1, hopsNeeded do
+        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        if hopsItem then
+            playerInventory:Remove(hopsItem)
+        end
+    end
+    for i = 1, wheatNeeded do
+        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        if wheatItem then
+            playerInventory:Remove(wheatItem)
+        end
+    end
+    for i = 1, yeastNeeded do
+        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        if yeastItem then
+            playerInventory:Remove(yeastItem)
+        end
+    end
+
+    local modData = tile:getModData()
+    modData.isBrewing = true
+    modData.BrewingStartTime = getGameTime():getWorldAgeHours()
+    modData.BrewingType = 13
+    modData.TimeNeeded = 45
+    local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
+    activeBrewingTiles[tileID] = true
+    tile:transmitModData()
+    getSpecificPlayer(player):Say("Production started!")
+end
+
+----------
+
 function isBrewComplete(startTime, timeToProduce)
     return getGameTime():getWorldAgeHours() >= startTime + (timeToProduce)
 end
@@ -1915,6 +2013,30 @@ function giveBeerPear(worldobjects, player, tile)
     inv:AddItem('Deadline.BeerFruitPear')
     inv:AddItem('Deadline.BeerFruitPear')
     inv:AddItem('Deadline.BeerFruitPear')
+    local modData = tile:getModData()
+    modData.isBrewing = false
+    tile:transmitModData()
+end
+
+function giveVodka(worldobjects, player, tile)
+    local player = getSpecificPlayer(0)
+    local inv = player:getInventory()
+    local bottleCount = inv:getItemCountFromTypeRecurse("Base.BeerEmpty")
+    if bottleCount < 4 then
+        getSpecificPlayer(0):Say("I need 4 empty vine bottles.")
+        return
+    end
+    -- Consume hops
+    for i = 1, 4 do
+        local bottleItem = inv:getFirstType("Base.BeerEmpty") -- use a wine bottle item instead - Milo
+        if bottleItem then
+            inv:Remove(bottleItem)
+        end
+    end
+    inv:AddItem('Deadline.Vodka')
+    inv:AddItem('Deadline.Vodka')
+    inv:AddItem('Deadline.Vodka')
+    inv:AddItem('Deadline.Vodka')
     local modData = tile:getModData()
     modData.isBrewing = false
     tile:transmitModData()
