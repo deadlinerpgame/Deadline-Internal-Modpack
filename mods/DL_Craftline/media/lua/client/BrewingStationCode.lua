@@ -1542,17 +1542,17 @@ function startVodkaProduction(worldobjects, player, tile)
         end
     end
 
-    -- Consume hops
-    for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
-        if hopsItem then
-            playerInventory:Remove(hopsItem)
+    -- Consume sugar
+    for i = 1, sugarNeeded do
+        local sugarItem = playerInventory:getFirstType("Base.Sugar")
+        if sugarItem then
+            playerInventory:Remove(sugarItem)
         end
     end
-    for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
-        if wheatItem then
-            playerInventory:Remove(wheatItem)
+    for i = 1, potatoNeeded do
+        local potatoItem = playerInventory:getFirstType("farming.Potato")
+        if potatoItem then
+            playerInventory:Remove(potatoItem)
         end
     end
     for i = 1, yeastNeeded do
@@ -2021,14 +2021,14 @@ end
 function giveVodka(worldobjects, player, tile)
     local player = getSpecificPlayer(0)
     local inv = player:getInventory()
-    local bottleCount = inv:getItemCountFromTypeRecurse("Base.BeerEmpty")
+    local bottleCount = inv:getItemCountFromTypeRecurse("Base.WhiskeyEmpty")
     if bottleCount < 4 then
-        getSpecificPlayer(0):Say("I need 4 empty vine bottles.")
+        getSpecificPlayer(0):Say("I need 4 empty whiskey bottles.")
         return
     end
     -- Consume hops
     for i = 1, 4 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty") -- use a wine bottle item instead - Milo
+        local bottleItem = inv:getFirstType("Base.WhiskeyEmpty")
         if bottleItem then
             inv:Remove(bottleItem)
         end
