@@ -148,11 +148,11 @@ local function initBuildingMenuRecipes()
             {
                 {
                     Material = "Base.MetalBar",
-                    Amount = 2
+                    Amount = 1
                 },
                 {
                     Material = "Base.MetalPipe",
-                    Amount = 2
+                    Amount = 1
                 },
             },
             {
@@ -177,11 +177,11 @@ local function initBuildingMenuRecipes()
             },
             {
                 Consumable = "Base.BlowTorch",
-                Amount = 2
+                Amount = 1
             },
             {
                 Consumable = "Base.WeldingRods",
-                Amount = BuildingMenu.weldingRodUses(2)
+                Amount = BuildingMenu.weldingRodUses(1)
             }
         },
         skills = {
@@ -210,16 +210,6 @@ local function initBuildingMenuRecipes()
         neededMaterials = {
             {
                 {
-                    Material = "Base.MetalBar",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 1
-                },
-            },
-            {
-                {
                     Material = "Base.Tarp",
                     Amount = 1
                 },
@@ -238,14 +228,6 @@ local function initBuildingMenuRecipes()
                 Consumable = "Base.Thread",
                 Amount = 3
             },
-            {
-                Consumable = "Base.BlowTorch",
-                Amount = 2
-            },
-            {
-                Consumable = "Base.WeldingRods",
-                Amount = BuildingMenu.weldingRodUses(2)
-            }
         },
         skills = {
             {
@@ -273,16 +255,6 @@ local function initBuildingMenuRecipes()
         neededMaterials = {
             {
                 {
-                    Material = "Base.MetalBar",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 1
-                },
-            },
-            {
-                {
                     Material = "Base.Tarp",
                     Amount = 1
                 },
@@ -304,14 +276,6 @@ local function initBuildingMenuRecipes()
                 Consumable = "Base.Thread",
                 Amount = 3
             },
-            {
-                Consumable = "Base.BlowTorch",
-                Amount = 2
-            },
-            {
-                Consumable = "Base.WeldingRods",
-                Amount = BuildingMenu.weldingRodUses(2)
-            }
         },
         skills = {
             {
@@ -342,11 +306,11 @@ local function initBuildingMenuRecipes()
             {
                 {
                     Material = "Base.MetalBar",
-                    Amount = 2
+                    Amount = 1
                 },
                 {
                     Material = "Base.MetalPipe",
-                    Amount = 2
+                    Amount = 1
                 },
             },
             {
@@ -371,11 +335,11 @@ local function initBuildingMenuRecipes()
             },
             {
                 Consumable = "Base.BlowTorch",
-                Amount = 2
+                Amount = 1
             },
             {
                 Consumable = "Base.WeldingRods",
-                Amount = BuildingMenu.weldingRodUses(2)
+                Amount = BuildingMenu.weldingRodUses(1)
             }
         },
         skills = {
@@ -404,16 +368,6 @@ local function initBuildingMenuRecipes()
         neededMaterials = {
             {
                 {
-                    Material = "Base.MetalBar",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 1
-                },
-            },
-            {
-                {
                     Material = "Base.Tarp",
                     Amount = 1
                 },
@@ -432,14 +386,6 @@ local function initBuildingMenuRecipes()
                 Consumable = "Base.Thread",
                 Amount = 3
             },
-            {
-                Consumable = "Base.BlowTorch",
-                Amount = 2
-            },
-            {
-                Consumable = "Base.WeldingRods",
-                Amount = BuildingMenu.weldingRodUses(2)
-            }
         },
         skills = {
             {
@@ -467,16 +413,6 @@ local function initBuildingMenuRecipes()
         neededMaterials = {
             {
                 {
-                    Material = "Base.MetalBar",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 1
-                },
-            },
-            {
-                {
                     Material = "Base.Tarp",
                     Amount = 1
                 },
@@ -498,14 +434,6 @@ local function initBuildingMenuRecipes()
                 Consumable = "Base.Thread",
                 Amount = 3
             },
-            {
-                Consumable = "Base.BlowTorch",
-                Amount = 2
-            },
-            {
-                Consumable = "Base.WeldingRods",
-                Amount = BuildingMenu.weldingRodUses(2)
-            }
         },
         skills = {
             {
@@ -6991,13 +6919,13 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 6,
-                Xp = BuildingMenu.round(5 * metalweldingXpPerLevel)
+                Level = 4,
+                Xp = BuildingMenu.round(4 * metalweldingXpPerLevel)
             },
             {
                 Skill = "Electricity",
-                Level = 5,
-                Xp = BuildingMenu.round(5 * electricalXpPerLevel)
+                Level = 8,
+                Xp = BuildingMenu.round(8 * electricalXpPerLevel)
             },
         }
     }
@@ -7040,13 +6968,8 @@ local function initBuildingMenuRecipes()
         },
         skills = {
             {
-                Skill = "MetalWelding",
-                Level = 6,
-                Xp = BuildingMenu.round(6 * metalweldingXpPerLevel)
-            },
-            {
                 Skill = "Electricity",
-                Level = 4,
+                Level = 6,
                 Xp = BuildingMenu.round(4 * electricalXpPerLevel)
             },
         }
@@ -7090,13 +7013,8 @@ local function initBuildingMenuRecipes()
         },
         skills = {
             {
-                Skill = "MetalWelding",
-                Level = 7,
-                Xp = BuildingMenu.round(7 * metalweldingXpPerLevel)
-            },
-            {
                 Skill = "Electricity",
-                Level = 5,
+                Level = 8,
                 Xp = BuildingMenu.round(5 * electricalXpPerLevel)
             },
         }
@@ -7140,13 +7058,8 @@ local function initBuildingMenuRecipes()
         },
         skills = {
             {
-                Skill = "MetalWelding",
-                Level = 8,
-                Xp = BuildingMenu.round(8 * metalweldingXpPerLevel)
-            },
-            {
                 Skill = "Electricity",
-                Level = 6,
+                Level = 10,
                 Xp = BuildingMenu.round(6 * electricalXpPerLevel)
             },
         }
@@ -7582,8 +7495,8 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Electricity",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * electricalXpPerLevel)
+                Level = 8,
+                Xp = BuildingMenu.round(8 * electricalXpPerLevel)
             }
         }
     }
