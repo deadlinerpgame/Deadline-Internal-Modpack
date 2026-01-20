@@ -114,3 +114,11 @@ WRC.SpecialCommands["/createmannequin"] = {
    help = "Allows admins/STs to create mannequins for roleplay.",
    adminOnly = false,
 }
+
+WRC.SpecialCommands["/cman"] = {
+   handler = "CreateMannequin",
+   tabHandlers = {},
+   usage = "/cman",
+   help = "Allows admins/STs to create mannequins for roleplay.",
+   adminOnly = false,
+}

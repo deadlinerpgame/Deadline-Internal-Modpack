@@ -782,7 +782,10 @@ function WRC.Commands.Coords()
     local x = math.floor(player:getX())
     local y = math.floor(player:getY())
     local z = math.floor(player:getZ())
-    WL_Utils.addInfoToChat(player:getUsername() .. " is at " .. x .. ", " .. y .. ", " .. z)
+
+    local coordsString = string.format("/teleportto %0d,%0d,%0d", x, y, z);
+    WL_Utils.addInfoToChat(player:getUsername() .. " is at " .. x .. ", " .. y .. ", " .. z .. " - coordinates copied to clipboard.");
+    Clipboard.setClipboard(coordsString);
 end
 
 
@@ -887,3 +890,4 @@ function WRC.TabHandlers.RadioFrequencies(text)
     end
     return WRC.TabListHandler(frequencies, text)
 end
+
