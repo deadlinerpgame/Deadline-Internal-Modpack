@@ -2,8 +2,8 @@ if not isClient() then return end;
 WRC = WRC or {};
 WRC.Parsing = WRC.Parsing or {};
 
-local original_parsing = WRC.Parsing.ParseMessage;
-function WRC.Parsing.ParseMessage(message)
+--local original_parsing = WRC.Parsing.ParseMessage;
+--[[function WRC.Parsing.ParseMessage(message)
     local returnedMessage = original_parsing(message);
     if not returnedMessage.playerUsername then return returnedMessage end;
 
@@ -24,4 +24,4 @@ function WRC.Parsing.ParseMessage(message)
     end
 
     return returnedMessage;
-end
+end--]]
