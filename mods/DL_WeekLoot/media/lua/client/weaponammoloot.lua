@@ -104,6 +104,7 @@ local function onEveryHour()
         if modData.lootcountertimer >= 650 then
             modData.lootcounter = 0
             modData.lootcountertimer = nil
+            modData.lootcounter_timestamp = nil
         end
     end
 end
