@@ -6,6 +6,8 @@ local original_parsing = WRC.Parsing.ParseMessage;
 function WRC.Parsing.ParseMessage(message)
     local returnedMessage = original_parsing(message);
 
+    if not returnedMessage or not returnedMessage.playerUsername then return end;
+
     if returnedMessage and returnedMessage.chatType ~= "shout" and returnedMessage.chatType ~= "whisper" then
 
         local username = parsedMessage.playerUsername;
@@ -15,7 +17,7 @@ function WRC.Parsing.ParseMessage(message)
         local defaultRadius = WRC.ChatTypes[returnedMessage.chatType].xyRange;
         local currentDifference = getPlayer():getDistanceSq(sourcePlayer);
 
-        if currentDifference / defaultRadius > 0.33 then
+        if currentDifference / defaultRadius > 0.45 then
             for i, v in ipairs(returnedMessage.parts) do
                 returnedMessage.parts[i].type = "textmuted";
             end
