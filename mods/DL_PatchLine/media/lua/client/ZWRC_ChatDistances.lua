@@ -5,8 +5,6 @@ WRC.Parsing = WRC.Parsing or {};
 local original_parsing = WRC.Parsing.ParseMessage;
 function WRC.Parsing.ParseMessage(message)
     local returnedMessage = original_parsing(message);
-    if not returnedMesasge then return message end;
-
     if not returnedMessage.playerUsername then return returnedMessage end;
 
     if returnedMessage and returnedMessage.chatType ~= "shout" and returnedMessage.chatType ~= "whisper" then
