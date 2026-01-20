@@ -1,13 +1,5 @@
 if (not isClient()) or (not isAdmin()) then return end;
 
-local _original_onGear = ISChat.onGearButtonClick;
-function ISChat:onGearButtonClick()
-    _original_onGear(self);
-
-    local context = getPlayerContextMenu(0);
-    runicOptions_onGearButtonClick(context);
-end
-
 local function runicOptions_enableIgnore()
     if not isAdmin() then return end;
 
@@ -33,6 +25,7 @@ local function runicOptions_disableIgnore()
     getPlayer():setGhostMode(false);
 end
 
+
 local function runicOptions_onGearButtonClick(context)
     if not isAdmin() then return end;
 
@@ -55,6 +48,17 @@ local function runicOptions_onGearButtonClick(context)
 
     return;
 end
+
+local _original_onGear = ISChat.onGearButtonClick;
+function ISChat:onGearButtonClick()
+    _original_onGear(self);
+
+    local context = getPlayerContextMenu(0);
+    runicOptions_onGearButtonClick(context);
+end
+
+
+
 
 local varsResetThisLogin = false;
 

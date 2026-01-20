@@ -9,9 +9,9 @@ function WRC.Parsing.ParseMessage(message)
 
     if returnedMessage and returnedMessage.chatType ~= "shout" and returnedMessage.chatType ~= "whisper" then
 
-        local username = parsedMessage.playerUsername;
+        local username = returnedMessage.playerUsername;
         if username == getPlayer():getUsername() then return returnedMesssage end; -- Only dim if not your own message.
-        local sourcePlayer = getPlayerFromUsername(parsedMessage.playerUsername);
+        local sourcePlayer = getPlayerFromUsername(returnedMessage.playerUsername);
 
         local defaultRadius = WRC.ChatTypes[returnedMessage.chatType].xyRange;
         local currentDifference = getPlayer():getDistanceSq(sourcePlayer);
