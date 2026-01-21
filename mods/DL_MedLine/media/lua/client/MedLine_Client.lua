@@ -199,9 +199,43 @@ function MedLine_Client.hasPrevChangedBloodType()
     return bloodData.hasPrevChangedBloodType;
 end
 
+function MedLine_Client.isInExclusionZone()
+    -- If within 100 tiles of spawn or under 5 hours.
+
+    if getPlayer():getHoursSurvived() < 5 then return true end;
+
+    local exclusionZones =
+    {
+        {13033,5423,0},
+        {11167,2271,1},
+        {10478,3863,0},
+        {16477,5744,0}
+    };
+
+    for i, _ in ipairs(exclusionZones) do
+        local zone = exclusionZones[i];
+
+        if zone then
+            local currentX, currentY = player:getX(), player:getY();
+            local exclusionX, exclusionY = zone[1], zone[2];
+
+            local distanceX = exclusionX - currentX;
+            local distanceY = exclusionY - currentY;
+
+            local distSq = (distanceX * distanceX + distanceY * distanceY);
+
+            if distSq < 100 then return true end;
+        end
+    end
+
+    return false;
+end
+
 function MedLine_Client.setHasLapsedBelowThreshold(timeInDays)
     local bloodData = MedLine_Client.getBloodData();
     if not bloodData then return end;
+
+    if MedLine_Client.isInExclusionZone() then return end;
 
     if not timeInDays then timeInDays = (SandboxVars.MedLine.BloodLoss_RecoveryTimeDays or 14) end;
 
@@ -269,6 +303,12 @@ end
 function MedLine_Client.setHasRecoveredFromBloodLoss()
     local bloodData = MedLine_Client.getBloodData();
     if not bloodData then return end;
+
+    local bloodLossMoodle = MF.getMoodle("BloodLoss", getPlayer():getPlayerNum());
+    bloodLossMoodle:setValue(0.5);
+
+    local bloodTransfusionMoodle = MF.getMoodle("BloodTransfusion", getPlayer():getPlayerNum());
+    bloodTransfusionMoodle:setValue(0.5);
 
     bloodData.bloodLossStartedUnix = nil;
     bloodData.bloodLossTimeoutUnix = nil;

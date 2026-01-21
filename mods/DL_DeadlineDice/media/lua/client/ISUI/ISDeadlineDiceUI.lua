@@ -2365,9 +2365,9 @@ function ISDeadlineDiceUI:getScore(labelText)
     localtext = playerName .. " rolls for: " .. labelText
     sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {loggerName = "Dice", logText = localtext})
     if editedLabel == "DicewithDeath" then
-    resultString = "Rolled " .. tostring(diceScore6)
+        resultString = "Rolled " .. tostring(diceScore6)
     else
-    resultString = "Rolled " .. tostring(diceScore)
+        resultString = "Rolled " .. tostring(diceScore)
     end
 
     -- Construct the modifiers string
@@ -2380,7 +2380,7 @@ function ISDeadlineDiceUI:getScore(labelText)
     end
 
     -- Blood loss string.
-    if getPlayer():getModData().MedLine and getPlayer():getModData().MedLine.BloodData then
+    if editedLabel ~= "DicewithDeath" and getPlayer():getModData().MedLine and getPlayer():getModData().MedLine.BloodData and (not isAdmin()) then
         local bloodData = getPlayer():getModData().MedLine.BloodData;
         if bloodData.bloodLossTimeoutUnix and bloodData.bloodLossTimeoutUnix > getTimestamp() then
             local lossModifier = (SandboxVars.MedLine.BloodLoss_DiceRollDisadvantage or 2);

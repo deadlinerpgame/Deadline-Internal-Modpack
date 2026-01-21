@@ -21,11 +21,9 @@ function MedLine_Events.EveryOneMinute()
             return; -- If not, terminate here so that it can be created safely to prevent errors.
         end
 
-        if bloodData then
-            MedLine_Client.saveMedicalData();
-            ModData.request(MedLine_Dict.ModDataKeys.UserData);
-            HasCheckedForCachedMedicalData = true;
-        end
+        MedLine_Client.saveMedicalData();
+        ModData.request(MedLine_Dict.ModDataKeys.UserData);
+        HasCheckedForCachedMedicalData = true;
     end
 
     local bodyDamage = player:getBodyDamage();
@@ -162,6 +160,7 @@ function MedLine_Events.onClickDiceHpModal(player, btn)
         message = getPlayer():getDescriptor():getForename() .. " is now suffering from blood loss.";
         MedLine_Client.initiateBloodLossStart(SandboxVars.MedLine.BloodLoss_RecoveryTimeDaysPVP or 5);
         getPlayer():getModData().MedLine.BloodData.bloodLossCausedByPVP = true;
+        getPlayer():getModData().MedLine.BloodData.diceBLPopupGiven = nil;
     end;
 
     local args =
