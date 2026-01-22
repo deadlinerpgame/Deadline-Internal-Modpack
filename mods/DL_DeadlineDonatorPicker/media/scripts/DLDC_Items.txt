@@ -13,4 +13,31 @@ module Deadline_DonatorClothes
         Icon            =       DonatorTicket,
         Tooltip         =       Tooltip_ClothingTicket,
     }
+
+    item DLDC_ItemLootTicket_Unset
+    {
+        Type            =       Normal,
+        DisplayCategory =       LootTickets,
+        DisplayName     =       Loot Ticket (not set),
+        Icon            =       DonatorTicket,
+        Tooltip         =       Tooltip_LootTicket_NotSet,
+    }
+
+    item DLDC_ItemLootTicket_Set
+    {
+        Type            =       Normal,
+        DisplayCategory =       LootTickets,
+        DisplayName     =       Loot Ticket (set),
+        Icon            =       DonatorTicket,
+        Tooltip         =       Tooltip_LootTicket_Set,
+    }
+
+    item DLDC_ItemLootTicket_SetRestricted
+    {
+        Type            =       Normal,
+        DisplayCategory =       LootTickets,
+        DisplayName     =       Loot Ticket (set, restricted),
+        Icon            =       DonatorTicket,
+        Tooltip         =       Tooltip_LootTicket_SetRestricted,
+    }
 }
