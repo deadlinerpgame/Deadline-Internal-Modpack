@@ -1,0 +1,96 @@
+module aerx {
+  imports {
+      Base
+ }
+item T3PistolMag
+    {
+        DisplayCategory = Ammo,
+        CanStack	=	FALSE,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Refined Scrap Pistol Magazine,
+        Icon	=	BerettaClip,
+        MaxAmmo = 7,
+        AmmoType = aerx.T3AmmoPistol,
+        StaticModel = GunMagazine,
+        GunType = Base.T3Pistol,
+        WorldStaticModel = Gun_Magazine_Ground,
+    }
+
+item T3RevolverMag
+    {
+        DisplayCategory = Ammo,
+        CanStack	=	FALSE,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Refined Scrap Revolver Magazine,
+        Icon	=	BerettaClip,
+        MaxAmmo = 5,
+        AmmoType = aerx.T3AmmoPistol,
+        StaticModel = GunMagazine,
+        GunType = Base.T3Revolver,
+        WorldStaticModel = Gun_Magazine_Ground,
+    }
+
+item T3SMGMag
+    {
+        DisplayCategory = Ammo,
+        CanStack	=	FALSE,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Refined Scrap SMG Magazine,
+        Icon	=	308_Mag2,
+        MaxAmmo = 20,
+        AmmoType = aerx.T3AmmoSMG,
+        StaticModel = GunMagazine,
+        GunType = aerx.T3SMG,
+        WorldStaticModel = Gun_Magazine_Ground,
+    }
+
+
+item T3RifleMag
+    {
+        DisplayCategory = Ammo,
+        CanStack	=	FALSE,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Refined Scrap Rifle Magazine,
+        Icon	=	308_Mag2,
+        MaxAmmo = 15,
+        AmmoType = aerx.T3AmmoRifle,
+        StaticModel = GunMagazine,
+        GunType = aerx.T3Rifle,
+        WorldStaticModel = Gun_Magazine_Ground,
+    }
+
+item T3SniperMag
+    {
+        DisplayCategory = Ammo,
+        CanStack	=	FALSE,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Refined Scrap Sniper Magazine,
+        Icon	=	308_Mag2,
+        MaxAmmo = 5,
+        AmmoType = aerx.T3AmmoSniper,
+        StaticModel = GunMagazine,
+        GunType = aerx.T3Sniper,
+        WorldStaticModel = Gun_Magazine_Ground,
+    }
+
+item T3MGMag
+    {
+        DisplayCategory = Ammo,
+        CanStack	=	FALSE,
+        Weight	=	0.2,
+        Type	=	Normal,
+        DisplayName	=	Refined Scrap Machine Gun Magazine,
+        Icon	=	308_Mag2,
+        MaxAmmo = 50,
+        AmmoType = aerx.T3AmmoMG,
+        StaticModel = GunMagazine,
+        GunType = aerx.T3MG,
+        WorldStaticModel = Gun_Magazine_Ground,
+    }
+
+}
