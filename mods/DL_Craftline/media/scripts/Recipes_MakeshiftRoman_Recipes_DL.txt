@@ -1,0 +1,242 @@
+module Base
+{
+	imports
+	{
+		Base,
+	}
+	
+    	/************************ Roman ************************/
+
+	recipe Make Roman Dress
+	{
+		FabricRoll,
+		keep Scissors,
+		NearItem:TailoringWorkbench,
+		Result 		: Dress_Roman,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Roman Dress with White Toga
+	{
+		FabricRoll=2,
+		keep Scissors,
+		NearItem:TailoringWorkbench,
+		Result 		: Dress_Toga,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Roman Dress with Red Toga
+	{
+		FabricRoll,
+		FabricRollRed,
+		keep Scissors,
+		NearItem:TailoringWorkbench,
+		Result 		: Dress_Toga,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingRed,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Roman Dress with Green Toga
+	{
+		FabricRoll,
+		FabricRollGreen,
+		keep Scissors,
+		NearItem:TailoringWorkbench,
+		Result 		: Dress_Toga,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGreen,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Roman Dress with Blue Toga
+	{
+		FabricRoll,
+		FabricRollBlue,
+		keep Scissors,
+		NearItem:TailoringWorkbench,
+		Result 		: Dress_Toga,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBlue,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Roman Dress with Brown Toga
+	{
+		FabricRoll,
+		FabricRollBrown,
+		keep Scissors,
+		NearItem:TailoringWorkbench,
+		Result 		: Dress_Toga,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBrown,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Roman Dress with Grey Toga
+	{
+		FabricRoll,
+		FabricRollGrey,
+		keep Scissors,
+		NearItem:TailoringWorkbench,
+		Result 		: Dress_Toga,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGrey,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Roman Tunic
+	{
+		FabricRoll,
+		keep Scissors,
+		NearItem:TailoringWorkbench,
+		Result 		: Jumper_RomanTunicNoScarf,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Roman White Emperor Tunic
+	{
+		FabricRoll=2,
+		keep Scissors,
+		NearItem:TailoringWorkbench,
+		Result 		: Jumper_EmperorTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Roman Red Emperor Tunic
+	{
+		FabricRoll,
+		FabricRollRed,
+		keep Scissors,
+		NearItem:TailoringWorkbench,
+		Result 		: Jumper_EmperorTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingRed,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Roman Green Emperor Tunic
+	{
+		FabricRoll,
+		FabricRollGreen,
+		keep Scissors,
+		NearItem:TailoringWorkbench,
+		Result 		: Jumper_EmperorTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGreen,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Roman Blue Emperor Tunic
+	{
+		FabricRoll,
+		FabricRollBlue,
+		keep Scissors,
+		Jumper_EmperorTunic
+		Result 		: Jumper_EmperorTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBlue,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Roman Brown Emperor Tunic
+	{
+		FabricRoll,
+		FabricRollBrown,
+		keep Scissors,
+		Jumper_EmperorTunic
+		Result 		: Jumper_EmperorTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBrown,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Roman Grey Emperor Tunic
+	{
+		FabricRoll,
+		FabricRollGrey,
+		keep Scissors,
+		Jumper_EmperorTunic
+		Result 		: Jumper_EmperorTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGrey,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Leather Sandals
+	{
+		LeatherStrips,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		Thread=1,
+		Result 		: Shoes_LeatherSandals,
+		Sound 		: ClothesRipping,
+		Time 		: 100.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=1,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+
+}

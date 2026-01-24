@@ -1,0 +1,767 @@
+module Base
+{
+	imports
+	{
+		Base,
+	}
+	
+    	/************************ Medieval ************************/
+
+	recipe Make Used Apron
+	{
+		FabricRoll=1,
+	    	Thread=1,
+		keep Needle,
+		Result 		: Apron_Used,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=2,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Corset Dress
+	{
+		FabricRoll=2,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_Corset,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make White Laced Dress
+	{
+		FabricRoll=2,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_LacedRed,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingWhite,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Red Laced Dress
+	{
+		FabricRollRed=1,
+		FabricRoll=1,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_LacedRed,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingRed,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Green Laced Dress
+	{
+		FabricRollGreen=1,
+		FabricRoll=1,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_LacedRed,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGreen,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Blue Laced Dress
+	{
+		FabricRollBlue=1,
+		FabricRoll=1,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_LacedRed,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBlue,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Brown Laced Dress
+	{
+		FabricRollBrown=1,
+		FabricRoll=1,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_LacedRed,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBrown,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Grey Laced Dress
+	{
+		FabricRollGrey=1,
+		FabricRoll=1,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_LacedRed,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGrey,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Long Belt White Dress
+	{
+		FabricRoll=2,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_LongBelt,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingWhite,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Long Belt Red Dress
+	{
+		FabricRollRed=2,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_LongBelt,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingRed,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Long Belt Green Dress
+	{
+		FabricRollGreen=2,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_LongBelt,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGreen,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Long Belt Blue Dress
+	{
+		FabricRollBlue=2,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_LongBelt,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBlue,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make Long Belt Brown Dress
+	{
+		FabricRollBrown=2,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_LongBelt,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBrown,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make Long Belt Grey Dress
+	{
+		FabricRollGrey=2,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_LongBelt,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGrey,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make Medieval Dress
+	{
+		FabricRoll=1,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Dress_Medieval,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make White Peasant Dress
+	{
+		FabricRoll=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Dress_Peasant,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingWhite,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make Red Peasant Dress
+	{
+		FabricRollRed=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Dress_Peasant,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingRed,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make Green Peasant Dress
+	{
+		FabricRollGreen=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Dress_Peasant,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGreen,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make Blue Peasant Dress
+	{
+		FabricRollBlue=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Dress_Peasant,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBlue,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make Brown Peasant Dress
+	{
+		FabricRollBrown=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Dress_Peasant,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBrown,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make Grey Peasant Dress
+	{
+		FabricRollGrey=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Dress_Peasant,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGrey,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make White Peasant Skirt
+	{
+		FabricRoll=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Dress_PeasantShirt,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingWhite,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make Red Peasant Skirt
+	{
+		FabricRollRed=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Dress_PeasantShirt,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingRed,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make Green Peasant Skirt
+	{
+		FabricRollGreen=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Dress_PeasantShirt,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGreen,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make Blue Peasant Skirt
+	{
+		FabricRollBlue=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Dress_PeasantShirt,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBlue,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make Brown Peasant Skirt
+	{
+		FabricRollBrown=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Dress_PeasantShirt,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBrown,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+		recipe Make Grey Peasant Skirt
+	{
+		FabricRollGrey=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Dress_PeasantShirt,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGrey,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Nice White Tunic
+	{
+		FabricRoll=1,
+		Thread=2,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Jumper_NiceTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingWhite,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Nice Red Tunic
+	{
+		FabricRollRed=1,
+		Thread=2,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Jumper_NiceTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingRed,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Nice Green Tunic
+	{
+		FabricRollGreen=1,
+		Thread=2,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Jumper_NiceTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGreen,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Nice Blue Tunic
+	{
+		FabricRollBlue=1,
+		Thread=2,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Jumper_NiceTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBlue,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Nice Brown Tunic
+	{
+		FabricRollBrown=1,
+		Thread=2,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Jumper_NiceTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBrown,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Nice Grey Tunic
+	{
+		FabricRollGrey=1,
+		Thread=2,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Jumper_NiceTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGrey,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Peasant White Tunic
+	{
+		FabricRoll=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Jumper_PeasantTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingWhite,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Peasant Red Tunic
+	{
+		FabricRollRed=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Jumper_PeasantTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingRed,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Peasant Green Tunic
+	{
+		FabricRollGreen=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Jumper_PeasantTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGreen,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Peasant Blue Tunic
+	{
+		FabricRollBlue=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Jumper_PeasantTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBlue,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Peasant Brown Tunic
+	{
+		FabricRollBrown=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Jumper_PeasantTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingBrown,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Peasant Grey Tunic
+	{
+		FabricRollGrey=1,
+		Thread=1,
+		keep Needle,
+		Result 		: Jumper_PeasantTunic,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		OnCreate: Yaki_Recipes.OnCreate.DyeClothingGrey,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Leather Rus Pants
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Pants_Leather,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Rus Pants
+	{
+		FabricRoll=1,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Pants_Medieval,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Medieval Hood
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Poncho_MedievalHood,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Corset Shirt
+	{
+		FabricRoll=1,
+		LeatherStrips=2,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Shirt_Corset,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Laced Collar Shirt
+	{
+		FabricRoll=1,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Shirt_LacedCollar,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Leather Shirt
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Shirt_Leather,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Leather Shoes
+	{
+		LeatherStrips=2,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Shoes_Leather,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+	recipe Make Medieval Boots
+	{
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=1,,
+		Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		
+		Result 		: Shoes_MedievalBoots,
+		Sound 		: ClothesRipping,
+		Time 		: 50.0,
+		Category    :  Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		SkillRequired:Tailoring=6,
+		Override:true,
+		AnimNode 		: RipSheets,
+	}
+
+}
