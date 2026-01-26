@@ -1,0 +1,139 @@
+module Base
+{
+	model ChinookBase
+	{
+		mesh = vehicles/chinook,
+		shader = vehicle,
+		invertX = FALSE,
+		scale = 0.7,
+	}
+	model ChinookBBase
+	{
+		mesh = vehicles/chinook_b,
+		shader = vehicle,
+		invertX = FALSE,
+		scale = 0.7,
+	}
+	vehicle Chinook
+	{
+		mechanicType = 1,
+		offRoadEfficiency = 0.8,
+		engineRepairLevel = 4,
+		playerDamageProtection = 1,
+
+		model
+		{
+			file = ChinookBase,
+			scale = 0.8500,
+			offset = 0.0235 -0.1176 -0.1882,
+		}
+
+		skin
+		{
+			texture = Vehicles/chinook,
+		}
+
+		textureRust = Vehicles/null,
+		textureMask = Vehicles/null,
+		textureLights = Vehicles/null,
+		textureDamage1Overlay = Vehicles/null,
+		textureDamage1Shell = Vehicles/null,
+		textureDamage2Overlay = Vehicles/null,
+		textureDamage2Shell = Vehicles/null,
+
+		sound
+		{
+			horn = vehicle_horn1,
+		}
+
+		extents = 3.7412 0.8706 16.0235,
+		mass = 2900,
+		physicsChassisShape = 3.8588 0.8471 17.0353,
+		centerOfMassOffset = 0.0000 0.3176 0.0118,
+		shadowExtents = 2.5745 5.7520,
+		shadowOffset = 0.0000 0.0078,
+		engineForce = 5000,
+		engineQuality = 80,
+		engineLoudness = 65,
+		maxSpeed = 80f,
+		gearRatioCount = 3,
+		gearRatioR = 7.09,
+		gearRatio1 = 7.44,
+		gearRatio2 = 2.29,
+		gearRatio3 = 1,
+		brakingForce = 50,
+		rollInfluence = 0.9f,
+		steeringIncrement = 0.04,
+		steeringClamp = 0.3,
+		suspensionStiffness = 40,
+		suspensionCompression = 1.83,
+		suspensionDamping = 0.88,
+		maxSuspensionTravelCm = 10,
+		suspensionRestLength = 0.2,
+		wheelFriction = 1.4f,
+		frontEndHealth = 150,
+		rearEndHealth = 150,
+		seats = 0,
+	}
+	vehicle ChinookB
+	{
+		mechanicType = 1,
+		offRoadEfficiency = 0.8,
+		engineRepairLevel = 4,
+		playerDamageProtection = 1,
+
+		model
+		{
+			file = ChinookBBase,
+			scale = 0.8500,
+			offset = 0.0235 -0.1176 -0.1882,
+		}
+
+		skin
+		{
+			texture = Vehicles/chinook,
+		}
+
+		textureRust = Vehicles/null,
+		textureMask = Vehicles/null,
+		textureLights = Vehicles/null,
+		textureDamage1Overlay = Vehicles/null,
+		textureDamage1Shell = Vehicles/null,
+		textureDamage2Overlay = Vehicles/null,
+		textureDamage2Shell = Vehicles/null,
+
+		sound
+		{
+			horn = vehicle_horn1,
+		}
+
+		extents = 3.7412 0.8706 16.0235,
+		mass = 2900,
+		physicsChassisShape = 3.8588 0.8471 17.0353,
+		centerOfMassOffset = 0.0000 0.3176 0.0118,
+		shadowExtents = 3.9510 17.0344,
+		shadowOffset = 0.0000 0.0078,
+		engineForce = 5000,
+		engineQuality = 80,
+		engineLoudness = 65,
+		maxSpeed = 80f,
+		gearRatioCount = 3,
+		gearRatioR = 7.09,
+		gearRatio1 = 7.44,
+		gearRatio2 = 2.29,
+		gearRatio3 = 1,
+		brakingForce = 50,
+		rollInfluence = 0.9f,
+		steeringIncrement = 0.04,
+		steeringClamp = 0.3,
+		suspensionStiffness = 40,
+		suspensionCompression = 1.83,
+		suspensionDamping = 0.88,
+		maxSuspensionTravelCm = 10,
+		suspensionRestLength = 0.2,
+		wheelFriction = 1.4f,
+		frontEndHealth = 150,
+		rearEndHealth = 150,
+		seats = 0,
+	}
+}
