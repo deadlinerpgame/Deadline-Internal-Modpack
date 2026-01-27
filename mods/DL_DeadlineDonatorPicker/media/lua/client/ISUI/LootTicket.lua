@@ -6,7 +6,7 @@ function LootTicketManager.ShowSetContext(playerNum, item)
     local playerObj = getSpecificPlayer(playerNum);
     if not playerObj then return end;
 
-    if item:getFullType() ~= "DLDC_ItemLootTicket_Unset" then return end;
+    if item:getType() ~= "DLDC_ItemLootTicket_Unset" then return end;
 
     -- Get the item in the player's primary hand.
     local primaryHandItem = playerObj:getPrimaryHandItem();
@@ -40,8 +40,19 @@ function LootTicketManager.ShowSetContext(playerNum, item)
         end
     end
 
+    local halfScreenX = Math.ceil(getCore():getScreenWidth() / 2);
+    local halfScreenY = Math.ceil(getCore():getScreenHeight() / 2);
+
+    local uiWidth = Math.ceil(halfScreenX * 0.8);
+    local uiHeight = Math.ceil(halfScreenY * 0.8);
+
+    local posX = halfScreenX - uiWidth;
+    local posY = halfScreenY - uiHeight
+
     -- Now we have all the items and the number of them, we need to show the player a UI which has the full item list and the chance to win.
-    
+    local ui = DLLootTicketChancesUI:new(posX, posY, uiWidth, uiHeight, item, uniqueItemsTable);
+    ui:initialise();
+    ui:addToUIManager();
 end
 
 function LootTicketManager.OnFillInventoryObjectContextMenu(playerNum, context, items)
@@ -55,10 +66,10 @@ function LootTicketManager.OnFillInventoryObjectContextMenu(playerNum, context, 
 
     for i, item in ipairs(items) do
         if instanceof(item, "InventoryItem") then
-            if item:getType() == "DLDC_ItemLootTicket_Unset" and item:isInPlayerInventory() and isAdmin() then
-                context:addOption(getText("ContextMenu_LootTicketControls"), playerNum, nil);
+            if item:getType() == "DLDC_ItemLootTicket_Unset" and item:isInPlayerInventory() and (isAdmin() or isDebugEnabled()) then
+                local controlsOpt = context:addOption(getText("ContextMenu_LootTicketControls"), playerNum, nil);
                 local lootSubMenu = context:getNew(context);
-                context:addSubMenu(context, lootSubMenu);
+                context:addSubMenu(controlsOpt, lootSubMenu);
 
                 lootSubMenu:addOption(getText("ContextMenu_SetLootTicketParameters"), playerNum, LootTicketManager.ShowSetContext, item);
                 lootSubMenu:addOption(getText("ContextMenu_LootTicketParameters_Help"), playerNum, LootTicketManager.ShowHelpMenu, item);
