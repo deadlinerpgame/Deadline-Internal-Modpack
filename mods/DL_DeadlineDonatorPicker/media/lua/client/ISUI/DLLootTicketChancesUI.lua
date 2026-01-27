@@ -1,10 +1,10 @@
 require "ISUI/colorBtnJoypad";
-require "ISUI/ISPanelJoypad";
+require "ISUI/ISCollapsableWindow";
 require "ISUI/ISScrollingListBox";
 require "ISUI/ISResizeWidget";
 require "defines";
 
-DLLootTicketChancesUI = ISPanelJoypad:derive("DLLootTicketChancesUI");
+DLLootTicketChancesUI = ISCollapsableWindow:derive("DLLootTicketChancesUI");
 
 function DLLootTicketChancesUI:createCloseButton()
     local th = math.max(16, self.titleFontHgt + 1);
@@ -45,6 +45,10 @@ function DLLootTicketChancesUI:createInstructionsLabel()
     return yOffsetEnd;
 end
 
+local function onCountChange(tgt, btn)
+    
+end
+
 function DLLootTicketChancesUI:populateItemTable(startY)
     if not self.item or not self.itemTable then
         print("Error with the ticket item or the item table given. Terminating.");
@@ -52,37 +56,53 @@ function DLLootTicketChancesUI:populateItemTable(startY)
     end
 
     local yOffset = startY or 32;
-    local xOffset = 8 * getTextManager():MeasureStringX(UIFont.Small, "X");
+    local xOffset = 8 + getTextManager():MeasureStringX(UIFont.Small, "X");
 
-    -- Create scrolling panel.
-    self.itemPanel = ISScrollingListBox:new(xOffset, yOffset, self:getWidth() * 0.8, self.height - 30);
-    self.itemPanel:initialise()
-    self.itemPanel:instantiate()
-    self.itemPanel.itemheight = getTextManager():MeasureStringY(UIFont.Small, "!");
-    self.itemPanel.font = UIFont.Small
-    self.itemPanel.drawBorder = true;
-    self.itemPanel:setVisible(true)
-    --self.itemPanel.onMouseDown = self.itemPanel_OnMouseDown;
-    self:addChild(self.itemPanel)
+    self.itemPanel = ISPanel:new(8, yOffset, self:getWidth() * 0.95, self:getHeight() * 0.95);
+    self.itemPanel:initialise();
+    self.itemPanel:setScrollChildren(true);
+    self.itemPanel:addScrollBars();
+    self:addChild(self.itemPanel);
 
     print("For each item...");
 
-    local rowNum = 1;
+    local rowNum = 0;
+    local lastY = 0;
+    local startingY = 0;
+    print("Starting Y is " .. tostring(startingY));
     for itemName, count in pairs(self.itemTable) do
         if itemName and count > 0 then
-            -- Create 3 rows.
-            local rowX = rowNum * xOffset;
-            local rowY = rowNum * yOffset;
 
-            local itemLabel = ISLabel:new(xOffset * rowNum, (yOffset + 8) * rowNum, getTextManager():MeasureStringX(instructionLabels[rowNum] or ""), instructionLabels[rowNum] or "", 1, 1, 1, 1, UIFont.Small, false);
+            local nameWidth = getTextManager():MeasureStringX(UIFont.Small, itemName);
+            local nameHeight = getTextManager():MeasureStringY(UIFont.Small, itemName);
+
+            local thisItemY = 8 + ((32 * rowNum) or 16);
+            print("This item " .. itemName .. " should be starting at Y " .. tostring(thisItemY));
+
+            -- Create 3 rows.
+            local itemLabel = ISLabel:new(6, thisItemY, 16, itemName, 1, 1, 1, 1, UIFont.Small, true);
             self.itemPanel:addChild(itemLabel);
             rowNum = rowNum + 1;
+
+            local itemQuantity = ISTextBox:new(6 + itemLabel:getRight(), thisItemY, getTextManager():MeasureStringX(UIFont.Small, "100"), 16, tostring(count), tostring(count), nil, onCountChange, getPlayer():getPlayerNum());
+            self.itemPanel:addChild(itemQuantity);
         end
     end
+
+    yOffset = lastY;
+
+end
+
+function DLLootTicketChancesUI:prerender() -- Call before render, it's for harder stuff that need init, ect
+    ISCollapsableWindow.prerender(self);
+end
+
+function DLLootTicketChancesUI:render() -- Use to render text and other
+    ISCollapsableWindow.render(self);
 end
 
 function DLLootTicketChancesUI:initialise()
-    ISPanelJoypad.initialise(self);
+    ISCollapsableWindow.initialise(self);
     self:createCloseButton();
     local yOffsetStart = self:createInstructionsLabel();
     self:populateItemTable(yOffsetStart);
@@ -90,7 +110,7 @@ end
 
 function DLLootTicketChancesUI:new(x, y, width, height, item, itemTable)
     local o = {};
-    o = ISPanelJoypad:new(x, y, width, height);
+    o = ISCollapsableWindow:new(x, y, width, height);
     o.width = width;
     o.height = height;
     o.x = x;

@@ -20,13 +20,9 @@ function LootTicketManager.ShowSetContext(playerNum, item)
         return;
     end
 
-    -- Get all items from the container.
-    local handContainer = primaryHandItem:getContainer();
-    if not handContainer then return end; -- Something's gone wrong as IsInventoryContainer should catch this.
-
     local uniqueItemsTable = {};
 
-    local possibleItems = handContainer:getItems();
+    local possibleItems = primaryHandItem:getInventory():getItems();
     for i = 0, possibleItems:size() - 1 do
         local item = possibleItems:get(i);
         if item and not uniqueItemsTable[item:getFullType()] then
