@@ -1,4 +1,3 @@
-require "ISUI/colorBtnJoypad";
 require "ISUI/ISCollapsableWindow";
 require "ISUI/ISScrollingListBox";
 require "ISUI/ISResizeWidget";
@@ -14,6 +13,7 @@ function DLLootTicketChancesUI:createCloseButton()
         end
         self:close()
     end);
+
 	self.closeButton:initialise();
 	self.closeButton.borderColor.a = 0.0;
 	self.closeButton.backgroundColor.a = 0;
@@ -42,11 +42,48 @@ function DLLootTicketChancesUI:createInstructionsLabel()
         yOffsetEnd = (yOffset + 8) * i + getTextManager():MeasureStringY(UIFont.Small, instructionLabels[i]);
     end
 
-    return yOffsetEnd;
+    return yOffsetEnd + 8;
 end
 
-local function onCountChange(tgt, btn)
-    
+function DLLootTicketChancesUI:updateItem(item, newQuantity, newChance)
+    if item and item.Chance then
+        for i, v in ipairs(self.datas.items) do
+            local retrievedItem = self.datas.items[i];
+            if retrievedItem then
+                if retrievedItem.text == item.Name then
+                    retrievedItem.item.Quantity = newQuantity;
+                    retrievedItem.item.Chance = newChance;
+                    return;
+                end
+            end
+        end
+    end
+end
+
+function DLLootTicketChancesUI:doDrawItem(y, item, alt)
+    if not item.height then item.height = self.itemheight end -- compatibililty
+    if self.selected == item.index then
+        self:drawRect(0, (y), self:getWidth(), item.height-1, 0.3, 0.7, 0.35, 0.15);
+    end
+	self:drawRectBorder(0, (y), self:getWidth(), item.height, 0.5, self.borderColor.r, self.borderColor.g, self.borderColor.b);
+	local itemPadY = self.itemPadY or (item.height - self.fontHgt) / 2;
+
+    self:drawText(item.item.Name, 5, (y)+itemPadY, 0.9, 0.9, 0.9, 0.9, self.font);
+    self:drawText(tostring(item.item.Quantity), 205, (y) + itemPadY, 0.9, 0.9, 0.9, 0.9, self.font);
+    self:drawText(tostring(item.item.Chance), 305, (y) + itemPadY, 0.9, 0.9, 0.9, 0.9, self.font);
+
+    y = y + item.height;
+	return y;
+end
+
+function DLLootTicketChancesUI:onDoubleClickItem(item)
+    local halfScreenX = Math.ceil(getCore():getScreenWidth() / 2);
+    local halfScreenY = Math.ceil(getCore():getScreenHeight() / 2);
+
+    -- Show modal
+    local itemEditUI = DLLootTicketItemEditUI:new(halfScreenX - 400, halfScreenY - 200, 400, 200, item, self);
+    itemEditUI:initialise();
+    itemEditUI:addToUIManager();
 end
 
 function DLLootTicketChancesUI:populateItemTable(startY)
@@ -55,37 +92,51 @@ function DLLootTicketChancesUI:populateItemTable(startY)
         return;
     end
 
-    local yOffset = startY or 32;
     local xOffset = 8 + getTextManager():MeasureStringX(UIFont.Small, "X");
-
-    self.itemPanel = ISPanel:new(8, yOffset, self:getWidth() * 0.95, self:getHeight() * 0.95);
-    self.itemPanel:initialise();
-    self.itemPanel:setScrollChildren(true);
-    self.itemPanel:addScrollBars();
-    self:addChild(self.itemPanel);
 
     print("For each item...");
 
-    local rowNum = 0;
     local lastY = 0;
     local startingY = 0;
     print("Starting Y is " .. tostring(startingY));
+
+    -- Add the table headers.
+    self.datas = ISScrollingListBox:new(xOffset, startY + 32, 600, 200);
+    self.datas:initialise();
+    self.datas:instantiate();
+    self.datas.itemheight = 32;
+    self.datas.selected = 0;
+    self.datas.joypadParent = self;
+    self.datas.font = UIFont.NewSmall;
+    self.datas.doDrawItem = self.doDrawItem;
+    self.datas.drawBorder = true;
+    self.datas:setOnMouseDoubleClick(self, self.onDoubleClickItem);
+--    self.datas.parent = self;
+    self.datas:addColumn("Name", 0);
+    self.datas:addColumn("Quantity", 200);
+    self.datas:addColumn("Chance (must add up to 100.00)", 300);
+    self:addChild(self.datas);
+
+    local itemCount = 0;
+
     for itemName, count in pairs(self.itemTable) do
         if itemName and count > 0 then
+            self.datas:addItem(itemName, { Name = itemName, Quantity = count, Chance = 0});
+            itemCount = itemCount + 1;
+        end
+    end
 
-            local nameWidth = getTextManager():MeasureStringX(UIFont.Small, itemName);
-            local nameHeight = getTextManager():MeasureStringY(UIFont.Small, itemName);
+    if itemCount > 0 then
 
-            local thisItemY = 8 + ((32 * rowNum) or 16);
-            print("This item " .. itemName .. " should be starting at Y " .. tostring(thisItemY));
+        -- Get evenly distributed chances.
+        local evenChance = Math.floor(100 / itemCount);
 
-            -- Create 3 rows.
-            local itemLabel = ISLabel:new(6, thisItemY, 16, itemName, 1, 1, 1, 1, UIFont.Small, true);
-            self.itemPanel:addChild(itemLabel);
-            rowNum = rowNum + 1;
-
-            local itemQuantity = ISTextBox:new(6 + itemLabel:getRight(), thisItemY, getTextManager():MeasureStringX(UIFont.Small, "100"), 16, tostring(count), tostring(count), nil, onCountChange, getPlayer():getPlayerNum());
-            self.itemPanel:addChild(itemQuantity);
+        for i = 1, itemCount do
+            local item = self.datas.items[i];
+            if item then
+                print("Item " .. tostring(i) .. " is " .. item.text);
+                item.item.Chance = evenChance;
+            end
         end
     end
 
@@ -115,7 +166,7 @@ function DLLootTicketChancesUI:new(x, y, width, height, item, itemTable)
     o.height = height;
     o.x = x;
     o.y = y;
-    o.backgroundColor = {r=0, g=0, b=0, a=0.8};
+    o.backgroundColor = {r=0, g=0, b=0, a=0.9};
 	o.borderColor = {r=0.1, g=0.1, b=0.1, a=0.9};
 	o.itemheightoverride = {};
 	o.anchorLeft = true;
