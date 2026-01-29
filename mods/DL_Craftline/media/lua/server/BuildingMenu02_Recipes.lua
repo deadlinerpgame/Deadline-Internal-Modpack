@@ -157,18 +157,9 @@ local function initBuildingMenuRecipes()
             },
             {
                 {
-                    Material = "Base.Tarp",
+                    Material = "Base.FabricRoll",
                     Amount = 1
                 },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 15
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 8
-                }
-            },
         },
         useConsumable = {
             {
@@ -181,21 +172,9 @@ local function initBuildingMenuRecipes()
             },
             {
                 Consumable = "Base.WeldingRods",
-                Amount = BuildingMenu.weldingRodUses(1)
+                Amount = BuildingMenu.weldingRodUses(2)
             }
         },
-        skills = {
-            {
-                Skill = "MetalWelding",
-                Level = 2,
-                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
-            },
-            {
-                Skill = "Tailoring",
-                Level = 4,
-                Xp = 15
-            }
-        }
     }
     BuildingMenu.addPaintToRecipe(BuildingMenu.GreenBigFabricWallRecipe, {
         { type = "Base.PaintGreen", amount = 1 },
@@ -209,18 +188,8 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                {
-                    Material = "Base.Tarp",
+                    Material = "Base.FabricRoll",
                     Amount = 1
-                },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 8
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 4
-                }
             },
         },
         useConsumable = {
@@ -229,18 +198,6 @@ local function initBuildingMenuRecipes()
                 Amount = 3
             },
         },
-        skills = {
-            {
-                Skill = "MetalWelding",
-                Level = 2,
-                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
-            },
-            {
-                Skill = "Tailoring",
-                Level = 4,
-                Xp = 10
-            }
-        }
     }
     BuildingMenu.addPaintToRecipe(BuildingMenu.GreenSmallFabricWallRecipe, {
         { type = "Base.PaintGreen", amount = 1 },
@@ -254,18 +211,8 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                {
-                    Material = "Base.Tarp",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 8
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 4
-                }
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
             {
                 BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Ropes, 1, "Material")
@@ -314,18 +261,8 @@ local function initBuildingMenuRecipes()
                 },
             },
             {
-                {
-                    Material = "Base.Tarp",
+                    Material = "Base.FabricRoll",
                     Amount = 1
-                },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 15
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 8
-                }
             },
         },
         useConsumable = {
@@ -339,21 +276,9 @@ local function initBuildingMenuRecipes()
             },
             {
                 Consumable = "Base.WeldingRods",
-                Amount = BuildingMenu.weldingRodUses(1)
+                Amount = BuildingMenu.weldingRodUses(2)
             }
         },
-        skills = {
-            {
-                Skill = "MetalWelding",
-                Level = 2,
-                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
-            },
-            {
-                Skill = "Tailoring",
-                Level = 4,
-                Xp = 15
-            }
-        }
     }
     BuildingMenu.addPaintToRecipe(BuildingMenu.YellowBigFabricWallRecipe, {
         { type = "Base.PaintYellow", amount = 1 },
@@ -366,20 +291,11 @@ local function initBuildingMenuRecipes()
             "Needle"
         },
         neededMaterials = {
-            {
                 {
-                    Material = "Base.Tarp",
+                    Material = "Base.FabricRoll",
                     Amount = 1
                 },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 8
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 4
-                }
-            },
+
         },
         useConsumable = {
             {
@@ -387,18 +303,6 @@ local function initBuildingMenuRecipes()
                 Amount = 3
             },
         },
-        skills = {
-            {
-                Skill = "MetalWelding",
-                Level = 2,
-                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
-            },
-            {
-                Skill = "Tailoring",
-                Level = 4,
-                Xp = 10
-            }
-        }
     }
     BuildingMenu.addPaintToRecipe(BuildingMenu.YellowSmallFabricWallRecipe, {
         { type = "Base.PaintYellow", amount = 1 },
@@ -411,20 +315,10 @@ local function initBuildingMenuRecipes()
             "Needle"
         },
         neededMaterials = {
-            {
                 {
-                    Material = "Base.Tarp",
+                    Material = "Base.FabricRoll",
                     Amount = 1
                 },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 8
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 4
-                }
-            },
             {
                 BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Ropes, 1, "Material")
             },
@@ -435,18 +329,6 @@ local function initBuildingMenuRecipes()
                 Amount = 3
             },
         },
-        skills = {
-            {
-                Skill = "MetalWelding",
-                Level = 2,
-                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
-            },
-            {
-                Skill = "Tailoring",
-                Level = 4,
-                Xp = 10
-            }
-        }
     }
     BuildingMenu.addPaintToRecipe(BuildingMenu.YellowSmallFabricRopeWallRecipe, {
         { type = "Base.PaintYellow", amount = 1 },
@@ -3077,16 +2959,6 @@ local function initBuildingMenuRecipes()
                 Amount = BuildingMenu.round(sheetMetalCountForWalls * 0.5)
             },
             {
-                {
-                    Material = "Base.MetalBar",
-                    Amount = BuildingMenu.round(metalBarsCount * 0.5)
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = BuildingMenu.round(metalBarsCount * 0.5)
-                },
-            },
-            {
                 Material = "Base.Screws",
                 Amount = BuildingMenu.round(screwsCount * 0.5)
             },
@@ -3113,8 +2985,8 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Woodwork",
-                Level = bigObjectsCarpentrySkill,
-                Xp = BuildingMenu.round(bigObjectsCarpentrySkill * carpentryXpPerLevel)
+                Level = 6,
+                Xp = BuildingMenu.round(6 * carpentryXpPerLevel)
             }
         }
     }
@@ -3135,16 +3007,6 @@ local function initBuildingMenuRecipes()
             {
                 Material = "Base.SheetMetal",
                 Amount = BuildingMenu.round(sheetMetalCountForWalls * 0.25)
-            },
-            {
-                {
-                    Material = "Base.MetalBar",
-                    Amount = BuildingMenu.round(metalBarsCount * 0.25)
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = BuildingMenu.round(metalBarsCount * 0.25)
-                },
             },
             {
                 Material = "Base.Screws",
@@ -3173,8 +3035,8 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Woodwork",
-                Level = smallObjectsCarpentrySkill,
-                Xp = BuildingMenu.round(smallObjectsCarpentrySkill * carpentryXpPerLevel)
+                Level = 6,
+                Xp = BuildingMenu.round(6 * carpentryXpPerLevel)
             }
         }
     }
@@ -3198,18 +3060,14 @@ local function initBuildingMenuRecipes()
                 }
             },
             {
-                {
-                    Material = "Base.MetalBar",
-                    Amount = BuildingMenu.round(metalBarsCount * 0.25)
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = BuildingMenu.round(metalBarsCount * 0.25)
-                },
-            },
-            {
                 Material = "Base.Screws",
                 Amount = BuildingMenu.round(screwsCount * 0.25)
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 1
             },
         },
         skills = {
@@ -3331,16 +3189,6 @@ local function initBuildingMenuRecipes()
                 Amount = sheetMetalCountForWalls
             },
             {
-                {
-                    Material = "Base.MetalBar",
-                    Amount = metalBarsCount
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = metalBarsCount
-                },
-            },
-            {
                 Material = "Base.Screws",
                 Amount = screwsCount
             },
@@ -3362,13 +3210,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 7,
-                Xp = BuildingMenu.round(7 * metalweldingXpPerLevel)
-            },
-            {
-                Skill = "Woodwork",
-                Level = BuildingMenu.round(bigObjectsCarpentrySkill * 1.75),
-                Xp = BuildingMenu.round(1.75 * bigObjectsCarpentrySkill * carpentryXpPerLevel)
+                Level = 6,
+                Xp = BuildingMenu.round(6 * metalweldingXpPerLevel)
             }
         }
     }
@@ -3384,11 +3227,11 @@ local function initBuildingMenuRecipes()
         neededMaterials = {
             {
                 Material = "Base.Plank",
-                Amount = BuildingMenu.round(smallWallWoodCount * 1.25)
+                Amount = BuildingMenu.round(smallWallWoodCount * 1)
             },
             {
                 Material = "Base.SheetMetal",
-                Amount = BuildingMenu.round(sheetMetalCountForWalls * 0.5)
+                Amount = BuildingMenu.round(sheetMetalCountForWalls * 0.25)
             },
             {
                 {
@@ -3422,13 +3265,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * metalweldingXpPerLevel)
-            },
-            {
-                Skill = "Woodwork",
-                Level = smallObjectsCarpentrySkill,
-                Xp = BuildingMenu.round(smallObjectsCarpentrySkill * carpentryXpPerLevel)
+                Level = 6,
+                Xp = BuildingMenu.round(6 * metalweldingXpPerLevel)
             }
         }
     }
@@ -4202,18 +4040,8 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                {
-                    Material = "Base.Tarp",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 15
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 8
-                }
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
             {
                 BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Nails,
@@ -4242,18 +4070,8 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                {
-                    Material = "Base.Tarp",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 8
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 4
-                }
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
             {
                 BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Nails,
@@ -6616,7 +6434,7 @@ local function initBuildingMenuRecipes()
         neededMaterials = {
             {
                 Material = "Base.ElectronicsScrap",
-                Amount = 10
+                Amount = 25
             },
             {
                 Material = "Radio.ElectricWire",
@@ -6632,14 +6450,20 @@ local function initBuildingMenuRecipes()
             },
             {
                 Material = "Base.Screws",
-                Amount = 5
+                Amount = 10
             }
         },
+        useConsumable = {
+            {
+                Consumable = "Base.DuctTape",
+                Amount = 4
+            }
+        },        
         skills = {
             {
                 Skill = "Electricity",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * electricalXpPerLevel)
+                Level = 8,
+                Xp = BuildingMenu.round(8 * electricalXpPerLevel)
             }
         }
     }
@@ -6657,7 +6481,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Material = "Base.ElectronicsScrap",
-                Amount = 10
+                Amount = 25
             },
             {
                 {
@@ -6690,13 +6514,17 @@ local function initBuildingMenuRecipes()
             {
                 Consumable = "Base.WeldingRods",
                 Amount = BuildingMenu.weldingRodUses(5)
+            },
+            {
+                Consumable = "Base.DuctTape",
+                Amount = 4
             }
         },
         skills = {
             {
                 Skill = "Electricity",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * electricalXpPerLevel)
+                Level = 8,
+                Xp = BuildingMenu.round(8 * electricalXpPerLevel)
             },
             {
                 Skill = "MetalWelding",
@@ -6740,8 +6568,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 3,
-                Xp = BuildingMenu.round(3 * metalweldingXpPerLevel)
+                Level = 6,
+                Xp = BuildingMenu.round(6 * metalweldingXpPerLevel)
             }
         }
     }
@@ -6870,13 +6698,13 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 6,
-                Xp = BuildingMenu.round(6 * metalweldingXpPerLevel)
+                Level = 4,
+                Xp = BuildingMenu.round(4 * metalweldingXpPerLevel)
             },
             {
                 Skill = "Electricity",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * electricalXpPerLevel)
+                Level = 8,
+                Xp = BuildingMenu.round(8 * electricalXpPerLevel)
             },
         }
     }
@@ -6924,8 +6752,8 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Electricity",
-                Level = 8,
-                Xp = BuildingMenu.round(8 * electricalXpPerLevel)
+                Level = 10,
+                Xp = BuildingMenu.round(10 * electricalXpPerLevel)
             },
         }
     }
@@ -6970,7 +6798,7 @@ local function initBuildingMenuRecipes()
             {
                 Skill = "Electricity",
                 Level = 6,
-                Xp = BuildingMenu.round(4 * electricalXpPerLevel)
+                Xp = BuildingMenu.round(6 * electricalXpPerLevel)
             },
         }
     }
@@ -7113,18 +6941,18 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "Woodwork",
-                Level = smallObjectsCarpentrySkill,
-                Xp = BuildingMenu.round(smallObjectsCarpentrySkill * carpentryXpPerLevel)
+                Level = 4,
+                Xp = BuildingMenu.round(4 * carpentryXpPerLevel)
             },
             {
                 Skill = "MetalWelding",
-                Level = 3,
-                Xp = BuildingMenu.round(3 * metalweldingXpPerLevel)
+                Level = 4,
+                Xp = BuildingMenu.round(4 * metalweldingXpPerLevel)
             },
             {
                 Skill = "Electricity",
-                Level = 2,
-                Xp = BuildingMenu.round(2 * electricalXpPerLevel)
+                Level = 6,
+                Xp = BuildingMenu.round(6 * electricalXpPerLevel)
             },
         }
     }
@@ -7172,13 +7000,13 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 6,
-                Xp = BuildingMenu.round(6 * metalweldingXpPerLevel)
+                Level = 4,
+                Xp = BuildingMenu.round(4 * metalweldingXpPerLevel)
             },
             {
                 Skill = "Electricity",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * electricalXpPerLevel)
+                Level = 6,
+                Xp = BuildingMenu.round(6 * electricalXpPerLevel)
             },
         }
     }
@@ -7222,13 +7050,13 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 6,
-                Xp = BuildingMenu.round(6 * metalweldingXpPerLevel)
+                Level = 4,
+                Xp = BuildingMenu.round(4 * metalweldingXpPerLevel)
             },
             {
                 Skill = "Electricity",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * electricalXpPerLevel)
+                Level = 6,
+                Xp = BuildingMenu.round(6 * electricalXpPerLevel)
             },
         }
     }
@@ -7244,11 +7072,11 @@ local function initBuildingMenuRecipes()
             {
                 {
                     Material = "Base.MetalBar",
-                    Amount = BuildingMenu.round(metalBarsCount * 1.75)
+                    Amount = BuildingMenu.round(metalBarsCount * 1.0)
                 },
                 {
                     Material = "Base.MetalPipe",
-                    Amount = BuildingMenu.round(metalBarsCount * 1.75)
+                    Amount = BuildingMenu.round(metalBarsCount * 1.0)
                 },
             },
             {
@@ -7267,7 +7095,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Consumable = "Base.WeldingRods",
-                Amount = BuildingMenu.weldingRodUses(5)
+                Amount = BuildingMenu.weldingRodUses(2)
             }
         },
         skills = {
@@ -7315,8 +7143,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 3,
-                Xp = BuildingMenu.round(3 * metalweldingXpPerLevel)
+                Level = 6,
+                Xp = BuildingMenu.round(6 * metalweldingXpPerLevel)
             }
         }
     }
@@ -7382,8 +7210,8 @@ local function initBuildingMenuRecipes()
                 },
             },
             {
-                Material = "Base.RippedSheets",
-                Amount = 30
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
             {
                 Material = "Base.Screws",
@@ -7403,8 +7231,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * metalweldingXpPerLevel)
+                Level = 8,
+                Xp = BuildingMenu.round(8 * metalweldingXpPerLevel)
             }
         }
     }
@@ -7617,8 +7445,12 @@ local function initBuildingMenuRecipes()
             },
             {
                 Material = "Base.Mattress",
-                Amount = 2
+                Amount = 1
             }
+            {
+                Material = "Base.FabricRoll",
+                Amount = 1
+            }            
         },
         skills = {
             {
@@ -7639,8 +7471,8 @@ local function initBuildingMenuRecipes()
                 Amount = BuildingMenu.round(bigObjectsWoodCount * 1.5)
             },
             {
-                Material = "Base.LeatherStrips",
-                Amount = 20
+                Material = "Base.FabricRoll",
+                Amount = 2
             },
             {
                 BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Nails, bigObjectsNailsCount,
@@ -7667,8 +7499,8 @@ local function initBuildingMenuRecipes()
                 Amount = BuildingMenu.round(bigObjectsWoodCount * 1.5)
             },
             {
-                Material = "Base.RippedSheets",
-                Amount = 20
+                Material = "Base.FabricRoll",
+                Amount = 2
             },
             {
                 BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Nails, bigObjectsNailsCount,
@@ -7706,8 +7538,8 @@ local function initBuildingMenuRecipes()
                 Amount = smallObjectsWoodCount
             },
             {
-                Material = "Base.RippedSheets",
-                Amount = 10
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
             {
                 BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Nails, smallObjectsNailsCount,
@@ -7780,8 +7612,8 @@ local function initBuildingMenuRecipes()
                 Amount = 3
             },
             {
-                Material = "Base.RippedSheets",
-                Amount = 15
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
             {
                 Material = "Base.Screws",
@@ -7801,8 +7633,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 3,
-                Xp = BuildingMenu.round(3 * metalweldingXpPerLevel)
+                Level = 6,
+                Xp = BuildingMenu.round(6 * metalweldingXpPerLevel)
             }
         }
     }
@@ -7827,8 +7659,8 @@ local function initBuildingMenuRecipes()
                 },
             },
             {
-                Material = "Base.RippedSheets",
-                Amount = 15
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
             {
                 Material = "Base.Screws",
@@ -7848,8 +7680,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 3,
-                Xp = BuildingMenu.round(3 * metalweldingXpPerLevel)
+                Level = 6,
+                Xp = BuildingMenu.round(6 * metalweldingXpPerLevel)
             }
         }
     }
