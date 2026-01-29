@@ -162,9 +162,6 @@ function DLLootTicketChancesUI:onConfirmTicket()
     self.errorLabel:setName("ERROR: ");
 
     for _, itemData in ipairs(self.datas.items) do
-        print("Item data: ");
-        print(itemData);
-
         local chance = itemData.item.Chance;
         totalChance = totalChance + chance;
     end

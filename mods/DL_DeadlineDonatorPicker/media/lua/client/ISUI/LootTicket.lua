@@ -68,7 +68,18 @@ function LootTicketManager.OnFillInventoryObjectContextMenu(playerNum, context, 
                 context:addSubMenu(controlsOpt, lootSubMenu);
 
                 lootSubMenu:addOption(getText("ContextMenu_SetLootTicketParameters"), playerNum, LootTicketManager.ShowSetContext, item);
-                lootSubMenu:addOption(getText("ContextMenu_LootTicketParameters_Help"), playerNum, LootTicketManager.ShowHelpMenu, item);
+            end
+
+            if item:getType() == "DLDC_ItemLootTicket_Set" and item:isInPlayerInventory() then
+                local controlsOpt = context:addOption(getText("ContextMenu_LootTicketControls"), playerNum, nil);
+                local lootSubMenu = context:getNew(context);
+                context:addSubMenu(controlsOpt, lootSubMenu);
+
+                lootSubMenu:addOption(getText("ContextMenu_OpenLootTicket"), playerNum, LootTicketManager.ShowSetContext, item);
+
+                if isAdmin() or isDebugEnabled() then
+                    lootSubMenu:addOption(getText("ContextMenu_SeeLootTicketParameters"), playerNum, LootTicketManager.ShowTicketParams, item);
+                end
             end
         end
     end
