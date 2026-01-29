@@ -24,17 +24,17 @@ end
 
 function DLLootTicketChancesUI:createInstructionsLabel()
     local yOffset = math.max(16, self.titleFontHgt + 1);
-    local xOffset = 8 * getTextManager():MeasureStringX(UIFont.Small, "Label");
 
     local instructionLabels = 
     {
-         "For each item in the container, set the quantity and the probability. Probability of all items must add up to 100.",
+         "For each item in the container, set the quantity and the probability.",
+         "Probability of all items must add up to 100.",
          "This is the likelihood of the item being picked. 30 = 30% chance."
     }
 
     local yOffsetEnd = 0;
 
-    for i, v in ipairs(instructionLabels) do
+    for i, _ in ipairs(instructionLabels) do
         local label = ISLabel:new(8, (yOffset + 8) * i, getTextManager():getFontHeight(UIFont.Small), instructionLabels[i] or "", 1, 1, 1, 1, UIFont.Small, true);
         label:initialise();
         label:instantiate();
@@ -94,12 +94,6 @@ function DLLootTicketChancesUI:populateItemTable(startY)
 
     local xOffset = 8 + getTextManager():MeasureStringX(UIFont.Small, "X");
 
-    print("For each item...");
-
-    local lastY = 0;
-    local startingY = 0;
-    print("Starting Y is " .. tostring(startingY));
-
     -- Add the table headers.
     self.datas = ISScrollingListBox:new(xOffset, startY + 32, 600, 200);
     self.datas:initialise();
@@ -127,21 +121,89 @@ function DLLootTicketChancesUI:populateItemTable(startY)
     end
 
     if itemCount > 0 then
-
         -- Get evenly distributed chances.
         local evenChance = Math.floor(100 / itemCount);
 
         for i = 1, itemCount do
             local item = self.datas.items[i];
             if item then
-                print("Item " .. tostring(i) .. " is " .. item.text);
                 item.item.Chance = evenChance;
             end
         end
     end
 
-    yOffset = lastY;
+    return self.datas:getBottom();
+end
 
+function DLLootTicketChancesUI:setTicketModData()
+    local item = self.item;
+    if not item then return end;
+
+    local container = self.item:getContainer();
+
+    container:DoRemoveItem(self.item);
+    local setTicket = InventoryItemFactory.CreateItem("Deadline_DonatorClothes.DLDC_ItemLootTicket_Set");
+    container:DoAddItem(setTicket);
+
+    local modData = setTicket:getModData();
+    modData.LootTicketTable = self.datas.items;
+    modData.LootTicketCreated = getTimestamp();
+    modData.LootTicketRestrictedTo = nil;
+
+    ISCollapsableWindow.close(self);
+    self:removeFromUIManager();
+
+    getPlayer():setHaloNote("Loot ticket chances set successfully.", 100, 250, 100, 300);
+end
+
+function DLLootTicketChancesUI:onConfirmTicket()
+    local totalChance = 0;
+    self.errorLabel:setVisible(false);
+    self.errorLabel:setName("ERROR: ");
+
+    for _, itemData in ipairs(self.datas.items) do
+        print("Item data: ");
+        print(itemData);
+
+        local chance = itemData.item.Chance;
+        totalChance = totalChance + chance;
+    end
+
+    if totalChance > 99.00 and totalChance < 100.00 then
+        totalChance = 100;
+    end
+
+    if totalChance > 100 or totalChance < 99 then
+        self.errorLabel:setVisible(true);
+        self.errorLabel:setName("ERROR: Your total chance is " .. tostring(totalChance) .. " - it must add up to 100.");
+        return;
+    end
+
+    self:setTicketModData();
+end
+
+function DLLootTicketChancesUI:createErrorLabel(startY)
+    local errorLabelStr = "ERROR: ";
+    local labelHeight = getTextManager():MeasureStringY(UIFont.NewSmall, errorLabelStr);
+
+    self.errorLabel = ISLabel:new(self.datas:getX(), startY + labelHeight, labelHeight, "errorLabelStr", 1, 0.2, 0.2, 1, UIFont.NewSmall, true);
+    self.errorLabel:initialise();
+    self.errorLabel:instantiate();
+    self:addChild(self.errorLabel);
+    self.errorLabel:setVisible(false);
+
+    return self.errorLabel:getBottom() + labelHeight;
+end
+
+function DLLootTicketChancesUI:createButtons(startY)
+    local confirmWidth = getTextManager():MeasureStringX(UIFont.NewSmall, "Confirm");
+    local confirmHeight = getTextManager():MeasureStringY(UIFont.NewSmall, "Confirm");
+    local confirmButton = ISButton:new((self:getWidth() / 2) - (confirmWidth / 2), startY + (confirmHeight * 2), confirmWidth, confirmHeight + 4, "Confirm", self, self.onConfirmTicket);
+    confirmButton:initialise();
+    confirmButton:instantiate();
+    self:addChild(confirmButton);
+
+    return confirmButton:getBottom() + confirmHeight;
 end
 
 function DLLootTicketChancesUI:prerender() -- Call before render, it's for harder stuff that need init, ect
@@ -156,7 +218,15 @@ function DLLootTicketChancesUI:initialise()
     ISCollapsableWindow.initialise(self);
     self:createCloseButton();
     local yOffsetStart = self:createInstructionsLabel();
-    self:populateItemTable(yOffsetStart);
+    local buttonStart = self:populateItemTable(yOffsetStart);
+
+    self:setWidth(self.datas:getRight() + (8 + getTextManager():MeasureStringX(UIFont.Small, "X")));
+
+    local errorLabelY = self:createErrorLabel(buttonStart);
+
+    local bottom = self:createButtons(errorLabelY);
+    
+    self:setHeight(bottom);
 end
 
 function DLLootTicketChancesUI:new(x, y, width, height, item, itemTable)
