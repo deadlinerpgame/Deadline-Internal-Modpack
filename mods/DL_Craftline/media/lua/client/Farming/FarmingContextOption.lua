@@ -46,7 +46,8 @@ function Craftline_Farming.OnFillWorldObjectContextMenu(playerNum, context, worl
 
     -- Does the context option exist.
     local treatProblemOption = context:getOptionFromName(getText("ContextMenu_Treat_Problem"));
-    local treatSubMenu = nil;
+    local treatSubMenu = (treatProblemOption and context:getSubMenu(treatProblemOption)) or nil;
+
     if not treatProblemOption then
         treatProblemOption = context:addOption(getText("ContextMenu_Treat_Problem"), worldObjects, nil);
         treatSubMenu = context:getNew(context);
@@ -69,8 +70,6 @@ function Craftline_Farming.OnFillWorldObjectContextMenu(playerNum, context, worl
         end
         local aphidLvl = 0;
         for i=1, use do
-            print("test");
-            print(subMenuDWF);
             aphidLvl = i * 5;
             subMenuDWF:addOption(tostring(aphidLvl), worldobjects, Craftline_Farming.onTreatFungi, i, currentSquare, player, fungiTreatmentItem);
         end

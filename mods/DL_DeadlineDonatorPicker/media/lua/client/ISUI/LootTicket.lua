@@ -51,6 +51,13 @@ function LootTicketManager.ShowSetContext(playerNum, item)
     ui:addToUIManager();
 end
 
+function LootTicketManager.OpenTicket(playerNum, item)
+    if not item:getType() == "DLDC_ItemLootTicket_Set" then return end;
+    if not item:getModData().LootTicket then return end;
+
+    ISTimedActionQueue.add(DLOpenLootTicketAction:new(item));
+end
+
 function LootTicketManager.OnFillInventoryObjectContextMenu(playerNum, context, items)
 
     if not playerNum then return end
@@ -75,7 +82,7 @@ function LootTicketManager.OnFillInventoryObjectContextMenu(playerNum, context, 
                 local lootSubMenu = context:getNew(context);
                 context:addSubMenu(controlsOpt, lootSubMenu);
 
-                lootSubMenu:addOption(getText("ContextMenu_OpenLootTicket"), playerNum, LootTicketManager.ShowSetContext, item);
+                lootSubMenu:addOption(getText("ContextMenu_OpenLootTicket"), playerNum, LootTicketManager.OpenTicket, item);
 
                 if isAdmin() or isDebugEnabled() then
                     lootSubMenu:addOption(getText("ContextMenu_SeeLootTicketParameters"), playerNum, LootTicketManager.ShowTicketParams, item);

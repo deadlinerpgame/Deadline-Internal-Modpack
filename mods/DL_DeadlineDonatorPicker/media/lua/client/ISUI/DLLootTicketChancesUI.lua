@@ -5,6 +5,10 @@ require "defines";
 
 DLLootTicketChancesUI = ISCollapsableWindow:derive("DLLootTicketChancesUI");
 
+local function sortOnChance(a, b)
+    return tonumber(a.item.Chance) > tonumber(b.item.Chance);
+end
+
 function DLLootTicketChancesUI:createCloseButton()
     local th = math.max(16, self.titleFontHgt + 1);
     self.closeButton = ISButton:new(3, 0, th, th, "", self, function(self, button)
@@ -27,19 +31,18 @@ function DLLootTicketChancesUI:createInstructionsLabel()
 
     local instructionLabels = 
     {
-         "For each item in the container, set the quantity and the probability.",
-         "Probability of all items must add up to 100.",
-         "This is the likelihood of the item being picked. 30 = 30% chance."
+         "For each item in the container, set the quantity and the chance it is rolled.",
+         "Probability is weighted based on the number of items.",
     }
 
     local yOffsetEnd = 0;
 
     for i, _ in ipairs(instructionLabels) do
-        local label = ISLabel:new(8, (yOffset + 8) * i, getTextManager():getFontHeight(UIFont.Small), instructionLabels[i] or "", 1, 1, 1, 1, UIFont.Small, true);
+        local label = ISLabel:new(8, (yOffset + 8) * i, getTextManager():getFontHeight(UIFont.NewSmall), instructionLabels[i] or "", 1, 1, 1, 1, UIFont.NewSmall, true);
         label:initialise();
         label:instantiate();
         self:addChild(label);
-        yOffsetEnd = (yOffset + 8) * i + getTextManager():MeasureStringY(UIFont.Small, instructionLabels[i]);
+        yOffsetEnd = (yOffset + 8) * i + getTextManager():MeasureStringY(UIFont.NewSmall, instructionLabels[i]);
     end
 
     return yOffsetEnd + 8;
@@ -53,6 +56,7 @@ function DLLootTicketChancesUI:updateItem(item, newQuantity, newChance)
                 if retrievedItem.text == item.Name then
                     retrievedItem.item.Quantity = newQuantity;
                     retrievedItem.item.Chance = newChance;
+                    table.sort(self.datas.items, sortOnChance);
                     return;
                 end
             end
@@ -86,13 +90,45 @@ function DLLootTicketChancesUI:onDoubleClickItem(item)
     itemEditUI:addToUIManager();
 end
 
+function DLLootTicketChancesUI:onToggleAllowDups(clickedOption, enabled)
+    if not clickedOption then return end;
+
+    self.allowDuplicateItems = enabled or false;
+end 
+
+function DLLootTicketChancesUI:createTotalItemsRow(startY)
+    local xOffset = 8 + getTextManager():MeasureStringX(UIFont.NewSmall, "X");
+
+    local label = ISLabel:new(8, startY + 8, getTextManager():getFontHeight(UIFont.NewSmall), "Max Rolled Items (excluding guaranteed):", 1, 1, 1, 1, UIFont.NewSmall, true);
+    label:initialise();
+    label:instantiate();
+    self:addChild(label);
+
+    self.maxRolledItems = ISTextEntryBox:new("5", label:getRight() + getTextManager():MeasureStringX(UIFont.NewSmall, "X"), startY + 8, 60, 25);
+    self.maxRolledItems:initialise();
+    self.maxRolledItems:instantiate();
+    self.maxRolledItems.min = 0;
+    self.maxRolledItems:setOnlyNumbers(true);
+    self:addChild(self.maxRolledItems);
+
+    self.allowDuplicatesTickbox = ISTickBox:new(self.maxRolledItems:getRight() + (xOffset * 2), startY + 8, getTextManager():MeasureStringX(UIFont.NewSmall, "XX"), getTextManager():getFontHeight(UIFont.NewSmall) + 4, "", self, DLLootTicketChancesUI.onToggleAllowDups);
+    
+    self.allowDuplicatesTickbox:initialise();
+    self.allowDuplicatesTickbox:instantiate();
+
+    self.allowDuplicatesTickbox:addOption("Allow Duplicate Items");
+    self:addChild(self.allowDuplicatesTickbox);
+
+    return label:getBottom() + getTextManager():getFontHeight(UIFont.NewSmall);
+end
+
 function DLLootTicketChancesUI:populateItemTable(startY)
     if not self.item or not self.itemTable then
         print("Error with the ticket item or the item table given. Terminating.");
         return;
     end
 
-    local xOffset = 8 + getTextManager():MeasureStringX(UIFont.Small, "X");
+    local xOffset = 8 + getTextManager():MeasureStringX(UIFont.NewSmall, "X");
 
     -- Add the table headers.
     self.datas = ISScrollingListBox:new(xOffset, startY + 32, 600, 200);
@@ -108,7 +144,7 @@ function DLLootTicketChancesUI:populateItemTable(startY)
 --    self.datas.parent = self;
     self.datas:addColumn("Name", 0);
     self.datas:addColumn("Quantity", 200);
-    self.datas:addColumn("Chance (must add up to 100.00)", 300);
+    self.datas:addColumn("Chance", 300);
     self:addChild(self.datas);
 
     local itemCount = 0;
@@ -146,9 +182,12 @@ function DLLootTicketChancesUI:setTicketModData()
     container:DoAddItem(setTicket);
 
     local modData = setTicket:getModData();
-    modData.LootTicketTable = self.datas.items;
-    modData.LootTicketCreated = getTimestamp();
-    modData.LootTicketRestrictedTo = nil;
+    modData.LootTicket = {};
+    modData.LootTicket.Items = self.datas.items;
+    modData.LootTicket.CreatedTimestamp = getTimestamp();
+    modData.LootTicket.RestrictedTo = nil;
+    modData.LootTicket.MaxRolls = tonumber(self.maxRolledItems:getText());
+    modData.LootTicket.AllowDuplicates = self.allowDuplicateItems;
 
     ISCollapsableWindow.close(self);
     self:removeFromUIManager();
@@ -160,21 +199,6 @@ function DLLootTicketChancesUI:onConfirmTicket()
     local totalChance = 0;
     self.errorLabel:setVisible(false);
     self.errorLabel:setName("ERROR: ");
-
-    for _, itemData in ipairs(self.datas.items) do
-        local chance = itemData.item.Chance;
-        totalChance = totalChance + chance;
-    end
-
-    if totalChance > 99.00 and totalChance < 100.00 then
-        totalChance = 100;
-    end
-
-    if totalChance > 100 or totalChance < 99 then
-        self.errorLabel:setVisible(true);
-        self.errorLabel:setName("ERROR: Your total chance is " .. tostring(totalChance) .. " - it must add up to 100.");
-        return;
-    end
 
     self:setTicketModData();
 end
@@ -213,16 +237,17 @@ end
 
 function DLLootTicketChancesUI:initialise()
     ISCollapsableWindow.initialise(self);
+
     self:createCloseButton();
+    self:setInfo(getText("UI_Info_LootTicketChances"));
     local yOffsetStart = self:createInstructionsLabel();
-    local buttonStart = self:populateItemTable(yOffsetStart);
+    local tableStart = self:createTotalItemsRow(yOffsetStart);
+    local buttonStart = self:populateItemTable(tableStart);
 
-    self:setWidth(self.datas:getRight() + (8 + getTextManager():MeasureStringX(UIFont.Small, "X")));
-
+    self:setWidth(self.datas:getRight() + (8 + getTextManager():MeasureStringX(UIFont.NewSmall, "X")));
     local errorLabelY = self:createErrorLabel(buttonStart);
 
     local bottom = self:createButtons(errorLabelY);
-    
     self:setHeight(bottom);
 end
 
@@ -247,16 +272,16 @@ function DLLootTicketChancesUI:new(x, y, width, height, item, itemTable)
     o.isCollapsed = false;
     o.tooltipForced = nil;
 	o.colorPanel = {};
+    o.resizable = false;
     o.item = item; -- The original ticket item to be updated.
     o.itemTable = itemTable;
     o.title = "Loot Ticket Chances Setting";
     o.playerNum = playerNum;
     o.titlebarbkg = getTexture("media/ui/Panel_TitleBar.png");
     o.closeButtonTexture = getTexture("media/ui/Dialog_Titlebar_CloseIcon.png");
-    o.titleFont = UIFont.Small
+    o.titleFont = UIFont.NewSmall
     o.titleFontHgt = getTextManager():getFontHeight(o.titleFont);
     setmetatable(o, self);
-    self.__index = self;
-    
+    self.__index = self;    
     return o;
 end
