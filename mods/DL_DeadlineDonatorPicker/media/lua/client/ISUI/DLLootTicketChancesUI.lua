@@ -3,6 +3,12 @@ require "ISUI/ISScrollingListBox";
 require "ISUI/ISResizeWidget";
 require "defines";
 
+require "LogLineUtils";
+LogLineUtils = LogLineUtils or {};
+LogLineUtils.LogFromClient = LogLineUtils.LogFromClient or {};
+
+local randInstance = newrandom();
+
 DLLootTicketChancesUI = ISCollapsableWindow:derive("DLLootTicketChancesUI");
 
 local function sortOnChance(a, b)
@@ -183,20 +189,31 @@ function DLLootTicketChancesUI:setTicketModData()
 
     local modData = setTicket:getModData();
     modData.LootTicket = {};
-    modData.LootTicket.Items = self.datas.items;
+    modData.LootTicket.ID = randInstance:random(999,999999);
+    modData.LootTicket.CreatedBy = getPlayer():getUsername();
     modData.LootTicket.CreatedTimestamp = getTimestamp();
+    modData.LootTicket.Items = self.datas.items;
     modData.LootTicket.RestrictedTo = nil;
     modData.LootTicket.MaxRolls = tonumber(self.maxRolledItems:getText());
     modData.LootTicket.AllowDuplicates = self.allowDuplicateItems;
 
-    ISCollapsableWindow.close(self);
+    local logStr = string.format("Staff %s has created loot ticket with ID %0d with %0d max rolls and %s - items: ", getPlayer():getUsername(), modData.LootTicket.ID, modData.LootTicket.MaxRolls, (modData.LootTicket.AllowDuplicates and "duplicates") or "no duplicates");
+    for _, itemData in ipairs(modData.LootTicket.Items) do
+        logStr = logStr .. string.format("%s, quantity: %0d, chance: %0d | ", itemData.item.Name, tonumber(itemData.item.Quantity), tonumber(itemData.item.Chance));
+    end
+
+    print("LogString");
+    print(logStr);
+
+    LogLineUtils.LogFromClient("LootTicket", logStr);
+
+    self:close();
     self:removeFromUIManager();
 
     getPlayer():setHaloNote("Loot ticket chances set successfully.", 100, 250, 100, 300);
 end
 
 function DLLootTicketChancesUI:onConfirmTicket()
-    local totalChance = 0;
     self.errorLabel:setVisible(false);
     self.errorLabel:setName("ERROR: ");
 
@@ -282,6 +299,6 @@ function DLLootTicketChancesUI:new(x, y, width, height, item, itemTable)
     o.titleFont = UIFont.NewSmall
     o.titleFontHgt = getTextManager():getFontHeight(o.titleFont);
     setmetatable(o, self);
-    self.__index = self;    
+    self.__index = self;
     return o;
 end

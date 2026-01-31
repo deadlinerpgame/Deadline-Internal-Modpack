@@ -58,6 +58,47 @@ function LootTicketManager.OpenTicket(playerNum, item)
     ISTimedActionQueue.add(DLOpenLootTicketAction:new(item));
 end
 
+function LootTicketManager.SetTicketRestricted(target, button, item)
+    if not item then return end;
+
+    if button.internal ~= "OK" then
+        return
+    end
+
+    local targetUsername = button.target.entry:getText();
+    if targetUsername and targetUsername ~= "" then
+        local modData = item:getModData();
+        if not modData.LootTicket then
+            print("ERROR ATTEMPTING TO RESTRICT TICKET - NO LOOT TICKET MODDATA");
+            return;
+        end
+
+        modData.LootTicket.RestrictedTo = targetUsername;
+
+        LogLineUtils.LogFromClient("LootTicket", string.format("Staff %s has set loot ticket ID %0d to be restricted to username %s", getPlayer():getUsername(), modData.LootTicket.ID, targetUsername));
+        getPlayer():setHaloNote("Loot ticket restricted to " .. targetUsername, 180, 25, 25, 300);
+    else
+        local modData = item:getModData();
+        if not modData.LootTicket then
+            print("ERROR ATTEMPTING TO UNRESTRICT TICKET - NO LOOT TICKET MODDATA");
+            return;
+        end
+
+        modData.LootTicket.RestrictedTo = nil;
+
+        LogLineUtils.LogFromClient("LootTicket", string.format("Staff %s has set loot ticket ID %0d to be unrestricted", getPlayer():getUsername(), modData.LootTicket.ID));
+        getPlayer():setHaloNote("Loot ticket unrestricted!", 180, 25, 25, 300);
+    end
+end
+
+function LootTicketManager.RestrictToPlayer(playerNum, item)
+    local labelStr = "Enter the username for who this should be restricted to."
+    local width = getTextManager():MeasureStringX(UIFont.Small, labelStr);
+    local modal = ISTextBox:new(0, 0, width * 1.2, 150, labelStr, "", nil, LootTicketManager.SetTicketRestricted, playerNum, item);
+    modal:initialise();
+    modal:addToUIManager();
+end
+
 function LootTicketManager.OnFillInventoryObjectContextMenu(playerNum, context, items)
 
     if not playerNum then return end
@@ -82,10 +123,38 @@ function LootTicketManager.OnFillInventoryObjectContextMenu(playerNum, context, 
                 local lootSubMenu = context:getNew(context);
                 context:addSubMenu(controlsOpt, lootSubMenu);
 
-                lootSubMenu:addOption(getText("ContextMenu_OpenLootTicket"), playerNum, LootTicketManager.OpenTicket, item);
+                if item:getModData().LootTicket then
+                    local lootData = item:getModData().LootTicket;
+                    local showOpenOption = false;
+
+                    if not lootData.RestrictedTo then
+                        showOpenOption = true;
+                    end
+
+                    if lootData.RestrictedTo and lootData.RestrictedTo == getPlayer():getUsername() then
+                        showOpenOption = true;
+                    end
+
+                    local openOption = lootSubMenu:addOption(getText("ContextMenu_OpenLootTicket"), playerNum, LootTicketManager.OpenTicket, item);
+                    if not showOpenOption then
+                        openOption.notAvailable = true;
+                        openOption.toolTip = ISWorldObjectContextMenu.addToolTip();
+                        openOption.toolTip.description = "<RED>This loot ticket is restricted to a specific player and you cannot open it. <LINE> <LINE> If you think this is in error, contact a staff member.";
+
+                        if isAdmin() or isDebugEnabled() then
+                            local adminString = string.format(" <LINE> <LINE> <ORANGE> STAFF - Username: %s", lootData.RestrictedTo);
+                            local newWidth = getTextManager():MeasureStringX(UIFont.Medium, adminString);
+                            openOption.toolTip.description = openOption.toolTip.description .. adminString;
+                            if newWidth > openOption.toolTip:getWidth() then
+                                openOption.toolTip:setWidth(newWidth * 1.1);
+                            end
+                        end
+                    end
+                end
 
                 if isAdmin() or isDebugEnabled() then
                     lootSubMenu:addOption(getText("ContextMenu_SeeLootTicketParameters"), playerNum, LootTicketManager.ShowTicketParams, item);
+                    lootSubMenu:addOption(getText("ContextMenu_RestrictToPlayer"), playerNum, LootTicketManager.RestrictToPlayer, item);
                 end
             end
         end
