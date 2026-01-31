@@ -232,7 +232,6 @@ module Base
       		Category:Tailoring,
 		SkillRequired:Tailoring=6,
     	}
-
 	recipe Create a Black Denim Fabric Roll
 	{
 		Thread=50,
@@ -245,22 +244,6 @@ module Base
 		SkillRequired:Tailoring=6,
     	}
 
-	recipe Make Fabric Roll
-	{
-		Sheet=2,
-	    Thread=1,
-		keep Needle,
-		NearItem:TailoringWorkbench,
-		Result:FabricRoll,
-		Sound:ClothesRipping,
-		Time:100.0,
-		Category:Tailoring,
-		Override:true,
-		SkillRequired:Tailoring=6,
-		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
-		AnimNode:RipSheets,
-	}
-
 	recipe Make Denim Strip Bundle
 	{
 			DenimStrips=50,
@@ -268,7 +251,6 @@ module Base
        		Time:120.0,
       		Category:Tailoring,
     	}
-
 	recipe Make Leather Strip Bundle
 	{
 			LeatherStrips=50,
@@ -276,7 +258,6 @@ module Base
        		Time:120.0,
       		Category:Tailoring,
     	}
-
 	recipe Make Ripped Sheets Strip Bundle
 	{
 			RippedSheets=50,
@@ -284,7 +265,6 @@ module Base
        		Time:120.0,
       		Category:Tailoring,
     	}
-
 	recipe Make Denim Strip from Bundle
 	{
        		DenimStripsBundle,
@@ -292,7 +272,6 @@ module Base
        		Time:120.0,
       		Category:Tailoring,
     	}
-
 	recipe Make Leather Strip from Bundle
 	{
        		LeatherStripsBundle,
@@ -300,7 +279,6 @@ module Base
        		Time:120.0,
       		Category:Tailoring,
     	}
-
 	recipe Make Ripped Sheets Strip from Bundle
 	{
 			RippedSheetsBundle,
