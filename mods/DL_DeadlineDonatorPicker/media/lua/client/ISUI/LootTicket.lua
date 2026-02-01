@@ -91,6 +91,17 @@ function LootTicketManager.SetTicketRestricted(target, button, item)
     end
 end
 
+function LootTicketManager.ShowTicketParams(playerNum, item)
+    if not isAdmin() or not isDebugEnabled() then return end;
+
+    local itemData = item:getModData().LootTicket.Items;
+
+    local ui = DLLootTicketInspectionUI:new(0, 0, 500, 300, itemData);
+    ui:initialise();
+    ui:addToUIManager();
+end
+
+
 function LootTicketManager.RestrictToPlayer(playerNum, item)
     local labelStr = "Enter the username for who this should be restricted to."
     local width = getTextManager():MeasureStringX(UIFont.Small, labelStr);
@@ -161,4 +172,28 @@ function LootTicketManager.OnFillInventoryObjectContextMenu(playerNum, context, 
     end
 end
 
+function LootTicketManager.OnServerCommand(module, command, args)
+    if module ~= "LootTicket" then return end;
+
+    print("LootTicketOnServerCommand");
+
+    if command == "ReceiveRollResults" then
+        print("LootTicketOnServerCommand");
+        local halfScreenX = Math.ceil(getCore():getScreenWidth() / 2);
+        local halfScreenY = Math.ceil(getCore():getScreenHeight() / 2);
+
+        local uiWidth = Math.ceil(halfScreenX * 0.5);
+        local uiHeight = Math.ceil(halfScreenY * 0.5);
+
+        local posX = halfScreenX - uiWidth;
+        local posY = halfScreenY - uiHeight
+
+        local rewardScreen = DLLootResultsUI:new(posX, posY, uiWidth, uiHeight, args.rewards);
+        rewardScreen:initialise();
+        rewardScreen:addToUIManager();
+    end
+end
+
+
+Events.OnServerCommand.Add(LootTicketManager.OnServerCommand);
 Events.OnFillInventoryObjectContextMenu.Add(LootTicketManager.OnFillInventoryObjectContextMenu);

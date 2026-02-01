@@ -4,8 +4,6 @@ require "LogLineUtils";
 LogLineUtils = LogLineUtils or {};
 LogLineUtils.LogFromClient = LogLineUtils.LogFromClient or {};
 
-local randInstance = newrandom();
-
 DLOpenLootTicketAction = ISBaseTimedAction:derive("DLOpenLootTicketAction");
 
 function DLOpenLootTicketAction:isValid()
@@ -43,95 +41,15 @@ function DLOpenLootTicketAction:rollForLoot()
         return;
     end
 
-    local totalChance = 0;
-    self.itemsToGive = {};
-    local logStr = "[OPENING LOOT TICKET] Player: " .. getPlayer():getUsername() .. " || ID: " .. tostring(lootData.ID) ..  " || ";
+    sendClientCommand("LootTicket", "RequestRoll", { ticket = self.item, lootData = lootData });
 
-    for _, itemData in ipairs(lootData.Items) do
-        local chance = tonumber(itemData.item.Chance);
-        itemData.item.hasRolledThisTurn = false;
-        if chance < 100 then
-            totalChance = totalChance + chance;
-        else
-            table.insert(self.itemsToGive, itemData);
-        end
-    end
-
-    logStr = logStr .. string.format(" || Total Weight: %0d ", totalChance);
-
-    
-
-    local totalRolls = tonumber(lootData.MaxRolls);
-    if not totalRolls or totalRolls < 1 then totalRolls = 1 end;
-
-    logStr = logStr .. string.format(" || Total Rolls: %0d ", totalRolls);
-
-    for rollNum = 1, totalRolls do
-        local iteratedChance = randInstance:random(0, totalChance);
-        local hasRolledSuccessfully = false;
-
-        logStr = logStr .. string.format(" || Current Roll: %0d, Random Number Picked: %0d >", rollNum, iteratedChance);
-
-        for _, rollItem in ipairs(lootData.Items) do
-            logStr = logStr .. string.format(" [%s ", rollItem.item.Name);
-            
-            -- If the item is guaranteed, add it to the list.
-            if tonumber(rollItem.item.Chance) < 100 then
-                -- Make sure there's not already been an item selected for this roll (not withstanding the guaranteed ones.)
-                if not hasRolledSuccessfully then
-
-                    iteratedChance = iteratedChance - tonumber(rollItem.item.Chance);
-
-                    logStr = logStr .. string.format("original: %0d, comp is: %0d", rollItem.item.Chance, iteratedChance);
-
-                    if not lootData.AllowDuplicates and not rollItem.item.hasRolledThisTurn then
-                        
-                        if iteratedChance <= 0 then
-                            logStr = logStr .. string.format(" !SUCCESS! ", iteratedChance);
-                            hasRolledSuccessfully = true;
-                            rollItem.item.hasRolledThisTurn = true;
-                            table.insert(self.itemsToGive, rollItem);
-                        end
-                    else
-                        logStr = logStr .. " !Has already rolled, no duplicates allowed ! ";
-                    end
-                else
-                    logStr = logStr .. " skip";
-                end
-
-                logStr = logStr .. " ] ";
-            end
-
-            
-        end
-    end
-
-    LogLineUtils.LogFromClient("LootTicket", logStr);
-
-    logStr = "[REWARD] Giving player " .. getPlayer():getUsername() .. " the following items: ";
-    for _, item in ipairs(self.itemsToGive) do
-        local newItem = InventoryItemFactory.CreateItem(item.item.Name);
-        if newItem then
-            local wasAdded = getPlayer():getInventory():addItem(newItem);
-            if not wasAdded then
-                getPlayer():getSquare():AddWorldInventoryItemItem(newItem, 0, 0, 0);
-                logStr = logStr .. newItem:getFullType() .. " [floor] | ";
-            else
-                logStr = logStr .. newItem:getFullType() .. " [inv] | ";
-            end
-        else
-            logStr = logStr .. " [ERROR CREATING ITEM " .. item.item.Name .. "] ";
-        end
-    end
-
-    LogLineUtils.LogFromClient("LootTicket", logStr);
+    --LogLineUtils.LogFromClient("LootTicket", logStr);
 end
 
 function DLOpenLootTicketAction:perform()
     ISBaseTimedAction.perform(self);
     self:rollForLoot();
-    local container = self.item:getContainer();
-    container:DoRemoveItem(self.item);
+    
 end
 
 function DLOpenLootTicketAction:new(item)
