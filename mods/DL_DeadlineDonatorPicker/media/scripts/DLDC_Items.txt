@@ -8,9 +8,27 @@ module Deadline_DonatorClothes
     item DLDC_ClothingTicket
     {
         Type            =       Normal,
-        DisplayCategory =       Clothing,
+        DisplayCategory =       LootTickets,
         DisplayName     =       Donator Ticket - Clothing,
         Icon            =       DonatorTicket,
         Tooltip         =       Tooltip_ClothingTicket,
+    }
+
+    item DLDC_ItemLootTicket_Unset
+    {
+        Type            =       Normal,
+        DisplayCategory =       LootTickets,
+        DisplayName     =       Loot Ticket (not set),
+        Icon            =       DonatorTicket,
+        Tooltip         =       Tooltip_LootTicket_NotSet,
+    }
+
+    item DLDC_ItemLootTicket_Set
+    {
+        Type            =       Normal,
+        DisplayCategory =       LootTickets,
+        DisplayName     =       Loot Ticket (set),
+        Icon            =       DonatorTicket,
+        Tooltip         =       Tooltip_LootTicket_Set,
     }
 }
