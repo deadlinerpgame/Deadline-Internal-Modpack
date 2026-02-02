@@ -202,30 +202,23 @@ end
 function MedLine_Client.isInExclusionZone()
     -- If within 100 tiles of spawn or under 5 hours.
 
-    if getPlayer():getHoursSurvived() < 5 then return true end;
+    if getPlayer():getHoursSurvived() < 5 or isAdmin() or isDebugEnabled() then return true end;
 
-    local exclusionZones =
-    {
-        {13033,5423,0},
-        {11167,2271,1},
-        {10478,3863,0},
-        {16477,5744,0}
-    };
+    local exclusionX = 15908;
+    local exclusionY = 53;
 
-    for i, _ in ipairs(exclusionZones) do
-        local zone = exclusionZones[i];
+    local range = 50;
+    local playerX = getPlayer():getX();
+    local playerY = getPlayer():getY();
 
-        if zone then
-            local currentX, currentY = player:getX(), player:getY();
-            local exclusionX, exclusionY = zone[1], zone[2];
+    local distanceX = playerX - exclusionX;
+    local distanceY = playerY - exclusionY;
+    distanceX = distanceX * distanceX;
+    distanceY = distanceY * distanceY;
 
-            local distanceX = exclusionX - currentX;
-            local distanceY = exclusionY - currentY;
-
-            local distSq = (distanceX * distanceX + distanceY * distanceY);
-
-            if distSq < 100 then return true end;
-        end
+    local sqDistance = distanceX + distanceY;
+    if sqDistance < (range * range) then
+        return true;
     end
 
     return false;
