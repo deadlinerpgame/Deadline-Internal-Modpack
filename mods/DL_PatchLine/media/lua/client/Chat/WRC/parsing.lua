@@ -324,6 +324,16 @@ function WRC.Parsing.GetLuminance(r, g, b)
 end
 
 function WRC.Parsing.AccountForDistance(rgbStr, distanceAmt)
+
+    if not distanceAmt then return rgbStr end;
+
+    if not getPlayer():getModData().MinRGB or getPlayer():getModData().MinRGB == {} then
+        getPlayer():getModData().MinRGB = { 0.33, 0.33, 0.33 };
+    end
+
+    local minRGB = getPlayer():getModData().MinRGB;
+    print("Min RGB is " .. tostring(minRGB));
+
     local parsingColor = string.gsub(rgbStr, "<RGB:", "");
 
     parsingColor = string.gsub(parsingColor, ">", "");
@@ -334,6 +344,17 @@ function WRC.Parsing.AccountForDistance(rgbStr, distanceAmt)
     local lumText = WRC.Parsing.GetLuminance(r, g, b);
     local lumBg = WRC.Parsing.GetLuminance(0, 0, 0);
 
+    local maxDiff = { r - minRGB[1], g - minRGB[2], b - minRGB[3] };
+    print("maxDiff = ");
+    print(maxDiff[1]);
+    print(maxDiff[2])
+    print(maxDiff[3]);
+
+    print("So subtracting ");
+    print(tostring(tonumber(maxDiff[1]) * tonumber(distanceAmt)));
+    print(tostring(tonumber(maxDiff[2]) * tonumber(distanceAmt)));
+    print(tostring(tonumber(maxDiff[3]) * tonumber(distanceAmt)));
+
     local contrastRatio = (lumText + 0.05) / (lumBg + 0.05);
     print("Lum contrast is: " .. contrastRatio);
     if contrastRatio < 4.5 then
@@ -341,11 +362,17 @@ function WRC.Parsing.AccountForDistance(rgbStr, distanceAmt)
     end
 
     if r and g and b then
-        local adjustedR = tonumber(r) - tonumber(distanceAmt);
-        local adjustedG = tonumber(g) - tonumber(distanceAmt);
-        local adjustedB = tonumber(b) - tonumber(distanceAmt);
+        local adjustedR = tonumber(r) - (tonumber(maxDiff[1]) * tonumber(distanceAmt));
+        local adjustedG = tonumber(g) - (tonumber(maxDiff[2]) * tonumber(distanceAmt));
+        local adjustedB = tonumber(b) - (tonumber(maxDiff[3]) * tonumber(distanceAmt));
 
-        return string.format("<RGB:%s,%s,%s>", tostring(adjustedR), tostring(adjustedG), tostring(adjustedB));
+        if adjustedR < minRGB[1] then adjustedR = minRGB[1] end;
+        if adjustedG < minRGB[2] then adjustedG = minRGB[2] end;
+        if adjustedB < minRGB[3] then adjustedB = minRGB[3] end;
+
+        local distanceStr = string.format("<RGB:%s,%s,%s>", tostring(adjustedR), tostring(adjustedG), tostring(adjustedB));
+        print(distanceStr);
+        return distanceStr;
     end
 
     return nil;
@@ -357,34 +384,29 @@ function WRC.Parsing.FormatPart(part, omitStart, distanceMetric)
         text = text:sub(omitStart + 1, text:len())
     end
 
-    local distanceChange = 0;
-    if distanceMetric and distanceMetric > 0 then
-        distanceChange = distanceMetric * 0.125;
-    end
-
     if part.type == "text" then
         local sayColor = WRC.Meta.GetSayColor()
-        return WRC.Parsing.AccountForDistance(WRC.ChatColors[part.type], distanceChange) .. WRC.Parsing.AccountForDistance(sayColor, distanceChange) .. "\"" .. text .. "\"" .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(WRC.ChatColors[part.type], distanceMetric) .. WRC.Parsing.AccountForDistance(sayColor, distanceMetric) .. "\"" .. text .. "\"" .. WL_Utils.MagicSpace
     elseif part.type == "textmuted" then
-        return WRC.Parsing.AccountForDistance(WRC.ChatColors[part.type], distanceChange) .. "\"" .. text .. "\"" .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(WRC.ChatColors[part.type], distanceMetric) .. "\"" .. text .. "\"" .. WL_Utils.MagicSpace
     elseif part.type == "ooc" then
         local oocColor = WRC.Meta.GetOocColor()
-        return WRC.Parsing.AccountForDistance(oocColor, distanceChange) .. "(( " .. text .. " ))" .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(oocColor, distanceMetric) .. "(( " .. text .. " ))" .. WL_Utils.MagicSpace
     elseif part.type == "environment" then
             local doColor = WRC.Meta.GetDoColor()
-            return WRC.Parsing.AccountForDistance(doColor, distanceChange) .. "[[ " .. text .. " ]]" .. WL_Utils.MagicSpace
+            return WRC.Parsing.AccountForDistance(doColor, distanceMetric) .. "[[ " .. text .. " ]]" .. WL_Utils.MagicSpace
     elseif part.type == "emote" then
         local emoteColor = WRC.Meta.GetEmoteColor()
-        return WRC.Parsing.AccountForDistance(emoteColor, distanceChange) .. text .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(emoteColor, distanceMetric) .. text .. WL_Utils.MagicSpace
     elseif part.type == "alert" then
         local alertColor = WRC.ChatColors["alert"]
-        return WRC.Parsing.AccountForDistance(alertColor, distanceChange) .. text .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(alertColor, distanceMetric) .. text .. WL_Utils.MagicSpace
     elseif part.type == "roll" then
         local fontHeight = getTextManager():MeasureStringY(UIFont.NewSmall, "XXX")
         local imageTag = " <IMAGE:Item_Dice,".. fontHeight .. "," .. fontHeight .. ">"
-        return WRC.Parsing.AccountForDistance(WRC.ChatColors[part.type], distanceChange) .. imageTag .. text .. imageTag .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(WRC.ChatColors[part.type], distanceMetric) .. imageTag .. text .. imageTag .. WL_Utils.MagicSpace
     else
-        return WRC.Parsing.AccountForDistance(WRC.ChatColors[part.type], distanceChange) .. text .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(WRC.ChatColors[part.type], distanceMetric) .. text .. WL_Utils.MagicSpace
     end
 end
 
@@ -396,7 +418,7 @@ function WRC.Parsing.FormatMessage(parsedMessage)
     local specialStart
 
     -- Set the distance value.
-    local distanceMetric = 0;
+    local distanceMetric = nil;
 
     local source = getPlayerFromUsername(parsedMessage.playerUsername);
     if source and source ~= getPlayer() then
@@ -408,12 +430,10 @@ function WRC.Parsing.FormatMessage(parsedMessage)
         print("Chat type distance: " .. tostring(chatTypeDist));
         print("Relative distance: " .. tostring(relativeDist));
 
-        if relativeDist >= 0.25 and relativeDist < 0.5 then
-            distanceMetric = 1;
-        elseif relativeDist >= 0.5 and relativeDist < 0.75 then
-            distanceMetric = 2.25;
-        elseif relativeDist >= 0.75 then
-            distanceMetric = 3.5;
+        if relativeDist > 1 then
+            distanceMetric = 1
+        else
+            distanceMetric = tonumber(string.format("%.2f", relativeDist));
         end
     end
 
