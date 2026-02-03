@@ -359,6 +359,10 @@ function WRC.Meta.GetSayVolumeColor()
     return getChatPref("SayVolumeColor")
 end
 
+function WRC.Meta.SetDistanceLowestColor(color)
+    getPlayer():getModData().MinRGB = color;
+end
+
 function WRC.Meta.SetSayVolumeColor(color)
     writeChatPref("SayVolumeColor", color)
 end
@@ -731,6 +735,7 @@ function WRC.Meta.CreateChatSettingsContext(context)
     volumeColorsContext:addOption("Set Say Color", nil, WRC.MakeColorDialogPrompt("New Say Volume Color (blank for default)", WRC.Commands.SetSayVolumeColor))
     volumeColorsContext:addOption("Set Loud Color", nil, WRC.MakeColorDialogPrompt("New Loud Volume Color (blank for default)", WRC.Commands.SetLoudVolumeColor))
     volumeColorsContext:addOption("Set Shout Color", nil, WRC.MakeColorDialogPrompt("New Shout Volume Color (blank for default)", WRC.Commands.SetShoutVolumeColor))
+    volumeColorsContext:addOption("Set Distance Colors", nil, WRC.MakeColorDialogPrompt("New Max Distance Color (blank for default) <LINE> <RGB:0.3,0.3,0.3> Default looks like this (0.3,0.3,0.3)."), WRC.Commands.SetDistanceLowestColor);
 
     local unreadTabOption = chatSettingsContext:addOption("Unread Tab Options", nil, nil)
     local unreadTabContext = chatSettingsContext:getNew(chatSettingsContext)

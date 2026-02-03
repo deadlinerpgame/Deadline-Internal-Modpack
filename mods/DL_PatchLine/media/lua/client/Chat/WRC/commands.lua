@@ -179,6 +179,23 @@ function WRC.Commands.SetShoutVolumeColor(args)
     WL_Utils.addInfoToChat(rgbString .. "Shout color has been updated!")
 end
 
+function WRC.Commands.SetDistanceLowestColor(args)
+    if not args or args == "" then
+        WRC.Meta.SetDistanceLowestColor("<RGB:0.3,0.3,0.3>");
+        WL_Utils.addInfoToChat("<RGB:0.3,0.3,0.3> Distance max color set to default.");
+        return;
+    end
+
+    local color = WRC.GetColor(args)
+    if not color then
+        return;
+    end
+
+    local rgbString = string.format("<RGB:%s,%s,%s>", color.r, color.g, color.b);
+    WRC.Meta.SetDistanceLowestColor(rgbString);
+    WL_Utils.addInfoToChat(rgbString .. " Distance max color has been updated!");
+end
+
 function WRC.Commands.SetLang(args)
     local lang = args:gsub("^%s*(.-)%s*$", "%1") -- trim
     if lang == nil or lang == "" then

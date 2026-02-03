@@ -1,5 +1,23 @@
 LootTicketManager = {};
 
+local original_ISInventoryTransferAction_perform = ISInventoryTransferAction.perform;
+function ISInventoryTransferAction:perform()
+    if self.item:getType() ~= "DLDC_ItemLootTicket_Set" then return end;
+
+    if (not isAdmin() and not isDebugEnabled()) then
+
+        if self.item:getModData().LootTicket and self.item:getModData().LootTicket.RestrictedTo then
+            if self.item:getModData().LootTicket.RestrictedTo ~= getPlayer():getUsername() then
+                getPlayer():setHaloNote("This isn't my loot ticket to take.", 180, 25, 25, 300);
+                return false;
+            end
+        end
+
+    end
+
+    return original_ISInventoryTransferAction_perform(self);
+end
+
 function LootTicketManager.ShowSetContext(playerNum, item)
     if not playerNum or not item then return end;
 
