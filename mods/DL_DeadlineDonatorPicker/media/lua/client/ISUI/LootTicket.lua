@@ -2,7 +2,9 @@ LootTicketManager = {};
 
 local original_ISInventoryTransferAction_perform = ISInventoryTransferAction.perform;
 function ISInventoryTransferAction:perform()
-    if self.item:getType() ~= "DLDC_ItemLootTicket_Set" then return end;
+    if self.item:getType() ~= "DLDC_ItemLootTicket_Set" then 
+        return original_ISInventoryTransferAction_perform(self);
+    end
 
     if (not isAdmin() and not isDebugEnabled()) then
 
