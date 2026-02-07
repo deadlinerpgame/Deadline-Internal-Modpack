@@ -112,13 +112,13 @@ function LootTicketManager.SetTicketRestricted(target, button, item)
 end
 
 function LootTicketManager.ShowTicketParams(playerNum, item)
-    if not isAdmin() or not isDebugEnabled() then return end;
+    if isAdmin() or isDebugEnabled() then
+        local itemData = item:getModData().LootTicket.Items;
 
-    local itemData = item:getModData().LootTicket.Items;
-
-    local ui = DLLootTicketInspectionUI:new(0, 0, 500, 300, itemData);
-    ui:initialise();
-    ui:addToUIManager();
+        local ui = DLLootTicketInspectionUI:new(0, 0, 500, 300, itemData);
+        ui:initialise();
+        ui:addToUIManager();
+    end
 end
 
 

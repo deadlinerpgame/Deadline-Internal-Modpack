@@ -341,8 +341,8 @@ function WRC.Parsing.AccountForDistance(rgbStr, distanceAmt)
     local colors = string.split(parsingColor, ",");
     local r, g, b = colors[1], colors[2], colors[3];
 
-    local lumText = WRC.Parsing.GetLuminance(r, g, b);
-    local lumBg = WRC.Parsing.GetLuminance(0, 0, 0);
+    --[[local lumText = WRC.Parsing.GetLuminance(r, g, b);
+    local lumBg = WRC.Parsing.GetLuminance(0, 0, 0);--]]
 
     local maxDiff = { r - minRGB[1], g - minRGB[2], b - minRGB[3] };
     print("maxDiff = ");
@@ -355,11 +355,11 @@ function WRC.Parsing.AccountForDistance(rgbStr, distanceAmt)
     print(tostring(tonumber(maxDiff[2]) * tonumber(distanceAmt)));
     print(tostring(tonumber(maxDiff[3]) * tonumber(distanceAmt)));
 
-    local contrastRatio = (lumText + 0.05) / (lumBg + 0.05);
+    --[[local contrastRatio = (lumText + 0.05) / (lumBg + 0.05);
     print("Lum contrast is: " .. contrastRatio);
     if contrastRatio < 4.5 then
         print("CONTRAST DOES NOT COMPLY WITH WCAG2");
-    end
+    end--]]
 
     if r and g and b then
         local adjustedR = tonumber(r) - (tonumber(maxDiff[1]) * tonumber(distanceAmt));
