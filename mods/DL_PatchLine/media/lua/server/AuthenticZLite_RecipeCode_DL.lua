@@ -1,23 +1,19 @@
-local GlowStickList = {
-    "AuthenticZLite.AuthenticGlowstick_Red",
-    "AuthenticZLite.AuthenticGlowstick_Blue",
-    "AuthenticZLite.AuthenticGlowstick_Green",
-    "AuthenticZLite.AuthenticGlowstick_Orange",
-    "AuthenticZLite.AuthenticGlowstick_Pink",
-    "AuthenticZLite.AuthenticGlowstick_Purple",
-    "AuthenticZLite.AuthenticGlowstick_Yellow",
-    "AuthenticZLite.AuthenticGlowstick_White",
+local GlowStickListDL = {
+"AuthenticZLite.AuthenticGlowstick_Red",
+"AuthenticZLite.AuthenticGlowstick_Blue",
+"AuthenticZLite.AuthenticGlowstick_Green",
+"AuthenticZLite.AuthenticGlowstick_Orange",
+"AuthenticZLite.AuthenticGlowstick_Pink",
+"AuthenticZLite.AuthenticGlowstick_Purple",
+"AuthenticZLite.AuthenticGlowstick_Yellow",
 }
-
-function Recipe.OnCreate.OpenGlowStickPackage(items, result, player)
-    player:getInventory():AddItem(GlowStickList[ZombRand(#GlowStickList)+1]);
-    player:getInventory():AddItem(GlowStickList[ZombRand(#GlowStickList)+1]);
-    player:getInventory():AddItem(GlowStickList[ZombRand(#GlowStickList)+1]);
+function Recipe.OnCreate.OpenGlowStickPackageDL(items, result, player)
+    player:getInventory():AddItem(GlowStickListDL[ZombRand(#GlowStickListDL)+1]);
+    player:getInventory():AddItem(GlowStickListDL[ZombRand(#GlowStickListDL)+1]);
+    player:getInventory():AddItem(GlowStickListDL[ZombRand(#GlowStickListDL)+1]);
 end
-
-
--- old list kept for reference
-local SealedMedkitList = {
+-- old list kept for reference, will use it to spawn random pharmaceutical meds in the future
+local SealedMedkitListDL = {
             "AlcoholWipes",
             "AlcoholWipes",
             "Bandage",
@@ -38,7 +34,7 @@ local SealedMedkitList = {
             "SutureNeedleHolder",
             "Tweezers",
 }
-function Recipe.OnCreate.OpenSealedMedkit(items, result, player)
+function Recipe.OnCreate.OpenSealedMedkitDL(items, result, player)
     player:getInventory():AddItem("Tweezers");
     player:getInventory():AddItem("AlcoholWipes");
     player:getInventory():AddItem("Bandage");
@@ -55,4 +51,7 @@ function Recipe.OnCreate.OpenSealedMedkit(items, result, player)
     player:getInventory():AddItem("Bandaid");
     player:getInventory():AddItem("Bandaid");
     player:getInventory():AddItem("AlcoholBandage2");
+    player:getInventory():AddItem("Needle");
+    player:getInventory():AddItem("Thread");
+    player:getInventory():AddItem("Needle");
 end
