@@ -1,0 +1,57 @@
+local GlowStickListDL = {
+"AuthenticZLite.AuthenticGlowstick_Red",
+"AuthenticZLite.AuthenticGlowstick_Blue",
+"AuthenticZLite.AuthenticGlowstick_Green",
+"AuthenticZLite.AuthenticGlowstick_Orange",
+"AuthenticZLite.AuthenticGlowstick_Pink",
+"AuthenticZLite.AuthenticGlowstick_Purple",
+"AuthenticZLite.AuthenticGlowstick_Yellow",
+}
+function Recipe.OnCreate.OpenGlowStickPackageDL(items, result, player)
+    player:getInventory():AddItem(GlowStickListDL[ZombRand(#GlowStickListDL)+1]);
+    player:getInventory():AddItem(GlowStickListDL[ZombRand(#GlowStickListDL)+1]);
+    player:getInventory():AddItem(GlowStickListDL[ZombRand(#GlowStickListDL)+1]);
+end
+-- old list kept for reference, will use it to spawn random pharmaceutical meds in the future
+local SealedMedkitListDL = {
+            "AlcoholWipes",
+            "AlcoholWipes",
+            "Bandage",
+            "Bandage",
+            "Bandage",
+            "Bandaid",
+            "Bandaid",
+            "Bandaid",
+            "CottonBalls",
+            "CottonBalls",
+            "CottonBalls",
+            "Disinfectant",
+            "Gloves_Surgical",
+            "Scalpel",
+            "Scissors",
+            "SutureNeedle",
+            "SutureNeedle",
+            "SutureNeedleHolder",
+            "Tweezers",
+}
+function Recipe.OnCreate.OpenSealedMedkitDL(items, result, player)
+    player:getInventory():AddItem("Tweezers");
+    player:getInventory():AddItem("AlcoholWipes");
+    player:getInventory():AddItem("Bandage");
+    player:getInventory():AddItem("Bandage");
+    player:getInventory():AddItem("AlcoholBandage");
+    player:getInventory():AddItem("AlcoholBandage");
+    player:getInventory():AddItem("SutureNeedle");
+    player:getInventory():AddItem("SutureNeedle");
+    player:getInventory():AddItem("SutureNeedleHolder");
+    player:getInventory():AddItem("Scissors");
+    player:getInventory():AddItem("Scalpel");
+    player:getInventory():AddItem("CottonBalls");
+    player:getInventory():AddItem("Gloves_Surgical");
+    player:getInventory():AddItem("Bandaid");
+    player:getInventory():AddItem("Bandaid");
+    player:getInventory():AddItem("AlcoholBandage2");
+    player:getInventory():AddItem("Needle");
+    player:getInventory():AddItem("Thread");
+    player:getInventory():AddItem("Needle");
+end
