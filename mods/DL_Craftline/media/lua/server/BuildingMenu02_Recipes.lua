@@ -6025,6 +6025,12 @@ local function initBuildingMenuRecipes()
             {
                 BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Nails, 1, "Material")
             },
+        useConsumable = {
+            {
+                Consumable = "Base.DyePack",
+                Amount = 2
+            },
+        },            
         },
         skills = {
             {
@@ -6543,8 +6549,14 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                Material = "Base.LeadPipe",
-                Amount = 2
+                {
+                    Material = "Base.LeadPipe",
+                    Amount = 2
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 2
+                },
             },
             {
                 Material = "Base.SheetMetal",
@@ -6583,8 +6595,14 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                Material = "Base.LeadPipe",
-                Amount = 3
+                {
+                    Material = "Base.LeadPipe",
+                    Amount = 1
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 1
+                },
             },
             {
                 Material = "Base.SheetMetal",
