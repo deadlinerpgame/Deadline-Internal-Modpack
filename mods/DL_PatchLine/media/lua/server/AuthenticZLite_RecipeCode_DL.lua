@@ -53,5 +53,5 @@ function Recipe.OnCreate.OpenSealedMedkitDL(items, result, player)
     player:getInventory():AddItem("AlcoholBandage2");
     player:getInventory():AddItem("Needle");
     player:getInventory():AddItem("Thread");
-    player:getInventory():AddItem("Needle");
+    player:getInventory():AddItem("Thread");
 end
