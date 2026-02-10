@@ -12,7 +12,6 @@ function Recipe.OnCreate.OpenGlowStickPackageDL(items, result, player)
     player:getInventory():AddItem(GlowStickListDL[ZombRand(#GlowStickListDL)+1]);
     player:getInventory():AddItem(GlowStickListDL[ZombRand(#GlowStickListDL)+1]);
 end
--- old list kept for reference, will use it to spawn random pharmaceutical meds in the future
 local SealedMedkitListDL = {
             "AlcoholWipes",
             "AlcoholWipes",
