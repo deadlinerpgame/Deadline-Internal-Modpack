@@ -5968,6 +5968,12 @@ local function initBuildingMenuRecipes()
                     BuildingMenu.round(smallObjectsNailsCount * 0.75), "Material")
             },
         },
+        useConsumable = {
+            {
+                Consumable = "Base.DyePack",
+                Amount = 2
+            },
+        },      
         skills = {
             {
                 Skill = "Woodwork",
@@ -6024,12 +6030,12 @@ local function initBuildingMenuRecipes()
             {
                 BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Nails, 1, "Material")
             },
+        },
         useConsumable = {
             {
                 Consumable = "Base.DyePack",
                 Amount = 2
             },
-        },            
         },
         skills = {
             {
