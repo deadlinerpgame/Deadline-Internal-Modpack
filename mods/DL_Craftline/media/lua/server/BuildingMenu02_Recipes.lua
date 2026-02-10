@@ -156,10 +156,9 @@ local function initBuildingMenuRecipes()
                 },
             },
             {
-                {
                     Material = "Base.FabricRoll",
                     Amount = 1
-                },
+            },
         },
         useConsumable = {
             {
