@@ -7463,7 +7463,7 @@ local function initBuildingMenuRecipes()
             {
                 Material = "Base.Mattress",
                 Amount = 1
-            }
+            },
             {
                 Material = "Base.FabricRoll",
                 Amount = 1
