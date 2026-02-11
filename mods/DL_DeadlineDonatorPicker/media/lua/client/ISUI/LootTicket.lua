@@ -91,6 +91,28 @@ function LootTicketManager.SetTicketRestricted(target, button, item)
     end
 end
 
+
+function LootTicketManager.ConfirmNewTemplate(target, button, item)
+    if not item then return end;
+
+    if button.internal ~= "OK" then
+        return
+    end
+
+    local templateName = button.target.entry:getText();
+    if not templateName or templateName == "" then
+        getPlayer():setHaloNote("I need to give the template a name.", 180, 25, 25, 300);
+        return;
+    end
+
+    local modData = item:getModData().LootTicket;
+    sendClientCommand("LootTicket", "RequestSaveTemplate", { name = templateName, lootData = modData });
+
+    local logStr = string.format("%s has created ticket template %s from ticket ID %s", getPlayer():getUsername(), templateName, tostring(modData.ID));
+    LogLineUtils.LogFromClient("LootTicket", logStr);
+    getPlayer():setHaloNote("Template successfully created with name " .. templateName, 180, 25, 25, 300);
+end
+
 function LootTicketManager.ShowTicketParams(playerNum, item)
     if not isAdmin() or not isDebugEnabled() then return end;
 
@@ -106,6 +128,14 @@ function LootTicketManager.RestrictToPlayer(playerNum, item)
     local labelStr = "Enter the username for who this should be restricted to."
     local width = getTextManager():MeasureStringX(UIFont.Small, labelStr);
     local modal = ISTextBox:new(0, 0, width * 1.2, 150, labelStr, "", nil, LootTicketManager.SetTicketRestricted, playerNum, item);
+    modal:initialise();
+    modal:addToUIManager();
+end
+
+function LootTicketManager.AddNewTemplate(playerNum, item)
+    local labelStr = "Enter the name for this template, for example: Tier 2 Guns x1";
+    local width = getTextManager():MeasureStringX(UIFont.Small, labelStr);
+    local modal = ISTextBox:new(0, 0, width * 1.2, 150, labelStr, "", nil, LootTicketManager.ConfirmNewTemplate, playerNum, item);
     modal:initialise();
     modal:addToUIManager();
 end
@@ -126,7 +156,12 @@ function LootTicketManager.OnFillInventoryObjectContextMenu(playerNum, context, 
                 local lootSubMenu = context:getNew(context);
                 context:addSubMenu(controlsOpt, lootSubMenu);
 
-                lootSubMenu:addOption(getText("ContextMenu_SetLootTicketParameters"), playerNum, LootTicketManager.ShowSetContext, item);
+                local adminOptions = lootSubMenu:addOption(getText("ContextMenu_LootAdminOptions"), playerNum, nil);
+                local adminSubMenu = context:getNew(context);
+                context:addSubMenu(adminOptions, adminSubMenu);
+
+                adminSubMenu:addOption(getText("ContextMenu_SetLootTicketParameters"), playerNum, LootTicketManager.ShowSetContext, item);
+                adminSubMenu:addOption(getText("ContextMenu_TemplatesUseExisting"), playerNum, LootTicketManager.UseExistingTemplate, item);
             end
 
             if item:getType() == "DLDC_ItemLootTicket_Set" and item:isInPlayerInventory() then
@@ -164,8 +199,13 @@ function LootTicketManager.OnFillInventoryObjectContextMenu(playerNum, context, 
                 end
 
                 if isAdmin() or isDebugEnabled() then
-                    lootSubMenu:addOption(getText("ContextMenu_SeeLootTicketParameters"), playerNum, LootTicketManager.ShowTicketParams, item);
-                    lootSubMenu:addOption(getText("ContextMenu_RestrictToPlayer"), playerNum, LootTicketManager.RestrictToPlayer, item);
+                    local adminOptions = lootSubMenu:addOption(getText("ContextMenu_LootAdminOptions"), playerNum, nil);
+                    local adminSubMenu = context:getNew(context);
+                    context:addSubMenu(adminOptions, adminSubMenu);
+
+                    adminSubMenu:addOption(getText("ContextMenu_SeeLootTicketParameters"), playerNum, LootTicketManager.ShowTicketParams, item);
+                    adminSubMenu:addOption(getText("ContextMenu_RestrictToPlayer"), playerNum, LootTicketManager.RestrictToPlayer, item);
+                    adminSubMenu:addOption(getText("ContextMenu_TemplatesAddNew"), playerNum, LootTicketManager.AddNewTemplate, item);
                 end
             end
         end

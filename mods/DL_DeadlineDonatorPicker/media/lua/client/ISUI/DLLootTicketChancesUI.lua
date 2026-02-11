@@ -197,7 +197,7 @@ function DLLootTicketChancesUI:setTicketModData()
     modData.LootTicket.MaxRolls = tonumber(self.maxRolledItems:getText());
     modData.LootTicket.AllowDuplicates = self.allowDuplicateItems;
 
-    local logStr = string.format("Staff %s has created loot ticket with ID %0d with %0d max rolls and %s - items: ", getPlayer():getUsername(), modData.LootTicket.ID, modData.LootTicket.MaxRolls, (modData.LootTicket.AllowDuplicates and "duplicates") or "no duplicates");
+    local logStr = string.format("%s has created loot ticket with ID %0d with %0d max rolls and %s - items: ", getPlayer():getUsername(), modData.LootTicket.ID, modData.LootTicket.MaxRolls, (modData.LootTicket.AllowDuplicates and "duplicates") or "no duplicates");
     for _, itemData in ipairs(modData.LootTicket.Items) do
         logStr = logStr .. string.format("%s, quantity: %0d, chance: %0d | ", itemData.item.Name, tonumber(itemData.item.Quantity), tonumber(itemData.item.Chance));
     end
@@ -207,7 +207,7 @@ function DLLootTicketChancesUI:setTicketModData()
 
     LogLineUtils.LogFromClient("LootTicket", logStr);
 
-    self:close();
+    ISCollapsableWindow.close(self);
     self:removeFromUIManager();
 
     getPlayer():setHaloNote("Loot ticket chances set successfully.", 100, 250, 100, 300);

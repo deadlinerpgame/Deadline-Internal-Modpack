@@ -25,6 +25,7 @@ function DLLootTicketInspectionUI:initialise()
     local smallFontHeight = getTextManager():getFontHeight(UIFont.NewSmall);
 
     local closeWidth = getTextManager():MeasureStringX(UIFont.NewSmall, "Continue");
+    local saveTemplateWidth = getTextManager():MeasureStringX(UIFont.NewSmall, "Save Ticket As Template");
 
     local infoLabel = ISLabel:new(12, smallFontHeight * 2, smallFontHeight, "This loot ticket has the following items", 1, 1, 1, 1, UIFont.NewSmall, true);
     infoLabel:initialise();

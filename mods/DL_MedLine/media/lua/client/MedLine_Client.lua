@@ -288,6 +288,8 @@ function MedLine_Client.initiateBloodLossStart(timeInDays)
     local bloodData = MedLine_Client.getBloodData();
     if not bloodData then return end;
 
+    if MedLine_Client.isInExclusionZone() then return end;
+
     if not timeInDays then timeInDays = (SandboxVars.MedLine.BloodLoss_RecoveryTimeDays or 14) end;
 
     MedLine_Client.setHasLapsedBelowThreshold(timeInDays);
