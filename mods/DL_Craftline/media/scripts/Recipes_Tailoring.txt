@@ -244,6 +244,22 @@ module Base
 		SkillRequired:Tailoring=6,
     	}
 
+	recipe Make Fabric Roll
+	{
+		Sheet=2,
+	    Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		Result:FabricRoll,
+		Sound:ClothesRipping,
+		Time:100.0,
+		Category:Tailoring,
+		Override:true,
+		SkillRequired:Tailoring=6,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		AnimNode:RipSheets,
+	}
+
 	recipe Make Denim Strip Bundle
 	{
 			DenimStrips=50,
