@@ -95,7 +95,7 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
         logStr = logStr .. item.item.Name .. " [count: " .. item.item.Quantity .. "] |";
     end
 
-    player:sendObjectChange('removeItemID', { id = ticket:getID(), type = ticket:getFullType() });
+    ticket:getContainer():sendObjectChange('removeItemID', { id = ticket:getID(), type = ticket:getFullType() });
 
     print(logStr);
     writeLog("LootTicket", logStr);
