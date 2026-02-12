@@ -89,16 +89,17 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
     writeLog("LootTicket", logStr);
     print(logStr);
 
-    logStr = "[REWARD] Giving player " .. player:getUsername() .. " the following items: ";
+    local rewardStr = "[REWARD] Giving player " .. player:getUsername() .. " the following items: ";
     for _, item in ipairs(itemsToGive) do
         player:sendObjectChange('addItemOfType', { type = item.item.Name, count = tonumber(item.item.Quantity) });
-        logStr = logStr .. item.item.Name .. " [count: " .. item.item.Quantity .. "] |";
+        rewardStr = rewardStr .. item.item.Name .. " [count: " .. item.item.Quantity .. "] |";
     end
 
     player:sendObjectChange('removeItemID', { id = ticket:getID(), type = ticket:getFullType() });
 
-    print(logStr);
-    writeLog("LootTicket", logStr);
+    writeLog("LootTicket", rewardStr);
+    print(rewardStr);
+    
     sendServerCommand(player, "LootTicket", "ReceiveRollResults", { success = true, ticket = ticket, rewards = itemsToGive });
 end
 

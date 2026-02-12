@@ -215,8 +215,6 @@ function LootTicketManager.OnServerCommand(module, command, args)
         local rewardScreen = DLLootResultsUI:new(posX, posY, uiWidth, uiHeight, args.rewards);
         rewardScreen:initialise();
         rewardScreen:addToUIManager();
-
-        
     end
 end
 
