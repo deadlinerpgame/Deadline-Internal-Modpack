@@ -323,7 +323,17 @@ function WRC.Parsing.GetLuminance(r, g, b)
     return (0.2126*r + 0.7152*g + 0.0722*b);
 end
 
+local function convertRGBStringToArray(rgbStr)
+    local returnStr = string.gsub(rgbStr, "<RGB:", "");
+    returnStr = string.gsub(returnStr, ">", "");
+    local colors = string.split(returnStr, ",");
+    local r, g, b = colors[1], colors[2], colors[3];
+    return tonumber(r), tonumber(g), tonumber(b)
+end
+
 function WRC.Parsing.AccountForDistance(rgbStr, distanceAmt)
+
+    -- Yes, though this could be made a lot more efficient with for loops it would butcher the readability.
 
     if not distanceAmt then return rgbStr end;
 
@@ -331,51 +341,43 @@ function WRC.Parsing.AccountForDistance(rgbStr, distanceAmt)
         getPlayer():getModData().MinRGB = { 0.33, 0.33, 0.33 };
     end
 
+    --[[print("=======================");
+    print("AccountForDistance:");
+    print("Current color is " .. tostring(rgbStr));
+    print("Distance amount is " .. tostring(distanceAmt));--]]
+
     local minRGB = getPlayer():getModData().MinRGB;
-    print("Min RGB is " .. tostring(minRGB));
-
-    local parsingColor = string.gsub(rgbStr, "<RGB:", "");
-
-    parsingColor = string.gsub(parsingColor, ">", "");
-    
-    local colors = string.split(parsingColor, ",");
-    local r, g, b = colors[1], colors[2], colors[3];
+    --print("Minimum % of original = " .. tostring(minRGB));
+    local minR, minG, minB = convertRGBStringToArray(minRGB);
+    local r, g, b = convertRGBStringToArray(rgbStr);
 
     --[[local lumText = WRC.Parsing.GetLuminance(r, g, b);
     local lumBg = WRC.Parsing.GetLuminance(0, 0, 0);--]]
 
-    local maxDiff = { r - minRGB[1], g - minRGB[2], b - minRGB[3] };
-    print("maxDiff = ");
-    print(maxDiff[1]);
-    print(maxDiff[2])
-    print(maxDiff[3]);
+    local minColorVal = { r * minR, g * minG, b * minB };
+    --print(string.format("minColorVal = %.3f, %.3f, %.3f", minColorVal[1], minColorVal[2], minColorVal[3]));
 
-    print("So subtracting ");
-    print(tostring(tonumber(maxDiff[1]) * tonumber(distanceAmt)));
-    print(tostring(tonumber(maxDiff[2]) * tonumber(distanceAmt)));
-    print(tostring(tonumber(maxDiff[3]) * tonumber(distanceAmt)));
-
-    --[[local contrastRatio = (lumText + 0.05) / (lumBg + 0.05);
-    print("Lum contrast is: " .. contrastRatio);
-    if contrastRatio < 4.5 then
-        print("CONTRAST DOES NOT COMPLY WITH WCAG2");
-    end--]]
+    local subtractAmountR = r * distanceAmt;
+    local subtractAmountG = g * distanceAmt;
+    local subtractAmountB = b * distanceAmt;
+    --print(string.format("Subtracting = [R: %.3f - %.3f], [G: %.3f - %.3f], [B: %.3f - %.3f]", r, subtractAmountR, g, subtractAmountG, b, subtractAmountB));
 
     if r and g and b then
-        local adjustedR = tonumber(r) - (tonumber(maxDiff[1]) * tonumber(distanceAmt));
-        local adjustedG = tonumber(g) - (tonumber(maxDiff[2]) * tonumber(distanceAmt));
-        local adjustedB = tonumber(b) - (tonumber(maxDiff[3]) * tonumber(distanceAmt));
+        local adjustedR = r - subtractAmountR;
+        local adjustedG = g - subtractAmountG;
+        local adjustedB = b - subtractAmountB;
 
-        if adjustedR < minRGB[1] then adjustedR = minRGB[1] end;
-        if adjustedG < minRGB[2] then adjustedG = minRGB[2] end;
-        if adjustedB < minRGB[3] then adjustedB = minRGB[3] end;
+        if adjustedR < minColorVal[1] then adjustedR = minColorVal[1] end;
+        if adjustedG < minColorVal[2] then adjustedG = minColorVal[2] end;
+        if adjustedB < minColorVal[3] then adjustedB = minColorVal[3] end;
 
-        local distanceStr = string.format("<RGB:%s,%s,%s>", tostring(adjustedR), tostring(adjustedG), tostring(adjustedB));
-        print(distanceStr);
+        local distanceStr = string.format("<RGB:%.3f,%.3f,%.3f>", adjustedR, adjustedG, adjustedB);
+        --print(distanceStr);
         return distanceStr;
     end
 
     return nil;
+
 end
 
 function WRC.Parsing.FormatPart(part, omitStart, distanceMetric)
@@ -425,10 +427,10 @@ function WRC.Parsing.FormatMessage(parsedMessage)
         local actualDistance = getPlayer():getDistanceSq(source);
         local chatTypeDist = WRC.ChatTypes[parsedMessage.chatType].xyRange * WRC.ChatTypes[parsedMessage.chatType].xyRange;
         local relativeDist =  actualDistance / chatTypeDist;
-        print("Distances:");
+        --[[print("Distances:");
         print("Actual distance: " .. tostring(actualDistance));
         print("Chat type distance: " .. tostring(chatTypeDist));
-        print("Relative distance: " .. tostring(relativeDist));
+        print("Relative distance: " .. tostring(relativeDist));--]]
 
         if relativeDist > 1 or (parsedMessage.radioFrequency and parsedMessage.radioFrequency > 0) then
             distanceMetric = 1
