@@ -3,7 +3,6 @@ module Base
     recipe Craft Red Dot
     {
         keep Screwdriver,
-        keep SoldieringIron,
         keep WireCutters,
         keep File,
         
@@ -16,6 +15,7 @@ module Base
         Screws=4,
         aerx.AluminumScrap,
         aerx.CopperScrap=2,
+        WeldingRods=2,
         Glue,
         
         Result:RedDot,
@@ -27,7 +27,6 @@ module Base
     recipe Craft Red Dot Scope
     {
         keep Screwdriver,
-        keep SoldieringIron,
         keep WireCutters,
         keep File,
         keep BlowTorch,
@@ -42,6 +41,7 @@ module Base
         Glue=2,
         aerx.AluminumScrap=3,
         aerx.CopperScrap=2,
+        WeldingRods=3,
         Wire,
         
         Result:RedDotScope,
@@ -565,7 +565,6 @@ module Base
         keep Screwdriver,
         keep File,
         keep BlowTorch,
-        keep SoldieringIron,
         
         PrecisionOptics,
         MachinedComponents,
@@ -577,6 +576,7 @@ module Base
         aerx.AluminumScrap=3,
         aerx.CopperScrap=2,
         CopperWire=2,
+        WeldingRods=5,
         Wire,
         
         Result:x4Scope,
@@ -591,7 +591,6 @@ module Base
         keep File,
         keep BlowTorch,
         keep WireCutters,
-        keep SoldieringIron,
         
         PrecisionOptics,
         MachinedComponents,
@@ -606,6 +605,7 @@ module Base
         Wire=2,
         Battery,
         DuctTape=2,
+        WeldingRods=5,
         
         Result:x8Scope,
         Time:600.0,
@@ -619,7 +619,6 @@ module Base
         keep File,
         keep BlowTorch,
         keep WireCutters,
-        keep SoldieringIron,
         keep Wrench,
         
         PrecisionOptics,
@@ -637,6 +636,7 @@ module Base
         Wire=2,
         Battery=2,
         DuctTape=3,
+        WeldingRods=5,
         
         Result:x2-x8Scope,
         Time:700.0,
@@ -651,7 +651,6 @@ module Base
         keep BlowTorch,
         keep WireCutters,
         keep Wrench,
-        keep SoldieringIron,
 
         
         PrecisionOptics,
@@ -671,6 +670,7 @@ module Base
         LightBulb,
         DuctTape=4,
         SheetMetal,
+        WeldingRods=7,
         
         Result:x4-x12Scope,
         Time:800.0,
