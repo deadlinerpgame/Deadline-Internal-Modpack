@@ -195,10 +195,16 @@ end
 function LootTicketManager.OnServerCommand(module, command, args)
     if module ~= "LootTicket" then return end;
 
-    print("LootTicketOnServerCommand");
-
     if command == "ReceiveRollResults" then
         print("LootTicketOnServerCommand");
+
+        if not args.ticket then
+            print("No ticket, cancelling roll.");
+            return;
+        end
+
+        args.ticket:getContainer():DoRemoveItem(args.ticket);
+
         local halfScreenX = Math.ceil(getCore():getScreenWidth() / 2);
         local halfScreenY = Math.ceil(getCore():getScreenHeight() / 2);
 
@@ -211,6 +217,8 @@ function LootTicketManager.OnServerCommand(module, command, args)
         local rewardScreen = DLLootResultsUI:new(posX, posY, uiWidth, uiHeight, args.rewards);
         rewardScreen:initialise();
         rewardScreen:addToUIManager();
+
+        
     end
 end
 
