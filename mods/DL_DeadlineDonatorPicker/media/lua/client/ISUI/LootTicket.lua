@@ -141,7 +141,7 @@ function LootTicketManager.OnFillInventoryObjectContextMenu(playerNum, context, 
 
     for i, item in ipairs(items) do
         if instanceof(item, "InventoryItem") then
-            if item:getType() == "DLDC_ItemLootTicket_Unset" and item:isInPlayerInventory() and (isAdmin() or isDebugEnabled()) then
+            if item:getType() == "DLDC_ItemLootTicket_Unset" and item:isInCharacterInventory(playerObj) and (isAdmin() or isDebugEnabled()) then
                 local controlsOpt = context:addOption(getText("ContextMenu_LootTicketControls"), playerNum, nil);
                 local lootSubMenu = context:getNew(context);
                 context:addSubMenu(controlsOpt, lootSubMenu);
@@ -149,7 +149,7 @@ function LootTicketManager.OnFillInventoryObjectContextMenu(playerNum, context, 
                 lootSubMenu:addOption(getText("ContextMenu_SetLootTicketParameters"), playerNum, LootTicketManager.ShowSetContext, item);
             end
 
-            if item:getType() == "DLDC_ItemLootTicket_Set" and item:isInPlayerInventory() then
+            if item:getType() == "DLDC_ItemLootTicket_Set" and item:isInCharacterInventory(playerObj) then
                 local controlsOpt = context:addOption(getText("ContextMenu_LootTicketControls"), playerNum, nil);
                 local lootSubMenu = context:getNew(context);
                 context:addSubMenu(controlsOpt, lootSubMenu);
