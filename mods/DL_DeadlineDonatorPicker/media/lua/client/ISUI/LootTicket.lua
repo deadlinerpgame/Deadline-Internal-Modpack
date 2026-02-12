@@ -203,8 +203,6 @@ function LootTicketManager.OnServerCommand(module, command, args)
             return;
         end
 
-        args.ticket:getContainer():DoRemoveItem(args.ticket);
-
         local halfScreenX = Math.ceil(getCore():getScreenWidth() / 2);
         local halfScreenY = Math.ceil(getCore():getScreenHeight() / 2);
 
