@@ -3,6 +3,10 @@ WRC = WRC or {}
 WRC.Commands = WRC.Commands or {}
 WRC.TabHandlers = WRC.TabHandlers or {}
 
+require "LogLineUtils";
+LogLineUtils = LogLineUtils or {};
+LogLineUtils.LogFromClient = LogLineUtils.LogFromClient or {};
+
 -- will receive the message as a string: /name new name
 function WRC.Commands.SetName(args)
     local name = args:gsub("^%s*(.-)%s*$", "%1") -- trim
@@ -731,6 +735,9 @@ function WRC.Commands.Injure(args)
         return
     end
     WL_Utils.addInfoToChat("<RGB:1.0,0.0,0.0>Injury applied!")
+
+    local logStr = string.format("%s has applied injury %s to body part %s", getPlayer():getUsername(), injury, bodyPartStr);
+    LogLineUtils.LogFromClient("DamageLogs", logStr);
 end
 
 -- args should be a radio frequency: 123, 321.5, 123.4
