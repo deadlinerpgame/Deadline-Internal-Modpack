@@ -9,6 +9,7 @@ JaxeRevival = JaxeRevival or {};
 JaxeRevival.Panel = JaxeRevival.Panel or {};
 JaxeRevival.Health = JaxeRevival.Health or {};
 JaxeRevival.Incapacitation = JaxeRevival.Incapacitation or {};
+JaxeRevival.TimedAction = JaxeRevival.TimedAction or {};
 
 local original_OnGiveUp = JaxeRevival.Panel.onGiveUp;
 

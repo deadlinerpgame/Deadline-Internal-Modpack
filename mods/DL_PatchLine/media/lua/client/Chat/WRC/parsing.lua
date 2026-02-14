@@ -343,7 +343,7 @@ function WRC.Parsing.AccountForDistance(rgbStr, distanceAmt)
     print("Distance amount is " .. tostring(distanceAmt));--]]
 
     local minRGB = getPlayer():getModData().MinRGB;
-    if not minRGB or type(minRGB) == "table" then minRGB = "<RGB:0.3,0.3,0.3>";
+    if not minRGB or type(minRGB) == "table" then minRGB = "<RGB:0.3,0.3,0.3>" end;
     --print("Minimum % of original = " .. tostring(minRGB));
     local minR, minG, minB = convertRGBStringToArray(minRGB);
     local r, g, b = convertRGBStringToArray(rgbStr);
