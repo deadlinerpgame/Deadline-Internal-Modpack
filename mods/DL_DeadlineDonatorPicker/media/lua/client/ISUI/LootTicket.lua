@@ -113,9 +113,14 @@ end
 
 function LootTicketManager.ShowTicketParams(playerNum, item)
     if isAdmin() or isDebugEnabled() then
-        local itemData = item:getModData().LootTicket.Items;
+        local itemData = item:getModData().LootTicket;
 
-        local ui = DLLootTicketInspectionUI:new(0, 0, 500, 300, itemData);
+        --[[
+            modData.LootTicket.RestrictedTo = nil;
+    modData.LootTicket.MaxRolls = tonumber(self.maxRolledItems:getText());
+    modData.LootTicket.AllowDuplicates = self.allowDuplicateItems;
+        --]]
+        local ui = DLLootTicketInspectionUI:new(0, 0, 500, 300, itemData.Items, itemData.MaxRolls, itemData.AllowDuplicates);
         ui:initialise();
         ui:addToUIManager();
     end
