@@ -96,6 +96,54 @@ function ISChat:calcTabSize()
     return tabSize
 end
 
+WRC.Incapacitation = {};
+WRC.Incapacitation.UIElements = {};
+
+function WRC.Incapacitation.ShowCasualties()
+    local zoom = getCore():getZoom(0);
+    for _, x in pairs(WRC.Incapacitation.UIElements) do x.seen = false end
+    
+    local allPlayers = getOnlinePlayers()
+    if not allPlayers then return end
+    local me = getPlayer()
+    for i=0,allPlayers:size()-1 do
+        local player = allPlayers:get(i)
+        local username = player:getUsername()
+        -- we double check the distance because admins can see players everyone on the map
+        if player:getModData().JaxeRevival_Incapacitated and WRC.CanSeePlayer(player, true, 20) and me:getDistanceSq(player) < 2500 then
+            local x = isoToScreenX(0, player:getX(), player:getY(), player:getZ())
+            local y = isoToScreenY(0, player:getX(), player:getY(), player:getZ())
+            y = y - WRC.Afk.IndicatorHeight;
+            if WRC.Indicator.players[username] then y = y - WRC.Indicator.IndicatorHeight - 2 end
+            local ele = WRC.Incapacitation.UIElements[username]
+
+            local width = getTextManager():MeasureStringX(UIFont.Small, "[INJURED!]");
+
+            if ele then
+                ele:setX(x - (ele.width / 2))
+                ele:setY(y)
+            else
+                ele = ISUIElement:new(x - (width/2), y, width, WRC.Afk.IndicatorHeight);
+                ele.anchorTop = false
+                ele.anchorBottom = true
+                ele:initialise()
+                ele:addToUIManager()
+                ele:backMost()
+                WRC.Incapacitation.UIElements[username] = ele
+            end
+            ele.seen = true
+            ele:drawTextCentre("[INJURED!]", width/2, 8, 1, 0.2, 0.2, 1.0);
+            ele:drawTextCentre("[INJURED!]", width/2, 8, 1, 0, 0, 1.0);
+        end
+    end
+     for k,v in pairs(WRC.Incapacitation.UIElements) do
+         if not v.seen then
+             v:removeFromUIManager()
+             WRC.Incapacitation.UIElements[k] = nil
+         end
+     end
+end
+
 WRC.ISChatOriginal.render = WRC.ISChatOriginal.render or ISChat.render
 function ISChat:render()
     WRC.ISChatOriginal.render(self)
@@ -144,6 +192,7 @@ function ISChat:render()
     end
 
     WRC.Afk.ShowAfkOnPlayers()
+    WRC.Incapacitation.ShowCasualties()
     WRC.StatusIndicator.ShowStatusIndicatorOnHovered()
 
     if WRC.Meta.GetOverheadTypingIndicator() then

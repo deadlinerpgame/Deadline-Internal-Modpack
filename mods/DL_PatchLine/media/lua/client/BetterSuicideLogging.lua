@@ -1,4 +1,11 @@
 require "LogLineUtils";
+
+if not ActiveMods.getById("currentGame"):isModActive("GunSuicide PN") then
+    print("[PatchLine] BetterSuicide not active, terminating...");
+    return;
+end
+
+
 LogLineUtils = LogLineUtils or {};
 LogLineUtils.LogFromClient = LogLineUtils.LogFromClient or {};
 
