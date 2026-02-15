@@ -1,9 +1,4 @@
---[[if not ActiveMods.getById("currentGame"):isModActive("JaxeRevival") then
-    print("[PatchLine] JaxeRevival not active, terminating...");
-    return;
-end--]]
 
-if isClient() and isServer() then return end;
 
 JaxeRevival = JaxeRevival or {};
 JaxeRevival.Panel = JaxeRevival.Panel or {};
