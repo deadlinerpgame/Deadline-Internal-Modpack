@@ -1344,6 +1344,7 @@ x = x - 130
 self.startCombat = ISButton:new(x + 260, 430, 104, 36, "", self,
     function()
    -- self:toggleCircleMarker()
+   
     DeadlineDice.CombatActive = true
             table.sort(DeadlineDice.orderTracker, function(a, b)
             return (DeadlineDice.initiativeTracker[a] or 0) > (DeadlineDice.initiativeTracker[b] or 0)
@@ -1368,6 +1369,7 @@ self.startCombat = ISButton:new(x + 260, 430, 104, 36, "", self,
         hptracker = DeadlineDice.hpTracker
 
     })
+    DeadlineDice.NPCData = {};
 
     --[[
 for _, username in ipairs(DeadlineDice.orderTracker) do
@@ -1555,6 +1557,7 @@ self.finishCombat = ISButton:new(x + 260, 480, 104, 36, "", self,
         end
 
         getPlayer():getModData().MedLine.BloodData.diceBLPopupGiven = nil;
+        DeadlineDice.NPCData = {};
 
         --self:updateInitiativeDisplay()
     end)
@@ -2114,7 +2117,7 @@ function ISDeadlineDiceUI:prerender()
         self:drawTextureScaled(self.bgTextTexture, 390, 60, 378, 478, 1.0, 1, 1, 1)
 end
 
-function ISDeadlineDiceUI.addNPCToTile(npcName)
+function DeadlineDice.AddNPCToTile(npcName)
     if not isAdmin() then return end;
 
     if not DeadlineDice then return end;
@@ -2136,38 +2139,34 @@ function ISDeadlineDiceUI.addNPCToTile(npcName)
     table.insert(DeadlineDice.NPCData, npcData);
 end
 
-function ISDeadlineDiceUI:renderNPCData()
+function DeadlineDice.RenderNPCData()
     if not DeadlineDice.NPCData or not DeadlineDice.CombatActive then return end;
 
     for i, npcData in ipairs(DeadlineDice.NPCData) do
-        
-        local zoom = getCore():getZoom(0);
-        local x = isoToScreenX(0, npcData.x, npcData.y, npcData.z);
-        local y = isoToScreenY(0, npcData.x, npcData.y, npcData.z);
-        y = y - (130 / zoom) - (3*zoom);
-        local ele = npcData.element;
-        local width = getTextManager():MeasureStringX(UIFont.Small, npcData.name);
 
-        if ele then
-            ele:setX(x - (ele.width / 2))
-            ele:setY(y)
-        else
-            ele = ISUIElement:new(x - (width/2), y, width, WRC.Afk.IndicatorHeight);
-            ele.anchorTop = false
-            ele.anchorBottom = true
-            ele:initialise()
-            ele:addToUIManager()
-            ele:backMost()
-            npcData.element = ele;
-        end
-        ele:drawTextCentre(npcData.name, width/2, 8, 0.8, 0.8, 0.8, 1.0);
+        local zoom = getCore():getZoom(0);
+        print(zoom);
+        local testItem = {};
+        local x = isoToScreenX(0, npcData.x, npcData.y, npcData.z);
+        
+        local y = isoToScreenY(0, npcData.x, npcData.y, npcData.z);
+        
+        local width = getTextManager():MeasureStringX(UIFont.Small, npcData.name);
+        local height = getTextManager():MeasureStringY(UIFont.Small, npcData.name);
+
+        testItem = ISUIElement:new(x - (width/2), y, width, height);
+        testItem.anchorTop = false
+        testItem.anchorBottom = true
+        testItem:initialise();
+        testItem:instantiate();
+        testItem:addToUIManager();
+
+        testItem:drawTextCentre(npcData.name, width/2, 0, 1, 1, 1, 1, UIFont.Small)
+
     end
 end
 
 function ISDeadlineDiceUI:render()
-
-    self:renderNPCData();
-
     if DeadlineDice.CombatActive and DeadlineDice.turnStartTime then
         local now = getTimestampMs()
         

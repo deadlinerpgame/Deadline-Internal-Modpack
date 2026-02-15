@@ -194,12 +194,15 @@ function ISChat:render()
     WRC.Afk.ShowAfkOnPlayers()
     WRC.Incapacitation.ShowCasualties()
     WRC.StatusIndicator.ShowStatusIndicatorOnHovered()
+    DeadlineDice.RenderNPCData();
 
     if WRC.Meta.GetOverheadTypingIndicator() then
         WRC.Indicator.DrawOverheads()
     end
 
     WRC.Indicator.DrawTypingInChat(self)
+
+    
 end
 
 WRC.ISChatOriginal.createChildren = WRC.ISChatOriginal.createChildren or ISChat.createChildren
