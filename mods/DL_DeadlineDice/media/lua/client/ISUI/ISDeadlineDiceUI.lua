@@ -2129,6 +2129,10 @@ function ISDeadlineDiceUI.addNPCToTile(npcName)
         z = getPlayer():getZ()
     };
 
+    if not DeadlineDice.NPCData then
+        DeadlineDice.NPCData = {};
+    end
+
     table.insert(DeadlineDice.NPCData, npcData);
 end
 
@@ -2137,6 +2141,7 @@ function ISDeadlineDiceUI:renderNPCData()
 
     for i, npcData in ipairs(DeadlineDice.NPCData) do
         
+        local zoom = getCore():getZoom(0);
         local x = isoToScreenX(0, npcData.x, npcData.y, npcData.z);
         local y = isoToScreenY(0, npcData.x, npcData.y, npcData.z);
         y = y - (130 / zoom) - (3*zoom);
