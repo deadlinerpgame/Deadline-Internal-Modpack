@@ -2114,61 +2114,106 @@ function ISDeadlineDiceUI:prerender()
         self:drawTextureScaled(self.bgTextTexture, 390, 60, 378, 478, 1.0, 1, 1, 1)
 end
 
+function ISDeadlineDiceUI.addNPCToTile(npcName)
+    if not isAdmin() then return end;
+
+    if not DeadlineDice then return end;
+
+    if not DeadlineDice.CombatActive then return end;
+
+    local npcData =
+    {
+        name = npcName,
+        x = getPlayer():getX(),
+        y = getPlayer():getY(),
+        z = getPlayer():getZ()
+    };
+
+    table.insert(DeadlineDice.NPCData, npcData);
+end
+
+function ISDeadlineDiceUI:renderNPCData()
+    if not DeadlineDice.NPCData or not DeadlineDice.CombatActive then return end;
+
+    for i, npcData in ipairs(DeadlineDice.NPCData) do
+        
+        local x = isoToScreenX(0, npcData.x, npcData.y, npcData.z);
+        local y = isoToScreenY(0, npcData.x, npcData.y, npcData.z);
+        y = y - (130 / zoom) - (3*zoom);
+        local ele = npcData.element;
+        local width = getTextManager():MeasureStringX(UIFont.Small, npcData.name);
+
+        if ele then
+            ele:setX(x - (ele.width / 2))
+            ele:setY(y)
+        else
+            ele = ISUIElement:new(x - (width/2), y, width, WRC.Afk.IndicatorHeight);
+            ele.anchorTop = false
+            ele.anchorBottom = true
+            ele:initialise()
+            ele:addToUIManager()
+            ele:backMost()
+            npcData.element = ele;
+        end
+        ele:drawTextCentre(npcData.name, width/2, 8, 0.8, 0.8, 0.8, 1.0);
+    end
+end
 
 function ISDeadlineDiceUI:render()
 
+    self:renderNPCData();
 
-if DeadlineDice.CombatActive and DeadlineDice.turnStartTime then
-    local now = getTimestampMs()
-    
-    local elapsed = now - DeadlineDice.turnStartTime
-    local remaining = math.max(0, DeadlineDice.turnDuration - elapsed)
-    local seconds = math.ceil(remaining / 1000)
-    self.turnDurationEntry:setEditable(false)
-    self.setTurnDurationButton:setEnable(false)
+    if DeadlineDice.CombatActive and DeadlineDice.turnStartTime then
+        local now = getTimestampMs()
+        
+        local elapsed = now - DeadlineDice.turnStartTime
+        local remaining = math.max(0, DeadlineDice.turnDuration - elapsed)
+        local seconds = math.ceil(remaining / 1000)
+        self.turnDurationEntry:setEditable(false)
+        self.setTurnDurationButton:setEnable(false)
 
-    local timerText = "" .. tostring(seconds) .. " seconds remain..."
-    self:drawText(timerText, 120, self.initiativeBorder.y - 20, 1, 1, 1, 1, UIFont.Medium)
-else
-    local timerText = ""
-    self:drawText(timerText, 120, self.initiativeBorder.y - 20, 1, 1, 1, 1, UIFont.Medium)
-end
+        local timerText = "" .. tostring(seconds) .. " seconds remain..."
+        self:drawText(timerText, 120, self.initiativeBorder.y - 20, 1, 1, 1, 1, UIFont.Medium)
+    else
+        local timerText = ""
+        self:drawText(timerText, 120, self.initiativeBorder.y - 20, 1, 1, 1, 1, UIFont.Medium)
+    end
 
-local topName = self:getTopInitiativeEntry()
-local playerName = self.character:getUsername()
-if topName and playerName then
-   -- print(topName .. " - " .. playerName)
-end
-if DeadlineDice.CombatActive and topName == playerName then
-    self.finishTurn:setEnable(true)
-    --self.movementButton:setEnable(true)
-    for _, group in ipairs(self.buttonGroups) do
-        for _, pair in ipairs(group) do
-            if pair.label.name == "Attack" then
-                pair.button:setEnable(true)
+    local topName = self:getTopInitiativeEntry()
+    local playerName = self.character:getUsername()
+    if topName and playerName then
+    -- print(topName .. " - " .. playerName)
+    end
+    if DeadlineDice.CombatActive and topName == playerName then
+        self.finishTurn:setEnable(true)
+        --self.movementButton:setEnable(true)
+        for _, group in ipairs(self.buttonGroups) do
+            for _, pair in ipairs(group) do
+                if pair.label.name == "Attack" then
+                    pair.button:setEnable(true)
+                end
+            end
+        end
+    elseif DeadlineDice.CombatActive == false then
+        for _, group in ipairs(self.buttonGroups) do
+            for _, pair in ipairs(group) do
+                if pair.label.name == "Attack" then
+                    pair.button:setEnable(true)
+                end
+            end
+        end
+
+    else
+        self.finishTurn:setEnable(false)
+        --self.movementButton:setEnable(false)
+        for _, group in ipairs(self.buttonGroups) do
+            for _, pair in ipairs(group) do
+                if pair.label.name == "Attack" then
+                    pair.button:setEnable(false)
+                end
             end
         end
     end
-elseif DeadlineDice.CombatActive == false then
-    for _, group in ipairs(self.buttonGroups) do
-        for _, pair in ipairs(group) do
-            if pair.label.name == "Attack" then
-                pair.button:setEnable(true)
-            end
-        end
-    end
-
-else
-    self.finishTurn:setEnable(false)
-    --self.movementButton:setEnable(false)
-    for _, group in ipairs(self.buttonGroups) do
-        for _, pair in ipairs(group) do
-            if pair.label.name == "Attack" then
-                pair.button:setEnable(false)
-            end
-        end
-    end
-end
 
     if DeadlineDice.CombatActive and self.initiativeLabels then
         local topName = self:getTopInitiativeEntry()
@@ -2180,7 +2225,7 @@ end
         end
     end
 
-for i, group in ipairs(self.buttonGroups or {}) do
+    for i, group in ipairs(self.buttonGroups or {}) do
 
     if #group > 0 then
         local first = group[1]
