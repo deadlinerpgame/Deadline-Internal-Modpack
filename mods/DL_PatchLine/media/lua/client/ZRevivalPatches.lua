@@ -18,6 +18,31 @@ local original_ApplyMechanics = JaxeRevival.Incapacitation.applyMechanics;
 local original_SyncApplyEffects = JaxeRevival.Sync.applyEffects;
 local original_ReviveAction = JaxeRevival.TimedAction.perform;
 
+JaxeRevival.UI.applyEffectiveHealth = function(value)
+  if value then playersHealth = {} end
+
+  local players = isClient() and getOnlinePlayers() or IsoPlayer.getPlayers()
+  if not players then return end
+
+  for i = 0, players:size() - 1 do
+    local player = players:get(i)
+    if player then
+      local body = player:isLocalPlayer() and player:getBodyDamage() or player:getBodyDamageRemote()
+
+      if value then
+        playersHealth[i] = body:getHealth()
+        if JaxeRevival.Incapacitation.isActive(player) then
+          body:setOverallBodyHealth(SandboxVars.JaxeRevival.IncapacitatedHealth or 25);
+        elseif not player:isDead() then
+          body:setOverallBodyHealth(JaxeRevival.UI.getEffectiveHealth(playersHealth[i]))
+        end
+      else
+        body:setOverallBodyHealth(playersHealth[i])
+      end
+    end
+  end
+end
+
 function JaxeRevival.TimedAction:perform()
     original_ReviveAction(self);
 
@@ -97,10 +122,15 @@ local function OnPlayerUpdate_Revival(player)
 end
 
 local function OnWeaponHitCharacter(attacker, target, weapon, damage)
-
+    print("On Weapon Hit Character");
+    print("Attacker: " .. attacker:getUsername() .. " | target: " .. target:getUsername() .. " damage: " .. tostring(damage));
     local victimHealth = target:getBodyDamage():getOverallBodyHealth();
+    print("Victim health is " .. tostring(victimHealth));
     local threshold = SandboxVars.JaxeRevival.IncapacitatedHealth;
-    if victimHealth < threshold or (victimHealth - damage) < threshold then
+    print("Threshold is " .. tostring(threshold));
+    if victimHealth < threshold or victimHealth < (threshold + damage) then
+        print("Would go below, setting overall body health and avoiding dmg");
+        target:getBodyDamage():setOverallBodyHealth(threshold);
         target:setAvoidDamage(true);
     end
 
