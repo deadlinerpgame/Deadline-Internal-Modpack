@@ -89,6 +89,7 @@ local function OnPlayerUpdate_Revival(player)
 
     local threshold = SandboxVars.JaxeRevival.IncapacitatedHealth;
     if player:getBodyDamage():getOverallBodyHealth() <= threshold then
+        player:getBodyDamage():setOverallBodyHealth(threshold);
         if player:isShootable() then
             player:setShootable(false);
         end
