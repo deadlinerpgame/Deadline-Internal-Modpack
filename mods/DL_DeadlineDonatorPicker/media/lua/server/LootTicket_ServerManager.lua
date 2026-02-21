@@ -11,17 +11,15 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
         return;
     end
 
-    print("1");
     local itemsToGive = {};
 
     local totalChance = 0;
     local logStr = "[OPENING LOOT TICKET] Player: " .. player:getUsername() .. " || ID: " .. tostring(lootData.ID) ..  " || ";
 
-    print("2");
 
     for _, itemData in ipairs(lootData.Items) do
         local chance = tonumber(itemData.item.Chance);
-        print("3 " .. tostring(chance));
+
         itemData.item.hasRolledThisTurn = false;
         if chance < 100 then
             totalChance = totalChance + chance;
@@ -30,29 +28,25 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
         end
     end
 
-    print("4");
-
     logStr = logStr .. string.format(" || Total Weight: %0d ", totalChance);
 
     local totalRolls = tonumber(lootData.MaxRolls);
     if not totalRolls or totalRolls < 1 then totalRolls = 1 end;
 
-    print("5");
-
     logStr = logStr .. string.format(" || Total Rolls: %0d ", totalRolls);
 
-    print("6");
-
     for rollNum = 1, totalRolls do
-        print("7 " .. tostring(rollNum));
         randInstance:seed(getTimestampMs());
         local iteratedChance = randInstance:random(0, totalChance);
         local hasRolledSuccessfully = false;
 
+        for _, rollItem in ipairs(lootData).Items do
+            rollItem.item.hasRolledThisTurn = false;
+        end
+
         logStr = logStr .. string.format(" || Current Roll: %0d, Random Number Picked: %0d >", rollNum, iteratedChance);
 
         for _, rollItem in ipairs(lootData.Items) do
-            print("8 " .. tostring(rollItem.item.Name));
             logStr = logStr .. string.format(" [%s ", rollItem.item.Name);
             
             -- If the item is guaranteed, add it to the list.
@@ -72,6 +66,10 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
                             rollItem.item.hasRolledThisTurn = true;
                             table.insert(itemsToGive, rollItem);
                         end
+                    elseif lootData.allowDuplicates then
+                        logStr = logStr .. string.format(" !SUCCESS! ", iteratedChance);
+                        hasRolledSuccessfully = true;
+                        table.insert(itemsToGive, rollItem);
                     else
                         logStr = logStr .. " !Has already rolled, no duplicates allowed ! ";
                     end
@@ -89,16 +87,17 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
     writeLog("LootTicket", logStr);
     print(logStr);
 
-    logStr = "[REWARD] Giving player " .. player:getUsername() .. " the following items: ";
+    local rewardStr = "[REWARD] Giving player " .. player:getUsername() .. " the following items: ";
     for _, item in ipairs(itemsToGive) do
         player:sendObjectChange('addItemOfType', { type = item.item.Name, count = tonumber(item.item.Quantity) });
-        logStr = logStr .. item.item.Name .. " [count: " .. item.item.Quantity .. "] |";
+        rewardStr = rewardStr .. item.item.Name .. " [count: " .. item.item.Quantity .. "] |";
     end
 
     player:sendObjectChange('removeItemID', { id = ticket:getID(), type = ticket:getFullType() });
 
-    print(logStr);
-    writeLog("LootTicket", logStr);
+    writeLog("LootTicket", rewardStr);
+    print(rewardStr);
+
     sendServerCommand(player, "LootTicket", "ReceiveRollResults", { success = true, ticket = ticket, rewards = itemsToGive });
 end
 
