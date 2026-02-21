@@ -40,6 +40,10 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
         local iteratedChance = randInstance:random(0, totalChance);
         local hasRolledSuccessfully = false;
 
+        for _, rollItem in ipairs(lootData).Items do
+            rollItem.item.hasRolledThisTurn = false;
+        end
+
         logStr = logStr .. string.format(" || Current Roll: %0d, Random Number Picked: %0d >", rollNum, iteratedChance);
 
         for _, rollItem in ipairs(lootData.Items) do
@@ -62,6 +66,10 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
                             rollItem.item.hasRolledThisTurn = true;
                             table.insert(itemsToGive, rollItem);
                         end
+                    elseif lootData.allowDuplicates then
+                        logStr = logStr .. string.format(" !SUCCESS! ", iteratedChance);
+                        hasRolledSuccessfully = true;
+                        table.insert(itemsToGive, rollItem);
                     else
                         logStr = logStr .. " !Has already rolled, no duplicates allowed ! ";
                     end
