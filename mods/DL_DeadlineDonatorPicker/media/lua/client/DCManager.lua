@@ -63,6 +63,7 @@ DL_DonatorClothes.SlotTabs = {
         "UnderwearBottom",
         "UnderwearTop",
         "UnderwearExtra1",
+        "UnderwearExtra2",
         "Socks",
         "Legs",
         "Pants",
