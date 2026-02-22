@@ -4,13 +4,12 @@ end
 
 CraftingEnhancedCore = getModInstance()
 
-CraftingEnhancedCore.tables["BigMetalBench"] = {
-    nameID = "BigMetalBench",
-    displayName = getText("ContextMenu_BigMetalBench"),
-    tooltipTitle = getText("ContextMenu_BigMetalBench"),
-    tooltipDescription = getText("Tooltip_BigMetalBench_Description"),
-    tooltipTexture = "industry_tk_02_56
-    icon = "",
+CraftingEnhancedCore.tables["Lathe"] = {
+    nameID = "Lathe",
+    displayName = getText("Lathe"),
+    tooltipTitle = getText("Lathe"),
+    tooltipTexture = "industry_tk_02_56",
+    icon = "industry_tk_02_56",
     size = 2,
     anim = "VehicleTrailer",
     craftingSound = "RepairWithWrench",
@@ -35,7 +34,7 @@ CraftingEnhancedCore.tables["BigMetalBench"] = {
     requireTool = "Hammer",
     recipe = {
         {
-            type = "Base.BigMetalBench",
+            type = "Base.Lathe",
             amount = 1,
         }
     },

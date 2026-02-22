@@ -4,13 +4,13 @@ end
 
 CraftingEnhancedCore = getModInstance()
 
-CraftingEnhancedCore.tables["SmallTinkeringBench"] = {
-    nameID = "SmallTinkeringBench",
-    displayName = getText("SmallTinkeringBench"),
-    tooltipTitle = getText("SmallTinkeringBench"),
+CraftingEnhancedCore.tables["PrecisionFabricator"] = {
+    nameID = "PrecisionFabricator",
+    displayName = getText("Precision Fabricator"),
+    tooltipTitle = getText("Precision Fabricator"),
     tooltipDescription = getText(""),
-    tooltipTexture = "edit_ddd_RUS_location_business_machinery_02_6
-    icon = "edit_ddd_RUS_location_business_machinery_02_6
+    tooltipTexture = "edit_ddd_RUS_location_business_machinery_02_6",
+    icon = "edit_ddd_RUS_location_business_machinery_02_6",
     size = 1,
     anim = "VehicleTrailer",
     craftingSound = "RepairWithWrench",
@@ -31,7 +31,7 @@ CraftingEnhancedCore.tables["SmallTinkeringBench"] = {
     requireTool = "Hammer",
     recipe = {
         {
-            type = "Base.SmallTinkeringBench",
+            type = "Base.PrecisionFabricator",
             amount = 1,
         }
     },

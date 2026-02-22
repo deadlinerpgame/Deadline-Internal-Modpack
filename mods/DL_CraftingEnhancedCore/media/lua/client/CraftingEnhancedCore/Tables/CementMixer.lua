@@ -8,7 +8,6 @@ CraftingEnhancedCore.tables["CementMixer"] = {
     nameID = "Cement Mixer",
     displayName = getText("Cement Mixer"),
     tooltipTitle = getText("Cement Mixer"),
-    tooltipDescription = getText(""),
     tooltipTexture = "contruction_01_6",
     icon = "contruction_01_6",
     size = 1,
