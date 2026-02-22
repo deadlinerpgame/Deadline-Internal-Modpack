@@ -2469,7 +2469,7 @@ function ISDeadlineDiceUI:getScore(labelText)
     else
         if weapon:isRanged() then
             damageStr = "ranged";
-        else 
+        else
             damageStr = "melee";
         end
     end
@@ -2481,13 +2481,14 @@ function ISDeadlineDiceUI:getScore(labelText)
     if damageStr == "unarmed" then
         if playerTraits:contains("FeatherFist") then
             resultString = resultString .. "- 1 (Feather Fist) ";
-        if playerTraits:contains("")
+        end --if playerTraits:contains("")
     end
 
     if damageStr == "melee" then
         if playerTraits:contains("ClumsyStriker") then -- Long Blade, Short Blade, Short Blunt
-            if wpnCats:contains("SmallBlunt") or wpnCats:contains("SmallBlade") or wpnCats:contains("LongBlade")
-            resultString = resultString .. "- 1 (Clumsy Striker)";
+            if wpnCats:contains("SmallBlunt") or wpnCats:contains("SmallBlade") or wpnCats:contains("LongBlade") then
+                resultString = resultString .. "- 1 (Clumsy Striker)";
+            end
         end
     end
 
