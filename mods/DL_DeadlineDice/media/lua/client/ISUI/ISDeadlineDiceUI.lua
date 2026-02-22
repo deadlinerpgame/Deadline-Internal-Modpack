@@ -2426,6 +2426,8 @@ function ISDeadlineDiceUI:getScore(labelText)
         totalScore = totalScore + value
     end
 
+
+
     -- Blood loss string.
     if editedLabel ~= "DicewithDeath" and getPlayer():getModData().MedLine and getPlayer():getModData().MedLine.BloodData and (not isAdmin()) then
         local bloodData = getPlayer():getModData().MedLine.BloodData;
@@ -2457,6 +2459,38 @@ function ISDeadlineDiceUI:getScore(labelText)
     else
         resultString = resultString .. modifierString .. " = " .. tostring(totalScore)
     end
+
+    -- Now add weapon damage to it.
+    local damageStr = "";
+    local playerTraits = getPlayer():getTraits();
+    local weapon = getPlayer():getPrimaryHandItem();
+    if not weapon or instanceof(weapon, "HandWeapon") then
+        damageStr = "unarmed";
+    else
+        if weapon:isRanged() then
+            damageStr = "ranged";
+        else 
+            damageStr = "melee";
+        end
+    end
+
+    resultString = resultString .. ", dmg mod = ";
+
+    local wpnCats = weapon:getCategories();
+
+    if damageStr == "unarmed" then
+        if playerTraits:contains("FeatherFist") then
+            resultString = resultString .. "- 1 (Feather Fist) ";
+        if playerTraits:contains("")
+    end
+
+    if damageStr == "melee" then
+        if playerTraits:contains("ClumsyStriker") then -- Long Blade, Short Blade, Short Blunt
+            if wpnCats:contains("SmallBlunt") or wpnCats:contains("SmallBlade") or wpnCats:contains("LongBlade")
+            resultString = resultString .. "- 1 (Clumsy Striker)";
+        end
+    end
+
 
     localtext = playerName .. " " .. resultString
     sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {loggerName = "Dice", logText = localtext})
