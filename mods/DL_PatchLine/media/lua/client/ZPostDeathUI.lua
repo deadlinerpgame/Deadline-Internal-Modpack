@@ -10,43 +10,9 @@ LastName = { first = "", last = "" };
 LastProfession = nil;
 LastTraits = {};
 
-function ISPostDeathUI:onContinueIncap()
-
-    ProfessionFactory.Reset();
-    BaseGameCharacterDetails.DoProfessions();
-	if CoopCharacterCreation.instance then return end
-	if UIManager.getSpeedControls() and not IsoPlayer.allPlayersDead() then
-		setShowPausedMessage(false)
-		UIManager.getSpeedControls():SetCurrentGameSpeed(0)
-	end
-
-	CoopCharacterCreation.setVisibleAllUI(false)
-	local w = CoopCharacterCreation:new(nil, nil, 0)
-	w:initialise()
-	w:addToUIManager()
-
-	w.mapSpawnSelect:useDefaultSpawnRegion()
-    w.charCreationProfession.onSelectProf(ProfessionFactory.getProfessions():get(0));
-    w.charCreationMain:initClothing();
-    w.charCreationMain:initPlayer();
-
-    w:accept();
-
-    getPlayer():setX(LastX);
-    getPlayer():setY(LastY);
-    getPlayer():setZ(LastZ or 0);
-
-    getPlayer():getVisual():copyFrom(LastDesc);
-    getPlayer():getBodyDamage():setOverallBodyHealth(25);
-    
-    getPlayer():getDescriptor():setForename(LastName.first or string.split(getPlayer():getUsername(), " ")[1]);
-    getPlayer():getDescriptor():setSurname(LastName.last or string.split(getPlayer():getUsername(), " ")[2]);
-
-    -- Clear traits.
-    getPlayer():getTraits():clear();
-    for i, _ in ipairs(LastTraits) do
-        getPlayer():getTraits():add(LastTraits[i]);
-    end
+CheckPostRespawn = false;
+local function OnPlayerDeath_CheckPostRespawn()
+    if not CheckPostRespawn then return end;
 
     -- Go through all corpses in the square
     local playerSq = getPlayer():getSquare();
@@ -88,7 +54,47 @@ function ISPostDeathUI:onContinueIncap()
         playerCorpse:removeFromWorld();
         playerCorpse:removeFromSquare();
     end
+end
 
+function ISPostDeathUI:onContinueIncap()
+
+    ProfessionFactory.Reset();
+    BaseGameCharacterDetails.DoProfessions();
+	if CoopCharacterCreation.instance then return end
+	if UIManager.getSpeedControls() and not IsoPlayer.allPlayersDead() then
+		setShowPausedMessage(false)
+		UIManager.getSpeedControls():SetCurrentGameSpeed(0)
+	end
+
+	CoopCharacterCreation.setVisibleAllUI(false)
+	local w = CoopCharacterCreation:new(nil, nil, 0)
+	w:initialise()
+	w:addToUIManager()
+
+	w.mapSpawnSelect:useDefaultSpawnRegion()
+    w.charCreationProfession.onSelectProf(ProfessionFactory.getProfessions():get(0));
+    w.charCreationMain:initClothing();
+    w.charCreationMain:initPlayer();
+
+    w:accept();
+
+    getPlayer():setX(LastX);
+    getPlayer():setY(LastY);
+    getPlayer():setZ(LastZ or 0);
+
+    getPlayer():getVisual():copyFrom(LastDesc);
+    getPlayer():getBodyDamage():setOverallBodyHealth(25);
+    
+    getPlayer():getDescriptor():setForename(LastName.first or string.split(getPlayer():getUsername(), " ")[1]);
+    getPlayer():getDescriptor():setSurname(LastName.last or string.split(getPlayer():getUsername(), " ")[2]);
+
+    -- Clear traits.
+    getPlayer():getTraits():clear();
+    for i, _ in ipairs(LastTraits) do
+        getPlayer():getTraits():add(LastTraits[i]);
+    end
+
+    CheckPostRespawn = true;
 end
 
 function ISPostDeathUI:createChildren()
@@ -189,3 +195,4 @@ print(#spawn..' possible spawn points')
 --]]
 
 Events.OnPlayerDeath.Add(OnPlayerDeath_SaveData);
+Events.EveryOneMinute.Add(OnPlayerDeath_CheckPostRespawn);
