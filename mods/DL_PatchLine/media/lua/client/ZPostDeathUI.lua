@@ -30,12 +30,17 @@ local function OnPlayerDeath_CheckPostRespawn()
     -- Step 1, remove all items that aren't the KI5.PODCardGray.
     print("1 - removing player items except respawn pod.");
     local playerPrevItems = getPlayer():getInventory();
+    local itemsToRemove = {};
     for prevItemNo = 0, playerPrevItems:getItems():size() - 1 do
         local item = playerPrevItems:getItems():get(prevItemNo);
         if item and item:getFullType() ~= "KI5.PODCardGray" then
-            print("     > removing item " .. item:getFullType());
-            item:getContainer():DoRemoveItem(item);
+            table.insert(itemsToRemove, item);
         end
+    end
+
+    for i, _ in ipairs(itemsToRemove) do
+        local itemToRemove = itemsToRemove[i];
+        itemToRemove:getContainer():DoRemoveItem(itemToRemove);
     end
 
     print("2 - Finding player corpse.");
