@@ -9,50 +9,53 @@ LastInv = nil;
 LastName = { first = "", last = "" };
 LastProfession = nil;
 LastTraits = {};
+LastCorpse = nil;
 
 CheckPostRespawn = false;
 local function OnPlayerDeath_CheckPostRespawn()
     if not CheckPostRespawn then return end;
+    if not getPlayer():getInventory() then return end;
 
     -- Go through all corpses in the square
-    local playerSq = getPlayer():getSquare();
-    local objects = playerSq:getDeadBodys();
+    local inventory = getPlayer():getInventory();
+    if not inventory then return end;
 
-    local playerCorpse = nil;
+    if getPlayer():getSquare() then
+        local objects = getPlayer():getSquare():getDeadBodys();
 
-    local inv = getPlayer():getInventory();
-    for i = 0, inv:getItems() do
-        local item = inv:getItems():get(i);
-        if item:getType() ~= "KI5.PODCardGray" then
-            inv:DoRemoveItem(item);
-        end
-    end
+        if objects then
+            for i = 0, objects:size() - 1 do
+                local obj = objects:get(i);
 
-    if objects then
-        for i = 0, objects:size() - 1 do
-            local obj = objects:get(i);
-
-            local objId = obj:getOnlineID();
-            if objId and objId == getPlayer():getOnlineID() then
-                playerCorpse = obj;
-
-                for j = 0, playerCorpse:getContainer():getItems() do
-                    local item = playerCorpse:getContainer():getItems():get(j);
-                    if item then
-                        item:setContainer(getPlayer():getInventory());
+                if instanceof(obj, "IsoDeadBody") then
+                    local objId = obj:getOnlineID();
+                    if objId and objId == getPlayer():getOnlineID() then
+                        LastCorpse = obj;
                     end
                 end
+                
             end
         end
     end
 
-    if playerCorpse then
-        print("Player corpse is not nil.");
-        getPlayer():setWornItems(playerCorpse:getWornItems());
-        getPlayer():setAttachedItems(playerCorpse:getAttachedItems());
+    
 
-        playerCorpse:removeFromWorld();
-        playerCorpse:removeFromSquare();
+    if LastCorpse and getPlayer():getModData().JaxeRevival_Incapacitated then
+        local items = inventory:getItems();
+        for i = 0, items:size() - 1 do
+            local item = items:get(i);
+            if item and item:getType() ~= "KI5.PODCardGray" then
+                print("Removing item " .. item:getType() .. " from player inventory!");
+                inventory:DoRemoveItem(item);
+            end
+        end
+        print("Player corpse is not nil.");
+        getPlayer():setWornItems(LastCorpse:getWornItems());
+        getPlayer():setAttachedItems(LastCorpse:getAttachedItems());
+
+        LastCorpse:removeFromWorld();
+        LastCorpse:removeFromSquare();
+        CheckPostRespawn = false;
     end
 end
 
@@ -128,6 +131,7 @@ function ISPostDeathUI:createChildren()
     end
 
     self.buttonRespawn.onclick = self.onContinueIncap;
+
 end
 
 -- function CoopCharacterCreation:accept1()
