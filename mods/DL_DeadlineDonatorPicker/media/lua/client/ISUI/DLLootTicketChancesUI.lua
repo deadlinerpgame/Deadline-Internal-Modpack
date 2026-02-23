@@ -79,8 +79,8 @@ function DLLootTicketChancesUI:doDrawItem(y, item, alt)
 	local itemPadY = self.itemPadY or (item.height - self.fontHgt) / 2;
 
     self:drawText(item.item.Name, 5, (y)+itemPadY, 0.9, 0.9, 0.9, 0.9, self.font);
-    self:drawText(tostring(item.item.Quantity), 205, (y) + itemPadY, 0.9, 0.9, 0.9, 0.9, self.font);
-    self:drawText(tostring(item.item.Chance), 305, (y) + itemPadY, 0.9, 0.9, 0.9, 0.9, self.font);
+    self:drawText(tostring(item.item.Quantity), 355, (y) + itemPadY, 0.9, 0.9, 0.9, 0.9, self.font);
+    self:drawText(tostring(item.item.Chance), 455, (y) + itemPadY, 0.9, 0.9, 0.9, 0.9, self.font);
 
     y = y + item.height;
 	return y;

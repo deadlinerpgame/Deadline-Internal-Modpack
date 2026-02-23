@@ -6,6 +6,7 @@ LastY = nil;
 LastZ = nil;
 LastDesc = nil;
 LastInv = nil;
+LastName = { first = "", last = "" };
 LastProfession = nil;
 LastTraits = {};
 
@@ -18,6 +19,7 @@ function ISPostDeathUI:onContinueIncap()
 		setShowPausedMessage(false)
 		UIManager.getSpeedControls():SetCurrentGameSpeed(0)
 	end
+
 	CoopCharacterCreation.setVisibleAllUI(false)
 	local w = CoopCharacterCreation:new(nil, nil, 0)
 	w:initialise()
@@ -36,17 +38,57 @@ function ISPostDeathUI:onContinueIncap()
 
     getPlayer():getVisual():copyFrom(LastDesc);
     getPlayer():getBodyDamage():setOverallBodyHealth(25);
+    
+    getPlayer():getDescriptor():setForename(LastName.first or string.split(getPlayer():getUsername(), " ")[1]);
+    getPlayer():getDescriptor():setSurname(LastName.last or string.split(getPlayer():getUsername(), " ")[2]);
 
-    getPlayer():getDescriptor():setProfession(LastProfession);
+    -- Clear traits.
+    getPlayer():getTraits():clear();
     for i, _ in ipairs(LastTraits) do
         getPlayer():getTraits():add(LastTraits[i]);
     end
-    
+
+    -- Go through all corpses in the square
+    local playerSq = getPlayer():getSquare();
+    local objects = playerSq:getDeadBodys();
+
+    local playerCorpse = nil;
+
+    if objects then
+        for i = 0, objects:size() - 1 do
+            local obj = objects:get(i);
+
+            if instanceof(obj, "IsoDeadBody") and obj:isPlayer() then
+                for j = 0, obj:getContainer():getItems() do
+                    local bodyItem = obj:getContainer():getItems():get(j);
+                    if bodyItem:getType() == "Base.CorpseTicket" and bodyItem:getModData().corpseOwner == getPlayer():getUsername() then
+                        playerCorpse = obj;
+                        break;
+                    end
+                end
+            end
+        end
+    end
+
+    if playerCorpse then
+        getPlayer():setContainer(playerCorpse:getInventory());
+        getPlayer():setWornItems(playerCorpse:getWornItems());
+        getPlayer():setAttachedItems(playerCorpse:getAttachedItems());
+
+        playerCorpse:removeFromWorld();
+        playerCorpse:removeFromSquare();
+    end
 
 end
 
 function ISPostDeathUI:createChildren()
     original_PostDeathUI_createChildren(self);
+
+    LastName =
+    {
+        first = getPlayer():getDescriptor():getForename(),
+        last = getPlayer():getDescriptor():getSurname()
+    }
 
     LastX = getPlayer():getX();
     LastY = getPlayer():getY();

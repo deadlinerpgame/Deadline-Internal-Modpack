@@ -121,24 +121,7 @@ local function OnPlayerUpdate_Revival(player)
     end
 end
 
-local function OnWeaponHitCharacter(attacker, target, weapon, damage)
-    print("On Weapon Hit Character");
-    print("Attacker: " .. attacker:getUsername() .. " | target: " .. target:getUsername() .. " damage: " .. tostring(damage));
-    local victimHealth = target:getBodyDamage():getOverallBodyHealth();
-    print("Victim health is " .. tostring(victimHealth));
-    local threshold = SandboxVars.JaxeRevival.IncapacitatedHealth;
-    print("Threshold is " .. tostring(threshold));
-    if victimHealth < threshold or victimHealth < (threshold + damage) then
-        print("Would go below, setting overall body health and avoiding dmg");
-        target:getBodyDamage():setOverallBodyHealth(threshold);
-        target:setAvoidDamage(true);
-    end
-
-end
-
 Events.OnPlayerUpdate.Add(OnPlayerUpdate_Revival);
-Events.OnWeaponHitCharacter.Add(OnWeaponHitCharacter);
-
 --[[local function OnWeaponHitCharacter(attacker, target, weapon, damage)
     if instanceof(attacker, "IsoPlayer") and instanceof(target, "IsoPlayer") then
         if damage > 0 then

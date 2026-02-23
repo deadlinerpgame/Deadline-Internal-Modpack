@@ -2464,34 +2464,35 @@ function ISDeadlineDiceUI:getScore(labelText)
     local damageStr = "";
     local playerTraits = getPlayer():getTraits();
     local weapon = getPlayer():getPrimaryHandItem();
-    if not weapon or instanceof(weapon, "HandWeapon") then
-        damageStr = "unarmed";
-    else
-        if weapon:isRanged() then
-            damageStr = "ranged";
+    if editedLabel == "Attack" or editedLabel == "AttackRanged" then
+        if not weapon or instanceof(weapon, "HandWeapon") then
+            damageStr = "unarmed";
         else
-            damageStr = "melee";
+            if weapon:isRanged() then
+                damageStr = "ranged";
+            else
+                damageStr = "melee";
+            end
         end
-    end
 
-    resultString = resultString .. ", dmg mod = ";
+        resultString = resultString .. ", dmg mod = ";
 
-    local wpnCats = weapon:getCategories();
+        local wpnCats = weapon:getCategories();
 
-    if damageStr == "unarmed" then
-        if playerTraits:contains("FeatherFist") then
-            resultString = resultString .. "- 1 (Feather Fist) ";
-        end --if playerTraits:contains("")
-    end
+        if damageStr == "unarmed" then
+            if playerTraits:contains("FeatherFist") then
+                resultString = resultString .. "- 1 (Feather Fist) ";
+            end --if playerTraits:contains("")
+        end
 
-    if damageStr == "melee" then
-        if playerTraits:contains("ClumsyStriker") then -- Long Blade, Short Blade, Short Blunt
-            if wpnCats:contains("SmallBlunt") or wpnCats:contains("SmallBlade") or wpnCats:contains("LongBlade") then
-                resultString = resultString .. "- 1 (Clumsy Striker)";
+        if damageStr == "melee" then
+            if playerTraits:contains("ClumsyStriker") then -- Long Blade, Short Blade, Short Blunt
+                if wpnCats:contains("SmallBlunt") or wpnCats:contains("SmallBlade") or wpnCats:contains("LongBlade") then
+                    resultString = resultString .. "- 1 (Clumsy Striker)";
+                end
             end
         end
     end
-
 
     localtext = playerName .. " " .. resultString
     sendClientCommand(getPlayer(), 'ISLogSystem', 'writeLog', {loggerName = "Dice", logText = localtext})
