@@ -6,20 +6,41 @@ LastY = nil;
 LastZ = nil;
 LastDesc = nil;
 LastInv = nil;
+LastWorn = nil;
 LastName = { first = "", last = "" };
+LastGenderFemale = false;
 LastProfession = nil;
 LastTraits = {};
 LastCorpse = nil;
+LastBodyDamage = {};
+LastAngle = nil;
+LastXP = nil;
 
 CheckPostRespawn = false;
 local function OnPlayerDeath_CheckPostRespawn()
+    
     if not CheckPostRespawn then return end;
     if not getPlayer():getInventory() then return end;
 
+    print("Check Post Respawn");
     -- Go through all corpses in the square
     local inventory = getPlayer():getInventory();
     if not inventory then return end;
 
+    -- Step 1, remove all items that aren't the KI5.PODCardGray.
+    print("1 - removing player items except respawn pod.");
+    local playerPrevItems = getPlayer():getInventory();
+    for prevItemNo = 0, playerPrevItems:getItems():size() - 1 do
+        local item = playerPrevItems:getItems():get(prevItemNo);
+        if item and item:getFullType() ~= "KI5.PODCardGray" then
+            print("     > removing item " .. item:getFullType());
+            item:getContainer():DoRemoveItem(item);
+        end
+    end
+
+    print("2 - Finding player corpse.");
+
+    LastCorpse = nil;
     if getPlayer():getSquare() then
         local objects = getPlayer():getSquare():getDeadBodys();
 
@@ -28,12 +49,19 @@ local function OnPlayerDeath_CheckPostRespawn()
                 local obj = objects:get(i);
 
                 if instanceof(obj, "IsoDeadBody") then
-                    local objId = obj:getOnlineID();
-                    if objId and objId == getPlayer():getOnlineID() then
-                        LastCorpse = obj;
+                    local bodyContainer = obj:getContainer();
+                    if bodyContainer then
+                        local corpseTicket = bodyContainer:getItemFromType("Base.CorpseTicket");
+                        if corpseTicket and corpseTicket:getModData().corpseOwner then
+                            if corpseTicket:getModData().corpseOwner == getPlayer():getUsername() then
+                                print("Found last corpse!");
+                                print(corpseTicket:getFullType());
+                                LastCorpse = obj;
+                                break;
+                            end
+                        end
                     end
                 end
-                
             end
         end
     end
@@ -41,21 +69,52 @@ local function OnPlayerDeath_CheckPostRespawn()
     
 
     if LastCorpse and getPlayer():getModData().JaxeRevival_Incapacitated then
-        local items = inventory:getItems();
-        for i = 0, items:size() - 1 do
-            local item = items:get(i);
-            if item and item:getType() ~= "KI5.PODCardGray" then
-                print("Removing item " .. item:getType() .. " from player inventory!");
-                inventory:DoRemoveItem(item);
-            end
-        end
         print("Player corpse is not nil.");
-        getPlayer():setWornItems(LastCorpse:getWornItems());
+        print("Adding items from prev inventory.");
+        local corpseContainer = LastCorpse:getContainer();
+        for i, v in ipairs(LastInv) do
+            print("Item " .. LastInv[i]:getFullType());
+            getPlayer():getInventory():DoAddItem(LastInv[i]);
+        end
+
+        print("Drawing dirty");
+        getPlayer():getInventory():setDrawDirty(true);
+        corpseContainer:setDrawDirty(true);
+        ISInventoryPage.renderDirty = true;
+
+        print("Setting visual from");
+        print(LastDesc)
+        getPlayer():getVisual():copyFrom(LastDesc);
+
+        local wornItems = getPlayer():getWornItems();
+        print("Player worn items setting...");
+        for _, wornItem in ipairs(LastWorn) do
+            if not getPlayer():getInventory():contains(wornItem:getItem()) then
+                print("Worn item " .. wornItem:getItem():getFullType() .. " is not in inv, adding.");
+                getPlayer():getInventory():DoAddItem(wornItem:getItem());
+            end
+            wornItems:setItem(wornItem:getLocation(), wornItem:getItem());
+            print("Set item " .. wornItem:getItem():getFullType() .. " as worn item in location " .. wornItem:getLocation());
+        end
+
+        print("Setting attached items.");
         getPlayer():setAttachedItems(LastCorpse:getAttachedItems());
 
+        print("Trigger on clothing updated.");
+        triggerEvent("OnClothingUpdated", getPlayer());
+
+        print("Setting XP");
+        getPlayer():setXp(LastXP);
+
+        print("Removing corpse from world!");
         LastCorpse:removeFromWorld();
         LastCorpse:removeFromSquare();
+        LastCorpse = {};
         CheckPostRespawn = false;
+
+        print("Syncing!");
+        SyncXp(getPlayer());
+        sendPlayerExtraInfo(getPlayer());
     end
 end
 
@@ -79,6 +138,11 @@ function ISPostDeathUI:onContinueIncap()
     w.charCreationMain:initClothing();
     w.charCreationMain:initPlayer();
 
+    MainScreen.instance.desc:setForename(LastName.first);
+	MainScreen.instance.desc:setSurname(LastName.last);
+    MainScreen.instance.charCreationHeader.genderCombo.selected = LastGenderFemale;
+    MainScreen.instance.charCreationHeader:onGenderSelected(MainScreen.instance.charCreationHeader.genderCombo);
+
     w:accept();
 
     getPlayer():setX(LastX);
@@ -97,6 +161,39 @@ function ISPostDeathUI:onContinueIncap()
         getPlayer():getTraits():add(LastTraits[i]);
     end
 
+    if LastBodyDamage then
+        local newBodyParts = getPlayer():getBodyDamage():getBodyParts();
+
+        getPlayer():setGodMod(false);
+
+        for partNum = 0, newBodyParts:size() - 1 do
+            local part = newBodyParts:get(partNum);
+            local partType = tostring(part:getType());
+
+            local savedPart = LastBodyDamage[partType];
+            if savedPart then
+                part:setBleeding(savedPart.bleeding);
+                part:setBleedingTime(savedPart.bleedingTime);
+                part:SetBleedingStemmed(savedPart.bleedingStemmed);
+
+                part:setBandaged(savedPart.bandaged, savedPart.bandageLife);
+                part:setBandageType(savedPart.bandageType);
+
+                part:setHaveBullet(savedPart.bullet, 0);
+                part:setHaveGlass(savedPart.glass);
+
+                part:setDeepWounded(savedPart.deepWounded);
+                part:setDeepWoundTime(savedPart.deepWoundTime);
+
+                part:setStitched(savedPart.stitched);
+                part:setStitchTime(savedPart.stitchTime);
+            end
+        end
+    else
+        print("No body damage saved!");
+    end
+    -- Set body damage.
+    
     CheckPostRespawn = true;
 end
 
@@ -108,6 +205,7 @@ function ISPostDeathUI:createChildren()
         first = getPlayer():getDescriptor():getForename(),
         last = getPlayer():getDescriptor():getSurname()
     }
+    
 
     LastX = getPlayer():getX();
     LastY = getPlayer():getY();
@@ -118,6 +216,7 @@ function ISPostDeathUI:createChildren()
     for i = 0, playerTraits:size() - 1 do
         table.insert(LastTraits, playerTraits:get(i));
     end
+    LastXP = getPlayer():getXp();
 
     LastDesc = getPlayer():getVisual();
 
@@ -128,6 +227,46 @@ function ISPostDeathUI:createChildren()
 
     for i = 0, playerItems:size() - 1 do
         table.insert(LastInv, playerItems:get(i));
+    end
+
+    LastWorn = {};
+    for i = 0, getPlayer():getWornItems():size() - 1 do
+        local wornItem = getPlayer():getWornItems():get(i);
+
+        table.insert(LastWorn, wornItem);
+    end
+
+    LastGenderFemale = getPlayer():isFemale();
+
+    LastBodyDamage = {};
+    LastCorpse = nil;
+    local bodyParts = getPlayer():getBodyDamage():getBodyParts();
+    for i = 0, bodyParts:size() - 1 do
+        local part = bodyParts:get(i);
+
+        if part then
+            local savedDamage =
+            {
+                bleeding = part:bleeding(),
+                bleedingTime = part:getBleedingTime(),
+                bleedingStemmed = part:IsBleedingStemmed(),
+                bandaged = part:bandaged(),
+                bandageLife = part:getBandageLife(),
+                bandageType = part:getBandageType(),
+                bandageDirty = part:isBandageDirty(),
+                bullet = part:haveBullet(),
+                glass = part:haveGlass(),
+                deepWounded = part:deepWounded(),
+                deepWoundTime = part:getDeepWoundTime(),
+                stitched = part:stitched(),
+                stitchTime = part:getStitchTime()
+            };
+
+            local partType = tostring(part:getType());
+            print("Saving body damage for part type " .. partType);
+
+            LastBodyDamage[partType] = savedDamage;
+        end
     end
 
     self.buttonRespawn.onclick = self.onContinueIncap;
