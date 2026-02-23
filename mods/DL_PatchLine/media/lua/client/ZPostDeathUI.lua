@@ -54,16 +54,26 @@ function ISPostDeathUI:onContinueIncap()
 
     local playerCorpse = nil;
 
+    local inv = getPlayer():getInventory();
+    for i = 0, inv:getItems() do
+        local item = inv:getItems():get(i);
+        if item:getType() ~= "KI5.PODCardGray" then
+            inv:DoRemoveItem(item);
+        end
+    end
+
     if objects then
         for i = 0, objects:size() - 1 do
             local obj = objects:get(i);
 
-            if instanceof(obj, "IsoDeadBody") and obj:isPlayer() then
-                for j = 0, obj:getContainer():getItems() do
-                    local bodyItem = obj:getContainer():getItems():get(j);
-                    if bodyItem:getType() == "Base.CorpseTicket" and bodyItem:getModData().corpseOwner == getPlayer():getUsername() then
-                        playerCorpse = obj;
-                        break;
+            local objId = obj:getOnlineID();
+            if objId and objId == getPlayer():getOnlineID() then
+                playerCorpse = obj;
+
+                for j = 0, playerCorpse:getContainer():getItems() do
+                    local item = playerCorpse:getContainer():getItems():get(j);
+                    if item then
+                        item:setContainer(getPlayer():getInventory());
                     end
                 end
             end
@@ -71,7 +81,7 @@ function ISPostDeathUI:onContinueIncap()
     end
 
     if playerCorpse then
-        getPlayer():setContainer(playerCorpse:getInventory());
+        print("Player corpse is not nil.");
         getPlayer():setWornItems(playerCorpse:getWornItems());
         getPlayer():setAttachedItems(playerCorpse:getAttachedItems());
 

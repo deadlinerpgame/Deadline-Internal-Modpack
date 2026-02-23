@@ -206,14 +206,14 @@ end
 
 function SoundQOL.SoundPlayingCheck()
     if not SoundQOL.IsCustomSoundPlaying or SoundQOL.IsCustomSoundPlaying == false then
-        getSoundManager():stop();
+        --getSoundManager():stop();
         Events.EveryOneMinute.Remove(SoundQOL.SoundPlayingCheck);
         return;
     end
 
     if not SoundQOL.CustomSoundString then
         if SoundQOL.SoundInstance then
-            getSoundManager():stopUISound(SoundQOL.SoundInstance);
+            --getSoundManager():stopUISound(SoundQOL.SoundInstance);
             SoundQOL.SoundInstance = nil;
         end
         SoundQOL.IsCustomSoundPlaying = false;
@@ -228,9 +228,9 @@ function SoundQOL.SoundPlayingCheck()
             return;
         end
 
-        if SoundQOL.SoundInstance then
+        --[[if SoundQOL.SoundInstance then
             getSoundManager():stopUISound(SoundQOL.SoundInstance);
-        end
+        end--]]
 
         getCore():setOptionMusicVolume(SoundQOL.PreviousVolume or 0);
         SoundQOL.IsCustomSoundPlaying = false;
@@ -262,7 +262,7 @@ function SoundQOL.StartSoundEx(sound, showMsg, looped)
     SoundQOL.PreviousVolume = getCore():getOptionMusicVolume();
     getCore():setOptionMusicVolume(0);
 
-    Events.EveryOneMinute.Add(SoundQOL.SoundPlayingCheck);
+    --Events.EveryOneMinute.Add(SoundQOL.SoundPlayingCheck);
 end
 
 function SoundQOL.OnServerCommand(module, command, args)

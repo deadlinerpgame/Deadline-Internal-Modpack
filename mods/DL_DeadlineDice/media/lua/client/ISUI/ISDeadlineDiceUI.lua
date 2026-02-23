@@ -2477,7 +2477,7 @@ function ISDeadlineDiceUI:getScore(labelText)
 
         resultString = resultString .. ", dmg mod = ";
 
-        local wpnCats = weapon:getCategories();
+        
 
         if damageStr == "unarmed" then
             if playerTraits:contains("FeatherFist") then
@@ -2485,10 +2485,13 @@ function ISDeadlineDiceUI:getScore(labelText)
             end --if playerTraits:contains("")
         end
 
-        if damageStr == "melee" then
-            if playerTraits:contains("ClumsyStriker") then -- Long Blade, Short Blade, Short Blunt
-                if wpnCats:contains("SmallBlunt") or wpnCats:contains("SmallBlade") or wpnCats:contains("LongBlade") then
-                    resultString = resultString .. "- 1 (Clumsy Striker)";
+        if weapon then
+            local wpnCats = weapon:getCategories();
+            if damageStr == "melee" then
+                if playerTraits:contains("ClumsyStriker") then -- Long Blade, Short Blade, Short Blunt
+                    if wpnCats:contains("SmallBlunt") or wpnCats:contains("SmallBlade") or wpnCats:contains("LongBlade") then
+                        resultString = resultString .. "- 1 (Clumsy Striker)";
+                    end
                 end
             end
         end
