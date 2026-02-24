@@ -113,7 +113,7 @@ local function OnPlayerDeath_CheckPostRespawn()
         getPlayer():setAttachedItems(LastCorpse:getAttachedItems());
 
         print("Trigger on clothing updated.");
-        self.character:resetModel();
+        getPlayer():resetModel();
         triggerEvent("OnClothingUpdated", getPlayer());
 
         print("Setting XP");
