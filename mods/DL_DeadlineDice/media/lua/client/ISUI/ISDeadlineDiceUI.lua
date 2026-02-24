@@ -1344,6 +1344,7 @@ x = x - 130
 self.startCombat = ISButton:new(x + 260, 430, 104, 36, "", self,
     function()
    -- self:toggleCircleMarker()
+   
     DeadlineDice.CombatActive = true
             table.sort(DeadlineDice.orderTracker, function(a, b)
             return (DeadlineDice.initiativeTracker[a] or 0) > (DeadlineDice.initiativeTracker[b] or 0)
@@ -1368,6 +1369,7 @@ self.startCombat = ISButton:new(x + 260, 430, 104, 36, "", self,
         hptracker = DeadlineDice.hpTracker
 
     })
+    DeadlineDice.NPCData = {};
 
     --[[
 for _, username in ipairs(DeadlineDice.orderTracker) do
@@ -1555,6 +1557,7 @@ self.finishCombat = ISButton:new(x + 260, 480, 104, 36, "", self,
         end
 
         getPlayer():getModData().MedLine.BloodData.diceBLPopupGiven = nil;
+        DeadlineDice.NPCData = {};
 
         --self:updateInitiativeDisplay()
     end)
@@ -2114,61 +2117,107 @@ function ISDeadlineDiceUI:prerender()
         self:drawTextureScaled(self.bgTextTexture, 390, 60, 378, 478, 1.0, 1, 1, 1)
 end
 
+function DeadlineDice.AddNPCToTile(npcName)
+    if not isAdmin() then return end;
+
+    if not DeadlineDice then return end;
+
+    if not DeadlineDice.CombatActive then return end;
+
+    local npcData =
+    {
+        name = npcName,
+        x = getPlayer():getX(),
+        y = getPlayer():getY(),
+        z = getPlayer():getZ()
+    };
+
+    if not DeadlineDice.NPCData then
+        DeadlineDice.NPCData = {};
+    end
+
+    table.insert(DeadlineDice.NPCData, npcData);
+end
+
+function DeadlineDice.RenderNPCData()
+    if not DeadlineDice.NPCData or not DeadlineDice.CombatActive then return end;
+
+    for i, npcData in ipairs(DeadlineDice.NPCData) do
+
+        local zoom = getCore():getZoom(0);
+        print(zoom);
+        local testItem = {};
+        local x = isoToScreenX(0, npcData.x, npcData.y, npcData.z);
+        
+        local y = isoToScreenY(0, npcData.x, npcData.y, npcData.z);
+        
+        local width = getTextManager():MeasureStringX(UIFont.Small, npcData.name);
+        local height = getTextManager():MeasureStringY(UIFont.Small, npcData.name);
+
+        testItem = ISUIElement:new(x - (width/2), y, width, height);
+        testItem.anchorTop = false
+        testItem.anchorBottom = true
+        testItem:initialise();
+        testItem:instantiate();
+        testItem:addToUIManager();
+
+        testItem:drawTextCentre(npcData.name, width/2, 0, 1, 1, 1, 1, UIFont.Small)
+
+    end
+end
 
 function ISDeadlineDiceUI:render()
+    if DeadlineDice.CombatActive and DeadlineDice.turnStartTime then
+        local now = getTimestampMs()
+        
+        local elapsed = now - DeadlineDice.turnStartTime
+        local remaining = math.max(0, DeadlineDice.turnDuration - elapsed)
+        local seconds = math.ceil(remaining / 1000)
+        self.turnDurationEntry:setEditable(false)
+        self.setTurnDurationButton:setEnable(false)
 
+        local timerText = "" .. tostring(seconds) .. " seconds remain..."
+        self:drawText(timerText, 120, self.initiativeBorder.y - 20, 1, 1, 1, 1, UIFont.Medium)
+    else
+        local timerText = ""
+        self:drawText(timerText, 120, self.initiativeBorder.y - 20, 1, 1, 1, 1, UIFont.Medium)
+    end
 
-if DeadlineDice.CombatActive and DeadlineDice.turnStartTime then
-    local now = getTimestampMs()
-    
-    local elapsed = now - DeadlineDice.turnStartTime
-    local remaining = math.max(0, DeadlineDice.turnDuration - elapsed)
-    local seconds = math.ceil(remaining / 1000)
-    self.turnDurationEntry:setEditable(false)
-    self.setTurnDurationButton:setEnable(false)
+    local topName = self:getTopInitiativeEntry()
+    local playerName = self.character:getUsername()
+    if topName and playerName then
+    -- print(topName .. " - " .. playerName)
+    end
+    if DeadlineDice.CombatActive and topName == playerName then
+        self.finishTurn:setEnable(true)
+        --self.movementButton:setEnable(true)
+        for _, group in ipairs(self.buttonGroups) do
+            for _, pair in ipairs(group) do
+                if pair.label.name == "Attack" then
+                    pair.button:setEnable(true)
+                end
+            end
+        end
+    elseif DeadlineDice.CombatActive == false then
+        for _, group in ipairs(self.buttonGroups) do
+            for _, pair in ipairs(group) do
+                if pair.label.name == "Attack" then
+                    pair.button:setEnable(true)
+                end
+            end
+        end
 
-    local timerText = "" .. tostring(seconds) .. " seconds remain..."
-    self:drawText(timerText, 120, self.initiativeBorder.y - 20, 1, 1, 1, 1, UIFont.Medium)
-else
-    local timerText = ""
-    self:drawText(timerText, 120, self.initiativeBorder.y - 20, 1, 1, 1, 1, UIFont.Medium)
-end
-
-local topName = self:getTopInitiativeEntry()
-local playerName = self.character:getUsername()
-if topName and playerName then
-   -- print(topName .. " - " .. playerName)
-end
-if DeadlineDice.CombatActive and topName == playerName then
-    self.finishTurn:setEnable(true)
-    --self.movementButton:setEnable(true)
-    for _, group in ipairs(self.buttonGroups) do
-        for _, pair in ipairs(group) do
-            if pair.label.name == "Attack" then
-                pair.button:setEnable(true)
+    else
+        self.finishTurn:setEnable(false)
+        --self.movementButton:setEnable(false)
+        for _, group in ipairs(self.buttonGroups) do
+            for _, pair in ipairs(group) do
+                if pair.label.name == "Attack" then
+                    pair.button:setEnable(false)
+                end
             end
         end
     end
-elseif DeadlineDice.CombatActive == false then
-    for _, group in ipairs(self.buttonGroups) do
-        for _, pair in ipairs(group) do
-            if pair.label.name == "Attack" then
-                pair.button:setEnable(true)
-            end
-        end
-    end
-
-else
-    self.finishTurn:setEnable(false)
-    --self.movementButton:setEnable(false)
-    for _, group in ipairs(self.buttonGroups) do
-        for _, pair in ipairs(group) do
-            if pair.label.name == "Attack" then
-                pair.button:setEnable(false)
-            end
-        end
-    end
-end
 
     if DeadlineDice.CombatActive and self.initiativeLabels then
         local topName = self:getTopInitiativeEntry()
@@ -2180,7 +2229,7 @@ end
         end
     end
 
-for i, group in ipairs(self.buttonGroups or {}) do
+    for i, group in ipairs(self.buttonGroups or {}) do
 
     if #group > 0 then
         local first = group[1]
@@ -2377,6 +2426,8 @@ function ISDeadlineDiceUI:getScore(labelText)
         totalScore = totalScore + value
     end
 
+
+
     -- Blood loss string.
     if editedLabel ~= "DicewithDeath" and getPlayer():getModData().MedLine and getPlayer():getModData().MedLine.BloodData and (not isAdmin()) then
         local bloodData = getPlayer():getModData().MedLine.BloodData;
@@ -2407,6 +2458,43 @@ function ISDeadlineDiceUI:getScore(labelText)
         localtext = playerName .. " rolls for: " .. diceScore6
     else
         resultString = resultString .. modifierString .. " = " .. tostring(totalScore)
+    end
+
+    -- Now add weapon damage to it.
+    local damageStr = "";
+    local playerTraits = getPlayer():getTraits();
+    local weapon = getPlayer():getPrimaryHandItem();
+    if editedLabel == "Attack" or editedLabel == "AttackRanged" then
+        if not weapon or instanceof(weapon, "HandWeapon") then
+            damageStr = "unarmed";
+        else
+            if weapon:isRanged() then
+                damageStr = "ranged";
+            else
+                damageStr = "melee";
+            end
+        end
+
+        resultString = resultString .. ", dmg mod = ";
+
+        
+
+        if damageStr == "unarmed" then
+            if playerTraits:contains("FeatherFist") then
+                resultString = resultString .. "- 1 (Feather Fist) ";
+            end --if playerTraits:contains("")
+        end
+
+        if weapon then
+            local wpnCats = weapon:getCategories();
+            if damageStr == "melee" then
+                if playerTraits:contains("ClumsyStriker") then -- Long Blade, Short Blade, Short Blunt
+                    if wpnCats:contains("SmallBlunt") or wpnCats:contains("SmallBlade") or wpnCats:contains("LongBlade") then
+                        resultString = resultString .. "- 1 (Clumsy Striker)";
+                    end
+                end
+            end
+        end
     end
 
     localtext = playerName .. " " .. resultString

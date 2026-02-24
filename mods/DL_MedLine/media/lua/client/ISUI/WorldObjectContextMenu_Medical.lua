@@ -79,7 +79,7 @@ function MedLine_Events.onClickDrawBlood(self, player, medicalCheckOpt)
             return;
         end
 
-        getPlayer():setHaloNote(getText("I can request blood again in " .. tostring(minutesLeft) .. " minutes."), 250, 150, 150, 200);
+        getPlayer():setHaloNote("I can request blood again in " .. tostring(minutesLeft) .. " minutes.", 250, 150, 150, 200);
         
     end
 end

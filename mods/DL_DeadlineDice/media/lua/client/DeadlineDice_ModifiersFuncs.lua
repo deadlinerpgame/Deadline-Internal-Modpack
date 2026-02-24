@@ -345,6 +345,7 @@ function DeadlineDice.getPhysicalEnduranceModifiers(modifiers, character)
         WeakStomach = -1,
         Outdoorsman = 3,
         Thinskinned = -2,
+        SlowReflexes = -2,
         Stalwart = 2,
         Spry = 1,
         Resolute = 1,

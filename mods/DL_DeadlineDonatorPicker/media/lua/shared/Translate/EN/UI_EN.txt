@@ -1,4 +1,14 @@
 UI_EN = {
     UI_Title_DonatorClothes = "Deadline Donator Clothes",
-
+    UI_Info_LootTicketChances = " <H1> LOOT TICKET SYSTEM<BR> " ..
+                                     " <TEXT> <SIZE:small>" ..
+                                     " A loot ticket decides what items can be rolled based on two factors: 1 - the chance that the item is picked, and 2 - the number of rolls that ticket has. <LINE> <LINE>" ..
+                                     " Items with a chance of 100 will ALWAYS be given, and will not be counted in the rolls the item ticket has. <LINE> <LINE>" ..
+                                     " Using the example of 3 rolls in the following image:" ..
+                                     " <LINE> <IMAGECENTRE:media/textures/guideImages/exampleRollImage.png> <LINE> " ..
+                                     " The AssaultRifle will always be guaranteed. This means that there are 4 remaining items competing for 3 spaces. <LINE> <LINE>" ..
+                                     " First, the weights are all added up, from top to bottom, and then a number is rolled between 0 and the max weight.<LINE> <LINE>" ..
+                                     " In the example below, that is 80. <LINE> <LINE> " ..
+                                     " <LINE> <IMAGECENTRE:media/textures/guideImages/weightsExplainedImage.png> <LINE> " ..
+                                     " That is 1 roll. If duplicate items is NOT selected, then the Base.Bullets44 is removed from the list."
 }

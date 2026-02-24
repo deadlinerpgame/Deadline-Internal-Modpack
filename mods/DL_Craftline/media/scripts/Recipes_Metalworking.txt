@@ -255,4 +255,21 @@ module Base
 
     }
 
+    	recipe Make File
+    	{
+		SmallSheetMetal=2,
+		aerx.IronFragments=4,
+        	BlowTorch=1,
+		aerx.Handle=1,
+		keep Saw,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		SkillRequired:MetalWelding=6,
+
+        	Result:aerx.File
+        	Time:140.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
 }
