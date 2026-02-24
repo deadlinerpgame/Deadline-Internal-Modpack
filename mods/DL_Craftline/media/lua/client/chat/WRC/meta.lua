@@ -732,6 +732,7 @@ function WRC.Meta.CreateChatSettingsContext(context)
     volumeColorsContext:addOption("Set Loud Color", nil, WRC.MakeColorDialogPrompt("New Loud Volume Color (blank for default)", WRC.Commands.SetLoudVolumeColor))
     volumeColorsContext:addOption("Set Shout Color", nil, WRC.MakeColorDialogPrompt("New Shout Volume Color (blank for default)", WRC.Commands.SetShoutVolumeColor))
 
+
     local unreadTabOption = chatSettingsContext:addOption("Unread Tab Options", nil, nil)
     local unreadTabContext = chatSettingsContext:getNew(chatSettingsContext)
     chatSettingsContext:addSubMenu(unreadTabOption, unreadTabContext)

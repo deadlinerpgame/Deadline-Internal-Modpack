@@ -319,34 +319,93 @@ function WRC.Parsing.GetSpecialStart(text)
     return nil
 end
 
-function WRC.Parsing.FormatPart(part, omitStart)
+function WRC.Parsing.GetLuminance(r, g, b)
+    return (0.2126*r + 0.7152*g + 0.0722*b);
+end
+
+local function convertRGBStringToArray(rgbStr)
+    local returnStr = string.gsub(rgbStr, "<RGB:", "");
+    returnStr = string.gsub(returnStr, ">", "");
+    local colors = string.split(returnStr, ",");
+    local r, g, b = colors[1], colors[2], colors[3];
+    return tonumber(r), tonumber(g), tonumber(b)
+end
+
+function WRC.Parsing.AccountForDistance(rgbStr, distanceAmt)
+
+    -- Yes, though this could be made a lot more efficient with for loops it would butcher the readability.
+
+    if not distanceAmt then return rgbStr end;
+
+    --[[print("=======================");
+    print("AccountForDistance:");
+    print("Current color is " .. tostring(rgbStr));
+    print("Distance amount is " .. tostring(distanceAmt));--]]
+
+    local minRGB = getPlayer():getModData().MinRGB;
+    if not minRGB or type(minRGB) == "table" then minRGB = "<RGB:0.3,0.3,0.3>" end;
+    --print("Minimum % of original = " .. tostring(minRGB));
+    local minR, minG, minB = convertRGBStringToArray(minRGB);
+    local r, g, b = convertRGBStringToArray(rgbStr);
+
+    --[[local lumText = WRC.Parsing.GetLuminance(r, g, b);
+    local lumBg = WRC.Parsing.GetLuminance(0, 0, 0);--]]
+
+    local minColorVal = { r * minR, g * minG, b * minB };
+    --print(string.format("minColorVal = %.3f, %.3f, %.3f", minColorVal[1], minColorVal[2], minColorVal[3]));
+
+    local subtractAmountR = r * distanceAmt;
+    local subtractAmountG = g * distanceAmt;
+    local subtractAmountB = b * distanceAmt;
+    --print(string.format("Subtracting = [R: %.3f - %.3f], [G: %.3f - %.3f], [B: %.3f - %.3f]", r, subtractAmountR, g, subtractAmountG, b, subtractAmountB));
+
+    if r and g and b then
+        local adjustedR = r - subtractAmountR;
+        local adjustedG = g - subtractAmountG;
+        local adjustedB = b - subtractAmountB;
+
+        if adjustedR < minColorVal[1] then adjustedR = minColorVal[1] end;
+        if adjustedG < minColorVal[2] then adjustedG = minColorVal[2] end;
+        if adjustedB < minColorVal[3] then adjustedB = minColorVal[3] end;
+
+        local distanceStr = string.format("<RGB:%.3f,%.3f,%.3f>", adjustedR, adjustedG, adjustedB);
+        --print(distanceStr);
+        return distanceStr;
+    end
+
+    return nil;
+
+end
+
+function WRC.Parsing.FormatPart(part, omitStart, distanceMetric)
     local text = part.text
     if text and omitStart then
         text = text:sub(omitStart + 1, text:len())
     end
+
     if part.type == "text" then
         local sayColor = WRC.Meta.GetSayColor()
-        return WRC.ChatColors[part.type] .. sayColor .. "\"" .. text .. "\"" .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(WRC.ChatColors[part.type], distanceMetric) .. WRC.Parsing.AccountForDistance(sayColor, distanceMetric) .. "\"" .. text .. "\"" .. WL_Utils.MagicSpace
     elseif part.type == "textmuted" then
-        return WRC.ChatColors[part.type] .. "\"" .. text .. "\"" .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(WRC.ChatColors[part.type], distanceMetric) .. "\"" .. text .. "\"" .. WL_Utils.MagicSpace
     elseif part.type == "ooc" then
         local oocColor = WRC.Meta.GetOocColor()
-        return oocColor .. "(( " .. text .. " ))" .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(oocColor, distanceMetric) .. "(( " .. text .. " ))" .. WL_Utils.MagicSpace
     elseif part.type == "environment" then
             local doColor = WRC.Meta.GetDoColor()
-            return doColor .. "[[ " .. text .. " ]]" .. WL_Utils.MagicSpace
+            return WRC.Parsing.AccountForDistance(doColor, distanceMetric) .. "[[ " .. text .. " ]]" .. WL_Utils.MagicSpace
     elseif part.type == "emote" then
         local emoteColor = WRC.Meta.GetEmoteColor()
-        return emoteColor .. text .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(emoteColor, distanceMetric) .. text .. WL_Utils.MagicSpace
     elseif part.type == "alert" then
         local alertColor = WRC.ChatColors["alert"]
-        return alertColor .. text .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(alertColor, distanceMetric) .. text .. WL_Utils.MagicSpace
     elseif part.type == "roll" then
         local fontHeight = getTextManager():MeasureStringY(UIFont.NewSmall, "XXX")
         local imageTag = " <IMAGE:Item_Dice,".. fontHeight .. "," .. fontHeight .. ">"
-        return WRC.ChatColors[part.type] .. imageTag .. text .. imageTag .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(WRC.ChatColors[part.type], distanceMetric) .. imageTag .. text .. imageTag .. WL_Utils.MagicSpace
     else
-        return WRC.ChatColors[part.type] .. text .. WL_Utils.MagicSpace
+        return WRC.Parsing.AccountForDistance(WRC.ChatColors[part.type], distanceMetric) .. text .. WL_Utils.MagicSpace
     end
 end
 
@@ -356,6 +415,27 @@ function WRC.Parsing.FormatMessage(parsedMessage)
     local message = ""
     local hadText = false
     local specialStart
+
+    -- Set the distance value.
+    local distanceMetric = nil;
+
+    local source = getPlayerFromUsername(parsedMessage.playerUsername);
+    if source and source ~= getPlayer() then
+        local actualDistance = getPlayer():getDistanceSq(source);
+        local chatTypeDist = WRC.ChatTypes[parsedMessage.chatType].xyRange * WRC.ChatTypes[parsedMessage.chatType].xyRange;
+        local relativeDist =  actualDistance / chatTypeDist;
+        --[[print("Distances:");
+        print("Actual distance: " .. tostring(actualDistance));
+        print("Chat type distance: " .. tostring(chatTypeDist));
+        print("Relative distance: " .. tostring(relativeDist));--]]
+
+        if relativeDist > 1 or (parsedMessage.radioFrequency and parsedMessage.radioFrequency > 0) then
+            distanceMetric = 1
+        else
+            distanceMetric = tonumber(string.format("%.2f", relativeDist));
+        end
+    end
+
     if parsedMessage.playerUsername and parsedMessage.showName then
         specialStart = WRC.Parsing.GetSpecialStart(parsedMessage.parts[1].text)
         if parsedMessage.parts[1].type == "emote" and specialStart then
@@ -386,14 +466,17 @@ function WRC.Parsing.FormatMessage(parsedMessage)
         end
     end
 
+   
+
     for n, part in ipairs(parsedMessage.parts) do
         if part.type == "text" or part.type == "textmuted" then
             hadText = true
         end
+
         if n == 1 and specialStart then
-            message = message .. WRC.Parsing.FormatPart(part, specialStart:len())
+            message = message .. WRC.Parsing.FormatPart(part, specialStart:len(), distanceMetric);
         else
-            message = message .. WRC.Parsing.FormatPart(part)
+            message = message .. WRC.Parsing.FormatPart(part, nil, distanceMetric);
         end
     end
 

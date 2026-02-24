@@ -3,6 +3,10 @@ WRC = WRC or {}
 WRC.Commands = WRC.Commands or {}
 WRC.TabHandlers = WRC.TabHandlers or {}
 
+require "LogLineUtils";
+LogLineUtils = LogLineUtils or {};
+LogLineUtils.LogFromClient = LogLineUtils.LogFromClient or {};
+
 -- will receive the message as a string: /name new name
 function WRC.Commands.SetName(args)
     local name = args:gsub("^%s*(.-)%s*$", "%1") -- trim
@@ -177,6 +181,40 @@ function WRC.Commands.SetShoutVolumeColor(args)
     local rgbString = "<RGB:" .. color.r .. "," .. color.g .. "," .. color.b .. ">"
     WRC.Meta.SetShoutColor(rgbString)
     WL_Utils.addInfoToChat(rgbString .. "Shout color has been updated!")
+end
+
+function WRC.Commands.SetDistanceLowestColor(target, button)
+    local args = button.target.entry:getText();
+    if not args or args == "" then
+        WRC.Meta.SetDistanceLowestColor("<RGB:0.3,0.3,0.3>");
+        WL_Utils.addInfoToChat("<RGB:0.3,0.3,0.3> Distance max color set to default.");
+        return;
+    end
+
+    local splitArgs = string.split(args, ",");
+    if not splitArgs then return end;
+
+    local color =
+    {
+        r = tonumber(splitArgs[1]),
+        g = tonumber(splitArgs[2]),
+        b = tonumber(splitArgs[3])
+    };
+
+    if color.r < 0 or color.r > 1 then return end;
+    if color.g < 0 or color.g > 1 then return end;
+    if color.b < 0 or color.b > 1 then return end;
+
+    local rgbString = string.format("<RGB:%.3f,%.3f,%.3f>", color.r, color.g, color.b);
+    WRC.Meta.SetDistanceLowestColor(rgbString);
+
+    local distanceRGB = {
+        threeQuarters = WRC.Parsing.AccountForDistance(WRC.Meta.GetSayColor(), 0.75);
+        half = WRC.Parsing.AccountForDistance(WRC.Meta.GetSayColor(), 0.5);
+        oneQuarter = WRC.Parsing.AccountForDistance(WRC.Meta.GetSayColor(), 0.25);
+    };
+
+    WL_Utils.addInfoToChat(string.format("%s <SPACE> Distance max %s <SPACE> color has %s <SPACE> been updated!", distanceRGB.threeQuarters, distanceRGB.half, distanceRGB.oneQuarter));
 end
 
 function WRC.Commands.SetLang(args)
@@ -697,6 +735,9 @@ function WRC.Commands.Injure(args)
         return
     end
     WL_Utils.addInfoToChat("<RGB:1.0,0.0,0.0>Injury applied!")
+
+    local logStr = string.format("%s has applied injury %s to body part %s", getPlayer():getUsername(), injury, bodyPartStr);
+    LogLineUtils.LogFromClient("DamageLogs", logStr);
 end
 
 -- args should be a radio frequency: 123, 321.5, 123.4

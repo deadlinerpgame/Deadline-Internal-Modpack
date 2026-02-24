@@ -31,8 +31,16 @@ function DLLootTicketInspectionUI:initialise()
     infoLabel:instantiate();
     self:addChild(infoLabel);
 
-    local itemY = infoLabel:getBottom() + smallFontHeight;
-    local largestX = getTextManager():MeasureStringX(UIFont.NewSmall, "This loot ticket has the following items");
+    local statsStr = string.format("Rolls: %0d | Allow Duplicates: %s", self.maxRolls, self.allowDuplicates);
+    local statsLabel = ISLabel:new(12, infoLabel:getBottom() + smallFontHeight, smallFontHeight, statsStr);
+    statsLabel:initialise();
+    statsLabel:instantiate();
+    self:addChild(statsLabel);
+
+    local itemY = statsLabel:getBottom() + smallFontHeight;
+
+    
+    local largestX = getTextManager():MeasureStringX(UIFont.NewSmall, "This loot ticket has the following items:");
     local thisWidth = 0;
     for _, item in ipairs(self.items) do
         local itemString = string.format("   - %s [amount: %0d] [chance: %0d]", item.item.Name, item.item.Quantity, item.item.Chance);
@@ -65,7 +73,7 @@ function DLLootTicketInspectionUI:initialise()
 end
 
 
-function DLLootTicketInspectionUI:new(x, y, width, height, items)
+function DLLootTicketInspectionUI:new(x, y, width, height, items, maxRolls, allowDuplicates)
     local o = ISPanel:new(x, y, width, height);
     setmetatable(o, self);
     self.__index = self;
@@ -75,6 +83,8 @@ function DLLootTicketInspectionUI:new(x, y, width, height, items)
     o.width = width;
     o.height = height;
     o.items = items;
+    o.maxRolls = maxRolls;
+    o.allowDuplicates = allowDuplicates;
     o.title = "Loot Ticket Data";
     o.moveWithMouse = true;
     return o;
