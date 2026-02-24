@@ -5,6 +5,7 @@ LastX = nil;
 LastY = nil;
 LastZ = nil;
 LastDesc = nil;
+LastVisual = nil;
 LastInv = nil;
 LastWorn = nil;
 LastName = { first = "", last = "" };
@@ -89,9 +90,13 @@ local function OnPlayerDeath_CheckPostRespawn()
 
         print("Setting visual from");
         print(LastDesc)
-        getPlayer():getVisual():copyFrom(LastDesc);
+        getPlayer():getVisual():clear();
+        getPlayer():getVisual():copyFrom(LastVisual);
+        getPlayer():getDescriptor():getHumanVisual():clear();
+        getPlayer():getDescriptor():getHumanVisual():copyFrom(LastVisual);
 
         local wornItems = getPlayer():getWornItems();
+
         print("Player worn items setting...");
         for _, wornItem in ipairs(LastWorn) do
             if not getPlayer():getInventory():contains(wornItem:getItem()) then
@@ -99,6 +104,7 @@ local function OnPlayerDeath_CheckPostRespawn()
                 getPlayer():getInventory():DoAddItem(wornItem:getItem());
             end
             wornItems:setItem(wornItem:getLocation(), wornItem:getItem());
+            getPlayer():getDescriptor():setWornItem(wornItem:getLocation(), wornItem:getItem());
             print("Set item " .. wornItem:getItem():getFullType() .. " as worn item in location " .. wornItem:getLocation());
         end
 
@@ -106,6 +112,7 @@ local function OnPlayerDeath_CheckPostRespawn()
         getPlayer():setAttachedItems(LastCorpse:getAttachedItems());
 
         print("Trigger on clothing updated.");
+        self.character:resetModel();
         triggerEvent("OnClothingUpdated", getPlayer());
 
         print("Setting XP");
@@ -117,10 +124,44 @@ local function OnPlayerDeath_CheckPostRespawn()
         LastCorpse = {};
         CheckPostRespawn = false;
 
-        print("Syncing!");
-        SyncXp(getPlayer());
-        sendPlayerExtraInfo(getPlayer());
+        print("Applying body damage.");
+        if LastBodyDamage then
+            local newBodyParts = getPlayer():getBodyDamage():getBodyParts();
+
+            getPlayer():setGodMod(false);
+
+            for partNum = 0, newBodyParts:size() - 1 do
+                local part = newBodyParts:get(partNum);
+                local partType = tostring(part:getType());
+
+                local savedPart = LastBodyDamage[partType];
+                if savedPart then
+                    part:setBleeding(savedPart.bleeding);
+                    part:setBleedingTime(savedPart.bleedingTime);
+                    part:SetBleedingStemmed(savedPart.bleedingStemmed);
+
+                    part:setBandaged(savedPart.bandaged, savedPart.bandageLife);
+                    part:setBandageType(savedPart.bandageType);
+
+                    part:setHaveBullet(savedPart.bullet, 0);
+                    part:setHaveGlass(savedPart.glass);
+
+                    part:setDeepWounded(savedPart.deepWounded);
+                    part:setDeepWoundTime(savedPart.deepWoundTime);
+
+                    part:setStitched(savedPart.stitched);
+                    part:setStitchTime(savedPart.stitchTime);
+                end
+            end
+        end
+    else
+        print("No body damage saved!");
     end
+
+    print("Syncing!");
+    SyncXp(getPlayer());
+    sendPlayerExtraInfo(getPlayer());
+
 end
 
 function ISPostDeathUI:onContinueIncap()
@@ -140,13 +181,26 @@ function ISPostDeathUI:onContinueIncap()
 
 	w.mapSpawnSelect:useDefaultSpawnRegion()
     w.charCreationProfession.onSelectProf(ProfessionFactory.getProfessions():get(0));
-    w.charCreationMain:initClothing();
-    w.charCreationMain:initPlayer();
 
-    MainScreen.instance.desc:setForename(LastName.first);
-	MainScreen.instance.desc:setSurname(LastName.last);
-    MainScreen.instance.charCreationHeader.genderCombo.selected = LastGenderFemale;
-    MainScreen.instance.charCreationHeader:onGenderSelected(MainScreen.instance.charCreationHeader.genderCombo);
+    w.charCreationHeader.genderCombo.selected = LastGenderFemale;
+    if LastGenderFemale then
+        MainScreen.instance.avatar:setFemale(true);
+		MainScreen.instance.desc:setFemale(true);
+		MainScreen.instance.desc:getHumanVisual():removeBodyVisualFromItemType("Base.M_Hair_Stubble")
+		MainScreen.instance.desc:getHumanVisual():removeBodyVisualFromItemType("Base.M_Beard_Stubble")
+	else
+		MainScreen.instance.avatar:setFemale(false);
+		MainScreen.instance.desc:setFemale(false);
+		MainScreen.instance.desc:getHumanVisual():removeBodyVisualFromItemType("Base.F_Hair_Stubble")
+	end
+
+	w.charCreationHeader:randomGenericOutfit();
+	w.charCreationHeader:setAvatarFromUI();
+	w.charCreationProfession.instance:changeClothes();
+
+    w.charCreationMain:initClothing();
+    MainScreen.instance.desc:getHumanVisual():copyFrom(LastVisual);
+    w.charCreationMain:initPlayer();
 
     w:accept();
 
@@ -154,48 +208,18 @@ function ISPostDeathUI:onContinueIncap()
     getPlayer():setY(LastY);
     getPlayer():setZ(LastZ or 0);
 
-    getPlayer():getVisual():copyFrom(LastDesc);
+    getPlayer():getDescriptor():getHumanVisual():copyFrom(LastVisual);
     getPlayer():getBodyDamage():setOverallBodyHealth(25);
     
     getPlayer():getDescriptor():setForename(LastName.first or string.split(getPlayer():getUsername(), " ")[1]);
     getPlayer():getDescriptor():setSurname(LastName.last or string.split(getPlayer():getUsername(), " ")[2]);
 
     -- Clear traits.
+    getPlayer():getDescriptor():setProfession(LastProf);
+
     getPlayer():getTraits():clear();
     for i, _ in ipairs(LastTraits) do
         getPlayer():getTraits():add(LastTraits[i]);
-    end
-
-    if LastBodyDamage then
-        local newBodyParts = getPlayer():getBodyDamage():getBodyParts();
-
-        getPlayer():setGodMod(false);
-
-        for partNum = 0, newBodyParts:size() - 1 do
-            local part = newBodyParts:get(partNum);
-            local partType = tostring(part:getType());
-
-            local savedPart = LastBodyDamage[partType];
-            if savedPart then
-                part:setBleeding(savedPart.bleeding);
-                part:setBleedingTime(savedPart.bleedingTime);
-                part:SetBleedingStemmed(savedPart.bleedingStemmed);
-
-                part:setBandaged(savedPart.bandaged, savedPart.bandageLife);
-                part:setBandageType(savedPart.bandageType);
-
-                part:setHaveBullet(savedPart.bullet, 0);
-                part:setHaveGlass(savedPart.glass);
-
-                part:setDeepWounded(savedPart.deepWounded);
-                part:setDeepWoundTime(savedPart.deepWoundTime);
-
-                part:setStitched(savedPart.stitched);
-                part:setStitchTime(savedPart.stitchTime);
-            end
-        end
-    else
-        print("No body damage saved!");
     end
     -- Set body damage.
     
@@ -223,7 +247,8 @@ function ISPostDeathUI:createChildren()
     end
     LastXP = getPlayer():getXp();
 
-    LastDesc = getPlayer():getVisual();
+    LastDesc = getPlayer():getDescriptor();
+    LastVisual = getPlayer():getHumanVisual();
 
     LastProfession = getPlayer():getDescriptor():getProfession();
 
