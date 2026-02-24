@@ -39,10 +39,7 @@ local function OnPlayerDeath_CheckPostRespawn()
         end
     end
 
-    for i, _ in ipairs(itemsToRemove) do
-        local itemToRemove = itemsToRemove[i];
-        itemToRemove:getContainer():DoRemoveItem(itemToRemove);
-    end
+    
 
     print("2 - Finding player corpse.");
 
@@ -76,6 +73,12 @@ local function OnPlayerDeath_CheckPostRespawn()
 
     if LastCorpse and getPlayer():getModData().JaxeRevival_Incapacitated then
         print("Player corpse is not nil.");
+
+        for i, _ in ipairs(itemsToRemove) do
+            local itemToRemove = itemsToRemove[i];
+            itemToRemove:getContainer():DoRemoveItem(itemToRemove);
+        end
+
         print("Adding items from prev inventory.");
         local corpseContainer = LastCorpse:getContainer();
         for i, v in ipairs(LastInv) do
