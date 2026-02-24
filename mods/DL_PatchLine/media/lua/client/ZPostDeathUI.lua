@@ -69,8 +69,6 @@ local function OnPlayerDeath_CheckPostRespawn()
         end
     end
 
-    
-
     if LastCorpse and getPlayer():getModData().JaxeRevival_Incapacitated then
         print("Player corpse is not nil.");
 
@@ -124,7 +122,7 @@ local function OnPlayerDeath_CheckPostRespawn()
         print("Removing corpse from world!");
         LastCorpse:removeFromWorld();
         LastCorpse:removeFromSquare();
-        LastCorpse = {};
+        LastCorpse = nil;
         CheckPostRespawn = false;
 
         print("Applying body damage.");

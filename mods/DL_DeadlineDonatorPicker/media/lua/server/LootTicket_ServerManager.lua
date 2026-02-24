@@ -40,7 +40,7 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
         local iteratedChance = randInstance:random(0, totalChance);
         local hasRolledSuccessfully = false;
 
-        for _, rollItem in ipairs(lootData).Items do
+        for _, rollItem in ipairs(lootData.Items) do
             rollItem.item.hasRolledThisTurn = false;
         end
 
