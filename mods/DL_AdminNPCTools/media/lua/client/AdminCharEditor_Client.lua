@@ -11,7 +11,9 @@ local function isAdmin()
     
     local accessLevel = player:getAccessLevel()
     if accessLevel then
-        return accessLevel == "Admin"
+        accessLevel = accessLevel:lower()
+        return accessLevel == "admin" or accessLevel == "moderator" 
+            or accessLevel == "gm" or accessLevel == "observer"
     end
     return false
 end
