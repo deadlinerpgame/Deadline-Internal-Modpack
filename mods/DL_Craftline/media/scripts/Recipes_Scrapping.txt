@@ -4,7 +4,7 @@ module Base
     {
         Base.SmallSheetMetal=1,
         Result:aerx.IronFragments,
-	OnCreate:Recipe.OnCreate.GiveFiveIroFragTwoZTwoN,
+	    OnCreate:Recipe.OnCreate.GiveFiveIroFragTwoZTwoN,
         Time:15.0,
         Category:Scrapping,
     }
@@ -82,7 +82,7 @@ module Base
 
    recipe Scrap Silver Jewelry
     {
-BellyButton_DangleSilver/BellyButton_RingSilver/BellyButton_StudSilver/Bracelet_BangleLeftSilver/Bracelet_BangleRightSilver/Bracelet_ChainLeftSilver/Bracelet_ChainRightSilver/Earring_LoopLrg_Silver_Both/Earring_LoopMed_Silver_Both/Earring_LoopSmall_Silver_Both/Earring_LoopSmall_Silver_Top/Earring_Stud_Silver_Both/NecklaceLong_Silver/Necklace_SilverCrucifix/Necklace_Silver/NoseRing_Silver/NoseStud_Silver/Ring_Left_MiddleFinger_Silver/Ring_Left_RingFinger_Silver/Ring_Right_MiddleFinger_Silver/Ring_Right_RingFinger_Silver/BellyButton_DangleSilverDiamond/BellyButton_RingSilverDiamond/BellyButton_StudSilverDiamond/NecklaceLong_SilverDiamond/Necklace_SilverDiamond/Ring_Left_MiddleFinger_SilverDiamond/Ring_Left_RingFinger_SilverDiamond/Ring_Right_MiddleFinger_SilverDiamond/Ring_Right_RingFinger_SilverDiamond/BellyButton_RingSilverRuby/NecklaceLong_SilverSapphire/Necklace_SilverSapphire/NecklaceLong_SilverEmerald/BellyButton_RingSilverAmethyst,
+    BellyButton_DangleSilver/BellyButton_RingSilver/BellyButton_StudSilver/Bracelet_BangleLeftSilver/Bracelet_BangleRightSilver/Bracelet_ChainLeftSilver/Bracelet_ChainRightSilver/Earring_LoopLrg_Silver_Both/Earring_LoopMed_Silver_Both/Earring_LoopSmall_Silver_Both/Earring_LoopSmall_Silver_Top/Earring_Stud_Silver_Both/NecklaceLong_Silver/Necklace_SilverCrucifix/Necklace_Silver/NoseRing_Silver/NoseStud_Silver/Ring_Left_MiddleFinger_Silver/Ring_Left_RingFinger_Silver/Ring_Right_MiddleFinger_Silver/Ring_Right_RingFinger_Silver/BellyButton_DangleSilverDiamond/BellyButton_RingSilverDiamond/BellyButton_StudSilverDiamond/NecklaceLong_SilverDiamond/Necklace_SilverDiamond/Ring_Left_MiddleFinger_SilverDiamond/Ring_Left_RingFinger_SilverDiamond/Ring_Right_MiddleFinger_SilverDiamond/Ring_Right_RingFinger_SilverDiamond/BellyButton_RingSilverRuby/NecklaceLong_SilverSapphire/Necklace_SilverSapphire/NecklaceLong_SilverEmerald/BellyButton_RingSilverAmethyst,
         Result:aerx.SilverScrap,
 
         Time:15.0,
@@ -171,7 +171,7 @@ BellyButton_DangleSilver/BellyButton_RingSilver/BellyButton_StudSilver/Bracelet_
         Category:Scrapping,
     }
 
-recipe Turn Tin Scrap into Fragments
+    recipe Turn Tin Scrap into Fragments
     {
         aerx.TinScrap,
         Result:aerx.TinFragments=10,
@@ -189,8 +189,8 @@ recipe Turn Tin Scrap into Fragments
 
     recipe Turn Copper Scrap into a Chunk
     {
-        aerx.CopperScrap=10,
-        Result:aerx.CopperChunk,
+        CopperScrap=10,
+        Result:CopperChunk,
         Time:30.0,
         Category:Scrapping,
     }
