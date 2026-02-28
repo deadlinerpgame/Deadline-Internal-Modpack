@@ -21,6 +21,7 @@ CheckPostRespawn = false;
 local function OnPlayerDeath_CheckPostRespawn()
     
     if not CheckPostRespawn then return end;
+    
     if not getPlayer():getInventory() then return end;
 
     print("Check Post Respawn");
