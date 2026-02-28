@@ -19,24 +19,31 @@ MeltingReference = {
 	["Smithing.OreCrushedZinc"] = {zinc = 1,},
 	["Smithing.OreCrushedNickel"] = {nickel = 1,},
 
+	["aerx.AluminumChunk"] = {aluminum = 100,},
 	["aerx.AluminumScrap"] = {aluminum = 10,},
 	["aerx.AluminumFragments"] = {aluminum = 1,},
 
+	["aerx.NickelChunk"] = {nickel = 100,},
 	["aerx.NickelScrap"] = {nickel = 10,},
 	["aerx.NickelFragments"] = {nickel = 1,},
 
+	["aerx.IronChunk"] = {iron = 100,},
 	["aerx.IronScrap"] = {iron = 10,},
 	["aerx.IronFragments"] = {iron = 1,},
 
+	["aerx.TinChunk"] = {tin = 100,},
 	["aerx.TinScrap"] = {tin = 10,},
 	["aerx.TinFragments"] = {tin = 1,},
 
+	["aerx.CopperChunk"] = {copper = 100,},
 	["aerx.CopperScrap"] = {copper = 10,},
 	["aerx.CopperFragments"] = {copper = 1,},
 
+	["aerx.ZincChunk"] = {zinc = 100,},
 	["aerx.ZincScrap"] = {zinc = 10,},
 	["aerx.ZincFragments"] = {zinc = 1,},
 
+	["aerx.LeadChunk"] = {lead = 100,},
 	["aerx.LeadScrap"] = {lead = 10,},
 	["aerx.LeadFragments"] = {lead = 1,},
 

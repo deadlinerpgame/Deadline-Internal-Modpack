@@ -565,4 +565,20 @@ module Base
         SwingSound = MolotovCocktailThrow,
     }
 
+    recipe Make Pipe bomb
+    {
+       ElectronicsScrap=3,
+       MetalPipe,
+       GunPowder=20,
+       Twine=1,
+	   aerx.IGunpowder=30,
+	   DuctTape=2,
+       keep [Recipe.GetItemTypes.Saw],
+
+       Result:PipeBomb,
+       Time:100.0,
+       NeedToBeLearn:true,
+	   Override:true,
+       Category:Engineer,
+    }
 }

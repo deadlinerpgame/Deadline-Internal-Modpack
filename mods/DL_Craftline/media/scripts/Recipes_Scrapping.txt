@@ -4,7 +4,7 @@ module Base
     {
         Base.SmallSheetMetal=1,
         Result:aerx.IronFragments,
-	OnCreate:Recipe.OnCreate.GiveFiveIroFragTwoZTwoN,
+	    OnCreate:Recipe.OnCreate.GiveFiveIroFragTwoZTwoN,
         Time:15.0,
         Category:Scrapping,
     }
@@ -82,7 +82,7 @@ module Base
 
    recipe Scrap Silver Jewelry
     {
-BellyButton_DangleSilver/BellyButton_RingSilver/BellyButton_StudSilver/Bracelet_BangleLeftSilver/Bracelet_BangleRightSilver/Bracelet_ChainLeftSilver/Bracelet_ChainRightSilver/Earring_LoopLrg_Silver_Both/Earring_LoopMed_Silver_Both/Earring_LoopSmall_Silver_Both/Earring_LoopSmall_Silver_Top/Earring_Stud_Silver_Both/NecklaceLong_Silver/Necklace_SilverCrucifix/Necklace_Silver/NoseRing_Silver/NoseStud_Silver/Ring_Left_MiddleFinger_Silver/Ring_Left_RingFinger_Silver/Ring_Right_MiddleFinger_Silver/Ring_Right_RingFinger_Silver/BellyButton_DangleSilverDiamond/BellyButton_RingSilverDiamond/BellyButton_StudSilverDiamond/NecklaceLong_SilverDiamond/Necklace_SilverDiamond/Ring_Left_MiddleFinger_SilverDiamond/Ring_Left_RingFinger_SilverDiamond/Ring_Right_MiddleFinger_SilverDiamond/Ring_Right_RingFinger_SilverDiamond/BellyButton_RingSilverRuby/NecklaceLong_SilverSapphire/Necklace_SilverSapphire/NecklaceLong_SilverEmerald/BellyButton_RingSilverAmethyst,
+    BellyButton_DangleSilver/BellyButton_RingSilver/BellyButton_StudSilver/Bracelet_BangleLeftSilver/Bracelet_BangleRightSilver/Bracelet_ChainLeftSilver/Bracelet_ChainRightSilver/Earring_LoopLrg_Silver_Both/Earring_LoopMed_Silver_Both/Earring_LoopSmall_Silver_Both/Earring_LoopSmall_Silver_Top/Earring_Stud_Silver_Both/NecklaceLong_Silver/Necklace_SilverCrucifix/Necklace_Silver/NoseRing_Silver/NoseStud_Silver/Ring_Left_MiddleFinger_Silver/Ring_Left_RingFinger_Silver/Ring_Right_MiddleFinger_Silver/Ring_Right_RingFinger_Silver/BellyButton_DangleSilverDiamond/BellyButton_RingSilverDiamond/BellyButton_StudSilverDiamond/NecklaceLong_SilverDiamond/Necklace_SilverDiamond/Ring_Left_MiddleFinger_SilverDiamond/Ring_Left_RingFinger_SilverDiamond/Ring_Right_MiddleFinger_SilverDiamond/Ring_Right_RingFinger_SilverDiamond/BellyButton_RingSilverRuby/NecklaceLong_SilverSapphire/Necklace_SilverSapphire/NecklaceLong_SilverEmerald/BellyButton_RingSilverAmethyst,
         Result:aerx.SilverScrap,
 
         Time:15.0,
@@ -123,6 +123,22 @@ BellyButton_DangleSilver/BellyButton_RingSilver/BellyButton_StudSilver/Bracelet_
         Category:Scrapping,
     }
 
+    recipe Turn Aluminum Scrap into a Chunk
+        {
+            aerx.AluminumScrap=10,
+            Result:aerx.AluminumChunk,
+            Time:30,
+            Category:Scrapping,
+        }
+
+    recipe Turn Aluminum Chunk into  Scrap
+        {
+            aerx.AluminumChunk,
+            Result:aerx.AluminumScrap=10,
+            Time:30,
+            Category:Scrapping,
+        }
+
    recipe Turn Aluminum Scrap into Fragments
     {
         aerx.AluminumScrap,
@@ -139,7 +155,23 @@ BellyButton_DangleSilver/BellyButton_RingSilver/BellyButton_StudSilver/Bracelet_
         Category:Scrapping,
     }
 
-recipe Turn Tin Scrap into Fragments
+    recipe Turn Tin Scrap into a Chunk
+    {
+        aerx.TinFragments=10,
+        Result:aerx.TinChunk,
+        Time:30.0,
+        Category:Scrapping,
+    }
+
+    recipe Turn Tin Chunk into Scrap
+    {
+        aerx.TinChunk,
+        Result:aerx.TinScrap=10,
+        Time:30.0,
+        Category:Scrapping,
+    }
+
+    recipe Turn Tin Scrap into Fragments
     {
         aerx.TinScrap,
         Result:aerx.TinFragments=10,
@@ -152,6 +184,22 @@ recipe Turn Tin Scrap into Fragments
         aerx.TinFragments=10,
         Result:aerx.TinScrap,
         Time:15.0,
+        Category:Scrapping,
+    }
+
+    recipe Turn Copper Scrap into a Chunk
+    {
+        CopperScrap=10,
+        Result:CopperChunk,
+        Time:30.0,
+        Category:Scrapping,
+    }
+
+    recipe Turn Copper Chunk into Scrap
+    {
+        aerx.CopperChunk,
+        Result:aerx.CopperScrap=10,
+        Time:30.0,
         Category:Scrapping,
     }
 
@@ -171,6 +219,23 @@ recipe Turn Tin Scrap into Fragments
         Category:Scrapping,
     }
 
+    recipe Turn Nickel Scrap into a Chunk
+    {
+        aerx.NickelScrap=10,
+        Result:aerx.NickelChunk,
+        Time:30.0,
+        Category:Scrapping,
+    }
+
+    recipe Turn Nickel Chunk into Scrap
+    {
+        aerx.NickelChunk,
+        Result:aerx.NickelScrap=10,
+        Time:30.0,
+        Category:Scrapping,
+    }
+
+
    recipe Turn Nickel Scrap into Fragments
     {
         aerx.NickelScrap,
@@ -184,6 +249,22 @@ recipe Turn Tin Scrap into Fragments
         aerx.NickelFragments=10,
         Result:aerx.NickelScrap,
         Time:15.0,
+        Category:Scrapping,
+    }
+
+    recipe Turn Lead Scrap into a Chunk
+    {
+        aerx.LeadScrap=10,
+        Result:aerx.LeadChunk,
+        Time:30.0,
+        Category:Scrapping,
+    }
+
+    recipe Turn Lead Chunk into Scrap
+    {
+        aerx.LeadChunk,
+        Result:aerx.LeadScrap=10,
+        Time:30.0,
         Category:Scrapping,
     }
 
@@ -203,6 +284,30 @@ recipe Turn Tin Scrap into Fragments
         Category:Scrapping,
     }
 
+    recipe Turn Iron Scrap into a Chunk
+    {
+        aerx.IronScrap=10,
+        Result:aerx.IronChunk,
+        Time:30.0,
+        Category:Scrapping,
+    }
+
+    recipe Turn Iron Chunk into Scrap
+    {
+        aerx.IronChunk,
+        Result:aerx.IronScrap=10,
+        Time:30.0,
+        Category:Scrapping,
+    }
+
+    recipe Turn Iron Scrap into Fragments
+    {
+        aerx.IronScrap,
+        Result:aerx.IronFragments=10,
+        Time:15.0,
+        Category:Scrapping,
+    }
+
    recipe Turn Iron Scrap into Fragments
     {
         aerx.IronScrap,
@@ -215,6 +320,22 @@ recipe Turn Tin Scrap into Fragments
     {
         aerx.IronFragments=10,
         Result:aerx.IronScrap,
+        Time:15.0,
+        Category:Scrapping,
+    }
+
+    recipe Turn Zinc Scrap into a Chunk
+    {
+        aerx.ZincScrap=10,
+        Result:aerx.ZincChunk,
+        Time:15.0,
+        Category:Scrapping,
+    }
+
+    recipe Turn Zinc Chunk into Scrap
+    {
+        aerx.ZincChunk=1,
+        Result:aerx.ZincScrap=10,
         Time:15.0,
         Category:Scrapping,
     }

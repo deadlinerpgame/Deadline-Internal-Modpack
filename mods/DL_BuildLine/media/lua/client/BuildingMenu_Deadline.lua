@@ -23,7 +23,6 @@ require("BuildingMenu04_CategoriesDefinitions")
             > FURNITURE
                 - TABLES: Low tables, Small tables, Large tables
                 - BOOKSHELVES
-            AND MORE
 
 --]]
 
@@ -33727,39 +33726,39 @@ local function addDeadlineFloorsToMenu()
             }
         },
  -- FTILE STONE > TO ADD 
- --       {
- --           subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineFloors_Tile_Stone_Exterior",
- --           subCategoryIcon = "floors_exterior_natural_01_10",
- --           objects = {
- --               BuildingMenu.createObject(
- --                   "Tooltip_BuildingMenuObj_Exterior_Tile",
- --                   "Tooltip_Floor_Generic",
- --                   BuildingMenu.onBuildFloor,
- --                   BuildingMenu.ConcreteFloorRecipe,
- --                   true,
- --                   {
- --                       completionSound = "DropSoilFromGravelBag"
- --                   },
- --                   {
- --                       sprite = "floors_exterior_tilesandstone_01_7"
- --                   }
- --               ),
- --               BuildingMenu.createObject(
- --                   "Tooltip_BuildingMenuObj_Exterior_Tile",
- --                   "Tooltip_Floor_Generic",
- --                   BuildingMenu.onBuildFloor,
- --                   BuildingMenu.ConcreteFloorRecipe,
- --                   true,
- --                   {
- --                       completionSound = "DropSoilFromGravelBag"
- --                   },
- --                   {
- --                       sprite = "LC_Fancyfloor_8"
- --                   }
- --               ),
- --           }
- --       }
- --   } 
+  --       {
+  --           subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineFloors_Tile_Stone_Exterior",
+  --           subCategoryIcon = "floors_exterior_natural_01_10",
+  --           objects = {
+  --               BuildingMenu.createObject(
+  --                   "Tooltip_BuildingMenuObj_Exterior_Tile",
+  --                   "Tooltip_Floor_Generic",
+  --                   BuildingMenu.onBuildFloor,
+  --                   BuildingMenu.ConcreteFloorRecipe,
+  --                   true,
+  --                   {
+  --                       completionSound = "DropSoilFromGravelBag"
+  --                   },
+  --                   {
+  --                       sprite = "floors_exterior_tilesandstone_01_7"
+  --                   }
+  --               ),
+  --               BuildingMenu.createObject(
+  --                   "Tooltip_BuildingMenuObj_Exterior_Tile",
+  --                   "Tooltip_Floor_Generic",
+  --                   BuildingMenu.onBuildFloor,
+  --                   BuildingMenu.ConcreteFloorRecipe,
+  --                   true,
+  --                   {
+  --                       completionSound = "DropSoilFromGravelBag"
+  --                   },
+  --                   {
+  --                       sprite = "LC_Fancyfloor_8"
+  --                   }
+  --               ),
+  --           }
+  --       }
+  --   } 
  -- FCHECKERED SMALL
         {
             subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineFloors_Tile_Checkered_Small",
@@ -35547,6 +35546,8 @@ local function addDeadlineContainersToMenu()
                      {
                          sprite = "furniture_storage_erika_02_28",
                          northSprite = "furniture_storage_erika_02_29",
+                         eastSprite = "furniture_storage_erika_02_30",
+                         southSprite = "furniture_storage_erika_02_31"
                      }
                  ),
                  BuildingMenu.createObject(
@@ -35562,6 +35563,8 @@ local function addDeadlineContainersToMenu()
                      {
                          sprite = "furniture_storage_erika_02_40",
                          northSprite = "furniture_storage_erika_02_41",
+                         eastSprite = "furniture_storage_erika_02_42",
+                         southSprite = "furniture_storage_erika_02_43"
                      }
                  ),
                  BuildingMenu.createObject(
@@ -35594,6 +35597,8 @@ local function addDeadlineContainersToMenu()
                      {
                          sprite = "furniture_storage_erika_02_36",
                          northSprite = "furniture_storage_erika_02_37",
+                         eastSprite = "furniture_storage_erika_02_38",
+                         southSprite = "furniture_storage_erika_02_39"
                      }
                  ),
                  BuildingMenu.createObject(
@@ -35626,6 +35631,8 @@ local function addDeadlineContainersToMenu()
                      {
                          sprite = "furniture_storage_erika_02_44",
                          northSprite = "furniture_storage_erika_02_45",
+                         eastSprite = "furniture_storage_erika_02_46",
+                         southSprite = "furniture_storage_erika_02_47"
                      }
                  ),
                  BuildingMenu.createObject(
@@ -35658,6 +35665,8 @@ local function addDeadlineContainersToMenu()
                      {
                          sprite = "furniture_storage_erika_02_24",
                          northSprite = "furniture_storage_erika_02_25",
+                         eastSprite = "furniture_storage_erika_02_26",
+                         southSprite = "furniture_storage_erika_02_27"
                      }
                  ),
                  BuildingMenu.createObject(
@@ -35673,6 +35682,8 @@ local function addDeadlineContainersToMenu()
                      {
                          sprite = "furniture_storage_erika_02_32",
                          northSprite = "furniture_storage_erika_02_33",
+                         eastSprite = "furniture_storage_erika_02_34",
+                         southSprite = "furniture_storage_erika_02_35"
                      }
                  ),
                  BuildingMenu.createObject(
@@ -37531,6 +37542,1008 @@ local function addDeadlineBookshelvesToMenu()
     end
 end
 
+
+--[[ >>>>>>> DECORATIONS <<<<<<< --]]
+-- >> RUGS
+local function addDeadlineRugsToMenu()
+    local DeadlineRugs = {
+ -- SEGMENTED RUGS
+  -- Rug 1
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_6",
+                northSprite = "LC_rugs_4",
+                eastSprite = "LC_rugs_5",
+                southSprite = "LC_rugs_7"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_3",
+                northSprite = "LC_rugs_1",
+                eastSprite = "LC_rugs_2",
+                southSprite = "LC_rugs_0"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_9",
+                northSprite = "LC_rugs_11",
+                eastSprite = "LC_rugs_10",
+                southSprite = "LC_rugs_8"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_12",
+            }
+        ),
+  -- Rug 2
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_22",
+                northSprite = "LC_rugs_20",
+                eastSprite = "LC_rugs_21",
+                southSprite = "LC_rugs_23"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_19",
+                northSprite = "LC_rugs_17",
+                eastSprite = "LC_rugs_18",
+                southSprite = "LC_rugs_16"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_25",
+                northSprite = "LC_rugs_27",
+                eastSprite = "LC_rugs_26",
+                southSprite = "LC_rugs_24"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_29",
+            }
+        ),
+                BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_30",
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_28",
+            }
+        ),
+  -- Rug 3
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_46",
+                northSprite = "LC_rugs_44",
+                eastSprite = "LC_rugs_45",
+                southSprite = "LC_rugs_47"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_43",
+                northSprite = "LC_rugs_41",
+                eastSprite = "LC_rugs_42",
+                southSprite = "LC_rugs_40"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_49",
+                northSprite = "LC_rugs_51",
+                eastSprite = "LC_rugs_50",
+                southSprite = "LC_rugs_48"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_53",
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_54",
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_52",
+            }
+        ),
+  -- Rug 4
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_94",
+                northSprite = "LC_rugs_92",
+                eastSprite = "LC_rugs_93",
+                southSprite = "LC_rugs_95"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_91",
+                northSprite = "LC_rugs_89",
+                eastSprite = "LC_rugs_90",
+                southSprite = "LC_rugs_88"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_97",
+                northSprite = "LC_rugs_99",
+                eastSprite = "LC_rugs_98",
+                southSprite = "LC_rugs_96"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_101",
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_102",
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_100",
+            }
+        ),
+  -- Rug 5
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_110",
+                northSprite = "LC_rugs_108",
+                eastSprite = "LC_rugs_109",
+                southSprite = "LC_rugs_111"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_107",
+                northSprite = "LC_rugs_105",
+                eastSprite = "LC_rugs_106",
+                southSprite = "LC_rugs_104"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_113",
+                northSprite = "LC_rugs_115",
+                eastSprite = "LC_rugs_114",
+                southSprite = "LC_rugs_112"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_116",
+            }
+        ),
+ -- TWO LONG
+  -- Round looking like a bandaid
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildDoubleTileFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_01_49",
+                sprite2 = "floors_rugs_01_48",
+                northSprite = "floors_rugs_01_50",
+                northSprite2 = "floors_rugs_01_51"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildDoubleTileFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_erika_01_1",
+                sprite2 = "floors_rugs_erika_01_0",
+                northSprite = "floors_rugs_erika_01_2",
+                northSprite2 = "floors_rugs_erika_01_3"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildDoubleTileFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_erika_01_5",
+                sprite2 = "floors_rugs_erika_01_4",
+                northSprite = "floors_rugs_erika_01_6",
+                northSprite2 = "floors_rugs_erika_01_7"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildDoubleTileFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_erika_01_9",
+                sprite2 = "floors_rugs_erika_01_8",
+                northSprite = "floors_rugs_erika_01_10",
+                northSprite2 = "floors_rugs_erika_01_11"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildDoubleTileFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_erika_01_13",
+                sprite2 = "floors_rugs_erika_01_12",
+                northSprite = "floors_rugs_erika_01_14",
+                northSprite2 = "floors_rugs_erika_01_15"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildDoubleTileFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_erika_01_17",
+                sprite2 = "floors_rugs_erika_01_16",
+                northSprite = "floors_rugs_erika_01_18",
+                northSprite2 = "floors_rugs_erika_01_19"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildDoubleTileFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_erika_01_21",
+                sprite2 = "floors_rugs_erika_01_20",
+                northSprite = "floors_rugs_erika_01_22",
+                northSprite2 = "floors_rugs_erika_01_23"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildDoubleTileFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "LC_rugs_33",
+                sprite2 = "LC_rugs_32",
+                northSprite = "LC_rugs_34",
+                northSprite2 = "LC_rugs_35"
+            }
+        ),
+ -- FUZZY
+    BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_02_0",
+            }
+        ),
+    BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_02_1",
+            }
+        ),
+    BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_02_2",
+            }
+        ),
+    BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_02_3",
+            }
+        ),
+    BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_02_4",
+            }
+        ),
+    BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_02_5",
+            }
+        ),
+    BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_02_6",
+            }
+        ),
+    BuildingMenu.createObject(
+            "",
+            "Tooltip_Rug_Generic",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.FloorRugRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                sprite = "floors_rugs_02_7",
+            }
+        ),
+    }
+ -- Add Rugs Category
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineDecorations",
+        "floors_rugs_02_7",
+        "IGUI_BuildingMenuCat_DeadlineRugs",
+        "floors_rugs_02_2",
+        DeadlineRugs
+    )
+end
+
+-- >> CURTAINS
+
+local function addDeadlineCurtainsToMenu()
+    local curtainTypes = {
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 4, 6, 5, 7 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 12, 14, 13, 15 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 20, 22, 21, 23 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 28, 30, 29, 31 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 36, 38, 37, 39 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 44, 46, 45, 47 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 52, 54, 53, 55 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 60, 62, 61, 63 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 68, 70, 69, 71 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 76, 78, 77, 79 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 84, 86, 85, 87 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 92, 94, 93, 95 } },
+
+
+        { prefix = "fixtures_windows_curtains_ddd_01_", offsets = { 4, 6, 5, 7 } },
+        { prefix = "fixtures_windows_curtains_ddd_01_", offsets = { 12, 14, 13, 15 } },
+
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 4, 6, 5, 7 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 12, 14, 13, 15 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 20, 22, 21, 23 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 28, 30, 29, 31 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 36, 38, 37, 39 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 44, 46, 45, 47 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 52, 54, 53, 55 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 60, 62, 61, 63 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 68, 70, 69, 71 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 76, 78, 77, 79 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 84, 86, 85, 87 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 92, 94, 93, 95 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 100, 102, 101, 103 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 108, 110, 109 , 111 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 116, 118, 117, 119 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 124, 126, 125, 127 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 132, 134, 133, 135 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 140, 142, 141, 143 } },
+        { prefix = "fixtures_windows_curtains_erika_01_", offsets = { 148, 150, 149, 151 } },
+
+        { prefix = "fixtures_windows_curtains_erika_02_", offsets = { 4, 6, 5, 7 } },
+        { prefix = "fixtures_windows_curtains_erika_02_", offsets = { 12, 14, 13, 15 } },
+        { prefix = "fixtures_windows_curtains_erika_02_", offsets = { 20, 22, 21, 23 } },
+        { prefix = "fixtures_windows_curtains_erika_02_", offsets = { 28, 30, 29, 31 } },
+        { prefix = "fixtures_windows_curtains_erika_02_", offsets = { 36, 38, 37, 39 } },
+        { prefix = "fixtures_windows_curtains_erika_02_", offsets = { 44, 46, 45, 47 } },
+        { prefix = "fixtures_windows_curtains_erika_02_", offsets = { 52, 54, 53, 55 } },
+        { prefix = "fixtures_windows_curtains_erika_02_", offsets = { 60, 62, 61, 63 } },
+        { prefix = "fixtures_windows_curtains_erika_02_", offsets = { 68, 70, 69, 71 } },
+        { prefix = "fixtures_windows_curtains_erika_02_", offsets = { 76, 78, 77, 79 } },
+        { prefix = "fixtures_windows_curtains_erika_02_", offsets = { 84, 86, 85, 87 } },
+
+        { prefix = "fixtures_windows_curtains_erika_03_", offsets = { 4, 6, 5, 7 } },
+        { prefix = "fixtures_windows_curtains_erika_03_", offsets = { 12, 14, 13, 15 } },
+        { prefix = "fixtures_windows_curtains_erika_03_", offsets = { 20, 22, 21, 23 } },
+        { prefix = "fixtures_windows_curtains_erika_03_", offsets = { 28, 30, 29, 31 } },
+
+        { prefix = "melos_tiles_curtains_01_", offsets = { 4, 6, 5, 7 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 12, 14, 13, 15 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 20, 22, 21, 23 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 28, 30, 29, 31 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 36, 38, 37, 39 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 44, 46, 45, 47 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 52, 54, 53, 55 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 60, 62, 61, 63 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 68, 70, 69, 71 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 76, 78, 77, 79 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 84, 86, 85, 87 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 92, 94, 93, 95 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 100, 102, 101, 103 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 108, 110, 109 , 111 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 116, 118, 117, 119 } },
+        { prefix = "melos_tiles_curtains_01_", offsets = { 124, 126, 125, 127 } },
+
+        { prefix = "melos_tiles_curtains_02_", offsets = { 4, 6, 5, 7 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 12, 14, 13, 15 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 20, 22, 21, 23 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 28, 30, 29, 31 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 36, 38, 37, 39 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 44, 46, 45, 47 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 52, 54, 53, 55 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 60, 62, 61, 63 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 68, 70, 69, 71 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 76, 78, 77, 79 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 84, 86, 85, 87 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 92, 94, 93, 95 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 100, 102, 101, 103 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 108, 110, 109 , 111 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 116, 118, 117, 119 } },
+        { prefix = "melos_tiles_curtains_02_", offsets = { 124, 126, 125, 127 } },
+
+        { prefix = "melos_tiles_curtains_03_", offsets = { 4, 6, 5, 7 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 12, 14, 13, 15 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 20, 22, 21, 23 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 28, 30, 29, 31 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 36, 38, 37, 39 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 44, 46, 45, 47 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 52, 54, 53, 55 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 60, 62, 61, 63 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 68, 70, 69, 71 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 76, 78, 77, 79 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 84, 86, 85, 87 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 92, 94, 93, 95 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 100, 102, 101, 103 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 108, 110, 109 , 111 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 116, 118, 117, 119 } },
+        { prefix = "melos_tiles_curtains_03_", offsets = { 124, 126, 125, 127 } },
+
+        { prefix = "melos_tiles_curtains_04_", offsets = { 4, 6, 5, 7 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 12, 14, 13, 15 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 20, 22, 21, 23 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 28, 30, 29, 31 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 36, 38, 37, 39 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 44, 46, 45, 47 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 52, 54, 53, 55 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 60, 62, 61, 63 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 68, 70, 69, 71 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 76, 78, 77, 79 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 84, 86, 85, 87 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 92, 94, 93, 95 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 100, 102, 101, 103 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 108, 110, 109 , 111 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 116, 118, 117, 119 } },
+        { prefix = "melos_tiles_curtains_04_", offsets = { 124, 126, 125, 127 } },
+
+        { prefix = "melos_tiles_curtains_05_", offsets = { 4, 6, 5, 7 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 12, 14, 13, 15 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 20, 22, 21, 23 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 28, 30, 29, 31 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 36, 38, 37, 39 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 44, 46, 45, 47 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 52, 54, 53, 55 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 60, 62, 61, 63 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 68, 70, 69, 71 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 76, 78, 77, 79 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 84, 86, 85, 87 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 92, 94, 93, 95 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 100, 102, 101, 103 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 108, 110, 109 , 111 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 116, 118, 117, 119 } },
+        { prefix = "melos_tiles_curtains_05_", offsets = { 124, 126, 125, 127 } },
+
+        { prefix = "melos_tiles_curtains_06_", offsets = { 4, 6, 5, 7 } },
+        { prefix = "melos_tiles_curtains_06_", offsets = { 12, 14, 13, 15 } },
+        { prefix = "melos_tiles_curtains_06_", offsets = { 20, 22, 21, 23 } },
+        { prefix = "melos_tiles_curtains_06_", offsets = { 28, 30, 29, 31 } },
+        { prefix = "melos_tiles_curtains_06_", offsets = { 36, 38, 37, 39 } },
+        { prefix = "melos_tiles_curtains_06_", offsets = { 44, 46, 45, 47 } },
+        { prefix = "melos_tiles_curtains_06_", offsets = { 52, 54, 53, 55 } },
+        { prefix = "melos_tiles_curtains_06_", offsets = { 60, 62, 61, 63 } },
+        { prefix = "melos_tiles_curtains_06_", offsets = { 68, 70, 69, 71 } },
+        { prefix = "melos_tiles_curtains_06_", offsets = { 76, 78, 77, 79 } },
+        { prefix = "melos_tiles_curtains_06_", offsets = { 84, 86, 85, 87 } },
+        { prefix = "melos_tiles_curtains_06_", offsets = { 92, 94, 93, 95 } },
+        { prefix = "melos_tiles_curtains_06_", offsets = { 100, 102, 101, 103 } },
+        { prefix = "melos_tiles_curtains_06_", offsets = { 108, 110, 109 , 111 } },
+    };
+
+    local curtains = {};
+
+    local function createCurtainObject(typeInfo)
+        local sprites = {
+            sprite = typeInfo.prefix .. typeInfo.offsets[1],
+            northSprite = typeInfo.prefix .. typeInfo.offsets[2],
+            eastSprite = typeInfo.prefix .. typeInfo.offsets[3],
+            southSprite = typeInfo.prefix .. typeInfo.offsets[4]
+        };
+        return BuildingMenu.createObject(
+            "",
+            "Tooltip_Curtains_Generic",
+            BuildingMenu.onBuildCurtain,
+            BuildingMenu.CurtainsRecipe,
+            true,
+            {},
+            sprites
+        );
+    end
+
+    for _, typeInfo in ipairs(curtainTypes) do
+        table.insert(curtains, createCurtainObject(typeInfo));
+    end
+
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineDecorations",
+        nil,
+        "IGUI_BuildingMenuCat_DeadlineCurtains",
+        "LC_fixtures_windows_curtains_01_20",
+        curtains
+    );
+end
+
 --[[ >>>>>>> BARRICADES <<<<<< --]]
 -- >> BARRICADES
 local function addDeadlineBarricadesToMenu()
@@ -37665,6 +38678,12 @@ local function addCategoriesToBuildingMenu()
     end
     if SandboxVars.BuildingMenu.DeadlineTablesSubCategory then
         addDeadlineTablesToMenu()
+    end
+    if SandboxVars.BuildingMenu.DeadlineRugsSubCategory then
+        addDeadlineRugsToMenu()
+    end
+    if SandboxVars.BuildingMenu.DeadlineCurtainsSubCategory then
+        addDeadlineCurtainsToMenu()
     end
     if SandboxVars.BuildingMenu.DeadlineBarricadesCategory then
         addDeadlineBarricadesToMenu()
