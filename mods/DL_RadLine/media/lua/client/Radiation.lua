@@ -152,8 +152,7 @@ function GeigerCounter()
     local secondaryItem = player:getSecondaryHandItem()
     --print(radData.GCountType)
 
-
-
+    if not modData or not radData then return end;
 
     if radData.GCountType == 1 then
         Counter = Counter + 1   
@@ -174,7 +173,7 @@ function GeigerCounter()
             Counter = 0
         end
 
-elseif radData.GCountType == 2 then
+    elseif radData.GCountType == 2 then
         Counter = Counter + 1   
         if Counter >= Severity then
             --print("Med")

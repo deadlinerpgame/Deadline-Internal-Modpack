@@ -40,7 +40,7 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
         local iteratedChance = randInstance:random(0, totalChance);
         local hasRolledSuccessfully = false;
 
-        for _, rollItem in ipairs(lootData).Items do
+        for _, rollItem in ipairs(lootData.Items) do
             rollItem.item.hasRolledThisTurn = false;
         end
 
@@ -66,7 +66,7 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
                             rollItem.item.hasRolledThisTurn = true;
                             table.insert(itemsToGive, rollItem);
                         end
-                    elseif lootData.allowDuplicates then
+                    elseif lootData.AllowDuplicates then
                         logStr = logStr .. string.format(" !SUCCESS! ", iteratedChance);
                         hasRolledSuccessfully = true;
                         table.insert(itemsToGive, rollItem);
@@ -121,6 +121,11 @@ function LootTicket_ServerManager.OnClientCommand(module, command, player, args)
 
         if not args.lootData then
             print("LootTicket_ServerManager - RequestRoll called with no loot ticket data provided.");
+            return;
+        end
+
+        if not args.lootData.Items then
+            print("LootTicket_ServerManager - no items in ticket.");
             return;
         end
 
