@@ -90,6 +90,14 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
     local rewardStr = "[REWARD] Giving player " .. player:getUsername() .. " the following items: ";
     for _, item in ipairs(itemsToGive) do
         player:sendObjectChange('addItemOfType', { type = item.item.Name, count = tonumber(item.item.Quantity) });
+
+        local templateItem = InventoryItemFactory.CreateItem(item.item.Name);
+        if templateItem then
+            if instanceof(templateItem, "HandWeapon") and templateItem:isRanged() then
+                local magazine = templateItem:getMagazineType();
+                player:sendObjectChange('addItemOfType', { type = magazine:getFullType(), count = tonumber(item.item.Quantity) });
+            end
+        end
         rewardStr = rewardStr .. item.item.Name .. " [count: " .. item.item.Quantity .. "] |";
     end
 

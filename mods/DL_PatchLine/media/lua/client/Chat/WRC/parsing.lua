@@ -430,7 +430,7 @@ function WRC.Parsing.FormatMessage(parsedMessage)
         print("Relative distance: " .. tostring(relativeDist));--]]
 
         if relativeDist > 1 or (parsedMessage.radioFrequency and parsedMessage.radioFrequency > 0) then
-            distanceMetric = 1
+            distanceMetric = nil
         else
             distanceMetric = tonumber(string.format("%.2f", relativeDist));
         end
