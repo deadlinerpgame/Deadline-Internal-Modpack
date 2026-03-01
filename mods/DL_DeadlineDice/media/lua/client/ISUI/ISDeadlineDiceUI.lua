@@ -69,6 +69,8 @@ DeadlineDice.Subjects = {
     pages = {
       "media/ui/tabs/tab07_criticalhitsandfails/p01.png",
       "media/ui/tabs/tab07_criticalhitsandfails/p02.png",
+      "media/ui/tabs/tab07_criticalhitsandfails/p03.png",
+      "media/ui/tabs/tab07_criticalhitsandfails/p04.png",
     },
   },
   [8] = {
