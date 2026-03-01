@@ -40,8 +40,6 @@ local function OnPlayerDeath_CheckPostRespawn()
         end
     end
 
-    
-
     print("2 - Finding player corpse.");
 
     LastCorpse = nil;
@@ -68,6 +66,12 @@ local function OnPlayerDeath_CheckPostRespawn()
                 end
             end
         end
+    end
+
+    if not LastCorpse then
+        error("Unable to find player corpse. Something went wrong, submit a bug report.");
+        CheckPostRespawn = false;
+        return;
     end
 
     if LastCorpse and getPlayer():getModData().JaxeRevival_Incapacitated then
@@ -123,7 +127,6 @@ local function OnPlayerDeath_CheckPostRespawn()
         print("Removing corpse from world!");
         LastCorpse:getSquare():removeCorpse(LastCorpse, false);
         LastCorpse = nil;
-        CheckPostRespawn = false;
 
         print("Applying body damage.");
         if LastBodyDamage then
@@ -155,6 +158,8 @@ local function OnPlayerDeath_CheckPostRespawn()
                 end
             end
         end
+
+        CheckPostRespawn = false;
     else
         print("No body damage saved!");
     end
