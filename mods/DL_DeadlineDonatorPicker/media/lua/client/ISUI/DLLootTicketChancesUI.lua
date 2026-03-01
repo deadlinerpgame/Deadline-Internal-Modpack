@@ -195,7 +195,7 @@ function DLLootTicketChancesUI:setTicketModData()
     modData.LootTicket.Items = self.datas.items;
     modData.LootTicket.RestrictedTo = nil;
     modData.LootTicket.MaxRolls = tonumber(self.maxRolledItems:getText());
-    modData.LootTicket.AllowDuplicates = self.allowDuplicateItems;
+    modData.LootTicket.AllowDuplicates = self.allowDuplicateItems or false;
 
     local logStr = string.format("Staff %s has created loot ticket with ID %0d with %0d max rolls and %s - items: ", getPlayer():getUsername(), modData.LootTicket.ID, modData.LootTicket.MaxRolls, (modData.LootTicket.AllowDuplicates and "duplicates") or "no duplicates");
     for _, itemData in ipairs(modData.LootTicket.Items) do
