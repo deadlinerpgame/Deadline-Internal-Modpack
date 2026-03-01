@@ -121,8 +121,7 @@ local function OnPlayerDeath_CheckPostRespawn()
         getPlayer():setXp(LastXP);
 
         print("Removing corpse from world!");
-        LastCorpse:removeFromWorld();
-        LastCorpse:removeFromSquare();
+        LastCorpse:getSquare():removeCorpse(LastCorpse, false);
         LastCorpse = nil;
         CheckPostRespawn = false;
 
