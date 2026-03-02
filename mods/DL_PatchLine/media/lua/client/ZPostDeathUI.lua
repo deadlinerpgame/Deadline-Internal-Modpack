@@ -132,7 +132,7 @@ local function OnPlayerDeath_CheckPostRespawn()
         if LastBodyDamage then
             local newBodyParts = getPlayer():getBodyDamage():getBodyParts();
 
-            getPlayer():setGodMod(false);
+            --getPlayer():setGodMod(false);
 
             for partNum = 0, newBodyParts:size() - 1 do
                 local part = newBodyParts:get(partNum);

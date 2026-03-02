@@ -95,7 +95,9 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
         if templateItem then
             if instanceof(templateItem, "HandWeapon") and templateItem:isRanged() then
                 local magazine = templateItem:getMagazineType();
-                player:sendObjectChange('addItemOfType', { type = magazine:getFullType(), count = tonumber(item.item.Quantity) });
+                if magazine then
+                    player:sendObjectChange('addItemOfType', { type = magazine, count = tonumber(item.item.Quantity) });
+                end
             end
         end
         rewardStr = rewardStr .. item.item.Name .. " [count: " .. item.item.Quantity .. "] |";

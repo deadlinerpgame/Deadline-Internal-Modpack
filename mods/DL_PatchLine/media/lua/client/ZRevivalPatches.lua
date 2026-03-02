@@ -53,12 +53,12 @@ function JaxeRevival.TimedAction:perform()
     self.target:setX(self.target:getX());
     self.target:setY(self.target:getY());
     self.target:setZ(self.target:getZ());
-    player:setShootable(true);
+    self.target:setShootable(true);
 end
 
 JaxeRevival.Sync.applyEffects = function(player, value)
     --player:setInvincible(value or false);
-    sendPlayerExtraInfo(player);
+    --sendPlayerExtraInfo(player);
 
     if value then player:setShootable(false); end;
 
@@ -72,8 +72,8 @@ JaxeRevival.Incapacitation.applyMechanics = function(player, value)
     if not player then return end;
 
     --player:setInvincible(value or false);
-    sendPlayerExtraInfo(player);
-    player:setShootable(true); 
+    --sendPlayerExtraInfo(player);
+    player:setShootable(true);
     original_ApplyMechanics(player, value);
     --JaxeRevival.Sync.sendClient(player, JaxeRevival.Sync.REVIVE, JaxeRevival.Sync.getArgsFromTarget(player));
 end
@@ -113,15 +113,15 @@ local function OnPlayerUpdate_Revival(player)
     if not JaxeRevival then return end;
 
     local threshold = SandboxVars.JaxeRevival.IncapacitatedHealth;
-    if player:getBodyDamage():getOverallBodyHealth() <= threshold then
+    --[[if player:getBodyDamage():getOverallBodyHealth() <= threshold then
         player:getBodyDamage():setOverallBodyHealth(threshold);
         if player:isShootable() then
             player:setShootable(false);
         end
-    end
+    end--]]
 end
 
-Events.OnPlayerUpdate.Add(OnPlayerUpdate_Revival);
+--Events.OnPlayerUpdate.Add(OnPlayerUpdate_Revival);
 --[[local function OnWeaponHitCharacter(attacker, target, weapon, damage)
     if instanceof(attacker, "IsoPlayer") and instanceof(target, "IsoPlayer") then
         if damage > 0 then
