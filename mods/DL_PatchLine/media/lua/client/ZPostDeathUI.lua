@@ -166,7 +166,8 @@ local function OnPlayerDeath_CheckPostRespawn()
 
     print("Syncing!");
     SyncXp(getPlayer());
-    sendPlayerExtraInfo(getPlayer());
+    sendPlayerStatsChange(getPlayer());
+    --sendPlayerExtraInfo(getPlayer());
 
 end
 
