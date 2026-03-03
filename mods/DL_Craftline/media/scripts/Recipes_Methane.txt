@@ -1,8 +1,8 @@
 module Base
 {
 
-    	recipe Make Empty Methane Tank
-    	{
+    recipe Make Empty Methane Tank
+    {
 		SmallSheetMetal=1,
 		SheetMetal=1,
 		MetalPipe/MetalBar=1,
@@ -15,7 +15,25 @@ module Base
         	Time:140.0,
         	Sound:Welding,
         	Category:Methane,
-    	}
+    }
+
+	recipe Make Empty Propane Tank
+    {
+		SmallSheetMetal=1,
+		SheetMetal=1,
+		MetalPipe/MetalBar=1,
+		WeldingRods=1,
+		BlowTorch=1,
+		keep WeldingMask,
+		SkillRequired:MetalWelding=6,
+		NearItem:Simple Forge
+
+        Result:Base.PropaneTank,
+		OnCreate:Recipe.OnCreate.MakePropaneTankEmpty,
+        Time:140.0,
+        Sound:Welding,
+        Category:Methane,
+    }
 
 	recipe Bundle Waste Food
 	{
