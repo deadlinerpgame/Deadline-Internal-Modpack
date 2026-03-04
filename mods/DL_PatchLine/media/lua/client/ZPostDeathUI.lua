@@ -121,8 +121,8 @@ local function OnPlayerDeath_CheckPostRespawn()
         getPlayer():resetModel();
         triggerEvent("OnClothingUpdated", getPlayer());
 
-        print("Setting XP");
-        getPlayer():setXp(LastXP);
+        --print("Setting XP");
+        --getPlayer():setXp(LastXP);
 
         print("Removing corpse from world!");
         LastCorpse:getSquare():removeCorpse(LastCorpse, false);
