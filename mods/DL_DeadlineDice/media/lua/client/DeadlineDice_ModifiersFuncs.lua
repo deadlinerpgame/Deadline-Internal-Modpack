@@ -214,6 +214,7 @@ function DeadlineDice.getDefendCloseModifiers(modifiers, character)
         HobbyNimble = 1,
         SkilledSprinting = 2,
         SkilledNimble = 2,
+        SlowReflexes = -2,
     }
 
     return DeadlineDice.addTraitModifiers2(modifiers, character, traitModifiers)
@@ -345,7 +346,6 @@ function DeadlineDice.getPhysicalEnduranceModifiers(modifiers, character)
         WeakStomach = -1,
         Outdoorsman = 3,
         Thinskinned = -2,
-        SlowReflexes = -2,
         Stalwart = 2,
         Spry = 1,
         Resolute = 1,
