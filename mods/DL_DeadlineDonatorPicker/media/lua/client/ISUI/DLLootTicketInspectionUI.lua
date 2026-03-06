@@ -31,7 +31,7 @@ function DLLootTicketInspectionUI:initialise()
     infoLabel:instantiate();
     self:addChild(infoLabel);
 
-    local statsStr = string.format("Rolls: %0d | Allow Duplicates: %s", self.MaxRolls, self.AllowDuplicates);
+    local statsStr = string.format("Rolls: %0d | Allow Duplicates: %s", self.MaxRolls, tostring(self.AllowDuplicates));
     local statsLabel = ISLabel:new(12, infoLabel:getBottom() + smallFontHeight, smallFontHeight, statsStr);
     statsLabel:initialise();
     statsLabel:instantiate();
