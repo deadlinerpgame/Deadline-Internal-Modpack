@@ -115,6 +115,11 @@ function LootTicketManager.ShowTicketParams(playerNum, item)
     if isAdmin() or isDebugEnabled() then
         local itemData = item:getModData().LootTicket;
 
+        if not itemData then
+            error("Something went wrong - this ticket does not have loot data.", 1);
+            return;
+        end
+
         --[[
             modData.LootTicket.RestrictedTo = nil;
     modData.LootTicket.MaxRolls = tonumber(self.maxRolledItems:getText());
@@ -161,6 +166,10 @@ function LootTicketManager.OnFillInventoryObjectContextMenu(playerNum, context, 
 
                 if item:getModData().LootTicket then
                     local lootData = item:getModData().LootTicket;
+                    if not lootData then
+                        error("This ticket does not have loot data, something went wrong.");
+                        return;
+                    end
                     local showOpenOption = false;
 
                     if not lootData.RestrictedTo then

@@ -36,7 +36,7 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
     logStr = logStr .. string.format(" || Total Rolls: %0d ", totalRolls);
 
     for rollNum = 1, totalRolls do
-        randInstance:seed(getTimestampMs());
+        randInstance:seed(getTimestampMs() + rollNum);
         local iteratedChance = randInstance:random(0, totalChance);
         local hasRolledSuccessfully = false;
 
@@ -71,7 +71,7 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
                         hasRolledSuccessfully = true;
                         table.insert(itemsToGive, rollItem);
                     else
-                        logStr = logStr .. " !Has already rolled, no duplicates allowed ! ";
+                        logStr = logStr .. " !Has already rolled, no duplicates allowed! ";
                     end
                 else
                     logStr = logStr .. " skip";
