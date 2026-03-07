@@ -4,6 +4,23 @@ LootTicket_ServerManager = {};
 
 local randInstance = newrandom();
 
+local function sortOnChance(a, b)
+    return tonumber(a.item.Chance) > tonumber(b.item.Chance);
+end
+
+function LootTicket_ServerManager.GetWeightedChance(items)
+    local totalChance = 0;
+
+    for _, itemData in ipairs(items) do
+        local chance = tonumber(itemData.item.Chance);
+        if chance < 100 then
+            totalChance = totalChance + chance;
+        end
+    end
+
+    return totalChance;
+end
+
 function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
 
     if not player then
@@ -12,6 +29,7 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
     end
 
     local itemsToGive = {};
+    local possibleItems = {};
 
     local totalChance = 0;
     local logStr = "[OPENING LOOT TICKET] Player: " .. player:getUsername() .. " || ID: " .. tostring(lootData.ID) ..  " || ";
@@ -20,67 +38,64 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
     for _, itemData in ipairs(lootData.Items) do
         local chance = tonumber(itemData.item.Chance);
 
-        itemData.item.hasRolledThisTurn = false;
+        itemData.hasRolled = false;
         if chance < 100 then
-            totalChance = totalChance + chance;
+            totalChance = totalChance + chance; -- If not guaranteed, get their chance and get the weighted total.
+            table.insert(possibleItems, itemData);
         else
-            table.insert(itemsToGive, itemData);
+            table.insert(itemsToGive, itemData); -- Guaranteed items should always be added.
         end
     end
 
-    logStr = logStr .. string.format(" || Total Weight: %0d ", totalChance);
+    logStr = logStr .. string.format(" Total Weight: %0d ||", totalChance);
 
     local totalRolls = tonumber(lootData.MaxRolls);
     if not totalRolls or totalRolls < 1 then totalRolls = 1 end;
 
-    logStr = logStr .. string.format(" || Total Rolls: %0d ", totalRolls);
+    logStr = logStr .. string.format(" Total Rolls: %0d ||", totalRolls);
+
+    local iteratedChance = 0;
+    local hasRolledSuccessfully = false;
 
     for rollNum = 1, totalRolls do
-        randInstance:seed(getTimestampMs() + rollNum);
-        local iteratedChance = randInstance:random(0, totalChance);
-        local hasRolledSuccessfully = false;
+        table.sort(possibleItems, sortOnChance);
 
-        for _, rollItem in ipairs(lootData.Items) do
-            rollItem.item.hasRolledThisTurn = false;
+        totalChance = LootTicket_ServerManager.GetWeightedChance(possibleItems);
+        iteratedChance = randInstance:random(totalChance);
+
+        hasRolledSuccessfully = false;
+        local indexToRemove = nil;
+
+        logStr = logStr .. string.format(" [Current Roll: %0d, Random Number Picked: %0d]", rollNum, iteratedChance);
+
+        for possibleIndex, possibleItem in ipairs(possibleItems) do
+            logStr = logStr .. string.format("      >>> %0d - %s", possibleIndex, possibleItem.item.Name);
+            
+            if not hasRolledSuccessfully then
+                iteratedChance = iteratedChance - possibleItem.item.Chance;
+                logStr = logStr .. string.format("> IvC %0d,%0d", iteratedChance, possibleItem.item.Chance);
+
+                if iteratedChance <= 0 then
+
+                    logStr = logStr .. string.format(" ADDED]");
+                    hasRolledSuccessfully = true;
+                    table.insert(itemsToGive, possibleItem);
+
+                    if not lootData.AllowDuplicates then
+                        indexToRemove = possibleIndex;
+                        logStr = logStr .. string.format("  NO DUP, REMOVE");
+                    end
+                
+                else
+                    logStr = logStr .. string.format(" NOT HIT]");
+                end
+            else
+                logStr = logStr .. "[already rolled, skip this item]";
+            end
         end
 
-        logStr = logStr .. string.format(" || Current Roll: %0d, Random Number Picked: %0d >", rollNum, iteratedChance);
-
-        for _, rollItem in ipairs(lootData.Items) do
-            logStr = logStr .. string.format(" [%s ", rollItem.item.Name);
-            
-            -- If the item is guaranteed, add it to the list.
-            if tonumber(rollItem.item.Chance) < 100 then
-                -- Make sure there's not already been an item selected for this roll (not withstanding the guaranteed ones.)
-                if not hasRolledSuccessfully then
-
-                    iteratedChance = iteratedChance - tonumber(rollItem.item.Chance);
-
-                    logStr = logStr .. string.format("original: %0d, comp is: %0d", rollItem.item.Chance, iteratedChance);
-
-                    if not lootData.AllowDuplicates and not rollItem.item.hasRolledThisTurn then
-                        
-                        if iteratedChance <= 0 then
-                            logStr = logStr .. string.format(" !SUCCESS! ", iteratedChance);
-                            hasRolledSuccessfully = true;
-                            rollItem.item.hasRolledThisTurn = true;
-                            table.insert(itemsToGive, rollItem);
-                        end
-                    elseif lootData.AllowDuplicates then
-                        logStr = logStr .. string.format(" !SUCCESS! ", iteratedChance);
-                        hasRolledSuccessfully = true;
-                        table.insert(itemsToGive, rollItem);
-                    else
-                        logStr = logStr .. " !Has already rolled, no duplicates allowed! ";
-                    end
-                else
-                    logStr = logStr .. " skip";
-                end
-
-                logStr = logStr .. " ] ";
-            end
-
-            
+        if indexToRemove and tonumber(indexToRemove) then
+            table.remove(possibleItems, indexToRemove);
         end
     end
 
@@ -105,10 +120,10 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
 
     player:sendObjectChange('removeItemID', { id = ticket:getID(), type = ticket:getFullType() });
 
-    writeLog("LootTicket", rewardStr);
+    writeLog("LogLine_LootTicket", rewardStr);
     print(rewardStr);
 
-    sendServerCommand(player, "LootTicket", "ReceiveRollResults", { success = true, ticket = ticket, rewards = itemsToGive });
+    sendServerCommand(player, "LogLine_LootTicket", "ReceiveRollResults", { success = true, ticket = ticket, rewards = itemsToGive });
 end
 
 function LootTicket_ServerManager.OnClientCommand(module, command, player, args)
