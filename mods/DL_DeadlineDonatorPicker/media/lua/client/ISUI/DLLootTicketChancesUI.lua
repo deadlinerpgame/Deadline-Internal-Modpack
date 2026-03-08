@@ -220,7 +220,7 @@ function DLLootTicketChancesUI:onConfirmTicket()
     self.errorLabel:setVisible(false);
     self.errorLabel:setName("ERROR: ");
 
-    if not self.allowDuplicateItems and tonumber(self.maxRolledItems:getText()) < #self.datas.items then
+    if not self.allowDuplicateItems and tonumber(self.maxRolledItems:getText()) > #self.datas.items then
         self.errorLabel:setName("You have more rolls than listed items and no duplicates allowed.");
         self.errorLabel:setVisible(true);
         return;
