@@ -35,7 +35,7 @@ function DLLootResultsUI:initialise()
 
     local itemY = infoLabel:getBottom() + smallFontHeight;
     for _, item in ipairs(self.items) do
-        local itemString = string.format("      - %0dx %s", tostring(item.item.Quantity), item.item.Name);
+        local itemString = string.format("      - %0d x %s", item.item.Quantity, item.item.Name);
 
         local itemLabel = ISLabel:new(12, itemY, smallFontHeight, itemString, 1, 1, 1, 1, UIFont.NewSmall, true);
         itemY = itemY + (smallFontHeight * 1.25);

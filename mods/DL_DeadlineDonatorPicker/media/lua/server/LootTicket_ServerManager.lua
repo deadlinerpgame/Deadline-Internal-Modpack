@@ -61,7 +61,7 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
         table.sort(possibleItems, sortOnChance);
 
         totalChance = LootTicket_ServerManager.GetWeightedChance(possibleItems);
-        iteratedChance = randInstance:random(totalChance);
+        iteratedChance = randInstance:random(0, totalChance);
 
         hasRolledSuccessfully = false;
         local indexToRemove = nil;
@@ -123,7 +123,7 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
     writeLog("LogLine_LootTicket", rewardStr);
     print(rewardStr);
 
-    sendServerCommand(player, "LogLine_LootTicket", "ReceiveRollResults", { success = true, ticket = ticket, rewards = itemsToGive });
+    sendServerCommand(player, "LootTicket", "ReceiveRollResults", { success = true, ticket = ticket, rewards = itemsToGive });
 end
 
 function LootTicket_ServerManager.OnClientCommand(module, command, player, args)
