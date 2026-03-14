@@ -8,6 +8,12 @@ function Recipe.OnCreate.GiveEmptyMethaneTank(items, result, player)
     player:getInventory():AddItem("EmptyMethaneTank");
 end
 
+function Recipe.OnCreate.MakePropaneTankEmpty(items, result, player)
+    if result then
+        result:setUsedDelta(0);
+    end
+end
+
 function Recipe.OnCreate.GiveEmptyPot(items, result, player)
     player:getInventory():AddItem("Pot");
 end

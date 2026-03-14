@@ -31,8 +31,8 @@ function DLLootTicketInspectionUI:initialise()
     infoLabel:instantiate();
     self:addChild(infoLabel);
 
-    local statsStr = string.format("Rolls: %0d | Allow Duplicates: %s", self.MaxRolls, self.AllowDuplicates);
-    local statsLabel = ISLabel:new(12, infoLabel:getBottom() + smallFontHeight, smallFontHeight, statsStr);
+    local statsStr = string.format("[Rolls: %0d] [Allow Duplicates: %s]", self.maxRolls or 0, self.allowDuplicates and "Yes" or "No");
+    local statsLabel = ISLabel:new(12, infoLabel:getBottom() + smallFontHeight, smallFontHeight, statsStr, 1, 1, 1, 1, UIFont.NewSmall, true);
     statsLabel:initialise();
     statsLabel:instantiate();
     self:addChild(statsLabel);
@@ -57,7 +57,7 @@ function DLLootTicketInspectionUI:initialise()
         end
     end
 
-    self:setWidth(largestX + 16);
+    self:setWidth(largestX + 32);
 
     local titleWidth = getTextManager():MeasureStringX(UIFont.NewMedium, "Loot Ticket Data");
     local titleLabel = ISLabel:new((self:getWidth() / 2) - (titleWidth / 2), 4, smallFontHeight, "Loot Ticket Data", 1, 1, 1, 1, UIFont.NewMedium, true);

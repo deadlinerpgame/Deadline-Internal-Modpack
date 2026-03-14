@@ -118,11 +118,12 @@ function DLLootTicketChancesUI:createTotalItemsRow(startY)
     self:addChild(self.maxRolledItems);
 
     self.allowDuplicatesTickbox = ISTickBox:new(self.maxRolledItems:getRight() + (xOffset * 2), startY + 8, getTextManager():MeasureStringX(UIFont.NewSmall, "XX"), getTextManager():getFontHeight(UIFont.NewSmall) + 4, "", self, DLLootTicketChancesUI.onToggleAllowDups);
-    
     self.allowDuplicatesTickbox:initialise();
     self.allowDuplicatesTickbox:instantiate();
+    self.allowDuplicatesTickbox.autoWidth = true;
 
     self.allowDuplicatesTickbox:addOption("Allow Duplicates");
+    self.allowDuplicatesTickbox:setWidthToFit();
     self:addChild(self.allowDuplicatesTickbox);
 
     return label:getBottom() + getTextManager():getFontHeight(UIFont.NewSmall);
@@ -197,6 +198,8 @@ function DLLootTicketChancesUI:setTicketModData()
     modData.LootTicket.MaxRolls = tonumber(self.maxRolledItems:getText());
     modData.LootTicket.AllowDuplicates = self.allowDuplicateItems or false;
 
+    setTicket:setName(string.format("Loot Ticket [#%0d]", modData.LootTicket.ID));
+
     local logStr = string.format("Staff %s has created loot ticket with ID %0d with %0d max rolls and %s - items: ", getPlayer():getUsername(), modData.LootTicket.ID, modData.LootTicket.MaxRolls, (modData.LootTicket.AllowDuplicates and "duplicates") or "no duplicates");
     for _, itemData in ipairs(modData.LootTicket.Items) do
         logStr = logStr .. string.format("%s, quantity: %0d, chance: %0d | ", itemData.item.Name, tonumber(itemData.item.Quantity), tonumber(itemData.item.Chance));
@@ -216,6 +219,12 @@ end
 function DLLootTicketChancesUI:onConfirmTicket()
     self.errorLabel:setVisible(false);
     self.errorLabel:setName("ERROR: ");
+
+    if not self.allowDuplicateItems and tonumber(self.maxRolledItems:getText()) > #self.datas.items then
+        self.errorLabel:setName("You have more rolls than listed items and no duplicates allowed.");
+        self.errorLabel:setVisible(true);
+        return;
+    end
 
     self:setTicketModData();
 end
@@ -266,6 +275,7 @@ function DLLootTicketChancesUI:initialise()
 
     local bottom = self:createButtons(errorLabelY);
     self:setHeight(bottom);
+    self:setWidth(self.allowDuplicatesTickbox:getRight() + 8);
 end
 
 function DLLootTicketChancesUI:new(x, y, width, height, item, itemTable)
