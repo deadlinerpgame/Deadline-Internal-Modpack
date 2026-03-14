@@ -9,6 +9,7 @@ LastVisual = nil;
 LastInv = nil;
 LastWorn = nil;
 LastName = { first = "", last = "" };
+LastWRCName = nil;
 LastGenderFemale = false;
 LastProfession = nil;
 LastTraits = {};
@@ -121,8 +122,8 @@ local function OnPlayerDeath_CheckPostRespawn()
         getPlayer():resetModel();
         triggerEvent("OnClothingUpdated", getPlayer());
 
-        print("Setting XP");
-        getPlayer():setXp(LastXP);
+        --print("Setting XP");
+        --getPlayer():setXp(LastXP);
 
         print("Removing corpse from world!");
         LastCorpse:getSquare():removeCorpse(LastCorpse, false);
@@ -220,6 +221,7 @@ function ISPostDeathUI:onContinueIncap()
     
     getPlayer():getDescriptor():setForename(LastName.first or string.split(getPlayer():getUsername(), " ")[1]);
     getPlayer():getDescriptor():setSurname(LastName.last or string.split(getPlayer():getUsername(), " ")[2]);
+    WRC.Meta.SetName(LastWRCName or getPlayer():getDescriptor():getForename());
 
     -- Clear traits.
     getPlayer():getDescriptor():setProfession(LastProf);
@@ -305,6 +307,8 @@ function ISPostDeathUI:createChildren()
             LastBodyDamage[partType] = savedDamage;
         end
     end
+
+    LastWRCName = WRC.Meta.GetName(getPlayer():getUsername()) or "";
 
     self.buttonRespawn.onclick = self.onContinueIncap;
 
