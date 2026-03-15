@@ -167,8 +167,7 @@ local function OnPlayerDeath_CheckPostRespawn()
 
     print("Syncing!");
     SyncXp(getPlayer());
-    sendPlayerExtraInfo(getPlayer());
-
+    --sendPlayerExtraInfo(getPlayer());
 end
 
 function ISPostDeathUI:onContinueIncap()
