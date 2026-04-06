@@ -1,0 +1,87 @@
+module Base
+{
+
+
+
+    item ZMannequinMaleBodyBlack
+	{
+        DisplayCategory             = Clothing,		
+		Type                        = Clothing,
+		DisplayName                 = Mannequin Male Body Black,
+		ClothingItem                = ZBody_MannequinMaleBlack,
+        ClothingItemExtra           = HCustoms.MannequinMaleBodyWhite,
+        ClothingItemExtraOption     = BodySwap,
+		BodyLocation                = Torso1Legs1,
+        Icon                        = MannequinMaleBlack,
+        CanHaveHoles                = false,
+		WorldStaticModel            = ZMannequinMaleBlack,		
+	}		
+
+    item ZMannequinMaleBodyWhite
+	{
+        DisplayCategory             = Clothing,		
+		Type                        = Clothing,
+		DisplayName                 = Mannequin Male Body White,
+		ClothingItem                = ZBody_MannequinMaleWhite,
+        ClothingItemExtra           = HCustoms.MannequinMaleScarecrow,
+        ClothingItemExtraOption     = BodySwap,
+		BodyLocation                = Torso1Legs1,
+        Icon                        = MannequinMaleWhite,
+        CanHaveHoles                = false,
+		WorldStaticModel            = ZMannequinMaleWhite,	
+	}	
+
+    item ZMannequinMaleScarecrow
+	{
+        DisplayCategory             = Clothing,		
+		Type                        = Clothing,
+		DisplayName                 = Mannequin Male Scarecrow,
+		ClothingItem                = ZBody_MannequinMaleScarecrow,
+        ClothingItemExtra           = HCustoms.MannequinMaleBodyGreen,
+        ClothingItemExtraOption     = BodySwap,
+		BodyLocation                = Torso1Legs1,
+        Icon                        = MannequinMaleScarecrow,
+        CanHaveHoles                = false,
+		WorldStaticModel            = ZMannequinMaleScarecrow,		
+	}
+
+    item ZMannequinMaleBodyGreen
+	{
+        DisplayCategory             = Clothing,		
+		Type                        = Clothing,
+		DisplayName                 = Mannequin Male Body Green,
+		ClothingItem                = ZBody_MannequinMaleGreen,
+        ClothingItemExtra           = HCustoms.MannequinMaleBodyBlack,
+        ClothingItemExtraOption     = BodySwap,
+		BodyLocation                = Torso1Legs1,
+        Icon                        = MannequinMaleGreen,
+        CanHaveHoles                = false,
+		WorldStaticModel            = ZMannequinMaleGreen,
+	}	
+
+    model ZMannequinMaleBlack
+    {
+        mesh = WorldItems/Clothing/MannequinMale_Ground,
+        texture = Clothes/SpiffoSuit/MannequinMaleBlack,
+    }
+
+
+    model ZMannequinMaleWhite
+    {
+        mesh = WorldItems/Clothing/MannequinMale_Ground,
+        texture = Clothes/SpiffoSuit/MannequinMaleWhite,
+    }
+
+
+    model ZMannequinMaleScarecrow
+    {
+        mesh = WorldItems/Clothing/MannequinMale_Ground,
+        texture = Clothes/SpiffoSuit/ScarecrowMale,
+    }
+
+    model ZMannequinMaleGreen
+    {
+        mesh = WorldItems/Clothing/MannequinMale_Ground,
+        texture = Clothes/SpiffoSuit/MannequinMaleGreen,
+    }
+}

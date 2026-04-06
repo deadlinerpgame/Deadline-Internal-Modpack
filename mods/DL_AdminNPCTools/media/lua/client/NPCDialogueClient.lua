@@ -1,17 +1,11 @@
-
-
-
-
 require "NPCDialogueShared"
 require "AdminEditorWindow"
 
 local NPCDialogueClientCommands = {}
 NPCDialogue.clientZones = NPCDialogue.clientZones or {}
 
-
 local activeZoneFloors = {}
 local lastPlayerPos    = { x = 0, y = 0, z = 0 }
-
 
 local function isAdminOrDebug(player)
     if not player then return false end
@@ -19,7 +13,6 @@ local function isAdminOrDebug(player)
     local dbg   = (isDebugEnabled and isDebugEnabled()) or (getCore and getCore():getDebug())
     return admin or dbg
 end
-
 
 local ZONE_KEY = "NPCDialogueZone"
 
@@ -29,7 +22,6 @@ local function writeZoneToTile(zone)
     local sq = cell:getGridSquare(zone.x, zone.y, zone.z)
     if not sq then return false end
 
-    
     local md = sq:getModData()
     md[ZONE_KEY] = zone
     if sq.transmitModData then
@@ -38,7 +30,6 @@ local function writeZoneToTile(zone)
         sq:transmitModdata()
     end
 
-    
     ModData.request(NPCDialogue.MODDATA_KEY)
     local modTable = ModData.getOrCreate(NPCDialogue.MODDATA_KEY)
     if not modTable.zones then modTable.zones = {} end
@@ -47,7 +38,6 @@ local function writeZoneToTile(zone)
     ModData.transmit(NPCDialogue.MODDATA_KEY)
     ModData.request(NPCDialogue.MODDATA_KEY)
 
-    print("[NPCDialogue CLIENT] Wrote zone: " .. zone.id)
     return true
 end
 
@@ -56,7 +46,6 @@ local function clearZoneFromTile(x, y, z, id)
     if not cell then return end
     local sq = cell:getGridSquare(x, y, z)
     if sq then
-        
         local md = sq:getModData()
         md[ZONE_KEY] = nil
         if sq.transmitModData then
@@ -66,7 +55,6 @@ local function clearZoneFromTile(x, y, z, id)
         end
     end
 
-    
     if id then
         ModData.request(NPCDialogue.MODDATA_KEY)
         local modTable = ModData.getOrCreate(NPCDialogue.MODDATA_KEY)
@@ -75,8 +63,6 @@ local function clearZoneFromTile(x, y, z, id)
         ModData.transmit(NPCDialogue.MODDATA_KEY)
         ModData.request(NPCDialogue.MODDATA_KEY)
     end
-
-    print("[NPCDialogue CLIENT] Cleared zone: " .. x .. "," .. y .. "," .. z)
 end
 
 local function readZoneFromTile(x, y, z)
@@ -87,18 +73,12 @@ local function readZoneFromTile(x, y, z)
     return sq:getModData()[ZONE_KEY]
 end
 
-
-
-
-
-
 local function refreshClientZones()
     ModData.request(NPCDialogue.MODDATA_KEY)
     local modTable = ModData.getOrCreate(NPCDialogue.MODDATA_KEY)
     if not modTable.zones then return end
     local count = 0
     for id, pos in pairs(modTable.zones) do
-        
         if not NPCDialogue.clientZones[id] then
             local zone = readZoneFromTile(pos.x, pos.y, pos.z)
             if zone and zone.id then
@@ -108,27 +88,22 @@ local function refreshClientZones()
         end
     end
     if count > 0 then
-        print("[NPCDialogue CLIENT] refreshClientZones added " .. count .. " zone(s)")
-        
         lastPlayerPos = { x = -1, y = -1, z = -1 }
     end
 end
 
 function NPCDialogueClientCommands.SyncReady(args)
-    print("[NPCDialogue CLIENT] SyncReady")
+    
     NPCDialogue.clientZones = {}
     refreshClientZones()
 end
-
 
 function NPCDialogueClientCommands.SyncZone(args)
     if not (args and args.zone) then return end
     local zone = args.zone
     NPCDialogue.clientZones[zone.id] = zone
     writeZoneToTile(zone)
-    print("[NPCDialogue CLIENT] SyncZone: " .. zone.id)
 end
-
 
 function NPCDialogueClientCommands.RemoveAck(args)
     if not (args and args.id) then return end
@@ -136,13 +111,11 @@ function NPCDialogueClientCommands.RemoveAck(args)
     if args.x and args.y and args.z then
         clearZoneFromTile(math.floor(args.x), math.floor(args.y), math.floor(args.z), args.id)
     end
-    print("[NPCDialogue CLIENT] RemoveAck: " .. tostring(args.id))
 end
-
 
 local function onServerCommand(module, command, args)
     if module ~= "NPCDialogue" then return end
-    print("[NPCDialogue CLIENT] onServerCommand: " .. tostring(command))
+    
     if NPCDialogueClientCommands[command] then
         NPCDialogueClientCommands[command](args)
     end
@@ -150,18 +123,14 @@ end
 
 Events.OnServerCommand.Add(onServerCommand)
 
-
 local function onConnected()
-    print("[NPCDialogue CLIENT] OnConnected - requesting sync")
+    
     sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "RequestSync", {})
 end
 
 Events.OnConnected.Add(onConnected)
 
-
-
 Events.EveryOneMinute.Add(refreshClientZones)
-
 
 local function updateActiveZones()
     local p = getSpecificPlayer(0)
@@ -214,7 +183,6 @@ end
 Events.OnTick.Add(updateActiveZones)
 Events.OnPostFloorLayerDraw.Add(onPostFloorLayerDraw)
 
-
 local function getZoneAtTile(x, y, z)
     for _, zone in pairs(NPCDialogue.clientZones) do
         if zone.x == x and zone.y == y and zone.z == z then
@@ -239,21 +207,17 @@ local function onFillWorldObjectContextMenu(playerNum, context, worldObjects, x,
 
     local tx, ty, tz = sq:getX(), sq:getY(), sq:getZ()
 
-    
     local existingZone = getZoneAtTile(tx, ty, tz) or readZoneFromTile(tx, ty, tz)
 
     if existingZone then
         context:addOption("Edit NPC Zone: " .. existingZone.name, sq, function()
-            print("[NPCDialogue CLIENT] Edit zone: " .. existingZone.id)
             if not AdminEditorWindow then
-                print("[NPCDialogue CLIENT] AdminEditorWindow not loaded")
                 return
             end
             local editor = AdminEditorWindow.getInstance()
             editor:openForZone(existingZone)
         end)
         context:addOption("Remove NPC Zone: " .. existingZone.name, sq, function()
-            print("[NPCDialogue CLIENT] Removing zone: " .. existingZone.id)
             sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "RemoveZone", {
                 id = existingZone.id,
                 x  = existingZone.x,
@@ -263,7 +227,6 @@ local function onFillWorldObjectContextMenu(playerNum, context, worldObjects, x,
         end)
     else
         context:addOption("Place NPC Zone Here", sq, function()
-            print("[NPCDialogue CLIENT] Placing zone at " .. tostring(tx) .. "," .. tostring(ty) .. "," .. tostring(tz))
             sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "PlaceZone", {
                 name = "New NPC",
                 x    = tx,
@@ -276,24 +239,15 @@ end
 
 Events.OnFillWorldObjectContextMenu.Add(onFillWorldObjectContextMenu)
 
-
-
-
-
 require "DialogueWindow"
 
 local currentZoneInside = nil  
 
-
-
 function NPCDialogueClientCommands.SessionGranted(args)
     if not (args and args.zoneId) then return end
-    print("[NPCDialogue CLIENT] SessionGranted for " .. args.zoneId)
-
     
     local zone = NPCDialogue.clientZones[args.zoneId]
     if not zone then
-        
         zone = readZoneFromTile(math.floor(args.x), math.floor(args.y), math.floor(args.z))
     end
 
@@ -301,14 +255,12 @@ function NPCDialogueClientCommands.SessionGranted(args)
     local portrait = zone and zone.portrait or nil
     local tree    = zone and zone.dialogueTree
 
-    
     local nodes  = {}
     local rootId = nil
 
     local player = getSpecificPlayer(0)
     local zoneId = args.zoneId
 
-    
     if player then
         player:getModData()["NPCTalked_" .. zoneId] = true
     end
@@ -318,13 +270,11 @@ function NPCDialogueClientCommands.SessionGranted(args)
         for _, nid in ipairs(tree.nodeOrder) do
             local n = tree.nodes[nid]
             if n then
-                
                 local npcText = n.npcText or ""
                 if player then
                     npcText = NPCDialogue.resolvePrompts(npcText, player)
                 end
 
-                
                 local responses = {}
                 for _, resp in ipairs(n.responses or {}) do
                     local state = "normal"
@@ -335,7 +285,6 @@ function NPCDialogueClientCommands.SessionGranted(args)
                         local leadsTo = resp.leadsTo
                         if leadsTo == "(end)" then leadsTo = nil end
 
-                        
                         local reqs = nil
                         if resp.conditions then
                             local hasAnyCond = false
@@ -390,7 +339,6 @@ function NPCDialogueClientCommands.SessionGranted(args)
         end
     end
 
-    
     if not rootId then
         rootId = "root"
         nodes["root"] = {
@@ -405,14 +353,12 @@ end
 
 function NPCDialogueClientCommands.SessionDenied(args)
     if not (args and args.message) then return end
-    print("[NPCDialogue CLIENT] SessionDenied: " .. args.message)
     
     local p = getSpecificPlayer(0)
     if p then
         p:setHaloNote(args.message, 255, 200, 100, 200)
     end
 end
-
 
 local function onPlayerUpdate(p)
     if not p or p:getPlayerNum() ~= 0 then return end
@@ -435,7 +381,6 @@ end
 
 Events.OnPlayerUpdate.Add(onPlayerUpdate)
 
-
 local function onKeyPressed(key)
     if key ~= Keyboard.KEY_F then return end
     local dw = DialogueWindow.getInstance()
@@ -443,7 +388,7 @@ local function onKeyPressed(key)
     if not currentZoneInside then return end
 
     local zone = currentZoneInside
-    print("[NPCDialogue CLIENT] Requesting session for " .. zone.id)
+    
     sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "StartSession", {
         zoneId = zone.id,
         name   = zone.name,
@@ -454,9 +399,6 @@ local function onKeyPressed(key)
 end
 
 Events.OnKeyPressed.Add(onKeyPressed)
-
-
-
 
 local lastPromptZoneId = nil
 
