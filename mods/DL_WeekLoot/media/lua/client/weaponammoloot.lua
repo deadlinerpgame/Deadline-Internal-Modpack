@@ -16,6 +16,7 @@ local WEAPON_TABLE = {
     "Base.Revolver_Short",       -- S&W M36
     "Base.Revolver",             -- S&W M625
     "Base.Pistol_Compact",       -- SIG Sauer M11
+    "Base.ImprovisedGunToolKit", -- Gun Cleaning Kit
 }
 
 local AMMO_TABLE = {
