@@ -1,13 +1,4 @@
-
-
-
-
-
 NPCDialogue = NPCDialogue or {}
-
-
-
-
 
 NPCDialogue.CMD = {
     
@@ -17,7 +8,6 @@ NPCDialogue.CMD = {
     START_SESSION = "StartSession",
     END_SESSION   = "EndSession",
 
-    
     SYNC_READY      = "SyncReady",
     SYNC_ZONE       = "SyncZone",
     REMOVE_ACK      = "RemoveAck",
@@ -25,27 +15,22 @@ NPCDialogue.CMD = {
     SESSION_DENIED  = "SessionDenied",
 }
 
-
 function NPCDialogue.distanceTo(px, py, zx, zy)
     local dx = px - zx
     local dy = py - zy
     return math.sqrt(dx * dx + dy * dy)
 end
 
-
 NPCDialogue.MODDATA_KEY = "NPCDialogueZones"
-
 
 NPCDialogue.DEFAULT_RADIUS     = 2
 NPCDialogue.DEFAULT_CONCURRENT = true
-
 
 NPCDialogue.HIGHLIGHT_R           = 0
 NPCDialogue.HIGHLIGHT_G           = 1
 NPCDialogue.HIGHLIGHT_B           = 0
 NPCDialogue.HIGHLIGHT_A           = 0.5
 NPCDialogue.HIGHLIGHT_SCAN_RADIUS = 20
-
 
 function NPCDialogue.newZone(id, name, x, y, z)
     return {
@@ -61,13 +46,11 @@ function NPCDialogue.newZone(id, name, x, y, z)
     }
 end
 
-
 function NPCDialogue.generateId()
     local a = ZombRand(99999)
     local b = ZombRand(99999)
     return "npc_" .. tostring(a) .. "_" .. tostring(b)
 end
-
 
 NPCDialogue.SKILLS = {
     "Axe", "Blunt", "LongBlunt", "SmallBlade", "LongBlade",
@@ -77,7 +60,6 @@ NPCDialogue.SKILLS = {
     "Tailoring", "Trapping", "Fishing", "Forage",
     "Lightfoot", "Nimble", "Sprinting", "Strength", "Fitness",
 }
-
 
 NPCDialogue.SKILL_PERK_NAME = {
     Axe         = "Axe",
@@ -106,8 +88,6 @@ NPCDialogue.SKILL_PERK_NAME = {
     Strength    = "Strength",
     Fitness     = "Fitness",
 }
-
-
 
 function NPCDialogue.evalCondition(cond, player)
     if not cond or not cond.type then return true end
@@ -154,12 +134,9 @@ function NPCDialogue.evalCondition(cond, player)
     elseif t == "talked" then
         local md = player:getModData()
         return md["NPCTalked_" .. (cond.zoneId or "")] == true
-
     end
     return true
 end
-
-
 
 function NPCDialogue.evalResponse(resp, player, zoneId)
     
@@ -193,11 +170,9 @@ function NPCDialogue.evalResponse(resp, player, zoneId)
     return (failOn == "grey") and "greyed" or "hidden"
 end
 
-
 function NPCDialogue.resolvePrompts(text, player)
     if not text or text == "" then return text end
 
-    
     local firstName = player:getUsername() or "Survivor"
     local desc = player:getDescriptor()
     if desc and desc.getForename then
@@ -206,7 +181,6 @@ function NPCDialogue.resolvePrompts(text, player)
     end
     text = text:gsub("@PlayerName", firstName)
 
-    
     local occ = "Unemployed"
     if desc then
         local p = desc:getProfession()
@@ -214,7 +188,6 @@ function NPCDialogue.resolvePrompts(text, player)
     end
     text = text:gsub("@Occupation", occ)
 
-    
     local hour = 12
     local gt = getGameTime and getGameTime()
     if gt then
@@ -228,7 +201,6 @@ function NPCDialogue.resolvePrompts(text, player)
     end
     text = text:gsub("@TimeOfDay", timeStr)
 
-    
     local weatherStr = "clear"
     local climate = getClimaticRegion and getClimaticRegion()
     if climate then
