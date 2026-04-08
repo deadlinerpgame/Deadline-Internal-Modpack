@@ -1,0 +1,43 @@
+module AmputationsRP
+{
+imports
+	{
+		Base
+	}
+
+recipe Get arm amputation left
+   {
+     Result:Amp_LA,
+     Time:120,
+     StopOnWalk:false,
+   }
+
+recipe Get arm amputation right
+   {
+     Result:Amp_RA,
+     Time:120,
+     OnCreate:,
+     StopOnWalk:false,
+   }
+
+recipe Get arm amputation both arms
+   {
+     Result:Amp_BA,
+     Time:120,
+     StopOnWalk:false,
+   }
+
+recipe Get leg amputation left
+   {
+     Result:Amp_LL,
+     Time:120,
+     StopOnWalk:false,
+   }
+
+recipe Get leg amputation right
+   {
+     Result:Amp_RL,
+     Time:120,
+     StopOnWalk:false,
+   }
+}
