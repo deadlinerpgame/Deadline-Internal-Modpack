@@ -14,7 +14,7 @@ ScreenHeight = getCore():getScreenHeight();
 ModalX = (ScreenWidth / 2) - 380;
 ModalY = (ScreenHeight / 2) - 120;
 
-local original_ApplyMechanics = JaxeRevival.Incapacitation.applyMechanics;
+local original_ApplyMechanics = JaxeRevival.Incapacitation.apply;
 local original_SyncApplyEffects = JaxeRevival.Sync.applyEffects;
 local original_ReviveAction = JaxeRevival.TimedAction.perform;
 
@@ -62,19 +62,19 @@ JaxeRevival.Sync.applyEffects = function(player, value)
 
     if value then player:setShootable(false); end;
 
-    original_SyncApplyEffects(player, value);
+    --original_SyncApplyEffects(player, value);
     --JaxeRevival.Sync.sendClient(player, JaxeRevival.Sync.REVIVE, JaxeRevival.Sync.getArgsFromTarget(player));
 end
 
 
 
-JaxeRevival.Incapacitation.applyMechanics = function(player, value)
+JaxeRevival.Incapacitation.apply = function(player, value, serverInitiated)
     if not player then return end;
 
     --player:setInvincible(value or false);
     --sendPlayerExtraInfo(player);
     player:setShootable(true);
-    original_ApplyMechanics(player, value);
+    original_ApplyMechanics(player, value, serverInitiated);
     --JaxeRevival.Sync.sendClient(player, JaxeRevival.Sync.REVIVE, JaxeRevival.Sync.getArgsFromTarget(player));
 end
 
@@ -106,30 +106,3 @@ JaxeRevival.Panel.onGiveUp = function(self)
 
     original_OnGiveUp(self);
 end
-
-local function OnPlayerUpdate_Revival(player)
-    if player ~= getPlayer() then return end;
-
-    if not JaxeRevival then return end;
-
-    local threshold = SandboxVars.JaxeRevival.IncapacitatedHealth;
-    --[[if player:getBodyDamage():getOverallBodyHealth() <= threshold then
-        player:getBodyDamage():setOverallBodyHealth(threshold);
-        if player:isShootable() then
-            player:setShootable(false);
-        end
-    end--]]
-end
-
---Events.OnPlayerUpdate.Add(OnPlayerUpdate_Revival);
---[[local function OnWeaponHitCharacter(attacker, target, weapon, damage)
-    if instanceof(attacker, "IsoPlayer") and instanceof(target, "IsoPlayer") then
-        if damage > 0 then
-            print("damage is " .. tostring(damage));
-        end
-    end
-end
-
-
-
-Events.OnWeaponHitCharacter.Add(OnWeaponHitCharacter);--]]

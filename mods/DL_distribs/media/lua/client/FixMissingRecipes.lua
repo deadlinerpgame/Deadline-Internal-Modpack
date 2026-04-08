@@ -34,7 +34,7 @@ function grantProfessionRecipes()
         player:learnRecipe("Dry Xanax Compound");
     end
 
-    if player:HasTrait("WalterWhite") then
+    if player:HasTrait("Drugsmith") then
         player:learnRecipe("Make Ephedrine Compound");
         player:learnRecipe("Produce Meth Compound");
         player:learnRecipe("Dry the Meth Compound");

@@ -224,7 +224,7 @@ function ISPostDeathUI:onContinueIncap()
     WRC.Meta.SetName(LastWRCName or getPlayer():getDescriptor():getForename());
 
     -- Clear traits.
-    getPlayer():getDescriptor():setProfession(LastProf);
+    getPlayer():getDescriptor():setProfession(LastProfession);
 
     getPlayer():getTraits():clear();
     for i, _ in ipairs(LastTraits) do
@@ -311,6 +311,8 @@ function ISPostDeathUI:createChildren()
     LastWRCName = WRC.Meta.GetName(getPlayer():getUsername()) or "";
 
     self.buttonRespawn.onclick = self.onContinueIncap;
+    self.buttonRespawn.name = "Respawn Incapacitated";
+    self.buttonRespawn.toolTip = "Spawn at the same place you died, incapacitated.";
 
 end
 
