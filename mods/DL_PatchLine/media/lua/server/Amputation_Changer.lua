@@ -1,6 +1,5 @@
 local ALLOWED_ITEMS = {
     Amp_LA = true,
-    Pros_LA = true,
     Amp_RA = true,
     Amp_BA = true,
     Amp_LL = true,
