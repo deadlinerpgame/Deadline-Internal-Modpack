@@ -25,6 +25,8 @@ local function OnPlayerDeath_CheckPostRespawn()
     
     if not getPlayer():getInventory() then return end;
 
+    JaxeRevival.Incapacitation.apply(getPlayer(), true, false);
+
     print("Check Post Respawn");
     -- Go through all corpses in the square
     local inventory = getPlayer():getInventory();
@@ -75,7 +77,7 @@ local function OnPlayerDeath_CheckPostRespawn()
         return;
     end
 
-    if LastCorpse and getPlayer():getModData().JaxeRevival_Incapacitated then
+    if LastCorpse then
         print("Player corpse is not nil.");
 
         for i, _ in ipairs(itemsToRemove) do
@@ -309,8 +311,8 @@ function ISPostDeathUI:createChildren()
     LastWRCName = WRC.Meta.GetName(getPlayer():getUsername()) or "";
 
     self.buttonRespawn.onclick = self.onContinueIncap;
-    self.buttonRespawn.name = "Respawn Incapacitated";
-    self.buttonRespawn.toolTip = "Spawn at the same place you died, incapacitated.";
+    self.buttonRespawn.title = "Respawn Incapacitated";
+    self.buttonRespawn.tooltip = "Spawn at the same place you died, incapacitated.";
 
 end
 
