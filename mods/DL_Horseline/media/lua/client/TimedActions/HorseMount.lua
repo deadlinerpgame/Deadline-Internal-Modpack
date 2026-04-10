@@ -1,6 +1,6 @@
 HorseMount = ISBaseTimedAction:derive("HorseMount")
-
-
+ 
+ 
 function HorseMount:isValid()
     if not self.character or not self.item then
         return false
@@ -11,15 +11,33 @@ function HorseMount:isValid()
         end
         return self.item:getWorldItem() ~= nil
     else
-        -- Dismount: just check the horse is still worn and we have a valid square
+        if not isItemTransactionConsistent(self.item, self.characterInv, self.floorInv) then
+            return false
+        end
         if self.character:getWornItem("Horse") ~= self.item then
             return false
         end
         return self.sq ~= nil
     end
 end
-
-
+ 
+function HorseMount:start()
+    if self.mount then
+        createItemTransaction(self.item, self.itemInv, self.characterInv)
+    else
+        self.floorInv = ItemContainer.new("floor", nil, nil, 10, 10)
+        createItemTransaction(self.item, self.characterInv, self.floorInv)
+    end
+end
+ 
+function HorseMount:stop()
+    if self.mount then
+        removeItemTransaction(self.item, self.itemInv, self.characterInv)
+    else
+        removeItemTransaction(self.item, self.characterInv, self.floorInv)
+    end
+end
+ 
 function HorseMount:perform()
     print(self.mount)
     if self.mount then
@@ -29,11 +47,11 @@ function HorseMount:perform()
     itemSquare:removeWorldObject(worldItem)
     self.item:setWorldItem(nil)
     self.characterInv:AddItem(self.item);
-
+ 
     self.item:setWeight(0.1)
     self.item:setActualWeight(0.1)
     self.item:setCustomWeight(true)
-
+ 
     self.character:setWornItem(self.item:getBodyLocation(), self.item)
     triggerEvent("OnClothingUpdated", self.character)
     
@@ -43,7 +61,7 @@ function HorseMount:perform()
     triggerEvent("OnClothingUpdated", self.character)
     self.itemInv:setDrawDirty(true)
     self.characterInv:setDrawDirty(true)
-
+ 
         
     else
         self.item:setWeight(60)
@@ -57,16 +75,17 @@ function HorseMount:perform()
         end
         self.characterInv:Remove(self.item)
         self.character:setWornItem("Horse", nil, false)
+        removeItemTransaction(self.item, self.characterInv, self.floorInv)
         self.item:setJobDelta(0.0)
         triggerEvent("OnClothingUpdated", self.character)
         ISInventoryPage.renderDirty = true
         self.characterInv:setDrawDirty(true)
-
-
+ 
+ 
     end
     ISBaseTimedAction.perform(self)
 end
-
+ 
 function HorseMount:new(character, item, mount, sq, xpos, ypos, zpos, rotation)
     local o = ISBaseTimedAction.new(self, player)
     o.item = item
