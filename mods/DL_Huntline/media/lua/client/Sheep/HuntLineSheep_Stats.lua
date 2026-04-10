@@ -36,7 +36,7 @@ function HuntLineSheep.isBiteReact(pl)
 	local attacker = nil
 	if pl:getVariableString("HitReaction") == "Bite" then
 		local time = pl:timeSinceLastStab()
-		print(time)
+		--print(time)
 		attacker = pl:getVariableString("getLastTargettedBy")
 
 		return true
@@ -58,9 +58,9 @@ function HuntLineSheep.setStats(zed)
         end
 
         if HuntLineSheep.isSheepAnimal(zed) then
-            print("Test2")
+            --print("Test2")
             if zed:getModData()['SheepAnimal_Init'] == nil then
-                print("Test3")
+                --print("Test3")
                 local sandOpt = getSandboxOptions()
                 --local zSpeed = sandOpt:getOptionByName("ZombieLore.Speed"):getValue()
 

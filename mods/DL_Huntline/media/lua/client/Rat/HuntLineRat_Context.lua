@@ -32,7 +32,7 @@ function HuntLineRat.Context(player, context, worldobjects)
 				if fit then
 					opt:addOption('set stats: '..tostring(fit), worldobjects, function()
 						HuntLineRat.setStats(zed)
-						print(HuntLineRat.getOutfitName(zed))
+						--print(HuntLineRat.getOutfitName(zed))
 					end);
 				end
 				local isCrawler = HuntLineRat.isCrawler(zed)

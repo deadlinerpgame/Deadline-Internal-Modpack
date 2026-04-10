@@ -36,7 +36,7 @@ function HuntLinePig.isBiteReact(pl)
 	local attacker = nil
 	if pl:getVariableString("HitReaction") == "Bite" then
 		local time = pl:timeSinceLastStab()
-		print(time)
+		--print(time)
 		attacker = pl:getVariableString("getLastTargettedBy")
 
 		return true
@@ -58,9 +58,9 @@ function HuntLinePig.setStats(zed)
         end
 
         if HuntLinePig.isPigAnimal(zed) then
-            print("Test2")
+            --print("Test2")
             if zed:getModData()['PigAnimal_Init'] == nil then
-                print("Test3")
+                --print("Test3")
                 local sandOpt = getSandboxOptions()
                 --local zSpeed = sandOpt:getOptionByName("ZombieLore.Speed"):getValue()
 

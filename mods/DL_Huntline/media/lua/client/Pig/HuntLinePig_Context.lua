@@ -50,7 +50,7 @@ function HuntLinePig.Context(player, context, worldobjects)
 				if fit then
 					opt:addOption('set stats: '..tostring(fit), worldobjects, function()
 						HuntLinePig.setStats(zed)
-						print(HuntLinePig.getOutfitName(zed))
+						--print(HuntLinePig.getOutfitName(zed))
 					end);
 				end
 				local isCrawler = HuntLinePig.isCrawler(zed)
