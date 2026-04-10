@@ -4,7 +4,7 @@ require "ISUI/ISUIElement"
 local barWidth = 80
 local barHeight = getTextManager():getFontHeight(UIFont.Small) + 2
 local spacing = 6
-local totalWidth = (barWidth * 4) + (spacing * 3)
+local totalWidth = (barWidth * 5) + (spacing * 4)
 local totalHeight = barHeight
 local textColor = { r = 1, g = 1, b = 1 }
 
@@ -37,11 +37,48 @@ function HorseHud:render()
     local stamina = (data.stamina or 0) / (data.maxStamina or 1)
     local hunger = (data.hunger or 0) / (data.maxHunger or 1)
     local thirst = (data.thirst or 0) / (data.maxThirst or 1)
+    local fear = (data.fear or 0) / 100
 
     self:drawStatBar(0, "Health", health)
     self:drawStatBar(1, "Stamina", stamina)
     self:drawStatBar(2, "Hunger", hunger)
     self:drawStatBar(3, "Thirst", thirst)
+    self:drawFearBar(4, "Fear", fear)
+end
+
+function HorseHud:drawFearBar(index, label, value)
+    local x = (barWidth + spacing) * index
+    local width = barWidth * value
+    local color = self:getColorForFear(value)
+
+    self:drawRect(x, 0, barWidth, barHeight, 0.3, 0, 0, 0)
+    self:drawRect(x, 0, width, barHeight, 0.7, color.r, color.g, color.b)
+    self:drawTextCentre(label, x + barWidth / 2, 1, textColor.r, textColor.g, textColor.b, 1.0, UIFont.Small)
+end
+
+function HorseHud:getColorForFear(value)
+    -- Inverted: low = green (calm), high = red (panicked)
+    local color = {}
+    if value <= 0.25 then
+        color.r = 0
+        color.g = 0.6
+        color.b = 0
+    elseif value <= 0.5 then
+        local v = (value - 0.25) * 4
+        color.r = v
+        color.g = 0.6
+        color.b = 0
+    elseif value <= 0.8 then
+        local v = (value - 0.5) / 0.3
+        color.r = 1
+        color.g = 0.6 * (1 - v)
+        color.b = 0
+    else
+        color.r = 1
+        color.g = 0
+        color.b = 0
+    end
+    return color
 end
 
 function HorseHud:drawStatBar(index, label, value)

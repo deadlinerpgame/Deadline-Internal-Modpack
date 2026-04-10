@@ -16,6 +16,7 @@ local WEAPON_TABLE = {
     "Base.Revolver_Short",       -- S&W M36
     "Base.Revolver",             -- S&W M625
     "Base.Pistol_Compact",       -- SIG Sauer M11
+    "Base.ImprovisedGunToolKit", -- Gun Cleaning Kit
 }
 
 local AMMO_TABLE = {
@@ -42,6 +43,19 @@ local function addWeaponWithRandomCondition(inv, player)
     if item then
         local newCondition = ZombRand(3, item:getConditionMax() + 1)
         item:setCondition(newCondition)
+        if item.getMagazineType then
+            local magType = item:getMagazineType()
+            if magType then
+                item:setContainsClip(true)
+            end
+        end
+        if item.getMaxAmmo then
+            local maxAmmo = item:getMaxAmmo()
+            if maxAmmo and maxAmmo > 0 then
+                local ammo = ZombRand(maxAmmo + 1)
+                item:setCurrentAmmoCount(ammo)
+            end
+        end
         setTempOwner(item, player)
     end
     return item

@@ -172,7 +172,6 @@ function AdminEditorWindow:rebuildWidgets()
         local rEntry = {}
         local fullW  = CENTER_W - PAD*2
 
-        
         local labelEntry = ISTextEntryBox:new(resp.label or "", cx, cy, fullW - 80, INPUT_H)
         labelEntry:initialise(); labelEntry:instantiate(); self:addChild(labelEntry)
         self.widgets[#self.widgets+1] = labelEntry
@@ -184,7 +183,6 @@ function AdminEditorWindow:rebuildWidgets()
         self.widgets[#self.widgets+1] = btnDel
         cy = cy + INPUT_H + 2
 
-        
         local halfW = math.floor((fullW - 4) / 2)
 
         local leadsCombo = ISComboBox:new(cx, cy, halfW, INPUT_H, self, nil)
@@ -214,7 +212,6 @@ function AdminEditorWindow:rebuildWidgets()
         rEntry.failCombo = failCombo
         cy = cy + INPUT_H + 2
 
-        
         if #resp.conditions >= 2 then
             local andOrCombo = ISComboBox:new(cx, cy, 80, INPUT_H, self, nil)
             andOrCombo:initialise(); andOrCombo:instantiate()
@@ -226,7 +223,6 @@ function AdminEditorWindow:rebuildWidgets()
             cy = cy + INPUT_H + 2
         end
 
-        
         rEntry.conditionWidgets = {}
         for ci, cond in ipairs(resp.conditions) do
             local cEntry = {}
@@ -292,11 +288,9 @@ function AdminEditorWindow:rebuildWidgets()
                 cy = cy + INPUT_H + 2
             end
             
-
             rEntry.conditionWidgets[ci] = cEntry
         end
 
-        
         local btnAddCond = ISButton:new(cx, cy, 130, BTN_H, "+ Add Condition", self, AdminEditorWindow.onAddCondition)
         btnAddCond.respIdx = ri
         btnAddCond:initialise(); btnAddCond:instantiate(); self:addChild(btnAddCond)
@@ -498,7 +492,6 @@ function AdminEditorWindow:onSave()
     sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "UpdateZone", { zone = zone })
 
     self.unsaved = false
-    print("[NPCDialogue EDITOR] Saved zone: " .. tostring(zone.id))
 end
 
 function AdminEditorWindow:onDiscard()
@@ -576,10 +569,8 @@ function AdminEditorWindow:prerender()
     self:drawText("Portrait name:", lx, ly, 0.8, 0.8, 0.8, 1, fSm); ly = ly + lhSm + INPUT_H + PAD
     self:drawText("Radius:",        lx, ly, 0.8, 0.8, 0.8, 1, fSm)
 
-    
     self:drawText("DIALOGUE TREE", W - RIGHT_W + PAD, CONTENT_Y + PAD, 0.6, 0.6, 0.6, 1, fTny)
 
-    
     for _, rw in ipairs(self.responseWidgets or {}) do
         for _, cw in ipairs(rw.conditionWidgets or {}) do
             if cw.amountEntry then
@@ -588,7 +579,6 @@ function AdminEditorWindow:prerender()
         end
     end
 
-    
     if self.selectedNodeId then
         local cx   = CENTER_X + PAD
         local cy   = CONTENT_Y + PAD
@@ -610,7 +600,6 @@ function AdminEditorWindow:prerender()
         self:drawText("No node selected.", CENTER_X + PAD, CONTENT_Y + PAD, 0.5, 0.5, 0.5, 1, fSm)
     end
 end
-
 
 local instance = nil
 function AdminEditorWindow.getInstance()
