@@ -106,6 +106,7 @@ end
 
 
 function setHorseTemperamentDebug(player, item, tempName)
+    if checkHorseGhost(item, player) then return end
     if not item or not tempName then return end
     assignHorseGUID(item, player)
     local data = item:getModData()
@@ -1112,7 +1113,32 @@ end
 Events.OnPlayerGetDamage.Add(onLoyalHorseDamage)
 
 
+function isHorseGhost(item, player)
+    if not item then return true end
+    local wi = item:getWorldItem()
+    if not wi then return true end
+    local sq = wi:getSquare()
+    if not sq then return true end
+    local wios = sq:getWorldObjects()
+    for i = 0, wios:size() - 1 do
+        if wios:get(i) == wi then
+            return false
+        end
+    end
+    return true
+end
+
+function checkHorseGhost(item, player)
+    if isHorseGhost(item, player) then
+        if player then player:Say("Please move a tile and try again.") end
+        return true
+    end
+    return false
+end
+
+
 function doMount(item, player)
+    if checkHorseGhost(item, player) then return end
     assignHorseGUID(item, player)
     local data = item:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1264,10 +1290,12 @@ function checkWater(player)
 end
 
 function onDrinkGroundWater(player, horse, X, Y, Z)
+    if checkHorseGhost(horse, player) then return end
     ISTimedActionQueue.add(DrinkWaterGround:new(player, horse, X, Y, Z))
 end
 
 function onFeedHorse(player, horse, food)
+    if checkHorseGhost(horse, player) then return end
         ISTimedActionQueue.add(HorseFeed:new(player, horse, food))
 end
 
@@ -1411,6 +1439,7 @@ end
 
 
 function claimHorse(player, item)
+    if checkHorseGhost(item, player) then return end
     assignHorseGUID(item, player)
     local data = item:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1428,6 +1457,7 @@ function claimHorse(player, item)
 end
 
 function unclaimHorse(player, item)
+    if checkHorseGhost(item, player) then return end
     assignHorseGUID(item, player)
     local data = item:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1444,6 +1474,7 @@ function unclaimHorse(player, item)
 end
 
 function unclaimHorseAdmin(player, item)
+    if checkHorseGhost(item, player) then return end
     assignHorseGUID(item, player)
     local data = item:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1460,6 +1491,7 @@ end
 
 
 function reassureHorse(player, item)
+    if checkHorseGhost(item, player) then return end
     print(item)
     if not item then return end
     local data = item:getModData()
@@ -1502,6 +1534,7 @@ end
 
 
 function renameHorse(player, item)
+    if checkHorseGhost(item, player) then return end
     assignHorseGUID(item, player)
     local data = item:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1544,6 +1577,7 @@ end
 
 
 function setHorseDescription(player, item)
+    if checkHorseGhost(item, player) then return end
     assignHorseGUID(item, player)
     local data = item:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1576,6 +1610,7 @@ function setHorseDescription(player, item)
 end
 
 function clearHorseDescription(player, item)
+    if checkHorseGhost(item, player) then return end
     assignHorseGUID(item, player)
     local data = item:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1600,6 +1635,7 @@ end
 
 
 function equipSaddleOnHorse(player, horse, saddleItem)
+    if checkHorseGhost(horse, player) then return end
     assignHorseGUID(horse, player)
     local data = horse:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1630,6 +1666,7 @@ end
 
 
 function unequipSaddleFromHorse(player, horse)
+    if checkHorseGhost(horse, player) then return end
     assignHorseGUID(horse, player)
     local data = horse:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1668,6 +1705,7 @@ end
 
 
 function equipHeadOnHorse(player, horse, headItem)
+    if checkHorseGhost(horse, player) then return end
     assignHorseGUID(horse, player)
     local data = horse:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1698,6 +1736,7 @@ end
 
 
 function unequipHeadFromHorse(player, horse)
+    if checkHorseGhost(horse, player) then return end
     assignHorseGUID(horse, player)
     local data = horse:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1775,6 +1814,7 @@ end
 
 
 function equipSaddlebagOnHorse(player, horse, bagItem)
+    if checkHorseGhost(horse, player) then return end
     assignHorseGUID(horse, player)
     local data = horse:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1809,6 +1849,7 @@ end
 
 
 function unequipSaddlebagFromHorse(player, horse)
+    if checkHorseGhost(horse, player) then return end
     assignHorseGUID(horse, player)
     local data = horse:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1849,6 +1890,7 @@ end
 
 
 function equipBardingOnHorse(player, horse, bardingItem)
+    if checkHorseGhost(horse, player) then return end
     assignHorseGUID(horse, player)
     local data = horse:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1864,6 +1906,7 @@ function equipBardingOnHorse(player, horse, bardingItem)
 end
 
 function unequipBardingFromHorse(player, horse)
+    if checkHorseGhost(horse, player) then return end
     assignHorseGUID(horse, player)
     local data = horse:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1883,6 +1926,7 @@ function unequipBardingFromHorse(player, horse)
 end
 
 function equipHoofOnHorse(player, horse, hoofItem)
+    if checkHorseGhost(horse, player) then return end
     assignHorseGUID(horse, player)
     local data = horse:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1901,6 +1945,7 @@ function equipHoofOnHorse(player, horse, hoofItem)
 end
 
 function unequipHoofFromHorse(player, horse)
+    if checkHorseGhost(horse, player) then return end
     assignHorseGUID(horse, player)
     local data = horse:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1922,6 +1967,7 @@ function unequipHoofFromHorse(player, horse)
 end
 
 function equipMouthOnHorse(player, horse, mouthItem)
+    if checkHorseGhost(horse, player) then return end
     assignHorseGUID(horse, player)
     local data = horse:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -1949,6 +1995,7 @@ function equipMouthOnHorse(player, horse, mouthItem)
 end
 
 function unequipMouthFromHorse(player, horse)
+    if checkHorseGhost(horse, player) then return end
     assignHorseGUID(horse, player)
     local data = horse:getModData()
     local guid = data.horseGUID or "NO_GUID"
@@ -2144,6 +2191,7 @@ function HorseStatsEditor:createChildren()
 end
 
 function HorseStatsEditor:onSave()
+    if checkHorseGhost(self.item, self.player) then self:close() return end
     local newHealth = tonumber(self.healthEntry:getText()) or self.data.health
     local newMaxHealth = tonumber(self.maxHealthEntry:getText()) or self.data.maxHealth
     local newHunger = tonumber(self.hungerEntry:getText()) or self.data.hunger
@@ -2212,6 +2260,7 @@ function HorseStatsEditor:new(player, item)
 end
 
 function openHorseStatsEditor(player, item)
+    if checkHorseGhost(item, player) then return end
     local editor = HorseStatsEditor:new(player, item)
     editor:initialise()
     editor:addToUIManager()
