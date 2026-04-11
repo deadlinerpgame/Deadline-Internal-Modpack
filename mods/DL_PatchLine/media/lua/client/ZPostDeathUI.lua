@@ -25,8 +25,6 @@ local function OnPlayerDeath_CheckPostRespawn()
     
     if not getPlayer():getInventory() then return end;
 
-    JaxeRevival.Incapacitation.apply(getPlayer(), true, false);
-
     print("Check Post Respawn");
     -- Go through all corpses in the square
     local inventory = getPlayer():getInventory();
@@ -40,34 +38,6 @@ local function OnPlayerDeath_CheckPostRespawn()
         local item = playerPrevItems:getItems():get(prevItemNo);
         if item and item:getFullType() ~= "KI5.PODCardGray" then
             table.insert(itemsToRemove, item);
-        end
-    end
-
-    print("2 - Finding player corpse.");
-
-    LastCorpse = nil;
-    if getPlayer():getSquare() then
-        local objects = getPlayer():getSquare():getDeadBodys();
-
-        if objects then
-            for i = 0, objects:size() - 1 do
-                local obj = objects:get(i);
-
-                if instanceof(obj, "IsoDeadBody") then
-                    local bodyContainer = obj:getContainer();
-                    if bodyContainer then
-                        local corpseTicket = bodyContainer:getItemFromType("Base.CorpseTicket");
-                        if corpseTicket and corpseTicket:getModData().corpseOwner then
-                            if corpseTicket:getModData().corpseOwner == getPlayer():getUsername() then
-                                print("Found last corpse!");
-                                print(corpseTicket:getFullType());
-                                LastCorpse = obj;
-                                break;
-                            end
-                        end
-                    end
-                end
-            end
         end
     end
 
@@ -219,7 +189,9 @@ function ISPostDeathUI:onContinueIncap()
     getPlayer():setZ(LastZ or 0);
 
     getPlayer():getDescriptor():getHumanVisual():copyFrom(LastVisual);
-    getPlayer():getBodyDamage():setOverallBodyHealth(25);
+    getPlayer():getBodyDamage():setOverallBodyHealth(10);
+
+    JaxeRevival.Incapacitation.apply(getPlayer(), true, false);
     
     getPlayer():getDescriptor():setForename(LastName.first or string.split(getPlayer():getUsername(), " ")[1]);
     getPlayer():getDescriptor():setSurname(LastName.last or string.split(getPlayer():getUsername(), " ")[2]);
@@ -383,4 +355,4 @@ print(#spawn..' possible spawn points')
 --]]
 
 Events.OnPlayerDeath.Add(OnPlayerDeath_SaveData);
-Events.EveryOneMinute.Add(OnPlayerDeath_CheckPostRespawn);
+Events.OnPlayerUpdate.Add(OnPlayerDeath_CheckPostRespawn);
