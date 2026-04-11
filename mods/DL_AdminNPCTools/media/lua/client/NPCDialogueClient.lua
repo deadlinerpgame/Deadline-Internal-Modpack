@@ -93,7 +93,7 @@ local function refreshClientZones()
 end
 
 function NPCDialogueClientCommands.SyncReady(args)
-    
+
     NPCDialogue.clientZones = {}
     refreshClientZones()
 end
@@ -115,7 +115,7 @@ end
 
 local function onServerCommand(module, command, args)
     if module ~= "NPCDialogue" then return end
-    
+
     if NPCDialogueClientCommands[command] then
         NPCDialogueClientCommands[command](args)
     end
@@ -124,7 +124,7 @@ end
 Events.OnServerCommand.Add(onServerCommand)
 
 local function onConnected()
-    
+
     sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "RequestSync", {})
 end
 
@@ -241,11 +241,11 @@ Events.OnFillWorldObjectContextMenu.Add(onFillWorldObjectContextMenu)
 
 require "DialogueWindow"
 
-local currentZoneInside = nil  
+local currentZoneInside = nil
 
 function NPCDialogueClientCommands.SessionGranted(args)
     if not (args and args.zoneId) then return end
-    
+
     local zone = NPCDialogue.clientZones[args.zoneId]
     if not zone then
         zone = readZoneFromTile(math.floor(args.x), math.floor(args.y), math.floor(args.z))
@@ -293,7 +293,7 @@ function NPCDialogueClientCommands.SessionGranted(args)
                                 reqs = {}
                                 for _, cond in pairs(resp.conditions) do
                                     local label = nil
-                                    
+
                                     local c = {}
                                     for k,v in pairs(cond) do c[k] = v end
                                     c.zoneId = zoneId
@@ -353,7 +353,7 @@ end
 
 function NPCDialogueClientCommands.SessionDenied(args)
     if not (args and args.message) then return end
-    
+
     local p = getSpecificPlayer(0)
     if p then
         p:setHaloNote(args.message, 255, 200, 100, 200)
@@ -384,11 +384,11 @@ Events.OnPlayerUpdate.Add(onPlayerUpdate)
 local function onKeyPressed(key)
     if key ~= Keyboard.KEY_F then return end
     local dw = DialogueWindow.getInstance()
-    if dw:isVisible() then return end  
+    if dw:isVisible() then return end
     if not currentZoneInside then return end
 
     local zone = currentZoneInside
-    
+
     sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "StartSession", {
         zoneId = zone.id,
         name   = zone.name,

@@ -5,6 +5,7 @@ require "ISUI/ISButton"
 require "ISUI/ISTextEntryBox"
 require "ISUI/ISComboBox"
 require "ISUI/ISLabel"
+require "JsonIOWindow"
 
 AdminEditorWindow = ISPanel:derive("AdminEditorWindow")
 
@@ -48,7 +49,7 @@ function AdminEditorWindow:new()
         math.floor((sw - W) / 2),
         math.floor((sh - H) / 2),
         W, H)
-    o.moveWithMouse  = true
+    o.moveWithMouse  = false
     o.zone           = nil
     o.workingTree    = nil
     o.selectedNodeId = nil
@@ -80,8 +81,54 @@ function AdminEditorWindow:buildStaticButtons()
     self.btnDiscard = ISButton:new(W - PAD - BTN_W, 4, BTN_W, BTN_H, "Discard", self, AdminEditorWindow.onDiscard)
     self.btnDiscard:initialise(); self.btnDiscard:instantiate(); self:addChild(self.btnDiscard)
 
+    self.btnExport = ISButton:new(W - PAD - BTN_W*4 - 12, 4, BTN_W, BTN_H, "Export", self, AdminEditorWindow.onExport)
+    self.btnExport:initialise(); self.btnExport:instantiate(); self:addChild(self.btnExport)
+
+    self.btnImport = ISButton:new(W - PAD - BTN_W*3 - 8, 4, BTN_W, BTN_H, "Import", self, AdminEditorWindow.onImport)
+    self.btnImport:initialise(); self.btnImport:instantiate(); self:addChild(self.btnImport)
+
     self.btnClose = ISButton:new(W - PAD - BTN_W, H - FOOTER_H + 4, BTN_W, BTN_H, "Close", self, AdminEditorWindow.onClose)
     self.btnClose:initialise(); self.btnClose:instantiate(); self:addChild(self.btnClose)
+end
+
+function AdminEditorWindow:buildExportPayload()
+    local radius = tonumber(self.entryRadius and self.entryRadius:getInternalText() or self.zone.radius) or 2
+    return {
+        schema       = "npc-dialogue/1",
+        name         = (self.entryName and self.entryName:getInternalText()) or self.zone.name or "",
+        portrait     = (self.entryPortrait and self.entryPortrait:getInternalText()) or self.zone.portrait or "",
+        radius       = radius,
+        concurrent   = self.zone.concurrent,
+        dialogueTree = self.workingTree or { nodes = {}, nodeOrder = {} },
+    }
+end
+
+function AdminEditorWindow:onExport()
+    local payload = self:buildExportPayload()
+    local text = JsonIOWindow.json.encode(payload)
+    JsonIOWindow.openExport("Export NPC: " .. (payload.name or ""), text)
+end
+
+function AdminEditorWindow:onImport()
+    local self_ref = self
+    JsonIOWindow.openImport("Import NPC (replaces current data)", function(data)
+        if type(data) ~= "table" then error("not an object") end
+        if type(data.dialogueTree) ~= "table" then error("missing dialogueTree") end
+        local tree = data.dialogueTree
+        if type(tree.nodes) ~= "table" then tree.nodes = {} end
+        if type(tree.nodeOrder) ~= "table" then tree.nodeOrder = {} end
+
+        self_ref.zone.name     = tostring(data.name or self_ref.zone.name or "")
+        self_ref.zone.portrait = tostring(data.portrait or "")
+        self_ref.zone.radius   = tonumber(data.radius) or self_ref.zone.radius or 2
+        if data.concurrent ~= nil then
+            self_ref.zone.concurrent = data.concurrent and true or false
+        end
+        self_ref.workingTree    = tree
+        self_ref.selectedNodeId = tree.nodeOrder[1] or nil
+        self_ref.unsaved        = true
+        self_ref:rebuildWidgets()
+    end)
 end
 
 function AdminEditorWindow:rebuildWidgets()
@@ -287,7 +334,7 @@ function AdminEditorWindow:rebuildWidgets()
                 cEntry.occupationEntry = occEntry
                 cy = cy + INPUT_H + 2
             end
-            
+
             rEntry.conditionWidgets[ci] = cEntry
         end
 
@@ -346,7 +393,7 @@ function AdminEditorWindow:flushEdits()
                             cond.type = cw.typeCombo:getOptionText(cw.typeCombo.selected)
                             if cw.itemEntry   then cond.itemName = cw.itemEntry:getText() end
                             if cw.amountEntry then cond.amount   = tonumber(cw.amountEntry:getText()) or 1 end
-                            
+
                             if cw.skillCombo      then cond.skill      = cw.skillCombo:getOptionText(cw.skillCombo.selected) end
                             if cw.levelEntry      then cond.level      = tonumber(cw.levelEntry:getText()) or 1 end
                             if cw.occupationEntry then cond.occupation = cw.occupationEntry:getText() end
@@ -509,7 +556,7 @@ function AdminEditorWindow:onClose()
 end
 
 function AdminEditorWindow:onMouseUp(x, y)
-    
+
     if not self.selectedNodeId then return end
     local node = self.workingTree and self.workingTree.nodes[self.selectedNodeId]
     if not node then return end

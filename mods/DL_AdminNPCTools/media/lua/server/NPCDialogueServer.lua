@@ -99,6 +99,40 @@ function NPCDialogueServerCommands.EndSession(playerObj, args)
     end
 end
 
+local function onPlayerDisconnect(playerObj)
+    if not playerObj then return end
+    local username = playerObj:getUsername()
+    if not username then return end
+    for zoneId, occupant in pairs(activeSessions) do
+        if occupant == username then
+            activeSessions[zoneId] = nil
+        end
+    end
+end
+
+if Events.OnPlayerDisconnect then
+    Events.OnPlayerDisconnect.Add(onPlayerDisconnect)
+elseif Events.OnClientDisconnect then
+    Events.OnClientDisconnect.Add(onPlayerDisconnect)
+end
+
+if Events.EveryTenMinutes then
+    Events.EveryTenMinutes.Add(function()
+        local online = {}
+        local players = getOnlinePlayers and getOnlinePlayers() or nil
+        if not players then return end
+        for i = 0, players:size() - 1 do
+            local p = players:get(i)
+            if p then online[p:getUsername()] = true end
+        end
+        for zoneId, occupant in pairs(activeSessions) do
+            if not online[occupant] then
+                activeSessions[zoneId] = nil
+            end
+        end
+    end)
+end
+
 function NPCDialogueServerCommands.UpdateZone(playerObj, args)
     
     if not isAdminOrDebug(playerObj) then return end
