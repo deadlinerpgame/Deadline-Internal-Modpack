@@ -30,6 +30,20 @@ local function OnPlayerDeath_CheckPostRespawn()
     local inventory = getPlayer():getInventory();
     if not inventory then return end;
 
+    local square = getPlayer():getSquare();
+    local corpsesThisSquare = square:getDeadBodys();
+    for i = 0, corpsesThisSquare:size() - 1 do
+        local corpse = corpsesThisSquare:get(i);
+
+        if corpse then
+            local corpseContainer = corpse:getContainer();
+            local corpseTicket = corpseContainer:getItemFromType("Base.CorpseTicket");
+            if corpseTicket and corpseTicket:getModData().corpseOwner == getPlayer():getUsername() then
+                LastCorpse = corpse;
+            end
+        end
+    end
+
     -- Step 1, remove all items that aren't the KI5.PODCardGray.
     print("1 - removing player items except respawn pod.");
     local playerPrevItems = getPlayer():getInventory();
@@ -288,6 +302,13 @@ function ISPostDeathUI:createChildren()
     self.buttonRespawn.title = "Respawn Incapacitated";
     self.buttonRespawn.tooltip = "Spawn at the same place you died, incapacitated.";
 
+    self.buttonExit.onclick = self.onRespawn;
+    self.buttonExit.title = "Respawn";
+    self.buttonExit.tooltip = "Die and be sent back to the main spawn.";
+
+    self.buttonQuit.onclick = self.onExit;
+    self.buttonQuit.title = "Quit to Menu";
+    self.buttonQuit.tooltip = "Quit to Menu";
 end
 
 -- function CoopCharacterCreation:accept1()
