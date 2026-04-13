@@ -90,6 +90,7 @@ function IsItemGasMask(item)
     if string.find(itemType, "PrepperMask") or string.find(itemType, "StalkerMask") then return true end;
     if string.find(itemType, "Respirator") and (not string.find(itemType, "Neck")) then return true end;
     if string.find(itemType, "NBCMask") then return true end;
+    if item:hasTag("GasMask") then return true end;
     return false;
 end
 
