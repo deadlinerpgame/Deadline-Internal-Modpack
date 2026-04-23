@@ -361,7 +361,7 @@ function MedLine_Client.reduceBloodLossByPercentage(efficiency)
 
     MF.getMoodle("BloodTransfusion", getPlayer():getPlayerNum()):setValue(0.6);
 
-    bloodData.bloodLossTimeoutUnix = bloodData.bloodLossStartedUnix + newRemainingTime;
+    bloodData.bloodLossTimeoutUnix = bloodData.bloodLossTimeoutUnix - newRemainingTime;
     MedLine_Logging.log("Blood loss unix timeout is now: " .. bloodData.bloodLossTimeoutUnix);
 
     bloodData.hasReceivedTransfusion = true;
