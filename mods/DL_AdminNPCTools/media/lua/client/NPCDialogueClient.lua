@@ -21,23 +21,7 @@ local function writeZoneToTile(zone)
     if not cell then return false end
     local sq = cell:getGridSquare(zone.x, zone.y, zone.z)
     if not sq then return false end
-
-    local md = sq:getModData()
-    md[ZONE_KEY] = zone
-    if sq.transmitModData then
-        sq:transmitModData()
-    elseif sq.transmitModdata then
-        sq:transmitModdata()
-    end
-
-    ModData.request(NPCDialogue.MODDATA_KEY)
-    local modTable = ModData.getOrCreate(NPCDialogue.MODDATA_KEY)
-    if not modTable.zones then modTable.zones = {} end
-    modTable.zones[zone.id] = { id = zone.id, x = zone.x, y = zone.y, z = zone.z }
-    ModData.add(NPCDialogue.MODDATA_KEY, modTable)
-    ModData.transmit(NPCDialogue.MODDATA_KEY)
-    ModData.request(NPCDialogue.MODDATA_KEY)
-
+    sq:getModData()[ZONE_KEY] = zone
     return true
 end
 
@@ -46,22 +30,7 @@ local function clearZoneFromTile(x, y, z, id)
     if not cell then return end
     local sq = cell:getGridSquare(x, y, z)
     if sq then
-        local md = sq:getModData()
-        md[ZONE_KEY] = nil
-        if sq.transmitModData then
-            sq:transmitModData()
-        elseif sq.transmitModdata then
-            sq:transmitModdata()
-        end
-    end
-
-    if id then
-        ModData.request(NPCDialogue.MODDATA_KEY)
-        local modTable = ModData.getOrCreate(NPCDialogue.MODDATA_KEY)
-        if modTable.zones then modTable.zones[id] = nil end
-        ModData.add(NPCDialogue.MODDATA_KEY, modTable)
-        ModData.transmit(NPCDialogue.MODDATA_KEY)
-        ModData.request(NPCDialogue.MODDATA_KEY)
+        sq:getModData()[ZONE_KEY] = nil
     end
 end
 
@@ -73,44 +42,24 @@ local function readZoneFromTile(x, y, z)
     return sq:getModData()[ZONE_KEY]
 end
 
-local function refreshClientZones()
-    ModData.request(NPCDialogue.MODDATA_KEY)
-    local modTable = ModData.getOrCreate(NPCDialogue.MODDATA_KEY)
-    if not modTable.zones then return end
-    local count = 0
-    for id, pos in pairs(modTable.zones) do
-        if not NPCDialogue.clientZones[id] then
-            local zone = readZoneFromTile(pos.x, pos.y, pos.z)
-            if zone and zone.id then
-                NPCDialogue.clientZones[zone.id] = zone
-                count = count + 1
-            end
-        end
-    end
-    if count > 0 then
-        lastPlayerPos = { x = -1, y = -1, z = -1 }
-    end
-end
-
-function NPCDialogueClientCommands.SyncReady(args)
-
-    NPCDialogue.clientZones = {}
-    refreshClientZones()
-end
-
 function NPCDialogueClientCommands.SyncZone(args)
     if not (args and args.zone) then return end
     local zone = args.zone
     NPCDialogue.clientZones[zone.id] = zone
     writeZoneToTile(zone)
+    lastPlayerPos = { x = -1, y = -1, z = -1 }
 end
 
 function NPCDialogueClientCommands.RemoveAck(args)
     if not (args and args.id) then return end
+    local existing = NPCDialogue.clientZones[args.id]
     NPCDialogue.clientZones[args.id] = nil
     if args.x and args.y and args.z then
         clearZoneFromTile(math.floor(args.x), math.floor(args.y), math.floor(args.z), args.id)
+    elseif existing then
+        clearZoneFromTile(existing.x, existing.y, existing.z, args.id)
     end
+    lastPlayerPos = { x = -1, y = -1, z = -1 }
 end
 
 local function onServerCommand(module, command, args)
@@ -123,14 +72,45 @@ end
 
 Events.OnServerCommand.Add(onServerCommand)
 
-local function onConnected()
+local syncReceived = false
+local retryAttempts = 0
+local MAX_RETRIES = 8
 
-    sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "RequestSync", {})
+local function requestSync()
+    local p = getSpecificPlayer(0)
+    if not p then return false end
+    sendClientCommand(p, "NPCDialogue", "RequestSync", {})
+    return true
+end
+
+function NPCDialogueClientCommands.SyncReady(args)
+    syncReceived = true
+    lastPlayerPos = { x = -1, y = -1, z = -1 }
+end
+
+local function onConnected()
+    NPCDialogue.clientZones = {}
+    syncReceived = false
+    retryAttempts = 0
+    requestSync()
+end
+
+local function onGameStart()
+    if syncReceived then return end
+    requestSync()
 end
 
 Events.OnConnected.Add(onConnected)
+Events.OnGameStart.Add(onGameStart)
 
-Events.EveryOneMinute.Add(refreshClientZones)
+if Events.EveryOneMinute then
+    Events.EveryOneMinute.Add(function()
+        if syncReceived then return end
+        if retryAttempts >= MAX_RETRIES then return end
+        retryAttempts = retryAttempts + 1
+        requestSync()
+    end)
+end
 
 local function updateActiveZones()
     local p = getSpecificPlayer(0)

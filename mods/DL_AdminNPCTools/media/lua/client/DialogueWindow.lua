@@ -12,6 +12,7 @@ local HINT_EXTRA   = 16
 local COL_X  = PAD + PORTRAIT_SZ + PAD
 local COL_W  = W - COL_X - PAD
 
+-- Keys that close the window. Edit this list to rebind.
 local CLOSE_KEYS = { Keyboard.KEY_F, Keyboard.KEY_V }
 
 function DialogueWindow:new()
@@ -43,6 +44,7 @@ function DialogueWindow:new()
     return o
 end
 
+-- Global key hook, active only while the window is open.
 local function onGlobalKeyPressed(key)
     local inst = DialogueWindow._instance
     if not inst or not inst.active then return end
@@ -113,7 +115,7 @@ function DialogueWindow:endSession()
     if self.zoneId then
         sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "EndSession", { zoneId = self.zoneId })
     end
-
+    -- start fade-out; update() hides the panel when alpha reaches 0
     self.fadeDir = -1
 end
 

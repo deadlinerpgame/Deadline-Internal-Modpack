@@ -10,6 +10,41 @@ function grantProfessionRecipes()
     end
 
     if player:HasTrait("Farmaceutico") then
+        player:learnRecipe("Make Ephedrine Compound");
+        player:learnRecipe("Produce Meth Compound");
+        player:learnRecipe("Dry the Meth Compound");
+
+        player:learnRecipe("Make Acid Base");
+        player:learnRecipe("Make Acid Compound");
+        player:learnRecipe("Dry the Acid Compound");
+
+        player:learnRecipe("Make Benzodiazepine Compound");
+        player:learnRecipe("Produce Xanax Compound");
+        player:learnRecipe("Dry Xanax Compound");
+
+        player:learnRecipe("Make Raw Cocaine Compound");
+        player:learnRecipe("Refine Cocaine Compound");
+        player:learnRecipe("Dry Refined Cocaine");
+
+        player:learnRecipe("Extract Psilocybin");
+        player:learnRecipe("Mix Psilocybin Compound");
+        player:learnRecipe("Grow and Pack Shrooms");
+
+        player:learnRecipe("Extract Morphine Compound");
+        player:learnRecipe("Produce Refined Heroin");
+        player:learnRecipe("Dry Refined Morphine");
+
+        player:learnRecipe("Make Fentanyl Compound");
+        player:learnRecipe("Dry and Pack Fentanyl");
+
+        player:learnRecipe("Make Amphetamine Salts");
+        player:learnRecipe("Dry Amphetamine Salts");
+
+        player:learnRecipe("Extract Crack Compound");
+        player:learnRecipe("Dry and Pack the Crack");
+
+        player:learnRecipe("Extract Phenylethylamine");
+
         player:learnRecipe("Make Adderall Compound");
         player:learnRecipe("Produce Adderall");
         player:learnRecipe("Make Clonazepam Compound");
@@ -32,6 +67,18 @@ function grantProfessionRecipes()
         player:learnRecipe("Make Benzodiazepine Compound");
         player:learnRecipe("Produce Xanax Compound");
         player:learnRecipe("Dry Xanax Compound");
+        player:learnRecipe("Make OxycodoneN Compound");
+        player:learnRecipe("Make ADderallN Compound");
+        player:learnRecipe("Produce AdderallN");
+        player:learnRecipe("Produce XanaxN Compound");
+        player:learnRecipe("Extract Ephedrine Compound");
+        player:learnRecipe("Extract CrackN Compound");
+        player:learnRecipe("Extract Ecstasy Compound");
+        player:learnRecipe("Make Raw CocaineN Compound");
+        player:learnRecipe("Make VicodinN Compound");
+        player:learnRecipe("Make FentanylN Compound");
+        player:learnRecipe("Make DMTN Compound");
+        player:learnRecipe("Produce Refined HeroinN");
     end
 
     if player:HasTrait("Drugsmith") then
@@ -69,6 +116,41 @@ function grantProfessionRecipes()
         player:learnRecipe("Dry and Pack the Crack");
 
         player:learnRecipe("Extract Phenylethylamine");
+
+        player:learnRecipe("Make Adderall Compound");
+        player:learnRecipe("Produce Adderall");
+        player:learnRecipe("Make Clonazepam Compound");
+        player:learnRecipe("Make Clonazepam");
+        player:learnRecipe("Make Codeine Compound");
+        player:learnRecipe("Make Codeine");
+        player:learnRecipe("Make Lean");
+        player:learnRecipe("Make Morphine Compound");
+        player:learnRecipe("Make Morphine");
+        player:learnRecipe("Make Oxycodone Compound");
+        player:learnRecipe("Make Oxycodone");
+        player:learnRecipe("Make Percocet Compound");
+        player:learnRecipe("Make Percocet");
+        player:learnRecipe("Make Phenobarbital Compound");
+        player:learnRecipe("Make Phenobarbital");
+        player:learnRecipe("Make Tramadol Compound");
+        player:learnRecipe("Make Tramadol");
+        player:learnRecipe("Make Vicodin Compound");
+        player:learnRecipe("Make Vicodin");
+        player:learnRecipe("Make Benzodiazepine Compound");
+        player:learnRecipe("Produce Xanax Compound");
+        player:learnRecipe("Dry Xanax Compound");
+        player:learnRecipe("Make OxycodoneN Compound");
+        player:learnRecipe("Make ADderallN Compound");
+        player:learnRecipe("Produce AdderallN");
+        player:learnRecipe("Produce XanaxN Compound");
+        player:learnRecipe("Extract Ephedrine Compound");
+        player:learnRecipe("Extract CrackN Compound");
+        player:learnRecipe("Extract Ecstasy Compound");
+        player:learnRecipe("Make Raw CocaineN Compound");
+        player:learnRecipe("Make VicodinN Compound");
+        player:learnRecipe("Make FentanylN Compound");
+        player:learnRecipe("Make DMTN Compound");
+        player:learnRecipe("Produce Refined HeroinN");
     end
 
     if profession == "cook" then

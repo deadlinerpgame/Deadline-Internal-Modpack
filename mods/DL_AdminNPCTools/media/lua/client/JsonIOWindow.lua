@@ -5,6 +5,11 @@ require "ISUI/ISLabel"
 
 JsonIOWindow = ISPanel:derive("JsonIOWindow")
 
+-- =========================================================================
+-- Minimal JSON encoder / decoder. Handles: nil, bool, number, string,
+-- array (1..N integer keys), object (string keys). Good enough for the
+-- zone schema (tables of primitives + nested tables).
+-- =========================================================================
 local json = {}
 
 local function encodeString(s)
@@ -66,6 +71,7 @@ end
 
 function json.encode(v) return encodeValue(v, true, 0) end
 
+-- Decoder (recursive descent)
 local function skipWS(s, i)
     while i <= #s do
         local c = s:sub(i, i)
@@ -174,8 +180,11 @@ function json.decode(s)
     return val
 end
 
-JsonIOWindow.json = json
+JsonIOWindow.json = json  -- expose for other files
 
+-- =========================================================================
+-- UI
+-- =========================================================================
 local W, H = 640, 480
 local PAD  = 10
 local BTN_H, BTN_W = 24, 90
@@ -187,10 +196,10 @@ function JsonIOWindow:new(mode, title, initialText, onAccept)
     local o  = ISPanel.new(self,
         math.floor((sw - W) / 2), math.floor((sh - H) / 2), W, H)
     o.moveWithMouse = false
-    o.mode          = mode
+    o.mode          = mode          -- "export" or "import"
     o.titleText     = title or (mode == "export" and "Export" or "Import")
     o.initialText   = initialText or ""
-    o.onAccept      = onAccept
+    o.onAccept      = onAccept      -- function(text) for import
     o.errorMsg      = nil
     o.backgroundColor = { r = 0.05, g = 0.05, b = 0.05, a = 0.92 }
     o.borderColor     = { r = 0.5,  g = 0.5,  b = 0.5,  a = 1 }
@@ -207,7 +216,10 @@ function JsonIOWindow:createChildren()
     self.entry:instantiate()
     self.entry:setMultipleLine(true)
     self.entry:setMaxLines(10000)
-
+    -- Intentionally left editable even in export mode: PZ's
+    -- setEditable(false) disables selection too, which would make
+    -- copy-to-clipboard impossible. Export never reads this box back,
+    -- so stray edits are harmless.
     self:addChild(self.entry)
 
     local btnY = H - PAD - BTN_H

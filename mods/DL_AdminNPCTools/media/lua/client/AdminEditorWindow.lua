@@ -81,6 +81,7 @@ function AdminEditorWindow:buildStaticButtons()
     self.btnDiscard = ISButton:new(W - PAD - BTN_W, 4, BTN_W, BTN_H, "Discard", self, AdminEditorWindow.onDiscard)
     self.btnDiscard:initialise(); self.btnDiscard:instantiate(); self:addChild(self.btnDiscard)
 
+    -- Export / Import sit to the left of Save.
     self.btnExport = ISButton:new(W - PAD - BTN_W*4 - 12, 4, BTN_W, BTN_H, "Export", self, AdminEditorWindow.onExport)
     self.btnExport:initialise(); self.btnExport:instantiate(); self:addChild(self.btnExport)
 
@@ -334,7 +335,7 @@ function AdminEditorWindow:rebuildWidgets()
                 cEntry.occupationEntry = occEntry
                 cy = cy + INPUT_H + 2
             end
-
+            
             rEntry.conditionWidgets[ci] = cEntry
         end
 
@@ -393,7 +394,7 @@ function AdminEditorWindow:flushEdits()
                             cond.type = cw.typeCombo:getOptionText(cw.typeCombo.selected)
                             if cw.itemEntry   then cond.itemName = cw.itemEntry:getText() end
                             if cw.amountEntry then cond.amount   = tonumber(cw.amountEntry:getText()) or 1 end
-
+                            
                             if cw.skillCombo      then cond.skill      = cw.skillCombo:getOptionText(cw.skillCombo.selected) end
                             if cw.levelEntry      then cond.level      = tonumber(cw.levelEntry:getText()) or 1 end
                             if cw.occupationEntry then cond.occupation = cw.occupationEntry:getText() end
@@ -516,26 +517,6 @@ function AdminEditorWindow:onSave()
 
     zone.dialogueTree = deepCopyTree(self.workingTree)
 
-    local cell = getCell()
-    if not cell then return end
-    local sq = cell:getGridSquare(zone.x, zone.y, zone.z)
-    if not sq then return end
-
-    sq:getModData()["NPCDialogueZone"] = zone
-    if sq.transmitModData then
-        sq:transmitModData()
-    elseif sq.transmitModdata then
-        sq:transmitModdata()
-    end
-
-    ModData.request(NPCDialogue.MODDATA_KEY)
-    local modTable = ModData.getOrCreate(NPCDialogue.MODDATA_KEY)
-    if not modTable.zones then modTable.zones = {} end
-    modTable.zones[zone.id] = { id = zone.id, x = zone.x, y = zone.y, z = zone.z }
-    ModData.add(NPCDialogue.MODDATA_KEY, modTable)
-    ModData.transmit(NPCDialogue.MODDATA_KEY)
-    ModData.request(NPCDialogue.MODDATA_KEY)
-
     sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "UpdateZone", { zone = zone })
 
     self.unsaved = false
@@ -556,7 +537,7 @@ function AdminEditorWindow:onClose()
 end
 
 function AdminEditorWindow:onMouseUp(x, y)
-
+    
     if not self.selectedNodeId then return end
     local node = self.workingTree and self.workingTree.nodes[self.selectedNodeId]
     if not node then return end
