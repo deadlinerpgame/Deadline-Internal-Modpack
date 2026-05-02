@@ -1,0 +1,116 @@
+module Animals {
+
+
+	item RacingSaddle
+    {
+        Type = Normal,
+        DisplayName = Racing Saddle,
+        Weight = 5.00,
+        Icon	=	Animal,
+	WorldStaticModel = Saddle,
+    }
+
+	item RoadtripSaddle
+    {
+        Type = Normal,
+        DisplayName = Roadtrip Saddle,
+        Weight = 5.00,
+        Icon	=	Animal,
+	WorldStaticModel = Saddle,
+    }
+
+	item Blinder
+    {
+        Type = Normal,
+        DisplayName = Horse Blinders,
+        Weight = 5.00,
+        Icon	=	Animal,
+	WorldStaticModel = Saddle,
+    }
+
+	item SaddlebagSmall
+    {
+        Type = Normal,
+        DisplayName = Small Saddlebag,
+        Weight = 2.00,
+        Icon	=	Animal,
+	WorldStaticModel = Saddle,
+    }
+
+	item SaddlebagMedium
+    {
+        Type = Normal,
+        DisplayName = Medium Saddlebag,
+        Weight = 2.00,
+        Icon	=	Animal,
+	WorldStaticModel = Saddle,
+    }
+
+	item SaddlebagLarge
+    {
+        Type = Normal,
+        DisplayName = Large Saddlebag,
+        Weight = 2.00,
+        Icon	=	Animal,
+	WorldStaticModel = Saddle,
+    }
+
+	item Barding
+    {
+        Type = Normal,
+        DisplayName = Horse Barding,
+        Weight = 5.00,
+        Icon	=	Animal,
+	WorldStaticModel = Saddle,
+    }
+
+	item Horseshoes
+    {
+        Type = Normal,
+        DisplayName = Horseshoes,
+        Weight = 0.5,
+        Icon	=	Animal,
+	WorldStaticModel = Saddle,
+    }
+
+	item HoofWraps
+    {
+        Type = Normal,
+        DisplayName = Hoofwraps,
+        Weight = 0.5,
+        Icon	=	Animal,
+	WorldStaticModel = Saddle,
+    }
+
+	item Feedbag
+    {
+        Type = Normal,
+        DisplayName = Horse Feed Bag,
+        Weight = 0.7,
+        Icon	=	Animal,
+	WorldStaticModel = Saddle,
+    }
+
+	item WaterCanteen
+	{
+		DisplayCategory = Water,
+		Type = Drainable,
+		Weight = 2,
+		CanStoreWater = TRUE,
+		RainFactor = 0.05,
+		Tooltip = Tooltip_item_RainFromGround,
+		FillFromDispenserSound = GetWaterFromDispenserPlasticMedium,
+		FillFromTapSound = GetWaterFromTapPlasticMedium,
+		IsWaterSource = TRUE,
+		ReplaceOnDeplete = ClayJar,
+		ReplaceOnUseOn = WaterSource-ClayJarWater,
+		UseDelta = 0.01,
+		UseWhileEquipped = FALSE,
+		CustomEatSound = DrinkingFromBottlePlastic,
+		DisplayName         = Horse Water Canteen,
+		Icon                = Animal,
+		StaticModel         = Saddle,
+		WorldStaticModel = Saddle,
+	}
+
+}

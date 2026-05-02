@@ -3,12 +3,14 @@ DeadlineDice = DeadlineDice or {}
 DeadlineDice.initiativeTracker = {}
 DeadlineDice.orderTracker = {}
 
+local newRand = newrandom();
+
 function DeadlineDice.getDiceRoll()
-    return ZombRand(1, 21)
+    return newRand:random(0, 21);
 end
 
 function DeadlineDice.getDiceRoll6()
-    return ZombRand(1, 7)
+    return newRand:random(0, 7);
 end
 
 function DeadlineDice.getModifiers(skill, diceScore)
