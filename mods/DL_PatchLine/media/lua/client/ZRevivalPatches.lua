@@ -52,7 +52,7 @@ function JaxeRevival.TimedAction:perform()
     self.target:setX(self.target:getX());
     self.target:setY(self.target:getY());
     self.target:setZ(self.target:getZ());
-    self.target:setShootable(true);
+    --self.target:setShootable(true);
 end
 
 JaxeRevival.Incapacitation.apply = function(player, value, serverInitiated)
@@ -60,7 +60,7 @@ JaxeRevival.Incapacitation.apply = function(player, value, serverInitiated)
 
     --player:setInvincible(value or false);
     --sendPlayerExtraInfo(player);
-    player:setShootable(true);
+    --player:setShootable(true);
     original_ApplyMechanics(player, value, serverInitiated);
     --JaxeRevival.Sync.sendClient(player, JaxeRevival.Sync.REVIVE, JaxeRevival.Sync.getArgsFromTarget(player));
 end
