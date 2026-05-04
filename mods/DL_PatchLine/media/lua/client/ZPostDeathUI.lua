@@ -376,4 +376,4 @@ print(#spawn..' possible spawn points')
 --]]
 
 Events.OnPlayerDeath.Add(OnPlayerDeath_SaveData);
-Events.OnPlayerUpdate.Add(OnPlayerDeath_CheckPostRespawn);
+Events.EveryOneMinute.Add(OnPlayerDeath_CheckPostRespawn);
