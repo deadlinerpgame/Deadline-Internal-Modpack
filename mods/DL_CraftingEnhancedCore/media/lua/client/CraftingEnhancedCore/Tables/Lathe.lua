@@ -8,6 +8,7 @@ CraftingEnhancedCore.tables["Lathe"] = {
     nameID = "Lathe",
     displayName = getText("Lathe"),
     tooltipTitle = getText("Lathe"),
+    tooltipDescription = getText(""),
     tooltipTexture = "industry_tk_02_56",
     icon = "industry_tk_02_56",
     size = 2,
