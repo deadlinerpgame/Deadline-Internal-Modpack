@@ -8,23 +8,23 @@ CraftingEnhancedCore.tables["CementMixer"] = {
     nameID = "Cement Mixer",
     displayName = getText("Cement Mixer"),
     tooltipTitle = getText("Cement Mixer"),
-    tooltipTexture = "contruction_01_6",
-    icon = "contruction_01_6",
+    tooltipTexture = "construction_01_6",
+    icon = "construction_01_6",
     size = 1,
     anim = "VehicleTrailer",
     craftingSound = "RepairWithWrench",
     sprites = {
         north = {
-            "contruction_01_6"
+            "construction_01_6"
         },
         south = {
-            "contruction_01_6"
+            "construction_01_6"
         },
         west = {
-            "contruction_01_7"
+            "construction_01_7"
         },
         east = {
-            "contruction_01_7"
+            "construction_01_7"
         }
     },
     requireTool = "Hammer",
