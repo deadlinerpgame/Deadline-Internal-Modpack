@@ -10,7 +10,7 @@ recipe Craft a Drying Rack Kit
         CanBeDoneFromFloor:true,
         Result:Base.DryingRackConstructionSet,
         Time:600.0,
-	SkillRequired:Woodwork=3,
+	SkillRequired:Woodwork=6,
         Category:Construction,
     }
 
@@ -24,7 +24,7 @@ recipe Craft a Tailoring Table Kit
         CanBeDoneFromFloor:true,
         Result:Base.TailorTableConstructionSet,
         Time:600.0,
-	SkillRequired:Woodwork=3,
+	SkillRequired:Electrical=10,
         Category:Construction,
 	NeedToBeLearn:true,
     }
@@ -40,7 +40,7 @@ recipe Craft a Brewing Station Kit
         CanBeDoneFromFloor:true,
         Result:Base.BrewingStationConstructionSet,
         Time:600.0,
-	SkillRequired:Woodwork=3,
+	SkillRequired:Electrical=10,
         Category:Construction,
 	NeedToBeLearn:true,
     }
@@ -57,7 +57,7 @@ recipe Craft a Paint Mixing Kit
         CanBeDoneFromFloor:true,
         Result:Base.PaintMixingConstructionSet,
         Time:600.0,
-	SkillRequired:Woodwork=3,
+	SkillRequired:Electrical=10,
         Category:Construction,
 	NeedToBeLearn:true,
     }
@@ -70,7 +70,7 @@ recipe Craft a Butchering Hook Kit
         CanBeDoneFromFloor:true,
         Result:Base.ButcheringHookConstructionSet,
         Time:600.0,
-	SkillRequired:Woodwork=3,
+	SkillRequired:Woodwork=8,
         Category:Construction,
     }
 
@@ -82,7 +82,7 @@ recipe Craft a Simple Forge Kit
         CanBeDoneFromFloor:true,
         Result:Base.ForgeSimpleConstructionSet,
         Time:600.0,
-	SkillRequired:Woodwork=3,
+	SkillRequired:Woodwork=6,
         Category:Construction,
     }
 
@@ -94,7 +94,7 @@ recipe Craft an Advanced Forge Kit
         CanBeDoneFromFloor:true,
         Result:Base.ForgeAdvancedConstructionSet,
         Time:600.0,
-	SkillRequired:Woodwork=7,
+	SkillRequired:Woodwork=8,
         Category:Construction,
     }
 
@@ -105,7 +105,7 @@ recipe Craft a Simple Furnace Kit
         CanBeDoneFromFloor:true,
         Result:Base.FurnaceSimpleConstructionSet,
         Time:600.0,
-	SkillRequired:Woodwork=3,
+	SkillRequired:Woodwork=6,
         Category:Construction,
     }
 
@@ -116,7 +116,7 @@ recipe Craft an Advanced Furnace Kit
         CanBeDoneFromFloor:true,
         Result:Base.FurnaceAdvancedConstructionSet,
         Time:600.0,
-	SkillRequired:Woodwork=7,
+	SkillRequired:Woodwork=8,
         Category:Construction,
     }
 
@@ -126,6 +126,7 @@ recipe Craft a Simple Kiln Kit
         CanBeDoneFromFloor:true,
         Result:Base.KilnSimpleConstructionSet,
         Time:600.0,
+    SkillRequired:Woodwork=6,
         Category:Construction,
     }
 
@@ -135,7 +136,7 @@ recipe Craft an Advanced Kiln Kit
         CanBeDoneFromFloor:true,
         Result:Base.KilnAdvancedConstructionSet,
         Time:600.0,
-	SkillRequired:Woodwork=4,
+	SkillRequired:Woodwork=8,
         Category:Construction,
     }
 
@@ -162,6 +163,7 @@ recipe Craft a Hand Press Kit
         Result:Base.HandPressConstructionSet,
         Time:600.0,
         Category:Construction,
+        SkillRequired:Woodwork=6,
 	NeedToBeLearn:true,
     }
 
@@ -173,6 +175,7 @@ recipe Craft a Sculpting Table Kit
         Result:Base.SculptingTableConstructionSet,
         Time:600.0,
         Category:Construction,
+        SkillRequired:Woodwork=6,
 	NeedToBeLearn:true,
     }
 
@@ -197,6 +200,80 @@ recipe Craft a Anaerobic Digester Kit
 	SkillRequired:Electricity=8;MetalWelding=4,
         Category:Construction,
 	NeedToBeLearn:true,
+    }
+
+recipe Craft a Cement Mixer Kit
+    {
+        keep Saw,
+	keep Hammer,
+    keep Wrench,
+
+    EngineParts=20,
+	SheetMetal=2,
+	MetalPipe=2,
+	ElectronicsScrap=50,
+    WeldingRods=20,
+    BlowTorch=10,
+    ElectricWire=10,
+    Smithing.IngotD=2,
+    Screws=20,
+    Timer=1,
+    ScannerModule=1,
+    TriggerCrafted=1,
+        CanBeDoneFromFloor:true,
+        Result:Base.CementMixer,
+        Time:600.0,
+	SkillRequired:Electricity=10,
+        Category:Construction,
+    }
+
+recipe Craft a Lathe Kit
+    {
+        keep Saw,
+	keep Hammer,
+    keep Wrench,
+    keep Screwdriver,
+    MachinedComponents = 2,
+    WeldingRods=40,
+    BlowTorch=10,
+    Smithing.IngotK=1,
+    Smithing.IngotD=3,
+	Screws=50,
+        CanBeDoneFromFloor:true,
+        Result:Base.Lathe,
+        Time:600.0,
+	SkillRequired:MetalWelding=10,
+        Category:Construction,
+    }
+
+recipe Craft a Precision Fabricator Kit
+    {
+        keep Saw,
+	keep Hammer,
+    keep Wrench,
+    keep Screwdriver,
+
+    EngineParts=20,
+    MachinedComponents,
+    GlassPane=4,
+    WeldingRods=20,
+    BlowTorch=10,
+    ElectricWire=10,
+    Smithing.IngotK=1,
+    Smithing.IngotD=1,
+	ElectronicsScrap=50,
+	Screws=25,
+    LightBulbRed=1,
+	LightBulbGreen=1,
+	LightBulbYellow=1,
+    Timer=1,
+    ScannerModule=1,
+    TriggerCrafted=1,
+        CanBeDoneFromFloor:true,
+        Result:Base.PrecisionFabricator,
+        Time:600.0,
+	SkillRequired:Electricity=10,
+        Category:Construction,
     }
 
 }

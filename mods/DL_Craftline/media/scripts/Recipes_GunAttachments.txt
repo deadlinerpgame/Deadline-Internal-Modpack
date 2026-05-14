@@ -1,1 +1,1018 @@
--- temp removed
+module Base
+{
+
+	recipe Red Laser
+	{
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep Screwdriver,
+		keep Saw,
+
+		aerx.SmallSheetMetal=4,
+		Remote/MotionSensor,
+		ElectricWire=5,
+		DuctTape=5,
+		Screws=10,
+        NearItem:PrecisionFabricator,
+        
+		Result:Laser,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:Electricity=10;MetalWelding=4;Aiming=4,
+	}
+
+	recipe Gun Light
+	{
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep Screwdriver,
+		keep Saw,
+
+		aerx.SmallSheetMetal=4,
+		Torch/Torch1/Torch2/Torch3/Torch7/TorchArmy1/TorchArmy2,
+		ElectricWire=5,
+		DuctTape=5,
+		Screws=10,
+        NearItem:PrecisionFabricator,
+
+		Result:GunLight,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:Electricity=10;MetalWelding=4,
+	}
+
+	recipe Iron Sight
+	{
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        keep Wrench,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        aerx.SmallSheetMetal=4,
+        aerx.IronBar=2,
+        aerx.AluminumScrap=2,
+        Screws=4,
+        Wire,
+        NearItem:Lathe,
+		Result:IronSight,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:MetalWelding=6;Aiming=4,
+	}
+    
+    recipe Craft Red Dot
+    {
+        keep Screwdriver,
+        
+        BlowTorch=5,
+        PrecisionOptics,
+        Electronics=5,
+        aerx.SmallSheetMetal=4,
+        CopperWire=3,
+        Battery=2,
+        LightBulb=2,
+        Screws=4,
+        aerx.AluminumScrap,
+        aerx.CopperScrap=2,
+        WeldingRods=2,
+        Glue,
+        NearItem:PrecisionFabricator,
+        
+        Result:RedDot,
+        Time:300.0,
+        Category:Firearm,
+        SkillRequired:Electrical=10;Aiming=4,
+    }
+
+    recipe Craft Red Dot Scope
+    {
+        keep Screwdriver,
+        
+        BlowTorch=5,
+        PrecisionOptics,
+        Electronics=8,
+        aerx.SmallSheetMetal=5,
+        CopperWire=4,
+        Battery=2,
+        LightBulb=3,
+        Screws=5,
+        Glue=2,
+        aerx.AluminumScrap=3,
+        aerx.CopperScrap=2,
+        WeldingRods=3,
+        Wire,
+        NearItem:PrecisionFabricator,
+        
+        Result:RedDotScope,
+        Time:400.0,
+        Category:Firearm,
+        SkillRequired:Electrical=10;Aiming=4,
+    }
+
+
+    recipe Craft x2 Scope
+    {
+        keep Screwdriver,
+        
+        BlowTorch=5,
+        PrecisionOptics,
+        aerx.SmallSheetMetal=5,
+        GlassPane=3,
+        aerx.AluminumScrap=2,
+        Glue=2,
+        Screws=5,
+        DuctTape=2,
+        aerx.CopperScrap,
+        Wire,
+        NearItem:PrecisionFabricator,
+        
+        Result:x2Scope,
+        Time:350.0,
+        Category:Firearm,
+        SkillRequired:Electrical=8;Aiming=4,
+    }
+
+    recipe Craft x2 Leupold Scope
+    {
+        keep Screwdriver,
+        
+        BlowTorch=5,
+        PrecisionOptics,
+        aerx.SmallSheetMetal=5,
+        GlassPane=3,
+        aerx.AluminumScrap=2,
+        Glue=2,
+        Screws=5,
+        DuctTape=2,
+        aerx.CopperScrap,
+        Wire,
+        NearItem:PrecisionFabricator,
+        
+        Result:x2LeupoldScope,
+        Time:350.0,
+        Category:Firearm,
+        SkillRequired:Electrical=10;Aiming=4,
+    }
+
+    recipe Craft Garand Scope
+    {
+        keep Screwdriver,
+        
+        BlowTorch=5,
+        PrecisionOptics,
+        aerx.SmallSheetMetal=5,
+        GlassPane=3,
+        aerx.AluminumScrap=2,
+        Glue=2,
+        Screws=5,
+        DuctTape=2,
+        aerx.CopperScrap,
+        Wire,
+        NearItem:PrecisionFabricator,
+        
+        Result:GarandScope,
+        Time:350.0,
+        Category:Firearm,
+        SkillRequired:Electrical=10;Aiming=4,
+    }
+
+
+    recipe Craft 22 Silencer
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        keep Wrench,
+        
+        BlowTorch=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        Deadline.Kevlar = 1,
+        aerx.SmallSheetMetal=4,
+        aerx.IronBar=2,
+        DuctTape=3,
+        Glue=2,
+        aerx.AluminumScrap=2,
+        Screws=4,
+        Wire,
+        NearItem:Lathe,
+        
+        Result:22Silencer,
+        Time:400.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft 9mm Silencer
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        keep Wrench,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        Deadline.Kevlar = 1,
+        aerx.SmallSheetMetal=4,
+        aerx.IronBar=2,
+        DuctTape=3,
+        Glue=2,
+        aerx.AluminumScrap=2,
+        Screws=4,
+        Wire,
+        NearItem:Lathe,
+        
+        Result:9mmSilencer,
+        Time:400.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft 45 Silencer
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        keep Wrench,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        Deadline.Kevlar = 1,
+        aerx.SmallSheetMetal=4,
+        aerx.IronBar=2,
+        DuctTape=3,
+        Glue=2,
+        aerx.AluminumScrap=2,
+        Screws=4,
+        Wire,
+        NearItem:Lathe,
+        
+        Result:45Silencer,
+        Time:400.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft 38 Silencer
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        keep Wrench,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        Deadline.Kevlar = 1,
+        aerx.SmallSheetMetal=4,
+        aerx.IronBar=2,
+        DuctTape=3,
+        Glue=2,
+        aerx.AluminumScrap=2,
+        Screws=4,
+        Wire,
+        NearItem:Lathe,
+        
+        Result:38Silencer,
+        Time:400.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft 44 Silencer
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        keep Wrench,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        Deadline.Kevlar = 1,
+        aerx.SmallSheetMetal=4,
+        aerx.IronBar=2,
+        DuctTape=3,
+        Glue=2,
+        aerx.AluminumScrap=2,
+        Screws=4,
+        Wire,
+        NearItem:Lathe,
+
+        Result:44Silencer,
+        Time:400.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft 223 Silencer
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        keep Wrench,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        Deadline.Kevlar = 1,
+        aerx.SmallSheetMetal=5,
+        aerx.IronBar=2,
+        DuctTape=3,
+        Glue=2,
+        aerx.AluminumScrap=3,
+        Screws=5,
+        Wire=2,
+        aerx.CopperScrap,
+        NearItem:Lathe,
+        Result:223Silencer,
+        Time:450.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft 308 Silencer
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        keep Wrench,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        Deadline.Kevlar = 1,
+        aerx.SmallSheetMetal=6,
+        aerx.IronBar=3,
+        DuctTape=4,
+        Glue=2,
+        aerx.AluminumScrap=4,
+        Screws=6,
+        Wire=2,
+        SheetMetal,
+        NearItem:Lathe,
+        
+        Result:308Silencer,
+        Time:500.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft Shotgun Silencer
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        keep Wrench,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        Deadline.Kevlar = 1,
+        aerx.SmallSheetMetal=7,
+        aerx.IronBar=4,
+        DuctTape=5,
+        Glue=3,
+        aerx.AluminumScrap=5,
+        Screws=8,
+        Wire=2,
+        SheetMetal,
+        NearItem:Lathe,
+        
+        Result:ShotgunSilencer,
+        Time:550.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft 9mm Compensator
+    {
+        keep Saw,
+        keep Hammer,
+        keep Wrench,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        aerx.SmallSheetMetal=4,
+        aerx.IronBar=2,
+        aerx.AluminumScrap=2,
+        Screws=4,
+        DuctTape,
+        Glue,
+        NearItem:Lathe,
+
+        Result:9mmCompensator,
+        Time:350.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft 45 Compensator
+    {
+        keep Saw,
+        keep Hammer,
+        keep Wrench,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        aerx.SmallSheetMetal=4,
+        aerx.IronBar=2,
+        aerx.AluminumScrap=2,
+        Screws=4,
+        DuctTape,
+        Glue,
+        NearItem:Lathe,
+
+        Result:45Compensator,
+        Time:350.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft 44 Compensator
+    {
+        keep Saw,
+        keep Hammer,
+        keep Wrench,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        aerx.SmallSheetMetal=4,
+        aerx.IronBar=2,
+        aerx.AluminumScrap=2,
+        Screws=4,
+        DuctTape,
+        Glue,
+        NearItem:Lathe,
+
+        Result:44Compensator,
+        Time:350.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft Choke Tube Full
+    {
+        keep Hammer,
+        keep Wrench,
+        keep Saw,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        aerx.IronBar=3,
+        MetalPipe=2,
+        aerx.AluminumScrap=2,
+        Screws=3,
+        Glue,
+        NearItem:Lathe,
+
+        Result:ChokeTubeFull,
+        Time:300.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft Choke Tube Improved
+    {
+        keep Hammer,
+        keep Wrench,
+        keep Saw,
+
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        aerx.IronBar=3,
+        MetalPipe=2,
+        aerx.AluminumScrap=2,
+        Screws=3,
+        Glue,
+        NearItem:Lathe,
+        Result:ChokeTubeImproved,
+        Time:300.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+
+    recipe Craft Magazine Extension Tube
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Wrench,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        aerx.IronBar=2,
+        Screws=5,
+        aerx.SmallSheetMetal=3,
+        aerx.IronBar=2,
+        aerx.AluminumScrap=2,
+        DuctTape=2,
+        Glue,
+        NearItem:Lathe,
+
+        Result:MagTubeExtension,
+        Time:400.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft Rifle Bipod
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Wrench,
+        keep Hammer,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        Hinge=4,
+        Screws=8,
+        aerx.SmallSheetMetal=5,
+        aerx.IronBar=2,
+        aerx.AluminumScrap=3,
+        Wire=2,
+        DuctTape=2,
+        NearItem:Lathe,
+
+        Result:Rifle_Bipod,
+        Time:450.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft Heatshield
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        
+        BlowTorch=2,
+        WeldingRods=2,
+        MachinedComponents,
+        aerx.SmallSheetMetal=6,
+        SheetMetal=2,
+        Screws=5,
+        aerx.IronBar=2,
+        aerx.AluminumScrap=3,
+        DuctTape=2,
+        Glue,
+        NearItem:PrecisionFabricator,
+        
+        Result:Heatshield,
+        Time:320.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft Stripper Clip Attachment
+    {
+        keep Hammer,
+        keep Wrench,
+        
+        BlowTorch=2,
+        WeldingRods=2,
+        MachinedComponents,
+        aerx.SmallSheetMetal=4,
+        Spring=3,
+        aerx.IronBar=2,
+        Screws=4,
+        aerx.AluminumScrap=2,
+        aerx.CopperScrap,
+        NearItem:PrecisionFabricator,
+        
+        Result:StripperClipAttachment,
+        Time:280.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft Revolver Speed Loader
+    {
+        keep Screwdriver,
+        keep Hammer,
+
+        BlowTorch=2,
+        WeldingRods=2,
+        MachinedComponents,
+        aerx.SmallSheetMetal=5,
+        Spring=4,
+        aerx.IronBar=2,
+        Screws=5,
+        aerx.AluminumScrap=3,
+        File=2,
+        Glue,
+        NearItem:PrecisionFabricator,
+        
+        Result:RevolverSpeedLoader,
+        Time:350.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft x4 Scope
+    {
+        keep Screwdriver,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        PrecisionOptics=2,
+        MachinedComponents,
+        aerx.SmallSheetMetal=6,
+        GlassPane=4,
+        Glue=3,
+        Screws=6,
+        Electronics=4,
+        aerx.AluminumScrap=3,
+        aerx.CopperScrap=2,
+        CopperWire=2,
+        WeldingRods=5,
+        Wire,
+        NearItem:PrecisionFabricator,
+        
+        Result:x4Scope,
+        Time:500.0,
+        Category:Firearm,
+        SkillRequired:Electrical=10;Aiming=4,
+    }
+
+    recipe Craft x8 Scope
+    {
+        keep Screwdriver,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        PrecisionOptics=4,
+        MachinedComponents,
+        aerx.SmallSheetMetal=8,
+        GlassPane=6,
+        Glue=4,
+        Screws=8,
+        Electronics=6,
+        aerx.AluminumScrap=4,
+        aerx.CopperScrap=3,
+        CopperWire=3,
+        Wire=2,
+        Battery,
+        DuctTape=2,
+        WeldingRods=5,
+        NearItem:PrecisionFabricator,
+        
+        Result:x8Scope,
+        Time:600.0,
+        Category:Firearm,
+        SkillRequired:Electrical=10;Aiming=4,
+    }
+
+	recipe Recoil Pad
+	{
+        keep Scissors,
+        keep Saw,
+        keep Screwdriver,
+
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=3,
+		Thread=10,
+		Glue=5,
+        TirePiece=4,
+        DuctTape=3,
+        LeatherStrips=6,
+        Glue=2,
+        Screws=3,
+        NearItem:Tailoring Table,
+
+		Result:RecoilPad,
+		Sound:Sewing,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:Tailoring=8;Aiming=4,
+	}
+
+    recipe Craft Extended Recoil Pad
+    {
+        keep Scissors,
+        keep Saw,
+        keep Screwdriver,
+        
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=3,
+        TirePiece=6,
+        DuctTape=5,
+        LeatherStrips=6,
+        Glue=2,
+        Screws=3,
+        Deadline.Kevlar = 1,
+        aerx.SmallSheetMetal,
+        NearItem:Tailoring Table,
+        
+        Result:ExtendedRecoilPad,
+        Time:90.0,
+        Category:Firearm,
+        SkillRequired:Tailoring=10;Aiming=4,
+    }
+
+    recipe Craft Fiberglass Stock
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        aerx.SmallSheetMetal=4,
+        Glue=3,
+        RippedSheets=6,
+        Screws=5,
+        DuctTape=2,
+        Wire,
+        NearItem:Lathe,
+
+        Result:FiberglassStock,
+        Time:240.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft Tactical Stock
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        ScrapMetal=6,
+        aerx.SmallSheetMetal=2,
+        Screws=5,
+        DuctTape=3,
+        Glue=2,
+        Hinge,
+        NearItem:Lathe,
+        
+        Result:TacticalStock,
+        Time:200.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft Shotgun Stock
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        ScrapMetal=6,
+        aerx.SmallSheetMetal=2,
+        Screws=5,
+        DuctTape=3,
+        Glue=2,
+        Hinge,
+        NearItem:Lathe,
+        
+        Result:ShotgunStock,
+        Time:200.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft Light Shotgun Stock
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        ScrapMetal=6,
+        aerx.SmallSheetMetal=2,
+        Screws=5,
+        DuctTape=3,
+        Glue=2,
+        Hinge,
+        NearItem:Lathe,
+
+        Result:LightShotgunStock,
+        Time:200.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft Retractable Stock
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Wrench,
+
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        Hinge=2,
+        Screws=6,
+        aerx.SmallSheetMetal=3,
+        Wire=2,
+        DuctTape=2,
+        aerx.AluminumScrap=2,
+        NearItem:Lathe,
+
+        Result:Retractable_Stock_Extended,
+        Time:280.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft SMG Fixed Stock
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Hammer,
+
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        ScrapMetal=6,
+        aerx.SmallSheetMetal=2,
+        Screws=5,
+        DuctTape=3,
+        Glue=2,
+        Hinge,
+        NearItem:Lathe,
+        
+        Result:SMGFixedStock,
+        Time:200.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+    recipe Craft SPAS12 Stock
+    {
+        keep Saw,
+        keep Screwdriver,
+        keep Wrench,
+        
+        BlowTorch=5,
+        WeldingRods=5,
+        MachinedComponents,
+        Smithing.IngotD=1,
+        Hinge=2,
+        Screws=6,
+        aerx.SmallSheetMetal=3,
+        Wire=2,
+        DuctTape=2,
+        aerx.AluminumScrap=2,
+        NearItem:Lathe,
+        
+        Result:SPAS12_Stock_Extended,
+        Time:280.0,
+        Category:Firearm,
+        SkillRequired:MetalWelding=10;Aiming=4,
+    }
+
+	recipe Quick Draw Grip
+	{
+        keep Screwdriver,
+        keep Scissors,
+        keep Needle,
+
+		Plank=1,
+		aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		Glue=2,
+		Result:QuickDraw,
+		Sound:Hammering,
+		Time:400.0,
+		Category:Firearms,
+		SkillRequired:Tailoring=8;Aiming=4,
+	}
+
+    recipe Craft Rubber Grip
+    {
+        keep Screwdriver,
+        keep Scissors,
+        keep Needle,
+        
+        TirePiece=2,
+        Screws=4,
+        Glue=2,
+        DuctTape,
+        NearItem:Tailoring Table,
+        SkillRequired:Tailoring=10;Aiming=4,
+        Result:RubberGrip,
+        Time:70.0,
+        Category:Firearm,
+    }
+
+    recipe Craft Sling
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=3,   
+	Thread=5,
+	keep Needle,
+        Result:Sling,
+        Time:80.0,
+        Category:Firearm,
+        SkillRequired:Tailoring=6,
+    }
+
+    recipe Craft Leather Sling
+    {
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=3,   
+	Thread=5,
+	keep Needle,
+        Result:Sling_Leather,
+        Time:80.0,
+        Category:Firearm,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Olive Sling
+    {
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=3,   
+        GreenDye,
+	Thread=5,
+	keep Needle,
+        Result:Sling_Olive,
+        Time:80.0,
+        Category:Firearm,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Camo Sling
+    {
+	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=3,   
+        GreenDye,
+        BrownDye,
+	Thread=5,
+	keep Needle,
+        Result:Sling_Camo,
+        Time:80.0,
+        Category:Firearm,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Ammo Straps
+    {
+        keep Scissors,
+        Needle,
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=3,   
+
+        DuctTape=4,
+        Wire=3,
+        aerx.Buckle=2,
+        Rope,
+        NearItem:Tailoring Table,
+        
+        Result:AmmoStraps,
+        Time:90.0,
+        Category:Firearm,
+        SkillRequired:Tailoring=10,
+    }
+
+    recipe Craft Ammo Rack
+    {
+        keep Scissors,
+        Needle,
+        
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=2,  
+        DuctTape=4,
+        Wire=3,
+        aerx.Buckle=2,
+        Rope,
+        NearItem:Tailoring Table,
+        
+        Result:AmmoStock,
+        Time:90.0,
+        Category:Firearm,
+        SkillRequired:Tailoring=10,
+    }
+}
