@@ -5,15 +5,87 @@ module HCustoms
             Base
         }
 
+   recipe Make Cazador Backpack
+    {
+        Deadline.Kevlar = 3,
+        DyePack = 4,
+        aerx.Buckle=4,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 5,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:Bag_CazadorBackpack,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Fire Breathers Utility Pack
+    {
+        Deadline.Kevlar = 3,
+        DyePack = 4,
+        aerx.Buckle=4,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 5,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:Bag_FireBreathersPack,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Wasteland Aegis Backpack
+    {
+        Deadline.Kevlar = 3,
+        DyePack = 4,
+        aerx.Buckle=4,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 5,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:Bag_WastelandAegisBackpack,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Zoidbag
+    {
+        Deadline.Kevlar = 3,
+        DyePack = 4,
+        aerx.Buckle=4,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 5,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:Zoidbag,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
     recipe Modular Pack Max Black
     {
         Deadline.Kevlar = 3,
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackBlackMax,
@@ -29,9 +101,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackBlueMax,
@@ -47,9 +119,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackRedMax,
@@ -65,9 +137,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackLeatherMax,
@@ -83,9 +155,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackOliveMax,
@@ -101,9 +173,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackPinkMax,
@@ -119,9 +191,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackTanMax,
@@ -137,9 +209,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackWhiteMax,
@@ -155,9 +227,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackWoodlandMax,
@@ -172,9 +244,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_EliteCombatMaxGraffiti,
@@ -190,9 +262,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:EliteCombatSmallPackGraffiti,
@@ -208,9 +280,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_EliteCombatMaxRetro,
@@ -226,9 +298,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:EliteCombatSmallPackRetro,
@@ -244,9 +316,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_EliteCombatMaxSunrise,
@@ -262,9 +334,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:EliteCombatSmallPackSunrise,
@@ -280,9 +352,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_EliteCombatMaxCeladon,
@@ -298,9 +370,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:EliteCombatSmallPackCeladon,
@@ -316,9 +388,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_EliteCombatMaxGamboge,
@@ -334,9 +406,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_MedicalBackpackNew,
@@ -352,9 +424,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_GolfBagUpgrade,
@@ -370,9 +442,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_ReconRigBlack,
@@ -388,9 +460,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_ReconRigBlue,
@@ -406,9 +478,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_ReconRigRed,
@@ -424,9 +496,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_ReconRigOlive,
@@ -442,9 +514,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_ReconRigTan,
@@ -460,9 +532,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_ReconRigWoodland,
@@ -478,9 +550,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_ReconRigPink,
@@ -496,9 +568,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_ReconRigLeather,
@@ -514,9 +586,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_ReconRigWhite,
@@ -532,9 +604,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=4,
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Bag_ReconRigZoidberg,
@@ -543,14 +615,213 @@ module HCustoms
         Sound:ClothesRipping,
         Category:Tailoring,
     }
+
+    recipe Make Drop Leg Pouch Black
+    {
+        Deadline.Kevlar = 1,
+        DyePack = 2,
+        aerx.Buckle=2,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 2,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:DropLegPouchBlack_L,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Drop Leg Pouch Blue
+    {
+        Deadline.Kevlar = 1,
+        DyePack = 2,
+        aerx.Buckle=2,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 2,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:DropLegPouchBlue_L,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Drop Leg Pouch Red
+    {
+        Deadline.Kevlar = 1,
+        DyePack = 2,
+        aerx.Buckle=2,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 2,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:DropLegPouchRed_L,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Drop Leg Pouch Olive
+    {
+        Deadline.Kevlar = 1,
+        DyePack = 2,
+        aerx.Buckle=2,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 2,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:DropLegPouchOlive_L,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Drop Leg Pouch Tan
+    {
+        Deadline.Kevlar = 1,
+        DyePack = 2,
+        aerx.Buckle=2,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 2,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:DropLegPouchTan_L,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Drop Leg Pouch Woodland
+    {
+        Deadline.Kevlar = 1,
+        DyePack = 2,
+        aerx.Buckle=2,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 2,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:DropLegPouchWoodland_L,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Drop Leg Pouch Pink
+    {
+        Deadline.Kevlar = 1,
+        DyePack = 2,
+        aerx.Buckle=2,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 2,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:DropLegPouchPink_L,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Drop Leg Pouch Leather
+    {
+        Deadline.Kevlar = 1,
+        DyePack = 2,
+        aerx.Buckle=2,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 2,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:DropLegPouchLeather_L,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Drop Leg Pouch White
+    {
+        Deadline.Kevlar = 1,
+        DyePack = 2,
+        aerx.Buckle=2,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 2,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:DropLegPouchWhite_L,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Drop Leg Pouch Zoidberg
+    {
+        Deadline.Kevlar = 1,
+        DyePack = 2,
+        aerx.Buckle=2,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 2,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:DropLegPouchZoidberg_L,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Task Force Drop Leg Pouch
+    {
+        Deadline.Kevlar = 1,
+        DyePack = 2,
+        aerx.Buckle=2,		
+        Thread=4,
+		aerx.FabricRoll_Cotton = 2,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:Bag_TaskForceDropLeg,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
     recipe Make Modular Canteen Black
     {
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackCanteenBlack,
@@ -559,14 +830,15 @@ module HCustoms
         Sound:ClothesRipping,
         Category:Tailoring,
     }
+
     recipe Make Modular Canteen Blue
     {
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackCanteenBlue,
@@ -581,9 +853,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackCanteenRed,
@@ -593,14 +865,14 @@ module HCustoms
         Category:Tailoring,
     }
 
-	    recipe Make Modular Canteen Leather
+	recipe Make Modular Canteen Leather
     {
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackCanteenLeather,
@@ -615,9 +887,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackCanteenOlive,
@@ -632,9 +904,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackCanteenTan,
@@ -649,9 +921,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackCanteenWoodland,
@@ -666,9 +938,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackCanteenPink,
@@ -683,9 +955,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:ModularPackCanteenWhite,
@@ -701,9 +973,9 @@ module HCustoms
         DyePack = 4,
 		aerx.Buckle=1,
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Scarf_SerapeCloak,
@@ -719,9 +991,9 @@ module HCustoms
         DyePack = 4,
 		aerx.Buckle=1,
         Thread=4,
+        aerx.FabricRoll_Cotton = 4,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Scarf_SerapeCloakTINT,
@@ -737,9 +1009,9 @@ module HCustoms
         DyePack = 4,
 		aerx.Buckle=1,
         Thread=4,
+        aerx.FabricRoll_Cotton = 4,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Scarf_SerapeCloakMore,
@@ -755,9 +1027,9 @@ module HCustoms
         DyePack = 4,
 		aerx.Buckle=1,
         Thread=4,
+        aerx.FabricRoll_Cotton = 4,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Scarf_SerapeCloakbikini,
@@ -773,9 +1045,9 @@ module HCustoms
         DyePack = 4,
 		aerx.Buckle=1,
         Thread=4,
+        aerx.FabricRoll_Cotton = 4,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Scarf_MilitaryCloak,
@@ -791,9 +1063,9 @@ module HCustoms
         DyePack = 4,
 		aerx.Buckle=1,
         Thread=4,
+        aerx.FabricRoll_Cotton = 4,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Scarf_MilitaryCloakMore,
@@ -809,9 +1081,9 @@ module HCustoms
         DyePack = 4,
 		aerx.Buckle=1,
         Thread=4,
+        aerx.FabricRoll_Cotton = 4,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Scarf_ClothPoncho,
@@ -827,9 +1099,9 @@ module HCustoms
         DyePack = 4,
 		aerx.Buckle=1,
         Thread=4,
+        aerx.FabricRoll_Cotton = 4,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Scarf_ClothPonchoMore,
@@ -844,9 +1116,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_HeadScarfFull,
@@ -861,9 +1133,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_NeckGaiter,
@@ -878,9 +1150,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_ShemScarf,
@@ -895,9 +1167,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_ShemScarfMore,
@@ -912,9 +1184,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_CowlHood,
@@ -929,9 +1201,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_PandaKnitHat,
@@ -946,9 +1218,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_DavyCrockettHat,
@@ -963,9 +1235,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_CazadorHood,
@@ -980,9 +1252,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_WesternSheriffHatBrown,
@@ -997,9 +1269,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_WesternSheriffHatBlack,
@@ -1014,9 +1286,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_SteampunkTopHat,
@@ -1031,9 +1303,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_BuckleHat,
@@ -1048,9 +1320,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_CampingKnitHat,
@@ -1065,9 +1337,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_GunRunnersBalaclava,
@@ -1082,9 +1354,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_TaskForceBalaclava,
@@ -1099,9 +1371,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_ManhunterHat,
@@ -1116,9 +1388,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_ManhunterHatMilitary,
@@ -1133,9 +1405,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_ManhunterHatTan,
@@ -1150,9 +1422,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_ManhunterHatWhite,
@@ -1167,9 +1439,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_ManhunterHatPurple,
@@ -1184,9 +1456,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_SafariHat,
@@ -1201,9 +1473,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_CrocHat,
@@ -1218,9 +1490,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_DerbyHat,
@@ -1235,9 +1507,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_SundayHat,
@@ -1252,9 +1524,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_BrimmedHat,
@@ -1270,9 +1542,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_ProperBeret,
@@ -1287,9 +1559,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_OfficialOfficerCap,
@@ -1304,9 +1576,9 @@ module HCustoms
         Deadline.Kevlar = 1,
         DyePack = 2,
         Thread=4,
+        aerx.FabricRoll_Cotton = 1,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Hat_LeatherHuntingCap,
@@ -1322,9 +1594,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=2,		
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Dress_BouffantDress,
@@ -1340,9 +1612,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=2,		
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Dress_CuteDress,
@@ -1358,9 +1630,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=2,		
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Dress_FrilledCheongsam,
@@ -1376,9 +1648,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=2,		
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Dress_DancerDress,
@@ -1394,9 +1666,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=2,		
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Dress_ApronDress,
@@ -1412,9 +1684,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=2,		
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Dress_RockabillyDress,
@@ -1430,9 +1702,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=2,		
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Dress_ShortKimono,
@@ -1448,9 +1720,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=2,		
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Dress_HalterTopDress,
@@ -1466,9 +1738,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=2,		
         Thread=4,
+        aerx.FabricRoll_Cotton = 5,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Dress_ElegantDress,
@@ -1484,9 +1756,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=2,		
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Skirt_PunkSkirt,
@@ -1502,9 +1774,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=2,		
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Skirt_SuspendersSkirt,
@@ -1520,9 +1792,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=2,		
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Skirt_PencilSkirt,
@@ -1538,9 +1810,9 @@ module HCustoms
         DyePack = 4,
         aerx.Buckle=2,		
         Thread=4,
+        aerx.FabricRoll_Cotton = 2,
         keep Needle,
-        keep [Recipe.GetItemTypes.Scissors],
-        LeatherStrips/LeatherStripsDirty=4,
+        keep Scissors,
         NearItem:TailoringWorkbench,
 
         Result:Skirt_SarongWrapSkirt,
@@ -1549,5 +1821,5 @@ module HCustoms
         Sound:ClothesRipping,
         Category:Tailoring,
     }
-    
+
 }
