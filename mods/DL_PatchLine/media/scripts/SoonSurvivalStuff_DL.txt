@@ -1,0 +1,26 @@
+module SpoonEssentialCrafting
+{
+	imports
+	    {
+		    Base
+	    }
+
+	recipe Craft a 2X Scope
+	{
+		TinCanEmpty,
+		Glasses_Normal/Glasses_Reading,
+		Glue,
+		Twine,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.SharpKnife],
+
+		Result:x2Scope,
+		Time:300.0,
+		Category: Survivalist,
+		NeedToBeLearn:true,
+		SkillRequired:Woodwork=6,
+		OnGiveXP:Recipe.OnGiveXP.WoodWork5,
+        Obsolete:true,
+	}
+
+}
