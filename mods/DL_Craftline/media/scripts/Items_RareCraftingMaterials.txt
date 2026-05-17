@@ -6,9 +6,9 @@ module Base
 		DisplayName = Precision Optics,
 		DisplayCategory = Material,
 		Type = Normal,
-		Weight = 1,
-		Icon = Sandbag,
-		WorldStaticModel = SandBag,
+		Weight = 0.2,
+		Icon = GlassPane,
+		WorldStaticModel = ImprovisedGlass.GlassPane,
 	}
 
 	item MachinedComponents
@@ -17,8 +17,20 @@ module Base
 		DisplayCategory = Material,
 		Type = Normal,
 		Weight = 1,
-		Icon = Sandbag,
-		WorldStaticModel = SandBag,
+		Icon = Clamp_Forged,
+		StaticModel = CrudeBenchVise,
+		WorldStaticModel = CrudeBenchVise,
+	}
+
+	item PrecisionParts
+	{
+		DisplayName = Precision Parts,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.2,
+		Icon = ClampComponents_Forged,
+		StaticModel = CrudeBenchVise,
+		WorldStaticModel = CrudeBenchViseParts,
 	}
 
 }

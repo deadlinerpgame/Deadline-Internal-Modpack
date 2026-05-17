@@ -1,0 +1,673 @@
+module SpoonTailoringPlus
+{
+
+	imports
+	{
+		Base
+	}
+	
+	/************************RIP CLOTHINGS************************/
+	
+	recipe Draw Yarn from Clothing
+    {
+        [Recipe.GetItemTypes.RipClothing_Cotton],
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+        Result:Yarn,
+        RemoveResultItem:true,
+        InSameInventory:true,
+        Sound:ClothesRipping,
+        Time:600.0,
+		SkillRequired:Tailoring=1,
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+        AnimNode:RipSheets,
+        OnCreate:SRipYarn_OnCreate,
+		OnTest:Recipe.OnTest.IsNotWorn,
+    }
+
+    recipe Draw Yarn from Clothing /*this second recipe is so that worn clothing items are not consumed when ripping all clothing*/
+    {
+        [Recipe.GetItemTypes.RipClothing_Cotton],
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+        Result:Yarn,
+        RemoveResultItem:true,
+        InSameInventory:true,
+        Sound:ClothesRipping,
+        Time:600.0,
+		SkillRequired:Tailoring=1,
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+        AnimNode:RipSheets,
+        OnCreate:SRipYarn_OnCreate,
+		OnTest:Recipe.OnTest.IsWorn,
+    }
+	
+	/************************THREAD TWINE AND YARN************************/
+
+	recipe Craft Thread
+	{
+		RippedSheets/DenimStrips=5,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Thread,
+		Sound:ClothesRipping,
+		Time:100.0,
+		AnimNode:RipSheets,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Thread
+	{
+		Twine=6,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Thread,
+		Sound:ClothesRipping,
+		Time:100.0,
+		AnimNode:RipSheets,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Thread
+	{
+		Yarn=3,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Thread,
+		Sound:ClothesRipping,
+		Time:100.0,
+		AnimNode:RipSheets,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Twine
+	{
+		Thread=20,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Twine,
+		Time:200.0,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Twine
+	{
+		CottonBalls=10,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Twine,
+		Time:200.0,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Twine
+	{
+		Rope,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Twine=4,
+		Time:400.0,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Yarn
+	{
+		Thread=20,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],   
+
+		CanBeDoneFromFloor:true,
+		Result:Yarn=5,
+		Time:300.0,
+		AnimNode:RipSheets,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+
+	recipe Craft Rope
+	{
+		Twine=25,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Rope,
+		Time:400.0,
+		AnimNode:RipSheets,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Ripped Sheet
+	{
+		CottonBalls=5,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:RippedSheets,
+		Time:400.0,
+		AnimNode:RipSheets,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+
+	/************************ NON-CLOTHING ITEMS ************************/
+	
+	recipe Use as Towel
+	{
+		RippedSheets=8,
+		
+		Result:BathTowel,
+		Time:10.0,
+		Category:Tailoring,	
+	}
+	
+	recipe Use as Ripped Sheets
+	{
+		destroy BathTowel,
+
+		Result:RippedSheetsDirty=8,
+		Time:10.0,
+		Category:Tailoring,	
+	}
+	
+	recipe Tailor a Sheet
+	{
+		Thread=2,
+		RippedSheets=6,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Sheet,
+		Time:500.0,
+		SkillRequired:Tailoring=1,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+
+	recipe Tailor a Tarp
+	{
+		LeatherStrips=4,
+		Sheet=4,
+		Twine=10,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Tarp,
+		Time:400.0,
+		SkillRequired:Tailoring=2,
+		Category:Tailoring,	
+        OnGiveXP:Recipe.OnGiveXP.TailoringLow,	
+	}
+	
+	recipe Rip Tarp
+	{
+		Tarp,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Sheet=2,
+		Time:200.0,
+		Category:Tailoring,	
+		OnCreate: GetTailorLeftoversTarp_OnCreate,
+	}
+	
+	recipe Tailor a Pillow
+    {
+		RippedSheets=6,
+		Thread=2,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Pillow,
+		Time:200.0,
+		SkillRequired:Tailoring=1,
+		Category:Tailoring,	
+        OnGiveXP:Recipe.OnGiveXP.TailoringLow,	
+    }
+	
+	recipe Rip Pillow
+    {
+		Pillow,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:RippedSheets=5,
+		Time:100.0,
+		Category:Tailoring,		
+    }
+
+	recipe Tailor a Sack
+	{
+		Sheet=2,
+		Thread=4,
+		Twine=5,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:EmptySandbag,
+		Time:200.0,
+		SkillRequired:Tailoring=2,
+		Category:Tailoring,	
+        OnGiveXP:Recipe.OnGiveXP.TailoringMed,	
+	}
+	
+	recipe Rip Sack
+	{
+		EmptySandbag,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Sheet=2,
+		Time:100.0,
+		Category:Tailoring,		
+	}
+
+	recipe Tailor Survivor Bag
+	{
+		LeatherStrips=8,
+		RippedSheets=12,
+		Thread=8,
+		Twine=4,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Bag_SurvivorBag,
+		Time:600.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Craft Sandals
+	{
+		LeatherStrips=4,
+		Thread=2,
+		Glue/Woodglue,
+		Twine=5,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Shoes_Sandals,
+		Time:400.0,
+		SkillRequired:Tailoring=2,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Shoes
+	{
+		LeatherStrips=4,
+		Thread=2,
+		Glue/Woodglue,
+		Twine=5,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Shoes_Strapped,
+		Time:400.0,
+		SkillRequired:Tailoring=4,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Craft Black Boots
+	{
+		LeatherStrips=6,
+		Thread=4,
+		Glue/Woodglue,
+		Twine=5,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Shoes_BlackBoots,
+		Time:800.0,
+		NeedToBeLearn            :true,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	/************************ BASIC CLOTHING ITEMS************************/
+	
+	recipe Craft Head Bandana
+	{
+		RippedSheets=4,
+		
+		Result:Hat_BandanaTINT,
+		Time:50.0,
+		Category:Tailoring,
+	}
+	
+	recipe Claim Ripped Sheet
+	{
+		Hat_BandanaTINT,
+		
+		Result:RippedSheets,
+		Time:50.0,
+		Category:Tailoring,
+	}
+
+	/************************ KNITTED CLOTHING ITEMS************************/
+	
+	recipe Craft a Simple Scarf
+	{		
+		RippedSheets=5,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Scarf_White,
+		Time:200.0,
+		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+	}
+	
+	recipe Knit a Scarf
+	{		
+		Yarn=7,
+		keep KnittingNeedles,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Scarf_StripeBlackWhite,
+		Time:400.0,
+		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+		OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Knit Winter Gloves
+	{		
+		Yarn=4,
+		Thread=1,
+		keep Needle,
+		keep KnittingNeedles,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Gloves_WhiteTINT,
+		Time:400.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Knit a Balaclava
+	{		
+		Yarn=6,
+		Thread=2,
+		keep Needle,
+		keep KnittingNeedles,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Hat_BalaclavaFull,
+		Time:400.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Knit a Winter Hat
+	{
+		DenimStrips=8,
+		Thread=3,
+		Yarn=6,
+		keep KnittingNeedles,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Hat_WinterHat,
+		Time:400.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Knit a Woolly Hat
+	{		
+		Yarn=5,
+		keep KnittingNeedles,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Hat_WoolyHat,
+		Time:400.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+
+	recipe Knit Long Socks
+	{		
+		Yarn=4,
+		keep KnittingNeedles,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Socks_Long,
+		Time:400.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+
+	recipe Knit a V-Neck Sweater
+	{
+		Yarn=15,
+		Thread=1,
+		keep Needle,
+		keep KnittingNeedles,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Jumper_VNeck,
+		Time:800.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Knit a R-Neck Sweater
+	{
+		Yarn=15,
+		Thread=1,
+		keep Needle,
+		keep KnittingNeedles,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Jumper_RoundNeck,
+		Time:800.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+		OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Knit a P-Neck Sweater
+	{
+		Yarn=15,
+		Thread=1,
+		keep Needle,
+		keep KnittingNeedles,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Jumper_PoloNeck,
+		Time:800.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+        OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	/************************ LEATHER CLOTHING ITEMS************************/
+	
+	recipe Make a Belt
+	{		
+		aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=2,
+		LeatherStrips=4,
+		Thread=1,
+		aerx.Buckle=1,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+				
+		Result:Belt2,
+		Time:300.0,
+		SkillRequired:Tailoring=6;MetalWelding=1,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Make Ammo Straps
+	{
+		aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=2,
+		LeatherStrips=4,
+		Belt2,
+		Thread=4,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:AmmoStrap_Bullets,
+		Time:300.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,		
+		OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Make Ammo Straps
+	{
+		aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=2,
+		Sling,
+		LeatherStrips=4,
+		Thread=3,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:AmmoStrap_Shells,
+		Time:300.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,	
+        OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Make Boxers
+	{
+		Sheet,
+		Thread=2,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Boxers_White,
+		Time:300.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,	
+        OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Make a T-Shirt
+	{
+		Sheet,
+		Thread=2,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Tshirt_WhiteTINT,
+		Time:300.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,	
+        OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Make Denim Pants
+	{
+		DenimStrips=10,
+		Thread=5,
+		Twine=2,
+		Button=5,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Trousers_Denim,
+		Time:600.0,
+		NeedToBeLearn            :true,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+        OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Make Leather Pants
+	{
+		LeatherStrips=10,
+		Thread=5,
+		Twine=5,
+		Button=5,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Trousers_Padded,
+		Time:600.0,
+		SkillRequired:Tailoring=6,
+		Category:Tailoring,
+        OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	recipe Make a Leather Coat
+	{
+		LeatherStrips=20,
+		Thread=5,
+		Twine=5,
+		Button=5,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:JacketLong_Random,
+		Time:800.0,
+		SkillRequired:Tailoring=6,
+		NeedToBeLearn            :true,
+		Category:Tailoring,
+        OnGiveXP:Recipe.OnGiveXP.TailoringHigh,
+	}
+	
+	/************************ EXTRA CLOTHING ITEMS************************/
+	
+	recipe Make Bullet Proof Vest
+	{
+		Thread=2,
+		Sheet,
+		LeatherStrips=10,
+		SmallSheetMetal=4,
+		Button=5,
+		keep Needle,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:Vest_BulletCivilian,
+		Time:1000.0,
+		NeedToBeLearn            :true,
+		SkillRequired:Tailoring=6;MetalWelding=4,
+		Category:Tailoring,
+        OnGiveXP:Recipe.OnGiveXP.TailoringHigh,	
+	}
+	
+	/************************ SCRAP CLOTHINGS AND STUFF ************************/
+	
+	recipe Scrap Sheet Rope
+	{
+		SheetRope,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:RippedSheetsDirty=8,
+		Time:150.0,
+		OnCreate: GetTailorLeftoversSheetRope_OnCreate,
+		Category:Survivalist,
+	}
+	
+	recipe Scrap Bulletproof vest
+	{
+		Vest_BulletArmy/Vest_BulletCivilian/Vest_BulletPolice,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+		
+		Result:SmallSheetMetal=4,
+		Time:200.0,
+		Category:Survivalist,
+	}
+	
+}

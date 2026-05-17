@@ -30,6 +30,20 @@ local function OnPlayerDeath_CheckPostRespawn()
     local inventory = getPlayer():getInventory();
     if not inventory then return end;
 
+    local square = getPlayer():getSquare();
+    local corpsesThisSquare = square:getDeadBodys();
+    for i = 0, corpsesThisSquare:size() - 1 do
+        local corpse = corpsesThisSquare:get(i);
+
+        if corpse then
+            local corpseContainer = corpse:getContainer();
+            local corpseTicket = corpseContainer:getItemFromType("Base.CorpseTicket");
+            if corpseTicket and corpseTicket:getModData().corpseOwner == getPlayer():getUsername() then
+                LastCorpse = corpse;
+            end
+        end
+    end
+
     -- Step 1, remove all items that aren't the KI5.PODCardGray.
     print("1 - removing player items except respawn pod.");
     local playerPrevItems = getPlayer():getInventory();
@@ -41,41 +55,13 @@ local function OnPlayerDeath_CheckPostRespawn()
         end
     end
 
-    print("2 - Finding player corpse.");
-
-    LastCorpse = nil;
-    if getPlayer():getSquare() then
-        local objects = getPlayer():getSquare():getDeadBodys();
-
-        if objects then
-            for i = 0, objects:size() - 1 do
-                local obj = objects:get(i);
-
-                if instanceof(obj, "IsoDeadBody") then
-                    local bodyContainer = obj:getContainer();
-                    if bodyContainer then
-                        local corpseTicket = bodyContainer:getItemFromType("Base.CorpseTicket");
-                        if corpseTicket and corpseTicket:getModData().corpseOwner then
-                            if corpseTicket:getModData().corpseOwner == getPlayer():getUsername() then
-                                print("Found last corpse!");
-                                print(corpseTicket:getFullType());
-                                LastCorpse = obj;
-                                break;
-                            end
-                        end
-                    end
-                end
-            end
-        end
-    end
-
     if not LastCorpse then
         error("Unable to find player corpse. Something went wrong, submit a bug report.");
         CheckPostRespawn = false;
         return;
     end
 
-    if LastCorpse and getPlayer():getModData().JaxeRevival_Incapacitated then
+    if LastCorpse then
         print("Player corpse is not nil.");
 
         for i, _ in ipairs(itemsToRemove) do
@@ -165,6 +151,10 @@ local function OnPlayerDeath_CheckPostRespawn()
         print("No body damage saved!");
     end
 
+    JaxeRevival.Incapacitation.apply(getPlayer(), true, false);
+    JaxeRevival.Side.reportIncapacitate(true);
+    getPlayer():getBodyDamage():setOverallBodyHealth(10);
+
     print("Syncing!");
     SyncXp(getPlayer());
     sendPlayerStatsChange(getPlayer());
@@ -217,7 +207,7 @@ function ISPostDeathUI:onContinueIncap()
     getPlayer():setZ(LastZ or 0);
 
     getPlayer():getDescriptor():getHumanVisual():copyFrom(LastVisual);
-    getPlayer():getBodyDamage():setOverallBodyHealth(25);
+    
     
     getPlayer():getDescriptor():setForename(LastName.first or string.split(getPlayer():getUsername(), " ")[1]);
     getPlayer():getDescriptor():setSurname(LastName.last or string.split(getPlayer():getUsername(), " ")[2]);
@@ -311,9 +301,16 @@ function ISPostDeathUI:createChildren()
     LastWRCName = WRC.Meta.GetName(getPlayer():getUsername()) or "";
 
     self.buttonRespawn.onclick = self.onContinueIncap;
-    self.buttonRespawn.name = "Respawn Incapacitated";
-    self.buttonRespawn.toolTip = "Spawn at the same place you died, incapacitated.";
+    self.buttonRespawn.title = "Respawn Incapacitated";
+    self.buttonRespawn.tooltip = "Spawn at the same place you died, incapacitated.";
 
+    self.buttonExit.onclick = self.onRespawn;
+    self.buttonExit.title = "Respawn";
+    self.buttonExit.tooltip = "Die and be sent back to the main spawn.";
+
+    self.buttonQuit.onclick = self.onExit;
+    self.buttonQuit.title = "Quit to Menu";
+    self.buttonQuit.tooltip = "Quit to Menu";
 end
 
 -- function CoopCharacterCreation:accept1()

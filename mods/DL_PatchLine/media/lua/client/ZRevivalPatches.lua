@@ -15,10 +15,9 @@ ModalX = (ScreenWidth / 2) - 380;
 ModalY = (ScreenHeight / 2) - 120;
 
 local original_ApplyMechanics = JaxeRevival.Incapacitation.apply;
-local original_SyncApplyEffects = JaxeRevival.Sync.applyEffects;
 local original_ReviveAction = JaxeRevival.TimedAction.perform;
 
-JaxeRevival.UI.applyEffectiveHealth = function(value)
+--[[JaxeRevival.UI.applyEffectiveHealth = function(value)
   if value then playersHealth = {} end
 
   local players = isClient() and getOnlinePlayers() or IsoPlayer.getPlayers()
@@ -41,7 +40,7 @@ JaxeRevival.UI.applyEffectiveHealth = function(value)
       end
     end
   end
-end
+end--]]
 
 function JaxeRevival.TimedAction:perform()
     original_ReviveAction(self);
@@ -53,27 +52,15 @@ function JaxeRevival.TimedAction:perform()
     self.target:setX(self.target:getX());
     self.target:setY(self.target:getY());
     self.target:setZ(self.target:getZ());
-    self.target:setShootable(true);
+    --self.target:setShootable(true);
 end
-
-JaxeRevival.Sync.applyEffects = function(player, value)
-    --player:setInvincible(value or false);
-    --sendPlayerExtraInfo(player);
-
-    if value then player:setShootable(false); end;
-
-    --original_SyncApplyEffects(player, value);
-    --JaxeRevival.Sync.sendClient(player, JaxeRevival.Sync.REVIVE, JaxeRevival.Sync.getArgsFromTarget(player));
-end
-
-
 
 JaxeRevival.Incapacitation.apply = function(player, value, serverInitiated)
     if not player then return end;
 
     --player:setInvincible(value or false);
     --sendPlayerExtraInfo(player);
-    player:setShootable(true);
+    --player:setShootable(true);
     original_ApplyMechanics(player, value, serverInitiated);
     --JaxeRevival.Sync.sendClient(player, JaxeRevival.Sync.REVIVE, JaxeRevival.Sync.getArgsFromTarget(player));
 end
