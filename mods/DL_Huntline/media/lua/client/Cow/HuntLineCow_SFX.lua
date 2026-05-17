@@ -114,7 +114,6 @@ function HuntLineCow.OnZombieDead(zed)
 	local inventory = zed:getInventory()
 
 	local sq = zed:getSquare()
-	print("[SERVER] Dropping 'Base.Cow_Dead' at:", sq:getX(), sq:getY(), sq:getZ())
 	local item = InventoryItemFactory.CreateItem("Base.Cow_Dead")
 	item:setAge(0)
 	sq:AddWorldInventoryItem(item, ZombRand(0, 0), ZombRand(0, 0), 0)

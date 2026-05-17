@@ -36,7 +36,7 @@ function HuntLineDeer.removeDeerOutfit(zed)
             local wornItem = inv:getItemByIndex(i)
             local Type = wornItem:getFullType()
             if wornItem and (string.find(Type, "Internal")) then
-                print("Gottem")
+
                 return true 
             end
         end

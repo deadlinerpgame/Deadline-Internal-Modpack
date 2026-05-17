@@ -36,7 +36,7 @@ function HuntLineRat.isBiteReact(pl)
 	local attacker = nil
 	if pl:getVariableString("HitReaction") == "Bite" then
 		local time = pl:timeSinceLastStab()
-		print(time)
+		--print(time)
 		attacker = pl:getVariableString("getLastTargettedBy")
 
 		return true
@@ -58,9 +58,9 @@ function HuntLineRat.setStats(zed)
         end
 
         if HuntLineRat.isRatAnimal(zed) then
-            print("Test4")
+            --print("Test4")
             if zed:getModData()['RatAnimal_Init'] == nil then
-                print("Test5")
+                --print("Test5")
                 local sandOpt = getSandboxOptions()
                 --local zSpeed = sandOpt:getOptionByName("ZombieLore.Speed"):getValue()
 

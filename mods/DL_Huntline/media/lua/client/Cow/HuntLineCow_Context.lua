@@ -50,7 +50,6 @@ function HuntLineCow.Context(player, context, worldobjects)
 				if fit then
 					opt:addOption('set stats: '..tostring(fit), worldobjects, function()
 						HuntLineCow.setStats(zed)
-						print(HuntLineCow.getOutfitName(zed))
 					end);
 				end
 				local isCrawler = HuntLineCow.isCrawler(zed)
