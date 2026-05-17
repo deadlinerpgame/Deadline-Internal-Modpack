@@ -92,9 +92,11 @@ module Base
 		keep KnittingNeedles,
 
         	Result:Hat_Beany,
-        	Time:100.0,
+        	Time:500.0,
 		SkillRequired:Tailoring=6,
 		Sound:ClothesRipping,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
         	Category:Tailoring,
 	}	
 
@@ -263,6 +265,8 @@ module Base
 		Sound:ClothesRipping,
 		Time:100.0,
 		Category:Tailoring,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
 		Override:true,
 		SkillRequired:Tailoring=6,
 		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
@@ -311,4 +315,212 @@ module Base
        		Time:60.0,
       		Category:Tailoring,
     	}
+
+	recipe Knit Big White Scarf
+    {
+        Yarn = 10,
+        DyePack = 1,
+        Thread=4,
+		keep KnittingNeedles,
+        keep Scissors,
+
+        Result:bigscarf_white,
+        Time:500.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
+		Override:true,
+    }
+
+	recipe Knit Big Red Scarf
+    {
+        Yarn = 10,
+        DyePack = 1,
+        Thread=4,
+		keep KnittingNeedles,
+        keep Scissors,
+
+        Result:bigscarf_red,
+        Time:500.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
+		Override:true,
+    }
+
+	recipe Knit Big Magenta Scarf
+    {
+        Yarn = 10,
+        DyePack = 1,
+        Thread=4,
+		keep KnittingNeedles,
+        keep Scissors,
+
+        Result:bigscarf_magenta,
+        Time:500.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
+		Override:true,
+    }
+
+	recipe Knit Big Green Scarf
+    {
+        Yarn = 10,
+        DyePack = 1,
+        Thread=4,
+		keep KnittingNeedles,
+        keep Scissors,
+
+        Result:bigscarf_green,
+        Time:500.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
+		Override:true,
+    }
+
+	recipe Knit Big Brown Scarf
+    {
+        Yarn = 10,
+        DyePack = 1,
+        Thread=4,
+		keep KnittingNeedles,
+        keep Scissors,
+
+        Result:bigscarf_brown,
+        Time:500.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
+		Override:true,
+    }
+
+	recipe Knit Big Blue Scarf
+    {
+        Yarn = 10,
+        DyePack = 1,
+        Thread=4,
+		keep KnittingNeedles,
+        keep Scissors,
+
+        Result:bigscarf_blue,
+        Time:500.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
+		Override:true,
+    }
+
+	recipe Knit Big Black Scarf
+    {
+        Yarn = 10,
+        DyePack = 1,
+        Thread=4,
+		keep KnittingNeedles,
+        keep Scissors,
+
+        Result:bigscarf_black,
+        Time:500.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
+		Override:true,
+    }
+
+   recipe Make Oversized Hoodie
+    {
+        aerx.FabricRoll_Cotton = 2,
+        DyePack = 2,
+        Thread=4,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:Big_HoodieDOWN_WhiteTINT,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Oversized Hoodie
+    {
+        aerx.FabricRoll_Cotton = 2,
+        DyePack = 2,
+        Thread=4,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:Big_HoodieDOWN_WhiteTINT_Decal,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Oversized Sweater
+    {
+        aerx.FabricRoll_Cotton = 2,
+        DyePack = 2,
+        Thread=4,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:Big_Sweater_WhiteTINT,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Oversized Sweater
+    {
+        aerx.FabricRoll_Cotton = 2,
+        DyePack = 2,
+        Thread=4,
+        keep Needle,
+        keep Scissors,
+        NearItem:TailoringWorkbench,
+
+        Result:Big_Sweater_WhiteTINT_Decal,
+        Time:100.0,
+        SkillRequired:Tailoring=10,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Oversized Knitted Sweater
+    {
+        Yarn = 20,
+        DyePack = 1,
+        Thread=4,
+		keep KnittingNeedles,
+        keep Scissors,
+
+        Result:Big_Knitted_Sweater_WhiteTINT,
+        Time:500.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
+    }
+
 }
