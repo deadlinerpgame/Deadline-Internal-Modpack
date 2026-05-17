@@ -25,6 +25,14 @@ local AMMO_TABLE = {
     "Base.Bullets44BoxZ",
     "Base.Bullets45BoxZ",
     "Base.Bullets357BoxZ",
+    "Base.ShotgunShellsBoxZ",
+    "Base.223BoxZ",
+    "Base.308BoxZ",
+    "Base.556BoxZ",
+    "Base.762x51BoxZ",
+    "Base.762x39BoxZ",
+    "Base.Bullets3006BoxZ",
+    
 }
 
 local function getRandomItem(lootTable)
@@ -89,7 +97,7 @@ local function onZombieDead(zombie)
     modData.lootcounter = modData.lootcounter or 0
     
     if modData.lootcounter < 5 or (not modData.lootcounter_timestamp) then
-        local roll = ZombRand(100) + 1
+        local roll = ZombRand(25) + 1
         
         if roll == 1 then
             modData.lootcounter = modData.lootcounter + 1
@@ -115,7 +123,7 @@ local function onEveryHour()
     if modData.lootcountertimer and modData.lootcounter_timestamp then
         local currentTime = getGameTime():getWorldAgeHours()
         modData.lootcountertimer = currentTime - modData.lootcounter_timestamp
-        if modData.lootcountertimer >= 650 then
+        if modData.lootcountertimer >= 325 then
             modData.lootcounter = 0
             modData.lootcountertimer = nil
             modData.lootcounter_timestamp = nil
