@@ -17,7 +17,7 @@ ModalY = (ScreenHeight / 2) - 120;
 local original_ApplyMechanics = JaxeRevival.Incapacitation.apply;
 local original_ReviveAction = JaxeRevival.TimedAction.perform;
 
-JaxeRevival.UI.applyEffectiveHealth = function(value)
+--[[JaxeRevival.UI.applyEffectiveHealth = function(value)
   if value then playersHealth = {} end
 
   local players = isClient() and getOnlinePlayers() or IsoPlayer.getPlayers()
@@ -40,7 +40,7 @@ JaxeRevival.UI.applyEffectiveHealth = function(value)
       end
     end
   end
-end
+end--]]
 
 function JaxeRevival.TimedAction:perform()
     original_ReviveAction(self);

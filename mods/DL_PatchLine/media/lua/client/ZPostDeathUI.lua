@@ -151,6 +151,10 @@ local function OnPlayerDeath_CheckPostRespawn()
         print("No body damage saved!");
     end
 
+    JaxeRevival.Incapacitation.apply(getPlayer(), true, false);
+    JaxeRevival.Side.reportIncapacitate(true);
+    getPlayer():getBodyDamage():setOverallBodyHealth(10);
+
     print("Syncing!");
     SyncXp(getPlayer());
     sendPlayerStatsChange(getPlayer());
@@ -203,9 +207,7 @@ function ISPostDeathUI:onContinueIncap()
     getPlayer():setZ(LastZ or 0);
 
     getPlayer():getDescriptor():getHumanVisual():copyFrom(LastVisual);
-    getPlayer():getBodyDamage():setOverallBodyHealth(10);
-
-    JaxeRevival.Incapacitation.apply(getPlayer(), true, false);
+    
     
     getPlayer():getDescriptor():setForename(LastName.first or string.split(getPlayer():getUsername(), " ")[1]);
     getPlayer():getDescriptor():setSurname(LastName.last or string.split(getPlayer():getUsername(), " ")[2]);
@@ -376,4 +378,4 @@ print(#spawn..' possible spawn points')
 --]]
 
 Events.OnPlayerDeath.Add(OnPlayerDeath_SaveData);
-Events.OnPlayerUpdate.Add(OnPlayerDeath_CheckPostRespawn);
+Events.EveryOneMinute.Add(OnPlayerDeath_CheckPostRespawn);

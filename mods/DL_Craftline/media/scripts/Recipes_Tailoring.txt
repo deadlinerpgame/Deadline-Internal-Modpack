@@ -12,7 +12,7 @@ module Base
 		Result:HoodieDOWN_BearHeaddress,
 		Sound:Sewing,
 		Time:200.0,
-		SkillRequired:Tailoring=8,
+		SkillRequired:Tailoring=10,
 		Category:Tailoring,
 	}
 
@@ -66,7 +66,7 @@ module Base
 		LeatherStrips=10,
 		Thread=1,
 		keep Needle,
-		
+		aerx.Buckle=1,
 		Result:CBX_Sumk_7_R,
 		Sound:Sewing,
 		Time:200.0,
@@ -88,11 +88,12 @@ module Base
 
 	recipe Make Beanie
 	{
-		Yarn=1,
+		Yarn=5,
 		keep KnittingNeedles,
 
         	Result:Hat_Beany,
         	Time:100.0,
+		SkillRequired:Tailoring=6,
 		Sound:ClothesRipping,
         	Category:Tailoring,
 	}	
@@ -101,11 +102,14 @@ module Base
 	{
 		Belt2=1,
 		Thread=4,
+		aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=1,
+		aerx.Buckle=1,
 		keep Needle,
 		LeatherStrips/LeatherStripsDirty=4,
 
         	Result:HolsterSimple,
         	Time:100.0,
+		SkillRequired:Tailoring=6,
 		Sound:ClothesRipping,
         	Category:Tailoring,
 	}
@@ -114,10 +118,13 @@ module Base
 	{
 		Belt2=1,
 		Thread=8,
+		aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=2,
+		aerx.Buckle=1,
 		keep Needle,
 		LeatherStrips/LeatherStripsDirty=8,
         	Result:HolsterDouble,
         	Time:100.0,
+		SkillRequired:Tailoring=6,
 		Sound:ClothesRipping,
         	Category:Tailoring,
 	}
@@ -149,6 +156,7 @@ module Base
 	{
 		LeatherStrips=10,
 		Thread=20,
+		aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=2,
 		keep Needle,
 
        		Result:RH93_ElbowPads,
@@ -161,6 +169,7 @@ module Base
 	{
 		LeatherStrips=10,
 		Thread=20,
+		aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=2,
 		keep Needle,
 
        		Result:RH93_KneePads,
