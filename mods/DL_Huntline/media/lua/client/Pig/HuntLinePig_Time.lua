@@ -103,7 +103,7 @@ function HuntLinePig.startOscillator()
             HuntLinePig.OscillatorColor = rgb
             if pl then
                 pl:setHaloNote(tostring(),rgb.r,rgb.g,rgb.b,100)
-                print("intensity:", osc)
+                --print("intensity:", osc)
             end
         end
  ]]

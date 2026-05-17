@@ -44,7 +44,7 @@ end
 --print(getCorpseToSpawn(dbgZed))
 
 function HuntLineRat.handleCorpse(corpse)
-    print(corpse:getModData()['Animal_fType'])
+    --print(corpse:getModData()['Animal_fType'])
     if  HuntLineRat.isDeadAnimal(corpse) or corpse:getModData()['Animal_fType']  then
         local tab = HuntLineRat.CorpseCheck
         local w = corpse:getWornItems()
