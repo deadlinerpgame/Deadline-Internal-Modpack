@@ -5,6 +5,7 @@ require "ISUI/ISButton"
 require "ISUI/ISTextEntryBox"
 require "ISUI/ISComboBox"
 require "ISUI/ISLabel"
+require "JsonIOWindow"
 
 AdminEditorWindow = ISPanel:derive("AdminEditorWindow")
 
@@ -48,7 +49,7 @@ function AdminEditorWindow:new()
         math.floor((sw - W) / 2),
         math.floor((sh - H) / 2),
         W, H)
-    o.moveWithMouse  = true
+    o.moveWithMouse  = false
     o.zone           = nil
     o.workingTree    = nil
     o.selectedNodeId = nil
@@ -80,8 +81,55 @@ function AdminEditorWindow:buildStaticButtons()
     self.btnDiscard = ISButton:new(W - PAD - BTN_W, 4, BTN_W, BTN_H, "Discard", self, AdminEditorWindow.onDiscard)
     self.btnDiscard:initialise(); self.btnDiscard:instantiate(); self:addChild(self.btnDiscard)
 
+    -- Export / Import sit to the left of Save.
+    self.btnExport = ISButton:new(W - PAD - BTN_W*4 - 12, 4, BTN_W, BTN_H, "Export", self, AdminEditorWindow.onExport)
+    self.btnExport:initialise(); self.btnExport:instantiate(); self:addChild(self.btnExport)
+
+    self.btnImport = ISButton:new(W - PAD - BTN_W*3 - 8, 4, BTN_W, BTN_H, "Import", self, AdminEditorWindow.onImport)
+    self.btnImport:initialise(); self.btnImport:instantiate(); self:addChild(self.btnImport)
+
     self.btnClose = ISButton:new(W - PAD - BTN_W, H - FOOTER_H + 4, BTN_W, BTN_H, "Close", self, AdminEditorWindow.onClose)
     self.btnClose:initialise(); self.btnClose:instantiate(); self:addChild(self.btnClose)
+end
+
+function AdminEditorWindow:buildExportPayload()
+    local radius = tonumber(self.entryRadius and self.entryRadius:getInternalText() or self.zone.radius) or 2
+    return {
+        schema       = "npc-dialogue/1",
+        name         = (self.entryName and self.entryName:getInternalText()) or self.zone.name or "",
+        portrait     = (self.entryPortrait and self.entryPortrait:getInternalText()) or self.zone.portrait or "",
+        radius       = radius,
+        concurrent   = self.zone.concurrent,
+        dialogueTree = self.workingTree or { nodes = {}, nodeOrder = {} },
+    }
+end
+
+function AdminEditorWindow:onExport()
+    local payload = self:buildExportPayload()
+    local text = JsonIOWindow.json.encode(payload)
+    JsonIOWindow.openExport("Export NPC: " .. (payload.name or ""), text)
+end
+
+function AdminEditorWindow:onImport()
+    local self_ref = self
+    JsonIOWindow.openImport("Import NPC (replaces current data)", function(data)
+        if type(data) ~= "table" then error("not an object") end
+        if type(data.dialogueTree) ~= "table" then error("missing dialogueTree") end
+        local tree = data.dialogueTree
+        if type(tree.nodes) ~= "table" then tree.nodes = {} end
+        if type(tree.nodeOrder) ~= "table" then tree.nodeOrder = {} end
+
+        self_ref.zone.name     = tostring(data.name or self_ref.zone.name or "")
+        self_ref.zone.portrait = tostring(data.portrait or "")
+        self_ref.zone.radius   = tonumber(data.radius) or self_ref.zone.radius or 2
+        if data.concurrent ~= nil then
+            self_ref.zone.concurrent = data.concurrent and true or false
+        end
+        self_ref.workingTree    = tree
+        self_ref.selectedNodeId = tree.nodeOrder[1] or nil
+        self_ref.unsaved        = true
+        self_ref:rebuildWidgets()
+    end)
 end
 
 function AdminEditorWindow:rebuildWidgets()
@@ -468,26 +516,6 @@ function AdminEditorWindow:onSave()
     if not zone then return end
 
     zone.dialogueTree = deepCopyTree(self.workingTree)
-
-    local cell = getCell()
-    if not cell then return end
-    local sq = cell:getGridSquare(zone.x, zone.y, zone.z)
-    if not sq then return end
-
-    sq:getModData()["NPCDialogueZone"] = zone
-    if sq.transmitModData then
-        sq:transmitModData()
-    elseif sq.transmitModdata then
-        sq:transmitModdata()
-    end
-
-    ModData.request(NPCDialogue.MODDATA_KEY)
-    local modTable = ModData.getOrCreate(NPCDialogue.MODDATA_KEY)
-    if not modTable.zones then modTable.zones = {} end
-    modTable.zones[zone.id] = { id = zone.id, x = zone.x, y = zone.y, z = zone.z }
-    ModData.add(NPCDialogue.MODDATA_KEY, modTable)
-    ModData.transmit(NPCDialogue.MODDATA_KEY)
-    ModData.request(NPCDialogue.MODDATA_KEY)
 
     sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "UpdateZone", { zone = zone })
 

@@ -114,7 +114,7 @@ function HuntLineRat.OnZombieDead(zed)
 	local inventory = zed:getInventory()
 
 	local sq = zed:getSquare()
-	print("[SERVER] Dropping 'Base.Rat_Dead' at:", sq:getX(), sq:getY(), sq:getZ())
+	--print("[SERVER] Dropping 'Base.Rat_Dead' at:", sq:getX(), sq:getY(), sq:getZ())
 	local item = InventoryItemFactory.CreateItem("Base.DeadRat")
 	item:setAge(0)
 	item:setRotten(false);

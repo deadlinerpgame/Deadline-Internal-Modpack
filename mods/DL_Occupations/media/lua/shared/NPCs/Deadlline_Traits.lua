@@ -1517,3 +1517,35 @@ addTrait("Emaciated", {
     description = "UI_trait_emaciateddesc",
     profession = true,
 })
+
+-- Drug Related Traits
+
+addTrait("OpiateAddict", {
+    name = "Opiate Addict",
+    description = "You are addicted to Opiates. You will experience Opiate withdrawal if you don't use Opiates regularly.",
+    profession = true,
+})
+
+addTrait("StimulantAddict", {
+    name = "Stimulant Addict",
+    description = "You are addicted to Stimulants. You will experience Stimulant withdrawal if you don't use Stimulants regularly.",
+    profession = true,
+})
+
+addTrait("DepressantAddict", {
+    name = "Depressant Addict",
+    description = "You are addicted to Depressants. You will experience Depressant withdrawal if you don't use Depressants regularly.",
+    profession = true,
+})
+
+addTrait("HallucinogenAddict", {
+    name = "Hallucinogen Addict",
+    description = "You are addicted to Hallucinogens. You will experience Hallucinogen withdrawal if you don't use Hallucinogens regularly.",
+    profession = true,
+})
+
+addTrait("InhalantAddict", {
+    name = "Inhalant Addict",
+    description = "You are addicted to Inhalants. You will experience Inhalant withdrawal if you don't use Inhalants regularly.",
+    profession = true,
+})

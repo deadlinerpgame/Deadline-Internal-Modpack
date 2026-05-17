@@ -37,12 +37,12 @@ end
 
 Commands.HuntLineRat.doDespawnCorpse = function(player, args)
     local corpse = args.corpse
-    print("Despawn 2")
+    --print("Despawn 2")
     if corpse then
         corpse:removeFromWorld();
         corpse:getSquare():removeCorpse(corpse, true);
         corpse:removeFromSquare();
-        print("Despawn 3")
+        --print("Despawn 3")
     end
 end
 
