@@ -362,7 +362,7 @@ end
 Events.OnPlayerUpdate.Add(onPlayerUpdate)
 
 local function onKeyPressed(key)
-    if key ~= Keyboard.KEY_F then return end
+    if key ~= Keyboard.KEY_E then return end
     local dw = DialogueWindow.getInstance()
     if dw:isVisible() then return end
     if not currentZoneInside then return end
@@ -389,7 +389,7 @@ local function updatePrompt()
     if currentZoneInside then
         if lastPromptZoneId ~= currentZoneInside.id then
             lastPromptZoneId = currentZoneInside.id
-            p:setHaloNote("Press F to interact with " .. currentZoneInside.name, 255, 255, 150, 300)
+            p:setHaloNote("Press E to interact with " .. currentZoneInside.name, 255, 255, 150, 300)
         end
     else
         lastPromptZoneId = nil
