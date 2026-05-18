@@ -2393,7 +2393,7 @@ function ISDeadlineDiceUI:getScore(labelText)
     local editedLabel = self:getEditedLabel(labelText)
     local playerName = self.character:getUsername()           -- Get the player's username
     local diceScore = DeadlineDice.getDiceRoll()
-    local diceScore6 = newRand:random(1, 7);
+    local diceScore6 = newRand:random(1, 6);
     local modifiers = DeadlineDice.getModifiers(editedLabel, diceScore)
     local totalScore = diceScore
     local currentItem = self.character:getPrimaryHandItem() or self.character:getSecondaryHandItem()
