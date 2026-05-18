@@ -19,7 +19,7 @@ local nextTileNotification = 0;
 Events.OnPlayerUpdate.Add(function(p)
     if not p then return end
 
-    if isKeyDown(Keyboard.KEY_F) then -- Check for transport.
+    if isKeyDown(Keyboard.KEY_E) then -- Check for transport.
         local x,y,z = math.floor(p:getX()), math.floor(p:getY()), p:getZ()
         local pid = p:getOnlineID() or 0;
 
@@ -45,7 +45,7 @@ Events.OnPlayerUpdate.Add(function(p)
         local info = DD_ReadSquareTransport(p:getSquare());
         if not info then return end;
 
-        p:setHaloNote("Travel to: " .. info.name .. " - press F to enter.", 255, 255, 255, 300);
+        p:setHaloNote("Travel to: " .. info.name .. " - press E to enter.", 255, 255, 255, 300);
         nextTileNotification = getTimestamp() + 15;
     end
 end)

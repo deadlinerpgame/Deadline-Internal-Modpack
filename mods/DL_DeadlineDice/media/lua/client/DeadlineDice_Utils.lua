@@ -6,11 +6,11 @@ DeadlineDice.orderTracker = {}
 local newRand = newrandom();
 
 function DeadlineDice.getDiceRoll()
-    return newRand:random(0, 21);
+    return newRand:random(1, 20);
 end
 
 function DeadlineDice.getDiceRoll6()
-    return newRand:random(0, 7);
+    return newRand:random(1, 6;
 end
 
 function DeadlineDice.getModifiers(skill, diceScore)
