@@ -60,7 +60,7 @@ module Base
 		Sound:Hammering,
 		Time:400.0,
 		Category:Firearms,
-		SkillRequired:MetalWelding=6;Aiming=4,
+		SkillRequired:Electricity=6;Aiming=4,
 	}
     
     recipe Craft Red Dot
@@ -203,7 +203,7 @@ module Base
         Result:22Silencer,
         Time:400.0,
         Category:Firearm,
-        SkillRequired:MetalWelding=10;Aiming=4,
+        SkillRequired:Electricity=10;Aiming=4,
     }
 
     recipe Craft 9mm Silencer
@@ -230,7 +230,7 @@ module Base
         Result:9mmSilencer,
         Time:400.0,
         Category:Firearm,
-        SkillRequired:MetalWelding=10;Aiming=4,
+        SkillRequired:Electricity=10;Aiming=4,
     }
 
     recipe Craft 45 Silencer
@@ -257,7 +257,7 @@ module Base
         Result:45Silencer,
         Time:400.0,
         Category:Firearm,
-        SkillRequired:MetalWelding=10;Aiming=4,
+        SkillRequired:Electricity=10;Aiming=4,
     }
 
     recipe Craft 38 Silencer
@@ -284,7 +284,7 @@ module Base
         Result:38Silencer,
         Time:400.0,
         Category:Firearm,
-        SkillRequired:MetalWelding=10;Aiming=4,
+        SkillRequired:Electricity=10;Aiming=4,
     }
 
     recipe Craft 44 Silencer
@@ -311,7 +311,7 @@ module Base
         Result:44Silencer,
         Time:400.0,
         Category:Firearm,
-        SkillRequired:MetalWelding=10;Aiming=4,
+        SkillRequired:Electricity=10;Aiming=4,
     }
 
     recipe Craft 223 Silencer
@@ -337,7 +337,7 @@ module Base
         Result:223Silencer,
         Time:450.0,
         Category:Firearm,
-        SkillRequired:MetalWelding=10;Aiming=4,
+        SkillRequired:Electricity=10;Aiming=4,
     }
 
     recipe Craft 308 Silencer
@@ -364,7 +364,7 @@ module Base
         Result:308Silencer,
         Time:500.0,
         Category:Firearm,
-        SkillRequired:MetalWelding=10;Aiming=4,
+        SkillRequired:Electricity=10;Aiming=4,
     }
 
     recipe Craft Shotgun Silencer
@@ -391,7 +391,7 @@ module Base
         Result:ShotgunSilencer,
         Time:550.0,
         Category:Firearm,
-        SkillRequired:MetalWelding=10;Aiming=4,
+        SkillRequired:Electricity=10;Aiming=4,
     }
 
     recipe Craft 9mm Compensator
@@ -952,7 +952,7 @@ module Base
     recipe Craft Olive Sling
     {
 	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=3,   
-        GreenDye,
+    DyePack = 2,
 	Thread=5,
 	keep Needle,
         Result:Sling_Olive,
@@ -964,8 +964,7 @@ module Base
     recipe Craft Camo Sling
     {
 	aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan=3,   
-        GreenDye,
-        BrownDye,
+    DyePack = 2,
 	Thread=5,
 	keep Needle,
         Result:Sling_Camo,

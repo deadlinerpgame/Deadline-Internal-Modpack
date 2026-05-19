@@ -10,7 +10,7 @@ function DeadlineDice.getDiceRoll()
 end
 
 function DeadlineDice.getDiceRoll6()
-    return newRand:random(1, 6;
+    return newRand:random(1, 6);
 end
 
 function DeadlineDice.getModifiers(skill, diceScore)

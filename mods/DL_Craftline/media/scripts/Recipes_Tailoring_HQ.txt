@@ -1,9 +1,8 @@
-module HCustoms
+module Base
 {
     imports
         {
-            Base,
-            MG,
+            HCustoms,
         }
 
     recipe Make Cazador Backpack (High Quality Fabric)
@@ -1822,7 +1821,7 @@ module HCustoms
         Category:Tailoring,
     }
 
-    recipe Make Bomber Jacket (MG)
+    recipe Make Bomber Jacket (MG) (High Quality Fabric)
     {
         Deadline.Kevlar = 2,
         DyePack = 2,
@@ -1832,7 +1831,7 @@ module HCustoms
         keep Scissors,
         NearItem:TailoringWorkbench,
 
-        Result:MG_Jacket_Bomber,
+        Result:MG.MG_Jacket_Bomber,
         Time:100.0,
         SkillRequired:Tailoring=10,
         Sound:ClothesRipping,
