@@ -1,5 +1,9 @@
 module Base
 {
+    imports
+        {
+            RustillerysHats
+        }
 
 	recipe Bear Headdress
 	{
@@ -509,7 +513,7 @@ module Base
     recipe Make Oversized Knitted Sweater
     {
         Yarn = 20,
-        DyePack = 1,
+        DyePack = 2,
         Thread=4,
 		keep KnittingNeedles,
         keep Scissors,
@@ -521,6 +525,128 @@ module Base
         Category:Tailoring,
 		Prop1:KnittingNeedles,
 		Prop2:Yarn,
+    }
+
+	recipe Make Cloth Head rag
+    {
+        RippedSheets = 5,
+		
+        Result:Hat_Headrag,
+        Time:70.0,
+        Category:Tailoring,
+    }
+    
+	recipe Make Cloth Head rag Dyeable
+    {
+		RippedSheets = 5,
+        DyePack = 1,
+		
+        Result:Hat_HeadragTINT,
+        Time:70.0,
+        Category:Tailoring,
+    }
+    
+	recipe Make Head rag - Denim
+    {
+        DenimStrips = 5,
+		
+        Result:Hat_Headrag_Denim,
+        Time:70.0,
+        Category:Tailoring,
+    }
+    
+	recipe Make Head rag - Leather
+    {
+        LeatherStrips = 5,
+		
+        Result:Hat_Headrag_Leather,
+        Time:70.0,
+        Category:Tailoring,
+    }	
+    
+	recipe Make Ushanka
+    {
+		keep Needle,
+		keep KnittingNeedles,
+        keep Scissors,
+        DyePack = 2,
+        Thread=10,
+        FabricRoll_Cotton = 2,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 2,
+		
+        Result:Hat_Ushanka,
+        Time:150.0,
+        Category:Tailoring,
+		NearItem:TailoringWorkbench,
+        SkillRequired:Tailoring=10,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
+    }
+
+	recipe Make Ushanka Tintable
+    {
+		keep Needle,
+		keep KnittingNeedles,
+        keep Scissors,
+        DyePack = 2,
+        Thread=10,
+        FabricRoll_Cotton = 2,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 2,
+		
+        Result:Hat_UshankaTINT,
+        Time:150.0,
+        Category:Tailoring,
+		NearItem:TailoringWorkbench,
+        SkillRequired:Tailoring=10,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
+    }
+
+	recipe Make Ushanka - Camo
+    {
+		keep Needle,
+		keep KnittingNeedles,
+        keep Scissors,
+        DyePack = 2,
+        Thread=10,
+        FabricRoll_Cotton = 2,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 2,
+		
+        Result:Hat_UshankaCamo,
+        Time:150.0,
+        Category:Tailoring,
+		NearItem:TailoringWorkbench,
+        SkillRequired:Tailoring=10,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
+    }
+
+	recipe Eye bandage
+    {
+		AlcoholBandage/Bandage/AlcoholBandage2 = 1,
+		
+        Result:Hat_EyeBandage_Left,
+        Time:70.0,
+        Category:Tailoring,
+    }	
+	
+	recipe Eye bandage - Burlap
+    {
+		AlcoholBandage/Bandage/AlcoholBandage2 = 1,
+		
+        Result:Hat_EyeBandage_LeftBurlap,
+        Time:70.0,
+        Category:Tailoring,
+    }	
+	
+	recipe Eye bandage Tintable
+    {
+		AlcoholBandage/Bandage/AlcoholBandage2 = 1,
+        DyePack = 1,
+		
+        Result:Hat_EyeBandage_LeftTINT,
+        Time:70.0,
+        Category:Tailoring,
     }
 
 }
