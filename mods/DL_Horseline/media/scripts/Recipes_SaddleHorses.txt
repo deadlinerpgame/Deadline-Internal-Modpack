@@ -1,46 +1,201 @@
 module DeadlineHorse
+	imports
+	{
+		Base,
+		Animals,
+	}
 {
 
-	recipe Saddle White Horse
+	recipe Domesticate Horse
 	{
-		Saddle,
 		Animals.HorseWhite/Fauna.F_Horse,
 
 		Result:2TK_models.2TK_Horse_04,
-		Time:1.0,
+		Time:250.0,
 		Category:Horses,
 	}
 
 
-	recipe Saddle Brown Horse
+	recipe Domesticate Horse
 	{
-		Saddle,
 		Animals.Horse/Fauna.F_Horse_01/Animals.HorseBrown/Animals.HorseBloodBay,
 
 		Result:2TK_models.2TK_Horse,
-		Time:1.0,
+		Time:250.0,
 		Category:Horses,
 	}
 
-	recipe Saddle Black Horse
+	recipe Domesticate Horse
 	{
-		Saddle,
 		Animals.HorseAppaloosa/Animals.HorseBlack,
 
 		Result:2TK_models.2TK_Horse_02,
-		Time:1.0,
+		Time:250.0,
 		Category:Horses,
 	}
 
-	recipe Saddle Grey Horse
+	recipe Domesticate Horse
 	{
-		Saddle,
 		Animals.HorseAppaloosa/Animals.HorseGrey,
 
 		Result:2TK_models.2TK_Horse_03,
-		Time:1.0,
+		Time:250.0,
 		Category:Horses,
 	}
+	
+    recipe Make Racing Saddle
+    {
+        LeatherStrips = 5,
+        Thread = 20,
+        Sheet = 1,
+        aerx.Buckle = 6,
+		Deadline.Kevlar = 1,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 10,
+        Result:RacingSaddle,
+        Time:150.0,
+        Category:Horses,
+        NearItem:TailoringWorkbench,
+        SkillRequired:Tailoring=10,
+    }
+	
+    recipe Make Roadtrip Saddle
+    {
+        LeatherStrips = 5,
+        Thread = 20,
+        Sheet = 1,
+        aerx.Buckle = 6,
+		Deadline.Kevlar = 1,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 10,
+        Result:RoadtripSaddle,
+        Time:150.0,
+        Category:Horses,
+        NearItem:TailoringWorkbench,
+        SkillRequired:Tailoring=10,
+    }
+	
+    recipe Make Horse Blinders
+    {
+        LeatherStrips = 5,
+        Thread = 20,
+        FabricRoll_Cotton = 2,
+        FabricRoll_DenimBlue/FabricRoll_DenimDarkBlue/FabricRoll_DenimBlack = 2,
+        aerx.Buckle = 2,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 1,
 
+        Result:Blinder,
+        Time:150.0,
+        Category:Horses,
+        NearItem:TailoringWorkbench,
+        SkillRequired:Tailoring=10,
+    }
+	
+    recipe Make Small Saddlebag
+    {
+        LeatherStrips = 5,
+        Thread = 20,
+        Sheet = 1,
+        aerx.Buckle = 6,
+		Deadline.Kevlar = 1,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 5,
+        Result:SaddlebagSmall,
+        Time:150.0,
+        Category:Horses,
+        NearItem:TailoringWorkbench,
+        SkillRequired:Tailoring=10,
+    }
+	
+    recipe Make Medium Saddlebag
+    {
+        LeatherStrips = 5,
+        Thread = 20,
+        Sheet = 1,
+        aerx.Buckle = 6,
+		Deadline.Kevlar = 2,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 10,
+        Result:SaddlebagMedium,
+        Time:150.0,
+        Category:Horses,
+        NearItem:TailoringWorkbench,
+        SkillRequired:Tailoring=10,
+    }
+	
+    recipe Make Large Saddlebag
+    {
+        LeatherStrips = 5,
+        Thread = 20,
+        Sheet = 1,
+        aerx.Buckle = 6,
+		Deadline.Kevlar = 3,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 20,
+        Result:SaddlebagLarge,
+        Time:150.0,
+        Category:Horses,
+        NearItem:TailoringWorkbench,
+        SkillRequired:Tailoring=10,
+    }
+	
+    recipe Make Horseshoes
+    {
+        keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep [recipe.GetItemTypes.WeldingMask],
+        NearItem:Simple Forge,
+        HoofWraps = 1,
+        BlowTorch = 5,
+        WeldingRods = 5,
+        aerx.IronBar = 2,
+        LeatherStrips = 5,
+        Thread = 20,
+
+        Sound:Hammering,
+        Result:Horseshoes,
+        Time:150.0,
+        Category:Horses,
+        SkillRequired:MetalWelding=10,
+    }
+	
+    recipe Make Hoofwraps
+    {
+        LeatherStrips = 5,
+        Thread = 20,
+        FabricRoll_Cotton = 2,
+        FabricRoll_DenimBlue/FabricRoll_DenimDarkBlue/FabricRoll_DenimBlack = 2,
+
+        Result:HoofWraps,
+        Time:150.0,
+        Category:Horses,
+        NearItem:TailoringWorkbench,
+        SkillRequired:Tailoring=10,
+    }
+	
+    recipe Make Horse Feed Bag
+    {
+        LeatherStrips = 5,
+        Thread = 20,
+        Sheet = 1,
+        aerx.Buckle=4,
+        FabricRoll_Cotton = 2,
+        FabricRoll_DenimBlue/FabricRoll_DenimDarkBlue/FabricRoll_DenimBlack = 2,
+
+        Result:Feedbag,
+        Time:150.0,
+        Category:Horses,
+        NearItem:TailoringWorkbench,
+        SkillRequired:Tailoring=10,
+    }
+	
+    recipe Make Horse Water Canteen
+    {
+        ModularPackCanteenBlack/ModularPackCanteenBlackfull/ModularPackCanteenBlue/ModularPackCanteenBluefull/ModularPackCanteenRed/ModularPackCanteenRedfull/ModularPackCanteenLeather/ModularPackCanteenLeatherfull/ModularPackCanteenOlive/ModularPackCanteenOlivefull/ModularPackCanteenTan/ModularPackCanteenTanfull/ModularPackCanteenWoodland/ModularPackCanteenWoodlandfull/ModularPackCanteenPink/ModularPackCanteenPinkfull/ModularPackCanteenWhite/ModularPackCanteenWhitefull = 1,
+        LeatherStrips = 5,
+        Thread = 20,
+        Rope = 1,
+        aerx.Buckle = 2,
+
+
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 2,
+        Result:WaterCanteen,
+        Time:150.0,
+        Category:Horses,
+    }
 
 }
