@@ -154,6 +154,13 @@ local function _setMode(shouldSeal)
     StaffSealSystem.log("Toolbar mode: " .. (shouldSeal and "seal" or "unseal"))
 end
 
+local function _cancelMode()
+    if StaffSealToolbar._modeSeal ~= nil then
+        StaffSealSystem.log("Toolbar mode: cancelled")
+    end
+    StaffSealToolbar._modeSeal = nil
+end
+
 -- Handle left-click targeting while toolbar mode is active.
 local function _onMouseDown(_x, _y)
     if StaffSealToolbar._modeSeal == nil then
@@ -167,7 +174,7 @@ local function _onMouseDown(_x, _y)
     local player = _localPlayer()
     if not StaffSealSystem.isStaff(player) then
         StaffSealSystem.log("Toolbar click blocked: player is not staff")
-        StaffSealToolbar._modeSeal = nil
+        _cancelMode()
         return
     end
 
@@ -175,8 +182,7 @@ local function _onMouseDown(_x, _y)
     local square = picked and picked.getSquare and picked:getSquare() or _getSquareUnderMouse(player)
     local target = _pickTargetNearSquare(square)
     if not target then
-        StaffSealSystem.log("Toolbar click: no target found")
-        StaffSealToolbar._modeSeal = nil
+        -- Keep mode active for sticky multi-target sealing.
         return
     end
 
@@ -186,7 +192,12 @@ local function _onMouseDown(_x, _y)
         _sendItemSeal(target.item, square, StaffSealToolbar._modeSeal)
     end
 
-    StaffSealToolbar._modeSeal = nil
+    -- Sticky mode: keep targeting active until user cancels.
+end
+
+-- Right-click cancels sticky target mode.
+local function _onRightMouseDown(_x, _y)
+    _cancelMode()
 end
 
 local function _onSealClick()
@@ -198,7 +209,7 @@ local function _onUnsealClick()
 end
 
 local function _onCancelClick()
-    StaffSealToolbar._modeSeal = nil
+    _cancelMode()
 end
 
 -- Render a lightweight mouse-following hint while target mode is active.
@@ -268,6 +279,11 @@ local function _toggleToolbar()
 end
 
 local function _onKeyPressed(key)
+    if key == Keyboard.KEY_ESCAPE and StaffSealToolbar._modeSeal ~= nil then
+        _cancelMode()
+        return
+    end
+
     if _isToggleKey(key) then
         _toggleToolbar()
     end
@@ -339,6 +355,7 @@ if not StaffSealSystem._toolbarHooksInstalled then
     end)
 
     Events.OnMouseDown.Add(_onMouseDown)
+    Events.OnRightMouseDown.Add(_onRightMouseDown)
     Events.OnPostUIDraw.Add(_renderModeHint)
     Events.OnKeyPressed.Add(_onKeyPressed)
     StaffSealSystem._toolbarHooksInstalled = true

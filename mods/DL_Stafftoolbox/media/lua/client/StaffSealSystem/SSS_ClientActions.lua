@@ -81,6 +81,10 @@ function StaffSealSystem.sendItemSealCommand(item, shouldSeal, contextSquare)
         StaffSealSystem.setItemSealState(item, shouldSeal, actor)
         StaffSealSystem.log((shouldSeal and "Sealed" or "Unsealed") .. " item " .. tostring(item.getFullType and item:getFullType() or "unknown") .. " by " .. actor)
     end
+
+    if StaffSealSystem.requestHighlightRefresh then
+        StaffSealSystem.requestHighlightRefresh()
+    end
 end
 
 -- Unified sender for container-seal actions.
@@ -97,5 +101,9 @@ function StaffSealSystem.sendContainerSealCommand(object, shouldSeal)
         local actor = StaffSealSystem.getPlayerName(_localPlayer())
         StaffSealSystem.setSealState(object, shouldSeal, actor)
         StaffSealSystem.log((shouldSeal and "Sealed" or "Unsealed") .. " container at " .. StaffSealSystem.getObjectPosition(object) .. " by " .. actor)
+    end
+
+    if StaffSealSystem.requestHighlightRefresh then
+        StaffSealSystem.requestHighlightRefresh()
     end
 end
