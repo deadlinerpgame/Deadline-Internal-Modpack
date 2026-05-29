@@ -2,6 +2,8 @@ require "StaffSealSystem/SSS_Shared"
 require "StaffSealSystem/SSS_ClientActions"
 require "ISUI/ISPanel"
 require "ISUI/ISButton"
+require "ISUI/ISTextEntryBox"
+require "ISUI/ISScrollingListBox"
 
 StaffSealToolbar = StaffSealToolbar or {}
 -- Use numpad '*' for toolbar toggle.
@@ -11,6 +13,12 @@ StaffSealToolbar.ChatCommand = "/toolbox"
 -- Track live toolbar state and the current targeting mode.
 StaffSealToolbar._panel = nil
 StaffSealToolbar._modeSeal = nil
+StaffSealToolbar._sceneEntry = nil
+StaffSealToolbar._sceneList = nil
+StaffSealToolbar._controls = nil
+StaffSealToolbar._width = 580
+StaffSealToolbar._height = 420
+StaffSealToolbar._sceneScope = "shared"
 
 local function _localPlayer()
     if getPlayer then
@@ -212,6 +220,330 @@ local function _onCancelClick()
     _cancelMode()
 end
 
+local function _trimText(s)
+    return tostring(s or ""):gsub("^%s+", ""):gsub("%s+$", "")
+end
+
+local function _formatSceneTimestamp(ts)
+    local n = tonumber(ts or 0) or 0
+    local sec = n
+    if n > 2000000000 then
+        sec = math.floor(n / 1000)
+    end
+
+    if sec <= 0 or not os or not os.date then
+        return tostring(ts or "")
+    end
+
+    return os.date("%Y-%m-%d %H:%M:%S", sec)
+end
+
+local function _isPrivateScope()
+    return StaffSealToolbar._sceneScope == "private"
+end
+
+local function _getActiveSceneList()
+    if _isPrivateScope() then
+        return StaffSealSystem._rpScenesPrivate or {}
+    end
+    return StaffSealSystem._rpScenesShared or StaffSealSystem._rpScenes or {}
+end
+
+local function _onUseSharedListClick()
+    StaffSealToolbar._sceneScope = "shared"
+    StaffSealToolbar.refreshRPSceneList()
+end
+
+local function _onUsePrivateListClick()
+    StaffSealToolbar._sceneScope = "private"
+    StaffSealToolbar.refreshRPSceneList()
+end
+
+function StaffSealToolbar.refreshRPSceneList()
+    local list = StaffSealToolbar._sceneList
+    if not list then
+        return
+    end
+
+    local selectedId = nil
+    if list.selected and list.items and list.items[list.selected] and list.items[list.selected].item then
+        selectedId = list.items[list.selected].item.id
+    end
+
+    list:clear()
+
+    local scenes = _getActiveSceneList()
+    for i = 1, #scenes do
+        local e = scenes[i]
+        local line = string.format("%s | %s | %d,%d,%d", tostring(e.text or ""), _formatSceneTimestamp(e.timestamp), tonumber(e.x or 0) or 0, tonumber(e.y or 0) or 0, tonumber(e.z or 0) or 0)
+        list:addItem(line, e)
+    end
+
+    if selectedId ~= nil then
+        for i = 1, #list.items do
+            local row = list.items[i]
+            if row and row.item and tonumber(row.item.id) == tonumber(selectedId) then
+                list.selected = i
+                break
+            end
+        end
+    end
+end
+
+local function _onPlaceRPSceneClick()
+    local player = _localPlayer()
+    if not StaffSealSystem.isStaff(player) then
+        return
+    end
+
+    local text = _trimText(StaffSealToolbar._sceneEntry and StaffSealToolbar._sceneEntry.getText and StaffSealToolbar._sceneEntry:getText() or "")
+    if text == "" then
+        text = "RP Scene"
+    end
+
+    local x = player and math.floor(player:getX()) or 0
+    local y = player and math.floor(player:getY()) or 0
+    local z = player and math.floor(player:getZ()) or 0
+    StaffSealSystem.sendRPScenePlaceCommand(text, x, y, z, _isPrivateScope())
+end
+
+local function _onRemoveRPSceneClick()
+    local player = _localPlayer()
+    if not StaffSealSystem.isStaff(player) then
+        return
+    end
+
+    local list = StaffSealToolbar._sceneList
+    local row = list and list.selected and list.items and list.items[list.selected] or nil
+    local entry = row and row.item or nil
+    if not entry or entry.id == nil then
+        return
+    end
+
+    StaffSealSystem.sendRPSceneRemoveCommand(entry.id, _isPrivateScope())
+end
+
+local function _onRefreshRPSceneClick()
+    -- Manual refresh button: request authoritative list then repaint current UI.
+    if StaffSealSystem.requestRPSceneSync then
+        StaffSealSystem.requestRPSceneSync()
+    end
+    StaffSealToolbar.refreshRPSceneList()
+end
+
+local function _buildRPSceneExportFileName()
+    local stamp = os and os.date and os.date("%Y%m%d_%H%M%S") or tostring(math.floor(getTimestampMs and getTimestampMs() or os.time()))
+    local scope = _isPrivateScope() and "Private" or "Shared"
+    return "StaffToolbox_RPScenes_" .. scope .. "_" .. tostring(stamp) .. ".txt"
+end
+
+local function _onDownloadRPSceneClick()
+    local player = _localPlayer()
+    if not StaffSealSystem.isStaff(player) then
+        return
+    end
+
+    local scenes = _getActiveSceneList()
+    local fileName = _buildRPSceneExportFileName()
+    local writer = getFileWriter and getFileWriter(fileName, true, false) or nil
+    if not writer then
+        StaffSealSystem.log("RP scene export failed: could not open " .. tostring(fileName))
+        return
+    end
+
+    -- Export one stable line per entry so staff can archive/share out-of-game.
+    writer:write("RP Scene Export\r\n")
+    writer:write("Scope=" .. (_isPrivateScope() and "Private" or "Shared") .. "\r\n")
+    writer:write("Generated=" .. (os and os.date and os.date("%Y-%m-%d %H:%M:%S") or "unknown") .. "\r\n")
+    writer:write("Entries=" .. tostring(#scenes) .. "\r\n")
+    writer:write("\r\n")
+
+    for i = 1, #scenes do
+        local e = scenes[i]
+        local safeText = tostring(e.text or ""):gsub("\r", " "):gsub("\n", " ")
+        local line = string.format(
+            "[%s] id=%s by=%s pos=%d,%d,%d text=%s",
+            _formatSceneTimestamp(e.timestamp),
+            tostring(e.id or ""),
+            tostring(e.by or ""),
+            tonumber(e.x or 0) or 0,
+            tonumber(e.y or 0) or 0,
+            tonumber(e.z or 0) or 0,
+            safeText
+        )
+        writer:write(line .. "\r\n")
+    end
+
+    writer:close()
+    StaffSealSystem.log("RP scenes exported to " .. tostring(fileName) .. " (" .. tostring(#scenes) .. " entries)")
+end
+
+local function _resolveSafeTeleportTarget(x, y, z)
+    local cell = getCell and getCell() or nil
+    if not cell then
+        return x, y, z, nil
+    end
+
+    local baseZ = math.max(0, math.floor(tonumber(z or 0) or 0))
+    local scanTop = math.min(8, baseZ + 3)
+
+    -- Prefer the target square, but fall back to nearby tiles if that square is unsafe.
+    for radius = 0, 1 do
+        for dy = -radius, radius do
+            for dx = -radius, radius do
+                local tx = x + dx
+                local ty = y + dy
+                for sz = scanTop, 0, -1 do
+                    local sq = cell:getGridSquare(tx, ty, sz)
+                    if sq and sq.TreatAsSolidFloor and sq:TreatAsSolidFloor() then
+                        return tx, ty, sz, sq
+                    end
+                end
+            end
+        end
+    end
+
+    return x, y, baseZ, nil
+end
+
+local function _teleportToSceneEntry(entry)
+    if not entry then
+        return
+    end
+
+    local x = math.floor(tonumber(entry.x or 0) or 0)
+    local y = math.floor(tonumber(entry.y or 0) or 0)
+    local z = math.floor(tonumber(entry.z or 0) or 0)
+    local tx, ty, tz = _resolveSafeTeleportTarget(x, y, z)
+
+    -- Use admin command path for teleport; safe target resolver avoids bad floor/z picks.
+    if SendCommandToServer then
+        SendCommandToServer("/teleportto " .. tostring(tx) .. "," .. tostring(ty) .. "," .. tostring(tz))
+    end
+end
+
+local function _onSceneListDoubleClick(_target, item)
+    -- PZ list callback sends (target, item); resolve to the scene payload robustly.
+    local row = item
+    if type(row) == "number" and StaffSealToolbar._sceneList and StaffSealToolbar._sceneList.items then
+        row = StaffSealToolbar._sceneList.items[row]
+    end
+    if not row or not row.item then
+        local list = StaffSealToolbar._sceneList
+        row = list and list.selected and list.items and list.items[list.selected] or nil
+    end
+    if row and row.item then
+        row = row.item
+    end
+    _teleportToSceneEntry(row)
+end
+
+local function _clampToolbarSize(w, h)
+    local minW, minH = 440, 300
+    local maxW, maxH = 1100, 900
+
+    local outW = math.max(minW, math.min(maxW, math.floor(tonumber(w or 500) or 500)))
+    local outH = math.max(minH, math.min(maxH, math.floor(tonumber(h or 420) or 420)))
+    return outW, outH
+end
+
+local function _setControlRect(ctrl, x, y, w, h)
+    if not ctrl then
+        return
+    end
+
+    if ctrl.setX then ctrl:setX(x) else ctrl.x = x end
+    if ctrl.setY then ctrl:setY(y) else ctrl.y = y end
+    if w ~= nil then
+        if ctrl.setWidth then ctrl:setWidth(w) else ctrl.width = w end
+    end
+    if h ~= nil then
+        if ctrl.setHeight then ctrl:setHeight(h) else ctrl.height = h end
+    end
+end
+
+local function _applyToolbarLayout()
+    local panel = StaffSealToolbar._panel
+    local c = StaffSealToolbar._controls
+    if not panel or not c then
+        return
+    end
+
+    local panelW, panelH = _clampToolbarSize(StaffSealToolbar._width, StaffSealToolbar._height)
+    StaffSealToolbar._width = panelW
+    StaffSealToolbar._height = panelH
+
+    panel:setWidth(panelW)
+    panel:setHeight(panelH)
+
+    local pad = 6
+    local topY = 6
+    local entryY = 40
+    local listY = 70
+    local bottomY = panelH - 32
+
+    _setControlRect(c.sealBtn, 6, topY, 64, 26)
+    _setControlRect(c.unsealBtn, 76, topY, 70, 26)
+    _setControlRect(c.cancelBtn, 152, topY, 64, 26)
+
+    local smallW = 32
+    local smallGap = 4
+    local groupW = (smallW * 4) + (smallGap * 3)
+    local groupX = panelW - pad - groupW
+    _setControlRect(c.widthDownBtn, groupX, topY, smallW, 26)
+    _setControlRect(c.widthUpBtn, groupX + (smallW + smallGap), topY, smallW, 26)
+    _setControlRect(c.heightDownBtn, groupX + (smallW + smallGap) * 2, topY, smallW, 26)
+    _setControlRect(c.heightUpBtn, groupX + (smallW + smallGap) * 3, topY, smallW, 26)
+
+    local placeW = 122
+    local entryW = math.max(120, panelW - (pad + pad + placeW + pad))
+    local placeX = pad + entryW + pad
+    _setControlRect(c.entry, pad, entryY, entryW, 24)
+    _setControlRect(c.placeBtn, placeX, entryY, placeW, 24)
+
+    local listW = panelW - (pad * 2)
+    local listH = math.max(120, panelH - 108)
+    _setControlRect(c.list, pad, listY, listW, listH)
+
+    _setControlRect(c.sharedListBtn, pad, bottomY, 84, 24)
+    _setControlRect(c.privateListBtn, pad + 90, bottomY, 84, 24)
+
+    local downloadW = 84
+    local refreshW = 58
+    local removeW = 58
+    local downloadX = panelW - pad - downloadW
+    local refreshX = downloadX - pad - refreshW
+    local removeX = refreshX - pad - removeW
+    _setControlRect(c.removeBtn, removeX, bottomY, removeW, 24)
+    _setControlRect(c.refreshBtn, refreshX, bottomY, refreshW, 24)
+    _setControlRect(c.downloadBtn, downloadX, bottomY, downloadW, 24)
+
+    StaffSealToolbar._trackerTextY = bottomY
+end
+
+local function _resizeToolbar(dw, dh)
+    local nextW = (StaffSealToolbar._width or 500) + (tonumber(dw or 0) or 0)
+    local nextH = (StaffSealToolbar._height or 420) + (tonumber(dh or 0) or 0)
+    StaffSealToolbar._width, StaffSealToolbar._height = _clampToolbarSize(nextW, nextH)
+    _applyToolbarLayout()
+end
+
+local function _onWidthDownClick()
+    _resizeToolbar(-40, 0)
+end
+
+local function _onWidthUpClick()
+    _resizeToolbar(40, 0)
+end
+
+local function _onHeightDownClick()
+    _resizeToolbar(0, -30)
+end
+
+local function _onHeightUpClick()
+    _resizeToolbar(0, 30)
+end
+
 -- Render a lightweight mouse-following hint while target mode is active.
 local function _renderModeHint()
     if StaffSealToolbar._modeSeal == nil then
@@ -228,28 +560,112 @@ local function _createToolbar()
         return
     end
 
-    local panel = ISPanel:new(20, 220, 180, 72)
+    local panelW, panelH = _clampToolbarSize(StaffSealToolbar._width, StaffSealToolbar._height)
+    local panel = ISPanel:new(20, 220, panelW, panelH)
     panel:initialise()
     panel:instantiate()
     panel.moveWithMouse = true
     panel.backgroundColor = { r = 0.08, g = 0.08, b = 0.08, a = 0.72 }
     panel.borderColor = { r = 0.75, g = 0.75, b = 0.75, a = 0.9 }
 
-    local sealBtn = ISButton:new(6, 6, 52, 26, "Seal", nil, _onSealClick)
+    local sealBtn = ISButton:new(6, 6, 64, 26, "Seal", nil, _onSealClick)
     sealBtn:initialise()
     panel:addChild(sealBtn)
 
-    local unsealBtn = ISButton:new(64, 6, 56, 26, "Unseal", nil, _onUnsealClick)
+    local unsealBtn = ISButton:new(76, 6, 70, 26, "Unseal", nil, _onUnsealClick)
     unsealBtn:initialise()
     panel:addChild(unsealBtn)
 
-    local cancelBtn = ISButton:new(126, 6, 48, 26, "Cancel", nil, _onCancelClick)
+    local cancelBtn = ISButton:new(152, 6, 64, 26, "Cancel", nil, _onCancelClick)
     cancelBtn:initialise()
     panel:addChild(cancelBtn)
+
+    local widthDownBtn = ISButton:new(0, 0, 32, 26, "W-", nil, _onWidthDownClick)
+    widthDownBtn:initialise()
+    panel:addChild(widthDownBtn)
+
+    local widthUpBtn = ISButton:new(0, 0, 32, 26, "W+", nil, _onWidthUpClick)
+    widthUpBtn:initialise()
+    panel:addChild(widthUpBtn)
+
+    local heightDownBtn = ISButton:new(0, 0, 32, 26, "H-", nil, _onHeightDownClick)
+    heightDownBtn:initialise()
+    panel:addChild(heightDownBtn)
+
+    local heightUpBtn = ISButton:new(0, 0, 32, 26, "H+", nil, _onHeightUpClick)
+    heightUpBtn:initialise()
+    panel:addChild(heightUpBtn)
+
+    local entry = ISTextEntryBox:new("", 6, 40, 360, 24)
+    entry:initialise()
+    entry:instantiate()
+    panel:addChild(entry)
+    StaffSealToolbar._sceneEntry = entry
+
+    local placeBtn = ISButton:new(372, 40, 122, 24, "Place RP Scene", nil, _onPlaceRPSceneClick)
+    placeBtn:initialise()
+    panel:addChild(placeBtn)
+
+    local list = ISScrollingListBox:new(6, 70, 488, 312)
+    list:initialise()
+    list:instantiate()
+    list.itemheight = 22
+    list.font = UIFont.Small
+    -- QoL: double-click a scene row to teleport directly to its coordinates.
+    list:setOnMouseDoubleClick(panel, _onSceneListDoubleClick)
+    panel:addChild(list)
+    StaffSealToolbar._sceneList = list
+
+    local removeBtn = ISButton:new(372, 388, 58, 24, "Remove", nil, _onRemoveRPSceneClick)
+    removeBtn:initialise()
+    panel:addChild(removeBtn)
+
+    local sharedListBtn = ISButton:new(6, 388, 84, 24, "Shared", nil, _onUseSharedListClick)
+    sharedListBtn:initialise()
+    panel:addChild(sharedListBtn)
+
+    local privateListBtn = ISButton:new(96, 388, 84, 24, "Private", nil, _onUsePrivateListClick)
+    privateListBtn:initialise()
+    panel:addChild(privateListBtn)
+
+    local refreshBtn = ISButton:new(436, 388, 58, 24, "Refresh", nil, _onRefreshRPSceneClick)
+    refreshBtn:initialise()
+    panel:addChild(refreshBtn)
+
+    local downloadBtn = ISButton:new(346, 388, 84, 24, "Download", nil, _onDownloadRPSceneClick)
+    downloadBtn:initialise()
+    panel:addChild(downloadBtn)
+
+    StaffSealToolbar._controls = {
+        sealBtn = sealBtn,
+        unsealBtn = unsealBtn,
+        cancelBtn = cancelBtn,
+        widthDownBtn = widthDownBtn,
+        widthUpBtn = widthUpBtn,
+        heightDownBtn = heightDownBtn,
+        heightUpBtn = heightUpBtn,
+        entry = entry,
+        placeBtn = placeBtn,
+        list = list,
+        sharedListBtn = sharedListBtn,
+        privateListBtn = privateListBtn,
+        removeBtn = removeBtn,
+        refreshBtn = refreshBtn,
+        downloadBtn = downloadBtn,
+    }
+
+    panel.render = function(self)
+        ISPanel.render(self)
+        local y = StaffSealToolbar._trackerTextY or (self.height - 32)
+        local scopeText = _isPrivateScope() and "Private" or "Shared"
+        self:drawText("RP Scene Tracker (" .. scopeText .. ")", 186, y, 0.95, 0.95, 0.95, 1.0, UIFont.Small)
+    end
 
     panel:addToUIManager()
     panel:setVisible(false)
     StaffSealToolbar._panel = panel
+    _applyToolbarLayout()
+    StaffSealToolbar.refreshRPSceneList()
     StaffSealSystem.log("Toolbar initialized (hidden)")
 end
 
@@ -274,6 +690,10 @@ local function _toggleToolbar()
         StaffSealToolbar._panel:addToUIManager()
         StaffSealToolbar._panel:setVisible(true)
         StaffSealToolbar._panel:bringToTop()
+        if StaffSealSystem.requestRPSceneSync then
+            StaffSealSystem.requestRPSceneSync()
+        end
+        StaffSealToolbar.refreshRPSceneList()
         StaffSealSystem.log("Toolbar shown")
     end
 end
@@ -347,6 +767,9 @@ if not StaffSealSystem._toolbarHooksInstalled then
             StaffSealToolbar._panel:setVisible(false)
         end
         _installChatCommandHook()
+        if StaffSealSystem.requestRPSceneSync then
+            StaffSealSystem.requestRPSceneSync()
+        end
     end)
 
     Events.OnChatWindowInit.Add(function()

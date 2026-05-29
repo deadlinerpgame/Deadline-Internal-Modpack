@@ -28,6 +28,33 @@ local function _localPlayer()
     return nil
 end
 
+local function _applyRPSceneSync(args)
+    local shared = (args and args.sharedScenes) or (args and args.scenes) or {}
+    local private = (args and args.privateScenes) or {}
+
+    StaffSealSystem._rpScenesShared = shared
+    StaffSealSystem._rpScenesPrivate = private
+    -- Backward compatibility alias for older toolbar/list reads.
+    StaffSealSystem._rpScenes = shared
+
+    if StaffSealToolbar and StaffSealToolbar.refreshRPSceneList then
+        StaffSealToolbar.refreshRPSceneList()
+    end
+end
+
+if not StaffSealSystem._rpSceneServerHookInstalled then
+    Events.OnServerCommand.Add(function(module, command, args)
+        if module ~= "StaffSealSystem" then
+            return
+        end
+
+        if command == "RPSceneSync" then
+            _applyRPSceneSync(args)
+        end
+    end)
+    StaffSealSystem._rpSceneServerHookInstalled = true
+end
+
 -- Read world object entries from either Lua arrays or Java-backed collections.
 local function _getWorldObject(worldObjects, oneBasedIndex)
     if not worldObjects then

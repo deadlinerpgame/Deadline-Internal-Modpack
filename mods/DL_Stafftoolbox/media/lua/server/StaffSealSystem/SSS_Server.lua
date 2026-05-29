@@ -149,6 +149,162 @@ local function _isStaffPlayer(playerObj)
     return access == "admin" or access == "moderator"
 end
 
+local function _getRPSceneState()
+    -- Persist RP scene data in global modData so it survives sessions/restarts.
+    local gt = getGameTime and getGameTime() or nil
+    local md = gt and gt.getModData and gt:getModData() or nil
+    if not md then
+        return nil
+    end
+
+    md.SSS_RPScenes = md.SSS_RPScenes or {}
+    md.SSS_RPScenesPrivate = md.SSS_RPScenesPrivate or {}
+    md.SSS_RPSceneNextId = md.SSS_RPSceneNextId or 1
+    return md
+end
+
+local function _copySceneArrayForSync(src)
+    local md = _getRPSceneState()
+    local input = src or (md and md.SSS_RPScenes or {})
+    local out = {}
+
+    for i = 1, #input do
+        local e = input[i]
+        out[i] = {
+            id = e.id,
+            text = e.text,
+            timestamp = e.timestamp,
+            x = e.x,
+            y = e.y,
+            z = e.z,
+            by = e.by,
+            private = e.private == true,
+        }
+    end
+
+    table.sort(out, function(a, b)
+        return tonumber(a.timestamp or 0) > tonumber(b.timestamp or 0)
+    end)
+
+    return out
+end
+
+local function _getPrivateOwner(playerObj)
+    return tostring(playerObj and playerObj:getUsername() or "")
+end
+
+local function _copyRPScenePayloadForPlayer(playerObj)
+    -- Build per-player payload: shared list + that staff member's private list.
+    local md = _getRPSceneState()
+    local shared = _copySceneArrayForSync(md and md.SSS_RPScenes or {})
+
+    local owner = _getPrivateOwner(playerObj)
+    local privateSrc = (md and md.SSS_RPScenesPrivate and md.SSS_RPScenesPrivate[owner]) or {}
+    local private = _copySceneArrayForSync(privateSrc)
+
+    return {
+        scenes = shared, -- Backward compatibility alias for old clients.
+        sharedScenes = shared,
+        privateScenes = private,
+    }
+end
+
+local function _sendRPSceneSync(playerObj)
+    -- playerObj=nil sends to all online staff clients; otherwise unicast sync.
+    if not sendServerCommand then
+        return
+    end
+
+    if playerObj then
+        local payload = _copyRPScenePayloadForPlayer(playerObj)
+        sendServerCommand(playerObj, "StaffSealSystem", "RPSceneSync", payload)
+    else
+        local players = getOnlinePlayers and getOnlinePlayers() or nil
+        if not players then
+            return
+        end
+
+        for i = 0, players:size() - 1 do
+            local p = players:get(i)
+            if _isStaffPlayer(p) then
+                local payload = _copyRPScenePayloadForPlayer(p)
+                sendServerCommand(p, "StaffSealSystem", "RPSceneSync", payload)
+            end
+        end
+    end
+end
+
+local function _handleRPScenePlace(playerObj, args)
+    -- Server-authoritative creation ensures one shared id/timestamp source.
+    local md = _getRPSceneState()
+    if not md then
+        return
+    end
+
+    local id = tonumber(md.SSS_RPSceneNextId or 1) or 1
+    md.SSS_RPSceneNextId = id + 1
+
+    local entry = {
+        id = id,
+        text = tostring(args and args.text or ""),
+        timestamp = getTimestampMs and getTimestampMs() or os.time(),
+        x = math.floor(tonumber(args and args.x or 0) or 0),
+        y = math.floor(tonumber(args and args.y or 0) or 0),
+        z = math.floor(tonumber(args and args.z or 0) or 0),
+        by = tostring(playerObj and playerObj:getUsername() or "unknown"),
+        private = args and args.private == true,
+    }
+
+    if entry.private then
+        local owner = _getPrivateOwner(playerObj)
+        md.SSS_RPScenesPrivate[owner] = md.SSS_RPScenesPrivate[owner] or {}
+        table.insert(md.SSS_RPScenesPrivate[owner], entry)
+    else
+        table.insert(md.SSS_RPScenes, entry)
+    end
+
+    StaffSealSystem.log("RP scene added id=" .. tostring(entry.id) .. " by " .. tostring(entry.by) .. " at " .. tostring(entry.x) .. "," .. tostring(entry.y) .. "," .. tostring(entry.z))
+    _sendRPSceneSync(nil)
+end
+
+local function _handleRPSceneRemove(playerObj, args)
+    -- Remove by id so list order changes never break targeting.
+    local md = _getRPSceneState()
+    if not md then
+        return
+    end
+
+    local id = tonumber(args and args.id)
+    if not id then
+        return
+    end
+
+    local isPrivate = args and args.private == true
+    local src = md.SSS_RPScenes
+    if isPrivate then
+        local owner = _getPrivateOwner(playerObj)
+        md.SSS_RPScenesPrivate[owner] = md.SSS_RPScenesPrivate[owner] or {}
+        src = md.SSS_RPScenesPrivate[owner]
+    end
+
+    local removed = false
+    for i = #src, 1, -1 do
+        if tonumber(src[i].id) == id then
+            table.remove(src, i)
+            removed = true
+            break
+        end
+    end
+
+    if removed then
+        StaffSealSystem.log("RP scene removed id=" .. tostring(id) .. " by " .. tostring(playerObj and playerObj:getUsername() or "unknown"))
+        _sendRPSceneSync(nil)
+    else
+        -- Return current state to requester to self-heal stale local selections.
+        _sendRPSceneSync(playerObj)
+    end
+end
+
 -- Handle incoming client requests to seal/unseal container objects.
 Events.OnClientCommand.Add(function(module, command, playerObj, args)
     if module ~= "StaffSealSystem" then
@@ -157,6 +313,22 @@ Events.OnClientCommand.Add(function(module, command, playerObj, args)
 
     if not _isStaffPlayer(playerObj) then
         StaffSealSystem.log("Rejected " .. tostring(command) .. " from non-staff: " .. tostring(playerObj and playerObj:getUsername() or "unknown"))
+        return
+    end
+
+    if command == "RPSceneRequestSync" then
+        -- Explicit client refresh button/manual pull.
+        _sendRPSceneSync(playerObj)
+        return
+    end
+
+    if command == "RPScenePlace" then
+        _handleRPScenePlace(playerObj, args)
+        return
+    end
+
+    if command == "RPSceneRemove" then
+        _handleRPSceneRemove(playerObj, args)
         return
     end
 

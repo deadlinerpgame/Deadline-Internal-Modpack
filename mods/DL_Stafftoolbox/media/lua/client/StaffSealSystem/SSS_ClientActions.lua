@@ -107,3 +107,92 @@ function StaffSealSystem.sendContainerSealCommand(object, shouldSeal)
         StaffSealSystem.requestHighlightRefresh()
     end
 end
+
+local function _refreshRPSceneUI()
+    -- Keep UI refresh isolated so both MP sync and SP fallback can reuse it.
+    if StaffSealToolbar and StaffSealToolbar.refreshRPSceneList then
+        StaffSealToolbar.refreshRPSceneList()
+    end
+end
+
+-- Shared command: request full RP scene list from server.
+function StaffSealSystem.requestRPSceneSync()
+    if isClient and isClient() then
+        sendClientCommand("StaffSealSystem", "RPSceneRequestSync", {})
+    else
+        StaffSealSystem._rpScenesShared = StaffSealSystem._rpScenesShared or {}
+        StaffSealSystem._rpScenesPrivate = StaffSealSystem._rpScenesPrivate or {}
+        StaffSealSystem._rpScenes = StaffSealSystem._rpScenesShared
+        _refreshRPSceneUI()
+    end
+end
+
+-- Shared command: create a new RP scene entry at coordinates.
+function StaffSealSystem.sendRPScenePlaceCommand(rawText, x, y, z, isPrivate)
+    local text = tostring(rawText or "")
+    local args = {
+        text = text,
+        x = x,
+        y = y,
+        z = z,
+        private = isPrivate == true,
+    }
+
+    if isClient and isClient() then
+        sendClientCommand("StaffSealSystem", "RPScenePlace", args)
+        -- Immediate pull keeps UX responsive while waiting for broadcast timing.
+        StaffSealSystem.requestRPSceneSync()
+        return
+    end
+
+    -- SP fallback keeps feature usable without server command routing.
+    StaffSealSystem._rpScenesShared = StaffSealSystem._rpScenesShared or {}
+    StaffSealSystem._rpScenesPrivate = StaffSealSystem._rpScenesPrivate or {}
+    StaffSealSystem._rpSceneNextId = (StaffSealSystem._rpSceneNextId or 1)
+    local id = StaffSealSystem._rpSceneNextId
+    StaffSealSystem._rpSceneNextId = id + 1
+
+    local target = args.private and StaffSealSystem._rpScenesPrivate or StaffSealSystem._rpScenesShared
+
+    table.insert(target, {
+        id = id,
+        text = text,
+        timestamp = getTimestampMs and getTimestampMs() or os.time(),
+        x = x,
+        y = y,
+        z = z,
+        by = StaffSealSystem.getPlayerName(_localPlayer()),
+        private = args.private,
+    })
+
+    StaffSealSystem._rpScenes = StaffSealSystem._rpScenesShared
+
+    _refreshRPSceneUI()
+end
+
+-- Shared command: remove one RP scene entry by id.
+function StaffSealSystem.sendRPSceneRemoveCommand(id, isPrivate)
+    local args = { id = id, private = isPrivate == true }
+
+    if isClient and isClient() then
+        sendClientCommand("StaffSealSystem", "RPSceneRemove", args)
+        -- Immediate pull keeps list state current after local remove action.
+        StaffSealSystem.requestRPSceneSync()
+        return
+    end
+
+    StaffSealSystem._rpScenesShared = StaffSealSystem._rpScenesShared or {}
+    StaffSealSystem._rpScenesPrivate = StaffSealSystem._rpScenesPrivate or {}
+    local target = args.private and StaffSealSystem._rpScenesPrivate or StaffSealSystem._rpScenesShared
+
+    for i = #target, 1, -1 do
+        if tonumber(target[i].id) == tonumber(id) then
+            table.remove(target, i)
+            break
+        end
+    end
+
+    StaffSealSystem._rpScenes = StaffSealSystem._rpScenesShared
+
+    _refreshRPSceneUI()
+end
