@@ -1,3 +1,4 @@
+if isClient() and not isServer() then return end
 DL = DL or {}
 DL.Paths = DL.Paths or {}
 DL.Files = DL.Files or {}
