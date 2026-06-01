@@ -4,9 +4,9 @@ local function notify(msg)
     local p = getPlayer()
     if p == nil then return end
     if HaloTextHelper and HaloTextHelper.addText then
-        ;(function() HaloTextHelper.addText(p, msg) end)()
+        local _ = (function() HaloTextHelper.addText(p, msg) end)()
     else
-        ;(function() p:Say(msg) end)()
+        local _ = (function() p:Say(msg) end)()
     end
 end
 
@@ -62,7 +62,7 @@ Events.OnServerCommand.Add(function(module, command, args)
     elseif command == "applyRestore" then
         local snap = DL.Snap.decode(args.data)
         if snap then
-            ;(function() DL.Snap.apply(getPlayer(), snap) end)()
+            local _ = (function() DL.Snap.apply(getPlayer(), snap) end)()
             notify("Snapshot restored.")
         end
     end

@@ -25,7 +25,7 @@ local function onDeath(character)
         sendServerCommand(character, "DLWounds", "deathState", { toCell = toCell, x = hc.x, y = hc.y, z = hc.z })
     end)()
 end
-Events.OnCharacterDeath.Add(function(c) ;(function() onDeath(c) end)() end)
+Events.OnCharacterDeath.Add(function(c) local _ = (function() onDeath(c) end)() end)
 
 local function findItem(container, itemType)
     if container == nil then return nil end
@@ -54,7 +54,7 @@ local function doResetItem(player)
         sendServerCommand(player, "DLWounds", "resetResult", { ok = false, reason = "noitem" })
         return
     end
-    ;(function() cont:Remove(it) end)()
+    local _ = (function() cont:Remove(it) end)()
     DL.Wounds.set(username, 0)
     sendServerCommand(player, "DLWounds", "resetResult", { ok = true })
     DL.log("wound reset: '" .. username .. "' consumed " .. tostring(itemType) .. " -> wounds 0")
@@ -63,7 +63,7 @@ end
 Events.OnClientCommand.Add(function(module, command, player, args)
     if module ~= "DLWounds" or player == nil then return end
     if command == "useResetItem" then
-        ;(function() doResetItem(player) end)()
+        local _ = (function() doResetItem(player) end)()
     end
 end)
 

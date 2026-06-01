@@ -23,7 +23,7 @@ local function copyDesc(player)
 end
 
 local function syncVisualFromPlayer(player, desc)
-    ;(function()
+    local _ = (function()
         local lv = player:getHumanVisual()
         local dv = desc and desc:getHumanVisual()
         if lv and dv then dv:copyFrom(lv) end
@@ -77,7 +77,7 @@ Events.OnCreatePlayer.Add(function(playerIndex, player)
     player = player or getSpecificPlayer(playerIndex)
     if player == nil or not player:isLocalPlayer() then return end
     DL.Purgatory._desc = nil
-    ;(function()
+    local _ = (function()
         local nv = player:getHumanVisual()
         local dv = d:getHumanVisual()
         if nv and dv then nv:copyFrom(dv) end

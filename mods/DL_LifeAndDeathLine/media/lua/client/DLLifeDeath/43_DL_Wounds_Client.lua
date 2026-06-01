@@ -7,14 +7,14 @@ local function notify(msg)
     local p = getPlayer()
     if p == nil then return end
     if HaloTextHelper and HaloTextHelper.addText then
-        ;(function() HaloTextHelper.addText(p, msg) end)()
+        local _ = (function() HaloTextHelper.addText(p, msg) end)()
     else
-        ;(function() p:Say(msg) end)()
+        local _ = (function() p:Say(msg) end)()
     end
 end
 
 local function teleportTo(player, cell)
-    ;(function()
+    local _ = (function()
         player:setX(cell.x);  player:setY(cell.y);  player:setZ(cell.z)
         player:setLx(cell.x); player:setLy(cell.y); player:setLz(cell.z)
         local sq = getCell() and getCell():getGridSquare(cell.x, cell.y, cell.z)

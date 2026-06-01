@@ -55,15 +55,15 @@ function DL.ItemTree.characterLines(character)
     local lines, seen = {}, {}
     if character == nil then return lines end
 
-    ;(function()
+    local _ = (function()
         local w = character:getWornItems()
         if w then for i = 0, w:size() - 1 do local e = w:get(i); appendItem(lines, e and e:getItem(), "", 0, seen) end end
     end)()
-    ;(function()
+    local _ = (function()
         appendItem(lines, character:getPrimaryHandItem(), "", 0, seen)
         appendItem(lines, character:getSecondaryHandItem(), "", 0, seen)
     end)()
-    ;(function()
+    local _ = (function()
         local inv = character:getInventory()
         if inv then
             local items = inv:getItems()

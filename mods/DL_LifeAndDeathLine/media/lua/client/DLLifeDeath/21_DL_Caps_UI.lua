@@ -12,7 +12,7 @@ local _vanillaRender = ISSkillProgressBar.render
 function ISSkillProgressBar:render()
     _vanillaRender(self)
 
-    ;(function()
+    local _ = (function()
         local char, perk = self.char, self.perk
         if char == nil or perk == nil then return end
         if DL.Caps.isExempt(char) then return end

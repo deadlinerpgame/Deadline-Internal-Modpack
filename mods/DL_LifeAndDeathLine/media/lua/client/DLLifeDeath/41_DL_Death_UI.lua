@@ -11,7 +11,7 @@ function ISPostDeathUI:prerender()
     if self.buttonRespawn then
         local toCell = DL.Wounds and DL.Wounds.pendingToCell
         local label = toCell and DL.Config.deathPurgatoryLabel or DL.Config.deathRespawnLabel
-        ;(function() self.buttonRespawn:setTitle(label) end)()
+        local _ = (function() self.buttonRespawn:setTitle(label) end)()
     end
 end
 

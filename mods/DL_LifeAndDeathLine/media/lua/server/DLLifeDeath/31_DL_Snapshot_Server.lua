@@ -32,7 +32,7 @@ local function doSave(player)
     if ok then
         if not staff then DL.Snap._lastSave[username] = now end
 
-        ;(function()
+        local _ = (function()
             local path = DL.Paths.snapshotsDir(username) .. "/snapshot_" .. tostring(slot) .. "_items.txt"
             local out = {
                 "Inventory at snapshot save -- user '" .. username .. "', slot " .. tostring(slot),
@@ -72,9 +72,9 @@ end
 Events.OnClientCommand.Add(function(module, command, player, args)
     if module ~= "DLSnapshot" or player == nil then return end
     if command == "save" then
-        ;(function() doSave(player) end)()
+        local _ = (function() doSave(player) end)()
     elseif command == "restore" then
-        ;(function() doRestore(player) end)()
+        local _ = (function() doRestore(player) end)()
     end
 end)
 

@@ -49,5 +49,5 @@ local function selfTest()
     DL.log("SELFTEST note: delete the '" .. DL.Config.dataRoot .. "/" .. U .. "' folder when done.")
 end
 
-Events.OnServerStarted.Add(function() ;(selfTest)() end)
-Events.OnGameStart.Add(function() ;(selfTest)() end)
+Events.OnServerStarted.Add(function() local _ = (selfTest)() end)
+Events.OnGameStart.Add(function() local _ = (selfTest)() end)

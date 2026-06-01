@@ -3,7 +3,7 @@ DL.Config = DL.Config or {}
 if DL.Config.debugKillMenu == nil then DL.Config.debugKillMenu = true end
 
 local function killSelf(player)
-    ;(function()
+    local _ = (function()
         if player.Kill then player:Kill(player); return end
     end)()
 

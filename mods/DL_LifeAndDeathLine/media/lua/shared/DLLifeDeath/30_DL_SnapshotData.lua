@@ -128,12 +128,12 @@ function DL.Snap.build(character)
     s.kills  = (function() return character:getZombieKills() end)() or 0
     s.hours  = (function() return character:getHoursSurvived() end)() or 0
 
-    ;(function()
+    local _ = (function()
         local t = character:getTraits()
         if t then for i = 0, t:size() - 1 do s.traits[#s.traits + 1] = t:get(i) end end
     end)()
 
-    ;(function()
+    local _ = (function()
         local md = character:getModData()
         if md then
             for _, key in ipairs(DL.Config.snapshotModDataKeys or {}) do
@@ -143,7 +143,7 @@ function DL.Snap.build(character)
         end
     end)()
 
-    ;(function()
+    local _ = (function()
         local xpObj = character:getXp()
         local list = PerkFactory.PerkList
         for i = 0, list:size() - 1 do
@@ -174,11 +174,11 @@ end
 function DL.Snap.apply(character, s)
     if character == nil or s == nil then return false end
 
-    ;(function()
+    local _ = (function()
         if s.occ and s.occ ~= "" then character:getDescriptor():setProfession(s.occ) end
     end)()
 
-    ;(function()
+    local _ = (function()
         local t = character:getTraits()
         if t then
             t:clear()
@@ -186,17 +186,17 @@ function DL.Snap.apply(character, s)
         end
     end)()
 
-    ;(function() if s.weight then character:getNutrition():setWeight(s.weight) end end)()
-    ;(function() if s.kills then character:setZombieKills(s.kills) end end)()
-    ;(function()
+    local _ = (function() if s.weight then character:getNutrition():setWeight(s.weight) end end)()
+    local _ = (function() if s.kills then character:setZombieKills(s.kills) end end)()
+    local _ = (function()
         if s.hours and character.setHoursSurvived then character:setHoursSurvived(s.hours) end
     end)()
-    ;(function()
+    local _ = (function()
         local md = character:getModData()
         if md then for k, v in pairs(s.md or {}) do md[k] = v end end
     end)()
 
-    ;(function()
+    local _ = (function()
         local xpObj = character:getXp()
         local list = PerkFactory.PerkList
         for i = 0, list:size() - 1 do
@@ -210,7 +210,7 @@ function DL.Snap.apply(character, s)
         end
     end)()
 
-    ;(function() DL.Caps.clampAll(character) end)()
+    local _ = (function() DL.Caps.clampAll(character) end)()
     return true
 end
 

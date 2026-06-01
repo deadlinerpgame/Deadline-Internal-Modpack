@@ -3,7 +3,7 @@ DL.Config = DL.Config or {}
 DL.Config.deathBagType = DL.Config.deathBagType or "Base.Bag_ALICEpack"
 
 local function writeDeathLog(username, lines, moved)
-    ;(function()
+    local _ = (function()
         local dir = DL.Paths.accountDir(username) .. "/DeathItemLogs"
         local counterPath = dir .. "/next.txt"
         local n = tonumber(DL.Files.readString(counterPath)) or 1
@@ -48,14 +48,14 @@ local function dumpOnDeath(character)
     local function moveInto(it)
         if it == nil or seen[it] then return end
         seen[it] = true
-        ;(function()
+        local _ = (function()
             local cont = it.getContainer and it:getContainer()
             if cont then cont:Remove(it) end
             if bagAdd(it) then moved = moved + 1 end
         end)()
     end
 
-    ;(function()
+    local _ = (function()
         local w = character:getWornItems()
         if w == nil then return end
         local wlist = {}
@@ -65,12 +65,12 @@ local function dumpOnDeath(character)
             if it then wlist[#wlist + 1] = it end
         end
         for _, it in ipairs(wlist) do
-            ;(function() character:removeWornItem(it) end)()
+            local _ = (function() character:removeWornItem(it) end)()
             moveInto(it)
         end
     end)()
 
-    ;(function()
+    local _ = (function()
         local ph = character:getPrimaryHandItem()
         local sh = character:getSecondaryHandItem()
         character:setPrimaryHandItem(nil)
@@ -79,7 +79,7 @@ local function dumpOnDeath(character)
         moveInto(sh)
     end)()
 
-    ;(function()
+    local _ = (function()
         local inv = character:getInventory()
         if inv == nil then return end
         local src = inv:getItems()
@@ -95,13 +95,13 @@ local function dumpOnDeath(character)
     writeDeathLog(username, lines, moved)
 
     if DL.LootLock and DL.LootLock.onDrop then DL.LootLock.onDrop(bag, username, sq) end
-    ;(function() sq:AddWorldInventoryItem(bag, 0, 0, 0) end)()
+    local _ = (function() sq:AddWorldInventoryItem(bag, 0, 0, 0) end)()
     DL.log("death dump placed bag at " .. tostring(sq:getX()) .. "," .. tostring(sq:getY()) .. "," .. tostring(sq:getZ()))
 end
 
 Events.OnCharacterDeath.Add(function(character)
     if character and instanceof(character, "IsoPlayer") then
-        ;(function() dumpOnDeath(character) end)()
+        local _ = (function() dumpOnDeath(character) end)()
     end
 end)
 

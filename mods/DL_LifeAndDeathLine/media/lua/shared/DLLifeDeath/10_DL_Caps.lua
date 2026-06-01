@@ -120,13 +120,13 @@ function DL.Caps.pinAtCap(character)
             if cap < DL.Config.engineMaxLevel then
                 local lvl = character:getPerkLevel(pt)
                 if lvl > cap then
-                    ;(function()
+                    local _ = (function()
                         xpObj:setXPToLevel(pt, cap)
                         character:setPerkLevelDebug(pt, cap)
                     end)()
                     overCap = overCap + 1
                 elseif lvl == cap then
-                    ;(function()
+                    local _ = (function()
                         xpObj:setXPToLevel(pt, cap)
                     end)()
                 end
