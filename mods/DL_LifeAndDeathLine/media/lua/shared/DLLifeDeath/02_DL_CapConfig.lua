@@ -4,7 +4,7 @@ DL.Config = DL.Config or {}
 DL.Config.capBonuses = {
 
     traits = {
-         AdrenalineJunkie = { Fitness = 2, Strength = 1 },
+         AdrenalineJunkie = { Woodwork = 2, Mechanics = 1 },
          Strong   = { Strength = 3 },
          Stout    = { Strength = 1 },
          Fit      = { Fitness = 1 },

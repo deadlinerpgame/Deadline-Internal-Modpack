@@ -7,6 +7,7 @@ local function auditOnce()
     for i = 0, players:size() - 1 do
         local p = players:get(i)
         if p ~= nil then
+            if DL.Boosts and DL.Boosts.maybeRecompute then DL.Boosts.maybeRecompute(p) end
             local _ = (function()
                 local n = DL.Caps.clampAll(p)
                 if n > 0 then

@@ -17,6 +17,7 @@ local function lockedAgainst(item, character)
     if md == nil or not md.dl_deathBag then return false end
     local lockUntil = md.dl_lockUntil
     if lockUntil == nil or getTimestampMs() >= lockUntil then return false end
+    if DL.Config and DL.Config.lootLockTestLockEveryone then return true end
     if isStaff(character) then return false end
     local owner, me = md.dl_owner, actorName(character)
     if owner ~= nil and me ~= nil and owner == me then return false end
