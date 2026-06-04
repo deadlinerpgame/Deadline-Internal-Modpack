@@ -1,3 +1,4 @@
+if isClient() and not isServer() then return end
 DL = DL or {}
 DL.Config = DL.Config or {}
 DL.Config.deathBagType = DL.Config.deathBagType or "Base.Bag_ALICEpack"
@@ -87,6 +88,29 @@ local function dumpOnDeath(character)
         for i = 0, src:size() - 1 do tmp[#tmp + 1] = src:get(i) end
         for _, it in ipairs(tmp) do moveInto(it) end
     end)()
+
+    if moved == 0 then
+        local ok, err = pcall(function()
+            local bodies = sq.getDeadBodys and sq:getDeadBodys()
+            if bodies == nil then return end
+            for bi = bodies:size() - 1, 0, -1 do
+                local body = bodies:get(bi)
+                local bc = body and body.getItemContainer and body:getItemContainer()
+                if bc ~= nil then
+                    local its = bc:getItems()
+                    local tmp = {}
+                    for i = 0, its:size() - 1 do tmp[#tmp + 1] = its:get(i) end
+                    for _, it in ipairs(tmp) do
+                        bc:Remove(it)
+                        if bagAdd(it) then moved = moved + 1 end
+                    end
+                end
+                if moved > 0 then break end
+            end
+        end)
+        if not ok then DL.warn("death dump: corpse-fallback error: " .. tostring(err)) end
+        DL.log("death dump: live inventory empty; corpse-fallback recovered " .. tostring(moved) .. " item(s)")
+    end
 
     local lines = DL.ItemTree.containerLines(bagCont)
     DL.log("==== DEATH DROP for '" .. username .. "'  (" .. moved .. " items into " .. bagType .. ") ====")

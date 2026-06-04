@@ -1,3 +1,4 @@
+if isClient() and not isServer() then return end
 DL = DL or {}
 DL.SnapStore = DL.SnapStore or {}
 DL.Wounds    = DL.Wounds    or {}

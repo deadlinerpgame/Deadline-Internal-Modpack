@@ -75,12 +75,18 @@ function DL.Snap.encode(s)
     end
     parts[#parts + 1] = "xp=" .. table.concat(xp, ",")
 
+    local bo = {}
+    for name, lv in pairs(s.boosts or {}) do
+        bo[#bo + 1] = esc(name) .. ":" .. tostring(lv)
+    end
+    parts[#parts + 1] = "bo=" .. table.concat(bo, ",")
+
     return table.concat(parts, "|")
 end
 
 function DL.Snap.decode(str)
     if str == nil or str == "" then return nil end
-    local s = { traits = {}, md = {}, xp = {} }
+    local s = { traits = {}, md = {}, xp = {}, boosts = {} }
 
     s.ts = (function() return getTimestamp() end)() or 0
     for field in string.gmatch(str, "([^|]+)") do
@@ -114,13 +120,20 @@ function DL.Snap.decode(str)
                     if name then s.xp[unesc(name)] = tonumber(x) end
                 end
             end
+        elseif key == "bo" then
+            if val ~= "" then
+                for pair in string.gmatch(val, "([^,]+)") do
+                    local name, lv = pair:match("^(.-):(.*)$")
+                    if name then s.boosts[unesc(name)] = tonumber(lv) end
+                end
+            end
         end
     end
     return s
 end
 
 function DL.Snap.build(character)
-    local s = { traits = {}, md = {}, xp = {} }
+    local s = { traits = {}, md = {}, xp = {}, boosts = {} }
 
     s.occ = (function()
         local d = character:getDescriptor(); return d and d:getProfession() end)() or ""
@@ -152,6 +165,20 @@ function DL.Snap.build(character)
                 local pt = perk:getType()
                 local x = xpObj:getXP(pt)
                 if x and x > 0 then s.xp[DL.Snap.perkName(pt)] = x end
+            end
+        end
+    end)()
+
+    local _ = (function()
+        local xpObj = character:getXp()
+        if xpObj == nil or xpObj.getPerkBoost == nil then return end
+        local list = PerkFactory.PerkList
+        for i = 0, list:size() - 1 do
+            local perk = list:get(i)
+            if perk:getParent() ~= Perks.None then
+                local pt = perk:getType()
+                local b = xpObj:getPerkBoost(pt)
+                if b and b > 0 then s.boosts[DL.Snap.perkName(pt)] = math.floor(b + 0.5) end
             end
         end
     end)()
@@ -209,6 +236,22 @@ function DL.Snap.apply(character, s)
             end
         end
     end)()
+
+    local _ = (function()
+        local xpObj = character:getXp()
+        if xpObj == nil or xpObj.setPerkBoost == nil then return end
+        local list = PerkFactory.PerkList
+        for i = 0, list:size() - 1 do
+            local perk = list:get(i)
+            if perk:getParent() ~= Perks.None then
+                local pt = perk:getType()
+                local lvl = (s.boosts and s.boosts[DL.Snap.perkName(pt)]) or 0
+                xpObj:setPerkBoost(pt, lvl)
+            end
+        end
+    end)()
+
+    if DL.Boosts and DL.Boosts.syncSignature then DL.Boosts.syncSignature(character) end
 
     local _ = (function() DL.Caps.clampAll(character) end)()
     return true

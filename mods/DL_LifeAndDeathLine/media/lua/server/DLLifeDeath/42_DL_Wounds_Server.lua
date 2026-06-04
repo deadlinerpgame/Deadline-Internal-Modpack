@@ -1,3 +1,4 @@
+if isClient() and not isServer() then return end
 DL = DL or {}
 
 local function onDeath(character)

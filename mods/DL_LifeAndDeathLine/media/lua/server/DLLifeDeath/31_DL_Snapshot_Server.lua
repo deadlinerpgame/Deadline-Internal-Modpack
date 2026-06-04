@@ -1,3 +1,4 @@
+if isClient() and not isServer() then return end
 DL = DL or {}
 DL.Snap = DL.Snap or {}
 DL.Snap._lastSave = DL.Snap._lastSave or {}
