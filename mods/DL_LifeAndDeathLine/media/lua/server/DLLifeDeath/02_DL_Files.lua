@@ -45,6 +45,24 @@ function Paths.woundsFile(username)
     return d .. "/wounds.txt"
 end
 
+function Paths.respawnFile(username)
+    local d = Paths.accountDir(username)
+    if d == nil then return nil end
+    return d .. "/respawn.txt"
+end
+
+function Paths.knockdownFile(username)
+    local d = Paths.accountDir(username)
+    if d == nil then return nil end
+    return d .. "/knockdown.txt"
+end
+
+function Paths.knockStrikeFile(username)
+    local d = Paths.accountDir(username)
+    if d == nil then return nil end
+    return d .. "/knockstrikes.txt"
+end
+
 function Files.writeLines(path, lines)
     if path == nil then return false end
     return (function()
@@ -60,6 +78,15 @@ end
 
 function Files.writeString(path, str)
     return Files.writeLines(path, { tostring(str) })
+end
+
+function Files.appendString(path, str)
+    if path == nil then return false end
+    local w = getFileWriter(path, true, true)
+    if w == nil then return false end
+    w:write(tostring(str) .. "\n")
+    w:close()
+    return true
 end
 
 function Files.readLines(path)

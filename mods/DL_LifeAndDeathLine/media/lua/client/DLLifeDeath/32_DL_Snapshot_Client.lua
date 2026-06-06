@@ -36,9 +36,17 @@ end
 
 local function onFillContextMenu(playerIndex, context, worldobjects, test)
     if test then return end
-    if findRestTile(worldobjects) == nil then return end
+    local tile = findRestTile(worldobjects)
+    if tile == nil then return end
     local player = getSpecificPlayer(playerIndex)
     if player == nil then return end
+    local sq = tile.getSquare and tile:getSquare()
+    if sq == nil then return end
+    if player:getZ() ~= sq:getZ()
+       or math.abs(math.floor(player:getX()) - sq:getX()) > 1
+       or math.abs(math.floor(player:getY()) - sq:getY()) > 1 then
+        return
+    end
 
     local parent = context:addOption(getText and getText("ContextMenu_DL_Snapshot") or "Snapshot")
     if parent == nil then return end
@@ -46,6 +54,9 @@ local function onFillContextMenu(playerIndex, context, worldobjects, test)
     context:addSubMenu(parent, sub)
     sub:addOption("Save snapshot", player, onSave)
     sub:addOption("Restore most recent", player, onRestore)
+    sub:addOption("Set respawn point", player, function(p)
+        sendClientCommand(p, "DLRespawn", "setRespawn", {})
+    end)
 end
 Events.OnFillWorldObjectContextMenu.Add(onFillContextMenu)
 
@@ -65,6 +76,13 @@ Events.OnServerCommand.Add(function(module, command, args)
             local _ = (function() DL.Snap.apply(getPlayer(), snap) end)()
             notify("Snapshot restored.")
         end
+    end
+end)
+
+Events.OnServerCommand.Add(function(module, command, args)
+    if module ~= "DLRespawn" then return end
+    if command == "setResult" and args and args.ok then
+        notify("Respawn point set (" .. tostring(args.x) .. ", " .. tostring(args.y) .. ").")
     end
 end)
 

@@ -31,6 +31,7 @@ local function doSave(player)
     local slot = DL.SnapStore.push(username, enc)
     local ok = slot and true or false
     if ok then
+        if DL.Players then DL.Players.touch(username) end
         if not staff then DL.Snap._lastSave[username] = now end
 
         local _ = (function()

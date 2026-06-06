@@ -3,40 +3,15 @@ require "NPCDialogueShared"
 local NPCDialogueServerCommands = {}
 local PERSIST_KEY = "NPCDialogueZones_Server"
 
-local zones = {}
-local loaded = false
-
-local function loadZones()
-    if loaded then return end
-    local gt = getGameTime and getGameTime()
-    if not gt then return end
-    local md = gt:getModData()
-    if md and type(md[PERSIST_KEY]) == "table" then
-        for id, zone in pairs(md[PERSIST_KEY]) do
-            zones[id] = zone
-        end
-    end
-    loaded = true
-end
-
 local function getZones()
-    if not loaded then loadZones() end
-    return zones
-end
-
-local function persistZones()
     local gt = getGameTime and getGameTime()
-    if not gt then return end
+    if not gt then return {} end
     local md = gt:getModData()
-    if not md then return end
-    md[PERSIST_KEY] = getZones()
-end
-
-if Events.OnServerStarted then
-    Events.OnServerStarted.Add(loadZones)
-end
-if Events.OnInitWorld then
-    Events.OnInitWorld.Add(loadZones)
+    if not md then return {} end
+    if type(md[PERSIST_KEY]) ~= "table" then
+        md[PERSIST_KEY] = {}
+    end
+    return md[PERSIST_KEY]
 end
 
 local function isAdminOrDebug(player)
@@ -69,7 +44,6 @@ function NPCDialogueServerCommands.PlaceZone(playerObj, args)
     )
 
     getZones()[zoneId] = zone
-    persistZones()
 
     sendServerCommand("NPCDialogue", "SyncZone", { zone = zone })
 end
@@ -79,7 +53,6 @@ function NPCDialogueServerCommands.RemoveZone(playerObj, args)
     if not args.id then return end
 
     getZones()[args.id] = nil
-    persistZones()
 
     sendServerCommand("NPCDialogue", "RemoveAck", { id = args.id, x = args.x, y = args.y, z = args.z })
 end
@@ -89,7 +62,6 @@ function NPCDialogueServerCommands.UpdateZone(playerObj, args)
     if not args.zone or not args.zone.id then return end
 
     getZones()[args.zone.id] = args.zone
-    persistZones()
 
     sendServerCommand("NPCDialogue", "SyncZone", { zone = args.zone })
 end

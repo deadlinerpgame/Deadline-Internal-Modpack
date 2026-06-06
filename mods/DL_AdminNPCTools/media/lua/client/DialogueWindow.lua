@@ -1,24 +1,32 @@
 require "ISUI/ISUIElement"
 require "ISUI/ISPanel"
+require "NPCUIScale"
 
 DialogueWindow = ISPanel:derive("DialogueWindow")
-local W            = 540
-local H            = 420
-local PAD          = 10
-local PORTRAIT_SZ  = 80
-local HEADER_H     = 30
-local OPTION_H     = 22
-local HINT_EXTRA   = 16
-local COL_X  = PAD + PORTRAIT_SZ + PAD
-local COL_W  = W - COL_X - PAD
 
--- Keys that close the window. Edit this list to rebind.
+local BASE_W           = 540
+local BASE_H           = 420
+local BASE_PAD         = 10
+local BASE_PORTRAIT_SZ = 80
+local BASE_HEADER_H    = 30
+local BASE_OPTION_H    = 22
+local BASE_HINT_EXTRA  = 16
+
 local CLOSE_KEYS = { Keyboard.KEY_F, Keyboard.KEY_V }
 
 function DialogueWindow:new()
-    local sw = getCore():getScreenWidth()
-    local sh = getCore():getScreenHeight()
-    local o  = ISPanel.new(self, math.floor((sw - W) / 2), math.floor((sh - H) / 2), W, H)
+    local s, w, h, x, y = NPCUIScale.windowGeometry(BASE_W, BASE_H)
+    local o  = ISPanel.new(self, x, y, w, h)
+    o.scale         = s
+    o.W             = w
+    o.H             = h
+    o.PAD           = NPCUIScale.dim(BASE_PAD, s)
+    o.PORTRAIT_SZ   = NPCUIScale.dim(BASE_PORTRAIT_SZ, s)
+    o.HEADER_H      = NPCUIScale.dim(BASE_HEADER_H, s)
+    o.OPTION_H      = NPCUIScale.dim(BASE_OPTION_H, s)
+    o.HINT_EXTRA    = NPCUIScale.dim(BASE_HINT_EXTRA, s)
+    o.COL_X         = o.PAD + o.PORTRAIT_SZ + o.PAD
+    o.COL_W         = o.W - o.COL_X - o.PAD
     o.moveWithMouse = false
     o.npcName       = ""
     o.portrait      = nil
@@ -44,7 +52,6 @@ function DialogueWindow:new()
     return o
 end
 
--- Global key hook, active only while the window is open.
 local function onGlobalKeyPressed(key)
     local inst = DialogueWindow._instance
     if not inst or not inst.active then return end
@@ -115,7 +122,6 @@ function DialogueWindow:endSession()
     if self.zoneId then
         sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "EndSession", { zoneId = self.zoneId })
     end
-    -- start fade-out; update() hides the panel when alpha reaches 0
     self.fadeDir = -1
 end
 
@@ -248,6 +254,8 @@ function DialogueWindow:update()
 end
 
 function DialogueWindow:prerender()
+    local W, H, PAD, PORTRAIT_SZ, HEADER_H, OPTION_H, HINT_EXTRA, COL_X =
+        self.W, self.H, self.PAD, self.PORTRAIT_SZ, self.HEADER_H, self.OPTION_H, self.HINT_EXTRA, self.COL_X
     local a    = self.fadeAlpha
     local fSm  = UIFont.Small
     local fMed = UIFont.Medium
@@ -364,7 +372,7 @@ function DialogueWindow:prerender()
     end
 
     if self.pendingConfirm then
-        local mw, mh = 320, 90
+        local mw, mh = NPCUIScale.dim(320, self.scale), NPCUIScale.dim(90, self.scale)
         local mx = math.floor((W - mw) / 2)
         local my = math.floor((H - mh) / 2)
         self:drawRect(0, 0, W, H, a * 0.5, 0, 0, 0)
@@ -372,12 +380,12 @@ function DialogueWindow:prerender()
         self:drawRectBorder(mx, my, mw, mh, a, 0.6, 0.6, 0.6)
         local label = self.pendingConfirm.label
         local lw = tm:MeasureStringX(fSm, label)
-        self:drawText(label, mx + math.floor((mw - lw) / 2), my + 14, 1, 1, 1, a, fSm)
-        local btnY = my + mh - 28
+        self:drawText(label, mx + math.floor((mw - lw) / 2), my + NPCUIScale.dim(14, self.scale), 1, 1, 1, a, fSm)
+        local btnY = my + mh - NPCUIScale.dim(28, self.scale)
         local yesTxt, noTxt = "[Y] Yes", "[N] No"
         local yw = tm:MeasureStringX(fSm, yesTxt)
         local nw = tm:MeasureStringX(fSm, noTxt)
-        local gap = 40
+        local gap = NPCUIScale.dim(40, self.scale)
         local totalBtnW = yw + nw + gap
         local bx = mx + math.floor((mw - totalBtnW) / 2)
         self:drawText(yesTxt, bx, btnY, 0.7, 0.9, 0.7, a, fSm)
@@ -395,6 +403,7 @@ local function pointInRect(mx, my, r)
 end
 
 function DialogueWindow:onMouseMove(dx, dy)
+    local H, PAD, HEADER_H, OPTION_H, HINT_EXTRA = self.H, self.PAD, self.HEADER_H, self.OPTION_H, self.HINT_EXTRA
     local optAreaY = self.optAreaY or 0
     local optAreaH = H - optAreaY - HEADER_H - PAD
     local mx, my   = self:getMouseX(), self:getMouseY()
@@ -436,6 +445,7 @@ function DialogueWindow:onMouseWheel(del)
 end
 
 function DialogueWindow:onMouseDown(x, y)
+    local H, PAD, HEADER_H, OPTION_H, HINT_EXTRA = self.H, self.PAD, self.HEADER_H, self.OPTION_H, self.HINT_EXTRA
     if self.pendingConfirm then
         if pointInRect(x, y, self.confirmYesRect) then self:confirmResponse(true); return
         elseif pointInRect(x, y, self.confirmNoRect) then self:confirmResponse(false); return end

@@ -12,7 +12,15 @@ local function onDeath(character)
         return
     end
 
+    local knockdownOn = not (DL.Config and DL.Config.knockdownEnable == false)
+    local isReal = (DL.Rescue and DL.Rescue.isRealDeath(username)) or false
+    if knockdownOn and not isReal then
+        DL.log("wound: rescue (overkill) death for '" .. username .. "', no wound counted")
+        return
+    end
+
     local n = DL.Wounds.add(username, 1)
+    if DL.Players then DL.Players.touch(username) end
     DL.log("wound: '" .. username .. "' -> " .. tostring(n) .. " (threshold " .. tostring(DL.Config.woundThreshold) .. ")")
 
     local hc = DL.Config.holdingCell or { x = 0, y = 0, z = 0 }
@@ -23,7 +31,9 @@ local function onDeath(character)
     end
 
     (function()
-        sendServerCommand(character, "DLWounds", "deathState", { toCell = toCell, x = hc.x, y = hc.y, z = hc.z })
+        local rp = (DL.RespawnPt and DL.RespawnPt.get) and DL.RespawnPt.get(username) or { x = 10010, y = 11000, z = 0 }
+        sendServerCommand(character, "DLWounds", "deathState",
+            { toCell = toCell, x = hc.x, y = hc.y, z = hc.z, rx = rp.x, ry = rp.y, rz = rp.z })
     end)()
 end
 Events.OnCharacterDeath.Add(function(c) local _ = (function() onDeath(c) end)() end)

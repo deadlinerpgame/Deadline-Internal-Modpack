@@ -1,6 +1,7 @@
 DL = DL or {}
 DL.Wounds = DL.Wounds or {}
 DL.Purgatory = DL.Purgatory or {}
+DL.Respawn = DL.Respawn or {}
 DL.Purgatory._desc = DL.Purgatory._desc or nil
 
 if ISPostDeathUI == nil then
@@ -39,14 +40,17 @@ local function stageSpawn(hc)
     getWorld():setLuaPosZ(z)
 end
 
-local function purgatoryRespawn()
+local function instantRespawn(coords, transferAll)
     local player = getPlayer()
     if player == nil then return false end
 
     local desc   = copyDesc(player)
     if desc then syncVisualFromPlayer(player, desc) end
-    local traits = captureTraits(player)
-    local hc     = DL.Wounds.cell or { x = 10000, y = 11000, z = 0 }
+    local traits = transferAll and captureTraits(player) or {}
+    if not transferAll and desc and desc.setProfession then
+        pcall(function() desc:setProfession("unemployed") end)
+    end
+    coords = coords or { x = 10010, y = 11000, z = 0 }
 
     DL.Purgatory._desc = desc
 
@@ -58,7 +62,7 @@ local function purgatoryRespawn()
 
     inst.initPlayer = function() end
     inst.accept1 = function()
-        stageSpawn(hc)
+        stageSpawn(coords)
         getWorld():setLuaPlayerDesc(MainScreen.instance.desc)
         local lt = getWorld():getLuaTraits()
         lt:clear()
@@ -92,11 +96,24 @@ end)
 
 local _onRespawn = ISPostDeathUI.onRespawn
 function ISPostDeathUI:onRespawn()
-    if DL.Wounds and DL.Wounds.pendingToCell then
-        local ok = (function() return purgatoryRespawn() end)()
-        if ok then return end
-        DL.warn("purgatory respawn failed; falling back to vanilla respawn")
+    local coords, transferAll
+    if DL.OverkillRescue and DL.OverkillRescue.pending then
+        coords = DL.OverkillRescue.coords
+              or (DL.Config and DL.Config.respawnDefault)
+              or { x = 10010, y = 11000, z = 0 }
+        transferAll = true
+    elseif DL.Wounds and DL.Wounds.pendingToCell then
+        coords = DL.Wounds.cell or { x = 10000, y = 11000, z = 0 }
+        transferAll = true
+    else
+        coords = (DL.Respawn and DL.Respawn.point)
+              or (DL.Config and DL.Config.respawnDefault)
+              or { x = 10010, y = 11000, z = 0 }
+        transferAll = false
     end
+    local ok = (function() return instantRespawn(coords, transferAll) end)()
+    if ok then return end
+    DL.warn("instant respawn failed; falling back to vanilla respawn")
     _onRespawn(self)
 end
 

@@ -110,4 +110,30 @@ function DL.Flags.resetRestore(username)
     DL.Files.writeString(restoreFlagPath(username), "0")
 end
 
+DL.Players = DL.Players or {}
+local function playersIndexPath() return DL.Config.dataRoot .. "/_players.txt" end
+function DL.Players.list()
+    return DL.Files.readLines(playersIndexPath()) or {}
+end
+function DL.Players.touch(username)
+    local u = DL.Paths.safeName(username)
+    if u == nil then return end
+    local list = DL.Players.list()
+    for _, n in ipairs(list) do if n == u then return end end
+    list[#list + 1] = u
+    DL.Files.writeLines(playersIndexPath(), list)
+end
+
+DL.Audit = DL.Audit or {}
+function DL.Audit.log(admin, target, field, old, new)
+    local now = getTimestamp()
+    local stamp = (DL.fmtTs and DL.fmtTs(now)) or tostring(now)
+    local line = "[" .. stamp .. "] " .. tostring(admin)
+        .. " set " .. tostring(field) .. " of '" .. tostring(target) .. "': "
+        .. tostring(old) .. " -> " .. tostring(new)
+    DL.Files.appendString(DL.Config.dataRoot .. "/_admin_audit.txt", line)
+    DL.log("AUDIT " .. line)
+    if writeLog then writeLog("DLAdmin", line) end
+end
+
 DL.log("stores loaded (SnapStore, Wounds, Flags)")

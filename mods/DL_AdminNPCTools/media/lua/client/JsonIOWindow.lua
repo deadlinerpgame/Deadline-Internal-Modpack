@@ -2,14 +2,10 @@ require "ISUI/ISPanel"
 require "ISUI/ISButton"
 require "ISUI/ISTextEntryBox"
 require "ISUI/ISLabel"
+require "NPCUIScale"
 
 JsonIOWindow = ISPanel:derive("JsonIOWindow")
 
--- =========================================================================
--- Minimal JSON encoder / decoder. Handles: nil, bool, number, string,
--- array (1..N integer keys), object (string keys). Good enough for the
--- zone schema (tables of primitives + nested tables).
--- =========================================================================
 local json = {}
 
 local function encodeString(s)
@@ -71,7 +67,6 @@ end
 
 function json.encode(v) return encodeValue(v, true, 0) end
 
--- Decoder (recursive descent)
 local function skipWS(s, i)
     while i <= #s do
         local c = s:sub(i, i)
@@ -180,26 +175,27 @@ function json.decode(s)
     return val
 end
 
-JsonIOWindow.json = json  -- expose for other files
-
--- =========================================================================
--- UI
--- =========================================================================
-local W, H = 640, 480
-local PAD  = 10
-local BTN_H, BTN_W = 24, 90
-local HEADER_H = 28
+JsonIOWindow.json = json
+local BASE_W, BASE_H = 640, 480
+local BASE_PAD       = 10
+local BASE_BTN_H, BASE_BTN_W = 24, 90
+local BASE_HEADER_H  = 28
 
 function JsonIOWindow:new(mode, title, initialText, onAccept)
-    local sw = getCore():getScreenWidth()
-    local sh = getCore():getScreenHeight()
-    local o  = ISPanel.new(self,
-        math.floor((sw - W) / 2), math.floor((sh - H) / 2), W, H)
+    local s, w, h, x, y = NPCUIScale.windowGeometry(BASE_W, BASE_H)
+    local o  = ISPanel.new(self, x, y, w, h)
+    o.scale         = s
+    o.W             = w
+    o.H             = h
+    o.PAD           = NPCUIScale.dim(BASE_PAD, s)
+    o.BTN_H         = NPCUIScale.dim(BASE_BTN_H, s)
+    o.BTN_W         = NPCUIScale.dim(BASE_BTN_W, s)
+    o.HEADER_H      = NPCUIScale.dim(BASE_HEADER_H, s)
     o.moveWithMouse = false
-    o.mode          = mode          -- "export" or "import"
+    o.mode          = mode
     o.titleText     = title or (mode == "export" and "Export" or "Import")
     o.initialText   = initialText or ""
-    o.onAccept      = onAccept      -- function(text) for import
+    o.onAccept      = onAccept
     o.errorMsg      = nil
     o.backgroundColor = { r = 0.05, g = 0.05, b = 0.05, a = 0.92 }
     o.borderColor     = { r = 0.5,  g = 0.5,  b = 0.5,  a = 1 }
@@ -207,6 +203,8 @@ function JsonIOWindow:new(mode, title, initialText, onAccept)
 end
 
 function JsonIOWindow:createChildren()
+    local W, H, PAD, BTN_H, BTN_W, HEADER_H = self.W, self.H, self.PAD, self.BTN_H, self.BTN_W, self.HEADER_H
+    local function S(v) return NPCUIScale.dim(v, self.scale) end
     ISPanel.createChildren(self)
 
     local taY = HEADER_H + PAD
@@ -216,10 +214,6 @@ function JsonIOWindow:createChildren()
     self.entry:instantiate()
     self.entry:setMultipleLine(true)
     self.entry:setMaxLines(10000)
-    -- Intentionally left editable even in export mode: PZ's
-    -- setEditable(false) disables selection too, which would make
-    -- copy-to-clipboard impossible. Export never reads this box back,
-    -- so stray edits are harmless.
     self:addChild(self.entry)
 
     local btnY = H - PAD - BTN_H
@@ -229,7 +223,7 @@ function JsonIOWindow:createChildren()
         self.btnOK:initialise(); self.btnOK:instantiate()
         self:addChild(self.btnOK)
     else
-        self.btnCancel = ISButton:new(W - PAD - BTN_W * 2 - 6, btnY, BTN_W, BTN_H,
+        self.btnCancel = ISButton:new(W - PAD - BTN_W * 2 - S(6), btnY, BTN_W, BTN_H,
             "Cancel", self, JsonIOWindow.onClose)
         self.btnCancel:initialise(); self.btnCancel:instantiate()
         self:addChild(self.btnCancel)
@@ -242,12 +236,14 @@ function JsonIOWindow:createChildren()
 end
 
 function JsonIOWindow:prerender()
+    local H, PAD, BTN_H = self.H, self.PAD, self.BTN_H
+    local function S(v) return NPCUIScale.dim(v, self.scale) end
     ISPanel.prerender(self)
-    self:drawText(self.titleText, PAD, 8, 1, 1, 1, 1, UIFont.Medium)
+    self:drawText(self.titleText, PAD, S(8), 1, 1, 1, 1, UIFont.Medium)
     if self.errorMsg then
         local tm = getTextManager()
         local fh = tm:getFontHeight(UIFont.Small)
-        self:drawText(self.errorMsg, PAD, H - PAD - BTN_H - fh - 4,
+        self:drawText(self.errorMsg, PAD, H - PAD - BTN_H - fh - S(4),
             1, 0.5, 0.5, 1, UIFont.Small)
     end
 end

@@ -39,6 +39,8 @@ Events.OnServerCommand.Add(function(module, command, args)
     if command == "deathState" then
         DL.Wounds.pendingToCell = args.toCell and true or false
         DL.Wounds.cell = { x = args.x, y = args.y, z = args.z or 0 }
+        DL.Respawn = DL.Respawn or {}
+        if args.rx then DL.Respawn.point = { x = args.rx, y = args.ry, z = args.rz or 0 } end
     elseif command == "resetResult" then
         if args.ok then notify("Wounds treated.")
         elseif args.reason == "noitem" then notify("You don't have the treatment item.")

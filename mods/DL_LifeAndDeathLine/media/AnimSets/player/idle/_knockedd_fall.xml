@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animNode>
+	<m_Name>knockedd_fall</m_Name>
+	<m_AnimName>Bob_HitReact_Walking</m_AnimName>
+	<m_deferredBoneAxis>Y</m_deferredBoneAxis>
+	<m_Looped>false</m_Looped>
+	<m_SpeedScale>1.20</m_SpeedScale>
+	<m_BlendTime>0.20</m_BlendTime>
+	<m_useDeferedMovement>false</m_useDeferedMovement>
+
+	<!-- WORK IN PROGRESS -->
+	<!-- <m_Conditions>
+		<m_Name>knockedDownState</m_Name>
+		<m_Type>STRING</m_Type>
+		<m_BoolValue>falling</m_BoolValue>
+	</m_Conditions> -->
+	<!-- WORK IN PROGRESS -->
+
+	<m_Conditions>
+		<m_Name>knockedd_fall</m_Name>
+		<m_Type>BOOL</m_Type>
+		<m_BoolValue>true</m_BoolValue>
+	</m_Conditions>
+
+	<!-- <m_Conditions>
+		<m_Name>emote</m_Name>
+		<m_Type>STRING</m_Type>
+		<m_StringValue>knockedd_fall</m_StringValue>
+	</m_Conditions> -->
+	<!-- <m_Transitions>
+		<m_Target>knockedd_loop</m_Target>
+	</m_Transitions> -->
+	<!-- <m_Events>
+		<m_EventName>EmoteFinishing</m_EventName>
+		<m_Time>End</m_Time>
+		<m_ParameterValue></m_ParameterValue>
+	</m_Events> -->
+	<!-- <m_Events>
+		<m_EventName>SetVariable</m_EventName>
+		<m_Time>End</m_Time>
+		<m_ParameterValue>knockedDownState=fall</m_ParameterValue>
+	</m_Events> -->
+	<m_Events>
+		<m_EventName>SetVariable</m_EventName>
+		<m_Time>End</m_Time>
+		<m_ParameterValue>knockedd_fall=false</m_ParameterValue>
+	</m_Events>
+	<m_Events>
+		<m_EventName>SetVariable</m_EventName>
+		<m_Time>End</m_Time>
+		<m_ParameterValue>knockedd=true</m_ParameterValue>
+	</m_Events>
+</animNode>

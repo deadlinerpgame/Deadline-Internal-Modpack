@@ -6,24 +6,20 @@ require "ISUI/ISTextEntryBox"
 require "ISUI/ISComboBox"
 require "ISUI/ISLabel"
 require "JsonIOWindow"
+require "NPCUIScale"
 
 AdminEditorWindow = ISPanel:derive("AdminEditorWindow")
-
-local W         = 860
-local H         = 580
-local PAD       = 8
-local HEADER_H  = 28
-local FOOTER_H  = 30
-local LEFT_W    = 170
-local RIGHT_W   = 180
-local CENTER_X  = LEFT_W + 1
-local CENTER_W  = W - LEFT_W - RIGHT_W - 2
-local CONTENT_Y = HEADER_H
-local CONTENT_H = H - HEADER_H - FOOTER_H
-local INPUT_H   = 20
-local BTN_H     = 22
-local BTN_W     = 70
-local NODE_ROW_H = 38
+local BASE_W          = 860
+local BASE_H          = 580
+local BASE_PAD        = 8
+local BASE_HEADER_H   = 28
+local BASE_FOOTER_H   = 30
+local BASE_LEFT_W     = 170
+local BASE_RIGHT_W    = 180
+local BASE_INPUT_H    = 20
+local BASE_BTN_H      = 22
+local BASE_BTN_W      = 70
+local BASE_NODE_ROW_H = 38
 
 local FAIL_OPTIONS = { "hide", "grey" }
 local COND_TYPES   = { "item", "skill", "occupation", "talked" }
@@ -43,12 +39,24 @@ local function deepCopyTree(src)
 end
 
 function AdminEditorWindow:new()
-    local sw = getCore():getScreenWidth()
-    local sh = getCore():getScreenHeight()
-    local o  = ISPanel.new(self,
-        math.floor((sw - W) / 2),
-        math.floor((sh - H) / 2),
-        W, H)
+    local s, w, h, x, y = NPCUIScale.windowGeometry(BASE_W, BASE_H)
+    local o  = ISPanel.new(self, x, y, w, h)
+    o.scale       = s
+    o.W           = w
+    o.H           = h
+    o.PAD         = NPCUIScale.dim(BASE_PAD, s)
+    o.HEADER_H    = NPCUIScale.dim(BASE_HEADER_H, s)
+    o.FOOTER_H    = NPCUIScale.dim(BASE_FOOTER_H, s)
+    o.LEFT_W      = NPCUIScale.dim(BASE_LEFT_W, s)
+    o.RIGHT_W     = NPCUIScale.dim(BASE_RIGHT_W, s)
+    o.INPUT_H     = NPCUIScale.dim(BASE_INPUT_H, s)
+    o.BTN_H       = NPCUIScale.dim(BASE_BTN_H, s)
+    o.BTN_W       = NPCUIScale.dim(BASE_BTN_W, s)
+    o.NODE_ROW_H  = NPCUIScale.dim(BASE_NODE_ROW_H, s)
+    o.CENTER_X    = o.LEFT_W + 1
+    o.CENTER_W    = o.W - o.LEFT_W - o.RIGHT_W - 2
+    o.CONTENT_Y   = o.HEADER_H
+    o.CONTENT_H   = o.H - o.HEADER_H - o.FOOTER_H
     o.moveWithMouse  = false
     o.zone           = nil
     o.workingTree    = nil
@@ -75,20 +83,22 @@ function AdminEditorWindow:openForZone(zone)
 end
 
 function AdminEditorWindow:buildStaticButtons()
-    self.btnSave = ISButton:new(W - PAD - BTN_W*2 - 4, 4, BTN_W, BTN_H, "Save", self, AdminEditorWindow.onSave)
+    local W, H, PAD, FOOTER_H, BTN_W, BTN_H = self.W, self.H, self.PAD, self.FOOTER_H, self.BTN_W, self.BTN_H
+    local function S(v) return NPCUIScale.dim(v, self.scale) end
+
+    self.btnSave = ISButton:new(W - PAD - BTN_W*2 - S(4), S(4), BTN_W, BTN_H, "Save", self, AdminEditorWindow.onSave)
     self.btnSave:initialise(); self.btnSave:instantiate(); self:addChild(self.btnSave)
 
-    self.btnDiscard = ISButton:new(W - PAD - BTN_W, 4, BTN_W, BTN_H, "Discard", self, AdminEditorWindow.onDiscard)
+    self.btnDiscard = ISButton:new(W - PAD - BTN_W, S(4), BTN_W, BTN_H, "Discard", self, AdminEditorWindow.onDiscard)
     self.btnDiscard:initialise(); self.btnDiscard:instantiate(); self:addChild(self.btnDiscard)
 
-    -- Export / Import sit to the left of Save.
-    self.btnExport = ISButton:new(W - PAD - BTN_W*4 - 12, 4, BTN_W, BTN_H, "Export", self, AdminEditorWindow.onExport)
+    self.btnExport = ISButton:new(W - PAD - BTN_W*4 - S(12), S(4), BTN_W, BTN_H, "Export", self, AdminEditorWindow.onExport)
     self.btnExport:initialise(); self.btnExport:instantiate(); self:addChild(self.btnExport)
 
-    self.btnImport = ISButton:new(W - PAD - BTN_W*3 - 8, 4, BTN_W, BTN_H, "Import", self, AdminEditorWindow.onImport)
+    self.btnImport = ISButton:new(W - PAD - BTN_W*3 - S(8), S(4), BTN_W, BTN_H, "Import", self, AdminEditorWindow.onImport)
     self.btnImport:initialise(); self.btnImport:instantiate(); self:addChild(self.btnImport)
 
-    self.btnClose = ISButton:new(W - PAD - BTN_W, H - FOOTER_H + 4, BTN_W, BTN_H, "Close", self, AdminEditorWindow.onClose)
+    self.btnClose = ISButton:new(W - PAD - BTN_W, H - FOOTER_H + S(4), BTN_W, BTN_H, "Close", self, AdminEditorWindow.onClose)
     self.btnClose:initialise(); self.btnClose:instantiate(); self:addChild(self.btnClose)
 end
 
@@ -133,27 +143,30 @@ function AdminEditorWindow:onImport()
 end
 
 function AdminEditorWindow:rebuildWidgets()
+    local PAD, CONTENT_Y, LEFT_W, RIGHT_W, INPUT_H, BTN_H, NODE_ROW_H, W, CENTER_X, CENTER_W =
+        self.PAD, self.CONTENT_Y, self.LEFT_W, self.RIGHT_W, self.INPUT_H, self.BTN_H, self.NODE_ROW_H, self.W, self.CENTER_X, self.CENTER_W
+    local function S(v) return NPCUIScale.dim(v, self.scale) end
     for _, w in ipairs(self.widgets) do self:removeChild(w) end
     self.widgets = {}
     if not self.zone then return end
     local tree = self.workingTree
 
     local lx = PAD
-    local ly = CONTENT_Y + PAD + 16
+    local ly = CONTENT_Y + PAD + S(16)
 
-    ly = ly + 14
+    ly = ly + S(14)
     self.entryName = ISTextEntryBox:new(self.zone.name or "", lx, ly, LEFT_W - PAD*2, INPUT_H)
     self.entryName:initialise(); self.entryName:instantiate(); self:addChild(self.entryName)
     self.widgets[#self.widgets+1] = self.entryName
     ly = ly + INPUT_H + PAD
 
-    ly = ly + 14
+    ly = ly + S(14)
     self.entryPortrait = ISTextEntryBox:new(self.zone.portrait or "", lx, ly, LEFT_W - PAD*2, INPUT_H)
     self.entryPortrait:initialise(); self.entryPortrait:instantiate(); self:addChild(self.entryPortrait)
     self.widgets[#self.widgets+1] = self.entryPortrait
     ly = ly + INPUT_H + PAD
 
-    ly = ly + 14
+    ly = ly + S(14)
     self.entryRadius = ISTextEntryBox:new(tostring(self.zone.radius or 2), lx, ly, LEFT_W - PAD*2, INPUT_H)
     self.entryRadius:initialise(); self.entryRadius:instantiate(); self:addChild(self.entryRadius)
     self.widgets[#self.widgets+1] = self.entryRadius
@@ -171,14 +184,14 @@ function AdminEditorWindow:rebuildWidgets()
     end
 
     local rx = W - RIGHT_W + PAD
-    local ry = CONTENT_Y + PAD + 16
+    local ry = CONTENT_Y + PAD + S(16)
 
     self.nodeButtons = {}
     for idx, nid in ipairs(tree.nodeOrder) do
         local node   = tree.nodes[nid]
         local label  = nid .. (node.editorName ~= "" and (" " .. node.editorName) or "")
         if idx == 1 then label = label .. " [R]" end
-        local btn = ISButton:new(rx, ry, RIGHT_W - PAD*2, NODE_ROW_H - 4, label, self, AdminEditorWindow.onSelectNode)
+        local btn = ISButton:new(rx, ry, RIGHT_W - PAD*2, NODE_ROW_H - S(4), label, self, AdminEditorWindow.onSelectNode)
         btn.nodeId = nid
         btn:initialise(); btn:instantiate(); self:addChild(btn)
         self.widgets[#self.widgets+1] = btn
@@ -191,16 +204,16 @@ function AdminEditorWindow:rebuildWidgets()
     if not node then return end
 
     local cx = CENTER_X + PAD
-    local cy = CONTENT_Y + PAD + 14 + 4
+    local cy = CONTENT_Y + PAD + S(14) + S(4)
 
-    cy = cy + 14
+    cy = cy + S(14)
     self.entryNodeName = ISTextEntryBox:new(node.editorName or "", cx, cy, CENTER_W - PAD*2, INPUT_H)
     self.entryNodeName:initialise(); self.entryNodeName:instantiate(); self:addChild(self.entryNodeName)
     self.widgets[#self.widgets+1] = self.entryNodeName
     cy = cy + INPUT_H + PAD
 
-    cy = cy + 14
-    local taH = 56
+    cy = cy + S(14)
+    local taH = S(56)
     self.entryNpcText = ISTextEntryBox:new(node.npcText or "", cx, cy, CENTER_W - PAD*2, taH)
     self.entryNpcText:initialise(); self.entryNpcText:instantiate(); self:addChild(self.entryNpcText)
     self.widgets[#self.widgets+1] = self.entryNpcText
@@ -220,18 +233,18 @@ function AdminEditorWindow:rebuildWidgets()
         local rEntry = {}
         local fullW  = CENTER_W - PAD*2
 
-        local labelEntry = ISTextEntryBox:new(resp.label or "", cx, cy, fullW - 80, INPUT_H)
+        local labelEntry = ISTextEntryBox:new(resp.label or "", cx, cy, fullW - S(80), INPUT_H)
         labelEntry:initialise(); labelEntry:instantiate(); self:addChild(labelEntry)
         self.widgets[#self.widgets+1] = labelEntry
         rEntry.labelEntry = labelEntry
 
-        local btnDel = ISButton:new(cx + fullW - 76, cy, 74, INPUT_H, "- Remove", self, AdminEditorWindow.onDeleteResponse)
+        local btnDel = ISButton:new(cx + fullW - S(76), cy, S(74), INPUT_H, "- Remove", self, AdminEditorWindow.onDeleteResponse)
         btnDel.respIdx = ri
         btnDel:initialise(); btnDel:instantiate(); self:addChild(btnDel)
         self.widgets[#self.widgets+1] = btnDel
-        cy = cy + INPUT_H + 2
+        cy = cy + INPUT_H + S(2)
 
-        local halfW = math.floor((fullW - 4) / 2)
+        local halfW = math.floor((fullW - S(4)) / 2)
 
         local leadsCombo = ISComboBox:new(cx, cy, halfW, INPUT_H, self, nil)
         leadsCombo:initialise(); leadsCombo:instantiate()
@@ -247,7 +260,7 @@ function AdminEditorWindow:rebuildWidgets()
         self.widgets[#self.widgets+1] = leadsCombo
         rEntry.leadsToCombo = leadsCombo
 
-        local failCombo = ISComboBox:new(cx + halfW + 4, cy, halfW, INPUT_H, self, nil)
+        local failCombo = ISComboBox:new(cx + halfW + S(4), cy, halfW, INPUT_H, self, nil)
         failCombo:initialise(); failCombo:instantiate()
         for _, opt in ipairs(FAIL_OPTIONS) do failCombo:addOption(opt) end
         local failIdx = 1
@@ -258,24 +271,24 @@ function AdminEditorWindow:rebuildWidgets()
         self:addChild(failCombo)
         self.widgets[#self.widgets+1] = failCombo
         rEntry.failCombo = failCombo
-        cy = cy + INPUT_H + 2
+        cy = cy + INPUT_H + S(2)
 
         if #resp.conditions >= 2 then
-            local andOrCombo = ISComboBox:new(cx, cy, 80, INPUT_H, self, nil)
+            local andOrCombo = ISComboBox:new(cx, cy, S(80), INPUT_H, self, nil)
             andOrCombo:initialise(); andOrCombo:instantiate()
             for _, opt in ipairs(AND_OR) do andOrCombo:addOption(opt) end
             andOrCombo.selected = (resp.conditionMode == "OR") and 2 or 1
             self:addChild(andOrCombo)
             self.widgets[#self.widgets+1] = andOrCombo
             rEntry.andOrCombo = andOrCombo
-            cy = cy + INPUT_H + 2
+            cy = cy + INPUT_H + S(2)
         end
 
         rEntry.conditionWidgets = {}
         for ci, cond in ipairs(resp.conditions) do
             local cEntry = {}
 
-            local typeCombo = ISComboBox:new(cx, cy, 100, INPUT_H, self, nil)
+            local typeCombo = ISComboBox:new(cx, cy, S(100), INPUT_H, self, nil)
             typeCombo:initialise(); typeCombo:instantiate()
             for _, opt in ipairs(COND_TYPES) do typeCombo:addOption(opt) end
             local typeIdx = 1
@@ -290,27 +303,27 @@ function AdminEditorWindow:rebuildWidgets()
             self.widgets[#self.widgets+1] = typeCombo
             cEntry.typeCombo = typeCombo
 
-            local btnDelCond = ISButton:new(cx + fullW - 74, cy, 74, INPUT_H, "- Cond", self, AdminEditorWindow.onDeleteCondition)
+            local btnDelCond = ISButton:new(cx + fullW - S(74), cy, S(74), INPUT_H, "- Cond", self, AdminEditorWindow.onDeleteCondition)
             btnDelCond.respIdx = ri
             btnDelCond.condIdx = ci
             btnDelCond:initialise(); btnDelCond:instantiate(); self:addChild(btnDelCond)
             self.widgets[#self.widgets+1] = btnDelCond
-            cy = cy + INPUT_H + 2
+            cy = cy + INPUT_H + S(2)
 
             if cond.type == "item" then
-                local itemEntry = ISTextEntryBox:new(cond.itemName or "", cx, cy, fullW - 54, INPUT_H)
+                local itemEntry = ISTextEntryBox:new(cond.itemName or "", cx, cy, fullW - S(54), INPUT_H)
                 itemEntry:initialise(); itemEntry:instantiate(); self:addChild(itemEntry)
                 self.widgets[#self.widgets+1] = itemEntry
                 cEntry.itemEntry = itemEntry
 
-                local amountEntry = ISTextEntryBox:new(tostring(cond.amount or 1), cx + fullW - 50, cy, 50, INPUT_H)
+                local amountEntry = ISTextEntryBox:new(tostring(cond.amount or 1), cx + fullW - S(50), cy, S(50), INPUT_H)
                 amountEntry:initialise(); amountEntry:instantiate(); self:addChild(amountEntry)
                 self.widgets[#self.widgets+1] = amountEntry
                 cEntry.amountEntry = amountEntry
-                cy = cy + INPUT_H + 2
+                cy = cy + INPUT_H + S(2)
 
             elseif cond.type == "skill" then
-                local skillCombo = ISComboBox:new(cx, cy, fullW - 54, INPUT_H, self, nil)
+                local skillCombo = ISComboBox:new(cx, cy, fullW - S(54), INPUT_H, self, nil)
                 skillCombo:initialise(); skillCombo:instantiate()
                 for _, s in ipairs(NPCDialogue.SKILLS) do skillCombo:addOption(s) end
                 local skillIdx = 1
@@ -322,24 +335,24 @@ function AdminEditorWindow:rebuildWidgets()
                 self.widgets[#self.widgets+1] = skillCombo
                 cEntry.skillCombo = skillCombo
 
-                local lvlEntry = ISTextEntryBox:new(tostring(cond.level or 1), cx + fullW - 50, cy, 50, INPUT_H)
+                local lvlEntry = ISTextEntryBox:new(tostring(cond.level or 1), cx + fullW - S(50), cy, S(50), INPUT_H)
                 lvlEntry:initialise(); lvlEntry:instantiate(); self:addChild(lvlEntry)
                 self.widgets[#self.widgets+1] = lvlEntry
                 cEntry.levelEntry = lvlEntry
-                cy = cy + INPUT_H + 2
+                cy = cy + INPUT_H + S(2)
 
             elseif cond.type == "occupation" then
                 local occEntry = ISTextEntryBox:new(cond.occupation or "", cx, cy, fullW, INPUT_H)
                 occEntry:initialise(); occEntry:instantiate(); self:addChild(occEntry)
                 self.widgets[#self.widgets+1] = occEntry
                 cEntry.occupationEntry = occEntry
-                cy = cy + INPUT_H + 2
+                cy = cy + INPUT_H + S(2)
             end
             
             rEntry.conditionWidgets[ci] = cEntry
         end
 
-        local btnAddCond = ISButton:new(cx, cy, 130, BTN_H, "+ Add Condition", self, AdminEditorWindow.onAddCondition)
+        local btnAddCond = ISButton:new(cx, cy, S(130), BTN_H, "+ Add Condition", self, AdminEditorWindow.onAddCondition)
         btnAddCond.respIdx = ri
         btnAddCond:initialise(); btnAddCond:instantiate(); self:addChild(btnAddCond)
         self.widgets[#self.widgets+1] = btnAddCond
@@ -348,7 +361,7 @@ function AdminEditorWindow:rebuildWidgets()
         self.responseWidgets[ri] = rEntry
     end
 
-    local btnAddResp = ISButton:new(cx, cy, 120, BTN_H, "+ Add Response", self, AdminEditorWindow.onAddResponse)
+    local btnAddResp = ISButton:new(cx, cy, S(120), BTN_H, "+ Add Response", self, AdminEditorWindow.onAddResponse)
     btnAddResp:initialise(); btnAddResp:instantiate(); self:addChild(btnAddResp)
     self.widgets[#self.widgets+1] = btnAddResp
 end
@@ -570,6 +583,9 @@ function AdminEditorWindow:onKeyPressed(key)
 end
 
 function AdminEditorWindow:prerender()
+    local W, H, PAD, HEADER_H, FOOTER_H, LEFT_W, RIGHT_W, CONTENT_Y, CONTENT_H, INPUT_H, CENTER_X, CENTER_W =
+        self.W, self.H, self.PAD, self.HEADER_H, self.FOOTER_H, self.LEFT_W, self.RIGHT_W, self.CONTENT_Y, self.CONTENT_H, self.INPUT_H, self.CENTER_X, self.CENTER_W
+    local function S(v) return NPCUIScale.dim(v, self.scale) end
     self:drawRect(0, 0, W, H, 1, 0, 0, 0)
     self:drawRectBorder(0, 0, W, H, 1, 0.5, 0.5, 0.5)
 
@@ -580,19 +596,19 @@ function AdminEditorWindow:prerender()
     local lhTy = getTextManager():getFontHeight(fTny) + 2
 
     local title = "NPC Editor" .. (self.unsaved and "  *" or "")
-    self:drawText(title, PAD, 6, 1, 1, 1, 1, fMed)
+    self:drawText(title, PAD, S(6), 1, 1, 1, 1, fMed)
     self:drawRect(0, HEADER_H - 1, W, 1, 0.5, 0.5, 0.5, 1)
     self:drawRect(LEFT_W,          CONTENT_Y, 1, CONTENT_H, 0.4, 0.4, 0.4, 1)
     self:drawRect(W - RIGHT_W - 1, CONTENT_Y, 1, CONTENT_H, 0.4, 0.4, 0.4, 1)
     self:drawRect(0, H - FOOTER_H, W, 1, 0.5, 0.5, 0.5, 1)
     if self.unsaved then
-        self:drawText("* Unsaved changes", PAD, H - FOOTER_H + 7, 1, 0.8, 0.3, 1, fSm)
+        self:drawText("* Unsaved changes", PAD, H - FOOTER_H + S(7), 1, 0.8, 0.3, 1, fSm)
     end
 
     local lx = PAD
     local ly = CONTENT_Y + PAD
     self:drawText("NPC SETTINGS", lx, ly, 0.6, 0.6, 0.6, 1, fTny)
-    ly = ly + lhTy + 4
+    ly = ly + lhTy + S(4)
     self:drawText("Name:",         lx, ly, 0.8, 0.8, 0.8, 1, fSm); ly = ly + lhSm + INPUT_H + PAD
     self:drawText("Portrait name:", lx, ly, 0.8, 0.8, 0.8, 1, fSm); ly = ly + lhSm + INPUT_H + PAD
     self:drawText("Radius:",        lx, ly, 0.8, 0.8, 0.8, 1, fSm)
@@ -615,13 +631,13 @@ function AdminEditorWindow:prerender()
         if node then
             local isRoot = tree.nodeOrder[1] == self.selectedNodeId
             self:drawText("NODE " .. self.selectedNodeId .. (isRoot and "  [ROOT]" or ""), cx, cy, 1, 1, 1, 1, fSm)
-            cy = cy + lhSm + 2
+            cy = cy + lhSm + S(2)
             self:drawText("Editor label:", cx, cy, 0.6, 0.6, 0.6, 1, fTny)
             cy = cy + lhTy + INPUT_H + PAD
             self:drawText("NPC Text:", cx, cy, 0.6, 0.6, 0.6, 1, fTny)
-            cy = cy + lhTy + 56 + PAD
+            cy = cy + lhTy + S(56) + PAD
             self:drawRect(cx, cy, CENTER_W - PAD*2, 1, 0.35, 0.35, 0.35, 1)
-            cy = cy + 4
+            cy = cy + S(4)
             self:drawText("RESPONSES  (label | goes to | if fail:)", cx, cy, 0.6, 0.6, 0.6, 1, fTny)
         end
     else

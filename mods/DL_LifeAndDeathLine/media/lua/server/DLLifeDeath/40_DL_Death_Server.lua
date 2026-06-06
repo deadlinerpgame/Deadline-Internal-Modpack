@@ -3,7 +3,7 @@ DL = DL or {}
 DL.Config = DL.Config or {}
 DL.Config.deathBagType = DL.Config.deathBagType or "Base.Bag_ALICEpack"
 
-local function writeDeathLog(username, lines, moved)
+local function writeDeathLog(username, lines, moved, woundLog)
     local _ = (function()
         local dir = DL.Paths.accountDir(username) .. "/DeathItemLogs"
         local counterPath = dir .. "/next.txt"
@@ -15,9 +15,17 @@ local function writeDeathLog(username, lines, moved)
             "",
         }
         for _, l in ipairs(lines) do out[#out + 1] = l end
+        out[#out + 1] = ""
+        out[#out + 1] = "Wounds at death:"
+        if woundLog and #woundLog > 0 then
+            for _, wl in ipairs(woundLog) do out[#out + 1] = "  " .. tostring(wl) end
+        else
+            out[#out + 1] = "  (none recorded)"
+        end
         if DL.Files.writeLines(dir .. "/death_" .. tostring(n) .. ".txt", out) then
             DL.Files.writeString(counterPath, tostring(n + 1))
             DL.log("death item log -> DeathItemLogs/death_" .. n .. ".txt")
+            if DL.Players then DL.Players.touch(username) end
         end
     end)()
 end
@@ -33,6 +41,10 @@ local function dumpOnDeath(character)
     local sq = (function() return character:getCurrentSquare() end)()
     if sq == nil then sq = (function() return character:getSquare() end)() end
     if sq == nil then DL.warn("death dump: no square; items not moved"); return end
+
+    local isReal = (DL.Rescue and DL.Rescue.isRealDeath(username)) or false
+    local rescue = (not (DL.Config and DL.Config.knockdownEnable == false)) and not isReal
+    if DL.Rescue and isReal then DL.Rescue.clearRealDeath(username) end
 
     local bagType = DL.Config.deathBagType
     local bag = (function() return instanceItem(bagType) end)()
@@ -112,15 +124,27 @@ local function dumpOnDeath(character)
         DL.log("death dump: live inventory empty; corpse-fallback recovered " .. tostring(moved) .. " item(s)")
     end
 
+    if rescue then
+        local md = bag:getModData()
+        md.dl_rescueOwner = username
+        md.dl_rescueTs = getTimestamp()
+        local _ = (function() sq:AddWorldInventoryItem(bag, 0, 0, 0) end)()
+        DL.log("death: rescue '" .. username .. "' -> " .. moved .. " item(s) into tagged temp bag at "
+            .. sq:getX() .. "," .. sq:getY() .. "," .. sq:getZ())
+        if DL.Rescue and DL.Rescue.broadcastCorpseRemoval then DL.Rescue.broadcastCorpseRemoval(sq:getX(), sq:getY(), sq:getZ()) end
+        return
+    end
+
     local lines = DL.ItemTree.containerLines(bagCont)
     DL.log("==== DEATH DROP for '" .. username .. "'  (" .. moved .. " items into " .. bagType .. ") ====")
     for _, l in ipairs(lines) do DL.log("  " .. l) end
     DL.log("==== END DEATH DROP ====")
-    writeDeathLog(username, lines, moved)
+    writeDeathLog(username, lines, moved, character:getModData().dl_deathWoundLog)
 
     if DL.LootLock and DL.LootLock.onDrop then DL.LootLock.onDrop(bag, username, sq) end
     local _ = (function() sq:AddWorldInventoryItem(bag, 0, 0, 0) end)()
     DL.log("death dump placed bag at " .. tostring(sq:getX()) .. "," .. tostring(sq:getY()) .. "," .. tostring(sq:getZ()))
+    if DL.Rescue and DL.Rescue.broadcastCorpseRemoval then DL.Rescue.broadcastCorpseRemoval(sq:getX(), sq:getY(), sq:getZ()) end
 end
 
 Events.OnCharacterDeath.Add(function(character)
@@ -129,4 +153,13 @@ Events.OnCharacterDeath.Add(function(character)
     end
 end)
 
-DL.log("death server wiring loaded (item dump + tree log)")
+Events.OnClientCommand.Add(function(module, command, player, args)
+    if module ~= "DLDeathWounds" or player == nil then return end
+    if command == "set" then
+        player:getModData().dl_deathWoundLog = (args and args.lines) or nil
+    elseif command == "clear" then
+        player:getModData().dl_deathWoundLog = nil
+    end
+end)
+
+DL.log("death server wiring loaded (item dump + tree log + wounds)")
