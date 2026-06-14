@@ -44,7 +44,6 @@ local function dumpOnDeath(character)
 
     local isReal = (DL.Rescue and DL.Rescue.isRealDeath(username)) or false
     local rescue = (not (DL.Config and DL.Config.knockdownEnable == false)) and not isReal
-    if DL.Rescue and isReal then DL.Rescue.clearRealDeath(username) end
 
     local bagType = DL.Config.deathBagType
     local bag = (function() return instanceItem(bagType) end)()

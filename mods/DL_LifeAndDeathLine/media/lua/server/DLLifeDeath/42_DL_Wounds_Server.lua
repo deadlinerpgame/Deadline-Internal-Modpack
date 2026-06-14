@@ -14,6 +14,7 @@ local function onDeath(character)
 
     local knockdownOn = not (DL.Config and DL.Config.knockdownEnable == false)
     local isReal = (DL.Rescue and DL.Rescue.isRealDeath(username)) or false
+    if DL.Rescue then DL.Rescue.clearRealDeath(username) end
     if knockdownOn and not isReal then
         DL.log("wound: rescue (overkill) death for '" .. username .. "', no wound counted")
         return

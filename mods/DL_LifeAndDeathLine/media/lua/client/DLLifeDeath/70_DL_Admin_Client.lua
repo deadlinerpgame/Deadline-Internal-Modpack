@@ -22,7 +22,6 @@ local function withDates(line)
     end))
 end
 
-----------------------------------------------------------------------
 local PANEL = ISCollapsableWindow:derive("DLAdminPanel")
 
 function PANEL:createChildren()
@@ -149,7 +148,6 @@ function DL.AdminUI.open()
     request("playerList", {})
 end
 
-----------------------------------------------------------------------
 Events.OnServerCommand.Add(function(module, command, args)
     if module ~= "DLAdmin" then return end
     local w = DL.AdminUI._window

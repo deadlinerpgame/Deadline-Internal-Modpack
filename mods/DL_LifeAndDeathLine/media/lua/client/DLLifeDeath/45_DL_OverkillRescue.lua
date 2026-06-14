@@ -132,7 +132,7 @@ Events.OnCreatePlayer.Add(function(idx, player)
     if DL.DeathWounds and DL.DeathWounds.applyRaw then
         pcall(function() DL.DeathWounds.applyRaw(player, R.wounds) end)
     end
-    R.wounds = nil
+    R._woundsAgainAt = getTimestampMs() + 4000
     if DL.DeathWounds then DL.DeathWounds._captured = nil end
     pcall(function() player:setInvincible(true) end)
     R._lootAt = getTimestampMs() + 1200
@@ -157,7 +157,31 @@ Events.OnTick.Add(function()
                 DL.Knockdown._dyingForReal = false
                 if DL.Knockdown.enter then DL.Knockdown.enter(p, "rescue") end
             end
+            R._knockRetryAt = getTimestampMs() + 6000
+            R._knockRetries = 2
             DL.log("overkill rescue: loot done -> entered knockdown")
+        end
+    end
+    if R._woundsAgainAt and getTimestampMs() >= R._woundsAgainAt then
+        R._woundsAgainAt = nil
+        local p = getPlayer()
+        if p and R.wounds and DL.DeathWounds and DL.DeathWounds.applyRaw then
+            pcall(function() DL.DeathWounds.applyRaw(p, R.wounds) end)
+            DL.log("overkill rescue: re-applied raw wounds after settle")
+        end
+        R.wounds = nil
+    end
+    if R._knockRetryAt and getTimestampMs() >= R._knockRetryAt then
+        R._knockRetryAt = nil
+        local p = getPlayer()
+        if p and DL.Knockdown and not DL.Knockdown._dyingForReal then
+            local md = p:getModData()
+            if not (md and md.dl_downed) and (R._knockRetries or 0) > 0 then
+                R._knockRetries = R._knockRetries - 1
+                if DL.Knockdown.enter then DL.Knockdown.enter(p, "rescue-retry") end
+                R._knockRetryAt = getTimestampMs() + 6000
+                DL.log("overkill rescue: knockdown did not take, retrying enter")
+            end
         end
     end
     if #R._corpseJobs > 0 then
@@ -192,7 +216,7 @@ R._corpseJobs = R._corpseJobs or {}
 Events.OnServerCommand.Add(function(module, command, args)
     if module ~= "DLRescue" then return end
     if command == "removecorpse" and args then
-        R._corpseJobs[#R._corpseJobs + 1] = { x = args.x, y = args.y, z = args.z or 0, until_ = getTimestampMs() + 4000 }
+        R._corpseJobs[#R._corpseJobs + 1] = { x = args.x, y = args.y, z = args.z or 0, until_ = getTimestampMs() + 15000 }
     end
 end)
 

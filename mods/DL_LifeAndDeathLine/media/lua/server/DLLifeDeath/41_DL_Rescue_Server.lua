@@ -4,7 +4,7 @@ DL.Rescue = DL.Rescue or {}
 local R = DL.Rescue
 R._realDeath = R._realDeath or {}
 
-local REAL_WINDOW_MS = 6000
+local REAL_WINDOW_MS = 60000
 
 function R.markRealDeath(username) if username then R._realDeath[username] = getTimestampMs() end end
 function R.clearRealDeath(username) if username then R._realDeath[username] = nil end end

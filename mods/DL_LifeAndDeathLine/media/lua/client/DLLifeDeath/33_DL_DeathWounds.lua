@@ -185,8 +185,9 @@ end
 
 Events.OnPlayerUpdate.Add(function(player)
     if player ~= getPlayer() then return end
-    if DW._applyPending then
+    if DW._applyPending and DW._applyAt and getTimestampMs() >= DW._applyAt then
         DW._applyPending = false
+        DW._applyAt = nil
         applyTreated(player, DW._captured)
         DW._captured = nil
     end
@@ -202,6 +203,7 @@ Events.OnCreatePlayer.Add(function(playerNum, player)
 
     if DW._captured and not (DL.Wounds and DL.Wounds.pendingToCell) then
         DW._applyPending = true
+        DW._applyAt = getTimestampMs() + 3000
     else
         DW._captured = nil
     end
