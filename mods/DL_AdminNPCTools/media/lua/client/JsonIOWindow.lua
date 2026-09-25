@@ -5,11 +5,6 @@ require "ISUI/ISLabel"
 
 JsonIOWindow = ISPanel:derive("JsonIOWindow")
 
--- =========================================================================
--- Minimal JSON encoder / decoder. Handles: nil, bool, number, string,
--- array (1..N integer keys), object (string keys). Good enough for the
--- zone schema (tables of primitives + nested tables).
--- =========================================================================
 local json = {}
 
 local function encodeString(s)
@@ -71,7 +66,10 @@ end
 
 function json.encode(v) return encodeValue(v, true, 0) end
 
--- Decoder (recursive descent)
+local function fail(msg)
+    return nil, nil, msg
+end
+
 local function skipWS(s, i)
     while i <= #s do
         local c = s:sub(i, i)
@@ -83,7 +81,7 @@ end
 
 local parseValue
 local function parseString(s, i)
-    assert(s:sub(i, i) == '"', "expected string at " .. i)
+    if s:sub(i, i) ~= '"' then return fail("expected string at " .. i) end
     i = i + 1
     local out = {}
     while i <= #s do
@@ -105,11 +103,11 @@ local function parseString(s, i)
                 if cp < 128 then out[#out+1] = string.char(cp)
                 else out[#out+1] = "?" end
                 i = i + 4
-            else error("bad escape \\" .. n) end
+            else return fail("bad escape \\" .. n) end
             i = i + 2
         else out[#out+1] = c; i = i + 1 end
     end
-    error("unterminated string")
+    return fail("unterminated string")
 end
 
 local function parseNumber(s, i)
@@ -127,12 +125,13 @@ local function parseArray(s, i)
     i = skipWS(s, i)
     if s:sub(i, i) == "]" then return arr, i + 1 end
     while true do
-        local v; v, i = parseValue(s, i)
+        local v, ni, err = parseValue(s, i)
+        if not ni then return fail(err) end
         arr[#arr+1] = v
-        i = skipWS(s, i)
+        i = skipWS(s, ni)
         local c = s:sub(i, i)
         if c == "]" then return arr, i + 1 end
-        assert(c == ",", "expected , or ] at " .. i)
+        if c ~= "," then return fail("expected , or ] at " .. i) end
         i = skipWS(s, i + 1)
     end
 end
@@ -144,16 +143,18 @@ local function parseObject(s, i)
     if s:sub(i, i) == "}" then return obj, i + 1 end
     while true do
         i = skipWS(s, i)
-        local k; k, i = parseString(s, i)
-        i = skipWS(s, i)
-        assert(s:sub(i, i) == ":", "expected : at " .. i)
+        local k, ki, kerr = parseString(s, i)
+        if not ki then return fail(kerr) end
+        i = skipWS(s, ki)
+        if s:sub(i, i) ~= ":" then return fail("expected : at " .. i) end
         i = skipWS(s, i + 1)
-        local v; v, i = parseValue(s, i)
+        local v, vi, verr = parseValue(s, i)
+        if not vi then return fail(verr) end
         obj[k] = v
-        i = skipWS(s, i)
+        i = skipWS(s, vi)
         local c = s:sub(i, i)
         if c == "}" then return obj, i + 1 end
-        assert(c == ",", "expected , or } at " .. i)
+        if c ~= "," then return fail("expected , or } at " .. i) end
         i = i + 1
     end
 end
@@ -168,23 +169,18 @@ parseValue = function(s, i)
     if c == "f" and s:sub(i, i+4) == "false" then return false, i + 5 end
     if c == "n" and s:sub(i, i+3) == "null"  then return nil,   i + 4 end
     if c:match("[%-0-9]") then return parseNumber(s, i) end
-    error("unexpected char '" .. c .. "' at " .. i)
+    return fail("unexpected char '" .. c .. "' at " .. i)
 end
 
 function json.decode(s)
-    local ok, val = pcall(function()
-        local v, i = parseValue(s, 1)
-        return v
-    end)
-    if not ok then return nil, val end
-    return val
+    if type(s) ~= "string" then return nil, "no text to parse" end
+    local v, i, err = parseValue(s, 1)
+    if not i then return nil, err end
+    return v
 end
 
-JsonIOWindow.json = json  -- expose for other files
+JsonIOWindow.json = json
 
--- =========================================================================
--- UI
--- =========================================================================
 local W, H = 640, 480
 local PAD  = 10
 local BTN_H, BTN_W = 24, 90
@@ -196,10 +192,10 @@ function JsonIOWindow:new(mode, title, initialText, onAccept)
     local o  = ISPanel.new(self,
         math.floor((sw - W) / 2), math.floor((sh - H) / 2), W, H)
     o.moveWithMouse = false
-    o.mode          = mode          -- "export" or "import"
+    o.mode          = mode
     o.titleText     = title or (mode == "export" and "Export" or "Import")
     o.initialText   = initialText or ""
-    o.onAccept      = onAccept      -- function(text) for import
+    o.onAccept      = onAccept
     o.errorMsg      = nil
     o.backgroundColor = { r = 0.05, g = 0.05, b = 0.05, a = 0.92 }
     o.borderColor     = { r = 0.5,  g = 0.5,  b = 0.5,  a = 1 }
@@ -216,10 +212,6 @@ function JsonIOWindow:createChildren()
     self.entry:instantiate()
     self.entry:setMultipleLine(true)
     self.entry:setMaxLines(10000)
-    -- Intentionally left editable even in export mode: PZ's
-    -- setEditable(false) disables selection too, which would make
-    -- copy-to-clipboard impossible. Export never reads this box back,
-    -- so stray edits are harmless.
     self:addChild(self.entry)
 
     local btnY = H - PAD - BTN_H
@@ -268,8 +260,8 @@ function JsonIOWindow:onImport()
         self.errorMsg = "Expected a JSON object at top level."
         return
     end
-    local ok, accErr = pcall(self.onAccept, data)
-    if not ok then
+    local accErr = self.onAccept(data)
+    if accErr then
         self.errorMsg = "Import failed: " .. tostring(accErr)
         return
     end

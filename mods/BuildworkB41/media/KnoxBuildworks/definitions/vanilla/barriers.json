@@ -1,0 +1,446 @@
+{
+ "schemaVersion": 1,
+ "source": "Project Zomboid Build 42 generated entity scripts",
+ "category": "Barriers",
+ "buildables": [
+  {
+   "id": "kbw.vanilla.barricademetalbar",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Bar Barricade",
+   "translationKey": "IGUI_KBW_Vanilla_BarricadeMetalBar",
+   "tooltipKey": "Tooltip_craft_BigMetalFenceDesc",
+   "category": "Barriers",
+   "subcategory": "Barricades",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "barriers"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_55",
+      "N": "constructedobjects_01_53",
+      "E": "constructedobjects_01_52",
+      "S": "constructedobjects_01_54"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_55"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_54"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false,
+      "onCreate": "BuildRecipeCode.barricade.OnCreate",
+      "onIsValid": "BuildRecipeCode.barricade.OnIsValid",
+      "timedActionOnIsValid": "BuildRecipeCode.barricade.TimedActionOnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildPoleFence",
+      "category": "Barricades",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.BarricadeMetalBar"
+    }
+   ],
+   "iconName": "Build_BarricadeWindow_Bars"
+  },
+  {
+   "id": "kbw.vanilla.barricademetalsheet",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Sheet Barricade",
+   "translationKey": "IGUI_KBW_Vanilla_BarricadeMetalSheet",
+   "tooltipKey": "Tooltip_craft_BigMetalFenceDesc",
+   "category": "Barriers",
+   "subcategory": "Barricades",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "barriers"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_24",
+      "N": "constructedobjects_01_25",
+      "E": "constructedobjects_01_28",
+      "S": "constructedobjects_01_29"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_29"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false,
+      "onCreate": "BuildRecipeCode.barricade.OnCreate",
+      "onIsValid": "BuildRecipeCode.barricade.OnIsValid",
+      "timedActionOnIsValid": "BuildRecipeCode.barricade.TimedActionOnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.SheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildPoleFence",
+      "category": "Barricades",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.BarricadeMetalSheet"
+    }
+   ],
+   "iconName": "Build_BarricadeWindow_Sheet"
+  },
+  {
+   "id": "kbw.vanilla.barricadeplanks",
+   "displayName": "Planks Barricade",
+   "translationKey": "IGUI_KBW_Vanilla_BarricadePlanks",
+   "tooltipKey": "Tooltip_craft_BigMetalFenceDesc",
+   "category": "Barriers",
+   "subcategory": "Barricades",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "barriers"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_01_8",
+      "N": "carpentry_01_9",
+      "E": "carpentry_01_0",
+      "S": "carpentry_01_1"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false,
+      "onCreate": "BuildRecipeCode.barricade.OnCreate",
+      "onIsValid": "BuildRecipeCode.barricade.OnIsValidPlanks",
+      "timedActionOnIsValid": "BuildRecipeCode.barricade.TimedActionOnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight",
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Nails"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Barricades",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.BarricadePlanks"
+    }
+   ],
+   "iconName": "Build_BarricadeWindow_Plank"
+  }
+ ]
+}

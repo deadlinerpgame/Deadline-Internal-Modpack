@@ -1,0 +1,59 @@
+module aerx
+{
+    imports
+    {
+        Base,
+    }
+
+    recipe Craft Junk Pistol Ammo
+	{
+		aerx.BlackPowder,
+		aerx.AluminumFragments/aerx.TinFragments/aerx.CopperFragments/aerx.NickelFragments/aerx.LeadFragments/aerx.IronFragments/aerx.ZincFragments=2,
+		keep Base.MortarPestle,
+		Result:aerx.T1PistolAmmo=2,
+		Time:50.0,
+		Category:Firearms,
+	}
+
+    recipe Craft Junk Revolver Ammo
+	{
+		aerx.BlackPowder,
+		aerx.AluminumFragments/aerx.TinFragments/aerx.CopperFragments/aerx.NickelFragments/aerx.LeadFragments/aerx.IronFragments/aerx.ZincFragments=2,
+		keep Base.MortarPestle,
+		Result:aerx.T1RevolverAmmo=2,
+		Time:50.0,
+		Category:Firearms,
+	}
+
+    recipe Craft Junk Shotgun Ammo
+	{
+		aerx.BlackPowder,
+		aerx.AluminumFragments/aerx.TinFragments/aerx.CopperFragments/aerx.NickelFragments/aerx.LeadFragments/aerx.IronFragments/aerx.ZincFragments=2,
+		keep Base.MortarPestle,
+		Result:aerx.T1ShotgunAmmo=2,
+		Time:50.0,
+		Category:Firearms,
+	}
+
+    recipe Craft Scrap Ammo
+	{
+		aerx.IGunpowder=1,
+		aerx.AluminumFragments/aerx.TinFragments/aerx.CopperFragments/aerx.NickelFragments/aerx.LeadFragments/aerx.IronFragments/aerx.ZincFragments=2,
+		Base.Wire/Base.Nails/Base.Screws=2,
+		keep Base.MortarPestle,
+		Result:aerx.T2AmmoRegular=4,
+		Time:100.0,
+		Category:Firearms,
+	}
+
+    recipe Craft Scrap Shells
+	{
+		aerx.IGunpowder=1,
+		aerx.AluminumFragments/aerx.TinFragments/aerx.CopperFragments/aerx.NickelFragments/aerx.LeadFragments/aerx.IronFragments/aerx.ZincFragments=2,
+		Base.Wire/Base.Nails/Base.Screws=2,
+		keep Base.MortarPestle,
+		Result:aerx.T2AmmoShotgun=4,
+		Time:100.0,
+		Category:Firearms,
+	}
+}

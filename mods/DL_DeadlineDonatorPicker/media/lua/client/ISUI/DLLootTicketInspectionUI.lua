@@ -11,11 +11,11 @@ function DLLootTicketInspectionUI:render()
     ISPanel.render(self);
 end
 
-function DLLootTicketInspectionUI:prerender() -- Call before render, it's for harder stuff that need init, ect
+function DLLootTicketInspectionUI:prerender()
     ISPanel.prerender(self);
 end
 
-function DLLootTicketInspectionUI:render() -- Use to render text and other
+function DLLootTicketInspectionUI:render()
     ISPanel.render(self);
 end
 

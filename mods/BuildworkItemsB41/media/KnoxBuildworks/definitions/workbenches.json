@@ -1,0 +1,2101 @@
+{
+  "schemaVersion": 1,
+  "source": "DL_CraftingEnhancedCore tables",
+  "category": "Workbenches",
+  "buildables": [
+    {
+      "id": "kbw.deadline.workbench.kilnsimple",
+      "displayName": "Simple Kiln",
+      "translationKey": "IGUI_KBW_Deadline_kilnsimple",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "aerx_tools_0",
+      "materialTags": [
+        "Metal"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_0"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_0"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_2"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_2"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.KilnSimpleConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "VehicleTrailer",
+            "category": "Metalworking",
+            "sound": "RepairWithWrench"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Simple Kiln"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.furnacesimple",
+      "displayName": "Simple Furnace",
+      "translationKey": "IGUI_KBW_Deadline_furnacesimple",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "aerx_tools_37",
+      "materialTags": [
+        "Metal"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_37"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_37"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_35"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_35"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.FurnaceSimpleConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "VehicleTrailer",
+            "category": "Metalworking",
+            "sound": "RepairWithWrench"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Simple Furnace"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.kilnadvanced",
+      "displayName": "Advanced Kiln",
+      "translationKey": "IGUI_KBW_Deadline_kilnadvanced",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "aerx_tools_4",
+      "materialTags": [
+        "Metal"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_5"
+                      ],
+                      [
+                        "aerx_tools_4"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_5"
+                      ],
+                      [
+                        "aerx_tools_4"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_8",
+                        "aerx_tools_9"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_8",
+                        "aerx_tools_9"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.KilnAdvancedConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "Build",
+            "category": "Metalworking"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Advanced Kiln"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.forgesimple",
+      "displayName": "Simple Forge",
+      "translationKey": "IGUI_KBW_Deadline_forgesimple",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "aerx_tools_18",
+      "materialTags": [
+        "Metal"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_16"
+                      ],
+                      [
+                        "aerx_tools_21"
+                      ],
+                      [
+                        "aerx_tools_22"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_16"
+                      ],
+                      [
+                        "aerx_tools_20"
+                      ],
+                      [
+                        "aerx_tools_22"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_18",
+                        "aerx_tools_20",
+                        "aerx_tools_22"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_18",
+                        "aerx_tools_20",
+                        "aerx_tools_22"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.ForgeSimpleConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "Build",
+            "category": "Metalworking"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Simple Forge"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.furnaceadvanced",
+      "displayName": "Advanced Furnace",
+      "translationKey": "IGUI_KBW_Deadline_furnaceadvanced",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "aerx_tools_42",
+      "materialTags": [
+        "Metal"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_41",
+                        "aerx_tools_40"
+                      ],
+                      [
+                        "aerx_tools_42",
+                        "aerx_tools_43"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_41",
+                        "aerx_tools_40"
+                      ],
+                      [
+                        "aerx_tools_42",
+                        "aerx_tools_43"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_41",
+                        "aerx_tools_42"
+                      ],
+                      [
+                        "aerx_tools_40",
+                        "aerx_tools_43"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_41",
+                        "aerx_tools_42"
+                      ],
+                      [
+                        "aerx_tools_40",
+                        "aerx_tools_43"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.FurnaceAdvancedConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "Build",
+            "category": "Metalworking"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Advanced Furnace"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.forgeadvanced",
+      "displayName": "Advanced Forge",
+      "translationKey": "IGUI_KBW_Deadline_forgeadvanced",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "aerx_tools_24",
+      "materialTags": [
+        "Metal"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_26",
+                        "aerx_tools_27",
+                        "aerx_tools_33"
+                      ],
+                      [
+                        "aerx_tools_20",
+                        false,
+                        false
+                      ],
+                      [
+                        "aerx_tools_34",
+                        false,
+                        false
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_26",
+                        "aerx_tools_27",
+                        "aerx_tools_33"
+                      ],
+                      [
+                        "aerx_tools_20",
+                        false,
+                        false
+                      ],
+                      [
+                        "aerx_tools_34",
+                        false,
+                        false
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_26",
+                        "aerx_tools_27",
+                        "aerx_tools_33"
+                      ],
+                      [
+                        "aerx_tools_20",
+                        false,
+                        false
+                      ],
+                      [
+                        "aerx_tools_34",
+                        false,
+                        false
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_26",
+                        "aerx_tools_27",
+                        "aerx_tools_33"
+                      ],
+                      [
+                        "aerx_tools_20",
+                        false,
+                        false
+                      ],
+                      [
+                        "aerx_tools_34",
+                        false,
+                        false
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.ForgeAdvancedConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "Build",
+            "category": "Metalworking"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Advanced Forge"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.handpress",
+      "displayName": "Hand Press",
+      "translationKey": "IGUI_KBW_Deadline_handpress",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "aerx_tools_86",
+      "materialTags": [
+        "Wood"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_86"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_86"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_87"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_87"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.HandPressConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "VehicleTrailer",
+            "category": "Carpentry",
+            "sound": "RepairWithWrench"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Hand Press"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.sculptingtable",
+      "displayName": "Sculpting Table",
+      "translationKey": "IGUI_KBW_Deadline_sculptingtable",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "aerx_tools_88",
+      "materialTags": [
+        "Wood"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_88"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_88"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_89"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_89"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.SculptingTableConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "VehicleTrailer",
+            "category": "Carpentry",
+            "sound": "RepairWithWrench"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Sculpting Table"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.dryingrack",
+      "displayName": "Drying Rack",
+      "translationKey": "IGUI_KBW_Deadline_dryingrack",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "aerx_tools_82",
+      "materialTags": [
+        "Wood"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_85"
+                      ],
+                      [
+                        "aerx_tools_84"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_85"
+                      ],
+                      [
+                        "aerx_tools_84"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_82",
+                        "aerx_tools_83"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_82",
+                        "aerx_tools_83"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.DryingRackConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "Build",
+            "category": "Carpentry"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Drying Rack"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.tailoringtable",
+      "displayName": "Tailoring Table",
+      "translationKey": "IGUI_KBW_Deadline_tailoringtable",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "Table_tiles_0",
+      "materialTags": [
+        "Wood"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "Table_tiles_8"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "Table_tiles_1"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "Table_tiles_9"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "Table_tiles_0"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.TailorTableConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "VehicleTrailer",
+            "sound": "RepairWithWrench",
+            "category": "Carpentry"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "TailoringWorkbench"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.digester",
+      "displayName": "Anaerobic Digester",
+      "translationKey": "IGUI_KBW_Deadline_digester",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "dl_workbenches_0",
+      "materialTags": [
+        "Metal"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "dl_workbenches_1"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "dl_workbenches_0"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "dl_workbenches_3"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "dl_workbenches_2"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.DigesterConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "VehicleTrailer",
+            "sound": "RepairWithWrench",
+            "category": "Electrical"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Digester"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.distiller",
+      "displayName": "Distiller",
+      "translationKey": "IGUI_KBW_Deadline_distiller",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "dl_workbenches_14",
+      "materialTags": [
+        "Metal"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "dl_workbenches_19"
+                      ],
+                      [
+                        "dl_workbenches_18"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "dl_workbenches_17"
+                      ],
+                      [
+                        "dl_workbenches_16"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "dl_workbenches_14",
+                        "dl_workbenches_15"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "dl_workbenches_12",
+                        "dl_workbenches_13"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_screwdriver",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Screwdriver"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.DistillerConstructionSet"
+                ],
+                "amount": 1
+              }
+            ],
+            "skills": {
+              "MetalWelding": 3,
+              "Electricity": 6
+            }
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "VehicleTrailer",
+            "sound": "RepairWithWrench",
+            "category": "Electrical"
+          },
+          "container": {
+            "type": "crate",
+            "capacity": 5
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Distiller"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.brewingstation",
+      "displayName": "Brewing Station",
+      "translationKey": "IGUI_KBW_Deadline_brewingstation",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "dl_workbenches_20",
+      "materialTags": [
+        "Wood"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "dl_workbenches_20"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "dl_workbenches_20"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "dl_workbenches_21"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "dl_workbenches_21"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.BrewingStationConstructionSet"
+                ],
+                "amount": 1
+              }
+            ],
+            "skills": {
+              "Woodwork": 4
+            }
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "VehicleTrailer",
+            "sound": "RepairWithWrench",
+            "category": "Carpentry"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "BrewingStation"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.paintmixingtable",
+      "displayName": "Paint Mixing Table",
+      "translationKey": "IGUI_KBW_Deadline_paintmixingtable",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "core_workbenches_0",
+      "materialTags": [
+        "Wood"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "core_workbenches_3"
+                      ],
+                      [
+                        "core_workbenches_2"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "core_workbenches_7"
+                      ],
+                      [
+                        "core_workbenches_6"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "core_workbenches_0",
+                        "core_workbenches_1"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "core_workbenches_4",
+                        "core_workbenches_5"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.PaintMixingConstructionSet"
+                ],
+                "amount": 1
+              }
+            ],
+            "skills": {
+              "Woodwork": 6
+            }
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "VehicleTrailer",
+            "sound": "RepairWithWrench",
+            "category": "Carpentry"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "PaintMixingTable"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.butcheringhook",
+      "displayName": "Butchering Hook",
+      "translationKey": "IGUI_KBW_Deadline_butcheringhook",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "aerx_tools_15",
+      "materialTags": [
+        "Wood"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_15"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_15"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_15"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "aerx_tools_15"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.ButcheringHookConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "VehicleTrailer",
+            "sound": "RepairWithWrench",
+            "category": "Carpentry"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Butchering Hook"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.repairbench",
+      "displayName": "Repair Bench",
+      "translationKey": "IGUI_KBW_Deadline_repairbench",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "location_business_machinery_01_16",
+      "materialTags": [
+        "Wood"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "location_business_machinery_01_16",
+                        "location_business_machinery_01_17"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "location_business_machinery_01_19"
+                      ],
+                      [
+                        "location_business_machinery_01_18"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "location_business_machinery_01_20",
+                        "location_business_machinery_01_21"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "location_business_machinery_01_23"
+                      ],
+                      [
+                        "location_business_machinery_01_22"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.RepairBenchConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "Build",
+            "category": "Carpentry"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Repair Bench"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.clothingbench",
+      "displayName": "Clothing Bench",
+      "translationKey": "IGUI_KBW_Deadline_clothingbench",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "furniture_tables_high_01_26",
+      "materialTags": [
+        "Wood"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "furniture_tables_high_01_25"
+                      ],
+                      [
+                        "furniture_tables_high_01_24"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "furniture_tables_high_01_26",
+                        "furniture_tables_high_01_27"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "furniture_tables_high_01_29"
+                      ],
+                      [
+                        "furniture_tables_high_01_28"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "furniture_tables_high_01_30",
+                        "furniture_tables_high_01_31"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.ClothingBenchConstructionSet"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "Build",
+            "category": "Carpentry"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Clothing Bench"
+          },
+          "health": 400
+        }
+      ]
+    }
+  ]
+}

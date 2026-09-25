@@ -66,11 +66,6 @@ function HorseFeed:perform()
     
     local newHunger = oldHunger
     local newThirst = oldThirst
- --   if feed == "Base.BucketWaterFull" or feed == "Base.WaterPot" or feed == "Base.WaterBottleFull" or feed == "aerx.ClayJarWater" or feed == "Base.WaterPopBottle" then
- --      newHunger, newThirst = self:handleWaterItem(feed, oldHunger, oldThirst)
- --  else
- --      newHunger, newThirst = self:handleFoodItem(feed, oldHunger, oldThirst)
- --  end
         newHunger, newThirst = self:handleFeedItem(feed, oldHunger, oldThirst)
     
     if newHunger < 0 then

@@ -1,0 +1,6172 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_01_8",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_14"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_corner",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line__corner",
+   "displayName": "White Line Corner",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_01_9",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_11"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.thick_white_line",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_thick_line",
+   "displayName": "Thick White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_01_48",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_49"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.thick_white_line_corner",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_thick_line_corner",
+   "displayName": "Thick White Line Corner",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_01_40",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.thick_white_line_t",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_thick_line_t",
+   "displayName": "Thick White Line T",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_01_44",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_47"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.thick_white_line_triangles",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_thick_line_triangles",
+   "displayName": "Thick White Line Triangle",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_01_35",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_01_38"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_2",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_0",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_4"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_3",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_1",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_4",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_2",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_5"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_5",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_7",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_7"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_6",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_8",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_13"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_7",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_9",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_12"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_8",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_10",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_9",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_14",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_14"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_10",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_15",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_11",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_24",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_16"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_12",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_17",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_13",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_18",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_26"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_14",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_19",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_15",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_20",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_28"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_16",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_21",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_29"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_17",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_22",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_30"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_18",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_32",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_40"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_19",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_33",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_20",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_34",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_42"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_21",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_35",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_22",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_36",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_44"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_23",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_39",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_39"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_38"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_24",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_47",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_47"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_25",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_48",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_48"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_26",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_49",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_47"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_27",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_52",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_89"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_28",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_53",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_54"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_29",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_55",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_30",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_59",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_59"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_60"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_31",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_62",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_62"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_85"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_32",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_63",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_63"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_84"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_33",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_64",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_64"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_83"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_34",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_69",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_69"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_87"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_35",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_74",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_74"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_90"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_36",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_65",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_65"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_91"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_37",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_66",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_66"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_92"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_38",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_67",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_67"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_77"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_39",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_68",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_68"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_76"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_40",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_70",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_70"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_88"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_41",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_71",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_71"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_78"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_42",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_72",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_72"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_79"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_43",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_80",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_80"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_94"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_44",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_96",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_96"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_108"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_45",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_106",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_106"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_113"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_46",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_104",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_104"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_115"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_47",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_98",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_98"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_99"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_48",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_102",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_102"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_103"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_49",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_105",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_105"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_112"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_50",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_107",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_107"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_114"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_51",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_109",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_109"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_52",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_116",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_116"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_117"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_53",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_118",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_118"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_119"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_54",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_122",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_122"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_123"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_55",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_124",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_124"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_125"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_56",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_126",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_126"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_127"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_57",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_128",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_128"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_138"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_58",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_129",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_129"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_137"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_59",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_131",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_131"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_136"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_60",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_139",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_139"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_61",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_132",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_132"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_150"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_62",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_133",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_133"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_149"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_63",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_134",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_134"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_148"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_64",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_146",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_146"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_147"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_65",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_145",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_145"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_144"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_66",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_152",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_152"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_153"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_67",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_154",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_154"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_155"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.painted_white_line.white_line_68",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_painted_white_line_",
+   "displayName": "White Line",
+   "tooltipKey": "Tooltip_KBW_Shared_RoadMarking",
+   "category": "Road Work",
+   "subcategory": "Painted White Line",
+   "material": "Other",
+   "iconSprite": "street_trafficlines_curb_white_full_151",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_151"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_trafficlines_curb_white_full_158"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1"
+        ]
+       },
+       {
+        "id": "road_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  }
+ ]
+}

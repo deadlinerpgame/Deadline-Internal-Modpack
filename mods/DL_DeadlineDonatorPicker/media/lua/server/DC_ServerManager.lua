@@ -33,7 +33,6 @@ function DC_ServerManager.ParseLine(slotTabs, line)
     end
 end
 
--- Retrieve the lua from the server and parse it.
 function DC_ServerManager.ParseSlotsConfig(config)
     if not config then return end;
 
@@ -59,7 +58,6 @@ function DC_ServerManager.OnClientCommand(module, command, player, args)
 
     if not args then return end;
 
-    -- Retrieve the config lua.
     local config = getFileReader(config_path, false, false);
     local slotTabs = DC_ServerManager.ParseSlotsConfig(config);
 

@@ -1,6 +1,5 @@
 require "ISUI/ISUIElement"
 
--- Bar settings
 local barWidth = 80
 local barHeight = getTextManager():getFontHeight(UIFont.Small) + 2
 local spacing = 6
@@ -57,7 +56,6 @@ function HorseHud:drawFearBar(index, label, value)
 end
 
 function HorseHud:getColorForFear(value)
-    -- Inverted: low = green (calm), high = red (panicked)
     local color = {}
     if value <= 0.25 then
         color.r = 0
@@ -135,8 +133,6 @@ function HorseHud:new()
     o.visible = false
     return o
 end
-
--- === Initialization & Visibility ===
 
 local function createHorseHud()
 

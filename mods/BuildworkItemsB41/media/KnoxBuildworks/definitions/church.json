@@ -1,0 +1,954 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.church.altar",
+   "translationKey": "IGUI_KBWVE_Buildable_ChurchAltar",
+   "displayName": "Altar",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_ChurchAltar",
+   "category": "Furniture",
+   "subcategory": "Church",
+   "material": "Wood",
+   "tags": [
+    "vanilla-expanded",
+    "church"
+   ],
+   "iconSprite": "location_community_church_small_01_40",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_40",
+            "location_community_church_small_01_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_43"
+           ],
+           [
+            "location_community_church_small_01_42"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "altar_cloth",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Sheet"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 350,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 60
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": true,
+      "dismantable": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.church.lectern",
+   "translationKey": "IGUI_KBWVE_Buildable_ChurchLectern",
+   "displayName": "Lectern",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_ChurchLectern",
+   "category": "Furniture",
+   "subcategory": "Church",
+   "material": "Wood",
+   "tags": [
+    "vanilla-expanded",
+    "church"
+   ],
+   "iconSprite": "location_community_church_small_01_44",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_47"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 35
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": true,
+      "dismantable": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.church.organ_stool",
+   "translationKey": "IGUI_KBWVE_Buildable_ChurchOrganStool",
+   "displayName": "Organ Stool",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_ChurchOrganStool",
+   "category": "Furniture",
+   "subcategory": "Church",
+   "material": "Wood",
+   "tags": [
+    "vanilla-expanded",
+    "church"
+   ],
+   "iconSprite": "location_community_church_small_01_91",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_91"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_92"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 3
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": true,
+      "dismantable": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.church.organ",
+   "translationKey": "IGUI_KBWVE_Buildable_ChurchOrgan",
+   "displayName": "Pipe Organ",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_ChurchOrgan",
+   "category": "Furniture",
+   "subcategory": "Church",
+   "material": "Wood",
+   "tags": [
+    "vanilla-expanded",
+    "church"
+   ],
+   "iconSprite": "location_community_church_small_01_97",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_96",
+            "location_community_church_small_01_97",
+            "location_community_church_small_01_98"
+           ]
+          ]
+         },
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_88",
+            "location_community_church_small_01_89",
+            "location_community_church_small_01_90"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_219",
+            "location_community_church_small_01_220",
+            "location_community_church_small_01_221"
+           ]
+          ]
+         },
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_211",
+            "location_community_church_small_01_212",
+            "location_community_church_small_01_213"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_218"
+           ],
+           [
+            "location_community_church_small_01_217"
+           ],
+           [
+            "location_community_church_small_01_216"
+           ]
+          ]
+         },
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_210"
+           ],
+           [
+            "location_community_church_small_01_209"
+           ],
+           [
+            "location_community_church_small_01_208"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_234"
+           ],
+           [
+            "location_community_church_small_01_233"
+           ],
+           [
+            "location_community_church_small_01_232"
+           ]
+          ]
+         },
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_226"
+           ],
+           [
+            "location_community_church_small_01_225"
+           ],
+           [
+            "location_community_church_small_01_224"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "tool_saw",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Saw",
+         "Saw"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 30
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 40
+       },
+       {
+        "id": "organ_pipes",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.MetalBar"
+        ],
+        "amount": 12
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SheetMetal"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "bellows_leather",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.LeatherStrips"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "bellows_cloth",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Sheet"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 9,
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 1200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 300
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": true,
+      "dismantable": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.banners.evangelical_lower",
+   "translationKey": "IGUI_KBWVE_Buildable_Banner_Lower",
+   "displayName": "Lower Evangelical Banner",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_ChurchBanner",
+   "category": "Decorations",
+   "subcategory": "Banners",
+   "material": "Fabric",
+   "tags": [
+    "vanilla-expanded",
+    "church",
+    "decoration"
+   ],
+   "iconSprite": "location_community_church_small_01_76",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_76"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_86"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_scissors",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "tool_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread"
+        ],
+        "uses": 4
+       },
+       {
+        "id": "banner_cloth",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Sheet"
+        ],
+        "amount": 3
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "dismantable": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.banners.evangelical_middle",
+   "translationKey": "IGUI_KBWVE_Buildable_Banner_Middle",
+   "displayName": "Middle Evangelical Banner",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_ChurchBanner",
+   "category": "Decorations",
+   "subcategory": "Banners",
+   "material": "Fabric",
+   "tags": [
+    "vanilla-expanded",
+    "church",
+    "decoration"
+   ],
+   "iconSprite": "location_community_church_small_01_78",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_78"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_84"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_scissors",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "tool_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread"
+        ],
+        "uses": 4
+       },
+       {
+        "id": "banner_cloth",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Sheet"
+        ],
+        "amount": 3
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "dismantable": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.banners.evangelical_upper",
+   "translationKey": "IGUI_KBWVE_Buildable_Banner_Upper",
+   "displayName": "Upper Evangelical Banner",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_ChurchBanner",
+   "category": "Decorations",
+   "subcategory": "Banners",
+   "material": "Fabric",
+   "tags": [
+    "vanilla-expanded",
+    "church",
+    "decoration"
+   ],
+   "iconSprite": "location_community_church_small_01_77",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_77"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_church_small_01_85"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_scissors",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "tool_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread"
+        ],
+        "uses": 4
+       },
+       {
+        "id": "banner_cloth",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Sheet"
+        ],
+        "amount": 3
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "dismantable": true
+     }
+    }
+   ]
+  }
+ ]
+}

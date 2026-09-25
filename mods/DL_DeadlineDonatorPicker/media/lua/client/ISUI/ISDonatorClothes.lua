@@ -42,10 +42,8 @@ function ISDonatorClothesUI:initialise()
     ISPanelJoypad.initialise(self);
     self:create();
 
-    -- Do corner x + y widget
 	local rh = 8;
 	local resizeWidget = ISResizeWidget:new(self.width-rh, self.height-rh, rh, rh, self);
-	--resizeWidget:initialise();
 	resizeWidget:setVisible(true)
 	self:addChild(resizeWidget);
 
@@ -178,7 +176,6 @@ function ISDonatorClothesUI:addComboOptions(combo, bodyLocation, fullType)
 end
 
 function ISDonatorClothesUI:createClothingList(definitions)
-    -- First create the ISPanelJoypad
     local comboHgt = FONT_HGT_SMALL + 3 * 2;
     
     local selectionX = math.floor(self.previewPanel:getRight() + 10);
@@ -204,7 +201,6 @@ function ISDonatorClothesUI:createClothingList(definitions)
         self:updateAvatar();
     end
 
-    -- Color Picker
     self.colorPicker = ISColorPicker:new(0, 0, {h=1,s=0.6,b=0.9});
 	self.colorPicker:initialise();
 	self.colorPicker.keepOnScreen = true;
@@ -212,16 +208,11 @@ function ISDonatorClothesUI:createClothingList(definitions)
 	self.colorPicker.resetFocusTo = self;
 
     self.desc:getWornItems():clear();
-    -- --- Clear out the slots so the player is effectively naked - rather than mixing and matching between current items.
     
     for i, bodyLocation in ipairs(definitions) do
         self.desc:setWornItem(bodyLocation, nil);
 
         local slotTab = DL_DonatorClothes.GetSlotTab(self.slotTabs, bodyLocation);
-
-        --if slotTab == nil and DL_DonatorClothes.IsSlotBlacklisted(slotTab) == false then
-            --slotTab = "Accessories";
-        --end
 
         if slotTab ~= nil then
             self.tabCategories[slotTab].startX = 25;
@@ -305,17 +296,13 @@ function ISDonatorClothesUI:createClothingList(definitions)
             combo.colorBtn = colorBtn;
             combo.textureCombo = textureCombo;
 
-            -----
             self.lastX = textureCombo:getRight() or 0;
             self.lastCol = self.tabCategories[slotTab].currentCol;
-            ----
 
-            local preWornIndex = 1; -- This is so the clothing and textures are set the same as the player is currently wearing.
+            local preWornIndex = 1;
 
-            --local clothingItems = ISDonatorClothesUI:getAllClothes();
             local items = getAllItemsForBodyLocation(bodyLocation);
 
-            -- Automatically adds all items in the client's game based on the current slot iterating through.
             local comboWidth = 0;
             table.sort(items, function(a,b)
                 local itemA = ScriptManager.instance:FindItem(a)
@@ -323,13 +310,11 @@ function ISDonatorClothesUI:createClothingList(definitions)
                 return not string.sort(itemA:getDisplayName(), itemB:getDisplayName())
             end)
 
-            -- Add the "none" option at the top.
             combo:addOptionWithData(getText("UI_characreation_clothing_none"), nil);
 
             local longestComboEntryLength = 0;
 
             for i,fullType in ipairs(items) do
-                -- Check it can actually be worn.
                 local item = InventoryItemFactory.CreateItem(fullType);
                 if instanceof(item, "Clothing") then
                     local visual = item:getVisual();
@@ -381,8 +366,6 @@ function ISDonatorClothesUI:createClothingList(definitions)
 
             table.insert(self.clothingWidgets, { combo, label, colorBtn, textureCombo })
             
-            --self.yOffset = self.yOffset + comboHgt + 4
-            -- Furthest width does not reset, whereas self.furthestRightThisCycle does.
             if combo:getRight() > furthestWidth then
                 furthestWidth = colorBtn:getRight();
             end 
@@ -408,12 +391,8 @@ function ISDonatorClothesUI:createClothingList(definitions)
 	self.confirmBtn:instantiate();
 	self:addChild(self.confirmBtn);
 
-    --self:setHeight(self.confirmBtn:getBottom() + buffer);
-
     self.yOffset = self.yOffset + 20;
 
-    -- Now we need to measure the size of the main window vs the tab panel, we can't count on doing this before the clothing items populate as this list will change all the time depending on mods etc.
-    -- Go through all tab category pages, get the largest of them.
     for k, v in pairs(self.tabCategories) do
         local tabWidth = self.tabCategories[k]:getWidth();
         local tabHeight = self.tabCategories[k]:getHeight();
@@ -502,7 +481,6 @@ function ISDonatorClothesUI:onClothingComboSelected(combo, bodyLocation)
     end
 
     local selectedItem = combo.options[combo.selected].data:getFullName();
-    --local fullType = combo.options[combo.selected].data;
 
     if not selectedItem then
         return
@@ -549,7 +527,6 @@ function ISDonatorClothesUI:onClothingComboSelected(combo, bodyLocation)
     self.desc:getHumanVisual():addBodyVisualFromClothingItemName(clothingItem:getName());
     self.previewPanel:setSurvivorDesc(self.desc);
 
-    -- Update clothing combos based on worn items.
     self:updateCombosAfterClothingApplied();
 end
 
@@ -558,7 +535,6 @@ function ISDonatorClothesUI:updateCombosAfterClothingApplied()
 		for i,combo in pairs(self.clothingCombo) do
 			combo.selected = 1;
 			self.clothingColorBtn[combo.bodyLocation]:setVisible(false);
-			-- we select the current clothing we have at this location in the combo
 			local currentItem = self.desc:getWornItem(combo.bodyLocation);
 			if currentItem then
 				for j,v in ipairs(combo.options) do
@@ -576,17 +552,14 @@ end
 
 function ISDonatorClothesUI:updateColorButton(bodyLocation, clothing)
 	self.clothingColorBtn[bodyLocation]:setVisible(false);
-	-- If the item can be colored, add the color picker.
 	if clothing and clothing:getClothingItem():getAllowRandomTint() then
 		self.clothingColorBtn[bodyLocation]:setVisible(true);
-		-- update color of button
 		local color = clothing:getVisual():getTint(clothing:getClothingItem())
 		self.clothingColorBtn[bodyLocation].backgroundColor = {r = color:getRedFloat(), g = color:getGreenFloat(), b = color:getBlueFloat(), a = 1}
 	end
 end
 
 function ISDonatorClothesUI:updateTextureCombo(bodyLocation, clothing)
-    --self.clothingTextureCombo[bodyLocation]:setVisible(false);
 
     local clothingItem = clothing:getClothingItem();
     if not clothingItem then return end;
@@ -596,8 +569,6 @@ function ISDonatorClothesUI:updateTextureCombo(bodyLocation, clothing)
     if textureChoices and textureChoices:size() > 1 then
         self.clothingTextureCombo[bodyLocation]:setVisible(true);
 
-        -- Add all texture options.
-        
     end
 end
 
@@ -675,7 +646,7 @@ function ISDonatorClothesUI:new(x, y, width, height, playerNum, item, slotTabs)
     o.isCollapsed = false;
     o.tooltipForced = nil;
 	o.colorPanel = {};
-    o.item = item; -- The original ticket item to be used once redeemed.
+    o.item = item;
     o.title = "Deadline Donator Clothes";
     o.slotTabs = slotTabs;
     o.playerNum = playerNum;
@@ -693,12 +664,7 @@ function ISDonatorClothesUI:new(x, y, width, height, playerNum, item, slotTabs)
     return o;
 end
 
---[[----------------------------------------------------------------
 
-ISDonatorClothesConfirmation
-- Confirmation popup once outfit selected.
-
---]]----------------------------------------------------------------
 
 ISDonatorClothesConfirmation = ISPanel:derive("ISDonatorClothesConfirmation");
 
@@ -748,7 +714,6 @@ function ISDonatorClothesConfirmation:onSecondConfirm(button, x, y)
 
         local clothesList = {};
 
-        -- If we do this based on what the preview is wearing visually, less chance of the combo selection being abused.
         local wornItems = self.parent.desc:getWornItems();
         wornItems:addItemsToItemContainer(getPlayer():getInventory());
 
@@ -767,7 +732,6 @@ function ISDonatorClothesConfirmation:onSecondConfirm(button, x, y)
         self.parent:close();
         self.parent:removeFromUIManager();
 
-        -- Now remove golden ticket from player's inventory.
         local ticketItem = getPlayer():getModData()["DeadlineDonatorClothes_Item"];
         local container = ticketItem:getContainer() or getPlayer():getInventory();
         container:DoRemoveItem(ticketItem);
@@ -778,8 +742,6 @@ end
 
 function ISDonatorClothesConfirmation:prerender()
     ISPanel.prerender(self);
-    --self:drawText("Are you sure you want to select this outfit?", 10 ,10, 1,1,1,1, UIFont.Small);
-    --self:drawText("This will use your donator clothing ticket and place the items in your main inventory.", 10, 50, 1,1,1,1, UIFont.Small);
 end
 
 function ISDonatorClothesConfirmation:render()

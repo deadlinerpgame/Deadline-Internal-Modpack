@@ -5,8 +5,6 @@ module KCMweapons
 		Base,
 	}
 	
-	/****************************** PACK/UNPACK AMMO RECIPES ******************************/
-
 	recipe Unpack Bundle of Short Crossbow Bolts
 	{
 		CrossbowBoltBox,
@@ -68,8 +66,6 @@ module KCMweapons
 		AnimNode 		: Craft,
 	}
 
-	/****************************** REPAIR & DISMANTLE RECIPES ******************************/
-
 	fixing Fix Hand Crossbow
 	{
 		Require 		: HandCrossbow,
@@ -119,8 +115,6 @@ module KCMweapons
 
 
 	}
-
-	/****************************** CRAFTING RECIPES ******************************/
 
 	recipe Craft Wooden Crossbow
 
@@ -215,7 +209,6 @@ module KCMweapons
     }
 
 
-	/****************************** ATTACHMENT CONVERSION RECIPES******************************/
     recipe Convert Sling to Crossbow Sling
     {
        Sling,
@@ -425,7 +418,6 @@ module KCMweapons
     }
 
 
-	/****************************** CRAFTING RECIPE ITEMS ******************************/
 	item ShortBrokenBolt
     {
         Weight	=	0.1,

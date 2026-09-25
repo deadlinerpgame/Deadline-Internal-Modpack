@@ -1,0 +1,113 @@
+module Base
+{
+    model LongHandle
+	{
+		mesh = Weapons/2Handed/Handle_PickAxe_Hand,
+		texture = Weapons/2Handed/Handle_PickAxe,
+		scale = 1,
+
+		attachment world
+		{
+			offset = -0.0136 0.2399 -0.0000,
+			rotate = -0.0000 0.0000 0.5852,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0080 0.0080 0.0002,
+			rotate = 121.5758 87.4217 -121.6017,
+		}
+	}
+
+    model Handle_Hand
+	{
+		mesh = Weapons/1Handed/Handle_Hand,
+		texture = weapons/1Handed/Handle_Medium_Spiked,
+		scale = 1.0,
+
+		attachment world
+		{
+			offset = -0.0099 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+    model SmallHandle
+    {
+        mesh = WorldItems/HandleWooden_Small,
+        scale = 0.1,
+    }
+
+    model LongShaft
+	{
+		mesh = Weapons/2Handed/Shaft_Hand,
+        texture = weapons/2handed/Shaft,
+
+		attachment world
+		{
+			offset = -0.0100 0.2900 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 180.0000 -88.7733 -178.5756,
+		}
+	}
+
+    model Greave_Ground
+    {
+        mesh = WorldItems/Clothing/Greave_Ground,
+        texture = WorldItems/Clothing/Greaves_Ground,
+        scale = 0.125,
+    }
+
+    model ThighArmor_R
+    {
+        mesh = WorldItems/Clothing/ThighMetal_Ground_R,
+        scale = 0.125,
+    }
+
+    model ThighArmor_L
+    {
+        mesh = WorldItems/Clothing/ThighMetal_Ground_L,
+        scale = 0.125,
+    }
+
+    model Cuirass_Bone
+    {
+        mesh = WorldItems/Clothing/Cuirass_Bone_Ground,
+        scale = 0.3,
+    }
+
+    model Shoulderpad_Articulated_L_Metal
+    {
+        mesh = WorldItems/Clothing/ArticShoulder_Ground_L,
+        scale = 0.125,
+    }
+
+    model Shoulderpad_Articulated_R_Metal
+    {
+        mesh = WorldItems/Clothing/ArticShoulder_Ground_R,
+        scale = 0.125,
+    }
+
+    model VambraceMagazine_Right
+    {
+        mesh = WorldItems/Clothing/VambraceMagazine_Ground_R,
+        scale = 0.15,
+    }
+
+    model VambraceMagazine_Left
+    {
+        mesh = WorldItems/Clothing/VambraceMagazine_Ground_L,
+        scale = 0.15,
+    }
+
+    model HockeyMask_Metal
+    {
+        mesh = WorldItems/Clothing/M_HockeyMask_Ground,
+        scale = 0.125,
+    }
+}

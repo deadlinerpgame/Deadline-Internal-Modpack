@@ -1,0 +1,1163 @@
+{
+ "schemaVersion": 1,
+ "materialGroups": {
+  "kbwve.appliance.refrigerator": [
+   {
+    "id": "welding_mask",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:weldingmask"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "screwdriver",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:screwdriver"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "torch_fuel",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.BlowTorch"
+    ],
+    "uses": 5
+   },
+   {
+    "id": "welding_rods",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.WeldingRods"
+    ],
+    "uses": 5
+   },
+   {
+    "id": "sheet_metal",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.SheetMetal"
+    ],
+    "amount": 8
+   },
+   {
+    "id": "electronics",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.ElectronicsScrap"
+    ],
+    "amount": 30
+   },
+   {
+    "id": "electric_wire",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.ElectricWire"
+    ],
+    "amount": 4
+   },
+   {
+    "id": "screws",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.Screws"
+    ],
+    "amount": 20
+   }
+  ],
+  "kbwve.appliance.largeRefrigerator": [
+   {
+    "id": "welding_mask",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:weldingmask"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "screwdriver",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:screwdriver"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "torch_fuel",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.BlowTorch"
+    ],
+    "uses": 8
+   },
+   {
+    "id": "welding_rods",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.WeldingRods"
+    ],
+    "uses": 8
+   },
+   {
+    "id": "sheet_metal",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.SheetMetal"
+    ],
+    "amount": 14
+   },
+   {
+    "id": "electronics",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.ElectronicsScrap"
+    ],
+    "amount": 55
+   },
+   {
+    "id": "electric_wire",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.ElectricWire"
+    ],
+    "amount": 8
+   },
+   {
+    "id": "screws",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.Screws"
+    ],
+    "amount": 25
+   }
+  ]
+ },
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.appliances.refrigeration.mini_refrigerator",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_MiniRefrigerator",
+   "displayName": "Mini Refrigerator",
+   "tooltipKey": "Tooltip_KBW_Shared_Refrigerator",
+   "subcategory": "Refrigeration",
+   "iconSprite": "appliances_refrigeration_01_24",
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.refrigerator",
+      "skills": {
+       "MetalWelding": 4,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.refrigeration.white_refrigerator",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_WhiteRefrigerator",
+   "displayName": "White Refrigerator",
+   "tooltipKey": "Tooltip_KBW_Shared_Refrigerator",
+   "subcategory": "Refrigeration",
+   "iconSprite": "appliances_refrigeration_01_1",
+   "group": {
+    "id": "kbwve.appliances.refrigerators",
+    "translationKey": "IGUI_KBWVE_Group_Refrigerators",
+    "level": 1
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_2"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.refrigerator",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.refrigeration.blue_refrigerator",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_BlueRefrigerator",
+   "displayName": "Blue Refrigerator",
+   "tooltipKey": "Tooltip_KBW_Shared_Refrigerator",
+   "subcategory": "Refrigeration",
+   "iconSprite": "appliances_refrigeration_01_5",
+   "group": {
+    "id": "kbwve.appliances.refrigerators",
+    "translationKey": "IGUI_KBWVE_Group_Refrigerators",
+    "level": 2
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_7"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.refrigerator",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.refrigeration.steel_refrigerator",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_SteelRefrigerator",
+   "displayName": "Steel Refrigerator",
+   "tooltipKey": "Tooltip_KBW_Shared_Refrigerator",
+   "subcategory": "Refrigeration",
+   "iconSprite": "appliances_refrigeration_01_9",
+   "group": {
+    "id": "kbwve.appliances.refrigerators",
+    "translationKey": "IGUI_KBWVE_Group_Refrigerators",
+    "level": 3
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_11"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_10"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.refrigerator",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.refrigeration.green_refrigerator",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_GreenRefrigerator",
+   "displayName": "Green Refrigerator",
+   "tooltipKey": "Tooltip_KBW_Shared_Refrigerator",
+   "subcategory": "Refrigeration",
+   "iconSprite": "appliances_refrigeration_01_13",
+   "group": {
+    "id": "kbwve.appliances.refrigerators",
+    "translationKey": "IGUI_KBWVE_Group_Refrigerators",
+    "level": 4
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_15"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_14"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.refrigerator",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.refrigeration.industrial_refrigerator",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_IndustrialRefrigerator",
+   "displayName": "Industrial Refrigerator",
+   "tooltipKey": "Tooltip_KBW_Shared_Refrigerator",
+   "subcategory": "Refrigeration",
+   "iconSprite": "appliances_refrigeration_01_23",
+   "group": {
+    "id": "kbwve.appliances.refrigerators",
+    "translationKey": "IGUI_KBWVE_Group_Refrigerators",
+    "level": 5
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_23"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.refrigerator",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.refrigeration.plain_refrigerator",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_PlainRefrigerator",
+   "displayName": "Plain Refrigerator",
+   "tooltipKey": "Tooltip_KBW_Shared_Refrigerator",
+   "subcategory": "Refrigeration",
+   "iconSprite": "appliances_refrigeration_01_29",
+   "group": {
+    "id": "kbwve.appliances.refrigerators",
+    "translationKey": "IGUI_KBWVE_Group_Refrigerators",
+    "level": 6
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_31"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_30"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.refrigerator",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.refrigeration.red_refrigerator",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_RedRefrigerator",
+   "displayName": "Red Refrigerator",
+   "tooltipKey": "Tooltip_KBW_Shared_Refrigerator",
+   "subcategory": "Refrigeration",
+   "iconSprite": "appliances_refrigeration_01_33",
+   "group": {
+    "id": "kbwve.appliances.refrigerators",
+    "translationKey": "IGUI_KBWVE_Group_Refrigerators",
+    "level": 7
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_34"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.refrigerator",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.refrigeration.white_industrial_refrigerator",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_WhiteIndustrialRefrigerator",
+   "displayName": "White Industrial Refrigerator",
+   "tooltipKey": "Tooltip_KBW_Shared_Refrigerator",
+   "subcategory": "Refrigeration",
+   "iconSprite": "appliances_refrigeration_01_41",
+   "group": {
+    "id": "kbwve.appliances.refrigerators",
+    "translationKey": "IGUI_KBWVE_Group_Refrigerators",
+    "level": 8
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_43"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_42"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.refrigerator",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.refrigeration.double_refrigerator",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_DoubleRefrigerator",
+   "displayName": "Double Refrigerator",
+   "tooltipKey": "Tooltip_KBW_Shared_Refrigerator",
+   "subcategory": "Refrigeration",
+   "iconSprite": "appliances_refrigeration_01_19",
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_18",
+            "appliances_refrigeration_01_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_17"
+           ],
+           [
+            "appliances_refrigeration_01_16"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.largeRefrigerator",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 4
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.refrigeration.popsicle_freezer",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_PopsicleFreezer",
+   "displayName": "Popsicle Freezer",
+   "tooltipKey": "Tooltip_KBW_Shared_Freezer",
+   "subcategory": "Refrigeration",
+   "iconSprite": "appliances_refrigeration_01_39",
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_38",
+            "appliances_refrigeration_01_39"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_21"
+           ],
+           [
+            "appliances_refrigeration_01_20"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.largeRefrigerator",
+      "skills": {
+       "MetalWelding": 7,
+       "Electricity": 5
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.refrigeration.chest_freezer",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_ChestFreezer",
+   "displayName": "Chest Freezer",
+   "tooltipKey": "Tooltip_KBW_Shared_Freezer",
+   "subcategory": "Refrigeration",
+   "iconSprite": "appliances_refrigeration_01_48",
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_50"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_refrigeration_01_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.refrigerator",
+      "skills": {
+       "MetalWelding": 4,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.refrigeration.trailer_builtin_fridge",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_TrailerBuiltInFridge",
+   "displayName": "Trailer Built-In Fridge",
+   "tooltipKey": "Tooltip_KBW_Shared_Refrigerator",
+   "subcategory": "Refrigeration",
+   "material": "Wood",
+   "materialTags": [
+    "Wood",
+    "Metal"
+   ],
+   "iconSprite": "location_trailer_02_16",
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_trailer_02_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_trailer_02_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_trailer_02_11"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_trailer_02_10"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.refrigerator",
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4,
+       "Electricity": 3,
+       "Woodwork": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  }
+ ]
+}

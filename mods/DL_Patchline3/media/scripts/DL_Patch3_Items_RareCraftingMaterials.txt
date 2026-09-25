@@ -1,0 +1,34 @@
+module Base
+{
+    item PrecisionOptics
+	{
+		DisplayName = Precision Optics,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.2,
+		Icon = GlassPane,
+		WorldStaticModel = ImprovisedGlass.GlassPane,
+	}
+
+    item MachinedComponents
+	{
+		DisplayName = Machined Components,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = Clamp_Forged,
+		StaticModel = CrudeBenchVise,
+		WorldStaticModel = CrudeBenchVise,
+	}
+
+    item PrecisionParts
+	{
+		DisplayName = Precision Parts,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.2,
+		Icon = ClampComponents_Forged,
+		StaticModel = CrudeBenchVise,
+		WorldStaticModel = CrudeBenchViseParts,
+	}
+}

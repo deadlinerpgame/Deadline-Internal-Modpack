@@ -1,9 +1,5 @@
 if isServer() then return end;
 
---[[
-        Dependencies
---]]
-
 QueueLine_Client = QueueLine_Client or {};
 QueueLine_Traits = {};
 
@@ -11,10 +7,6 @@ WRC = WRC or {};
 WRC.Meta = WRC.Meta or {};
 WRC.SpecialCommands = WRC.SpecialCommands or {};
 WRC.Commands = WRC.Commands or {};
-
---[[
-        In-Game Commands
---]]
 
 WRC.SpecialCommands["/queuetrait"] = {
     handler = "QueueTrait",
@@ -31,10 +23,6 @@ WRC.SpecialCommands["/queuetimedtrait"] = {
     help = "Gives the specified trait to a player after X real life hours have passed.",
     adminOnly = true,
 }
-
---[[ 
-        Command Handler Functions
---]]
 
 function WRC.Commands.QueueTrait(args)
 
@@ -101,39 +89,24 @@ function WRC.Commands.QueueTimedTrait(args)
     WL_Utils.addInfoToChat(queuedStr);
 end
 
---[[
-            Returned queue item functions.
---]]
 function QueueLine_Traits.AddTrait(username, trait, timestamp)
 
     if not username or not trait then
-        error("[QueueLine_Client] Received add trait queue item with no username or trait.", 1);
-        return;
+        return "[QueueLine_Client] Received add trait queue item with no username or trait.";
     end
 
-    --local currentTime = getTimestamp();
-    --local timestampNum = tonumber(timestamp);
-    --[[if timestampNum and (timestampNum > currentTime) then
-        local errorStr = string.format("[QueueLine_Client] Received add trait queue item %s but timestamp is not yet passed: %0d - due: %0d.", trait, currentTime, timestamp);
-        print(errorStr);
-        return;
-    end--]]
-
-    -- Get trait.
     local matchingTrait = TraitFactory.getTrait(trait);
     if not matchingTrait then
         local errorStr = "[QueueLine_Client] Received add trait queue item with invalid trait name: " .. tostring(trait);
         print(errorStr);
-        error(errorStr, 1);
-        return;
+        return errorStr;
     end
 
     local playerFromUsername = getPlayerFromUsername(username);
     if not playerFromUsername then
         local errorStr = "[QueueLine_Client] Received add trait queue item with invalid username: " .. tostring(username);
         print(errorStr);
-        error(errorStr, 1);
-        return;
+        return errorStr;
     end
 
     playerFromUsername:getTraits():add(trait);

@@ -1,0 +1,2209 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.vegetation.flower_beds.vegetation_ornamental_01_17",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "displayName": "Flowerbed",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "category": "Vegetation",
+   "subcategory": "Flower Beds",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_17",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "seeds",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "isSeed"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 20
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.vegetation.flower_beds.flowerbed",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_vegetation_flower_beds_flowerbed"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.flower_beds.vegetation_ornamental_01_16",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "displayName": "Flowerbed",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "category": "Vegetation",
+   "subcategory": "Flower Beds",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_16",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_32"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "seeds",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "isSeed"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 20
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.vegetation.flower_beds.flowerbed",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_vegetation_flower_beds_flowerbed"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.flower_beds.vegetation_ornamental_01_19",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "displayName": "Flowerbed",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "category": "Vegetation",
+   "subcategory": "Flower Beds",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_19",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "seeds",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "isSeed"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 20
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.vegetation.flower_beds.flowerbed",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_vegetation_flower_beds_flowerbed"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.flower_beds.vegetation_ornamental_01_20",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "displayName": "Flowerbed",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "category": "Vegetation",
+   "subcategory": "Flower Beds",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_20",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "seeds",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "isSeed"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 20
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.vegetation.flower_beds.flowerbed",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_vegetation_flower_beds_flowerbed"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.flower_beds.vegetation_ornamental_01_21",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "displayName": "Flowerbed",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "category": "Vegetation",
+   "subcategory": "Flower Beds",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_21",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "seeds",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "isSeed"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 20
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.vegetation.flower_beds.flowerbed",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_vegetation_flower_beds_flowerbed"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.flower_beds.vegetation_ornamental_01_22",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "displayName": "Flowerbed",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "category": "Vegetation",
+   "subcategory": "Flower Beds",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_22",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_38"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "seeds",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "isSeed"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 20
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.vegetation.flower_beds.flowerbed",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_vegetation_flower_beds_flowerbed"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.flower_beds.vegetation_ornamental_01_23",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "displayName": "Flowerbed",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "category": "Vegetation",
+   "subcategory": "Flower Beds",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_23",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_23"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_39"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "seeds",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "isSeed"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 20
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.vegetation.flower_beds.flowerbed",
+    "level": 7,
+    "translationKey": "IGUI_KBW_Group_vegetation_flower_beds_flowerbed"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.flower_beds.vegetation_ornamental_01_28",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "displayName": "Flowerbed",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "category": "Vegetation",
+   "subcategory": "Flower Beds",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_28",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_44"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "seeds",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "isSeed"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 20
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.vegetation.flower_beds.flowerbed",
+    "level": 8,
+    "translationKey": "IGUI_KBW_Group_vegetation_flower_beds_flowerbed"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.flower_beds.vegetation_ornamental_01_29",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "displayName": "Flowerbed",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "category": "Vegetation",
+   "subcategory": "Flower Beds",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_29",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_45"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "seeds",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "isSeed"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 20
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.vegetation.flower_beds.flowerbed",
+    "level": 9,
+    "translationKey": "IGUI_KBW_Group_vegetation_flower_beds_flowerbed"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.flower_beds.vegetation_ornamental_01_30",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "displayName": "Flowerbed",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_vegetation_flower_beds_vegetation_ornamental_flowerbed",
+   "category": "Vegetation",
+   "subcategory": "Flower Beds",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_30",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_46"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "seeds",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "isSeed"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 20
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.vegetation.flower_beds.flowerbed",
+    "level": 10,
+    "translationKey": "IGUI_KBW_Group_vegetation_flower_beds_flowerbed"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.indoor_plants.vegetation_indoor_01_7",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_indoor_plants_01_7",
+   "displayName": "Chinese Evergreen",
+   "tooltipKey": "Tooltip_KBW_Shared_IndoorPlant",
+   "category": "Vegetation",
+   "subcategory": "Indoor Plants",
+   "material": "Stone",
+   "iconSprite": "vegetation_indoor_01_7",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_indoor_01_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "plant_pot",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayPot"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "plant_cutting",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "CutPlant"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Farming": 1
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 10
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.indoor_plants.vegetation_indoor_01_8",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_indoor_plants_01_8",
+   "displayName": "Raised Plantbed",
+   "tooltipKey": "Tooltip_KBW_Shared_IndoorPlant",
+   "category": "Vegetation",
+   "subcategory": "Indoor Plants",
+   "material": "Stone",
+   "iconSprite": "vegetation_indoor_01_8",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_indoor_01_8"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "plant_pot",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayPot"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "plant_cutting",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "CutPlant"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Farming": 1
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 10
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.indoor_plants.location_shop_mall_01_47",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_indoor_plants_location_shop_mall_01_47",
+   "displayName": "Mall Decoration",
+   "tooltipKey": "Tooltip_KBW_Shared_IndoorPlant",
+   "category": "Vegetation",
+   "subcategory": "Indoor Plants",
+   "material": "Brick",
+   "iconSprite": "location_shop_mall_01_47",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_mall_01_47"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "planter_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "plant_cuttings",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "CutPlant"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Farming": 1
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 10
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.indoor_plants.vegetation_indoor_01_9",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_indoor_plants_01_9",
+   "displayName": "Dragon Tree",
+   "tooltipKey": "Tooltip_KBW_Shared_IndoorPlant",
+   "category": "Vegetation",
+   "subcategory": "Indoor Plants",
+   "material": "Stone",
+   "iconSprite": "vegetation_indoor_01_9",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_indoor_01_9"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "plant_pot",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayPot"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "plant_cutting",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "CutPlant"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Farming": 1
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 10
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.indoor_plants.vegetation_indoor_01_10",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_indoor_plants_01_10",
+   "displayName": "Snake Plant",
+   "tooltipKey": "Tooltip_KBW_Shared_IndoorPlant",
+   "category": "Vegetation",
+   "subcategory": "Indoor Plants",
+   "material": "Stone",
+   "iconSprite": "vegetation_indoor_01_10",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_indoor_01_10"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "plant_pot",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayPot"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "plant_cutting",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "CutPlant"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Farming": 1
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 10
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.indoor_plants.vegetation_indoor_01_11",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_indoor_plants_01_11",
+   "displayName": "Cast Iron Plant",
+   "tooltipKey": "Tooltip_KBW_Shared_IndoorPlant",
+   "category": "Vegetation",
+   "subcategory": "Indoor Plants",
+   "material": "Stone",
+   "iconSprite": "vegetation_indoor_01_11",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_indoor_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "plant_pot",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayPot"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "plant_cutting",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "CutPlant"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Farming": 1
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 10
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.indoor_plants.vegetation_indoor_01_12",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_indoor_plants_01_12",
+   "displayName": "Ficus",
+   "tooltipKey": "Tooltip_KBW_Shared_IndoorPlant",
+   "category": "Vegetation",
+   "subcategory": "Indoor Plants",
+   "material": "Stone",
+   "iconSprite": "vegetation_indoor_01_12",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_indoor_01_12"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "plant_pot",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayPot"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "plant_cutting",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "CutPlant"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Farming": 1
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 10
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.hedges.vegetation_ornamental_01_1",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_hedges_ornamental_01_1",
+   "displayName": "Tall Hedge",
+   "tooltipKey": "Tooltip_KBW_Shared_Hedge",
+   "category": "Vegetation",
+   "subcategory": "Hedges",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_1",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_0"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "plant_cuttings",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "CutPlant"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 1
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 10
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.hedges.vegetation_ornamental_01_10",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_hedges_ornamental_01_10",
+   "displayName": "Tall Corner Hedge",
+   "tooltipKey": "Tooltip_KBW_Shared_Hedge",
+   "category": "Vegetation",
+   "subcategory": "Hedges",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_10",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_11"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_2"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "plant_cuttings",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "CutPlant"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 1
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 10
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.hedges.vegetation_ornamental_01_5",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_hedges_ornamental_01_5",
+   "displayName": "Low Hedge",
+   "tooltipKey": "Tooltip_KBW_Shared_Hedge",
+   "category": "Vegetation",
+   "subcategory": "Hedges",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_5",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_4"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "plant_cuttings",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "CutPlant"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 1
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 10
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.vegetation.hedges.vegetation_ornamental_01_12",
+   "translationKey": "IGUI_KBWVE_Buildable_vegetation_hedges_ornamental_01_12",
+   "displayName": "Low Corner Hedge",
+   "tooltipKey": "Tooltip_KBW_Shared_Hedge",
+   "category": "Vegetation",
+   "subcategory": "Hedges",
+   "material": "Natural",
+   "iconSprite": "vegetation_ornamental_01_12",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_7"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "vegetation_ornamental_01_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_gardening",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "plant_cuttings",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "tags": [
+         "CutPlant"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "soil",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Farming": 1
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Farming": 10
+      },
+      "category": "Farming"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  }
+ ]
+}

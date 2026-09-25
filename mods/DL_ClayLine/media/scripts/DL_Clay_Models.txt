@@ -1,0 +1,236 @@
+module Base
+{
+	imports
+	{
+		Base,
+	}
+
+	model CeramicCrucible
+    {
+        mesh = WorldItems/Crucible_Ceramic,
+        texture = WorldItems/CrucibleCeramic_Fired,
+        scale = 0.1,
+    }
+
+	model CeramicCrucibleUnfired
+    {
+        mesh = WorldItems/Crucible_Ceramic,
+        texture = WorldItems/CrucibleCeramic_Unfired,
+        scale = 0.1,
+    }
+
+	model CeramicIngotCast
+    {
+        mesh = WorldItems/Ceramic_IngotCast,
+        texture = WorldItems/Ceramic_IngotCast_Fired,
+        scale = 0.09,
+    }
+
+	model CeramicIngotCastUnfired
+    {
+        mesh = WorldItems/Ceramic_IngotCast,
+        texture = WorldItems/Ceramic_IngotCast_Unfired,
+        scale = 0.09,
+    }
+
+	model Clay
+	{
+		mesh = WorldItems/Clay,
+		texture = WorldItems/Clay,
+		scale = 0.16,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0186 0.0219 0.0496,
+			rotate = -94.2551 0.0095 -3.3197,
+			scale = 0.3350,
+		}
+	}
+
+	model ClayBarStockMold
+    {
+        mesh = WorldItems/LongMetalBar_Cast,
+        texture = WorldItems/LongMetalBar_Cast_Fired,
+        scale = 0.1,
+    }
+
+	model ClayBarStockMoldUnfired
+    {
+        mesh = WorldItems/LongMetalBar_Cast,
+        texture = WorldItems/LongMetalBar_Cast_Unfired,
+        scale = 0.1,
+    }
+
+	model ClayBenchAnvilMold
+    {
+        mesh = WorldItems/CeramicMold_AnvilJeweller,
+        texture = WorldItems/CeramicMold_AnvilJeweller_Fired,
+        scale = 0.1,
+    }
+
+	model ClayBenchAnvilMoldUnfired
+    {
+        mesh = WorldItems/CeramicMold_AnvilJeweller,
+        texture = WorldItems/CeramicMold_AnvilJeweller_Unfired,
+        scale = 0.1,
+    }
+
+	model ClayBlockAnvilMoldFired
+    {
+        mesh = WorldItems/CeramicCast_AnvilBlock,
+        texture = WorldItems/CeramicCast_AnvilBlock_Fired,
+        scale = 0.13,
+    }
+
+	model ClayBlockAnvilMoldUnfired
+    {
+        mesh = WorldItems/CeramicCast_AnvilBlock,
+        texture = WorldItems/CeramicCast_AnvilBlock_Unfired,
+        scale = 0.13,
+    }
+
+	model ClayBrick
+    {
+        mesh = WorldItems/BrickClay,
+        texture = WorldItems/BrickClayFired,
+        scale = 0.16,
+    }
+
+	model ClayBrickUnfired
+    {
+        mesh = WorldItems/BrickClay,
+        texture = WorldItems/BrickClayUnfired,
+        scale = 0.16,
+    }
+
+	model ClayCrudeBenchVisePartsMold
+    {
+        mesh = WorldItems/CeramicMold_Vise_Crude,
+        texture = WorldItems/CeramicMold_ViseCrude_Fired,
+        scale = 0.1,
+    }
+
+	model ClayCrudeBenchVisePartsMoldUnfired
+    {
+        mesh = WorldItems/CeramicMold_Vise_Crude,
+        texture = WorldItems/CeramicMold_ViseCrude_Unfired,
+        scale = 0.1,
+    }
+
+	model ClayJar
+    {
+        mesh = WorldItems/ClayJar,
+        texture = WorldItems/ClayJar_Fired_Unglazed,
+        scale = 0.15,
+    }
+
+	model ClayJarUnfired
+	{
+		mesh = WorldItems/ClayJar,
+		texture = WorldItems/ClayJar_Unfired,
+		scale = 0.15,
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0032 0.0000 -0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+			scale = 0.6501,
+		}
+	}
+
+	model ClayTile
+    {
+        mesh = WorldItems/TileClay,
+        texture = WorldItems/TileClay_Fired,
+        scale = 0.16,
+    }
+
+	model ClayTileUnfired
+    {
+        mesh = WorldItems/TileClay,
+        texture = WorldItems/TileClay_Unfired,
+        scale = 0.16,
+    }
+
+	model ClayTool
+    {
+        mesh = WorldItems/ClaySculptingTool,
+        texture = WorldItems/ClaySculptingTool,
+        scale = 0.1,
+    }
+
+	model ClayTool2
+    {
+        mesh = WorldItems/ClaySculptingTool_2,
+        texture = WorldItems/ClaySculptingTool2,
+        scale = 0.05,
+    }
+
+	model GlassBlowingPipeFired
+	{
+		mesh = WorldItems/GlassBlowingPipe,
+		texture = WorldItems/GlassBlowingPipe_Fired,
+		scale = 0.08,
+	}
+
+	model GlassBlowingPipeUnfired
+	{
+		mesh = WorldItems/GlassBlowingPipe,
+		texture = WorldItems/GlassBlowingPipe_Unfired,
+		scale = 0.08,
+	}
+
+	model MoldGlass_Fired
+	{
+		mesh = WorldItems/MoldGlass,
+		texture = WorldItems/MoldGlass_Fired,
+		scale = 0.07,
+	}
+
+	model MoldGlass_Unfired
+	{
+		mesh = WorldItems/MoldGlass,
+		texture = WorldItems/MoldGlass_Unfired,
+		scale = 0.07,
+	}
+
+	model WoodenBarStockCastMold
+    {
+        mesh = WorldItems/WoodenMold_LongMetalBar_Cast,
+        texture = WorldItems/WoodenMold_LongMetalBar_Cast,
+        scale = 0.1,
+    }
+
+	model WoodenBenchAnvilMold
+    {
+        mesh = WorldItems/WoodenMold_AnvilJeweller_Cast,
+        scale = 0.1,
+    }
+
+	model WoodenBlockAnvilMold
+    {
+        mesh = WorldItems/WoodenMold_CeramicCast_AnvilBlock,
+        scale = 0.13,
+    }
+
+    	model WoodenCrucibleMold
+    {
+        mesh = WorldItems/WoodenMold_CrucibleCast,
+        texture = WorldItems/WoodenMold_CrucibleCast,
+        scale = 0.1,
+    }
+
+	model WoodenCrudeBenchVisePartsMold
+    {
+        mesh = WorldItems/WoodenMold_ViceMold_Cast,
+        scale = 0.1,
+    }
+
+	model WoodenIngotCastMold
+    {
+        mesh = WorldItems/WoodenMold_IngotCast,
+        texture = WorldItems/WoodenMold_IngotCast,
+        scale = 0.09,
+    }
+
+}

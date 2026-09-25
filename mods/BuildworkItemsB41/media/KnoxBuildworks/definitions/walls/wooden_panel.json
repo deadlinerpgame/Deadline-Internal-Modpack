@@ -1,0 +1,3255 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_corner_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_corner_wall",
+   "displayName": "Wooden Panel Corner Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "wall",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": true,
+     "canWallpaper": true
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_26"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "walls_exterior_wooden_01_26"
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof_slope_wall_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof_slope_wall_1",
+   "displayName": "Wooden Panel Roof Slope Wall 1",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_02_24",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof_slope_wall",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_wooden_panel_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof_slope_wall_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof_slope_wall_2",
+   "displayName": "Wooden Panel Roof Slope Wall 2",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_02_25",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof_slope_wall",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_wooden_panel_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof_slope_wall_3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof_slope_wall_3",
+   "displayName": "Wooden Panel Roof Slope Wall 3",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_02_26",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof_slope_wall",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_wooden_panel_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof_slope_wall_4",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof_slope_wall_4",
+   "displayName": "Wooden Panel Roof Slope Wall 4",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_02_32",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_29"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof_slope_wall",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_wooden_panel_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof_slope_wall_5",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof_slope_wall_5",
+   "displayName": "Wooden Panel Roof Slope Wall 5",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_02_33",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_28"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof_slope_wall",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_wooden_panel_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof_slope_wall_6",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof_slope_wall_6",
+   "displayName": "Wooden Panel Roof Slope Wall 6",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_02_34",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof_slope_wall",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_wooden_panel_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof_end_small",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof_end_small",
+   "displayName": "Wooden Panel Roof End Small",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_02_39",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_39"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof_end_medium",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof_end_medium",
+   "displayName": "Wooden Panel Roof End Medium",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_02_38",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_30"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof_end_big",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof_end_big",
+   "displayName": "Wooden Panel Roof End Big",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_02_40",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_02_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_rising_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_rising_1",
+   "displayName": "Wooden Panel 30 Degree Rising Slope Wall 1",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_48",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_rising_1",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_0",
+      "N": "walls_exterior_roofs_30_14_29"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_77"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_rising",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_rising_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_rising_2",
+   "displayName": "Wooden Panel 30 Degree Rising Slope Wall 2",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_49",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_rising_2",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_1",
+      "N": "walls_exterior_roofs_30_14_28"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_76"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_rising",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_rising_3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_rising_3",
+   "displayName": "Wooden Panel 30 Degree Rising Slope Wall 3",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_50",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_rising_3",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_2",
+      "N": "walls_exterior_roofs_30_14_27"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_50"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_75"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_rising",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_rising_4",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_rising_4",
+   "displayName": "Wooden Panel 30 Degree Rising Slope Wall 4",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_51",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_rising_4",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_3",
+      "N": "walls_exterior_roofs_30_14_26"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_51"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_74"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_rising",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_rising_5",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_rising_5",
+   "displayName": "Wooden Panel 30 Degree Rising Slope Wall 5",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_52",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_rising_5",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_4",
+      "N": "walls_exterior_roofs_30_14_25"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_73"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_rising",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_rising_6",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_rising_6",
+   "displayName": "Wooden Panel 30 Degree Rising Slope Wall 6",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_53",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_rising_6",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_5",
+      "N": "walls_exterior_roofs_30_14_24"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_72"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_rising",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_falling_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_falling_1",
+   "displayName": "Wooden Panel 30 Degree Falling Slope Wall 1",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_61",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_falling_1",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_13",
+      "N": "walls_exterior_roofs_30_14_16"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_61"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_64"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_falling",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_falling_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_falling_2",
+   "displayName": "Wooden Panel 30 Degree Falling Slope Wall 2",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_60",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_falling_2",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_12",
+      "N": "walls_exterior_roofs_30_14_17"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_60"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_65"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_falling",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_falling_3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_falling_3",
+   "displayName": "Wooden Panel 30 Degree Falling Slope Wall 3",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_59",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_falling_3",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_11",
+      "N": "walls_exterior_roofs_30_14_18"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_59"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_66"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_falling",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_falling_4",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_falling_4",
+   "displayName": "Wooden Panel 30 Degree Falling Slope Wall 4",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_58",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_falling_4",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_10",
+      "N": "walls_exterior_roofs_30_14_19"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_67"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_falling",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_falling_5",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_falling_5",
+   "displayName": "Wooden Panel 30 Degree Falling Slope Wall 5",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_57",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_falling_5",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_9",
+      "N": "walls_exterior_roofs_30_14_20"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_57"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_68"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_falling",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_falling_6",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_falling_6",
+   "displayName": "Wooden Panel 30 Degree Falling Slope Wall 6",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_56",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_falling_6",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_8",
+      "N": "walls_exterior_roofs_30_14_21"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_56"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_69"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_falling",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_end_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_end_1",
+   "displayName": "Wooden Panel 30 Degree Roof End 1",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_80",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_end_1",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_32",
+      "N": "walls_exterior_roofs_30_14_40"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_80"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_88"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_end",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_end_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_end_2",
+   "displayName": "Wooden Panel 30 Degree Roof End 2",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_81",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_end_2",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_33",
+      "N": "walls_exterior_roofs_30_14_41"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_81"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_89"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_end",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_end_3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_end_3",
+   "displayName": "Wooden Panel 30 Degree Roof End 3",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_82",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_end_3",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_34",
+      "N": "walls_exterior_roofs_30_14_42"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_82"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_90"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_end",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_end_4",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_end_4",
+   "displayName": "Wooden Panel 30 Degree Roof End 4",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_83",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_end_4",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_35",
+      "N": "walls_exterior_roofs_30_14_43"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_83"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_91"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_end",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_end_5",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_end_5",
+   "displayName": "Wooden Panel 30 Degree Roof End 5",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_84",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_end_5",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_36",
+      "N": "walls_exterior_roofs_30_14_44"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_84"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_92"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_end",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.wooden_panel.wooden_panel_roof30_end_6",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_wooden_panel_roof30_end_6",
+   "displayName": "Wooden Panel 30 Degree Roof End 6",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_roofs_30_17_85",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.wooden_panel.wooden_panel_roof30_end_6",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": false,
+     "canWallpaper": false
+    },
+    "mapping": {
+     "plaster": {
+      "W": "walls_exterior_roofs_30_14_37",
+      "N": "walls_exterior_roofs_30_14_45"
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_85"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_17_93"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.wooden_panel.wooden_panel_roof30_end",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_walls_wooden_panel_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_14",
+    "walls_exterior_roofs_30_17"
+   ]
+  }
+ ]
+}

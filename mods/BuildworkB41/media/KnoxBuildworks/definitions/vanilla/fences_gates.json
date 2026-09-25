@@ -1,0 +1,2848 @@
+{
+ "schemaVersion": 1,
+ "source": "Project Zomboid Build 42 generated entity scripts",
+ "category": "Fences & Gates",
+ "buildables": [
+  {
+   "id": "kbw.vanilla.barbedwirefence",
+   "displayName": "Barbed Wire Fence",
+   "translationKey": "IGUI_KBW_Vanilla_BarbedWireFence",
+   "tooltipKey": "Tooltip_craft_barbedFenceDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Fences",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fencing_01_20",
+      "N": "fencing_01_21"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fencing_01_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fencing_01_21"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 100,
+     "skillBaseHealth": 20,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.BarbedWire"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildBarbedWireFence",
+      "category": "Outdoors",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.BarbedWireFence"
+    }
+   ],
+   "iconName": "Build_FenceWire"
+  },
+  {
+   "id": "kbw.vanilla.metalbigmetalfence",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Big Metal Pole Fence",
+   "translationKey": "IGUI_KBW_Vanilla_MetalBigMetalFence",
+   "tooltipKey": "Tooltip_craft_BigMetalFenceDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Fences",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_78",
+      "N": "constructedobjects_01_77"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_78"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_77"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 450,
+     "skillBaseHealth": 50,
+     "object": {
+      "pillarSprite": "constructedobjects_01_76"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 5,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 5,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 5,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildPoleFence",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalBigMetalFence"
+    }
+   ],
+   "iconName": "Build_FenceHighMetalPosts"
+  },
+  {
+   "id": "kbw.vanilla.metalbigwirefence",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Big Metal Wire Fence",
+   "translationKey": "IGUI_KBW_Vanilla_MetalBigWireFence",
+   "tooltipKey": "Tooltip_craft_BigWiredFenceDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Fences",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fencing_01_58",
+      "N": "fencing_01_57"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fencing_01_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fencing_01_57"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 400,
+     "skillBaseHealth": 50,
+     "object": {
+      "pillarSprite": "fencing_01_61"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.Wire"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 5,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWireFence",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalBigWireFence"
+    }
+   ],
+   "iconName": "Build_DoubleWireFence"
+  },
+  {
+   "id": "kbw.vanilla.brickfencelvl2",
+   "displayName": "Brick Fence (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_BrickFenceLvl2",
+   "tooltipKey": "Tooltip_craft_brickFenceDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Fences",
+   "materialTags": [
+    "Brick",
+    "Concrete"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_exterior_house_01_36",
+      "N": "walls_exterior_house_01_37"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 400,
+     "skillBaseHealth": 50,
+     "object": {
+      "pillarSprite": "walls_exterior_house_01_39"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Concrete"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.ClayBrick"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Masonry",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.BrickFenceLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.brickfence",
+    "name": "Brick Fence",
+    "translationKey": "IGUI_KBW_Group_vanilla_brickfence",
+    "level": 2
+   },
+   "iconName": "Build_FenceBrick"
+  },
+  {
+   "id": "kbw.vanilla.logfence",
+   "displayName": "Log Fence",
+   "translationKey": "IGUI_KBW_Vanilla_LogFence",
+   "tooltipKey": "Tooltip_craft_stickFenceDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Fences",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_04_116",
+      "N": "crafted_04_115"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_116"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_115"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 200,
+     "skillBaseHealth": 50,
+     "object": {
+      "pillarSprite": "crafted_04_119"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 150,
+      "timedAction": "BuildWallNoTool",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 5
+      }
+     },
+     "_b41Entity": "Base.LogFence"
+    }
+   ],
+   "iconName": "Build_FenceLogs",
+   "_b41NeedsTilesets": [
+    "crafted_04"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.metalfencelvl2",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Fence (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_MetalFenceLvl2",
+   "tooltipKey": "Tooltip_craft_metalFenceDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Fences",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_83",
+      "N": "constructedobjects_01_80"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_83"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_80"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 450,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "constructedobjects_01_85"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.MetalBar"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildMetalStructureScrap",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 50
+      }
+     },
+     "_b41Entity": "Base.MetalFenceLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metalfence",
+    "name": "Metal Fence",
+    "translationKey": "IGUI_KBW_Group_vanilla_metalfence",
+    "level": 2
+   },
+   "iconName": "Build_FenceMetal"
+  },
+  {
+   "id": "kbw.vanilla.metalfencelvl1",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Fence (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_MetalFenceLvl1",
+   "tooltipKey": "Tooltip_craft_metalFenceDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Fences",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_82",
+      "N": "constructedobjects_01_81"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_82"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_81"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 250,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "constructedobjects_01_85"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.MetalBar"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildMetalStructureScrap",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalFenceLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metalfence",
+    "name": "Metal Fence",
+    "translationKey": "IGUI_KBW_Group_vanilla_metalfence",
+    "level": 1
+   },
+   "iconName": "Build_FenceMetal"
+  },
+  {
+   "id": "kbw.vanilla.metalsmallpolefence",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Small Metal Pole Fence (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_MetalSmallPoleFence",
+   "tooltipKey": "Tooltip_craft_MetalPoleFenceDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Fences",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_62",
+      "N": "constructedobjects_01_61"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_62"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_61"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 350,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "constructedobjects_01_60"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildPoleFenceSmall",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalSmallPoleFence"
+    }
+   ],
+   "iconName": "Build_FenceMetalPosts"
+  },
+  {
+   "id": "kbw.vanilla.metalsmallwirefence",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Small Metal Wire Fence",
+   "translationKey": "IGUI_KBW_Vanilla_MetalSmallWireFence",
+   "tooltipKey": "Tooltip_craft_BigWiredFenceDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Fences",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fencing_01_26",
+      "N": "fencing_01_25"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fencing_01_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fencing_01_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 200,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "fencing_01_29"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Wire"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalSmallWireFence"
+    }
+   ],
+   "iconName": "Build_ShortWireFence"
+  },
+  {
+   "id": "kbw.vanilla.stickfence",
+   "displayName": "Stick Fence",
+   "translationKey": "IGUI_KBW_Vanilla_StickFence",
+   "tooltipKey": "Tooltip_craft_stickFenceDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Fences",
+   "materialTags": [
+    "Cloth",
+    "Fiber"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_04_124",
+      "N": "crafted_04_123"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_124"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_123"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 200,
+     "skillBaseHealth": 50,
+     "object": {
+      "pillarSprite": "crafted_04_127"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 6,
+        "items": [
+         "Base.LongStick",
+         "Base.Sapling"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 100,
+      "timedAction": "BuildLowNoTool",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 1
+      }
+     },
+     "_b41Entity": "Base.StickFence"
+    }
+   ],
+   "iconName": "Build_FenceStakes",
+   "_b41NeedsTilesets": [
+    "crafted_04"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.woodfencelvl3",
+   "displayName": "Wood Fence (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodFenceLvl3",
+   "tooltipKey": "Tooltip_craft_woodenFenceDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Fences",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_48",
+      "N": "carpentry_02_49"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_49"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 450,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "carpentry_02_51"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 7
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 70
+      }
+     },
+     "_b41Entity": "Base.WoodFenceLvl3"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodfence",
+    "name": "Wood Fence",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodfence",
+    "level": 3
+   },
+   "iconName": "Build_FenceWood"
+  },
+  {
+   "id": "kbw.vanilla.woodfencelvl2",
+   "displayName": "Wood Fence (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodFenceLvl2",
+   "tooltipKey": "Tooltip_craft_woodenFenceDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Fences",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_44",
+      "N": "carpentry_02_45"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_45"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 350,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "carpentry_02_47"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.WoodFenceLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodfence",
+    "name": "Wood Fence",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodfence",
+    "level": 2
+   },
+   "iconName": "Build_FenceWood"
+  },
+  {
+   "id": "kbw.vanilla.woodfencelvl1",
+   "displayName": "Wood Fence (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodFenceLvl1",
+   "tooltipKey": "Tooltip_craft_woodenFenceDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Fences",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_40",
+      "N": "carpentry_02_41"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 250,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "carpentry_02_43"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.WoodFenceLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodfence",
+    "name": "Wood Fence",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodfence",
+    "level": 1
+   },
+   "iconName": "Build_FenceWood"
+  },
+  {
+   "id": "kbw.vanilla.doublefencegate",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Big Double Pole Gate",
+   "translationKey": "IGUI_KBW_Vanilla_DoubleFenceGate",
+   "tooltipKey": "Tooltip_craft_doublePoleGateDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Gates",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fixtures_doors_fences_01_81",
+      "N": "fixtures_doors_fences_01_82"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_81"
+           ],
+           [
+            "fixtures_doors_fences_01_80"
+           ],
+           [
+            "fixtures_doors_fences_01_89"
+           ],
+           [
+            "fixtures_doors_fences_01_88"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_82",
+            "fixtures_doors_fences_01_83",
+            "fixtures_doors_fences_01_90",
+            "fixtures_doors_fences_01_91"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "dontNeedFrame": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 10,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 10,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 10,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildPoleFence",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 50
+      }
+     },
+     "_b41Entity": "Base.DoubleFenceGate"
+    }
+   ],
+   "iconName": "Build_DoublePoleGate"
+  },
+  {
+   "id": "kbw.vanilla.doublewiregate",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Big Double Wire Gate",
+   "translationKey": "IGUI_KBW_Vanilla_DoubleWireGate",
+   "tooltipKey": "Tooltip_craft_doubleWireGateDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Gates",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fixtures_doors_fences_01_65",
+      "N": "fixtures_doors_fences_01_66"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_65"
+           ],
+           [
+            "fixtures_doors_fences_01_64"
+           ],
+           [
+            "fixtures_doors_fences_01_73"
+           ],
+           [
+            "fixtures_doors_fences_01_72"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_66",
+            "fixtures_doors_fences_01_67",
+            "fixtures_doors_fences_01_74",
+            "fixtures_doors_fences_01_75"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "dontNeedFrame": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 10,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 8,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Wire"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_6",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 10,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWireFence",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 50
+      }
+     },
+     "_b41Entity": "Base.DoubleWireGate"
+    }
+   ],
+   "iconName": "Build_DoubleWireGate"
+  },
+  {
+   "id": "kbw.vanilla.metalpolefencegate",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Big Pole Fence Gate",
+   "translationKey": "IGUI_KBW_Vanilla_MetalPoleFenceGate",
+   "tooltipKey": "Tooltip_craft_poleFenceGateDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Gates",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fixtures_doors_fences_01_24",
+      "N": "fixtures_doors_fences_01_25"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "W_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "N_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "dontNeedFrame": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 5,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildPoleFence",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalPoleFenceGate"
+    }
+   ],
+   "iconName": "Build_PoleGate"
+  },
+  {
+   "id": "kbw.vanilla.metalwirefencegate",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Big Wire Fence Gate",
+   "translationKey": "IGUI_KBW_Vanilla_MetalWireFenceGate",
+   "tooltipKey": "Tooltip_craft_wireFenceGateDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Gates",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fixtures_doors_fences_01_128",
+      "N": "fixtures_doors_fences_01_129"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_128"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_129"
+           ]
+          ]
+         }
+        ]
+       },
+       "W_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_130"
+           ]
+          ]
+         }
+        ]
+       },
+       "N_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_131"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "dontNeedFrame": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWireFence",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalWireFenceGate"
+    }
+   ],
+   "iconName": "Build_TallWireGate"
+  },
+  {
+   "id": "kbw.vanilla.metalpolefencegatesmall",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Small Pole Fence Gate",
+   "translationKey": "IGUI_KBW_Vanilla_MetalPoleFenceGateSmall",
+   "tooltipKey": "Tooltip_craft_poleFenceGateSmallDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Gates",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fixtures_doors_fences_01_28",
+      "N": "fixtures_doors_fences_01_29"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "W_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "N_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "dontNeedFrame": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildPoleFenceSmall",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalPoleFenceGateSmall"
+    }
+   ],
+   "iconName": "Build_FenceMetalPosts"
+  },
+  {
+   "id": "kbw.vanilla.metalwirefencegatesmall",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Small Wire Fence Gate",
+   "translationKey": "IGUI_KBW_Vanilla_MetalWireFenceGateSmall",
+   "tooltipKey": "Tooltip_craft_wireFenceGateSmallDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Gates",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fixtures_doors_fences_01_16",
+      "N": "fixtures_doors_fences_01_17"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "W_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "N_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "dontNeedFrame": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Wire"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalWireFenceGateSmall"
+    }
+   ],
+   "iconName": "Build_ShortWireGate"
+  },
+  {
+   "id": "kbw.vanilla.loggate",
+   "displayName": "Wide Log Gate",
+   "translationKey": "IGUI_KBW_Vanilla_LogGate",
+   "tooltipKey": "Tooltip_craft_logGateDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Gates",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_logs_89",
+      "N": "walls_logs_90"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_89"
+           ],
+           [
+            "walls_logs_88"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_90",
+            "walls_logs_91"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "dontNeedFrame": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 5,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 5,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 150,
+      "timedAction": "BuildWallNoTool",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 5
+      }
+     },
+     "_b41Entity": "Base.LogGate"
+    }
+   ],
+   "iconName": "Build_FenceOpenLogs",
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.woodfencegate",
+   "displayName": "Wood Fence Gate",
+   "translationKey": "IGUI_KBW_Vanilla_WoodFenceGate",
+   "tooltipKey": "Tooltip_craft_woodFenceGateDesc",
+   "category": "Fences & Gates",
+   "subcategory": "Gates",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "fences_gates"
+   ],
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fixtures_doors_fences_01_4",
+      "N": "fixtures_doors_fences_01_5"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "W_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "N_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "dontNeedFrame": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Doorknob"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.WoodFenceGate"
+    }
+   ],
+   "iconName": "Build_DoorFenceWood"
+  }
+ ]
+}
