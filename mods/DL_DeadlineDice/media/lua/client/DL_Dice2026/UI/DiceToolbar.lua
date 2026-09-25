@@ -106,7 +106,7 @@ end
 
 function DiceToolbar:new()
 	local s = Core.panelScale("toolbar")
-	local o = DicePanelBase.new(self, "toolbar", "Dice 2026", Core.px(280 * s), Core.px(40 * s), { xf = 0.78, yf = 0.005, visible = true })
+	local o = DicePanelBase.new(self, "toolbar", "Dice", Core.px(280 * s), Core.px(40 * s), { xf = 0.78, yf = 0.005, visible = true })
 	return o
 end
 

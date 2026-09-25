@@ -107,7 +107,7 @@ local function onBoot()
 	if isClient and isClient() and MenuDock and MenuDock.registerButton then
 		MenuDock.registerButton({
 			id = "DL_Dice2026",
-			title = "Dice 2026 - turn-based combat",
+			title = "Deadline Dice",
 			label = "DICE",
 			onClick = function(playerNum, entry)
 				local bar = DiceMain.panels.toolbar

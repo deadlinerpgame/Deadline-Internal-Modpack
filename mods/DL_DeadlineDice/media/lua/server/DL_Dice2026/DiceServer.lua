@@ -473,13 +473,13 @@ end
 
 local DAMAGE = {
 	unarmed = 1, melee1h = 2, melee2h = 3,
-	pistol = 3, shotgun = 4, rifle = 4, crossbow = 4,
+	pistol = 3, smg = 4, shotgun = 4, rifle = 4, crossbow = 4,
 	thrown = 2, molotov = 1, bomb = 4,
 }
-local RANGED = { pistol = true, shotgun = true, rifle = true, crossbow = true, thrown = true, molotov = true, bomb = true }
+local RANGED = { pistol = true, smg = true, shotgun = true, rifle = true, crossbow = true, thrown = true, molotov = true, bomb = true }
 local WEAPON_NAMES = {
 	unarmed = "Unarmed", melee1h = "One-handed melee", melee2h = "Two-handed melee",
-	pistol = "Pistol", shotgun = "Shotgun", rifle = "Rifle", crossbow = "Crossbow",
+	pistol = "Pistol", smg = "SMG", shotgun = "Shotgun", rifle = "Rifle", crossbow = "Crossbow",
 	thrown = "Thrown weapon", molotov = "Molotov", bomb = "Pipe/aerosol bomb",
 }
 
@@ -514,6 +514,7 @@ local function classifyItem(item)
 		local name = string.lower(item:getDisplayName() or "")
 		scrap = (string.find(name, "scrap", 1, true) or string.find(name, "junk", 1, true)
 			or string.find(name, "makeshift", 1, true) or string.find(name, "improvised", 1, true)) ~= nil
+			and string.find(name, "refined", 1, true) == nil
 	end
 	local cats = DiceTraits.categoriesOf(item)
 	if class == "unarmed" then
@@ -684,7 +685,7 @@ end
 local function newCombatant(username, name)
 	return {
 		id = username, name = name, isNpc = false,
-		hp = 20, maxHp = 20, traits = {},
+		hp = 12, maxHp = 12, traits = {},
 		status = "idle", ready = false, initiative = nil,
 		inCover = false, armored = false, grappled = false, escapeWounds = false,
 		poisoned = false, poisonTurns = 0, burning = false, burnTurns = 0,
@@ -861,7 +862,7 @@ local function aoeVictims(c, cx, cy, cz, radius)
 	return victims
 end
 
-local AMMO_USE = { pistol = -1, rifle = -1, shotgun = 1, crossbow = 1 }
+local AMMO_USE = { pistol = -1, smg = -1, rifle = -1, shotgun = 1, crossbow = 1 }
 
 local function checkAndConsumeAmmo(c, attacker, class, intent)
 	if attacker.isNpc then

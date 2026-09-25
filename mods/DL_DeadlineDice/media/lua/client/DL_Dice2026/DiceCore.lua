@@ -160,6 +160,7 @@ DiceCore.WEAPON_RULES = {
 	melee1h = { name = "One-handed melee", tip = "One-handed melee: 2 HP damage" },
 	melee2h = { name = "Two-handed melee", tip = "Two-handed melee: 3 HP damage" },
 	pistol = { name = "Pistol", tip = "Pistol: 3 HP damage, max 15 range" },
+	smg = { name = "SMG", tip = "SMG: 4 HP damage, max 15 range" },
 	shotgun = { name = "Shotgun", tip = "Shotgun: 4 HP damage, max 15 range" },
 	rifle = { name = "Rifle", tip = "Rifle: 4 HP damage, max 20 range" },
 	crossbow = { name = "Crossbow", tip = "Crossbow: 4 HP damage, max 20 range, 1 turn reload" },
@@ -169,7 +170,7 @@ DiceCore.WEAPON_RULES = {
 }
 
 DiceCore.SCRAP_TIP = " (scrap/junk: -1 HP)"
-DiceCore.WEAPON_ORDER = { "unarmed", "melee1h", "melee2h", "pistol", "shotgun", "rifle", "crossbow", "thrown", "molotov", "bomb" }
+DiceCore.WEAPON_ORDER = { "unarmed", "melee1h", "melee2h", "pistol", "smg", "shotgun", "rifle", "crossbow", "thrown", "molotov", "bomb" }
 
 function DiceCore.weaponTip(combatant)
 	local rule = DiceCore.WEAPON_RULES[combatant.weapon or "unarmed"] or DiceCore.WEAPON_RULES.unarmed
@@ -204,7 +205,7 @@ function DiceCore.classifyWeapon(item)
 	return DiceTraits.weaponClassOf(item, vanillaClassify(item))
 end
 
-local GUN_CLASSES = { pistol = true, rifle = true, shotgun = true, crossbow = true }
+local GUN_CLASSES = { pistol = true, smg = true, rifle = true, shotgun = true, crossbow = true }
 
 function DiceCore.isScrapItem(item)
 	if not item then
@@ -213,6 +214,7 @@ function DiceCore.isScrapItem(item)
 	local name = string.lower(item:getDisplayName() or "")
 	return (string.find(name, "scrap", 1, true) or string.find(name, "junk", 1, true)
 		or string.find(name, "makeshift", 1, true) or string.find(name, "improvised", 1, true)) ~= nil
+		and string.find(name, "refined", 1, true) == nil
 end
 
 DiceCore.traits = DiceTraits
@@ -360,7 +362,7 @@ local function getLocalMe()
 	if not localMe then
 		localMe = {
 			id = "me", isMe = true, name = myUsername(),
-			hp = 20, maxHp = 20, traits = {}, status = "idle",
+			hp = 12, maxHp = 12, traits = {}, status = "idle",
 			initiative = nil, inCover = false, armored = false,
 			grappled = false, escapeWounds = false, poisoned = false,
 			burning = false, suppressed = false, blinded = false,
