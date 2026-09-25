@@ -10,19 +10,6 @@ O.pickLimits = {
     weapon = 2,
 }
 
-O.startingKit = {
-    ["Base.CannedSardines"] = 1,
-    ["Base.Garbagebag"] = 1,
-    ["Base.Mirror"] = 1,
-    ["Base.WaterBottleFull"] = 1,
-    ["ElliesTattooParlor.FilledTattooNeedle"] = 1,
-    ["KeksTat.CharacterTatNeedle"] = 1,
-    ["Radio.WalkieTalkie2"] = 1,
-    ["SPolishItems.CharacterSheet"] = 1,
-    ["aerx.TreeBranch_Nails"] = 1,
-    ["aerx.BowlingPin"] = 1,
-}
-
 O.occupationOrder = {
     "drifter",
     "bruiser",

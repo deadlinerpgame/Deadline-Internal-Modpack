@@ -57,7 +57,6 @@ for _, id in ipairs(O.occupationOrder) do
         name = occupation.name,
         icon = occupation.icon or "",
         cost = O.startingPoints,
-        inventory = O.startingKit,
     })
 end
 
