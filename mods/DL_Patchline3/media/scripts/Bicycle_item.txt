@@ -1,0 +1,39 @@
+module Bicycle
+{
+    imports {
+	    Base
+	}
+    item Bicycle
+    {
+        Weight                      = 40,
+        Type                        = Container,
+        Capacity                    = 0,
+        WeightReduction             = 100,
+        DisplayName                 = Bicycle,
+        Icon                        = Bicycle2Icon,
+        StaticModel         	    = Bicycle_Frame,
+        WorldStaticModel 		    = Bicycle_World,
+		DisplayCategory	            = Bag,
+        AttachmentReplacement       = Bag,
+        CanBeEquipped               = Bicycle,
+        RequiresEquippedBothHands   = TRUE,
+        ReplaceInPrimaryHand 	    = models_x_bicycle idle_bicycle,
+    }
+    sound Bicycle_Riding
+    {
+        category = Ambient, loop = true, is3D = true,
+        clip { file = media/sound/Bicycle/Bicycle_Riding.ogg, distanceMin = 7, distanceMax = 7, volume = 0.4, }
+    }
+
+    sound Bicycle_Stop
+    {
+        category = Ambient, loop = true, is3D = true,
+        clip { file = media/sound/Bicycle/Bicycle_Stop.ogg, distanceMin = 7, distanceMax = 7, volume = 0.3, }
+    }
+
+    sound Bicycle_Bell
+    {
+        category = Ambient, loop = false, is3D = true,
+        clip { file = media/sound/Bicycle/Bicycle_Bell.ogg, distanceMin = 7, distanceMax = 7, volume = 0.4, }
+    }
+}
