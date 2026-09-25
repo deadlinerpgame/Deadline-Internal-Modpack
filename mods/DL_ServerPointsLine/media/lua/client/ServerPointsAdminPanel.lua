@@ -13,7 +13,7 @@ if not _ServerPoints_DBHandlersPatched then
             if ISWhitelistViewer.instance == nil then return end
             return orig(schema)
         end
-        pcall(function() Events.OnGetDBSchema.Remove(orig) end)
+        Events.OnGetDBSchema.Remove(orig)
         Events.OnGetDBSchema.Add(safe)
         ISWhitelistViewer.receiveDBSchema = safe
     end
@@ -23,7 +23,7 @@ if not _ServerPoints_DBHandlersPatched then
             if ISWhitelistViewer.instance == nil then return end
             return orig(datas, rowId, tableName)
         end
-        pcall(function() Events.OnGetTableResult.Remove(orig) end)
+        Events.OnGetTableResult.Remove(orig)
         Events.OnGetTableResult.Add(safe)
         ISWhitelistTable.getTableResult = safe
     end
@@ -53,7 +53,7 @@ local function onServerCommand(module, command, args)
 end
 
 local function onDBSchema(schema)
-    pcall(function() getTableResult("whitelist", 1000000) end)
+    getTableResult("whitelist", 1000000)
 end
 
 local function onTableResult(datas, rowId, tableName)
@@ -62,8 +62,8 @@ local function onTableResult(datas, rowId, tableName)
     if rowId == 0 then inst.accounts = {} end
     for i = 0, datas:size() - 1 do
         local r = datas:get(i)
-        local ok, uname = pcall(function() return r:getValues():get("username") end)
-        if ok and uname and uname ~= "" then inst.accounts[uname] = true end
+        local uname = r:getValues():get("username")
+        if uname and uname ~= "" then inst.accounts[uname] = true end
     end
     inst:rebuildPlayerCombo()
 end
@@ -215,7 +215,7 @@ function ServerPointsAdminPanel:createChildren()
 
     sendClientCommand("ServerPoints", "admincfg", nil)
     self:rebuildPlayerCombo()
-    pcall(function() getDBSchema() end)
+    getDBSchema()
 end
 
 function ServerPointsAdminPanel:onGive(sign)

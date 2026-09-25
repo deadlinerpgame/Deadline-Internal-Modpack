@@ -63,17 +63,13 @@ local LOG_FILE     = "ServerPoints_audit.txt"
 local Config  = { pointTypes = {}, store = {}, presets = {} }
 local Players = {}
 
-local DEFAULT_CONFIG = [==[-- Server Points configuration.  Edit, then "Reload Config" in the admin panel.
-return {
-    -- Currencies.  key = id used internally; name = shown in the UI.
+local DEFAULT_CONFIG = [==[return {
     pointTypes = {
         vehicle  = { name = "Vehicle Points" },
         outfit   = { name = "Outfit Ticket Points" },
         cassette = { name = "Cassette Points" },
     },
 
-    -- The shop.  Each tab holds entries; every purchasable entry names the
-    -- currency it costs via pointType.  type = ITEM | VEHICLE | XP | DIV.
     store = {
         Vehicles = {
             { type = "DIV",     target = "Vehicles" },
@@ -87,22 +83,16 @@ return {
         },
     },
 
-    -- Staff one-click reward bundles (buttons in the admin panel).
     presets = {
         { name = "Tier 1 Supporter", grant = { vehicle = 100 } },
         { name = "Tier 2 Supporter", grant = { vehicle = 300, cassette = 200 } },
     },
 
-    -- Optional safety cap on a single token redeem (0 = no cap).
     redeemMax = 0,
 }
 ]==]
 
-local DEFAULT_PLAYERS = [==[-- Per-player Server Points entitlements, keyed by exact account username.
--- "monthly" is granted once per UTC calendar month, applied when the player
--- next logs in (and to anyone online at the moment the month rolls over).
-return {
-    -- ["SomePlayer"] = { monthly = { vehicle = 200, cassette = 100 } },
+local DEFAULT_PLAYERS = [==[return {
 }
 ]==]
 
@@ -131,13 +121,13 @@ local function loadLua(name, default)
         src = default
         log("created default " .. name)
     end
-    local ok, fn = pcall(loadstring, src)
-    if (not ok) or fn == nil then
+    local fn = loadstring(src)
+    if fn == nil then
         log("ERROR parsing " .. name .. " -- fix the file and reload (using empty)")
         return nil
     end
-    local ok2, tbl = pcall(fn)
-    if (not ok2) or type(tbl) ~= "table" then
+    local tbl = fn()
+    if type(tbl) ~= "table" then
         log("ERROR running " .. name .. " -- fix the file and reload (using empty)")
         return nil
     end
@@ -197,6 +187,7 @@ local function ensureData()
     end
     DATA.balances = DATA.balances or {}
     DATA.monthly  = DATA.monthly or {}
+    DATA.once     = DATA.once or {}
     DATA.known    = DATA.known or {}
 end
 
@@ -222,8 +213,8 @@ local function audit(actor, target, ptype, delta, before, after, reason)
         (delta >= 0 and ("+" .. delta) or tostring(delta)),
         tostring(before), tostring(after), tostring(reason))
     local w = getFileWriter(LOG_FILE, true, true)
-    if w then pcall(function() w:write(line .. "\n") end); pcall(function() w:close() end) end
-    if writeLog then pcall(function() writeLog("ServerPoints", line) end) end
+    if w then w:write(line .. "\n"); w:close() end
+    writeLog("ServerPoints", line)
     log("AUDIT " .. line)
 end
 
@@ -265,13 +256,34 @@ local function grantMonthly(user)
     return true
 end
 
-local function monthlySweep()
+local function grantOnce(user)
+    local entry = Players[user]
+    if not entry or type(entry.once) ~= "table" then return false end
+    DATA.once[user] = DATA.once[user] or {}
+    local given = DATA.once[user]
+    local granted = false
+    for ptype, amt in pairs(entry.once) do
+        local owed = math.floor(tonumber(amt) or 0) - (given[ptype] or 0)
+        if owed > 0 then
+            applyDelta("SYSTEM", user, ptype, owed, "once")
+            given[ptype] = (given[ptype] or 0) + owed
+            granted = true
+        end
+    end
+    if granted then
+        pushBalancesTo(user)
+        log("one-time grant applied to '" .. user .. "'")
+    end
+    return granted
+end
+
+local function grantSweep()
     local players = getOnlinePlayers()
     if players == nil then return end
     for i = 0, players:size() - 1 do
         local p = players:get(i)
         local u = p and p:getUsername()
-        if u then rememberPlayer(u); grantMonthly(u) end
+        if u then rememberPlayer(u); grantMonthly(u); grantOnce(u) end
     end
 end
 
@@ -283,10 +295,10 @@ local function spawnVehicle(player, scriptName, condition)
         local part = vehicle:getPartByIndex(i)
         local container = part and part:getItemContainer()
         if container then container:removeAllItems() end
-        if part and condition < 100 then pcall(function() part:setCondition(condition) end) end
+        if part and condition < 100 then part:setCondition(condition) end
     end
-    if condition >= 100 then pcall(function() vehicle:repair() end) end
-    pcall(function() player:sendObjectChange("addItem", { item = vehicle:createVehicleKey() }) end)
+    if condition >= 100 then vehicle:repair() end
+    player:sendObjectChange("addItem", { item = vehicle:createVehicleKey() })
     return true
 end
 
@@ -303,6 +315,7 @@ function Cmd.checkin(module, command, player, args)
     local u = player:getUsername()
     rememberPlayer(u)
     grantMonthly(u)
+    grantOnce(u)
     sendConfig(player)
     replyBalances(player, u)
 end
@@ -396,6 +409,7 @@ function Cmd.reload(module, command, player, args)
     if not isStaff(player) then return end
     LoadConfig()
     LoadPlayers()
+    grantSweep()
     sendServerCommand(player, "ServerPoints", "reloaded", { ok = true })
     sendConfig(player)
 end
@@ -415,9 +429,9 @@ end)
 
 Events.OnServerStarted.Add(function()
     if DATA == nil then ensureData() end
-    monthlySweep()
+    grantSweep()
 end)
 
-Events.EveryHours.Add(monthlySweep)
+Events.EveryHours.Add(grantSweep)
 
 return Cmd

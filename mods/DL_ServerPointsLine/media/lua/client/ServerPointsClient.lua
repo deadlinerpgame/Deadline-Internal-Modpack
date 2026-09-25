@@ -6,9 +6,9 @@ local function onServerCommand(module, command, args)
     local p = getPlayer()
     if p == nil then return end
     if args.kind == "ITEM" and args.target then
-        pcall(function() p:getInventory():AddItems(args.target, args.quantity or 1) end)
+        p:getInventory():AddItems(args.target, args.quantity or 1)
     elseif args.kind == "XP" and args.target and Perks[args.target] then
-        pcall(function() p:getXp():AddXP(Perks[args.target], args.quantity or 1, true, false, false) end)
+        p:getXp():AddXP(Perks[args.target], args.quantity or 1, true, false, false)
     end
 end
 Events.OnServerCommand.Add(onServerCommand)
