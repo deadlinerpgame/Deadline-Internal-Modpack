@@ -24,24 +24,14 @@ local function toPerks(byName, owner)
     return out
 end
 
-local BOOSTED_CATEGORIES = {
-    [Perks.Combat] = true,
-    [Perks.Crafting] = true,
-    [Perks.Firearm] = true,
-    [Perks.Survivalist] = true,
-    [Perks.Agility] = true,
-}
-
 DL.TraitBoosts = {}
 
 local function traitXp(trait, owner)
     local out = toPerks(trait.xp, owner) or {}
     local boosts = {}
     for perk, cap in pairs(toPerks(trait.caps, owner) or {}) do
-        if BOOSTED_CATEGORIES[perk:getParent()] then
-            boosts[perk] = math.floor(cap / 2)
-            out[perk] = boosts[perk]
-        end
+        boosts[perk] = math.floor(cap / 2)
+        out[perk] = boosts[perk]
     end
     if next(boosts) ~= nil then
         DL.TraitBoosts[owner] = boosts
