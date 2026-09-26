@@ -1,5 +1,5 @@
 local UI
-chosenpoint = 1
+chosenpoint = 2
 opened = 0
 
 local spawnpointnames = {"#1", "#2", "#3", "#4"}
