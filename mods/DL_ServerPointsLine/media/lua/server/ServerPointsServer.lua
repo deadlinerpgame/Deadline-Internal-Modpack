@@ -75,19 +75,20 @@ local DEFAULT_CONFIG = [==[return {
     store = {
         Vehicles = {
             { type = "DIV",     target = "Vehicles" },
-            { type = "VEHICLE", target = "Base.SpiffoVan", pointType = "vehicle", price = 1000, condition = 100 },
+            { type = "VEHICLE", target = "Base.SpiffoVan", pointType = "vehicle", price = 1, condition = 100 },
         },
         Outfits = {
-            { type = "ITEM", target = "Base.Hat_Fedora", quantity = 1, pointType = "outfit", price = 50 },
+            { type = "ITEM", target = "Base.Hat_Fedora", quantity = 1, pointType = "outfit", price = 1 },
         },
         Misc = {
-            { type = "XP", target = "Strength", quantity = 1, pointType = "cassette", price = 200 },
+            { type = "XP", target = "Strength", quantity = 1, pointType = "cassette", price = 1 },
         },
     },
 
     presets = {
-        { name = "Tier 1 Supporter", grant = { vehicle = 100 } },
-        { name = "Tier 2 Supporter", grant = { vehicle = 300, cassette = 200 } },
+        { name = "Supporter", grant = { cassette = 1, lore = 3 } },
+        { name = "Great Supporter", grant = { outfit = 1, lore = 6, cassette = 3, pet = 1 } },
+        { name = "Epic Supporter", grant = { outfit = 2, lore = 6, cassette = 6, pet = 1, vehicle = 1 } },
     },
 
     redeemMax = 0,
