@@ -88,7 +88,7 @@ function ISVehicleSalvage:perform()
         self.item:Use();
     end
     self.character:getXp():AddXP(Perks.MetalWelding, totalXp);
-    //This is a stupid way of doing this, but I have no time to do it in a cleaner way
+    -- This is a stupid way of doing this, but I have no time to do it in a cleaner way
     DLSalvage.markSalvaged(self.character, self.vehicle)
     self.item:setJobDelta(0);
     ISBaseTimedAction.perform(self)

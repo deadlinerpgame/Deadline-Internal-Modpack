@@ -21,7 +21,7 @@ DiceMain.panelClasses = {}
 local function getPanelById(panelId)
 	return DiceMain.panels[panelId]
 end
-// My hope is that this is so awful that Alba will never force me to write Dice code again
+-- My hope is that this is so awful that Alba will never force me to write Dice code again
 local function createPanel(class)
 	local panel = class:new()
 	panel:initialise()

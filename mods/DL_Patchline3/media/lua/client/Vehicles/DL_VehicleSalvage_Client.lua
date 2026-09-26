@@ -6,7 +6,7 @@ function DLSalvage.markSalvaged(character, vehicle)
     DLSalvage.setSalvaged(vehicle)
     sendClientCommand(character, "DLSalvage", "markSalvaged", { vehicle = vehicle:getId() })
 end
-// This is a bad idea, but it will work for now
+-- This is a bad idea, but it will work for now
 local function onServerCommand(module, command, args)
     if module ~= "DLSalvage" or command ~= "salvaged" then return end
     local vehicle = getVehicleById(args.vehicle)
