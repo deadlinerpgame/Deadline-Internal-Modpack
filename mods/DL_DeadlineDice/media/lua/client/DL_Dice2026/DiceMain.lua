@@ -1,6 +1,5 @@
 
 local Core = require("DL_Dice2026/DiceCore")
-local ChatBridge = require("DL_Dice2026/DiceChatBridge")
 local MenuDock = require("ElyonLib/UI/MenuDock/MenuDock")
 local UIUtils = require("ElyonLib/UI/Utils/UIUtils")
 local DiceTurnOrder = require("DL_Dice2026/UI/DiceTurnOrder")
@@ -59,13 +58,6 @@ local function onCoreEvent(event)
 	for _, panel in pairs(DiceMain.panels) do
 		if panel.onCoreEvent then
 			panel:onCoreEvent(event)
-		end
-	end
-
-	if event == "log" then
-		local last = Core.log[#Core.log]
-		if last then
-			ChatBridge.send(last)
 		end
 	end
 
