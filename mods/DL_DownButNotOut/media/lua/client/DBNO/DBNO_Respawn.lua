@@ -330,6 +330,14 @@ Events.OnCreatePlayer.Add(function(playerIndex, player)
     DBNO.Respawn._lastRespawn = nil
     DBNO.Respawn._retryAt = nil
     DBNO.Respawn._retries = 0
+
+    local finalSpawn = DBNO.Respawn._finalSpawn
+    if finalSpawn then
+        DBNO.Respawn._finalSpawn = nil
+        DBNO.Respawn._pendingSpawn = finalSpawn
+        DBNO.Respawn._pendingUntil = getTimestampMs() + 15000
+    end
+
     local d = DBNO.Respawn._desc
     if d == nil then return end
     DBNO.Respawn._desc = nil
@@ -401,6 +409,14 @@ function ISPostDeathUI:onRespawn()
 
         DBNO.DeathWounds._captured = nil
         commitDeathToServer(getPlayer())
+
+        local finalSpawn = DBNO.Config.finalRespawn
+        if finalSpawn then
+            DBNO.Respawn._finalSpawn = finalSpawn
+            if isClient() then
+                sendClientCommand(getPlayer(), "DBNORespawn", "spawnat", finalSpawn)
+            end
+        end
 
         _onRespawn(self)
         return

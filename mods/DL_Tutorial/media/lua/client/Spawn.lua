@@ -74,7 +74,7 @@ end
 
 
 local TargetTileA = {
-    ['deadline_respawnpoints_02']=true,
+    ['deadline02_17']=true,
 }
 
 local TargetTileB = {

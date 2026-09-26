@@ -146,6 +146,24 @@ option DownButNotOut.UseBedsAsSaveRestoreRespawn =
     page = DBNORespawns, translation = DownButNotOut_UseBedsAsSaveRestoreRespawn,
 }
 
+option DownButNotOut.FinalRespawnX =
+{
+    type = integer, min = 0, max = 100000, default = 19114,
+    page = DBNORespawns, translation = DownButNotOut_FinalRespawnX,
+}
+
+option DownButNotOut.FinalRespawnY =
+{
+    type = integer, min = 0, max = 100000, default = 1391,
+    page = DBNORespawns, translation = DownButNotOut_FinalRespawnY,
+}
+
+option DownButNotOut.FinalRespawnZ =
+{
+    type = integer, min = 0, max = 7, default = 0,
+    page = DBNORespawns, translation = DownButNotOut_FinalRespawnZ,
+}
+
 option DownButNotOut.CustomTiles =
 {
     type = string, default = furniture_bedding_01_32,
