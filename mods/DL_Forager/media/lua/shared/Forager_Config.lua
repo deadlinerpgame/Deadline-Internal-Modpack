@@ -82,8 +82,6 @@ C.forageLists = C.forageLists or {
                         { "Base.PillsSleepingTablets", 1 },
                         { "Base.Bullets45", 1 },
                         { "Base.Bullets44", 1 },
-                        { "Base.Pistol", 1 },
-                        { "Base.Revolver_Short", 1 },
                         { "Base.Lollipop", 1 },
                         { "Base.MintCandy", 1 },
                         { "Base.CardDeck", 1 },
