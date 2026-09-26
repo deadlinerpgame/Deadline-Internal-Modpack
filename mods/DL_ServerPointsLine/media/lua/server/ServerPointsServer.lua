@@ -65,9 +65,11 @@ local Players = {}
 
 local DEFAULT_CONFIG = [==[return {
     pointTypes = {
-        vehicle  = { name = "Vehicle Points" },
         outfit   = { name = "Outfit Ticket Points" },
+        lore     = { name = "Lore Points" },
         cassette = { name = "Cassette Points" },
+        pet      = { name = "Pet Points" },
+        vehicle  = { name = "Vehicle Points" },
     },
 
     store = {
