@@ -380,6 +380,9 @@ function DBNO.Config.applySandbox()
 
     C.useBedsAsSavePoint = bool(S.UseBedsAsSaveRestoreRespawn, true)
 
+    local fx, fy = math.floor(num(S.FinalRespawnX, 19114)), math.floor(num(S.FinalRespawnY, 1391))
+    C.finalRespawn = (fx > 0 and fy > 0) and { x = fx, y = fy, z = math.floor(num(S.FinalRespawnZ, 0)) } or nil
+
     C._baseRestTileSprites = C._baseRestTileSprites or C.restTileSprites
     local merged = {}
     for name in pairs(C._baseRestTileSprites) do merged[name] = true end
