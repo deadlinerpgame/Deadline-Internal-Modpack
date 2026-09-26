@@ -821,21 +821,29 @@ ClothingSelectionDefinitions.mechanics = {
 	},
 }
 
--- Optional clothing mods may be absent. Remove unresolved additions before
--- character creation reads the lists; the full vanilla override remains intact.
--- local function filterMissingStartingClothes()
---     if not ScriptManager or not ScriptManager.instance then return end
---     for _, definition in pairs(ClothingSelectionDefinitions.default) do
---         for location, slot in pairs(definition) do
---             for index = #slot.items, 1, -1 do
---                 if not ScriptManager.instance:FindItem(slot.items[index]) then
---                     table.remove(slot.items, index)
---                 end
---             end
---             if #slot.items == 0 then definition[location] = nil end
---         end
---     end
--- end
--- if Events and Events.OnGameBoot then
---     Events.OnGameBoot.Add(filterMissingStartingClothes)
--- end
+-- Called just before character creation builds its selectors. Missing optional
+-- items would otherwise stop B41 at item:getDisplayName().
+local startingClothingDefault = ClothingSelectionDefinitions.default
+
+function DL_StartingClothingLine_ApplyDefault()
+    ClothingSelectionDefinitions.default = startingClothingDefault
+    if not ScriptManager or not ScriptManager.instance then return end
+
+    local removed = {}
+    for _, definition in pairs(startingClothingDefault) do
+        for location, slot in pairs(definition) do
+            for index = #slot.items, 1, -1 do
+                local itemType = slot.items[index]
+                if not ScriptManager.instance:FindItem(itemType) then
+                    removed[itemType] = true
+                    table.remove(slot.items, index)
+                end
+            end
+            if #slot.items == 0 then definition[location] = nil end
+        end
+    end
+    for itemType in pairs(removed) do
+        print("[DL3_StartingClothingLine] Skipped missing item: " .. itemType)
+    end
+    print("[DL3_StartingClothingLine] Applied default clothing selection")
+end
