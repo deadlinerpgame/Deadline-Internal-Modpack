@@ -162,7 +162,7 @@ function DialogueWindow:executeResponse(resp)
                 while remaining > 0 do
                     local item = inv:getFirstTypeRecurse(entry.itemName)
                     if not item then break end
-                    inv:Remove(item)
+                    item:getContainer():DoRemoveItem(item)
                     remaining = remaining - 1
                 end
             end

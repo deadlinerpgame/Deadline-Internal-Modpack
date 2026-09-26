@@ -254,6 +254,7 @@ local function buildNodes(tree, player, zoneId)
                         state   = state,
                         leadsTo = leadsTo,
                         reqs    = reqs,
+                        consumeList = resp.consumeList,
                     }
                 end
             end
