@@ -55,7 +55,6 @@ function DLLootTicketItemEditUI:initialise()
     self.chanceBox = chanceBox;
     self:addChild(chanceBox);
 
-    -- Buttons
     self:setWidth(chanceBox:getRight() + closeHeight);
 
     self.editButton = ISButton:new((self:getWidth() / 2) - (editWidth / 2), chanceBox:getBottom() + closeHeight, closeWidth, closeHeight + 4, "Edit Item", self, self.onEditItem);

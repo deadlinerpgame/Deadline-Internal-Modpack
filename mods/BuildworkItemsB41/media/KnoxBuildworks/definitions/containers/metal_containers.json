@@ -1,0 +1,420 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.containers.metal_containers.trashcontainers_01_32",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_metal_containers_trashcontainers_01_32",
+   "displayName": "Wall Bin",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Metal Containers",
+   "material": "Metal",
+   "iconSprite": "trashcontainers_01_32",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "trashcontainers_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "trashcontainers_01_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 4
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildMetalStructureMedium",
+      "completionSound": "BuildMetalStructureMedium",
+      "xp": {
+       "MetalWelding": 30
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canBePadlocked": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.metal_containers.furniture_shelving_01_27",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_metal_containers_furniture_shelving_01_27",
+   "displayName": "Large Metal Shelves",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Metal Containers",
+   "material": "Metal",
+   "iconSprite": "furniture_shelving_01_27",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_25"
+           ],
+           [
+            "furniture_shelving_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_26",
+            "furniture_shelving_01_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 4,
+        "flags": [
+         "Prop1",
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "metal_pipe",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "scrap_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ScrapMetal"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 4,
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "completionSound": "BuildMetalStructureMedium",
+      "xp": {
+       "MetalWelding": 60
+      },
+      "category": "Furniture"
+     },
+     "container": {
+      "type": "metal_shelves"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.metal_containers.medical_metal_counter",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_metal_containers_medical_metal_counter",
+   "displayName": "Medical Metal Counter",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Metal Containers",
+   "material": "Metal",
+   "iconSprite": "location_community_medical_01_155",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_medical_01_153"
+           ],
+           [
+            "location_community_medical_01_152"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_medical_01_154",
+            "location_community_medical_01_155"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 8,
+        "flags": [
+         "Prop1",
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "metal_pipe",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "door_hinges",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Hinge"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 8,
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "completionSound": "BuildMetalStructureMedium",
+      "xp": {
+       "MetalWelding": 60
+      },
+      "category": "Furniture"
+     },
+     "container": {
+      "type": "medicine",
+      "capacity": 30
+     }
+    }
+   ]
+  }
+ ]
+}

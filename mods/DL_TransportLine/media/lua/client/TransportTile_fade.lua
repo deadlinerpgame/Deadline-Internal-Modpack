@@ -21,7 +21,6 @@ function DD_Fader:new(pid)
 end
 
 function DD_Fader:prerender()
-    -- keep full-screen
     self:setWidth(getCore():getScreenWidth())
     self:setHeight(getCore():getScreenHeight())
 

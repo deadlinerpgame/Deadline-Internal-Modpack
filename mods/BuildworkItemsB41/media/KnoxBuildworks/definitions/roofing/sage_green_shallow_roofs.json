@@ -1,0 +1,1869 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_sheet_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_sheet_1",
+   "displayName": "Sage Green Shallow Roof Sheet 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_24",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_sheet",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_sheet"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_sheet_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_sheet_2",
+   "displayName": "Sage Green Shallow Roof Sheet 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_25",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_sheet",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_sheet"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_30"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_eave_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_eave_1",
+   "displayName": "Sage Green Shallow Roof Eave 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_27",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_eave",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_eave"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_27"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_28"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_eave_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_eave_2",
+   "displayName": "Sage Green Shallow Roof Eave 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_26",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_eave",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_eave"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_29"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_corner_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_corner_1",
+   "displayName": "Sage Green Shallow Roof Corner 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_32",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_corner",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_corner"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_38"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_corner_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_corner_2",
+   "displayName": "Sage Green Shallow Roof Corner 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_33",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_corner",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_corner"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_39"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_cap_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_cap_1",
+   "displayName": "Sage Green Shallow Roof Cap 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_35",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_cap",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_cap"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_cap_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_cap_2",
+   "displayName": "Sage Green Shallow Roof Cap 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_34",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_cap",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_cap"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_34"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_ridge_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_ridge_1",
+   "displayName": "Sage Green Shallow Roof Ridge 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_37",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_ridge",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_ridge_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_ridge_2",
+   "displayName": "Sage Green Shallow Roof Ridge 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_36",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_ridge",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_pyramid_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_pyramid_1",
+   "displayName": "Sage Green Shallow Roof Pyramid 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_40",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_pyramid",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_pyramid"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_40"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_pyramid_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_pyramid_2",
+   "displayName": "Sage Green Shallow Roof Pyramid 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_41",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_pyramid",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_pyramid"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_valley_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_valley_1",
+   "displayName": "Sage Green Shallow Roof Valley 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_43",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_valley",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_valley"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_valley_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_valley_2",
+   "displayName": "Sage Green Shallow Roof Valley 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_42",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_valley",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_valley"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_42"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_hip_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_hip_1",
+   "displayName": "Sage Green Shallow Roof Hip 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_44",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_hip",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_hip"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_47"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shallow_hip_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shallow_hip_2",
+   "displayName": "Sage Green Shallow Roof Hip 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_45",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shallow_hip",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_shallow_hip"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_46"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  }
+ ]
+}

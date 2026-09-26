@@ -1,0 +1,80 @@
+module Base
+{
+	imports
+	{
+		Base,
+	}
+
+	model ForkForged
+	{
+		mesh = Weapons/1Handed/Fork_Forged_Hand,
+		texture = Weapons/1Handed/Fork_Forged,
+
+		attachment Bip01_Prop2
+		{
+			offset = 0.0018 -0.0013 0.0113,
+			rotate = 0.0000 -82.5857 2.9014,
+		}
+
+		attachment world
+		{
+			offset = -0.0123 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+	model FryingPanForged
+	{
+		mesh = weapons/1handed/FryingPan_Forged_Hand,
+		texture = weapons/1handed/FryingPan_Forged,
+
+		attachment world
+		{
+			offset = -0.0274 0.1186 -0.0044,
+			rotate = 0.0000 -45.1430 0.0000,
+		}
+
+		attachment Bip01_Prop1
+		{
+			offset = -0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 0.0000,
+		}
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0131 -0.0002 0.0007,
+			rotate = 0.0000 106.0540 0.0000,
+		}
+
+		attachment fryingpan_back
+		{
+			offset = -0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 0.0000,
+		}
+
+		attachment fryingpan_back_bag
+		{
+			offset = -0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 0.0000,
+		}
+	}
+
+	model SpoonForged
+	{
+		mesh = Weapons/1Handed/Spoon_Forged_Hand,
+		texture = Weapons/1Handed/Spoon_Forged,
+
+		attachment Bip01_Prop2
+		{
+			offset = -0.0130 -0.0001 0.0108,
+			rotate = 159.6679 73.7352 -162.5630,
+		}
+
+		attachment world
+		{
+			offset = -0.0117 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+}

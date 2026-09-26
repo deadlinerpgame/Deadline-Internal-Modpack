@@ -1,0 +1,6395 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_slope_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_slope_1",
+   "displayName": "Light Brown 30 Degree Roof Slope 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_0",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_slope",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_slope"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_13"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_slope_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_slope_2",
+   "displayName": "Light Brown 30 Degree Roof Slope 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_1",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_slope",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_slope"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_12"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_slope_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_slope_3",
+   "displayName": "Light Brown 30 Degree Roof Slope 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_2",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_slope",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_slope"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_27"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_slope_4",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_slope_4",
+   "displayName": "Light Brown 30 Degree Roof Slope 4",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_3",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_slope",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_slope"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_10"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_slope_5",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_slope_5",
+   "displayName": "Light Brown 30 Degree Roof Slope 5",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_4",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_slope",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_slope"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_9"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_slope_6",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_slope_6",
+   "displayName": "Light Brown 30 Degree Roof Slope 6",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_5",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_slope",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_slope"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_8"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_hip_end_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_hip_end_1",
+   "displayName": "Light Brown 30 Degree Roof Hip End 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_32",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_hip_end",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_hip_end"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_32"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_hip_end_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_hip_end_2",
+   "displayName": "Light Brown 30 Degree Roof Hip End 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_33",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_hip_end",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_hip_end"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_hip_end_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_hip_end_3",
+   "displayName": "Light Brown 30 Degree Roof Hip End 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_34",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_hip_end",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_hip_end"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_34"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_hip_end_4",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_hip_end_4",
+   "displayName": "Light Brown 30 Degree Roof Hip End 4",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_35",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_hip_end",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_hip_end"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_hip_end_5",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_hip_end_5",
+   "displayName": "Light Brown 30 Degree Roof Hip End 5",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_36",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_hip_end",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_hip_end"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_hip_end_6",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_hip_end_6",
+   "displayName": "Light Brown 30 Degree Roof Hip End 6",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_37",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_hip_end",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_hip_end"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_hip_ridge_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_hip_ridge_1",
+   "displayName": "Light Brown 30 Degree Roof Hip Ridge 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_45",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_hip_ridge",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_hip_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_61"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_hip_ridge_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_hip_ridge_2",
+   "displayName": "Light Brown 30 Degree Roof Hip Ridge 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_44",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_hip_ridge",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_hip_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_60"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_hip_ridge_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_hip_ridge_3",
+   "displayName": "Light Brown 30 Degree Roof Hip Ridge 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_43",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_hip_ridge",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_hip_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_43"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_59"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_hip_ridge_4",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_hip_ridge_4",
+   "displayName": "Light Brown 30 Degree Roof Hip Ridge 4",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_42",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_hip_ridge",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_hip_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_58"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_hip_ridge_5",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_hip_ridge_5",
+   "displayName": "Light Brown 30 Degree Roof Hip Ridge 5",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_41",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_hip_ridge",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_hip_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_57"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_hip_ridge_6",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_hip_ridge_6",
+   "displayName": "Light Brown 30 Degree Roof Hip Ridge 6",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_40",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_hip_ridge",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_hip_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_56"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_valley_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_valley_1",
+   "displayName": "Light Brown 30 Degree Roof Valley 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_48",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_valley",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_valley"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_48"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_valley_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_valley_2",
+   "displayName": "Light Brown 30 Degree Roof Valley 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_49",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_valley",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_valley"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_49"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_valley_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_valley_3",
+   "displayName": "Light Brown 30 Degree Roof Valley 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_50",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_valley",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_valley"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_50"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_valley_4",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_valley_4",
+   "displayName": "Light Brown 30 Degree Roof Valley 4",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_51",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_valley",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_valley"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_valley_5",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_valley_5",
+   "displayName": "Light Brown 30 Degree Roof Valley 5",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_52",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_valley",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_valley"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_52"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_valley_6",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_valley_6",
+   "displayName": "Light Brown 30 Degree Roof Valley 6",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_53",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_valley",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_valley"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_53"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_pyramid_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_pyramid_1",
+   "displayName": "Light Brown 30 Degree Roof Pyramid 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_64",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_pyramid",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_pyramid"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_64"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_pyramid_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_pyramid_2",
+   "displayName": "Light Brown 30 Degree Roof Pyramid 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_65",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_pyramid",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_pyramid"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_65"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_pyramid_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_pyramid_3",
+   "displayName": "Light Brown 30 Degree Roof Pyramid 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_66",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_pyramid",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_pyramid"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_66"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_pyramid_4",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_pyramid_4",
+   "displayName": "Light Brown 30 Degree Roof Pyramid 4",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_67",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_pyramid",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_pyramid"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_67"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_pyramid_5",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_pyramid_5",
+   "displayName": "Light Brown 30 Degree Roof Pyramid 5",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_68",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_pyramid",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_pyramid"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_68"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_pyramid_6",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_pyramid_6",
+   "displayName": "Light Brown 30 Degree Roof Pyramid 6",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_69",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_pyramid",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_pyramid"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_69"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_half_slope_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_half_slope_1",
+   "displayName": "Light Brown 30 Degree Roof Half Slope 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_77",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_half_slope",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_half_slope"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_77"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_80"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_half_slope_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_half_slope_2",
+   "displayName": "Light Brown 30 Degree Roof Half Slope 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_76",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_half_slope",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_half_slope"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_76"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_81"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_half_slope_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_half_slope_3",
+   "displayName": "Light Brown 30 Degree Roof Half Slope 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_75",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_half_slope",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_half_slope"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_75"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_82"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_half_slope_4",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_half_slope_4",
+   "displayName": "Light Brown 30 Degree Roof Half Slope 4",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_74",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_half_slope",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_half_slope"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_74"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_83"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_half_slope_5",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_half_slope_5",
+   "displayName": "Light Brown 30 Degree Roof Half Slope 5",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_73",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_half_slope",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_half_slope"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_73"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_84"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_half_slope_6",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_half_slope_6",
+   "displayName": "Light Brown 30 Degree Roof Half Slope 6",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_72",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_half_slope",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_half_slope"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_72"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_85"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_ridge_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_ridge_1",
+   "displayName": "Light Brown 30 Degree Roof Ridge 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_93",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_ridge",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_93"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_ridge_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_ridge_2",
+   "displayName": "Light Brown 30 Degree Roof Ridge 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_92",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_ridge",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_92"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_ridge_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_ridge_3",
+   "displayName": "Light Brown 30 Degree Roof Ridge 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_91",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_ridge",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_91"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_ridge_4",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_ridge_4",
+   "displayName": "Light Brown 30 Degree Roof Ridge 4",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_90",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_ridge",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_90"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_ridge_5",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_ridge_5",
+   "displayName": "Light Brown 30 Degree Roof Ridge 5",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_89",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_ridge",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_89"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_ridge_6",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_ridge_6",
+   "displayName": "Light Brown 30 Degree Roof Ridge 6",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_88",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_ridge",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_88"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_eave_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_eave_1",
+   "displayName": "Light Brown 30 Degree Roof Eave 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_96",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_eave",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_eave"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_96"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_109"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_eave_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_eave_2",
+   "displayName": "Light Brown 30 Degree Roof Eave 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_97",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_eave",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_eave"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_97"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_108"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_eave_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_eave_3",
+   "displayName": "Light Brown 30 Degree Roof Eave 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_98",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_eave",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_eave"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_98"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_107"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_eave_4",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_eave_4",
+   "displayName": "Light Brown 30 Degree Roof Eave 4",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_99",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_eave",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_eave"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_99"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_106"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_eave_5",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_eave_5",
+   "displayName": "Light Brown 30 Degree Roof Eave 5",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_100",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_eave",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_eave"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_100"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_105"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_eave_6",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_eave_6",
+   "displayName": "Light Brown 30 Degree Roof Eave 6",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_101",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_eave",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_eave"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_101"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_104"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_flat_hip_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_flat_hip_1",
+   "displayName": "Light Brown 30 Degree Roof Flat Hip 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_112",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_flat_hip",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_flat_hip"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_112"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_flat_hip_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_flat_hip_2",
+   "displayName": "Light Brown 30 Degree Roof Flat Hip 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_113",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_flat_hip",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_flat_hip"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_113"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_flat_hip_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_flat_hip_3",
+   "displayName": "Light Brown 30 Degree Roof Flat Hip 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_114",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_flat_hip",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_flat_hip"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_114"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_flat_hip_4",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_flat_hip_4",
+   "displayName": "Light Brown 30 Degree Roof Flat Hip 4",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_115",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_flat_hip",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_flat_hip"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_115"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_flat_hip_5",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_flat_hip_5",
+   "displayName": "Light Brown 30 Degree Roof Flat Hip 5",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_116",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_flat_hip",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_flat_hip"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_116"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_30_flat_hip_6",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_30_flat_hip_6",
+   "displayName": "Light Brown 30 Degree Roof Flat Hip 6",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_30_07_117",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_30_flat_hip",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_30_flat_hip"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_30_07_117"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_30_07"
+   ]
+  }
+ ]
+}

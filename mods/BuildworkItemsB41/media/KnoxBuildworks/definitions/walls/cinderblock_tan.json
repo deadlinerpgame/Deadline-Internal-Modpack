@@ -1,0 +1,4313 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_wall",
+   "displayName": "Cinderblock Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_commercial_03_16",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.wall",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_commercial_03_16",
+       "N": "walls_commercial_03_17",
+       "Corner": "walls_commercial_03_18"
+      },
+      "PaintBrown": {
+       "W": "walls_commercial_03_0",
+       "N": "walls_commercial_03_1",
+       "Corner": "walls_commercial_03_2"
+      },
+      "PaintGrey": {
+       "W": "walls_commercial_03_48",
+       "N": "walls_commercial_03_49",
+       "Corner": "walls_commercial_03_50"
+      },
+      "PaintWhite": {
+       "W": "walls_commercial_01_48",
+       "N": "walls_commercial_01_49",
+       "Corner": "walls_commercial_01_50"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_commercial_03_32",
+       "N": "walls_commercial_03_33",
+       "Corner": "walls_commercial_03_34",
+       "Pillar": "walls_commercial_03_34"
+      }
+     },
+     "baseSprites": [
+      "walls_commercial_03_16",
+      "walls_commercial_03_17",
+      "walls_commercial_03_18"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "walls_commercial_03_18",
+      "pillarSprite": "walls_commercial_03_19"
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_door_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_door_frame",
+   "displayName": "Cinderblock Door Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_cinderblock_tan_tan_cinderblock_door_frame",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_commercial_03_26",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.door_frame",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_commercial_03_26",
+       "N": "walls_commercial_03_27"
+      },
+      "PaintBrown": {
+       "W": "walls_commercial_03_10",
+       "N": "walls_commercial_03_11"
+      },
+      "PaintGrey": {
+       "W": "walls_commercial_03_58",
+       "N": "walls_commercial_03_59"
+      },
+      "PaintWhite": {
+       "W": "walls_commercial_01_58",
+       "N": "walls_commercial_01_59"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_commercial_03_42",
+       "N": "walls_commercial_03_43"
+      }
+     },
+     "baseSprites": [
+      "walls_commercial_03_26",
+      "walls_commercial_03_27"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "callbacks": {
+      "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+     },
+     "object": {
+      "isThumpable": false,
+      "isDoorFrame": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_window_frame",
+   "displayName": "Cinderblock Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_cinderblock_tan_tan_cinderblock_window_frame",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_commercial_03_24",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.window_frame",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_commercial_03_24",
+       "N": "walls_commercial_03_25"
+      },
+      "PaintBrown": {
+       "W": "walls_commercial_03_8",
+       "N": "walls_commercial_03_9"
+      },
+      "PaintGrey": {
+       "W": "walls_commercial_03_56",
+       "N": "walls_commercial_03_57"
+      },
+      "PaintWhite": {
+       "W": "walls_commercial_01_56",
+       "N": "walls_commercial_01_57"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_commercial_03_40",
+       "N": "walls_commercial_03_41"
+      }
+     },
+     "baseSprites": [
+      "walls_commercial_03_24",
+      "walls_commercial_03_25"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_corner_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_corner_wall",
+   "displayName": "Cinderblock Corner Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_18"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "walls_commercial_03_18",
+      "isCorner": true
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "iconSprite": "walls_commercial_03_18",
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.corner_wall",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_commercial_03_18"
+      },
+      "PaintBrown": {
+       "W": "walls_commercial_03_2"
+      },
+      "PaintGrey": {
+       "W": "walls_commercial_03_50"
+      },
+      "PaintWhite": {
+       "W": "walls_commercial_01_50"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_commercial_03_34"
+      }
+     },
+     "baseSprites": [
+      "walls_commercial_03_18"
+     ]
+    }
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_pillar",
+   "displayName": "Cinderblock Pillar",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_cinderblock_tan_tan_cinderblock_pillar",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_commercial_03_19",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ],
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.pillar",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_commercial_03_19",
+       "Pillar": "walls_commercial_03_19"
+      },
+      "PaintBrown": {
+       "W": "walls_commercial_03_3",
+       "Pillar": "walls_commercial_03_3"
+      },
+      "PaintGrey": {
+       "W": "walls_commercial_03_51",
+       "Pillar": "walls_commercial_03_51"
+      },
+      "PaintWhite": {
+       "W": "walls_commercial_01_51",
+       "Pillar": "walls_commercial_01_51"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_commercial_03_35",
+       "Pillar": "walls_commercial_03_35"
+      }
+     },
+     "baseSprites": [
+      "walls_commercial_03_19"
+     ]
+    }
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_roof_slope_wall_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_roof_slope_wall_1",
+   "displayName": "Cinderblock Roof Slope Wall 1",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_09_56",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.roof_slope_wall_1",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_09_56",
+       "N": "walls_exterior_roofs_09_69"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_10_96",
+       "N": "walls_exterior_roofs_10_109"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_10_160",
+       "N": "walls_exterior_roofs_10_173"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_10_224",
+       "N": "walls_exterior_roofs_10_237"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_10_128",
+       "N": "walls_exterior_roofs_10_141"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_56",
+      "walls_exterior_roofs_09_69"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_56"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_69"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.cinderblock_tan.tan_cinderblock_roof_slope_wall",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_cinderblock_tan_tan_cinderblock_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_roof_slope_wall_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_roof_slope_wall_2",
+   "displayName": "Cinderblock Roof Slope Wall 2",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_09_57",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.roof_slope_wall_2",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_09_57",
+       "N": "walls_exterior_roofs_09_68"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_10_97",
+       "N": "walls_exterior_roofs_10_108"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_10_161",
+       "N": "walls_exterior_roofs_10_172"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_10_225",
+       "N": "walls_exterior_roofs_10_236"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_10_129",
+       "N": "walls_exterior_roofs_10_140"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_57",
+      "walls_exterior_roofs_09_68"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_57"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_68"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.cinderblock_tan.tan_cinderblock_roof_slope_wall",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_cinderblock_tan_tan_cinderblock_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_roof_slope_wall_3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_roof_slope_wall_3",
+   "displayName": "Cinderblock Roof Slope Wall 3",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_09_58",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.roof_slope_wall_3",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_09_58",
+       "N": "walls_exterior_roofs_09_67"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_10_98",
+       "N": "walls_exterior_roofs_10_107"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_10_162",
+       "N": "walls_exterior_roofs_10_171"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_10_226",
+       "N": "walls_exterior_roofs_10_235"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_10_130",
+       "N": "walls_exterior_roofs_10_139"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_58",
+      "walls_exterior_roofs_09_67"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_67"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.cinderblock_tan.tan_cinderblock_roof_slope_wall",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_walls_cinderblock_tan_tan_cinderblock_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_roof_slope_wall_4",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_roof_slope_wall_4",
+   "displayName": "Cinderblock Roof Slope Wall 4",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_09_64",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.roof_slope_wall_4",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_09_59",
+       "N": "walls_exterior_roofs_09_66"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_10_104",
+       "N": "walls_exterior_roofs_10_101"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_10_168",
+       "N": "walls_exterior_roofs_10_165"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_10_232",
+       "N": "walls_exterior_roofs_10_229"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_10_136",
+       "N": "walls_exterior_roofs_10_133"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_59",
+      "walls_exterior_roofs_09_66"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_64"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_61"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.cinderblock_tan.tan_cinderblock_roof_slope_wall",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_walls_cinderblock_tan_tan_cinderblock_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_roof_slope_wall_5",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_roof_slope_wall_5",
+   "displayName": "Cinderblock Roof Slope Wall 5",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_09_65",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.roof_slope_wall_5",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_09_60",
+       "N": "walls_exterior_roofs_09_65"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_10_105",
+       "N": "walls_exterior_roofs_10_100"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_10_169",
+       "N": "walls_exterior_roofs_10_164"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_10_233",
+       "N": "walls_exterior_roofs_10_228"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_60",
+      "walls_exterior_roofs_09_65"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_65"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_60"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.cinderblock_tan.tan_cinderblock_roof_slope_wall",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_walls_cinderblock_tan_tan_cinderblock_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_roof_slope_wall_6",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_roof_slope_wall_6",
+   "displayName": "Cinderblock Roof Slope Wall 6",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_09_66",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.roof_slope_wall_6",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_09_61",
+       "N": "walls_exterior_roofs_09_64"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_10_106",
+       "N": "walls_exterior_roofs_10_99"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_10_170",
+       "N": "walls_exterior_roofs_10_163"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_10_234",
+       "N": "walls_exterior_roofs_10_227"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_10_138",
+       "N": "walls_exterior_roofs_10_131"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_61",
+      "walls_exterior_roofs_09_64"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_66"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_59"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.cinderblock_tan.tan_cinderblock_roof_slope_wall",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_walls_cinderblock_tan_tan_cinderblock_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_roof_end_small",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_roof_end_small",
+   "displayName": "Cinderblock Roof End Small",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_09_71",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.roof_end_small",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_09_71",
+       "N": "walls_exterior_roofs_09_63"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_10_239",
+       "N": "walls_exterior_roofs_10_231"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_10_111",
+       "N": "walls_exterior_roofs_10_103"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_10_175",
+       "N": "walls_exterior_roofs_10_167"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_10_143",
+       "N": "walls_exterior_roofs_10_135"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_71",
+      "walls_exterior_roofs_09_63"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_71"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_63"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_roof_end_medium",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_roof_end_medium",
+   "displayName": "Cinderblock Roof End Medium",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_09_70",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.roof_end_medium",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_09_70",
+       "N": "walls_exterior_roofs_09_62"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_10_238",
+       "N": "walls_exterior_roofs_10_230"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_10_110",
+       "N": "walls_exterior_roofs_10_102"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_10_174",
+       "N": "walls_exterior_roofs_10_166"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_10_142",
+       "N": "walls_exterior_roofs_10_134"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_70",
+      "walls_exterior_roofs_09_62"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_70"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_62"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.cinderblock_tan.tan_cinderblock_roof_end_big",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_cinderblock_tan_roof_end_big",
+   "displayName": "Cinderblock Roof End Big",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_09_72",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.cinderblock.roof_end_big",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_09_72",
+       "N": "walls_exterior_roofs_09_73"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_10_240",
+       "N": "walls_exterior_roofs_10_241"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_10_112",
+       "N": "walls_exterior_roofs_10_113"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_10_176",
+       "N": "walls_exterior_roofs_10_177"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_10_144",
+       "N": "walls_exterior_roofs_10_145"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_72",
+      "walls_exterior_roofs_09_73"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_72"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_73"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_rising_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_rising_1",
+   "displayName": "Cinderblock 30 Degree Rising Slope Wall 1",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_0",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_rising_1",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_48",
+       "N": "walls_exterior_roofs_30_11_77"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_0",
+       "N": "walls_exterior_roofs_30_13_29"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_0",
+       "N": "walls_exterior_roofs_30_12_29"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_0",
+       "N": "walls_exterior_roofs_30_11_29"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_48",
+       "N": "walls_exterior_roofs_30_12_77"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_0",
+      "walls_exterior_roofs_30_12_29"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_29"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_rising",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_rising_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_rising_2",
+   "displayName": "Cinderblock 30 Degree Rising Slope Wall 2",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_1",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_rising_2",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_49",
+       "N": "walls_exterior_roofs_30_11_76"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_1",
+       "N": "walls_exterior_roofs_30_13_28"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_1",
+       "N": "walls_exterior_roofs_30_12_28"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_1",
+       "N": "walls_exterior_roofs_30_11_28"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_49",
+       "N": "walls_exterior_roofs_30_12_76"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_1",
+      "walls_exterior_roofs_30_12_28"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_28"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_rising",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_rising_3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_rising_3",
+   "displayName": "Cinderblock 30 Degree Rising Slope Wall 3",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_2",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_rising_3",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_50",
+       "N": "walls_exterior_roofs_30_11_75"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_2",
+       "N": "walls_exterior_roofs_30_13_27"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_2",
+       "N": "walls_exterior_roofs_30_12_27"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_2",
+       "N": "walls_exterior_roofs_30_11_27"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_50",
+       "N": "walls_exterior_roofs_30_12_75"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_2",
+      "walls_exterior_roofs_30_12_27"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_rising",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_rising_4",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_rising_4",
+   "displayName": "Cinderblock 30 Degree Rising Slope Wall 4",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_3",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_rising_4",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_51",
+       "N": "walls_exterior_roofs_30_11_74"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_3",
+       "N": "walls_exterior_roofs_30_13_26"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_3",
+       "N": "walls_exterior_roofs_30_12_26"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_3",
+       "N": "walls_exterior_roofs_30_11_26"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_51",
+       "N": "walls_exterior_roofs_30_12_74"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_3",
+      "walls_exterior_roofs_30_12_26"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_26"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_rising",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_rising_5",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_rising_5",
+   "displayName": "Cinderblock 30 Degree Rising Slope Wall 5",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_4",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_rising_5",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_52",
+       "N": "walls_exterior_roofs_30_11_73"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_4",
+       "N": "walls_exterior_roofs_30_13_25"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_4",
+       "N": "walls_exterior_roofs_30_12_25"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_4",
+       "N": "walls_exterior_roofs_30_11_25"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_52",
+       "N": "walls_exterior_roofs_30_12_73"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_4",
+      "walls_exterior_roofs_30_12_25"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_rising",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_rising_6",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_rising_6",
+   "displayName": "Cinderblock 30 Degree Rising Slope Wall 6",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_5",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_rising_6",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_53",
+       "N": "walls_exterior_roofs_30_11_72"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_5",
+       "N": "walls_exterior_roofs_30_13_24"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_5",
+       "N": "walls_exterior_roofs_30_12_24"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_5",
+       "N": "walls_exterior_roofs_30_11_24"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_53",
+       "N": "walls_exterior_roofs_30_12_72"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_5",
+      "walls_exterior_roofs_30_12_24"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_24"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_rising",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_falling_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_falling_1",
+   "displayName": "Cinderblock 30 Degree Falling Slope Wall 1",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_13",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_falling_1",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_61",
+       "N": "walls_exterior_roofs_30_11_64"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_13",
+       "N": "walls_exterior_roofs_30_13_16"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_13",
+       "N": "walls_exterior_roofs_30_12_16"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_13",
+       "N": "walls_exterior_roofs_30_11_16"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_61",
+       "N": "walls_exterior_roofs_30_12_64"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_13",
+      "walls_exterior_roofs_30_12_16"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_16"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_falling",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_falling_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_falling_2",
+   "displayName": "Cinderblock 30 Degree Falling Slope Wall 2",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_12",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_falling_2",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_60",
+       "N": "walls_exterior_roofs_30_11_65"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_12",
+       "N": "walls_exterior_roofs_30_13_17"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_12",
+       "N": "walls_exterior_roofs_30_12_17"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_12",
+       "N": "walls_exterior_roofs_30_11_17"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_60",
+       "N": "walls_exterior_roofs_30_12_65"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_12",
+      "walls_exterior_roofs_30_12_17"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_falling",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_falling_3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_falling_3",
+   "displayName": "Cinderblock 30 Degree Falling Slope Wall 3",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_11",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_falling_3",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_59",
+       "N": "walls_exterior_roofs_30_11_66"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_11",
+       "N": "walls_exterior_roofs_30_13_18"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_11",
+       "N": "walls_exterior_roofs_30_12_18"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_11",
+       "N": "walls_exterior_roofs_30_11_18"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_59",
+       "N": "walls_exterior_roofs_30_12_66"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_11",
+      "walls_exterior_roofs_30_12_18"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_11"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_18"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_falling",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_falling_4",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_falling_4",
+   "displayName": "Cinderblock 30 Degree Falling Slope Wall 4",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_10",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_falling_4",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_58",
+       "N": "walls_exterior_roofs_30_11_67"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_10",
+       "N": "walls_exterior_roofs_30_13_19"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_10",
+       "N": "walls_exterior_roofs_30_12_19"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_10",
+       "N": "walls_exterior_roofs_30_11_19"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_58",
+       "N": "walls_exterior_roofs_30_12_67"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_10",
+      "walls_exterior_roofs_30_12_19"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_falling",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_falling_5",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_falling_5",
+   "displayName": "Cinderblock 30 Degree Falling Slope Wall 5",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_9",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_falling_5",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_57",
+       "N": "walls_exterior_roofs_30_11_68"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_9",
+       "N": "walls_exterior_roofs_30_13_20"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_9",
+       "N": "walls_exterior_roofs_30_12_20"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_9",
+       "N": "walls_exterior_roofs_30_11_20"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_57",
+       "N": "walls_exterior_roofs_30_12_68"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_9",
+      "walls_exterior_roofs_30_12_20"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_20"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_falling",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_falling_6",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_falling_6",
+   "displayName": "Cinderblock 30 Degree Falling Slope Wall 6",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_8",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_falling_6",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_56",
+       "N": "walls_exterior_roofs_30_11_69"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_8",
+       "N": "walls_exterior_roofs_30_13_21"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_8",
+       "N": "walls_exterior_roofs_30_12_21"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_8",
+       "N": "walls_exterior_roofs_30_11_21"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_56",
+       "N": "walls_exterior_roofs_30_12_69"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_8",
+      "walls_exterior_roofs_30_12_21"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_21"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_falling",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_end_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_end_1",
+   "displayName": "Cinderblock 30 Degree Roof End 1",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_32",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_end_1",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_80",
+       "N": "walls_exterior_roofs_30_11_88"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_32",
+       "N": "walls_exterior_roofs_30_13_40"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_32",
+       "N": "walls_exterior_roofs_30_12_40"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_32",
+       "N": "walls_exterior_roofs_30_11_40"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_80",
+       "N": "walls_exterior_roofs_30_12_88"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_32",
+      "walls_exterior_roofs_30_12_40"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_40"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_end",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_end_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_end_2",
+   "displayName": "Cinderblock 30 Degree Roof End 2",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_33",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_end_2",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_81",
+       "N": "walls_exterior_roofs_30_11_89"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_33",
+       "N": "walls_exterior_roofs_30_13_41"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_33",
+       "N": "walls_exterior_roofs_30_12_41"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_33",
+       "N": "walls_exterior_roofs_30_11_41"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_81",
+       "N": "walls_exterior_roofs_30_12_89"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_33",
+      "walls_exterior_roofs_30_12_41"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_end",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_end_3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_end_3",
+   "displayName": "Cinderblock 30 Degree Roof End 3",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_34",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_end_3",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_82",
+       "N": "walls_exterior_roofs_30_11_90"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_34",
+       "N": "walls_exterior_roofs_30_13_42"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_34",
+       "N": "walls_exterior_roofs_30_12_42"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_34",
+       "N": "walls_exterior_roofs_30_11_42"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_82",
+       "N": "walls_exterior_roofs_30_12_90"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_34",
+      "walls_exterior_roofs_30_12_42"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_42"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_end",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_end_4",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_end_4",
+   "displayName": "Cinderblock 30 Degree Roof End 4",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_35",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_end_4",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_83",
+       "N": "walls_exterior_roofs_30_11_91"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_35",
+       "N": "walls_exterior_roofs_30_13_43"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_35",
+       "N": "walls_exterior_roofs_30_12_43"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_35",
+       "N": "walls_exterior_roofs_30_11_43"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_83",
+       "N": "walls_exterior_roofs_30_12_91"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_35",
+      "walls_exterior_roofs_30_12_43"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_end",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_end_5",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_end_5",
+   "displayName": "Cinderblock 30 Degree Roof End 5",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_36",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_end_5",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_84",
+       "N": "walls_exterior_roofs_30_11_92"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_36",
+       "N": "walls_exterior_roofs_30_13_44"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_36",
+       "N": "walls_exterior_roofs_30_12_44"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_36",
+       "N": "walls_exterior_roofs_30_11_44"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_84",
+       "N": "walls_exterior_roofs_30_12_92"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_36",
+      "walls_exterior_roofs_30_12_44"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_44"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_end",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tan_cinderblock.tan_cinderblock_roof30_end_6",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tan_cinderblock_roof30_end_6",
+   "displayName": "Cinderblock 30 Degree Roof End 6",
+   "tooltipKey": "Tooltip_KBW_Shared_CinderblockWall",
+   "category": "Walls",
+   "subcategory": "Cinderblock",
+   "material": "Concrete",
+   "iconSprite": "walls_exterior_roofs_30_12_37",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.tan_cinderblock.roof30_end_6",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBrown": {
+       "W": "walls_exterior_roofs_30_11_85",
+       "N": "walls_exterior_roofs_30_11_93"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_13_37",
+       "N": "walls_exterior_roofs_30_13_45"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_12_37",
+       "N": "walls_exterior_roofs_30_12_45"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_roofs_30_11_37",
+       "N": "walls_exterior_roofs_30_11_45"
+      },
+      "PaintGrey+PaintBlack": {
+       "W": "walls_exterior_roofs_30_12_85",
+       "N": "walls_exterior_roofs_30_12_93"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_12_37",
+      "walls_exterior_roofs_30_12_45"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_12_45"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.tan_cinderblock.tan_cinderblock_roof30_end",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_walls_tan_cinderblock_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_12"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,955 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.fireplace_jambs.gray_brick_left",
+   "translationKey": "IGUI_KBWVE_Buildable_GrayBrickJamb_Left",
+   "displayName": "Grey Brick Side Jamb (Left)",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_GrayBrickJamb",
+   "category": "Architecture Plus",
+   "subcategory": "Fireplace Jambs",
+   "material": "Brick",
+   "iconSprite": "fixtures_fireplaces_01_16",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_fireplaces_01_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_fireplaces_01_16"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "clay_bricks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildCairn",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.fireplace_jambs.gray_brick_middle",
+   "translationKey": "IGUI_KBWVE_Buildable_GrayBrickJamb_Middle",
+   "displayName": "Grey Brick Middle Jamb",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_GrayBrickJamb",
+   "category": "Architecture Plus",
+   "subcategory": "Fireplace Jambs",
+   "material": "Brick",
+   "iconSprite": "fixtures_fireplaces_01_17",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_fireplaces_01_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_fireplaces_01_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "clay_bricks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildCairn",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.fireplace_jambs.gray_brick_right",
+   "translationKey": "IGUI_KBWVE_Buildable_GrayBrickJamb_Right",
+   "displayName": "Grey Brick Side Jamb (Right)",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_GrayBrickJamb",
+   "category": "Architecture Plus",
+   "subcategory": "Fireplace Jambs",
+   "material": "Brick",
+   "iconSprite": "fixtures_fireplaces_01_18",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_fireplaces_01_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_fireplaces_01_18"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "clay_bricks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildCairn",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.survival.chimney.stone",
+   "translationKey": "IGUI_KBWVE_Buildable_Chimney_Stone",
+   "displayName": "Stone Chimney",
+   "tooltipKey": "Tooltip_KBW_Shared_InteriorTrim",
+   "category": "Survival",
+   "subcategory": "Fireplace",
+   "material": "Stone",
+   "iconSprite": "fixtures_fireplaces_01_64",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_fireplaces_01_64"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 8
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 160,
+      "timedAction": "BuildCairn",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.survival.chimney.gray_brick",
+   "translationKey": "IGUI_KBWVE_Buildable_Chimney_GrayBrick",
+   "displayName": "Grey Brick Chimney",
+   "tooltipKey": "Tooltip_KBW_Shared_InteriorTrim",
+   "category": "Survival",
+   "subcategory": "Fireplace",
+   "material": "Brick",
+   "iconSprite": "fixtures_fireplaces_01_65",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_fireplaces_01_65"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "clay_bricks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 10
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 160,
+      "timedAction": "BuildCairn",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.survival.chimney.brown_brick",
+   "translationKey": "IGUI_KBWVE_Buildable_Chimney_BrownBrick",
+   "displayName": "Brown Brick Chimney",
+   "tooltipKey": "Tooltip_KBW_Shared_InteriorTrim",
+   "category": "Survival",
+   "subcategory": "Fireplace",
+   "material": "Brick",
+   "iconSprite": "fixtures_fireplaces_01_66",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_fireplaces_01_66"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "clay_bricks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 10
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 160,
+      "timedAction": "BuildCairn",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.survival.chimney.orange_brick",
+   "translationKey": "IGUI_KBWVE_Buildable_Chimney_OrangeBrick",
+   "displayName": "Orange Brick Chimney",
+   "tooltipKey": "Tooltip_KBW_Shared_InteriorTrim",
+   "category": "Survival",
+   "subcategory": "Fireplace",
+   "material": "Brick",
+   "iconSprite": "fixtures_fireplaces_01_67",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_fireplaces_01_67"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "clay_bricks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 10
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 160,
+      "timedAction": "BuildCairn",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.survival.chimney.pale_stone",
+   "translationKey": "IGUI_KBWVE_Buildable_Chimney_PaleStone",
+   "displayName": "Pale Stone Chimney",
+   "tooltipKey": "Tooltip_KBW_Shared_InteriorTrim",
+   "category": "Survival",
+   "subcategory": "Fireplace",
+   "material": "Stone",
+   "iconSprite": "fixtures_fireplaces_01_68",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_fireplaces_01_68"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 8
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 160,
+      "timedAction": "BuildCairn",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.survival.chimney.tan_stone",
+   "translationKey": "IGUI_KBWVE_Buildable_Chimney_TanStone",
+   "displayName": "Tan Stone Chimney",
+   "tooltipKey": "Tooltip_KBW_Shared_InteriorTrim",
+   "category": "Survival",
+   "subcategory": "Fireplace",
+   "material": "Stone",
+   "iconSprite": "fixtures_fireplaces_01_69",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_fireplaces_01_69"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 8
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 160,
+      "timedAction": "BuildCairn",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.survival.chimney.white_stone",
+   "translationKey": "IGUI_KBWVE_Buildable_Chimney_WhiteStone",
+   "displayName": "White Stone Chimney",
+   "tooltipKey": "Tooltip_KBW_Shared_InteriorTrim",
+   "category": "Survival",
+   "subcategory": "Fireplace",
+   "material": "Stone",
+   "iconSprite": "fixtures_fireplaces_01_70",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_fireplaces_01_70"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 8
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 160,
+      "timedAction": "BuildCairn",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  }
+ ]
+}

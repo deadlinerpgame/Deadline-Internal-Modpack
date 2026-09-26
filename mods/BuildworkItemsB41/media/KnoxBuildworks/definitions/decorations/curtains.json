@@ -1,0 +1,2000 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_01_4",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_01_4",
+   "displayName": "Long Beige Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_01_4",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_01_12",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_01_12",
+   "displayName": "Long White Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_01_12",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_01_28",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_01_28",
+   "displayName": "Blue Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_01_28",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_01_36",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_01_36",
+   "displayName": "Pink Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_01_36",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_39"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_01_44",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_01_44",
+   "displayName": "Brown Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_01_44",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_47"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_01_52",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_01_52",
+   "displayName": "White Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_01_52",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_01_60",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_01_60",
+   "displayName": "Beige Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_01_60",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_60"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_62"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_61"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_63"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_01_68",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_01_68",
+   "displayName": "Green Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_01_68",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_68"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_70"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_69"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_71"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_01_76",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_01_76",
+   "displayName": "Black Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_01_76",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_76"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_78"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_77"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_79"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_01_84",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_01_84",
+   "displayName": "Grey Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_01_84",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_84"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_86"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_85"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_87"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_01_92",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_01_92",
+   "displayName": "Grey Long Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_01_92",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_92"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_94"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_93"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_01_95"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_02_4",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_02_4",
+   "displayName": "Small White Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_02_4",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_02_12",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_02_12",
+   "displayName": "Small Green Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_02_12",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_02_20",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_02_20",
+   "displayName": "Small Bordeaux Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_02_20",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_23"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.curtains.fixtures_windows_curtains_02_28",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_fixtures_windows_curtains_02_28",
+   "displayName": "Small Pearl Curtain",
+   "tooltipKey": "Tooltip_KBW_Shared_Curtain",
+   "category": "Decorations",
+   "subcategory": "Curtains",
+   "material": "Fabric",
+   "iconSprite": "fixtures_windows_curtains_02_28",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_curtains_02_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  }
+ ]
+}

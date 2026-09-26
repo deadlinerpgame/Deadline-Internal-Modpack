@@ -1,0 +1,312 @@
+{
+ "schemaVersion": 1,
+ "materialGroups": {
+  "kbwve.appliance.laundry": [
+   {
+    "id": "welding_mask",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:weldingmask"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "screwdriver",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:screwdriver"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "wrench",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:wrench"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "torch_fuel",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.BlowTorch"
+    ],
+    "uses": 5
+   },
+   {
+    "id": "welding_rods",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.WeldingRods"
+    ],
+    "uses": 5
+   },
+   {
+    "id": "sheet_metal",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.SheetMetal"
+    ],
+    "amount": 8
+   },
+   {
+    "id": "electronics",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.ElectronicsScrap"
+    ],
+    "amount": 30
+   },
+   {
+    "id": "electric_wire",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.ElectricWire"
+    ],
+    "amount": 4
+   },
+   {
+    "id": "screws",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.Screws"
+    ],
+    "amount": 20
+   }
+  ]
+ },
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.appliances.laundry.combination_washer_dryer",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_CombinationWasherDryer",
+   "displayName": "Combination Washer-Dryer",
+   "tooltipKey": "Tooltip_KBW_Shared_LaundryAppliance",
+   "subcategory": "Laundry",
+   "iconSprite": "appliances_laundry_01_1",
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_laundry_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_laundry_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_laundry_01_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_laundry_01_2"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.laundry",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.laundry.washing_machine",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_WashingMachine",
+   "displayName": "Washing Machine",
+   "tooltipKey": "Tooltip_KBW_Shared_LaundryAppliance",
+   "subcategory": "Laundry",
+   "iconSprite": "appliances_laundry_01_5",
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_laundry_01_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_laundry_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_laundry_01_7"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_laundry_01_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.laundry",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.laundry.clothing_dryer",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_ClothingDryer",
+   "displayName": "Clothing Dryer",
+   "tooltipKey": "Tooltip_KBW_Shared_LaundryAppliance",
+   "subcategory": "Laundry",
+   "iconSprite": "appliances_laundry_01_13",
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_laundry_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_laundry_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_laundry_01_15"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_laundry_01_14"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.laundry",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  }
+ ]
+}

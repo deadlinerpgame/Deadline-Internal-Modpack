@@ -1,0 +1,420 @@
+{
+ "schemaVersion": 1,
+ "source": "Project Zomboid Build 42 generated entity scripts",
+ "category": "Stairs",
+ "buildables": [
+  {
+   "id": "kbw.vanilla.log_stairs",
+   "displayName": "Log Stairs",
+   "translationKey": "IGUI_KBW_Vanilla_Log_Stairs",
+   "tooltipKey": "Tooltip_craft_stairsDesc",
+   "category": "Stairs",
+   "subcategory": "Stairs",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "stairs"
+   ],
+   "placement": {
+    "kind": "stairs"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "crafted_02_104",
+      "W": "crafted_02_98"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_02_104",
+            "crafted_02_105",
+            "crafted_02_106"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_02_98"
+           ],
+           [
+            "crafted_02_97"
+           ],
+           [
+            "crafted_02_96"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 150,
+     "skillBaseHealth": 50,
+     "object": {
+      "onCreate": "BuildRecipeCode.stairs.OnCreate",
+      "onIsValid": "BuildRecipeCode.stairs.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 12,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "ChopTree",
+         "Saw",
+         "CrudeSaw"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeLight",
+         "IsNotDull"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 12,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.Log_Stairs"
+    }
+   ],
+   "iconName": "Build_StairsLogs",
+   "_b41NeedsTilesets": [
+    "crafted_02"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.metal_stairs",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Stairs",
+   "translationKey": "IGUI_KBW_Vanilla_Metal_Stairs",
+   "tooltipKey": "Tooltip_craft_stairsDesc",
+   "category": "Stairs",
+   "subcategory": "Stairs",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "stairs"
+   ],
+   "placement": {
+    "kind": "stairs"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "constructedobjects_01_90",
+      "W": "constructedobjects_01_98"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_90",
+            "constructedobjects_01_89",
+            "constructedobjects_01_88"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_98"
+           ],
+           [
+            "constructedobjects_01_97"
+           ],
+           [
+            "constructedobjects_01_96"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 150,
+     "skillBaseHealth": 50,
+     "object": {
+      "onCreate": "BuildRecipeCode.stairs.OnCreate",
+      "onIsValid": "BuildRecipeCode.stairs.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.MetalBar"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 6,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 50
+      }
+     },
+     "_b41Entity": "Base.Metal_Stairs"
+    }
+   ],
+   "iconName": "Build_StairsMetal"
+  },
+  {
+   "id": "kbw.vanilla.wood_stairs",
+   "displayName": "Wooden Stairs",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_Stairs",
+   "tooltipKey": "Tooltip_craft_stairsDesc",
+   "category": "Stairs",
+   "subcategory": "Stairs",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "stairs"
+   ],
+   "placement": {
+    "kind": "stairs"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_02_90",
+      "W": "carpentry_02_98"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_90",
+            "carpentry_02_89",
+            "carpentry_02_88"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_98"
+           ],
+           [
+            "carpentry_02_97"
+           ],
+           [
+            "carpentry_02_96"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 150,
+     "skillBaseHealth": 50,
+     "object": {
+      "onCreate": "BuildRecipeCode.stairs.OnCreate",
+      "onIsValid": "BuildRecipeCode.stairs.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 13,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 8,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 6
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 60
+      }
+     },
+     "_b41Entity": "Base.Wood_Stairs"
+    }
+   ],
+   "iconName": "Build_StairsWood"
+  }
+ ]
+}

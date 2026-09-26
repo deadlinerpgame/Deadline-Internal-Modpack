@@ -2,7 +2,7 @@ local UI
 chosenpoint = 1
 opened = 0
 
-local spawnpointnames = {"Airport Camp", "Police Station Camp", "Beach Camp", "Boat Camp"}
+local spawnpointnames = {"#1", "#2", "#3", "#4"}
 
 local function mapa(button, args)
     UI["image1"]:setPath("media/ui/MapA.png")
@@ -31,16 +31,16 @@ local function spawn()
         playerObj:setY(5423);
         playerObj:setZ(0);
     elseif chosenpoint == 2 then
-        playerObj:setX(11167);
-        playerObj:setY(2271);
-        playerObj:setZ(1);
+        playerObj:setX(4872);
+        playerObj:setY(6678);
+        playerObj:setZ(0);
     elseif chosenpoint == 3 then
-        playerObj:setX(10478);
-        playerObj:setY(3863);
+        playerObj:setX(1749);
+        playerObj:setY(129);
         playerObj:setZ(0);
     elseif chosenpoint == 4 then
-        playerObj:setX(16477);
-        playerObj:setY(5744);
+        playerObj:setX(7042);
+        playerObj:setY(5227);
         playerObj:setZ(0);
     end
 	playerObj:setLx(playerObj:getX());
@@ -60,7 +60,7 @@ local function onCreateUI()
     UI:addImage("image1", "media/ui/maptest.png")
     UI:nextLine();
 
-    UI:addButton("button1", spawnpointnames[1], mapa);
+
     UI:addButton("button2", spawnpointnames[2], mapb);
     UI:addButton("button3", spawnpointnames[3], mapc);
     UI:addButton("button4", spawnpointnames[4], mapd);
@@ -74,11 +74,11 @@ end
 
 
 local TargetTileA = {
-    ['aerx_testscifi_52']=true,
+    ['deadline02_17']=true,
 }
 
 local TargetTileB = {
-    ['aerx_testscifi_53']=true,
+    ['deadline_respawnpoints_03']=true,
 }
 
 

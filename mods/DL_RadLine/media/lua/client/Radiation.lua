@@ -48,37 +48,31 @@ function IsSuitSetEquipped(suitSet)
     local hasRequired = {}
     local hasOptional = false
 
-    -- Check for required items
     for _, reqItem in ipairs(suitSet.required) do
-        hasRequired[reqItem] = false -- Initialize all required items as not found
+        hasRequired[reqItem] = false
     end
 
-    -- Iterate through worn items to match required and optional items
     for i = 0, inv:size() - 1 do
         local wornItem = inv:getItemByIndex(i)
         if wornItem then
             local Type = wornItem:getFullType()
 
-            -- Check if it's a required item
             if hasRequired[Type] ~= nil then
                 hasRequired[Type] = true
             end
 
-            -- Check if it's an optional item
             if suitSet.optional and table.contains(suitSet.optional, Type) then
                 hasOptional = true
             end
         end
     end
 
-    -- Ensure all required items are equipped
     for _, isEquipped in pairs(hasRequired) do
         if not isEquipped then
-            return false -- Missing a required item
+            return false
         end
     end
 
-    -- Optional items are not mandatory but may affect logic if needed
     return true
 end
 
@@ -123,7 +117,7 @@ function IsHazmatEquipped()
         end
         for setName, suitSet in pairs(SuitSets) do
             if IsSuitSetEquipped(suitSet) then
-                MF.getMoodle("MoodleHazmat"):setValue(0.1) -- Set Moodle value
+                MF.getMoodle("MoodleHazmat"):setValue(0.1)
                 return true
             end
         end
@@ -151,14 +145,12 @@ function GeigerCounter()
     local radData = modData.RadPlayerData;
     local primaryItem = player:getPrimaryHandItem()
     local secondaryItem = player:getSecondaryHandItem()
-    --print(radData.GCountType)
 
     if not modData or not radData then return end;
 
     if radData.GCountType == 1 then
         Counter = Counter + 1   
         if Counter >= Severity then
-            --print("Low")
             if primaryItem and primaryItem:getType() == "GeigerCounter" or secondaryItem and secondaryItem:getType() == "GeigerCounter"   then
                 if ZombRand(1,5) == 1 then
                     getSoundManager():PlaySound("geigershort", false, 0):setVolume(1)
@@ -177,7 +169,6 @@ function GeigerCounter()
     elseif radData.GCountType == 2 then
         Counter = Counter + 1   
         if Counter >= Severity then
-            --print("Med")
             if primaryItem and primaryItem:getType() == "GeigerCounter" or secondaryItem and secondaryItem:getType() == "GeigerCounter"   then
                 if ZombRand(1,5) == 1 then
                     getSoundManager():PlaySound("geigershort", false, 0):setVolume(1)
@@ -196,7 +187,6 @@ function GeigerCounter()
     elseif radData.GCountType == 3 then
         Counter = Counter + 1   
         if Counter >= Severity then
-            --print("High")
             if primaryItem and primaryItem:getType() == "GeigerCounter" or secondaryItem and secondaryItem:getType() == "GeigerCounter"   then
                 if ZombRand(1,5) == 1 then
                     getSoundManager():PlaySound("geigershort", false, 0):setVolume(1)
@@ -215,7 +205,6 @@ function GeigerCounter()
     elseif radData.GCountType == 4 then
         Counter = Counter + 1   
         if Counter >= Severity then
-            --print("DEATH")
             if primaryItem and primaryItem:getType() == "GeigerCounter" or secondaryItem and secondaryItem:getType() == "GeigerCounter"   then
                 if ZombRand(1,5) == 1 then
                     getSoundManager():PlaySound("geigershort", false, 0):setVolume(1)
@@ -258,8 +247,6 @@ function isInRadiationZone()
         radData.GCountType = 0;
     end
 	
-    --print(MF.getMoodle("MoodleRad"):getValue())
-    --print(RadValueNoise)
     if RadValue < 1 then
         MF.getMoodle("MoodleRad"):setValue(RadValue + 0.005);
     end
@@ -303,19 +290,16 @@ function isInRadiationZone()
 			endY = w.startY
 		end
 
--- Calculate the minimum and maximum X and Y values for the original rectangle
 local minX = math.min(startX, endX)
 local maxX = math.max(startX, endX)
 local minY = math.min(startY, endY)
 local maxY = math.max(startY, endY)
 
--- Calculate the expanded boundaries for the 2-tile boundary
 local expandedMinX_2 = minX - 2
 local expandedMaxX_2 = maxX + 2
 local expandedMinY_2 = minY - 2
 local expandedMaxY_2 = maxY + 2
 
--- Calculate the expanded boundaries for the 5-tile boundary
 local expandedMinX_5 = minX - 5
 local expandedMaxX_5 = maxX + 5
 local expandedMinY_5 = minY - 5
@@ -325,47 +309,40 @@ local playerX = player:getX()
 local playerY = player:getY()
 
 if playerX >= minX and playerX <= maxX and playerY >= minY and playerY <= maxY then
-    -- Player is inside the original rectangle
     isToxic = true
     isWithinZone = true
 
     local intensity = tonumber(radsLevel)
     if intensity == 1 then
         if IsHazmatEquipped() == true then
-            --print("Hazzy!") -- No Hazmat damage on level 1
         elseif IsGasMaskEquipped() == true then
-            --print("Hazzy!") -- No Gasmask damage on level 1
         else
-            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00888889) -- 15 minutes
+            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00888889)
   
         end
         radData.GCountType = 1
     elseif intensity == 2 then
         if IsHazmatEquipped() == true then
-            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00222222) -- 1 hour
-            --print("Hazzy!")
+            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00222222)
         elseif IsGasMaskEquipped() == true then
-            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00666667) -- 20 minutes
-            --print("Hazzy!")
+            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00666667)
         else
-            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.02666667) -- 5 minutes
+            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.02666667)
         end
         radData.GCountType = 2
 
     elseif intensity == 3 then
         if IsHazmatEquipped() == true then
-            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00666667) -- 20 minutes
-            --print("Hazzy!")
+            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00666667)
         elseif IsGasMaskEquipped() == true then
-            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.02666667) -- 5 minutes
-            --print("Hazzy!")
+            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.02666667)
         else
-            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.13333333) -- 1 minute
+            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.13333333)
         end
         radData.GCountType = 3
 
     elseif intensity == 4 then
-            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.13333333) -- 1 minute
+            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.13333333)
             radData.GCountType = 4
 
     end
@@ -373,34 +350,29 @@ if playerX >= minX and playerX <= maxX and playerY >= minY and playerY <= maxY t
 
 elseif (playerX >= expandedMinX_2 and playerX <= expandedMaxX_2 and playerY >= expandedMinY_2 and playerY <= expandedMaxY_2) and
        not (playerX >= minX and playerX <= maxX and playerY >= minY and playerY <= maxY) then
-    -- Player is inside the 2-tile boundary
     isToxic = true
     isWithinZone = true
 
     if intensity == 2 then
         if IsHazmatEquipped() == true then
-            --print("Hazzy!")
         elseif IsGasMaskEquipped() == true then
-            --print("Hazzy!")
         else
-            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00888889) -- 15 minutes
+            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00888889)
         end
         radData.GCountType = 1
 
     elseif intensity == 3 then
         if IsHazmatEquipped() == true then
-            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00222222) -- 1 hour
-            --print("Hazzy!")
+            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00222222)
         elseif IsGasMaskEquipped() == true then
-            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00666667) -- 20 minutes
-            --print("Hazzy!")
+            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00666667)
         else
-            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.02666667) -- 5 minutes
+            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.02666667)
         end
         radData.GCountType = 2
 
     elseif intensity == 4 then
-            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.13333333) -- 1 minute
+            MF.getMoodle("MoodleRad"):setValue(RadValue - 0.13333333)
             radData.GCountType = 4
     end
     break
@@ -411,19 +383,16 @@ elseif (playerX >= expandedMinX_5 and playerX <= expandedMaxX_5 and playerY >= e
        not (playerX >= minX and playerX <= maxX and playerY >= minY and playerY <= maxY) then
         isToxic = true
         isWithinZone = true
-    -- Player is inside the 5-tile boundary
 if intensity == 3 then
     if IsHazmatEquipped() == true then
-        --print("Hazzy!")
     elseif IsGasMaskEquipped() == true then
-        --print("Hazzy!")
     else
-        MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00888889) -- 15 minutes
+        MF.getMoodle("MoodleRad"):setValue(RadValue - 0.00888889)
     end
     radData.GCountType = 1
 
 elseif intensity == 4 then
-    MF.getMoodle("MoodleRad"):setValue(RadValue - 0.02666667) -- 5 minutes
+    MF.getMoodle("MoodleRad"):setValue(RadValue - 0.02666667)
     radData.GCountType = 4
     end
     break
@@ -458,7 +427,6 @@ function UpFrame()
 end
 
 function drawSmoke()
-    --print(RadValueNoise)
     if RadValueNoise == nil then
         RadValueNoise = 0
     end
@@ -485,7 +453,6 @@ function drawSmoke()
             local h   = getPlayerScreenHeight(1)
             UIManager.DrawTexture(texture, 0, 0, w, h, lvl)
         end
-        --print(RadValueNoise);
         UpFrame();
     end
 end
@@ -517,8 +484,6 @@ function createModData()
     end
     MF.getMoodle("MoodleRad"):setValue(radData.MRadValue)
     MF.getMoodle("MoodleRadRes"):setValue(radData.MRadResValue)
-    --print(radData.MRadValue)
-    --print(radData.MRadResValue)
 end
 
 function ResetRads()

@@ -1,0 +1,983 @@
+{
+ "schemaVersion": 1,
+ "materialGroups": {
+  "kbwve.appliance.plumbingFixture": [
+   {
+    "id": "welding_mask",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:weldingmask"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "screwdriver",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:screwdriver"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "wrench",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:wrench"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "torch_fuel",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.BlowTorch"
+    ],
+    "uses": 5
+   },
+   {
+    "id": "welding_rods",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.WeldingRods"
+    ],
+    "uses": 5
+   },
+   {
+    "id": "lead_pipe",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.LeadPipe"
+    ],
+    "amount": 2
+   },
+   {
+    "id": "sheet_metal",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.SheetMetal"
+    ],
+    "amount": 5
+   },
+   {
+    "id": "small_sheet_metal",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.SmallSheetMetal"
+    ],
+    "amount": 5
+   }
+  ],
+  "kbwve.appliance.bathtub": [
+   {
+    "id": "welding_mask",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:weldingmask"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "screwdriver",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:screwdriver"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "wrench",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:wrench"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "torch_fuel",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.BlowTorch"
+    ],
+    "uses": 10
+   },
+   {
+    "id": "welding_rods",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.WeldingRods"
+    ],
+    "uses": 10
+   },
+   {
+    "id": "lead_pipe",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.LeadPipe"
+    ],
+    "amount": 3
+   },
+   {
+    "id": "sheet_metal",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.SheetMetal"
+    ],
+    "amount": 8
+   },
+   {
+    "id": "small_sheet_metal",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.SmallSheetMetal"
+    ],
+    "amount": 8
+   }
+  ]
+ },
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.appliances.bathroom.fancy_toilet",
+   "extends": "kbwve.appliance.plumbed",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_FancyToilet",
+   "displayName": "Fancy Toilet",
+   "tooltipKey": "Tooltip_KBW_Shared_Toilet",
+   "iconSprite": "fixtures_bathroom_01_1",
+   "group": {
+    "id": "kbwve.appliances.toilets",
+    "translationKey": "IGUI_KBWVE_Group_Toilets",
+    "level": 1
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.plumbingFixture",
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.bathroom.low_toilet",
+   "extends": "kbwve.appliance.plumbed",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_LowToilet",
+   "displayName": "Low Toilet",
+   "tooltipKey": "Tooltip_KBW_Shared_Toilet",
+   "iconSprite": "fixtures_bathroom_01_5",
+   "group": {
+    "id": "kbwve.appliances.toilets",
+    "translationKey": "IGUI_KBWVE_Group_Toilets",
+    "level": 2
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.plumbingFixture",
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.bathroom.deluxe_shower",
+   "extends": "kbwve.appliance.plumbed",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_DeluxeShower",
+   "displayName": "Deluxe Shower",
+   "tooltipKey": "Tooltip_KBW_Shared_Shower",
+   "iconSprite": "fixtures_bathroom_01_32",
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.plumbingFixture",
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.bathroom.deluxe_bathtub",
+   "extends": "kbwve.appliance.plumbed",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_DeluxeBathtub",
+   "displayName": "Deluxe Bathtub",
+   "tooltipKey": "Tooltip_KBW_Shared_Bathtub",
+   "iconSprite": "fixtures_bathroom_01_27",
+   "construction": {
+    "xp": {
+     "MetalWelding": 60
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_26",
+            "fixtures_bathroom_01_27"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_25"
+           ],
+           [
+            "fixtures_bathroom_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_54",
+            "fixtures_bathroom_01_55"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_53"
+           ],
+           [
+            "fixtures_bathroom_01_52"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.bathtub",
+      "skills": {
+       "MetalWelding": 6
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.bathroom.beige_sink",
+   "extends": "kbwve.appliance.plumbed",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_BeigeSink",
+   "displayName": "Beige Sink",
+   "tooltipKey": "Tooltip_KBW_Shared_Sink",
+   "iconSprite": "fixtures_sinks_01_21",
+   "group": {
+    "id": "kbwve.appliances.sinks",
+    "translationKey": "IGUI_KBWVE_Group_Sinks",
+    "level": 1
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_23"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_20"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.plumbingFixture",
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.bathroom.white_sink",
+   "extends": "kbwve.appliance.plumbed",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_WhiteSink",
+   "displayName": "White Sink",
+   "tooltipKey": "Tooltip_KBW_Shared_Sink",
+   "iconSprite": "fixtures_sinks_01_1",
+   "group": {
+    "id": "kbwve.appliances.sinks",
+    "translationKey": "IGUI_KBWVE_Group_Sinks",
+    "level": 2
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_0"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.plumbingFixture",
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.bathroom.industrial_sink",
+   "extends": "kbwve.appliance.plumbed",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_IndustrialSink",
+   "displayName": "Industrial Sink",
+   "tooltipKey": "Tooltip_KBW_Shared_Sink",
+   "iconSprite": "fixtures_sinks_01_4",
+   "group": {
+    "id": "kbwve.appliances.sinks",
+    "translationKey": "IGUI_KBWVE_Group_Sinks",
+    "level": 3
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.plumbingFixture",
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.bathroom.dark_industrial_sink",
+   "extends": "kbwve.appliance.plumbed",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_DarkIndustrialSink",
+   "displayName": "Dark Industrial Sink",
+   "tooltipKey": "Tooltip_KBW_Shared_Sink",
+   "iconSprite": "fixtures_sinks_01_16",
+   "group": {
+    "id": "kbwve.appliances.sinks",
+    "translationKey": "IGUI_KBWVE_Group_Sinks",
+    "level": 4
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.plumbingFixture",
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.bathroom.chrome_sink",
+   "extends": "kbwve.appliance.plumbed",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_ChromeSink",
+   "displayName": "Chrome Sink",
+   "tooltipKey": "Tooltip_KBW_Shared_Sink",
+   "iconSprite": "fixtures_sinks_01_8",
+   "group": {
+    "id": "kbwve.appliances.sinks",
+    "translationKey": "IGUI_KBWVE_Group_Sinks",
+    "level": 5
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.plumbingFixture",
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.bathroom.white_standing_sink",
+   "extends": "kbwve.appliance.plumbed",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_WhiteStandingSink",
+   "displayName": "White Standing Sink",
+   "tooltipKey": "Tooltip_KBW_Shared_Sink",
+   "iconSprite": "fixtures_sinks_01_13",
+   "group": {
+    "id": "kbwve.appliances.sinks",
+    "translationKey": "IGUI_KBWVE_Group_Sinks",
+    "level": 6
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_28"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.plumbingFixture",
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.bathroom.white_hanging_sink",
+   "extends": "kbwve.appliance.plumbed",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_WhiteHangingSink",
+   "displayName": "White Hanging Sink",
+   "tooltipKey": "Tooltip_KBW_Shared_Sink",
+   "iconSprite": "fixtures_sinks_01_15",
+   "group": {
+    "id": "kbwve.appliances.sinks",
+    "translationKey": "IGUI_KBWVE_Group_Sinks",
+    "level": 7
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_15"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_31"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_sinks_01_30"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.plumbingFixture",
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  }
+ ]
+}

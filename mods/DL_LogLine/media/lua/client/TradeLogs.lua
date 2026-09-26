@@ -5,11 +5,6 @@ if isServer() then return end;
 
 
 
---[[
-        This logs items given and received via a trade. 
-        As it is clientside based, it will create 2 logs, one for each party in the search.
-        If there is a discrepancy in the two entries, there is a problem.
---]] 
 local original_ISFinalizeDealAction_perform = ISFinalizeDealAction.perform;
 function ISFinalizeDealAction:perform()
     original_ISFinalizeDealAction_perform(self);

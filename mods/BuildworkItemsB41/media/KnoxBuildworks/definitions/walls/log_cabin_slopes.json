@@ -1,0 +1,723 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.walls.log_cabin.slope_small_left",
+   "translationKey": "IGUI_KBWVE_Buildable_LogCabin_SlopeSmallLeft",
+   "displayName": "Log Cabin Wall Slope (Small, Left)",
+   "tooltipKey": "Tooltip_craft_wallLogDesc",
+   "category": "Walls",
+   "subcategory": "Log Cabin Walls",
+   "material": "Wood",
+   "iconSprite": "walls_logs_16",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_29"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "logs",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Log"
+        ],
+        "amount": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 10
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.log_cabin.slope_medium_left",
+   "translationKey": "IGUI_KBWVE_Buildable_LogCabin_SlopeMediumLeft",
+   "displayName": "Log Cabin Wall Slope (Medium, Left)",
+   "tooltipKey": "Tooltip_craft_wallLogDesc",
+   "category": "Walls",
+   "subcategory": "Log Cabin Walls",
+   "material": "Wood",
+   "iconSprite": "walls_logs_17",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_28"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "logs",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Log"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "bindings",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "amount": 2,
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 10
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.log_cabin.slope_large_left",
+   "translationKey": "IGUI_KBWVE_Buildable_LogCabin_SlopeLargeLeft",
+   "displayName": "Log Cabin Wall Slope (Large, Left)",
+   "tooltipKey": "Tooltip_craft_wallLogDesc",
+   "category": "Walls",
+   "subcategory": "Log Cabin Walls",
+   "material": "Wood",
+   "iconSprite": "walls_logs_18",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "logs",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Log"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "bindings",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "amount": 3,
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 10
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.log_cabin.slope_small_right",
+   "translationKey": "IGUI_KBWVE_Buildable_LogCabin_SlopeSmallRight",
+   "displayName": "Log Cabin Wall Slope (Small, Right)",
+   "tooltipKey": "Tooltip_craft_wallLogDesc",
+   "category": "Walls",
+   "subcategory": "Log Cabin Walls",
+   "material": "Wood",
+   "iconSprite": "walls_logs_24",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_21"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "logs",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Log"
+        ],
+        "amount": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 10
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.log_cabin.slope_medium_right",
+   "translationKey": "IGUI_KBWVE_Buildable_LogCabin_SlopeMediumRight",
+   "displayName": "Log Cabin Wall Slope (Medium, Right)",
+   "tooltipKey": "Tooltip_craft_wallLogDesc",
+   "category": "Walls",
+   "subcategory": "Log Cabin Walls",
+   "material": "Wood",
+   "iconSprite": "walls_logs_25",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_20"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "logs",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Log"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "bindings",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "amount": 2,
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 10
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.log_cabin.slope_large_right",
+   "translationKey": "IGUI_KBWVE_Buildable_LogCabin_SlopeLargeRight",
+   "displayName": "Log Cabin Wall Slope (Large, Right)",
+   "tooltipKey": "Tooltip_craft_wallLogDesc",
+   "category": "Walls",
+   "subcategory": "Log Cabin Walls",
+   "material": "Wood",
+   "iconSprite": "walls_logs_26",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "logs",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Log"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "bindings",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "amount": 3,
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 10
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.log_cabin.sloped",
+   "translationKey": "IGUI_KBWVE_Buildable_LogCabin_Sloped",
+   "displayName": "Log Cabin Sloped Wall",
+   "tooltipKey": "Tooltip_craft_wallLogDesc",
+   "category": "Walls",
+   "subcategory": "Log Cabin Walls",
+   "material": "Wood",
+   "iconSprite": "walls_logs_32",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "logs",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Log"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "bindings",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "amount": 3,
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 10
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.log_cabin.sloped_short",
+   "translationKey": "IGUI_KBWVE_Buildable_LogCabin_SlopedShort",
+   "displayName": "Log Cabin Short Sloped Wall",
+   "tooltipKey": "Tooltip_craft_wallLogDesc",
+   "category": "Walls",
+   "subcategory": "Log Cabin Walls",
+   "material": "Wood",
+   "iconSprite": "walls_logs_30",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_22"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "logs",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Log"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "bindings",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "amount": 2,
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 10
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  }
+ ]
+}

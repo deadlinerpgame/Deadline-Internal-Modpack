@@ -1,0 +1,187 @@
+VERSION = 1,
+
+option KnoxBuildworks.ReplaceBuildMenu
+{
+	type = boolean,
+	default = false,
+	page = KnoxBuildworks,
+	translation = KBW_ReplaceBuildMenu,
+}
+
+option KnoxBuildworks.EnablePlanningMode
+{
+	type = boolean,
+	default = true,
+	page = KnoxBuildworks,
+	translation = KBW_EnablePlanningMode,
+}
+
+option KnoxBuildworks.MaxPlacementsPerBlueprint
+{
+	type = integer,
+	min = 50,
+	max = 5000,
+	default = 1000,
+	page = KnoxBuildworks,
+	translation = KBW_MaxPlacementsPerBlueprint,
+}
+
+option KnoxBuildworks.BuildXPMultiplier
+{
+	type = double,
+	min = 0.0,
+	max = 10.0,
+	default = 1.0,
+	page = KnoxBuildworks,
+	translation = KBW_BuildXPMultiplier,
+}
+
+option KnoxBuildworks.BlueprintRadius
+{
+	type = integer,
+	min = 20,
+	max = 2000,
+	default = 200,
+	page = KnoxBuildworks,
+	translation = KBW_BlueprintRadius,
+}
+
+option KnoxBuildworks.WellWaterMode
+{
+	type = enum,
+	numValues = 2,
+	default = 1,
+	page = KnoxBuildworks,
+	translation = KBW_WellWaterMode,
+	valueTranslation = KBW_WellWaterMode,
+}
+
+option KnoxBuildworks.WellCapacity
+{
+	type = integer,
+	min = 1,
+	max = 10000,
+	default = 1500,
+	page = KnoxBuildworks,
+	translation = KBW_WellCapacity,
+}
+
+option KnoxBuildworks.WellInitialPercent
+{
+	type = integer,
+	min = 0,
+	max = 100,
+	default = 25,
+	page = KnoxBuildworks,
+	translation = KBW_WellInitialPercent,
+}
+
+option KnoxBuildworks.WellHourlyRefill
+{
+	type = double,
+	min = 0.0,
+	max = 100.0,
+	default = 3.0,
+	page = KnoxBuildworks,
+	translation = KBW_WellHourlyRefill,
+}
+
+option KnoxBuildworks.WellRainRefillMultiplier
+{
+	type = double,
+	min = 0.0,
+	max = 10.0,
+	default = 1.5,
+	page = KnoxBuildworks,
+	translation = KBW_WellRainRefillMultiplier,
+}
+
+option KnoxBuildworks.ShowMenuDock
+{
+    type = boolean,
+    default = true,
+    page = KnoxBuildworks,
+    translation = KBW_ShowMenuDock,
+}
+
+option KnoxBuildworks.KeepInventoryVisibleInPlanning
+{
+    type = boolean,
+    default = true,
+    page = KnoxBuildworks,
+    translation = KBW_KeepInventoryVisibleInPlanning,
+}
+
+option KnoxBuildworks.FadeUnavailableIcons
+{
+    type = boolean,
+    default = false,
+    page = KnoxBuildworks,
+    translation = KBW_FadeUnavailableIcons,
+}
+
+option KnoxBuildworks.Debug
+{
+    type = boolean,
+    default = false,
+    page = KnoxBuildworks,
+    translation = KBW_Debug,
+}
+
+option KnoxBuildworks.Profile
+{
+    type = boolean,
+    default = false,
+    page = KnoxBuildworks,
+    translation = KBW_Profile,
+}
+
+option KnoxBuildworks.PinnedAlignment
+{
+    type = enum,
+    numValues = 4,
+    default = 1,
+    page = KnoxBuildworks,
+    translation = KBW_PinnedAlignment,
+    valueTranslation = KBW_PinnedAlignment,
+}
+
+option KnoxBuildworks.PinnedPositionMode
+{
+    type = enum,
+    numValues = 2,
+    default = 1,
+    page = KnoxBuildworks,
+    translation = KBW_PinnedPositionMode,
+    valueTranslation = KBW_PinnedPositionMode,
+}
+
+option KnoxBuildworks.PinnedOpacity
+{
+    type = integer,
+    min = 15,
+    max = 100,
+    default = 85,
+    page = KnoxBuildworks,
+    translation = KBW_PinnedOpacity,
+}
+
+option KnoxBuildworks.PinnedBar
+{
+    type = enum,
+    numValues = 4,
+    default = 1,
+    page = KnoxBuildworks,
+    translation = KBW_PinnedBar,
+    valueTranslation = KBW_PinnedBar,
+}
+
+option KnoxBuildworks.PinnedContent
+{
+    type = enum,
+    numValues = 2,
+    default = 1,
+    page = KnoxBuildworks,
+    translation = KBW_PinnedContent,
+    valueTranslation = KBW_PinnedContent,
+}

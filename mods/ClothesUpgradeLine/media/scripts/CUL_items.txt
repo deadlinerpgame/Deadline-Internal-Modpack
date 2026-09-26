@@ -1,0 +1,25 @@
+module ClothesUpgradeLine
+{
+    imports { Base }
+
+    item FabricDye
+    {
+        DisplayCategory     = Material,
+        Type                = Drainable,
+        UseWhileEquipped    = FALSE,
+        DisplayName         = Fabric Dye,
+        Icon                = Bleach,
+        Weight              = 0.4,
+        UseDelta            = 0.10,
+    }
+
+    recipe Mix Fabric Dye
+    {
+        RippedSheets=2,
+        Bleach=1,
+
+        Result:FabricDye,
+        Time:120.0,
+        Category:Tailoring,
+    }
+}

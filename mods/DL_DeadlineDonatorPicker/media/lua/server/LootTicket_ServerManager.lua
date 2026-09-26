@@ -40,10 +40,10 @@ function LootTicket_ServerManager.PerformTicketRoll(player, ticket, lootData)
 
         itemData.hasRolled = false;
         if chance < 100 then
-            totalChance = totalChance + chance; -- If not guaranteed, get their chance and get the weighted total.
+            totalChance = totalChance + chance;
             table.insert(possibleItems, itemData);
         else
-            table.insert(itemsToGive, itemData); -- Guaranteed items should always be added.
+            table.insert(itemsToGive, itemData);
         end
     end
 

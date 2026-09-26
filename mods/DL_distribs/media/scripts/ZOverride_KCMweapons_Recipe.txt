@@ -5,8 +5,6 @@ module KCMweapons
 		Base,
 	}
 	
-	/****************************** PACK/UNPACK AMMO RECIPES ******************************/
-
 	recipe Unpack Bundle of Short Crossbow Bolts
 	{
 		CrossbowBoltBox,
@@ -68,8 +66,6 @@ module KCMweapons
 		AnimNode 		: Craft,
 	}
 
-	/****************************** REPAIR & DISMANTLE RECIPES ******************************/
-
 	fixing Fix Hand Crossbow
 	{
 		Require 		: HandCrossbow,
@@ -119,8 +115,6 @@ module KCMweapons
 
 
 	}
-
-	/****************************** CRAFTING RECIPES ******************************/
 
 	recipe Craft Wooden Crossbow
 
@@ -215,10 +209,9 @@ module KCMweapons
     }
 
 
-	/****************************** ATTACHMENT CONVERSION RECIPES******************************/
     recipe Convert Sling to Crossbow Sling
     {
-       Sling,
+       DLSling,
 	   keep Screwdriver,
 
        Result:KCM_Sling,
@@ -231,7 +224,7 @@ module KCMweapons
 
     recipe Convert Ironsight to Crossbow Ironsight
     {
-       IronSight,
+       DLIronSight,
 	   keep Screwdriver,
 
        Result:KCM_IronSight,
@@ -244,7 +237,7 @@ module KCMweapons
 
     recipe Convert x2 Scope to Crossbow x2 Scope
     {
-       x2Scope,
+       DLx2Scope,
 	   keep Screwdriver,
 
        Result:KCM_x2Scope,
@@ -257,7 +250,7 @@ module KCMweapons
 
     recipe Convert x4 Scope to Crossbow x4 Scope
     {
-       x4Scope,
+       DLx4Scope,
 	   keep Screwdriver,
 
        Result:KCM_x4Scope,
@@ -270,7 +263,7 @@ module KCMweapons
 
     recipe Convert x8 Scope to Crossbow x8 Scope
     {
-       x8Scope,
+       DLx8Scope,
 	   keep Screwdriver,
 
        Result:KCM_x8Scope,
@@ -283,7 +276,7 @@ module KCMweapons
 
     recipe Convert RedDot to Crossbow RedDot
     {
-       RedDot,
+       DLRedDot,
 	   keep Screwdriver,
 
        Result:KCM_RedDot,
@@ -296,7 +289,7 @@ module KCMweapons
 
     recipe Convert Stock to Crossbow Stock
     {
-       FiberglassStock,
+       DLFiberglassStock,
 	   keep Screwdriver,
 
        Result:KCM_FiberglassStock,
@@ -309,7 +302,7 @@ module KCMweapons
 
     recipe Convert Laser to Crossbow Laser
     {
-       Laser,
+       DLLaser,
 	   keep Screwdriver,
 
        Result:KCM_Laser,
@@ -325,7 +318,7 @@ module KCMweapons
        KCM_Sling,
 	   keep Screwdriver,
 
-       Result:Sling,
+       Result:DLSling,
        Time:40.0,
 	   Sound:Screwing,
 	   AnimNode:Disassemble,
@@ -338,7 +331,7 @@ module KCMweapons
        KCM_IronSight,
 	   keep Screwdriver,
 
-       Result:IronSight,
+       Result:DLIronSight,
        Time:40.0,
 	   Sound:Screwing,
 	   AnimNode:Disassemble,
@@ -351,7 +344,7 @@ module KCMweapons
        KCM_x2Scope,
 	   keep Screwdriver,
 
-       Result:x2Scope,
+       Result:DLx2Scope,
        Time:40.0,
 	   Sound:Screwing,
 	   AnimNode:Disassemble,
@@ -364,7 +357,7 @@ module KCMweapons
        KCM_x4Scope,
 	   keep Screwdriver,
 
-       Result:x4Scope,
+       Result:DLx4Scope,
        Time:40.0,
 	   Sound:Screwing,
 	   AnimNode:Disassemble,
@@ -377,7 +370,7 @@ module KCMweapons
        KCM_x8Scope,
 	   keep Screwdriver,
 
-       Result:x8Scope,
+       Result:DLx8Scope,
        Time:40.0,
 	   Sound:Screwing,
 	   AnimNode:Disassemble,
@@ -390,7 +383,7 @@ module KCMweapons
        KCM_RedDot,
 	   keep Screwdriver,
 
-       Result:RedDot,
+       Result:DLRedDot,
        Time:40.0,
 	   Sound:Screwing,
 	   AnimNode:Disassemble,
@@ -403,7 +396,7 @@ module KCMweapons
        KCM_FiberglassStock,
 	   keep Screwdriver,
 
-       Result:FiberglassStock,
+       Result:DLFiberglassStock,
        Time:40.0,
 	   Sound:Screwing,
 	   AnimNode:Disassemble,
@@ -416,7 +409,7 @@ module KCMweapons
        KCM_Laser,
 	   keep Screwdriver,
 
-       Result:Laser,
+       Result:DLLaser,
        Time:40.0,
 	   Sound:Screwing,
 	   AnimNode:Disassemble,
@@ -425,7 +418,6 @@ module KCMweapons
     }
 
 
-	/****************************** CRAFTING RECIPE ITEMS ******************************/
 	item ShortBrokenBolt
     {
         Weight	=	0.1,

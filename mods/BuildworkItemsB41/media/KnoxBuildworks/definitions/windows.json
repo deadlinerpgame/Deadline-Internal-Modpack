@@ -1,0 +1,1109 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.windows.wooden.large_white_windoww",
+   "translationKey": "IGUI_KBWVE_Buildable_windows_wooden_large_white_windoww",
+   "displayName": "Large White Window",
+   "tooltipKey": "Tooltip_KBW_Shared_Window",
+   "category": "Windows",
+   "subcategory": "Wooden",
+   "material": "Wood",
+   "iconSprite": "fixtures_windows_01_72",
+   "placement": {
+    "kind": "object",
+    "needWindowFrame": true,
+    "windowSupportSprites": [
+     "walls_interior_house_05_*"
+    ]
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_72"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_73"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.windows.wooden.fixtures_windows_01_8",
+   "translationKey": "IGUI_KBWVE_Buildable_windows_wooden_fixtures_windows_01_8",
+   "displayName": "White Tiled Window",
+   "tooltipKey": "Tooltip_KBW_Shared_Window",
+   "category": "Windows",
+   "subcategory": "Wooden",
+   "material": "Wood",
+   "iconSprite": "fixtures_windows_01_8",
+   "placement": {
+    "kind": "object",
+    "needWindowFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_9"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Furniture"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.windows.wooden.fixtures_windows_01_16",
+   "translationKey": "IGUI_KBWVE_Buildable_windows_wooden_fixtures_windows_01_16",
+   "displayName": "Tiled Window",
+   "tooltipKey": "Tooltip_KBW_Shared_Window",
+   "category": "Windows",
+   "subcategory": "Wooden",
+   "material": "Wood",
+   "iconSprite": "fixtures_windows_01_16",
+   "placement": {
+    "kind": "object",
+    "needWindowFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Furniture"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.windows.wooden.fixtures_windows_01_24",
+   "translationKey": "IGUI_KBWVE_Buildable_windows_wooden_fixtures_windows_01_24",
+   "displayName": "White Window",
+   "tooltipKey": "Tooltip_KBW_Shared_Window",
+   "category": "Windows",
+   "subcategory": "Wooden",
+   "material": "Wood",
+   "iconSprite": "fixtures_windows_01_24",
+   "placement": {
+    "kind": "object",
+    "needWindowFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Furniture"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.windows.wooden.fixtures_windows_01_32",
+   "translationKey": "IGUI_KBWVE_Buildable_windows_wooden_fixtures_windows_01_32",
+   "displayName": "Chrome Window",
+   "tooltipKey": "Tooltip_KBW_Shared_Window",
+   "category": "Windows",
+   "subcategory": "Wooden",
+   "material": "Metal",
+   "iconSprite": "fixtures_windows_01_32",
+   "placement": {
+    "kind": "object",
+    "needWindowFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 3,
+        "flags": [
+         "Prop1",
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "metal_pipe",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 2,
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "completionSound": "BuildMetalStructureMedium",
+      "xp": {
+       "MetalWelding": 30
+      },
+      "category": "Furniture"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.windows.wooden.fixtures_windows_01_56",
+   "translationKey": "IGUI_KBWVE_Buildable_windows_wooden_fixtures_windows_01_56",
+   "displayName": "Slider Window",
+   "tooltipKey": "Tooltip_KBW_Shared_Window",
+   "category": "Windows",
+   "subcategory": "Wooden",
+   "material": "Wood",
+   "iconSprite": "fixtures_windows_01_56",
+   "placement": {
+    "kind": "object",
+    "needWindowFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_56"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_57"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Furniture"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.windows.wooden.fixtures_windows_01_40",
+   "translationKey": "IGUI_KBWVE_Buildable_windows_wooden_fixtures_windows_01_40",
+   "displayName": "Fixtures Windows 01 40",
+   "tooltipKey": "Tooltip_KBW_Shared_Window",
+   "category": "Windows",
+   "subcategory": "Wooden",
+   "material": "Wood",
+   "iconSprite": "fixtures_windows_01_40",
+   "placement": {
+    "kind": "object",
+    "needWindowFrame": true,
+    "ignoreWindowShape": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Furniture"
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.windows.wooden.fixtures_windows_01",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_windows_wooden_fixtures_windows_01"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.windows.wooden.fixtures_windows_01_41",
+   "translationKey": "IGUI_KBWVE_Buildable_windows_wooden_fixtures_windows_01_41",
+   "displayName": "Fixtures Windows 01 41",
+   "tooltipKey": "Tooltip_KBW_Shared_Window",
+   "category": "Windows",
+   "subcategory": "Wooden",
+   "material": "Wood",
+   "iconSprite": "fixtures_windows_01_41",
+   "placement": {
+    "kind": "object",
+    "needWindowFrame": true,
+    "ignoreWindowShape": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_42"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Furniture"
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.windows.wooden.fixtures_windows_01",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_windows_wooden_fixtures_windows_01"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.windows.wooden.fixtures_windows_01_48",
+   "translationKey": "IGUI_KBWVE_Buildable_windows_wooden_fixtures_windows_01_48",
+   "displayName": "Fixtures Windows 01 48",
+   "tooltipKey": "Tooltip_KBW_Shared_Window",
+   "category": "Windows",
+   "subcategory": "Wooden",
+   "material": "Wood",
+   "iconSprite": "fixtures_windows_01_48",
+   "placement": {
+    "kind": "object",
+    "needWindowFrame": true,
+    "ignoreWindowShape": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Furniture"
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.windows.wooden.fixtures_windows_01",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_windows_wooden_fixtures_windows_01"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.windows.wooden.fixtures_windows_01_49",
+   "translationKey": "IGUI_KBWVE_Buildable_windows_wooden_fixtures_windows_01_49",
+   "displayName": "Fixtures Windows 01 49",
+   "tooltipKey": "Tooltip_KBW_Shared_Window",
+   "category": "Windows",
+   "subcategory": "Wooden",
+   "material": "Wood",
+   "iconSprite": "fixtures_windows_01_49",
+   "placement": {
+    "kind": "object",
+    "needWindowFrame": true,
+    "ignoreWindowShape": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_50"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Furniture"
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.windows.wooden.fixtures_windows_01",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_windows_wooden_fixtures_windows_01"
+   }
+  }
+ ]
+}

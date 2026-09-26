@@ -1,0 +1,24 @@
+module KnoxBuildworks
+{
+    imports { Base }
+
+    recipe Make Bucket of Asphalt Mixture
+    {
+        Bucket/BucketWaterFull,
+        AsphaltMixturePowder,
+        Result:BucketAsphaltMixtureFull,
+        Time:150.0,
+        Category:Masonry,
+        OnGiveXP:KBW_NoXP,
+    }
+
+    recipe Make Blueprint
+    {
+        keep Pen/Pencil,
+        SheetPaper2/Notebook/Magazine/Newspaper,
+        Result:KBW_Blueprint,
+        Time:40.0,
+        Category:Misc,
+        OnGiveXP:KBW_NoXP,
+    }
+}

@@ -1,0 +1,4366 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.canvas_covers.greyish_brown_canvas_cover",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_canvas_covers_greyish_brown_canvas_cover",
+   "displayName": "Greyish Brown Canvas Cover",
+   "tooltipKey": "Tooltip_KBW_Shared_CanvasCover",
+   "category": "Architecture Plus",
+   "subcategory": "Canvas Covers",
+   "material": "Fabric",
+   "allowSpriteReuse": true,
+   "iconSprite": "industry_trucks_01_52",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_53"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_52"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_53"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_52"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_53"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_52"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_53"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.canvas_covers.greyish_brown_canvas_cover_corner",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_canvas_covers_greyish_brown_canvas_cover_corner",
+   "displayName": "Greyish Brown Canvas Cover Corner",
+   "tooltipKey": "Tooltip_KBW_Shared_CanvasCover",
+   "category": "Architecture Plus",
+   "subcategory": "Canvas Covers",
+   "material": "Fabric",
+   "iconSprite": "industry_trucks_01_54",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_54"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_55"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false,
+        "isCorner": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_54"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_55"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false,
+        "isCorner": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_54"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_55"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false,
+        "isCorner": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.canvas_covers.blue_canvas_cover",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_canvas_covers_blue_canvas_cover",
+   "displayName": "Blue Canvas Cover",
+   "tooltipKey": "Tooltip_KBW_Shared_CanvasCover",
+   "category": "Architecture Plus",
+   "subcategory": "Canvas Covers",
+   "material": "Fabric",
+   "iconSprite": "industry_trucks_01_60",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_60"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_61"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_60"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_61"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_60"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_61"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_60"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_61"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.canvas_covers.blue_canvas_cover_corner",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_canvas_covers_blue_canvas_cover_corner",
+   "displayName": "Blue Canvas Cover Corner",
+   "tooltipKey": "Tooltip_KBW_Shared_CanvasCover",
+   "category": "Architecture Plus",
+   "subcategory": "Canvas Covers",
+   "material": "Fabric",
+   "iconSprite": "industry_trucks_01_62",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_62"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_63"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_62"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_63"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false,
+        "isCorner": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_62"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_63"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false,
+        "isCorner": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_62"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_63"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false,
+        "isCorner": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.canvas_covers.green_canvas_cover",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_canvas_covers_green_canvas_cover",
+   "displayName": "Green Canvas Cover",
+   "tooltipKey": "Tooltip_KBW_Shared_CanvasCover",
+   "category": "Architecture Plus",
+   "subcategory": "Canvas Covers",
+   "material": "Fabric",
+   "iconSprite": "industry_trucks_01_64",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_64"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_65"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_64"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_65"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_64"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_65"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_64"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_65"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.canvas_covers.green_canvas_cover_corner",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_canvas_covers_green_canvas_cover_corner",
+   "displayName": "Green Canvas Cover Corner",
+   "tooltipKey": "Tooltip_KBW_Shared_CanvasCover",
+   "category": "Architecture Plus",
+   "subcategory": "Canvas Covers",
+   "material": "Fabric",
+   "iconSprite": "industry_trucks_01_66",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_66"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_67"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_66"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_67"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false,
+        "isCorner": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_66"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_67"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false,
+        "isCorner": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_66"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_67"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false,
+        "isCorner": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.canvas_covers.grey_canvas_cover",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_canvas_covers_grey_canvas_cover",
+   "displayName": "Grey Canvas Cover",
+   "tooltipKey": "Tooltip_KBW_Shared_CanvasCover",
+   "category": "Architecture Plus",
+   "subcategory": "Canvas Covers",
+   "material": "Fabric",
+   "iconSprite": "industry_trucks_01_68",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_68"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_69"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_68"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_69"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_68"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_69"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_68"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_69"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.canvas_covers.grey_canvas_cover_corner",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_canvas_covers_grey_canvas_cover_corner",
+   "displayName": "Grey Canvas Cover Corner",
+   "tooltipKey": "Tooltip_KBW_Shared_CanvasCover",
+   "category": "Architecture Plus",
+   "subcategory": "Canvas Covers",
+   "material": "Fabric",
+   "iconSprite": "industry_trucks_01_70",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_70"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_71"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_70"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_71"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false,
+        "isCorner": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_70"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_71"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false,
+        "isCorner": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_70"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "industry_trucks_01_71"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "fasteners_nails",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Nails"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "tool_hammer",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Hammer"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeVeryLight"
+          ]
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false,
+        "isCorner": true
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

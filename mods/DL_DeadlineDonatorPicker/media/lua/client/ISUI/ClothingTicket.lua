@@ -12,7 +12,7 @@ local function OnFillInventoryObjectContextMenu(playerNum, context, items)
     for i, item in ipairs(items) do
         if instanceof(item, "InventoryItem") then
             if item:getType() == "DLDC_ClothingTicket" and item:isInPlayerInventory() then
-                context:addOption(getText("ContextMenu_OpenDonatorClothingTicket"), playerNum, DL_DonatorClothes.RequestSlotsFromServer, item) -- DL_DonatorClothes.RequestSlotsFromServer(playerNum, item)
+                context:addOption(getText("ContextMenu_OpenDonatorClothingTicket"), playerNum, DL_DonatorClothes.RequestSlotsFromServer, item)
             end
         end
     end

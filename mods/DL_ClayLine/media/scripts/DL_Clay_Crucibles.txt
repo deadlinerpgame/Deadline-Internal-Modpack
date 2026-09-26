@@ -1,0 +1,90 @@
+module aerx
+{
+	imports
+	{
+		Base,
+	}
+
+	item CeramicCrucibleUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 5.0,
+		Type                = Normal,
+		DisplayName         = Unfired Large Ceramic Crucible,
+		Icon                = Ceramic_Crucible_Unfired,
+		StaticModel         = CeramicCrucibleUnfired,
+		WorldStaticModel    = CeramicCrucibleUnfired,
+	}
+
+	item CeramicCrucible
+	{
+	    DisplayCategory     = Material,
+		Weight              = 5.0,
+		Type	             =	Normal,
+		DisplayName         = Large Ceramic Crucible,
+		Icon                = Ceramic_Crucible_Fired,
+		StaticModel         = CeramicCrucible,
+		WorldStaticModel    = CeramicCrucible,
+		Tags                = DLCrucible,
+	}
+
+	item CeramicCrucibleSmallUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.2,
+		Type                = Normal,
+		DisplayName         = Unfired Small Ceramic Crucible,
+		Icon                = Ceramic_Crucible_Unfired,
+		StaticModel         = CeramicCrucibleUnfired,
+		WorldStaticModel    = CeramicCrucibleUnfired,
+	}
+
+	item CeramicCrucibleSmall
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.2,
+		Type                = Normal,
+		DisplayName         = Small Ceramic Crucible,
+		Icon                = Ceramic_Crucible_Fired,
+		StaticModel         = CeramicCrucible,
+		WorldStaticModel    = CeramicCrucible,
+		Tags                = DLCrucible,
+	}
+
+	item CeramicCrucibleWithGlass
+	{
+	    DisplayCategory     = Material,
+		Weight              = 6.0,
+		Type                = Drainable,
+		UseDelta	        = 0.25,
+		UseWhileEquipped = FALSE,
+		ReplaceOnDeplete = CeramicCrucibleSmall,
+		DisplayName         = Ceramic Crucible with Molten Glass,
+		Icon                = Ceramic_Crucible_Fired_Molten,
+		StaticModel         = CeramicCrucible,
+		WorldStaticModel    = CeramicCrucible,
+	}
+
+	item GlassBlowingPipeUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Glass Blowing Pipe,
+		Icon                = Ceramic_Glasspipe_Fired,
+		StaticModel         = GlassBlowingPipeUnfired,
+		WorldStaticModel    = GlassBlowingPipeUnfired,
+	}
+
+	item GlassBlowingPipe
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Glass Blowing Pipe,
+		Icon                = Ceramic_Glasspipe_Unfired,
+		StaticModel         = GlassBlowingPipeFired,
+		WorldStaticModel    = GlassBlowingPipeFired,
+	}
+
+}

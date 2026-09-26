@@ -1,6 +1,5 @@
 require "ISUI/ISUIElement"
 
--- Bar settings
 local barWidth = 80
 local barHeight = getTextManager():getFontHeight(UIFont.Small) + 2
 local spacing = 6
@@ -57,7 +56,6 @@ function HorseHud:drawFearBar(index, label, value)
 end
 
 function HorseHud:getColorForFear(value)
-    -- Inverted: low = green (calm), high = red (panicked)
     local color = {}
     if value <= 0.25 then
         color.r = 0
@@ -136,8 +134,6 @@ function HorseHud:new()
     return o
 end
 
--- === Initialization & Visibility ===
-
 local function createHorseHud()
 
     HorseHud.instance = HorseHud:new()
@@ -179,6 +175,36 @@ local validHorseTypes = {
     ["2TK_models.2TK_Horse_02"] = true,
     ["2TK_models.2TK_Horse_03"] = true,
     ["2TK_models.2TK_Horse_04"] = true,
+    ["2TK_models.2TK_Horse_SaddlebagS"] = true,
+    ["2TK_models.2TK_Horse_01_SaddlebagS"] = true,
+    ["2TK_models.2TK_Horse_02_SaddlebagS"] = true,
+    ["2TK_models.2TK_Horse_03_SaddlebagS"] = true,
+    ["2TK_models.2TK_Horse_04_SaddlebagS"] = true,
+    ["2TK_models.2TK_Horse_SaddlebagM"] = true,
+    ["2TK_models.2TK_Horse_01_SaddlebagM"] = true,
+    ["2TK_models.2TK_Horse_02_SaddlebagM"] = true,
+    ["2TK_models.2TK_Horse_03_SaddlebagM"] = true,
+    ["2TK_models.2TK_Horse_04_SaddlebagM"] = true,
+    ["2TK_models.2TK_Horse_SaddlebagL"] = true,
+    ["2TK_models.2TK_Horse_01_SaddlebagL"] = true,
+    ["2TK_models.2TK_Horse_02_SaddlebagL"] = true,
+    ["2TK_models.2TK_Horse_03_SaddlebagL"] = true,
+    ["2TK_models.2TK_Horse_04_SaddlebagL"] = true,
+    ["2TK_models.2TK_Horse_SaddlebagSH"] = true,
+    ["2TK_models.2TK_Horse_01_SaddlebagSH"] = true,
+    ["2TK_models.2TK_Horse_02_SaddlebagSH"] = true,
+    ["2TK_models.2TK_Horse_03_SaddlebagSH"] = true,
+    ["2TK_models.2TK_Horse_04_SaddlebagSH"] = true,
+    ["2TK_models.2TK_Horse_SaddlebagMH"] = true,
+    ["2TK_models.2TK_Horse_01_SaddlebagMH"] = true,
+    ["2TK_models.2TK_Horse_02_SaddlebagMH"] = true,
+    ["2TK_models.2TK_Horse_03_SaddlebagMH"] = true,
+    ["2TK_models.2TK_Horse_04_SaddlebagMH"] = true,
+    ["2TK_models.2TK_Horse_SaddlebagLH"] = true,
+    ["2TK_models.2TK_Horse_01_SaddlebagLH"] = true,
+    ["2TK_models.2TK_Horse_02_SaddlebagLH"] = true,
+    ["2TK_models.2TK_Horse_03_SaddlebagLH"] = true,
+    ["2TK_models.2TK_Horse_04_SaddlebagLH"] = true,
 }
 
 function isHorse(item)

@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 1,
+  "templates": {
+    "kbw.military_crate": {
+      "category": "Containers",
+      "subcategory": "Crates",
+      "material": "Metal",
+      "materialTags": [
+        "Metal"
+      ],
+      "tags": [
+        "military",
+        "storage",
+        "custom-tilepack"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "construction": {
+        "time": 50,
+        "timedAction": "BuildMetalStructureMedium",
+        "xp": {
+          "MetalWelding": 70
+        },
+        "category": "Welding"
+      },
+      "finishes": {
+        "enabled": true,
+        "wallType": "crates",
+        "paints": true,
+        "wallpapers": false,
+        "surface": {
+          "canPlaster": false,
+          "canPaint": true,
+          "canWallpaper": false,
+          "paintRequiresPlaster": false
+        },
+        "mapping": {
+          "directPaints": {
+            "*": {
+              "W": "kbw_location_military_generic_01_16",
+              "N": "kbw_location_military_generic_01_17"
+            }
+          },
+          "baseSprites": [
+            "kbw_location_military_generic_01_0",
+            "kbw_location_military_generic_01_1",
+            "kbw_location_military_generic_01_8",
+            "kbw_location_military_generic_01_9",
+            "kbw_location_military_generic_01_16",
+            "kbw_location_military_generic_01_17"
+          ],
+          "surface": {
+            "canPlaster": false,
+            "canPaint": true,
+            "canWallpaper": false,
+            "paintRequiresPlaster": false
+          }
+        }
+      }
+    }
+  },
+  "buildables": [
+    {
+      "id": "kbw.military_crate.green",
+      "extends": "kbw.military_crate",
+      "translationKey": "IGUI_KBW_Buildable_MilitaryCrateGreen",
+      "displayName": "Green Military Crate",
+      "tooltipKey": "Tooltip_KBW_Buildable_MilitaryCrate",
+      "category": "Containers",
+      "iconSprite": "kbw_location_military_generic_01_0",
+      "group": {
+        "id": "kbw.military_crates",
+        "translationKey": "IGUI_KBW_Group_MilitaryCrate",
+        "level": 1
+      },
+      "stages": [
+        {
+          "id": "built",
+          "geometry": {
+            "faces": {
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "kbw_location_military_generic_01_0"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "kbw_location_military_generic_01_1"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "welding_mask",
+                "role": "tool",
+                "mode": "keep",
+                "tags": [
+                  "base:weldingmask"
+                ],
+                "amount": 1
+              },
+              {
+                "id": "torch_fuel",
+                "role": "consumable",
+                "mode": "drain",
+                "resourceType": "Item",
+                "items": [
+                  "Base.BlowTorch"
+                ],
+                "uses": 4
+              },
+              {
+                "id": "small_sheet_metal",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.SmallSheetMetal"
+                ],
+                "amount": 2
+              },
+              {
+                "id": "sheet_metal",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.SheetMetal"
+                ],
+                "amount": 2
+              },
+              {
+                "id": "scrap_metal",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.ScrapMetal"
+                ],
+                "amount": 1
+              },
+              {
+                "id": "welding_rods",
+                "role": "consumable",
+                "mode": "drain",
+                "resourceType": "Item",
+                "items": [
+                  "Base.WeldingRods"
+                ],
+                "uses": 4
+              }
+            ],
+            "skills": {
+              "MetalWelding": 7
+            }
+          },
+          "object": {
+            "blockAllSquare": true,
+            "canBePadlocked": true
+          },
+          "container": {
+            "type": "militarycrate",
+            "capacity": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "kbw.military_crate.gray",
+      "extends": "kbw.military_crate",
+      "translationKey": "IGUI_KBW_Buildable_MilitaryCrateGray",
+      "displayName": "Gray Military Crate",
+      "tooltipKey": "Tooltip_KBW_Buildable_MilitaryCrate",
+      "category": "Containers",
+      "iconSprite": "kbw_location_military_generic_01_8",
+      "group": {
+        "id": "kbw.military_crates",
+        "translationKey": "IGUI_KBW_Group_MilitaryCrate",
+        "level": 2
+      },
+      "stages": [
+        {
+          "id": "built",
+          "geometry": {
+            "faces": {
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "kbw_location_military_generic_01_8"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "kbw_location_military_generic_01_9"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "welding_mask",
+                "role": "tool",
+                "mode": "keep",
+                "tags": [
+                  "base:weldingmask"
+                ],
+                "amount": 1
+              },
+              {
+                "id": "torch_fuel",
+                "role": "consumable",
+                "mode": "drain",
+                "resourceType": "Item",
+                "items": [
+                  "Base.BlowTorch"
+                ],
+                "uses": 4
+              },
+              {
+                "id": "small_sheet_metal",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.SmallSheetMetal"
+                ],
+                "amount": 2
+              },
+              {
+                "id": "sheet_metal",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.SheetMetal"
+                ],
+                "amount": 2
+              },
+              {
+                "id": "scrap_metal",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.ScrapMetal"
+                ],
+                "amount": 1
+              },
+              {
+                "id": "welding_rods",
+                "role": "consumable",
+                "mode": "drain",
+                "resourceType": "Item",
+                "items": [
+                  "Base.WeldingRods"
+                ],
+                "uses": 4
+              }
+            ],
+            "skills": {
+              "MetalWelding": 7
+            }
+          },
+          "object": {
+            "blockAllSquare": true,
+            "canBePadlocked": true
+          },
+          "container": {
+            "type": "militarycrate",
+            "capacity": 100
+          }
+        }
+      ]
+    },
+    {
+      "id": "kbw.military_crate.paintable",
+      "extends": "kbw.military_crate",
+      "translationKey": "IGUI_KBW_Buildable_MilitaryCratePaintable",
+      "displayName": "White Military Crate",
+      "tooltipKey": "Tooltip_KBW_Buildable_MilitaryCratePaintable",
+      "category": "Containers",
+      "iconSprite": "kbw_location_military_generic_01_16",
+      "group": {
+        "id": "kbw.military_crates",
+        "translationKey": "IGUI_KBW_Group_MilitaryCrate",
+        "level": 3
+      },
+      "stages": [
+        {
+          "id": "built",
+          "geometry": {
+            "faces": {
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "kbw_location_military_generic_01_16"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "kbw_location_military_generic_01_17"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "welding_mask",
+                "role": "tool",
+                "mode": "keep",
+                "tags": [
+                  "base:weldingmask"
+                ],
+                "amount": 1
+              },
+              {
+                "id": "torch_fuel",
+                "role": "consumable",
+                "mode": "drain",
+                "resourceType": "Item",
+                "items": [
+                  "Base.BlowTorch"
+                ],
+                "uses": 4
+              },
+              {
+                "id": "small_sheet_metal",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.SmallSheetMetal"
+                ],
+                "amount": 2
+              },
+              {
+                "id": "sheet_metal",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.SheetMetal"
+                ],
+                "amount": 2
+              },
+              {
+                "id": "scrap_metal",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.ScrapMetal"
+                ],
+                "amount": 1
+              },
+              {
+                "id": "welding_rods",
+                "role": "consumable",
+                "mode": "drain",
+                "resourceType": "Item",
+                "items": [
+                  "Base.WeldingRods"
+                ],
+                "uses": 4
+              }
+            ],
+            "skills": {
+              "MetalWelding": 7
+            }
+          },
+          "object": {
+            "blockAllSquare": true,
+            "canBePadlocked": true
+          },
+          "container": {
+            "type": "militarycrate",
+            "capacity": 100
+          }
+        }
+      ]
+    }
+  ]
+}

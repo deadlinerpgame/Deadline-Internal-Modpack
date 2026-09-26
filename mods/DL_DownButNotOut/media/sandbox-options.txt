@@ -1,0 +1,209 @@
+VERSION = 1,
+
+option DownButNotOut.KnockdownEnable =
+{
+    type = boolean, default = true,
+    page = DBNOMain, translation = DownButNotOut_KnockdownEnable,
+}
+
+option DownButNotOut.WoundsEnable =
+{
+    type = boolean, default = true,
+    page = DBNOMain, translation = DownButNotOut_WoundsEnable,
+}
+
+option DownButNotOut.KnockdownThreshold =
+{
+    type = integer, min = 1, max = 50, default = 10,
+    page = DBNOKnockdowns, translation = DownButNotOut_KnockdownThreshold,
+}
+
+option DownButNotOut.BleedoutTimer =
+{
+    type = boolean, default = true,
+    page = DBNOKnockdowns, translation = DownButNotOut_BleedoutTimer,
+}
+
+option DownButNotOut.KnockdownDurationSec =
+{
+    type = integer, min = 30, max = 3600, default = 300,
+    page = DBNOKnockdowns, translation = DownButNotOut_KnockdownDurationSec,
+}
+
+option DownButNotOut.MoveWhileDowned =
+{
+    type = boolean, default = true,
+    page = DBNOKnockdowns, translation = DownButNotOut_MoveWhileDowned,
+}
+
+option DownButNotOut.KnockdownHoldMode =
+{
+    type = enum, numValues = 3, default = 2,
+    page = DBNOKnockdowns, translation = DownButNotOut_KnockdownHoldMode,
+    valueTranslation = DownButNotOut_KnockdownHoldModes,
+}
+
+option DownButNotOut.KnockdownHoldHP =
+{
+    type = integer, min = 1, max = 50, default = 50,
+    page = DBNOKnockdowns, translation = DownButNotOut_KnockdownHoldHP,
+}
+
+option DownButNotOut.DownedPlayerKill =
+{
+    type = boolean, default = false,
+    page = DBNOKnockdowns, translation = DownButNotOut_DownedPlayerKill,
+}
+
+option DownButNotOut.DownedZombieKill =
+{
+    type = boolean, default = false,
+    page = DBNOKnockdowns, translation = DownButNotOut_DownedZombieKill,
+}
+
+option DownButNotOut.KnockdownDrainHpPerMin =
+{
+    type = integer, min = 1, max = 100, default = 2,
+    page = DBNOKnockdowns, translation = DownButNotOut_KnockdownDrainHpPerMin,
+}
+
+option DownButNotOut.KnockdownReviveTime =
+{
+    type = integer, min = 20, max = 2000, default = 200,
+    page = DBNOKnockdowns, translation = DownButNotOut_KnockdownReviveTime,
+}
+
+option DownButNotOut.KnockdownReviveHP =
+{
+    type = integer, min = 1, max = 100, default = 30,
+    page = DBNOKnockdowns, translation = DownButNotOut_KnockdownReviveHP,
+}
+
+option DownButNotOut.KnockdownCounters =
+{
+    type = boolean, default = true,
+    page = DBNOKnockdowns, translation = DownButNotOut_KnockdownCounters,
+}
+
+option DownButNotOut.KnockdownHealingMin =
+{
+    type = integer, min = 1, max = 10080, default = 15,
+    page = DBNOKnockdowns, translation = DownButNotOut_KnockdownHealingMin,
+}
+
+option DownButNotOut.WoundAmount =
+{
+    type = integer, min = 0, max = 3, default = 3,
+    page = DBNORespawns, translation = DownButNotOut_WoundAmount,
+}
+
+option DownButNotOut.WoundsHealingMin =
+{
+    type = integer, min = 0, max = 10080, default = 60,
+    page = DBNORespawns, translation = DownButNotOut_WoundsHealingMin,
+}
+
+option DownButNotOut.RespawnWithInjuries =
+{
+    type = boolean, default = true,
+    page = DBNORespawns, translation = DownButNotOut_RespawnWithInjuries,
+}
+
+option DownButNotOut.ReviveCureInfection =
+{
+    type = boolean, default = true,
+    page = DBNORespawns, translation = DownButNotOut_ReviveCureInfection,
+}
+
+option DownButNotOut.SkillRestoreMode =
+{
+    type = enum, numValues = 3, default = 1,
+    page = DBNORespawns, translation = DownButNotOut_SkillRestoreMode,
+    valueTranslation = DownButNotOut_SkillRestoreModes,
+}
+
+option DownButNotOut.SkillRecoveryPct =
+{
+    type = integer, min = 1, max = 100, default = 90,
+    page = DBNORespawns, translation = DownButNotOut_SkillRecoveryPct,
+}
+
+option DownButNotOut.SaveCooldownMin =
+{
+    type = integer, min = 0, max = 240, default = 5,
+    page = DBNORespawns, translation = DownButNotOut_SaveCooldownMin,
+}
+
+option DownButNotOut.EnableSetRespawnPoint =
+{
+    type = boolean, default = true,
+    page = DBNORespawns, translation = DownButNotOut_EnableSetRespawnPoint,
+}
+
+option DownButNotOut.UseBedsAsSaveRestoreRespawn =
+{
+    type = boolean, default = true,
+    page = DBNORespawns, translation = DownButNotOut_UseBedsAsSaveRestoreRespawn,
+}
+
+option DownButNotOut.FinalRespawnX =
+{
+    type = integer, min = 0, max = 100000, default = 19114,
+    page = DBNORespawns, translation = DownButNotOut_FinalRespawnX,
+}
+
+option DownButNotOut.FinalRespawnY =
+{
+    type = integer, min = 0, max = 100000, default = 1391,
+    page = DBNORespawns, translation = DownButNotOut_FinalRespawnY,
+}
+
+option DownButNotOut.FinalRespawnZ =
+{
+    type = integer, min = 0, max = 7, default = 0,
+    page = DBNORespawns, translation = DownButNotOut_FinalRespawnZ,
+}
+
+option DownButNotOut.CustomTiles =
+{
+    type = string, default = furniture_bedding_01_32,
+    page = DBNORespawns, translation = DownButNotOut_CustomTiles,
+}
+
+option DownButNotOut.RespawnClothes =
+{
+    type = enum, numValues = 4, default = 1,
+    page = DBNOCaches, translation = DownButNotOut_RespawnClothes,
+    valueTranslation = DownButNotOut_RespawnClothesModes,
+}
+
+option DownButNotOut.RespawnClothesCustom =
+{
+    type = string, default = Base.Tshirt_White;Base.Trousers_White,
+    page = DBNOCaches, translation = DownButNotOut_RespawnClothesCustom,
+}
+
+option DownButNotOut.CacheOwnerLock =
+{
+    type = enum, numValues = 3, default = 1,
+    page = DBNOCaches, translation = DownButNotOut_CacheOwnerLock,
+    valueTranslation = DownButNotOut_CacheOwnerLockModes,
+}
+
+option DownButNotOut.LootLockMin =
+{
+    type = integer, min = 0, max = 1440, default = 60,
+    page = DBNOCaches, translation = DownButNotOut_LootLockMin,
+}
+
+option DownButNotOut.DeathCacheNoDespawn =
+{
+    type = boolean, default = false,
+    page = DBNOCaches, translation = DownButNotOut_DeathCacheNoDespawn,
+}
+
+option DownButNotOut.LootDeleteAfterUnlockMin =
+{
+    type = integer, min = 0, max = 1440, default = 60,
+    page = DBNOCaches, translation = DownButNotOut_LootDeleteAfterUnlockMin,
+}

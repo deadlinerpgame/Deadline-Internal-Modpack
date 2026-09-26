@@ -1,0 +1,2048 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.location_restaurant_pileocrepe_01_33",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_location_restaurant_pileocrepe_01_33",
+   "displayName": "Large Bleached Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_location_restaurant_pileocrepe_01_33",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_pileocrepe_01_33",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pileocrepe_01_35"
+           ],
+           [
+            "location_restaurant_pileocrepe_01_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pileocrepe_01_32",
+            "location_restaurant_pileocrepe_01_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.furniture_tables_high_01_1",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_furniture_tables_high_01_1",
+   "displayName": "Large Dark Oak Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_furniture_tables_high_01_1",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "furniture_tables_high_01_1",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_3"
+           ],
+           [
+            "furniture_tables_high_01_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_0",
+            "furniture_tables_high_01_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 90
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.furniture_tables_high_01_9",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_furniture_tables_high_01_9",
+   "displayName": "Large Brown Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_furniture_tables_high_01_9",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "furniture_tables_high_01_9",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_11"
+           ],
+           [
+            "furniture_tables_high_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_8",
+            "furniture_tables_high_01_9"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.furniture_tables_high_01_20",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_furniture_tables_high_01_20",
+   "displayName": "Large Dark Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_furniture_tables_high_01_20",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "furniture_tables_high_01_20",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_18"
+           ],
+           [
+            "furniture_tables_high_01_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_19",
+            "furniture_tables_high_01_20"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.furniture_tables_high_01_27",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_furniture_tables_high_01_27",
+   "displayName": "Lightwood Desk",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_furniture_tables_high_01_27",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "furniture_tables_high_01_27",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_25"
+           ],
+           [
+            "furniture_tables_high_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_26",
+            "furniture_tables_high_01_27"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_29"
+           ],
+           [
+            "furniture_tables_high_01_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_30",
+            "furniture_tables_high_01_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.furniture_tables_high_01_35",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_furniture_tables_high_01_35",
+   "displayName": "Large Oak Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_furniture_tables_high_01_35",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "furniture_tables_high_01_35",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_33"
+           ],
+           [
+            "furniture_tables_high_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_34",
+            "furniture_tables_high_01_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 90
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.furniture_tables_high_01_37",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_furniture_tables_high_large_white_table",
+   "displayName": "Large White Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_furniture_tables_high_large_white_table",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "furniture_tables_high_01_37",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_39"
+           ],
+           [
+            "furniture_tables_high_01_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_36",
+            "furniture_tables_high_01_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.furniture.large_tables.large_white_table",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_furniture_large_tables_large_white_table"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.furniture_tables_high_01_41",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_furniture_tables_high_01_41",
+   "displayName": "Large Dark Wooden Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_furniture_tables_high_01_41",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "furniture_tables_high_01_41",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_43"
+           ],
+           [
+            "furniture_tables_high_01_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_40",
+            "furniture_tables_high_01_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.furniture_tables_high_01_45",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_furniture_tables_high_large_white_table",
+   "displayName": "Large White Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_furniture_tables_high_large_white_table",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "furniture_tables_high_01_45",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_47"
+           ],
+           [
+            "furniture_tables_high_01_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_44",
+            "furniture_tables_high_01_45"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.furniture.large_tables.large_white_table",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_furniture_large_tables_large_white_table"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.furniture_tables_high_01_51",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_furniture_tables_high_01_51",
+   "displayName": "Large Smooth Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_furniture_tables_high_01_51",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "furniture_tables_high_01_51",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_49"
+           ],
+           [
+            "furniture_tables_high_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_50",
+            "furniture_tables_high_01_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.furniture_tables_high_01_53",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_furniture_tables_high_01_53",
+   "displayName": "Large Simple Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_furniture_tables_high_01_53",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "furniture_tables_high_01_53",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_55"
+           ],
+           [
+            "furniture_tables_high_01_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_52",
+            "furniture_tables_high_01_53"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.furniture_tables_high_01_57",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_furniture_tables_high_01_57",
+   "displayName": "Large Plastic Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_furniture_tables_high_01_57",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "furniture_tables_high_01_57",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_59"
+           ],
+           [
+            "furniture_tables_high_01_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_56",
+            "furniture_tables_high_01_57"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.furniture_tables_high_01_61",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_furniture_tables_high_01_61",
+   "displayName": "Large Light Oak Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_furniture_tables_high_01_61",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "furniture_tables_high_01_61",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_63"
+           ],
+           [
+            "furniture_tables_high_01_62"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_high_01_60",
+            "furniture_tables_high_01_61"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 90
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.furniture_tables_low_01_15",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_furniture_tables_low_01_15",
+   "displayName": "Long Low Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_furniture_tables_low_01_15",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "furniture_tables_low_01_15",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_low_01_1"
+           ],
+           [
+            "furniture_tables_low_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_tables_low_01_14",
+            "furniture_tables_low_01_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.location_business_office_generic_01_43",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_location_business_office_generic_office_desk_2_tiles",
+   "displayName": "Office Desk 2 Tiles",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_location_business_office_generic_office_desk",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "location_business_office_generic_01_43",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_office_generic_01_1"
+           ],
+           [
+            "location_business_office_generic_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_office_generic_01_5",
+            "location_business_office_generic_01_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_office_generic_01_14"
+           ],
+           [
+            "location_business_office_generic_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_office_generic_01_8",
+            "location_business_office_generic_01_10"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.furniture.large_tables.office_desk",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_furniture_large_tables_office_desk"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.location_business_office_generic_01_43_3_tiles",
+   "allowSpriteReuse": true,
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_location_business_office_generic_office_desk_3_tiles",
+   "displayName": "Office Desk 3 Tiles",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_location_business_office_generic_office_desk",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Wood",
+   "iconSprite": "location_business_office_generic_01_43",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_office_generic_01_1"
+           ],
+           [
+            "location_business_office_generic_01_2"
+           ],
+           [
+            "location_business_office_generic_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_office_generic_01_5",
+            "location_business_office_generic_01_4",
+            "location_business_office_generic_01_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_office_generic_01_14"
+           ],
+           [
+            "location_business_office_generic_01_12"
+           ],
+           [
+            "location_business_office_generic_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_office_generic_01_8",
+            "location_business_office_generic_01_9",
+            "location_business_office_generic_01_10"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.furniture.large_tables.office_desk",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_furniture_large_tables_office_desk"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.location_restaurant_spiffos_02_33",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_location_restaurant_spiffos_02_33",
+   "displayName": "Spiffos Type B Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_location_restaurant_spiffos_02_33",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Metal",
+   "iconSprite": "location_restaurant_spiffos_02_33",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_35"
+           ],
+           [
+            "location_restaurant_spiffos_02_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_32",
+            "location_restaurant_spiffos_02_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 8
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildMetalStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_tables.location_restaurant_spiffos_02_39",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_tables_location_restaurant_spiffos_02_39",
+   "displayName": "Spiffos Type A Table",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_tables_location_restaurant_spiffos_02_39",
+   "category": "Furniture",
+   "subcategory": "Large Tables",
+   "material": "Metal",
+   "iconSprite": "location_restaurant_spiffos_02_39",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_37"
+           ],
+           [
+            "location_restaurant_spiffos_02_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_38",
+            "location_restaurant_spiffos_02_39"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 8
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildMetalStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     }
+    }
+   ]
+  }
+ ]
+}

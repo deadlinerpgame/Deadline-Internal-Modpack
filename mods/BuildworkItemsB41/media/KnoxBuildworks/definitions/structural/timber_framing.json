@@ -1,0 +1,3853 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.structural.post",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_Post",
+   "displayName": "Timber Post",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberPost",
+   "category": "Structural",
+   "subcategory": "Timber Posts",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_0",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 200,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 10
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_4"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 3
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.post_short",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_PostShort",
+   "displayName": "Short Timber Post",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberPost",
+   "category": "Structural",
+   "subcategory": "Timber Posts",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_93",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 175,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 5
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_91"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_93"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_90"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_92"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 1
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.post_braced",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_PostBraced",
+   "displayName": "Braced Timber Post",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberPost",
+   "category": "Structural",
+   "subcategory": "Timber Posts",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_1",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 225,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 15
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_5"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.post_braced_reversed",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_PostBracedReversed",
+   "displayName": "Reverse-Braced Timber Post",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberPost",
+   "category": "Structural",
+   "subcategory": "Timber Posts",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_2",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 225,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 15
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.post_braced_double",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_PostBracedDouble",
+   "displayName": "Double-Braced Timber Post",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberPost",
+   "category": "Structural",
+   "subcategory": "Timber Posts",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_3",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 250,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 20
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_11"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_15"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.beam_long",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_BeamLong",
+   "displayName": "Long Timber Beam",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberBeam",
+   "category": "Structural",
+   "subcategory": "Timber Beams",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_40",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 200,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 10
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_43"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 3
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "object": {
+      "isProp": true,
+      "canPassThrough": true,
+      "isThumpable": false,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.beam_medium",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_BeamMedium",
+   "displayName": "Timber Beam",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberBeam",
+   "category": "Structural",
+   "subcategory": "Timber Beams",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_44",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 200,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 8
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_47"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_45"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "object": {
+      "isProp": true,
+      "canPassThrough": true,
+      "isThumpable": false,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.beam_short",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_BeamShort",
+   "displayName": "Short Timber Beam",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberBeam",
+   "category": "Structural",
+   "subcategory": "Timber Beams",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_48",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 175,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 6
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_51"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_50"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_49"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 1
+      }
+     },
+     "object": {
+      "isProp": true,
+      "canPassThrough": true,
+      "isThumpable": false,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.beam_stub",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_BeamStub",
+   "displayName": "Timber Beam Stub",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberBeam",
+   "category": "Structural",
+   "subcategory": "Timber Beams",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_60",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 175,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 4
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_63"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_60"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_62"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_61"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 1
+      }
+     },
+     "object": {
+      "isProp": true,
+      "canPassThrough": true,
+      "isThumpable": false,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.beam_block",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_BeamBlock",
+   "displayName": "Timber Block",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberBeam",
+   "category": "Structural",
+   "subcategory": "Timber Beams",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_52",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 175,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 3
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_55"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_53"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 1
+      }
+     },
+     "object": {
+      "isProp": true,
+      "canPassThrough": true,
+      "isThumpable": false,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.beam_corner",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_BeamCorner",
+   "displayName": "Timber Beam Corner",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberBeam",
+   "category": "Structural",
+   "subcategory": "Timber Beams",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_56",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 200,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 10
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_59"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_56"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_57"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 3
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "object": {
+      "isProp": true,
+      "canPassThrough": true,
+      "isThumpable": false,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.beam_long_raised",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_BeamLongRaised",
+   "displayName": "Long Raised Timber Beam",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberBeamRaised",
+   "category": "Structural",
+   "subcategory": "Raised Timber Beams",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_16",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 200,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 12
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 3
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "canPassThrough": true,
+      "isThumpable": false,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.beam_medium_raised",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_BeamMediumRaised",
+   "displayName": "Raised Timber Beam",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberBeamRaised",
+   "category": "Structural",
+   "subcategory": "Raised Timber Beams",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_20",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 200,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 10
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_23"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_21"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "canPassThrough": true,
+      "isThumpable": false,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.beam_short_raised",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_BeamShortRaised",
+   "displayName": "Short Raised Timber Beam",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberBeamRaised",
+   "category": "Structural",
+   "subcategory": "Raised Timber Beams",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_24",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 175,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 8
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_27"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "object": {
+      "isProp": true,
+      "canPassThrough": true,
+      "isThumpable": false,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.beam_stub_raised",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_BeamStubRaised",
+   "displayName": "Raised Timber Beam Stub",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberBeamRaised",
+   "category": "Structural",
+   "subcategory": "Raised Timber Beams",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_36",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 175,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 6
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_39"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "object": {
+      "isProp": true,
+      "canPassThrough": true,
+      "isThumpable": false,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.beam_block_raised",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_BeamBlockRaised",
+   "displayName": "Raised Timber Block",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberBeamRaised",
+   "category": "Structural",
+   "subcategory": "Raised Timber Beams",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_28",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 175,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 5
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_31"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_29"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "object": {
+      "isProp": true,
+      "canPassThrough": true,
+      "isThumpable": false,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.beam_corner_raised",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_BeamCornerRaised",
+   "displayName": "Raised Timber Beam Corner",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberBeamRaised",
+   "category": "Structural",
+   "subcategory": "Raised Timber Beams",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_32",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 200,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 12
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 3
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "canPassThrough": true,
+      "isThumpable": false,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.truss_small",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_TrussSmall",
+   "displayName": "Small Timber Truss",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberTruss",
+   "category": "Structural",
+   "subcategory": "Timber Trusses",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_64",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 250,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 20
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_69"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_64"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.truss_medium",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_TrussMedium",
+   "displayName": "Timber Truss",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberTruss",
+   "category": "Structural",
+   "subcategory": "Timber Trusses",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_65",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 275,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 25
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_68"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_65"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 8
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.truss_large",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_TrussLarge",
+   "displayName": "Large Timber Truss",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberTruss",
+   "category": "Structural",
+   "subcategory": "Timber Trusses",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_66",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 300,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 30
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_67"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_66"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 10
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.truss_gable",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_TrussGable",
+   "displayName": "Timber Gable Truss",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberTruss",
+   "category": "Structural",
+   "subcategory": "Timber Trusses",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_70",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 300,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 35
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_71"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_70"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 10
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.frame_small",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_FrameSmall",
+   "displayName": "Small Timber Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberFrame",
+   "category": "Structural",
+   "subcategory": "Timber Frames",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_77",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 250,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 20
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_72"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_77"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.frame_medium",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_FrameMedium",
+   "displayName": "Timber Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberFrame",
+   "category": "Structural",
+   "subcategory": "Timber Frames",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_76",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 275,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 25
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_73"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_76"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 8
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.frame_tall",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_FrameTall",
+   "displayName": "Tall Timber Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberFrame",
+   "category": "Structural",
+   "subcategory": "Timber Frames",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_75",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 300,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 30
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_74"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_75"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 10
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.frame_trestle",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_FrameTrestle",
+   "displayName": "Timber Trestle Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberFrame",
+   "category": "Structural",
+   "subcategory": "Timber Frames",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_78",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 300,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 35
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_79"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_78"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 10
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.railing_low",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_RailingLow",
+   "displayName": "Low Timber Railing",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberRailing",
+   "category": "Structural",
+   "subcategory": "Timber Railings",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_84",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 200,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 12
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_83"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_84"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.railing_medium",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_RailingMedium",
+   "displayName": "Timber Railing",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberRailing",
+   "category": "Structural",
+   "subcategory": "Timber Railings",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_85",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 225,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 15
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_82"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_85"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.railing_high",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_RailingHigh",
+   "displayName": "High Timber Railing",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberRailing",
+   "category": "Structural",
+   "subcategory": "Timber Railings",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_87",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 225,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 18
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_80"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_87"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.railing_tall",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_RailingTall",
+   "displayName": "Tall Timber Railing",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberRailing",
+   "category": "Structural",
+   "subcategory": "Timber Railings",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_86",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 250,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 20
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_81"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_86"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.cradle_low",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_CradleLow",
+   "displayName": "Low Timber Cradle",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberCradle",
+   "category": "Structural",
+   "subcategory": "Timber Cradles",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_88",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 225,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 15
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_88"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.structural.cradle_high",
+   "translationKey": "IGUI_KBWVE_Buildable_Timber_CradleHigh",
+   "displayName": "Tall Timber Cradle",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_TimberCradle",
+   "category": "Structural",
+   "subcategory": "Timber Cradles",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-expanded",
+    "structural",
+    "carpentry"
+   ],
+   "iconSprite": "carpentry_03_89",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true,
+    "allowSharedSquare": true
+   },
+   "construction": {
+    "time": 250,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureSmall",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 18
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_03_89"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "planks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "dismantable": true
+     }
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "carpentry_03"
+   ]
+  }
+ ]
+}

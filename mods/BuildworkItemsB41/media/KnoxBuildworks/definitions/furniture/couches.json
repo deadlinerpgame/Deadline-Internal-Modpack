@@ -1,0 +1,5345 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_01_1",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_red_comfy_couch",
+   "displayName": "Red Comfy Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_red_comfy_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_01_1",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_3"
+           ],
+           [
+            "furniture_seating_indoor_01_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_0",
+            "furniture_seating_indoor_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_5"
+           ],
+           [
+            "furniture_seating_indoor_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_6",
+            "furniture_seating_indoor_01_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_01_13",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_01_13",
+   "displayName": "Red Comfy Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_01_13",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_01_13",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_01_16",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_green_comfy_couch",
+   "displayName": "Green Comfy Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_green_comfy_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_01_16",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_19"
+           ],
+           [
+            "furniture_seating_indoor_01_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_17",
+            "furniture_seating_indoor_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_23"
+           ],
+           [
+            "furniture_seating_indoor_01_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_20",
+            "furniture_seating_indoor_01_21"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_01_8",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_01_8",
+   "displayName": "Green Comfy Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_01_8",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_01_8",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_01_27",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_purple_rattan_couch",
+   "displayName": "Purple Rattan Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_purple_rattan_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_01_27",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_25"
+           ],
+           [
+            "furniture_seating_indoor_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_26",
+            "furniture_seating_indoor_01_27"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_29"
+           ],
+           [
+            "furniture_seating_indoor_01_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_30",
+            "furniture_seating_indoor_01_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_01_32",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_01_32",
+   "displayName": "Purple Rattan Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_01_32",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_01_32",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_01_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_02_25",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_white_lazy_couch",
+   "displayName": "White Lazy Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_white_lazy_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_02_25",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_27"
+           ],
+           [
+            "furniture_seating_indoor_02_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_24",
+            "furniture_seating_indoor_02_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_29"
+           ],
+           [
+            "furniture_seating_indoor_02_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_30",
+            "furniture_seating_indoor_02_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_02_21",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_02_21",
+   "displayName": "White Lazy Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_02_21",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_02_21",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_23"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_02_35",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_blue_rattan_couch",
+   "displayName": "Blue Rattan Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_blue_rattan_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_02_35",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_33"
+           ],
+           [
+            "furniture_seating_indoor_02_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_34",
+            "furniture_seating_indoor_02_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_37"
+           ],
+           [
+            "furniture_seating_indoor_02_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_38",
+            "furniture_seating_indoor_02_39"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_02_40",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_02_40",
+   "displayName": "Blue Rattan Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_02_40",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_02_40",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_02_49",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_brown_lazy_couch",
+   "displayName": "Brown Lazy Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_brown_lazy_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_02_49",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_51"
+           ],
+           [
+            "furniture_seating_indoor_02_50"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_48",
+            "furniture_seating_indoor_02_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_53"
+           ],
+           [
+            "furniture_seating_indoor_02_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_54",
+            "furniture_seating_indoor_02_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_02_45",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_02_45",
+   "displayName": "Brown Lazy Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_02_45",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_02_45",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_02_47"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_9",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_light_blue_couch",
+   "displayName": "Light Blue Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_light_blue_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_9",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_11"
+           ],
+           [
+            "furniture_seating_indoor_03_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_8",
+            "furniture_seating_indoor_03_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_13"
+           ],
+           [
+            "furniture_seating_indoor_03_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_14",
+            "furniture_seating_indoor_03_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_5",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_03_5",
+   "displayName": "Light Blue Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_03_5",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_5",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_17",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_yellow_modern_couch",
+   "displayName": "Yellow Modern Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_yellow_modern_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_17",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_19"
+           ],
+           [
+            "furniture_seating_indoor_03_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_16",
+            "furniture_seating_indoor_03_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_21"
+           ],
+           [
+            "furniture_seating_indoor_03_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_22",
+            "furniture_seating_indoor_03_23"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_29",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_03_29",
+   "displayName": "Yellow Modern Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_03_29",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_29",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_32",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_blue_comfy_couch",
+   "displayName": "Blue Comfy Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_blue_comfy_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_32",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_35"
+           ],
+           [
+            "furniture_seating_indoor_03_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_33",
+            "furniture_seating_indoor_03_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_39"
+           ],
+           [
+            "furniture_seating_indoor_03_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_36",
+            "furniture_seating_indoor_03_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_24",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_03_24",
+   "displayName": "Blue Comfy Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_03_24",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_24",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_75",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_victorian_c1_couch",
+   "displayName": "Victorian C1 Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_victorian_c1_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_75",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_73"
+           ],
+           [
+            "furniture_seating_indoor_03_72"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_74",
+            "furniture_seating_indoor_03_75"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_79"
+           ],
+           [
+            "furniture_seating_indoor_03_78"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_76",
+            "furniture_seating_indoor_03_77"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_84",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_03_84",
+   "displayName": "Victorian 2 Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_03_84",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_84",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_84"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_85"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_87"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_86"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_91",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_victorian_c2_couch",
+   "displayName": "Victorian C2 Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_victorian_c2_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_91",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_89"
+           ],
+           [
+            "furniture_seating_indoor_03_88"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_90",
+            "furniture_seating_indoor_03_91"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_95"
+           ],
+           [
+            "furniture_seating_indoor_03_94"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_92",
+            "furniture_seating_indoor_03_93"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_80",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_03_80",
+   "displayName": "Victorian 1 Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_03_80",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_80",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_80"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_81"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_83"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_82"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_107",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_victorian_c3_couch",
+   "displayName": "Victorian C3 Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_victorian_c3_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_107",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_105"
+           ],
+           [
+            "furniture_seating_indoor_03_104"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_106",
+            "furniture_seating_indoor_03_107"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_111"
+           ],
+           [
+            "furniture_seating_indoor_03_110"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_108",
+            "furniture_seating_indoor_03_109"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_96",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_03_96",
+   "displayName": "Victorian 3 Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_03_96",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_96",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_96"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_97"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_99"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_98"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_115",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_victorian_c4_couch",
+   "displayName": "Victorian C4 Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_victorian_c4_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_115",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_113"
+           ],
+           [
+            "furniture_seating_indoor_03_112"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_114",
+            "furniture_seating_indoor_03_115"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_119"
+           ],
+           [
+            "furniture_seating_indoor_03_118"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_116",
+            "furniture_seating_indoor_03_117"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_100",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_03_100",
+   "displayName": "Victorian 4 Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_03_100",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_100",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_100"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_101"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_103"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_102"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_131",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_victorian_c5_couch",
+   "displayName": "Victorian C5 Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_victorian_c5_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_131",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_129"
+           ],
+           [
+            "furniture_seating_indoor_03_128"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_130",
+            "furniture_seating_indoor_03_131"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_135"
+           ],
+           [
+            "furniture_seating_indoor_03_134"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_132",
+            "furniture_seating_indoor_03_133"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_120",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_03_120",
+   "displayName": "Victorian 5 Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_03_120",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_120",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_120"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_121"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_123"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_122"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_139",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_victorian_c6_couch",
+   "displayName": "Victorian C6 Couch",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_victorian_c6_couch",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_139",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_137"
+           ],
+           [
+            "furniture_seating_indoor_03_136"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_138",
+            "furniture_seating_indoor_03_139"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_143"
+           ],
+           [
+            "furniture_seating_indoor_03_142"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_140",
+            "furniture_seating_indoor_03_141"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.couches.furniture_seating_indoor_03_124",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_couches_furniture_seating_indoor_03_124",
+   "displayName": "Victorian 6 Chair",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_couches_furniture_seating_indoor_03_124",
+   "category": "Furniture",
+   "subcategory": "Couches",
+   "material": "Fabric",
+   "iconSprite": "furniture_seating_indoor_03_124",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_124"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_125"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_127"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_seating_indoor_03_126"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3,
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30,
+       "Woodwork": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canPassThrough": true
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,564 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.decorations.graves.location_community_cemetary_01_1",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_graves_location_community_cemetary_01_1",
+   "displayName": "Round Gravestone",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_decorations_graves_location_community_cemetary_01_1",
+   "category": "Decorations",
+   "subcategory": "Graves",
+   "material": "Stone",
+   "iconSprite": "location_community_cemetary_01_1",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_0"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildCairn",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": true,
+      "canBePadlocked": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.graves.location_community_cemetary_01_3",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_graves_location_community_cemetary_01_3",
+   "displayName": "Arched Gravestone",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_decorations_graves_location_community_cemetary_01_3",
+   "category": "Decorations",
+   "subcategory": "Graves",
+   "material": "Stone",
+   "iconSprite": "location_community_cemetary_01_3",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_2"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildCairn",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": true,
+      "canBePadlocked": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.graves.location_community_cemetary_01_5",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_graves_location_community_cemetary_01_5",
+   "displayName": "Square Gravestone",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_decorations_graves_location_community_cemetary_01_5",
+   "category": "Decorations",
+   "subcategory": "Graves",
+   "material": "Stone",
+   "iconSprite": "location_community_cemetary_01_5",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_4"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildCairn",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": true,
+      "canBePadlocked": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.graves.location_community_cemetary_01_9",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_graves_location_community_cemetary_01_9",
+   "displayName": "Battered Gravestone",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_decorations_graves_location_community_cemetary_01_9",
+   "category": "Decorations",
+   "subcategory": "Graves",
+   "material": "Stone",
+   "iconSprite": "location_community_cemetary_01_9",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_8"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildCairn",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": true,
+      "canBePadlocked": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.graves.location_community_cemetary_01_11",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_graves_location_community_cemetary_01_11",
+   "displayName": "Angelic Gravestone",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_decorations_graves_location_community_cemetary_01_11",
+   "category": "Decorations",
+   "subcategory": "Graves",
+   "material": "Stone",
+   "iconSprite": "location_community_cemetary_01_11",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildCairn",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": true,
+      "canBePadlocked": true
+     }
+    }
+   ]
+  }
+ ]
+}

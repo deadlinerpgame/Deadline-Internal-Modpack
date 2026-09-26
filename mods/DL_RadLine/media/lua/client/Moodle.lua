@@ -9,7 +9,7 @@ local function MoodleInit()
     local moodleradres = MF.getMoodle("MoodleRadRes");
     local moodlegasmask = MF.getMoodle("MoodleGasMask");
     local moodlehazmat = MF.getMoodle("MoodleHazmat");
-    moodlerad:setThresholds(0.01, 0.25, 0.5, 0.99999,   nil, nil, nil, nil)--floats
+    moodlerad:setThresholds(0.01, 0.25, 0.5, 0.99999,   nil, nil, nil, nil)
     moodleradres:setThresholds(nil, nil, nil, nil,   0.01, 0.25, 0.5, 0.75);
     moodlegasmask:setThresholds(nil, nil, nil, nil,   0.01, 0.25, 0.5, 0.75);
     moodlehazmat:setThresholds(nil, nil, nil, nil,   0.01, 0.25, 0.5, 0.75);
@@ -19,10 +19,4 @@ local function MoodleInit()
     MF.getMoodle("MoodleHazmat"):setValue(0);
 end
 
---local function UpdatePl()
---    local moodlerad = MF.getMoodle("MoodleRad");
---    local moodleradres = MF.getMoodle("MoodleRadRes");
---end
-
 Events.OnCreatePlayer.Add(MoodleInit);
---Events.OnPlayerUpdate.Add(UpdatePl);
