@@ -29,6 +29,7 @@ local BOOSTED_CATEGORIES = {
     [Perks.Crafting] = true,
     [Perks.Firearm] = true,
     [Perks.Survivalist] = true,
+    [Perks.Agility] = true,
 }
 
 DL.TraitBoosts = {}

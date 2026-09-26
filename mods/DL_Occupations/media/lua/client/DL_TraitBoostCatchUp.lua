@@ -1,4 +1,4 @@
-local FLAG = "DLTraitBoostsV1"
+local FLAG = "DLTraitBoostsV2"
 
 local function applyTraitBoosts(player)
     local xp = player:getXp()
