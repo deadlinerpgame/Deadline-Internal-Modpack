@@ -74,7 +74,7 @@ end
 
 
 local TargetTileA = {
-    ['deadline02_17']=true,
+    ['deadline02_22']=true,
 }
 
 local TargetTileB = {
