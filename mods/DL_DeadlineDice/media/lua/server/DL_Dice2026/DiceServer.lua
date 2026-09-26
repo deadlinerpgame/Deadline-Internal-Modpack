@@ -427,7 +427,12 @@ local function addLog(c, line)
 	broadcast("log", { id = c.id, line = line })
 end
 
+local advanceTurn
+
 local function push(c)
+	if c.phase == "active" and c.currentId == nil then
+		advanceTurn(c)
+	end
 	c.lastActivity = getTimestamp and getTimestamp() or 0
 	saveCombat(c)
 	broadcast("state", snapshot(c))
@@ -593,8 +598,6 @@ local function rollFor(c, m, kind, ctx)
 	return total, raw, suffix
 end
 
-local advanceTurn
-
 local function applyDamage(c, victim, amount, source)
 	victim.hp = MathUtils.clamp(victim.hp - amount, 0, victim.maxHp)
 	addLog(c, victim.name .. " takes " .. amount .. " damage" .. (source and (" (" .. source .. ")") or "") .. " - " .. victim.hp .. "/" .. victim.maxHp .. " HP.")
@@ -695,33 +698,69 @@ local function newCombatant(username, name)
 	}
 end
 
-local function rerollTies(c)
-	for _ = 1, 8 do
-		local seen, tied = {}, {}
-		for i = 1, #c.combatants do
-			local m = c.combatants[i]
-			if seen[m.initiative] then
-				tied[#tied + 1] = m
-				tied[#tied + 1] = seen[m.initiative]
-			else
-				seen[m.initiative] = m
+local function initiativeOrder(a, b)
+	local ia, ib = a.initiative or 0, b.initiative or 0
+	if ia ~= ib then
+		return ia > ib
+	end
+	return (a.tieBreak or 0) > (b.tieBreak or 0)
+end
+
+local function breakTies(c)
+	local groups, order = {}, {}
+	for i = 1, #c.combatants do
+		local m = c.combatants[i]
+		local key = m.initiative or 0
+		if not groups[key] then
+			groups[key] = {}
+			order[#order + 1] = key
+		end
+		local group = groups[key]
+		group[#group + 1] = m
+	end
+	for _, key in ipairs(order) do
+		local group = groups[key]
+		if #group == 1 then
+			group[1].tieBreak = nil
+		else
+			local pending = {}
+			for i = 1, #group do
+				if group[i].tieBreak == nil then
+					pending[#pending + 1] = group[i]
+				end
 			end
-		end
-		if #tied == 0 then
-			return
-		end
-		for i = 1, #tied do
-			tied[i].initiative = croll(c, DICE_SIDES, "tie:" .. tied[i].name)
-			addLog(c, "Initiative tie: " .. tied[i].name .. " re-rolls " .. tied[i].initiative .. ".")
+			for _ = 1, 8 do
+				if #pending == 0 then
+					break
+				end
+				for i = 1, #pending do
+					local m = pending[i]
+					m.tieBreak = croll(c, DICE_SIDES, "tie:" .. m.name)
+					addLog(c, "Initiative tie at " .. key .. ": " .. m.name .. " rolls " .. m.tieBreak .. " to break it.")
+				end
+				local count = {}
+				for i = 1, #group do
+					local t = group[i].tieBreak
+					count[t] = (count[t] or 0) + 1
+				end
+				pending = {}
+				for i = 1, #group do
+					if count[group[i].tieBreak] > 1 then
+						pending[#pending + 1] = group[i]
+					end
+				end
+			end
 		end
 	end
 end
 
+local function sortTurnOrder(c)
+	breakTies(c)
+	table.sort(c.combatants, initiativeOrder)
+end
+
 local function startCombat(c, forced)
-	rerollTies(c)
-	table.sort(c.combatants, function(a, b)
-		return (a.initiative or 0) > (b.initiative or 0)
-	end)
+	sortTurnOrder(c)
 	c.phase = "active"
 	c.round = 1
 	c.currentId = nil
@@ -1219,7 +1258,7 @@ local function resolveEscape(c, m)
 		addLog(c, m.name .. " rolls Escape: " .. total .. suffix .. " vs " .. threshold .. " - ESCAPED! They must leave the scene.")
 		return true
 	end
-	addLog(c, m.name .. " rolls Escape: " .. total .. suffix .. " vs " .. threshold .. " - failed. They remain in combat.")
+	addLog(c, m.name .. " rolls Escape: " .. total .. suffix .. " vs " .. threshold .. " - failed. They remain in combat and their turn ends.")
 	return false
 end
 
@@ -1262,7 +1301,7 @@ local function removeParticipant(c, id, logLine)
 end
 
 local FREE_ROLL_RADIUS = 20
-local FREE_LABELS = { attack = "Attack", escape = "Escape" }
+local FREE_LABELS = { attack = "Attack", throw = "Throw", escape = "Escape" }
 
 function DiceServer.handleFreeRoll(player, args)
 	if not player then
@@ -1281,11 +1320,19 @@ function DiceServer.handleFreeRoll(player, args)
 		suffix = string.format(" [%d/%d %s]", r1, r2, adv > 0 and "adv" or "dis")
 	end
 	local ctx = nil
+	local kind = args.rollId
 	if args.rollId == "attack" then
 		local class, _, cats, gunRange = classifyItem(player:getPrimaryHandItem())
 		ctx = { class = class, cats = cats, gunRange = gunRange, thrown = class == "molotov" or class == "bomb" }
+	elseif args.rollId == "throw" then
+		local class, _, cats = classifyItem(player:getPrimaryHandItem())
+		if class ~= "molotov" and class ~= "bomb" then
+			class = "thrown"
+		end
+		ctx = { class = class, cats = cats, thrown = true }
+		kind = "attack"
 	end
-	local bonus, parts = DiceTraits.bonus(DiceTraits.fromPlayer(player), args.rollId, ctx)
+	local bonus, parts = DiceTraits.bonus(DiceTraits.fromPlayer(player), kind, ctx)
 	if bonus ~= 0 then
 		total = total + bonus
 		suffix = suffix .. DiceTraits.suffix(bonus, parts)
@@ -1469,6 +1516,10 @@ function DiceServer.handle(player, cmd, args)
 	elseif cmd == "attack" then
 		if c.phase == "active" and not c.paused and c.currentId == m.id
 			and m.status ~= "ko" and m.status ~= "surrendered" then
+			if m.disengaged then
+				sendTo(player, "error", { message = "You disengaged this turn - finish your turn." })
+				return
+			end
 			local target = findCombatant(c, args.targetId)
 			if target and target.id ~= m.id and target.status ~= "ko" and target.status ~= "surrendered" then
 				resolveAttack(c, m, target, args)
@@ -1480,11 +1531,16 @@ function DiceServer.handle(player, cmd, args)
 	elseif cmd == "escape" then
 		if c.phase == "active" and not c.paused and c.currentId == m.id
 			and m.status ~= "ko" and m.status ~= "surrendered" and not m.escapeWounds and not m.grappled then
+			if m.disengaged then
+				sendTo(player, "error", { message = "You disengaged this turn - finish your turn." })
+				return
+			end
 			if resolveEscape(c, m) then
 				if not removeParticipant(c, m.id, nil) then
 					push(c)
 				end
 			else
+				endTurn(c)
 				push(c)
 			end
 		end
@@ -1662,10 +1718,9 @@ function DiceServer.handleStaff(player, cmd, args, c, m)
 			target.initiative = croll(c, DICE_SIDES, "init:" .. target.name)
 			addLog(c, target.name .. " re-rolls initiative: " .. target.initiative .. ". (staff)")
 		end
+		target.tieBreak = nil
 		if c.phase == "active" then
-			table.sort(c.combatants, function(a, b)
-				return (a.initiative or 0) > (b.initiative or 0)
-			end)
+			sortTurnOrder(c)
 		end
 		push(c)
 	elseif cmd == "marker" and target then
@@ -1717,17 +1772,10 @@ function DiceServer.handleStaff(player, cmd, args, c, m)
 		npc.initiative = MathUtils.parseNumber(args.initiative, nil, 1, 99) or croll(c, DICE_SIDES, "npc-init")
 		npc.pos = { x = math.floor(player:getX()), y = math.floor(player:getY()), z = math.floor(player:getZ()) }
 		local list = c.combatants
+		list[#list + 1] = npc
 		if c.phase == "active" then
-			local pos = #list + 1
-			for i = 1, #list do
-				if (list[i].initiative or 0) < npc.initiative then
-					pos = i
-					break
-				end
-			end
-			table.insert(list, pos, npc)
+			sortTurnOrder(c)
 		else
-			list[#list + 1] = npc
 			maybeAutoStart(c)
 		end
 		addLog(c, "ADMIN: " .. npc.name .. " joins combat (HP " .. npc.maxHp .. ", initiative " .. npc.initiative .. ").")
@@ -1742,6 +1790,10 @@ function DiceServer.handleStaff(player, cmd, args, c, m)
 	elseif cmd == "npcRoll" and target and target.isNpc then
 		local label = UTILITY[args.rollId]
 		if args.rollId == "attack" or args.rollId == "throw" then
+			if c.phase ~= "active" or c.paused or c.currentId ~= target.id then
+				sendTo(player, "error", { message = target.name .. " can only attack on their own turn." })
+				return
+			end
 			local victim = findCombatant(c, args.targetId)
 			if victim and victim.id ~= target.id and victim.status ~= "ko" and victim.status ~= "surrendered" then
 				resolveAttack(c, target, victim)

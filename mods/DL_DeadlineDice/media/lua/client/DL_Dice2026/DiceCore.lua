@@ -462,7 +462,7 @@ local function refreshView()
 				me = m
 			end
 		end
-		s.advantage = me and me.advantage or 0
+		s.advantage = me and me.advantage or getLocalMe().advantage or 0
 		if s.selectedTargetId and not DiceCore.findCombatant(s.selectedTargetId) then
 			s.selectedTargetId = nil
 		end
@@ -477,7 +477,7 @@ local function refreshView()
 		s.combatants = {}
 		s.selectedTargetId = nil
 		s.movingNpcId = nil
-		s.advantage = 0
+		s.advantage = getLocalMe().advantage or 0
 	end
 
 	if oldId ~= s.combatId or oldPhase ~= s.phase or oldCurrent ~= s.currentId then
@@ -761,7 +761,7 @@ function DiceCore.roll(id)
 		local adv = me.advantage or 0
 		me.advantage = 0
 		DiceCore.state.advantage = 0
-		DiceCore.send("freeRoll", { rollId = id == "throw" and "attack" or id, advantage = adv })
+		DiceCore.send("freeRoll", { rollId = id, advantage = adv })
 		DiceCore.notify("state")
 		return
 	end
@@ -795,7 +795,15 @@ function DiceCore.roll(id)
 	elseif id == "escape" then
 		DiceCore.send("escape", {})
 	else
-		DiceCore.send("utilityRoll", { rollId = id, combatId = DiceCore.state.combatId })
+		local args = { rollId = id, combatId = DiceCore.state.combatId }
+		if not DiceCore.isParticipant() then
+			local me = getLocalMe()
+			args.advantage = me.advantage or 0
+			me.advantage = 0
+			DiceCore.state.advantage = 0
+			DiceCore.notify("state")
+		end
+		DiceCore.send("utilityRoll", args)
 	end
 end
 
