@@ -326,6 +326,11 @@ local function displayNameOf(item)
 	return string.lower(name)
 end
 
+local function byTypeLookup(list, item)
+	local fullType = item:getFullType()
+	return list[fullType] or list[(fullType:gsub("^Base%.DL", "Base."))]
+end
+
 local function matchByName(list, name)
 	if name == nil then
 		return nil
@@ -346,7 +351,7 @@ function DiceTraits.weaponClassOf(item, class)
 		return class
 	end
 	if item.getFullType ~= nil then
-		local byType = DiceTraits.weaponClassByType[item:getFullType()]
+		local byType = byTypeLookup(DiceTraits.weaponClassByType, item)
 		if byType then
 			return byType
 		end
@@ -362,7 +367,7 @@ function DiceTraits.gunRangeOf(item, class)
 		return nil
 	end
 	if item ~= nil and item.getFullType ~= nil then
-		local byType = DiceTraits.gunRangeByType[item:getFullType()]
+		local byType = byTypeLookup(DiceTraits.gunRangeByType, item)
 		if byType then
 			return byType
 		end

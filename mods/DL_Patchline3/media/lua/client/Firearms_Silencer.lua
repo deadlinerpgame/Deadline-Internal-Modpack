@@ -75,7 +75,7 @@ function Firearms_Jay_silence(wielder, weapon, overridePart)
 		if getDebug() then print(canon:getType()) end
 		if string.find(canon:getType(), "Silencer") and not string.find(canon:getType(), "Broken") then
 			local weaponAmmo, replaced = string.gsub(weapon:getAmmoType(), "Base.", "")
-			local suppressor = "type" .. canon:getType()
+			local suppressor = "type" .. canon:getType():gsub("^DL", "")
 			local ammo = "caliber" .. weaponAmmo
 			if getDebug() then
 			  print("Ammo type: " .. ammo)
@@ -176,6 +176,7 @@ function breakSuppressor(playerObj, weapon)
 
   local canon = weapon:getCanon()
   if canon then
+	local prefix = canon:getType():match("^DL") or ""
 	local breakChanceMulti = 1
 	
 	if weapon:getAmmoBox() == "Bullets22Box" or weapon:getAmmoBox() == "Bullets38Box" then
@@ -195,7 +196,7 @@ function breakSuppressor(playerObj, weapon)
 			damageSuppressor(canon)
 			if getSuppressorCondition(canon) <= 0 then
 				weapon:detachWeaponPart(canon)
-				local brokenSilencer = InventoryItemFactory.CreateItem('Base.BrokenImprovisedSilencer')
+				local brokenSilencer = InventoryItemFactory.CreateItem('Base.' .. prefix .. 'BrokenImprovisedSilencer')
 				weapon:attachWeaponPart(brokenSilencer)
 				playerObj:resetEquippedHandsModels();
 				silence(playerObj, weapon)
@@ -213,7 +214,7 @@ function breakSuppressor(playerObj, weapon)
 			damageSuppressor(canon)
 			if getSuppressorCondition(canon) <= 0 then
 				weapon:detachWeaponPart(canon)
-				local brokenSilencer = InventoryItemFactory.CreateItem('Base.BrokenSilencer_PopBottle')
+				local brokenSilencer = InventoryItemFactory.CreateItem('Base.' .. prefix .. 'BrokenSilencer_PopBottle')
 				weapon:attachWeaponPart(brokenSilencer)
 				playerObj:resetEquippedHandsModels();
 				silence(playerObj, weapon)
@@ -229,10 +230,10 @@ function breakSuppressor(playerObj, weapon)
 			if getSuppressorCondition(canon) <= 0 then
 				weapon:detachWeaponPart(canon)
 				local brokenSilencer = nil
-				if canon:getType() == "ShotgunSilencer" then
-					brokenSilencer = InventoryItemFactory.CreateItem('Base.BrokenShotgunSilencer')
+				if canon:getType() == prefix .. "ShotgunSilencer" then
+					brokenSilencer = InventoryItemFactory.CreateItem('Base.' .. prefix .. 'BrokenShotgunSilencer')
 				else
-					brokenSilencer = InventoryItemFactory.CreateItem('Base.BrokenSilencer')
+					brokenSilencer = InventoryItemFactory.CreateItem('Base.' .. prefix .. 'BrokenSilencer')
 				end
 				weapon:attachWeaponPart(brokenSilencer)
 				playerObj:resetEquippedHandsModels();
