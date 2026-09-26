@@ -24,6 +24,31 @@ local function toPerks(byName, owner)
     return out
 end
 
+local BOOSTED_CATEGORIES = {
+    [Perks.Combat] = true,
+    [Perks.Crafting] = true,
+    [Perks.Firearm] = true,
+    [Perks.Survivalist] = true,
+}
+
+DL.TraitBoosts = {}
+
+local function traitXp(trait, owner)
+    local out = toPerks(trait.xp, owner) or {}
+    local boosts = {}
+    for perk, cap in pairs(toPerks(trait.caps, owner) or {}) do
+        if BOOSTED_CATEGORIES[perk:getParent()] then
+            boosts[perk] = math.floor(cap / 2)
+            out[perk] = boosts[perk]
+        end
+    end
+    if next(boosts) ~= nil then
+        DL.TraitBoosts[owner] = boosts
+    end
+    if next(out) == nil then return nil end
+    return out
+end
+
 local exclusions = {}
 for _, pair in ipairs(O.exclusives) do
     local first = pair[1]
@@ -41,7 +66,7 @@ for _, id in ipairs(O.traitOrder) do
         description = trait.description,
         cost = trait.cost,
         profession = trait.hidden == true,
-        xp = toPerks(trait.xp, id),
+        xp = traitXp(trait, id),
         recipes = trait.recipes,
         add = trait.add,
         exclude = exclusions[id],
