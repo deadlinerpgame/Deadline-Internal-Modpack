@@ -1,4 +1,5 @@
 require 'Items/ProceduralDistributions'
+require 'Items/SuburbsDistributions'
 -- override for errors # 422 BedroomDresserClassy is not a valid distribution
 --WardrobeRedneck
 table.insert(ProceduralDistributions.list.WardrobeRedneck.items, "RustillerysHats.Hat_Flatcap");
@@ -515,61 +516,60 @@ table.insert(ProceduralDistributions.list.ClothingPoor.items, "RustillerysHats.H
 table.insert(ProceduralDistributions.list.ClothingPoor.items, 0.8);
 
 --Outfit_Farmer
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, "RustillerysHats.Hat_Flatcap");
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, 4);
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, "RustillerysHats.Hat_Flatcap");
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, 4);
 
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, "RustillerysHats.Hat_Flatcap_Tweed");
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, 6);
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, "RustillerysHats.Hat_Flatcap_Tweed");
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, 6);
 
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, "RustillerysHats.Hat_Flatcap_PlaidTINT");
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, 4);
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, "RustillerysHats.Hat_Flatcap_PlaidTINT");
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, 4);
 
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, "RustillerysHats.Hat_BakerBoy");
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, 4);
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, "RustillerysHats.Hat_BakerBoy");
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, 4);
 
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, "RustillerysHats.Hat_BakerBoy_Tweed");
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, 6);
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, "RustillerysHats.Hat_BakerBoy_Tweed");
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, 6);
 
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, "RustillerysHats.Hat_BakerBoy_PlaidTINT");
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, 4);
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, "RustillerysHats.Hat_BakerBoy_PlaidTINT");
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, 4);
 
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, "RustillerysHats.Hat_Slouch_Right");
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, 4);
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, "RustillerysHats.Hat_Slouch_Right");
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, 4);
 
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, "RustillerysHats.Hat_Cigarette_Strap");
-table.insert(ProceduralDistributions.list.Outfit_Farmer.items, 4);
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, "RustillerysHats.Hat_Cigarette_Strap");
+table.insert(SuburbsDistributions["all"]["Outfit_Farmer"].items, 4);
 
 --Outfit_Fisherman
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, "RustillerysHats.Hat_FishermanCap");
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, 15);
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, "RustillerysHats.Hat_FishermanCap");
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, 15);
 
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, "RustillerysHats.Hat_BakerBoy");
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, 4);
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, "RustillerysHats.Hat_BakerBoy");
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, 4);
 
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, "RustillerysHats.Hat_BakerBoy_PlaidTINT");
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, 2);
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, "RustillerysHats.Hat_BakerBoy_PlaidTINT");
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, 2);
 
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, "RustillerysHats.Hat_BakerBoy_Tweed");
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, 2);
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, "RustillerysHats.Hat_BakerBoy_Tweed");
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, 2);
 
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, "RustillerysHats.Hat_Flatcap");
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, 4);
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, "RustillerysHats.Hat_Flatcap");
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, 4);
 
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, "RustillerysHats.Hat_Flatcap_PlaidTINT");
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, 2);
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, "RustillerysHats.Hat_Flatcap_PlaidTINT");
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, 2);
 
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, "RustillerysHats.Hat_Flatcap_Tweed");
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, 2);
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, "RustillerysHats.Hat_Flatcap_Tweed");
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, 2);
 
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, "RustillerysHats.Hat_Flatcap_Leather");
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, 2);
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, "RustillerysHats.Hat_Flatcap_Leather");
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, 2);
 
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, "RustillerysHats.Hat_Slouch_Right");
-table.insert(ProceduralDistributions.list.Outfit_Fisherman.items, 2);
-
---FishermanTools
-table.insert(ProceduralDistributions.list.FishermanTools.items, "RustillerysHats.Hat_FishermanCap");
-table.insert(ProceduralDistributions.list.FishermanTools.items, 10);
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, "RustillerysHats.Hat_Slouch_Right");
+table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, 2);
+--FishermanTools - do not exist in b41 so patched
+-- table.insert(ProceduralDistributions.list.FishermanTools.items, "RustillerysHats.Hat_FishermanCap");
+-- table.insert(ProceduralDistributions.list.FishermanTools.items, 10);
 
 --FishingStoreGear
 table.insert(ProceduralDistributions.list.FishingStoreGear.items, "RustillerysHats.Hat_FishermanCap");
