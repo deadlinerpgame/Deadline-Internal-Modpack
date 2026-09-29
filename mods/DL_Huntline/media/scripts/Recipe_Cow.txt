@@ -1,0 +1,28 @@
+module Base {
+
+recipe Butcher a Cow
+    {
+        keep [Recipe.GetItemTypes.SharpKnife],
+	Cow_Dead,
+        CanBeDoneFromFloor:true,
+        Result:Base.Steak,
+        Time:600.0,
+        OnCreate:Recipe.OnCreate.ButcherCowHalf,
+        Category:Butchering,
+    }
+
+recipe Hook and Butcher a Cow
+    {
+        keep [Recipe.GetItemTypes.SharpKnife],
+	Cow_Dead,
+        CanBeDoneFromFloor:true,
+        Result:Base.Steak,
+        Time:600.0,
+        OnCreate:Recipe.OnCreate.ButcherCow,
+        Category:Butchering,
+	NearItem:Butchering Hook,
+    }
+
+
+}
+

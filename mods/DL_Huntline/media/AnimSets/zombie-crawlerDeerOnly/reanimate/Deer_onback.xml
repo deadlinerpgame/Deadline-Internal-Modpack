@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animNode>
+	<m_Name>Deer_onback</m_Name>
+	<m_AnimName>DeerStag_SittingToStanding</m_AnimName>
+	<m_deferredBoneAxis>Y</m_deferredBoneAxis>
+	<m_Looped>false</m_Looped>
+	<m_EarlyBlendOut>false</m_EarlyBlendOut>
+	<m_SpeedScale>4.80</m_SpeedScale>
+	<m_BlendTime>0.20</m_BlendTime>
+	<m_Events>
+		<m_EventName>FallOnFront</m_EventName>
+		<m_TimePc>0.35</m_TimePc>
+		<m_ParameterValue>TRUE</m_ParameterValue>
+	</m_Events>
+	<m_Events>
+		<m_EventName>SetVariable</m_EventName>
+		<m_Time>Start</m_Time>
+		<m_ParameterValue>ReanimateAnim=true</m_ParameterValue>
+	</m_Events>
+	<m_Events>
+		<m_EventName>ReanimateAnimFinishing</m_EventName>
+		<m_Time>End</m_Time>
+		<m_ParameterValue></m_ParameterValue>
+	</m_Events>
+	<m_Conditions>
+		<m_Name>isDeerAnimal</m_Name>
+		<m_Type>STRING</m_Type>
+		<m_StringValue>true</m_StringValue>
+	</m_Conditions>
+</animNode>

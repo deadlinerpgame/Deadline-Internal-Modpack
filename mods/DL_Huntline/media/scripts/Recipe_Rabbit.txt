@@ -1,0 +1,28 @@
+module Base {
+
+recipe Butcher a Rabbit
+    {
+        keep [Recipe.GetItemTypes.SharpKnife],
+	Rabbit_Dead,
+        CanBeDoneFromFloor:true,
+        Result:Base.Rabbitmeat,
+        Time:600.0,
+        OnCreate:Recipe.OnCreate.ButcherRabbitHalf,
+        Category:Butchering,
+    }
+
+recipe Hook and Butcher a Rabbit
+    {
+        keep [Recipe.GetItemTypes.SharpKnife],
+	Rabbit_Dead,
+        CanBeDoneFromFloor:true,
+        Result:Base.Rabbitmeat,
+        Time:600.0,
+        OnCreate:Recipe.OnCreate.ButcherRabbit,
+        Category:Butchering,
+	NearItem:Butchering Hook,
+    }
+
+
+}
+

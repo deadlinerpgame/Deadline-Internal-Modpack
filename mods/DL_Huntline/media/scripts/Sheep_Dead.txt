@@ -1,0 +1,27 @@
+module Base {
+
+
+	model Sheep_Dead
+    {
+        mesh = WorldItems/SheepRam_Dead,
+        texture = Sheep_White,
+        scale = 1.2,
+    }
+
+    item Sheep_Dead
+	{
+        WorldStaticModel = Sheep_Dead,
+	DisplayCategory = Food,
+	Weight	=	25.0,
+	Type	=	Normal,
+	DaysFresh 			=		10,
+	DaysTotallyRotten 	=	 	15,
+	DisplayName = Sheep Carcass,
+	Icon = DeadPerson_MaleZombie,
+	RequiresEquippedBothHands = true,
+	Tags = HeavyItem,
+	}
+
+
+}
+

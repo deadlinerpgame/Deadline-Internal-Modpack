@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<animNode>
+	<m_Name>Pig_crawlerattack_start2</m_Name>
+	<m_AnimName>FarmPig_Attack_Bite</m_AnimName>
+	<m_deferredBoneAxis>Y</m_deferredBoneAxis>
+	<m_Looped>false</m_Looped>
+	<m_SpeedScale>20</m_SpeedScale>
+	<m_BlendTime>0</m_BlendTime>
+
+	<m_Events>
+		<m_EventName>SetVariable</m_EventName>
+		<m_Time>End</m_Time>
+		<m_ParameterValue>ZombieBiteStarted=true</m_ParameterValue>
+	</m_Events>
+	<m_Events>
+		<m_EventName>SetState</m_EventName>
+		<m_Time>Start</m_Time>
+		<m_ParameterValue></m_ParameterValue>
+	</m_Events>
+	<m_Conditions>
+		<m_Name>CrawlerType</m_Name>
+		<m_Type>EQU</m_Type>
+		<m_FloatValue>2</m_FloatValue>
+	</m_Conditions>
+	<m_Conditions>
+		<m_Name>isPigAnimal</m_Name>
+		<m_Type>STRING</m_Type>
+		<m_StringValue>true</m_StringValue>
+	</m_Conditions>
+</animNode>

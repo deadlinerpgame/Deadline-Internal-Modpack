@@ -1,0 +1,27 @@
+module Base {
+
+recipe Butcher a Sheep
+    {
+        keep [Recipe.GetItemTypes.SharpKnife],
+	Sheep_Dead,
+        CanBeDoneFromFloor:true,
+        Result:Base.MuttonChop,
+        Time:600.0,
+        OnCreate:Recipe.OnCreate.ButcherSheepHalf,
+        Category:Butchering,
+    }
+
+recipe Hook and Butcher a Sheep
+    {
+        keep [Recipe.GetItemTypes.SharpKnife],
+	Sheep_Dead,
+        CanBeDoneFromFloor:true,
+        Result:Base.MuttonChop,
+        Time:600.0,
+        OnCreate:Recipe.OnCreate.ButcherSheep,
+        Category:Butchering,
+	NearItem:Butchering Hook,
+    }
+
+}
+
