@@ -26,7 +26,7 @@ end
 local DiceCore = {}
 
 DiceCore.MOD_ID = "DL_Dice2026"
-DiceCore.SETTINGS_FILE = "DL_Dice2026_ui.json"
+DiceCore.SETTINGS_FILE = "DL_Dice2026_ui.txt"
 DiceCore.DICE_SIDES = 20
 DiceCore.BASE_FONT_H = 14
 DiceCore.RADIUS = 30
