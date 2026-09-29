@@ -7,6 +7,7 @@ DiceTraits.tuning = {
 	baseThrowRange = 10,
 	lungeTiles = 3,
 	escapeThreshold = 18,
+	firstAidThreshold = 12,
 	aooRange = 1,
 }
 
@@ -60,12 +61,12 @@ DiceTraits.defs = {
 	longreach = { name = "Longreach", text = "+4 Attack with Spears", attackCat = { Spear = 4 } },
 	scrapper = { name = "Scrapper", text = "+1 Attack Unarmed and Improvised", attackCat = { Unarmed = 1, Improvised = 1 } },
 
-	snapshooter = { name = "Snapshooter", text = "+1 Attack with Guns, +2 total at close range", attackGun = 1, attackGunRange = { close = 1 } },
-	gunslinger = { name = "Gunslinger", text = "+2 Attack with Guns, +4 total at close range", attackGun = 2, attackGunRange = { close = 2 } },
-	rifleman = { name = "Rifleman", text = "+1 Attack with Guns, +2 total at medium range", attackGun = 1, attackGunRange = { medium = 1 } },
-	dead_eye = { name = "Dead-Eye", text = "+2 Attack with Guns, +4 total at medium range", attackGun = 2, attackGunRange = { medium = 2 } },
-	spotter = { name = "Spotter", text = "+1 Attack with Guns, +2 total at long range", attackGun = 1, attackGunRange = { long = 1 } },
-	longshot = { name = "Longshot", text = "+2 Attack with Guns, +4 total at long range", attackGun = 2, attackGunRange = { long = 2 } },
+	snapshooter = { name = "Snapshooter", text = "+1 Attack with Guns, +2 total with Close group guns", attackGun = 1, attackGunRange = { close = 1 } },
+	gunslinger = { name = "Gunslinger", text = "+2 Attack with Guns, +4 total with Close group guns", attackGun = 2, attackGunRange = { close = 2 } },
+	rifleman = { name = "Rifleman", text = "+1 Attack with Guns, +2 total with Medium group guns", attackGun = 1, attackGunRange = { medium = 1 } },
+	dead_eye = { name = "Dead-Eye", text = "+2 Attack with Guns, +4 total with Medium group guns", attackGun = 2, attackGunRange = { medium = 2 } },
+	spotter = { name = "Spotter", text = "+1 Attack with Guns, +2 total with Long group guns", attackGun = 1, attackGunRange = { long = 1 } },
+	longshot = { name = "Longshot", text = "+2 Attack with Guns, +4 total with Long group guns", attackGun = 2, attackGunRange = { long = 2 } },
 
 	timid = { name = "Timid", text = "-2 Attack, melee and ranged", attackMelee = -2, attackRanged = -2 },
 	meek = { name = "Meek", text = "-4 Attack, melee and ranged", attackMelee = -4, attackRanged = -4 },

@@ -157,7 +157,7 @@ end
 
 DiceCore.WEAPON_RULES = {
 	unarmed = { name = "Unarmed", tip = "Unarmed: 1 HP damage, melee range" },
-	melee1h = { name = "One-handed melee", tip = "One-handed melee: 2 HP damage" },
+	melee1h = { name = "One-handed melee", tip = "One-handed melee: 3 HP damage" },
 	melee2h = { name = "Two-handed melee", tip = "Two-handed melee: 3 HP damage" },
 	pistol = { name = "Pistol", tip = "Pistol: 3 HP damage, max 15 range" },
 	smg = { name = "SMG", tip = "SMG: 4 HP damage, max 15 range" },
@@ -166,7 +166,7 @@ DiceCore.WEAPON_RULES = {
 	crossbow = { name = "Crossbow", tip = "Crossbow: 4 HP damage, max 20 range, 1 turn reload" },
 	thrown = { name = "Thrown weapon", tip = "Thrown weapon: 2 HP damage, max 10 range" },
 	molotov = { name = "Molotov / fire bomb", tip = "Molotov: 1 HP per turn for 3 turns, 3x3 area, max 10 range" },
-	bomb = { name = "Pipe / aerosol bomb", tip = "Pipe/aerosol bomb: 4 HP damage, 4x4 area, max 10 range" },
+	bomb = { name = "Pipe / aerosol bomb", tip = "Pipe/aerosol bomb: 4 HP damage, 5x5 area, max 10 range" },
 }
 
 DiceCore.SCRAP_TIP = " (scrap/junk: -1 HP)"
@@ -665,6 +665,10 @@ function DiceCore.disengage()
 	DiceCore.send("disengage", {})
 end
 
+function DiceCore.releaseGrapple()
+	DiceCore.send("releaseGrapple", {})
+end
+
 function DiceCore.leaveCombat()
 	DiceCore.send("leave", {})
 end
@@ -690,7 +694,11 @@ end
 
 function DiceCore.selectTarget(id)
 	local s = DiceCore.state
-	s.selectedTargetId = (s.selectedTargetId == id) and nil or id
+	if s.selectedTargetId == id then
+		s.selectedTargetId = nil
+	else
+		s.selectedTargetId = id
+	end
 	if DiceCore.isParticipant() then
 		DiceCore.send("aim", { targetId = s.selectedTargetId })
 	end
@@ -701,10 +709,10 @@ DiceCore.ROLLS = {
 	{ id = "attack", label = "Attack / Throw", turnBound = true, combat = true },
 	{ id = "escape", label = "Escape", turnBound = true, combat = true },
 	{ id = "throw", label = "Throw weapon", turnBound = true, combat = true, tip = "Throw the weapon in your hands: 2 HP, max 10 tiles, the target rolls Defend (ranged)" },
-	{ id = "grapple", label = "Grapple", tip = "Grapple or break free (d20) - the other side answers with Defend (close)" },
+	{ id = "grapple", label = "Grapple", turnBound = true, tip = "Grapple the selected target, or break free when you are grappled (d20 vs their Defend close)" },
 	{ id = "defclose", label = "Defend close", tip = "Reaction roll: grapples and attacks of opportunity" },
 	{ id = "defranged", label = "Defend ranged", tip = "Reaction roll against a thrown or fired attack" },
-	{ id = "firstaid", label = "First aid", tip = "First aid (d20) - roll only, restores no HP in dice combat" },
+	{ id = "firstaid", label = "First aid", turnBound = true, tip = "Treat the selected character, or yourself if nobody is selected. 12+ removes burning, or poison if they are not burning. Your action for the turn." },
 	{ id = "sneak", label = "Sneak" },
 	{ id = "notice", label = "Notice" },
 	{ id = "physend", label = "Phys. endurance" },
@@ -794,6 +802,15 @@ function DiceCore.roll(id)
 		})
 	elseif id == "escape" then
 		DiceCore.send("escape", {})
+	elseif id == "grapple" then
+		if not DiceCore.me().grappledBy and not DiceCore.state.selectedTargetId then
+			addLogLocal("Select a target in the turn order first.")
+			DiceCore.notify("state")
+			return
+		end
+		DiceCore.send("grapple", { targetId = DiceCore.state.selectedTargetId })
+	elseif id == "firstaid" then
+		DiceCore.send("firstAid", { targetId = DiceCore.state.selectedTargetId })
 	else
 		local args = { rollId = id, combatId = DiceCore.state.combatId }
 		if not DiceCore.isParticipant() then
@@ -893,7 +910,7 @@ function DiceCore.isStaff()
 end
 
 DiceCore.STAFF_STATUSES = {
-	{ field = "grappled", label = "Grappled", icon = "st_grapple", tip = "Grappled: cannot move until the grapple is broken" },
+	{ field = "grappled", label = "Grappled", icon = "st_grapple", tip = "Grappled: cannot move or escape until the grapple is broken" },
 	{ field = "escapeWounds", label = "Escape-preventing wounds", icon = "st_wounds", tip = "Escape-preventing wounds: cannot attempt to escape (staff-applied)" },
 	{ field = "poisoned", label = "Poisoned", icon = "st_poison", tip = "Poisoned: -2 to all rolls for 3 of their turns" },
 	{ field = "burning", label = "Burning", icon = "st_burning", tip = "Burning: 1 HP at the start of each of their turns" },

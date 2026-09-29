@@ -31,6 +31,8 @@ function DiceCombat:createChildren()
 	self.readyButton = self:addButton("Ready up", DiceCombat.onReady, "success")
 	self.disengageButton = self:addButton("Disengage", DiceCombat.onDisengage, "warning")
 	self.disengageButton:setTooltip("Move without giving attacks of opportunity. Costs your action for this turn.")
+	self.releaseButton = self:addButton("Release grapple", DiceCombat.onRelease, "warning")
+	self.releaseButton:setTooltip("Let go of the character you are grappling. Free action.")
 	self.finishButton = self:addButton("Finish turn", DiceCombat.onFinish, "primary")
 	self.surrenderButton = self:addButton("Surrender", DiceCombat.onSurrender, "warning")
 	self.leaveButton = self:addButton("Leave combat", DiceCombat.onLeave, "danger")
@@ -58,6 +60,10 @@ end
 
 function DiceCombat:onDisengage()
 	Core.disengage()
+end
+
+function DiceCombat:onRelease()
+	Core.releaseGrapple()
 end
 
 function DiceCombat:onSurrender()
@@ -114,6 +120,7 @@ function DiceCombat:refreshButtons()
 	self.finishButton:setVisible(Core.isMyTurn())
 	self.disengageButton:setVisible(Core.isMyTurn())
 	self.disengageButton:setTitle(me.disengaged and "Disengaged" or "Disengage")
+	self.releaseButton:setVisible(Core.isMyTurn() and me.grappling ~= nil)
 	self.surrenderButton:setVisible(participant and me.status ~= "ko")
 	self.surrenderButton:setTitle(surrendered and "Withdraw surrender" or "Surrender")
 	self.leaveButton:setVisible(participant)
@@ -126,7 +133,7 @@ function DiceCombat:refreshButtons()
 	self.armorButton:setTitle(me.armored and "Armored" or "No armor")
 
 	local flow = {}
-	local phaseButtons = { self.rollInitButton, self.readyButton, self.disengageButton, self.finishButton, self.surrenderButton, self.leaveButton }
+	local phaseButtons = { self.rollInitButton, self.readyButton, self.disengageButton, self.releaseButton, self.finishButton, self.surrenderButton, self.leaveButton }
 	for i = 1, #phaseButtons do
 		if phaseButtons[i]:getIsVisible() then
 			flow[#flow + 1] = { phaseButtons[i] }

@@ -428,8 +428,10 @@ local function addLog(c, line)
 end
 
 local advanceTurn
+local syncGrapples
 
 local function push(c)
+	syncGrapples(c)
 	if c.phase == "active" and c.currentId == nil then
 		advanceTurn(c)
 	end
@@ -447,6 +449,36 @@ local function findCombatant(c, id)
 	return nil
 end
 
+
+local function releaseGrapple(c, grappler, line)
+	local target = grappler.grappling and findCombatant(c, grappler.grappling) or nil
+	grappler.grappling = nil
+	if target and target.grappledBy == grappler.id then
+		target.grappled = false
+		target.grappledBy = nil
+	end
+	if line then
+		addLog(c, line)
+	end
+end
+
+syncGrapples = function(c)
+	for i = 1, #c.combatants do
+		local m = c.combatants[i]
+		if m.grappling then
+			local target = findCombatant(c, m.grappling)
+			if target == nil or not target.grappled or target.grappledBy ~= m.id
+				or m.status == "ko" or m.status == "surrendered"
+				or target.status == "ko" or target.status == "surrendered" then
+				releaseGrapple(c, m, "The grapple between " .. m.name .. " and " .. (target and target.name or "their target") .. " ends.")
+			end
+		end
+		if m.grappledBy and findCombatant(c, m.grappledBy) == nil then
+			m.grappled = false
+			m.grappledBy = nil
+		end
+	end
+end
 
 local function findByPlayer(username)
 	for _, c in pairs(DiceServer.combats) do
@@ -477,7 +509,7 @@ local function endCombat(c, reason)
 end
 
 local DAMAGE = {
-	unarmed = 1, melee1h = 2, melee2h = 3,
+	unarmed = 1, melee1h = 3, melee2h = 3,
 	pistol = 3, smg = 4, shotgun = 4, rifle = 4, crossbow = 4,
 	thrown = 2, molotov = 1, bomb = 4,
 }
@@ -573,6 +605,17 @@ local function attackCtx(m, class, lunge)
 	}
 end
 
+local function firstAidSkill(player)
+	if player == nil then
+		return 0, ""
+	end
+	local bonus = math.floor(player:getPerkLevel(Perks.Doctor) / 2)
+	if bonus == 0 then
+		return 0, ""
+	end
+	return bonus, " [+" .. bonus .. " First Aid skill]"
+end
+
 local function rollFor(c, m, kind, ctx)
 	local r1 = croll(c, DICE_SIDES, "d20:" .. (m.name or "?"))
 	local raw, suffix = r1, ""
@@ -594,6 +637,11 @@ local function rollFor(c, m, kind, ctx)
 			total = total + bonus
 			suffix = suffix .. DiceTraits.suffix(bonus, parts)
 		end
+	end
+	if kind == "firstaid" and not m.isNpc then
+		local skill, text = firstAidSkill(findPlayer(m.id))
+		total = total + skill
+		suffix = suffix .. text
 	end
 	return total, raw, suffix
 end
@@ -1262,6 +1310,99 @@ local function resolveEscape(c, m)
 	return false
 end
 
+local function resolveGrapple(c, m, targetId)
+	local breaking = m.grappledBy ~= nil
+	local target = findCombatant(c, breaking and m.grappledBy or targetId)
+	local p = not m.isNpc and findPlayer(m.id) or nil
+	local function deny(message)
+		if p then
+			sendTo(p, "error", { message = message })
+		end
+		return false
+	end
+	if not breaking then
+		if m.grappled then
+			return deny("You are grappled - ask staff to release you.")
+		end
+		if m.grappling then
+			return deny("You are already grappling someone. Release them first.")
+		end
+		if target == nil or target.id == m.id or target.status == "ko" or target.status == "surrendered" then
+			return deny("Invalid target.")
+		end
+		if target.grappled then
+			return deny(target.name .. " is already grappled.")
+		end
+		local ax, ay, az = posOf(m)
+		local tx, ty, tz = posOf(target)
+		if ax and tx and (az ~= tz or cheb(ax, ay, tx, ty) > 1) then
+			return deny(target.name .. " is not in melee range.")
+		end
+	end
+	refreshTraits(m)
+	local total, _, suffix = rollFor(c, m, "grapple")
+	local defTotal, _, defSuffix = defenseRoll(c, target, false)
+	local vs = ": " .. total .. suffix .. " vs Defend close " .. defTotal .. defSuffix
+	if breaking then
+		if total >= defTotal then
+			releaseGrapple(c, target, m.name .. " tries to break free from " .. target.name .. vs .. " - BROKE FREE.")
+		else
+			addLog(c, m.name .. " tries to break free from " .. target.name .. vs .. " - still grappled.")
+		end
+	elseif total >= defTotal then
+		m.grappling = target.id
+		target.grappled = true
+		target.grappledBy = m.id
+		addLog(c, m.name .. " grapples " .. target.name .. vs .. " - GRAPPLED. " .. target.name .. " cannot move until the grapple is broken.")
+	else
+		addLog(c, m.name .. " tries to grapple " .. target.name .. vs .. " - FAILED.")
+	end
+	endTurn(c)
+	return true
+end
+
+local function resolveFirstAid(c, m, targetId)
+	local target = targetId and findCombatant(c, targetId) or m
+	local p = not m.isNpc and findPlayer(m.id) or nil
+	local function deny(message)
+		if p then
+			sendTo(p, "error", { message = message })
+		end
+		return false
+	end
+	if target == nil then
+		return deny("Invalid target.")
+	end
+	if not target.burning and not target.poisoned then
+		return deny((target.id == m.id and "You have" or (target.name .. " has")) .. " no burning or poison to treat.")
+	end
+	if target.id ~= m.id then
+		local ax, ay, az = posOf(m)
+		local tx, ty, tz = posOf(target)
+		if ax and tx and (az ~= tz or cheb(ax, ay, tx, ty) > 1) then
+			return deny(target.name .. " is not within reach (1 tile).")
+		end
+	end
+	refreshTraits(m)
+	local threshold = DiceTraits.tuning.firstAidThreshold
+	local total, _, suffix = rollFor(c, m, "firstaid")
+	local line = m.name .. " gives first aid to " .. (target.id == m.id and "themselves" or target.name)
+		.. ": " .. total .. suffix .. " vs " .. threshold
+	if total < threshold then
+		addLog(c, line .. " - failed.")
+	elseif target.burning then
+		target.burning = false
+		target.burnTurns = 0
+		addLog(c, line .. " - the fire is put out.")
+	else
+		target.poisoned = false
+		target.poisonTurns = 0
+		addLog(c, line .. " - the poison is treated.")
+	end
+	endTurn(c)
+	return true
+end
+
 local UTILITY = { firstaid = "First aid", sneak = "Sneak", notice = "Notice", physend = "Phys. endurance", mentend = "Ment. endurance", skill = "Skill roll", defclose = "Defend close", defranged = "Defend ranged", grapple = "Grapple" }
 
 local DWD_OUTCOMES = {
@@ -1336,6 +1477,11 @@ function DiceServer.handleFreeRoll(player, args)
 	if bonus ~= 0 then
 		total = total + bonus
 		suffix = suffix .. DiceTraits.suffix(bonus, parts)
+	end
+	if kind == "firstaid" then
+		local skill, text = firstAidSkill(player)
+		total = total + skill
+		suffix = suffix .. text
 	end
 	local line = player:getUsername() .. " rolls " .. label .. " (out of combat): " .. total .. suffix
 	ensureSeed()
@@ -1543,6 +1689,34 @@ function DiceServer.handle(player, cmd, args)
 				endTurn(c)
 				push(c)
 			end
+		end
+	elseif cmd == "grapple" then
+		if c.phase == "active" and not c.paused and c.currentId == m.id
+			and m.status ~= "ko" and m.status ~= "surrendered" then
+			if m.disengaged then
+				sendTo(player, "error", { message = "You disengaged this turn - finish your turn." })
+				return
+			end
+			if resolveGrapple(c, m, args.targetId) then
+				push(c)
+			end
+		end
+	elseif cmd == "firstAid" then
+		if c.phase == "active" and not c.paused and c.currentId == m.id
+			and m.status ~= "ko" and m.status ~= "surrendered" then
+			if m.disengaged then
+				sendTo(player, "error", { message = "You disengaged this turn - finish your turn." })
+				return
+			end
+			if resolveFirstAid(c, m, args.targetId) then
+				push(c)
+			end
+		end
+	elseif cmd == "releaseGrapple" then
+		if c.currentId == m.id and m.grappling then
+			local target = findCombatant(c, m.grappling)
+			releaseGrapple(c, m, m.name .. " releases " .. (target and target.name or "their target") .. " from the grapple.")
+			push(c)
 		end
 	elseif cmd == "disengage" then
 		if c.phase == "active" and not c.paused and c.currentId == m.id
@@ -1797,6 +1971,22 @@ function DiceServer.handleStaff(player, cmd, args, c, m)
 			local victim = findCombatant(c, args.targetId)
 			if victim and victim.id ~= target.id and victim.status ~= "ko" and victim.status ~= "surrendered" then
 				resolveAttack(c, target, victim)
+				push(c)
+			end
+		elseif args.rollId == "grapple" and c.phase == "active" then
+			if c.paused or c.currentId ~= target.id then
+				sendTo(player, "error", { message = target.name .. " can only grapple on their own turn." })
+				return
+			end
+			if resolveGrapple(c, target, args.targetId) then
+				push(c)
+			end
+		elseif args.rollId == "firstaid" and c.phase == "active" then
+			if c.paused or c.currentId ~= target.id then
+				sendTo(player, "error", { message = target.name .. " can only give first aid on their own turn." })
+				return
+			end
+			if resolveFirstAid(c, target, args.targetId) then
 				push(c)
 			end
 		elseif label then

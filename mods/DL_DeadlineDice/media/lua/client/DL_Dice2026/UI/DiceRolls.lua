@@ -131,6 +131,20 @@ function DiceRolls:refreshButtons()
 		if b.rollId == "attack" then
 			local target = Core.findCombatant(Core.state.selectedTargetId)
 			b:setTitle(target and ("Attack: " .. target.name) or "Attack / Throw")
+		elseif b.rollId == "grapple" then
+			local target = Core.findCombatant(Core.state.selectedTargetId)
+			if Core.state.combatId and Core.me().grappledBy then
+				b:setTitle("Break free")
+			else
+				b:setTitle(target and ("Grapple: " .. target.name) or "Grapple")
+			end
+		elseif b.rollId == "firstaid" then
+			local target = Core.findCombatant(Core.state.selectedTargetId)
+			if Core.state.combatId then
+				b:setTitle(target and ("First aid: " .. target.name) or "First aid: self")
+			else
+				b:setTitle("First aid")
+			end
 		end
 		local tip = b.baseTip or ""
 		local modifier = Core.traitModifier(b.rollId)
