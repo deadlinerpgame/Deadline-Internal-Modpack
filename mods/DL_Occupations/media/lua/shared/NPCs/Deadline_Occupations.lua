@@ -24,6 +24,19 @@ local function toPerks(byName, owner)
     return out
 end
 
+local function traitXp(trait, owner)
+    local out = toPerks(trait.xp, owner)
+    if trait.caps == nil then return out end
+    out = out or {}
+    for name, cap in pairs(trait.caps) do
+        local perk = Perks[name]
+        if perk ~= nil then
+            out[perk] = math.floor(cap / 2)
+        end
+    end
+    return out
+end
+
 local exclusions = {}
 for _, pair in ipairs(O.exclusives) do
     local first = pair[1]
@@ -41,7 +54,7 @@ for _, id in ipairs(O.traitOrder) do
         description = trait.description,
         cost = trait.cost,
         profession = trait.hidden == true,
-        xp = toPerks(trait.xp, id),
+        xp = traitXp(trait, id),
         recipes = trait.recipes,
         add = trait.add,
         exclude = exclusions[id],

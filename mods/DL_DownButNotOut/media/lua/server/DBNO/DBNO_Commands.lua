@@ -333,6 +333,10 @@ function knock.realdeath(player, args, user)
     DBNO.Rescue.noteDeathInfo(user, args and args.describe)
 end
 
+function knock.retire(player, args, user)
+    DBNO.Life.wipe(user)
+end
+
 function knock.forcedeath(player)
     local md = player:getModData()
     md.dbno_downed = false

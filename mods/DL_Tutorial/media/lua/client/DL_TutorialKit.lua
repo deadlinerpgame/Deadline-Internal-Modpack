@@ -17,6 +17,7 @@ T.spawnItems = {
     ["Base.HandTorch"] = 1,
     ["Base.Lighter"] = 1,
     ["Base.Matches"] = 1,
+    ["Base.DLRetirePapers"] = 1,
 }
 
 T.removeItems = {
@@ -24,6 +25,10 @@ T.removeItems = {
     ["ElliesTattooParlor.FilledTattooNeedle"] = 1,
     ["KeksTat.CharacterTatNeedle"] = 1,
     ["SPolishItems.CharacterSheet"] = 1,
+}
+
+T.teleportItems = {
+    ["Base.DLRetirePapers"] = true,
 }
 
 T.pickerTiles = {
@@ -74,6 +79,16 @@ local function strip(player)
             count = count + 1
         end
         removed[fullType] = count
+    end
+    ISInventoryPage.dirtyUI()
+end
+
+local function stripTeleportItems(player)
+    for fullType in pairs(T.teleportItems) do
+        local items = player:getInventory():getAllTypeRecurse(fullType)
+        for i = 0, items:size() - 1 do
+            takeAway(player, items:get(i))
+        end
     end
     ISInventoryPage.dirtyUI()
 end
@@ -152,6 +167,7 @@ Events.OnPlayerUpdate.Add(function(player)
 
     if state == "picking" and jumped then
         strip(player)
+        stripTeleportItems(player)
         md[STATE] = "done"
         watching[index] = nil
         return
