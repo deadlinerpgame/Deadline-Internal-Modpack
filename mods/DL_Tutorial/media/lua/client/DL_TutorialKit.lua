@@ -13,7 +13,6 @@ T.spawnItems = {
     ["SPolishItems.CharacterSheet"] = 1,
     ["aerx.TreeBranch_Nails"] = 1,
     ["aerx.BowlingPin"] = 1,
-    ["Bicycle.Bicycle"] = 1,
     ["Base.HandTorch"] = 1,
     ["Base.Lighter"] = 1,
     ["Base.Matches"] = 1,
