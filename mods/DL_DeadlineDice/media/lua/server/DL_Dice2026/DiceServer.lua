@@ -1084,6 +1084,14 @@ local function resolveAttack(c, attacker, target, intent)
 	local ax, ay, az = posOf(attacker)
 	local lunge = DiceTraits.isMelee(class) and DiceTraits.lunged(attacker.turnStart, ax, ay, az)
 	local atkTotal, atkRaw, atkSuffix = rollFor(c, attacker, "attack", attackCtx(attacker, class, lunge))
+	local tx, ty = posOf(target)
+	if ax and tx then
+		local rangeMod, band = DiceTraits.rangeModifier(class, cheb(ax, ay, tx, ty))
+		if rangeMod ~= 0 then
+			atkTotal = atkTotal + rangeMod
+			atkSuffix = atkSuffix .. " [" .. DiceTraits.signed(rangeMod) .. " " .. WEAPON_NAMES[class] .. " at " .. band .. " range]"
+		end
+	end
 	local critFrom, critFailTo = DiceTraits.critRange(traits)
 	local verb = (class == "thrown" or isAoe) and "throws at" or "attacks"
 

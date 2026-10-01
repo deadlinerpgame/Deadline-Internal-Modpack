@@ -11,6 +11,35 @@ DiceTraits.tuning = {
 	aooRange = 1,
 }
 
+DiceTraits.rangeBands = {
+	{ name = "close", max = 5 },
+	{ name = "medium", max = 12 },
+	{ name = "long" },
+}
+
+DiceTraits.rangeModifiers = {
+	shotgun = { close = 2, long = -4 },
+	smg = { close = 1, long = -2 },
+	pistol = { long = -2 },
+	rifle = { close = -4, long = 1 },
+	crossbow = { close = -2, long = 1 },
+}
+
+function DiceTraits.rangeBand(distance)
+	for i = 1, #DiceTraits.rangeBands do
+		local band = DiceTraits.rangeBands[i]
+		if band.max == nil or distance <= band.max then
+			return band.name
+		end
+	end
+end
+
+function DiceTraits.rangeModifier(class, distance)
+	local band = DiceTraits.rangeBand(distance)
+	local mods = DiceTraits.rangeModifiers[class]
+	return mods and mods[band] or 0, band
+end
+
 DiceTraits.defs = {
 
 	ThickSkinned = { name = "Thick-Skinned", text = "Advantage on Dice with Death", dwd = 1 },
