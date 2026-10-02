@@ -1469,6 +1469,37 @@ end
 local FREE_ROLL_RADIUS = 20
 local FREE_LABELS = { attack = "Attack", throw = "Throw", escape = "Escape" }
 
+local function sendFreeLog(player, line)
+	local px, py, pz = math.floor(player:getX()), math.floor(player:getY()), math.floor(player:getZ())
+	local players = getOnlinePlayers and getOnlinePlayers() or nil
+	if players and players.size then
+		for i = 0, players:size() - 1 do
+			local other = players:get(i)
+			if other and math.floor(other:getZ()) == pz
+				and cheb(math.floor(other:getX()), math.floor(other:getY()), px, py) <= FREE_ROLL_RADIUS then
+				sendTo(other, "freeLog", { line = line })
+			end
+		end
+	else
+		sendTo(player, "freeLog", { line = line })
+	end
+end
+
+function DiceServer.handleFreeDwd(player)
+	local r = roll(6)
+	local suffix = ""
+	local adv = DiceTraits.dwd(DiceTraits.fromPlayer(player))
+	if adv ~= 0 then
+		local r2 = roll(6)
+		suffix = string.format(" [%d/%d %s]", r, r2, adv > 0 and "adv" or "dis")
+		r = adv > 0 and math.max(r, r2) or math.min(r, r2)
+	end
+	local line = characterName(player) .. " Dices with Death (out of combat): rolls " .. r .. suffix .. " - " .. DWD_OUTCOMES[r]
+	ensureSeed()
+	plog("[free] " .. line .. " (account " .. player:getUsername() .. ")", currentDay)
+	sendFreeLog(player, line)
+end
+
 function DiceServer.handleFreeRoll(player, args)
 	if not player then
 		return
@@ -1512,19 +1543,7 @@ function DiceServer.handleFreeRoll(player, args)
 	ensureSeed()
 	plog("[free] " .. line .. " (account " .. player:getUsername() .. ")", currentDay)
 
-	local px, py, pz = math.floor(player:getX()), math.floor(player:getY()), math.floor(player:getZ())
-	local players = getOnlinePlayers and getOnlinePlayers() or nil
-	if players and players.size then
-		for i = 0, players:size() - 1 do
-			local other = players:get(i)
-			if other and math.floor(other:getZ()) == pz
-				and cheb(math.floor(other:getX()), math.floor(other:getY()), px, py) <= FREE_ROLL_RADIUS then
-				sendTo(other, "freeLog", { line = line })
-			end
-		end
-	else
-		sendTo(player, "freeLog", { line = line })
-	end
+	sendFreeLog(player, line)
 end
 
 local auditReports = {}
@@ -1578,6 +1597,11 @@ function DiceServer.handle(player, cmd, args)
 
 	if cmd == "freeRoll" then
 		DiceServer.handleFreeRoll(player, args)
+		return
+	end
+
+	if cmd == "dwd" and not c then
+		DiceServer.handleFreeDwd(player)
 		return
 	end
 
