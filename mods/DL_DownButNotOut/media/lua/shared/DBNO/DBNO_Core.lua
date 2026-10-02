@@ -734,7 +734,8 @@ function DBNO.Snap.apply(character, s, lossless)
 
     if s.weight then character:getNutrition():setWeight(s.weight) end
     if s.kills then character:setZombieKills(s.kills) end
-    if s.hours then character:setHoursSurvived(s.hours) end
+    local hours = s.hours or character:getHoursSurvived()
+    character:setHoursSurvived(0)
     local md = character:getModData()
     for k, v in pairs(s.md) do md[k] = v end
 
@@ -758,6 +759,7 @@ function DBNO.Snap.apply(character, s, lossless)
             end
             lvl = math.floor(lvl)
             if lvl < 0 then lvl = 0 elseif lvl > 10 then lvl = 10 end
+            if lvl > 0 and character:getPerkLevel(pt) == 0 then character:LevelPerk(pt, false) end
             character:setPerkLevelDebug(pt, lvl)
             xpObj:setXPToLevel(pt, lvl)
             if want > pt:getTotalXpForLevel(lvl) then addExactXp(xpObj, pt, want) end
@@ -765,6 +767,7 @@ function DBNO.Snap.apply(character, s, lossless)
             xpObj:setPerkBoost(pt, s.boosts[name] or s.boosts[alt] or 0)
         end
     end
+    character:setHoursSurvived(hours)
 
     return true
 end
