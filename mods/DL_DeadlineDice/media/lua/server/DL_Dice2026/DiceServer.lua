@@ -1679,6 +1679,7 @@ function DiceServer.handle(player, cmd, args)
 	end
 
 	if not c or not m then
+		DiceServer.handleStaff(player, cmd, args, c, m)
 		return
 	end
 
@@ -1864,7 +1865,7 @@ function DiceServer.handleStaff(player, cmd, args, c, m)
 	if not isStaff(player) then
 		return
 	end
-	c = c or DiceServer.combats[args.combatId]
+	c = DiceServer.combats[args.combatId] or c
 	if not c then
 		return
 	end
