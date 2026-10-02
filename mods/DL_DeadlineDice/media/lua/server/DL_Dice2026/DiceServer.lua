@@ -45,6 +45,14 @@ local function findPlayer(username)
 	return nil
 end
 
+local function characterName(player)
+	local name = player:getDescriptor():getForename()
+	if name == nil or name == "" then
+		return player:getUsername()
+	end
+	return name
+end
+
 local function isStaff(player)
 	if not isServer() then
 		return true
@@ -875,11 +883,12 @@ local function handleRollInitiative(player)
 			sendTo(player, "error", { message = "This combat has already started - you cannot join." })
 			return
 		end
-		local m = newCombatant(username, username)
+		local m = newCombatant(username, characterName(player))
 		m.pos = { x = px, y = py, z = pz }
 		local suffix = rollInitiativeFor(nearest, m)
 		nearest.combatants[#nearest.combatants + 1] = m
-		addLog(nearest, username .. " rolls initiative: " .. m.initiative .. suffix)
+		plog("[c" .. nearest.id .. "] " .. m.name .. " is account " .. username, nearest.seedDay)
+		addLog(nearest, m.name .. " rolls initiative: " .. m.initiative .. suffix)
 		push(nearest)
 		return
 	end
@@ -908,11 +917,12 @@ local function handleRollInitiative(player)
 	}
 	DiceServer.nextId = DiceServer.nextId + 1
 	DiceServer.combats[c.id] = c
-	local m = newCombatant(username, username)
+	local m = newCombatant(username, characterName(player))
 	m.pos = { x = px, y = py, z = pz }
 	local suffix = rollInitiativeFor(c, m)
 	c.combatants[#c.combatants + 1] = m
-	addLog(c, username .. " starts a combat and rolls initiative: " .. m.initiative .. suffix)
+	plog("[c" .. c.id .. "] " .. m.name .. " is account " .. username, c.seedDay)
+	addLog(c, m.name .. " starts a combat and rolls initiative: " .. m.initiative .. suffix)
 	saveRegistry()
 	push(c)
 end
@@ -1491,9 +1501,9 @@ function DiceServer.handleFreeRoll(player, args)
 		total = total + skill
 		suffix = suffix .. text
 	end
-	local line = player:getUsername() .. " rolls " .. label .. " (out of combat): " .. total .. suffix
+	local line = characterName(player) .. " rolls " .. label .. " (out of combat): " .. total .. suffix
 	ensureSeed()
-	plog("[free] " .. line, currentDay)
+	plog("[free] " .. line .. " (account " .. player:getUsername() .. ")", currentDay)
 
 	local px, py, pz = math.floor(player:getX()), math.floor(player:getY()), math.floor(player:getZ())
 	local players = getOnlinePlayers and getOnlinePlayers() or nil
@@ -1626,7 +1636,7 @@ function DiceServer.handle(player, cmd, args)
 		if combat.paused then
 			return
 		end
-		local roller = m or { id = username, name = username, advantage = args.advantage or 0 }
+		local roller = m or { id = username, name = characterName(player), advantage = args.advantage or 0 }
 		if m and (m.status == "ko" or m.status == "surrendered") then
 			return
 		end

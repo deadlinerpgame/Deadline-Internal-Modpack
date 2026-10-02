@@ -5,8 +5,16 @@ function PatchLine_RightClickMeta.OnFillWorldObjectContextMenu(player, context, 
 
     if not context then return end;
 
+    local accessLevel = getSpecificPlayer(player):getAccessLevel();
+    local isStaff = accessLevel ~= nil and accessLevel ~= "" and accessLevel ~= "None";
+    local hidden = {};
+
      for _, option in pairs(context.options) do
-        if option and option.onSelect == ISWorldObjectContextMenu.onTrade then
+        if option and not isStaff
+            and (option.onSelect == ISWorldObjectContextMenu.onTrade or option.onSelect == ISWorldObjectContextMenu.onMedicalCheck)
+            and option.param2:isInvisible() then
+            table.insert(hidden, option.name);
+        elseif option and option.onSelect == ISWorldObjectContextMenu.onTrade then
 
             local targetPlayer = option.param2;
             local targetName = targetPlayer:getDescriptor():getForename();
@@ -18,7 +26,7 @@ function PatchLine_RightClickMeta.OnFillWorldObjectContextMenu(player, context, 
             end
         end
 
-        if option and option.onSelect == ISWorldObjectContextMenu.onMedicalCheck then
+        if option and option.onSelect == ISWorldObjectContextMenu.onMedicalCheck and not (not isStaff and option.param2:isInvisible()) then
 
             local targetPlayer = option.param2;
             local targetName = targetPlayer:getDescriptor():getForename();
@@ -28,7 +36,10 @@ function PatchLine_RightClickMeta.OnFillWorldObjectContextMenu(player, context, 
             end
         end
     end
-    
+
+    for _, name in ipairs(hidden) do
+        context:removeOptionByName(name);
+    end
 end
 
 

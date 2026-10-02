@@ -356,12 +356,20 @@ local function myUsername()
 	return "Player"
 end
 
+local function myCharacterName()
+	local p = getPlayer and getPlayer() or nil
+	if p then
+		return p:getDescriptor():getForename()
+	end
+	return "Player"
+end
+
 local localMe = nil
 
 local function getLocalMe()
 	if not localMe then
 		localMe = {
-			id = "me", isMe = true, name = myUsername(),
+			id = "me", isMe = true, name = myCharacterName(),
 			hp = 12, maxHp = 12, traits = {}, status = "idle",
 			initiative = nil, inCover = false, armored = false,
 			grappled = false, escapeWounds = false, poisoned = false,
