@@ -6,7 +6,7 @@ DiceTraits.tuning = {
 	baseMove = 5,
 	baseThrowRange = 10,
 	lungeTiles = 3,
-	escapeThreshold = 18,
+	escapeThreshold = 12,
 	firstAidThreshold = 12,
 	aooRange = 1,
 }
