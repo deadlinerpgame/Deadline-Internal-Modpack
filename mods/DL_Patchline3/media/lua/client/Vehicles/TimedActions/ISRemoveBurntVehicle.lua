@@ -86,7 +86,7 @@ function ISRemoveBurntVehicle:perform()
 end
 
 function ISRemoveBurntVehicle:dropItem(item)
-	self.vehicle:getSquare():AddWorldInventoryItem(item, ZombRandFloat(0, 0.9), ZombRandFloat(0, 0.9), 0);
+	self.character:getCurrentSquare():AddWorldInventoryItem(item, ZombRandFloat(0, 0.9), ZombRandFloat(0, 0.9), 0);
 end
 
 function ISRemoveBurntVehicle:new(character, vehicle)

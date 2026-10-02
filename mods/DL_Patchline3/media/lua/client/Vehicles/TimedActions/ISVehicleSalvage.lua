@@ -95,7 +95,7 @@ function ISVehicleSalvage:perform()
 end
 
 function ISVehicleSalvage:dropItem(item)
-    self.vehicle:getSquare():AddWorldInventoryItem(item, ZombRandFloat(0, 0.9), ZombRandFloat(0, 0.9), 0);
+    self.character:getCurrentSquare():AddWorldInventoryItem(item, ZombRandFloat(0, 0.9), ZombRandFloat(0, 0.9), 0);
 end
 
 function ISVehicleSalvage:new(character, vehicle)
