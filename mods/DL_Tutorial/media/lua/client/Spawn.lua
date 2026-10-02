@@ -31,16 +31,16 @@ local function spawn()
         playerObj:setY(5423);
         playerObj:setZ(0);
     elseif chosenpoint == 2 then
-        playerObj:setX(4872);
-        playerObj:setY(6678);
+        playerObj:setX(4072);
+        playerObj:setY(6269);
         playerObj:setZ(0);
     elseif chosenpoint == 3 then
-        playerObj:setX(1749);
-        playerObj:setY(129);
+        playerObj:setX(1717);
+        playerObj:setY(235);
         playerObj:setZ(0);
     elseif chosenpoint == 4 then
-        playerObj:setX(7042);
-        playerObj:setY(5227);
+        playerObj:setX(7018);
+        playerObj:setY(5191);
         playerObj:setZ(0);
     end
 	playerObj:setLx(playerObj:getX());
