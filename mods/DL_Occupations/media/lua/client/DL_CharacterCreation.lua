@@ -178,6 +178,9 @@ end
 local vanillaCreate = CharacterCreationProfession.create
 function CharacterCreationProfession:create()
     vanillaCreate(self)
+    self.presetPanel:setVisible(false)
+    self.listboxProf.joyfocusLeft = nil
+    self.listboxTraitSelected.joyfocusRight = nil
     O.selectDefaultOccupation(self)
 end
 
