@@ -84,9 +84,7 @@ function Floor.OnCreate(params)
     end
     KBWB41.call(square, "clearWater")
     square:disableErosion()
-    sendServerCommand("erosion", "disableForSquare", {
-        x = square:getX(), y = square:getY(), z = square:getZ()
-    })
+    KBWB41.disableErosionForSquare(square)
     KBWB41.invalidateLighting()
     KBWB41.call(square, "setSquareChanged")
     KBWB41.call(floor, "invalidateRenderChunkLevel", FBORenderChunk.DIRTY_OBJECT_ADD)

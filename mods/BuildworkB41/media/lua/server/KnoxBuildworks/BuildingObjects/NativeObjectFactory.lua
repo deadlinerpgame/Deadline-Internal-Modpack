@@ -68,10 +68,13 @@ register("generator", {
         if not object then
             return nil, "could not initialize IsoGenerator from " .. tostring(config and config.item)
         end
-        if spriteName then object:setSprite(getSprite(spriteName)) end
+        if spriteName then
+            object:setSprite(getSprite(spriteName))
+            KBWB41.transmitSprite(object)
+        end
         return object, {
             alreadyAdded = true,
-            alreadyTransmitted = isServer()
+            alreadyTransmitted = isServer() or isClient()
         }
     end,
     finalize = function (object, square)

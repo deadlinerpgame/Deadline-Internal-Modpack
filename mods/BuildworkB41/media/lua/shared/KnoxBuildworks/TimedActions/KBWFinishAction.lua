@@ -134,6 +134,7 @@ function KBWFinishAction:perform()
     if self.mode ~= "plaster" and self.thumpable.cleanWallBlood then
         self.thumpable:cleanWallBlood()
     end
+    self:complete()
     ISBaseTimedAction.perform(self)
 end
 
@@ -170,7 +171,7 @@ function KBWFinishAction:complete()
             self.thumpable:setPaintable(true)
         end
         if self.thumpable.setCanBePlastered then self.thumpable:setCanBePlastered(false) end
-        self.thumpable:transmitUpdatedSpriteToClients()
+        KBWB41.transmitPlaster(self.character, self.thumpable, resolvedSprite)
         local square = self.thumpable:getSquare()
         if square then square:RecalcAllWithNeighbours(true) end
         if not requirementsWaived and consumeAllowed(self.character) and self.item then
@@ -180,12 +181,12 @@ function KBWFinishAction:complete()
         return true
     end
     self.thumpable:setSpriteFromName(resolvedSprite)
-    self.thumpable:transmitUpdatedSpriteToClients()
+    KBWB41.transmitSprite(self.thumpable)
     if self.mode == "paint" then
         local color = WallFinishes.customColorFor(wallType, self.finish)
         if color then
             self.thumpable:setCustomColor(ColorInfo.new(color.r, color.g, color.b, color.a))
-            KBWB41.call(self.thumpable, "transmitCustomColorToClients")
+            self.thumpable:transmitCustomColor()
         end
     end
     if not requirementsWaived and consumeAllowed(self.character) then

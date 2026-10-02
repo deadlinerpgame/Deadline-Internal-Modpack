@@ -932,11 +932,11 @@ function KBWBuildingObject:transmitPart(part, result)
             if sourceModData and sourceModData.KBW and replacementModData then
                 replacementModData.KBW = sourceModData.KBW
             end
-            result.object:transmitCompleteItemToClients()
+            KBWB41.transmitObject(result.object)
             return
         end
     end
-    if part and part.transmitCompleteItemToClients then part:transmitCompleteItemToClients() end
+    if part then KBWB41.transmitObject(part) end
 end
 
 function KBWBuildingObject:verifyAuthoritative(x, y, z)
@@ -1139,7 +1139,7 @@ function KBWBuildingObject:connectWallParts(square, part, north)
     pillar:getModData().KBW.connectionRole = "pillar"
     pillarSquare:AddSpecialObject(pillar)
     pillarSquare:RecalcAllWithNeighbours(true)
-    pillar:transmitCompleteItemToClients()
+    KBWB41.transmitObject(pillar)
     buildUtil.setHaveConstruction(pillarSquare, true)
     return part
 end
@@ -1267,15 +1267,18 @@ function KBWBuildingObject:create(x, y, z, north, sprite)
                     end
                 end
                 target:disableErosion()
-                sendServerCommand(
-                    "erosion", "disableForSquare", { x = target:getX(), y = target:getY(), z = target:getZ() }
-                )
+                KBWB41.disableErosionForSquare(target)
                 Properties.applyToObject(
                     part, self, { square = target, spriteConfig = spriteConfig, tileIndex = index, isFloor = true }
                 )
                 target:RecalcAllWithNeighbours(true)
                 buildUtil.setHaveConstruction(target, true)
-                self:transmitPart(part, self:runOnCreate(part, { tile = tile, tileIndex = index }))
+                local floorResult = self:runOnCreate(part, { tile = tile, tileIndex = index })
+                if isClient() and not (floorResult and floorResult.replaceObject) then
+                    part:transmitModData()
+                else
+                    self:transmitPart(part, floorResult)
+                end
             elseif nativeObjectType then
                 local part, nativeState, nativeError = NativeObjectFactory.create(
                     nativeObjectType, self.nativeObject, target, tile.sprite, { direction = self.nSprite }
@@ -1327,8 +1330,8 @@ function KBWBuildingObject:create(x, y, z, north, sprite)
                         isFloor = isFloorAttachmentSprite(tile.sprite)
                     })
                     self:runOnCreate(part, { tile = tile, tileIndex = index })
-                    if plainProp and part.transmitCompleteItemToClients then
-                        part:transmitCompleteItemToClients()
+                    if plainProp then
+                        KBWB41.transmitObject(part)
                     elseif part.transmitModData then
                         part:transmitModData()
                     end

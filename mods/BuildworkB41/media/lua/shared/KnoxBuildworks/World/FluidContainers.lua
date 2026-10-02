@@ -124,7 +124,7 @@ function FluidContainers.refreshSprite(object)
     if object:getSpriteName() == wanted then return false end
     if not getSprite(wanted) then return false end
     object:setSprite(wanted)
-    object:transmitUpdatedSpriteToClients()
+    KBWB41.transmitSprite(object)
     return true
 end
 
@@ -200,7 +200,7 @@ function FluidContainers.setMode(object, mode)
     end
     FluidContainers.track(replacement)
     square:RecalcAllWithNeighbours(true)
-    if replacement.transmitCompleteItemToClients then replacement:transmitCompleteItemToClients() end
+    KBWB41.transmitObject(replacement)
     return true
 end
 

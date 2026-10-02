@@ -650,4 +650,45 @@ function B41.walkAdjSquares(character, squares)
     return luautils.walkAdj(character, best, false)
 end
 
+function B41.transmitObject(object)
+    if isClient() then
+        object:transmitCompleteItemToServer()
+    else
+        object:transmitCompleteItemToClients()
+    end
+end
+
+function B41.transmitSprite(object)
+    object:transmitUpdatedSprite()
+end
+
+function B41.transmitPlaster(character, object, spriteName)
+    if isClient() and instanceof(object, "IsoThumpable") then
+        sendClientCommand(character, "object", "plaster", {
+            x = object:getX(), y = object:getY(), z = object:getZ(),
+            index = object:getObjectIndex(), sprite = spriteName
+        })
+    else
+        object:transmitUpdatedSprite()
+    end
+end
+
+function B41.removePlaceholder(object)
+    local square = object:getSquare()
+    if isClient() then
+        square:RemoveTileObject(object)
+    else
+        square:transmitRemoveItemFromSquare(object)
+    end
+end
+
+function B41.disableErosionForSquare(square)
+    local args = { x = square:getX(), y = square:getY(), z = square:getZ() }
+    if isClient() then
+        sendClientCommand("erosion", "disableForSquare", args)
+    else
+        sendServerCommand("erosion", "disableForSquare", args)
+    end
+end
+
 return B41

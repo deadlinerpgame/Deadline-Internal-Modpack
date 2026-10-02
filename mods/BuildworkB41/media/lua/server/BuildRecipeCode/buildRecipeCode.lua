@@ -103,8 +103,8 @@ function BuildRecipeCode.barricade.OnCreate(params)
         square = getWorld():getCell():getGridSquare(square:getX()+1, square:getY(), square:getZ());
     end
     if not square then
-        thumpable:getSquare():transmitRemoveItemFromSquare(thumpable);
-        return;
+        KBWB41.removePlaceholder(thumpable);
+        return { objectAlreadyTransmitted = true };
     end
     local objects = square:getObjects();
     local barricade;
@@ -129,23 +129,34 @@ function BuildRecipeCode.barricade.OnCreate(params)
         if instanceof(object, "IsoDoor") or instanceof(object,"IsoWindow") or (instanceof(object, "IsoThumpable") and (object:isDoor() or object:isWindow())) then
             local existing = opposite and object:getBarricadeOnOppositeSquare()
                 or object:getBarricadeOnSameSquare();
-            if existing and existing:canAddPlank() then
+            if existing and isClient() then
+                if existing:canAddPlank() then
+                    barricade = existing;
+                    sendClientCommand(character, 'object', 'barricade', {
+                        x = object:getX(), y = object:getY(), z = object:getZ(), index = object:getObjectIndex(),
+                        isMetal = materialType == "SheetMetal" or materialType == "SmallSheetMetal",
+                        isMetalBar = materialType == "MetalBar" or materialType == "IronBar" or materialType == "SteelBar",
+                        itemID = -1, condition = material and material:getCondition() or 10
+                    })
+                end
+            elseif existing and existing:canAddPlank() then
                 barricade = existing;
                 applyMaterial(barricade);
+                KBWB41.transmitObject(barricade);
             else
                 barricade = IsoBarricade.AddBarricadeToObject(object, opposite);
                 applyMaterial(barricade);
-            end
-            if barricade and barricade.transmitCompleteItemToClients then
-                barricade:transmitCompleteItemToClients();
+                if barricade and thumpable:hasModData() then
+                    barricade:setModData(thumpable:getModData());
+                end
+                if barricade then
+                    KBWB41.transmitObject(barricade);
+                end
             end
         end
     end
-    if thumpable:hasModData() and barricade then
-        local modData = thumpable:getModData();
-        barricade:setModData(modData);
-    end
-    thumpable:getSquare():transmitRemoveItemFromSquare(thumpable);
+    KBWB41.removePlaceholder(thumpable);
+    return { objectAlreadyTransmitted = true };
 end
 
 function BuildRecipeCode.stairs.OnIsValid(params)
@@ -396,8 +407,7 @@ function BuildRecipeCode.floor.OnCreate(params)
 
 	KBWB41.call(square, "clearWater");
 	square:disableErosion();
-	local args = { x = square:getX(), y = square:getY(), z = square:getZ() }
-	sendServerCommand('erosion', 'disableForSquare', args)
+	KBWB41.disableErosionForSquare(square)
 
 	KBWB41.invalidateLighting();
 	KBWB41.call(square, "setSquareChanged");
@@ -491,6 +501,12 @@ function BuildRecipeCode.campfire.OnCreate(params)
 	local grid = thumpable:getSquare()
 	if not grid then return end
 
+	if isClient() then
+		CCampfireSystem.instance:sendCommand(params.character, 'addCampfire', { x = grid:getX(), y = grid:getY(), z = grid:getZ() })
+		KBWB41.removePlaceholder(thumpable)
+		return { objectAlreadyTransmitted = true }
+	end
+
 	local luaObject = SCampfireSystem.instance:newLuaObjectOnSquare(grid)
 	luaObject:initNew()
 	luaObject:addObject()
@@ -500,12 +516,15 @@ end
 
 function BuildRecipeCode.composter.OnCreate(params)
     local thumpable = params.thumpable;
-	local javaObject = IsoCompost.new(getCell(), thumpable:getSquare(), thumpable:getSprite():getName());
-	thumpable:getSquare():AddSpecialObject(javaObject)
+	local square = thumpable:getSquare();
+	local javaObject = IsoCompost.new(getCell(), square);
+	javaObject:setSprite(thumpable:getSprite());
+	square:AddSpecialObject(javaObject)
 	javaObject:syncCompost()
 	javaObject:setMovedThumpable(true)
 
-	thumpable:getSquare():transmitRemoveItemFromSquare(thumpable);
+	KBWB41.removePlaceholder(thumpable);
+	return { objectAlreadyTransmitted = true };
 end
 
 function BuildRecipeCode.windowGlass.OnCreate(params)
@@ -515,8 +534,10 @@ function BuildRecipeCode.windowGlass.OnCreate(params)
 	local window = IsoWindow.new(getCell(), thumpable:getSquare(), thumpable:getSprite(), thumpable:getNorth());
 	window:setIsLocked(false);
 	thumpable:getSquare():AddSpecialObject(window);
+	KBWB41.transmitObject(window);
 
-	thumpable:getSquare():transmitRemoveItemFromSquare(thumpable);
+	KBWB41.removePlaceholder(thumpable);
+	return { objectAlreadyTransmitted = true };
 end
 
 function BuildRecipeCode.woodLampPillar.OnCreate(params)
@@ -557,7 +578,7 @@ function BuildRecipeCode.woodLampPillar.OnCreate(params)
     end
     thumpable:createLightSource(radius, offsetX, offsetY, 0, 0, fuel, baseItem, character);
     sq:AddSpecialObject(thumpable);
-	thumpable:transmitCompleteItemToClients()
+	KBWB41.transmitObject(thumpable)
 
 end
 
