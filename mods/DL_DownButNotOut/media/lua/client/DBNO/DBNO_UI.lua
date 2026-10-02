@@ -290,81 +290,192 @@ local function withDates(line)
     end))
 end
 
+local Theme = require("ElyonLib/UI/Theme/Theme")
+local TextUtils = require("ElyonLib/TextUtils/TextUtils")
+local LayoutUtils = require("ElyonLib/UI/Layout/LayoutUtils")
+local UIUtils = require("ElyonLib/UI/Utils/UIUtils")
+local ISClippedScrollingListBox = require("ElyonLib/UI/Components/ISClippedScrollingListBox")
+
+local FONT = UIFont.Small
+local T = Theme.colors
+local TAB_ORDER = { "state", "death", "snap" }
+local TAB_LABELS = { state = "State", death = "Death Logs", snap = "Snapshots" }
+
+local function drawListItem(list, y, item, alt)
+    local h = list.itemheight
+    if list.selectable and list.selected == item.index then
+        list:drawRect(0, y, list:getWidth(), h - 1, T.selected.a, T.selected.r, T.selected.g, T.selected.b)
+    elseif list.selectable and list.mouseoverselected == item.index then
+        list:drawRect(0, y, list:getWidth(), h - 1, T.hovered.a, T.hovered.r, T.hovered.g, T.hovered.b)
+    end
+    local text = item.text
+    if not list.wrapped then
+        text = TextUtils.trimToWidth(FONT, text, list:getWidth() - list.textPad * 2 - list.vscroll:getWidth())
+    end
+    list:drawText(text, list.textPad, y + math.floor((h - list.fontHgt) / 2), T.text.r, T.text.g, T.text.b, 1, FONT)
+    return y + h
+end
+
 local PANEL = ISCollapsableWindow:derive("DBNOAdminPanel")
+
+function PANEL:makeList(selectable, onSelect)
+    local list = ISClippedScrollingListBox:new(0, 0, 100, 100)
+    list:initialise()
+    list:instantiate()
+    list:setFont(FONT, 3)
+    list.textPad = self.pad
+    list.selectable = selectable
+    list.doDrawItem = drawListItem
+    Theme.applyListStyle(list)
+    list.drawBorder = true
+    list.target = self
+    list.onmousedown = onSelect
+    self:addChild(list)
+    return list
+end
+
+function PANEL:makeButton(label, onClick)
+    local b = ISButton:new(0, 0, TextUtils.measureWidth(FONT, label) + self.pad * 4, self.btnH, label, self, onClick)
+    b:initialise()
+    b:instantiate()
+    b.font = FONT
+    Theme.applyButtonStyle(b, nil)
+    self:addChild(b)
+    return b
+end
+
+function PANEL:makeEntry(digits)
+    local e = ISTextEntryBox:new("", 0, 0, TextUtils.measureWidth(FONT, string.rep("0", digits)) + self.pad * 2, self.entryH)
+    e:initialise()
+    e:instantiate()
+    Theme.applyFieldStyle(e)
+    self:addChild(e)
+    return e
+end
 
 function PANEL:createChildren()
     ISCollapsableWindow.createChildren(self)
-    local th = self:titleBarHeight()
-    local pad = 8
-    local cx = pad + 180 + pad
-    local cy = th + pad + 30
+    self.fontHgt = getTextManager():getFontHeight(FONT)
+    self.pad = math.floor(self.fontHgt / 2)
+    self.btnH = self.fontHgt + 8
+    self.entryH = self.fontHgt + 6
 
-    local listH = self.height - th - pad * 2 - 28
-    self.playerList = ISScrollingListBox:new(pad, th + pad, 180, listH)
-    self.playerList:initialise(); self.playerList:instantiate()
-    self.playerList.itemheight = 20; self.playerList.drawBorder = true
-    self.playerList.font = UIFont.Small
-    self.playerList.fontHgt = getTextManager():getFontHeight(UIFont.Small)
-    self.playerList.target = self
-    self.playerList.onmousedown = function(target, item) target:onSelectPlayer(item) end
-    self:addChild(self.playerList)
-
-    self.refreshBtn = ISButton:new(pad, th + pad + listH + 4, 180, 22, "Refresh", self,
-        function(s_) request("playerList", {}) end)
-    self.refreshBtn:initialise(); self.refreshBtn:instantiate()
-    self:addChild(self.refreshBtn)
+    self.playerList = self:makeList(true, function(target, item) target:onSelectPlayer(item) end)
+    self.refreshBtn = self:makeButton("Refresh", function() request("playerList", {}) end)
 
     self.tabBtns = {}
-    local labels = { { "state", "State" }, { "death", "Death Logs" }, { "snap", "Snapshots" } }
-    for i, t in ipairs(labels) do
-        local key = t[1]
-        local b = ISButton:new(cx + (i - 1) * 92, th + pad, 90, 22, t[2], self,
-            function(self_) self_:setTab(key) end)
-        b:initialise(); b:instantiate(); self:addChild(b)
-        self.tabBtns[key] = b
+    for _, key in ipairs(TAB_ORDER) do
+        self.tabBtns[key] = self:makeButton(TAB_LABELS[key], function(panel) panel:setTab(key) end)
     end
 
-    local function entry(ex, ey, ew) local e = ISTextEntryBox:new("", ex, ey, ew, 20); e:initialise(); e:instantiate(); self:addChild(e); return e end
-    local function setbtn(ex, ey, fn) local b = ISButton:new(ex, ey, 50, 20, "Set", self, fn); b:initialise(); self:addChild(b); return b end
+    self.eStrikes = self:makeEntry(5)
+    self.bStrikes = self:makeButton("Set", function(panel) panel:applyStrikes() end)
+    self.eWounds = self:makeEntry(5)
+    self.bWounds = self:makeButton("Set", function(panel) panel:applyWounds() end)
+    self.eRx = self:makeEntry(7)
+    self.eRy = self:makeEntry(7)
+    self.eRz = self:makeEntry(4)
+    self.bResp = self:makeButton("Set", function(panel) panel:applyRespawn() end)
+    self.stateRows = {
+        { label = "Knockdown strikes:", controls = { self.eStrikes, self.bStrikes } },
+        { label = "Wounds:", controls = { self.eWounds, self.bWounds } },
+        { label = "Respawn (x, y, z):", controls = { self.eRx, self.eRy, self.eRz, self.bResp } },
+    }
 
-    self.eStrikes = entry(cx + 130, cy, 50)
-    self.bStrikes = setbtn(cx + 185, cy, function(s) s:applyStrikes() end)
-    self.eWounds  = entry(cx + 130, cy + 28, 50)
-    self.bWounds  = setbtn(cx + 185, cy + 28, function(s) s:applyWounds() end)
-    self.eRx = entry(cx + 130, cy + 56, 70)
-    self.eRy = entry(cx + 205, cy + 56, 70)
-    self.eRz = entry(cx + 280, cy + 56, 40)
-    self.bResp = setbtn(cx + 325, cy + 56, function(s) s:applyRespawn() end)
+    self.entryList = self:makeList(true, function(target, item) target:onSelectEntry(item) end)
+    self.viewer = self:makeList(false, nil)
+    self.viewer.wrapped = true
+    self.viewerLines = {}
 
-    self.entryList = ISScrollingListBox:new(cx, cy, 120, self.height - cy - pad)
-    self.entryList:initialise(); self.entryList:instantiate()
-    self.entryList.itemheight = 18; self.entryList.drawBorder = true
-    self.entryList.font = UIFont.Small
-    self.entryList.fontHgt = getTextManager():getFontHeight(UIFont.Small)
-    self.entryList.target = self
-    self.entryList.onmousedown = function(target, item) target:onSelectEntry(item) end
-    self:addChild(self.entryList)
-
-    self.viewer = ISTextEntryBox:new("", cx + 128, cy, self.width - (cx + 128) - pad, self.height - cy - pad)
-    self.viewer:initialise(); self.viewer:instantiate()
-    self.viewer:setMultipleLine(true)
-    self.viewer.background = true
-    self:addChild(self.viewer)
-
+    self:layout()
     self:setTab("state")
+end
+
+function PANEL:layout()
+    local th = self:titleBarHeight()
+    local pad = self.pad
+    local bottom = self.height - pad - self:resizeWidgetHeight()
+    local leftW = self.fontHgt * 12
+    local listH = bottom - (th + pad) - self.btnH - pad
+    UIUtils.setListGeometry(self.playerList, pad, th + pad, leftW, listH)
+    LayoutUtils.setBounds(self.refreshBtn, pad, th + pad + listH + pad, leftW, self.btnH)
+
+    local cx = pad + leftW + pad
+    local x = cx
+    for _, key in ipairs(TAB_ORDER) do
+        local b = self.tabBtns[key]
+        LayoutUtils.setBounds(b, x, th + pad, b:getWidth(), self.btnH)
+        x = x + b:getWidth() + pad
+    end
+
+    local cy = th + pad + self.btnH + pad
+    self.contentX, self.contentY = cx, cy
+
+    local labelW = 0
+    for _, row in ipairs(self.stateRows) do
+        labelW = math.max(labelW, TextUtils.measureWidth(FONT, row.label))
+    end
+    for i, row in ipairs(self.stateRows) do
+        row.y = cy + (i - 1) * (self.entryH + pad)
+        local ex = cx + labelW + pad * 2
+        for _, control in ipairs(row.controls) do
+            LayoutUtils.setBounds(control, ex, row.y, control:getWidth(), self.entryH)
+            ex = ex + control:getWidth() + pad
+        end
+    end
+
+    local entryW = TextUtils.measureWidth(FONT, "Death #00000") + pad * 2 + self.entryList.vscroll:getWidth()
+    UIUtils.setListGeometry(self.entryList, cx, cy, entryW, bottom - cy)
+    local vx = cx + entryW + pad
+    UIUtils.setListGeometry(self.viewer, vx, cy, self.width - vx - pad, bottom - cy)
+    self:wrapViewer()
+end
+
+function PANEL:onResize()
+    ISCollapsableWindow.onResize(self)
+    if self.viewer then self:layout() end
+end
+
+function PANEL:wrapViewer()
+    local list = self.viewer
+    local width = list:getWidth() - list.textPad * 2 - list.vscroll:getWidth()
+    if width == self.viewerWrapWidth then return end
+    self.viewerWrapWidth = width
+    list:clear()
+    for _, line in ipairs(self.viewerLines) do
+        local indent = string.match(line, "^%s*")
+        local room = math.max(self.fontHgt * 4, width - TextUtils.measureWidth(FONT, indent))
+        for _, part in ipairs(TextUtils.wrapLines(string.sub(line, #indent + 1), FONT, room)) do
+            list:addItem(indent .. part, nil)
+        end
+    end
+end
+
+function PANEL:setViewer(lines)
+    self.viewerLines = lines
+    self.viewerWrapWidth = nil
+    self:wrapViewer()
+    self.viewer:setYScroll(0)
 end
 
 function PANEL:setTab(tab)
     self.tab = tab
-    local stateOn = (tab == "state")
-    for _, e in ipairs({ self.eStrikes, self.bStrikes, self.eWounds, self.bWounds,
-                         self.eRx, self.eRy, self.eRz, self.bResp }) do e:setVisible(stateOn) end
-    local listOn = (tab == "death" or tab == "snap")
-    self.entryList:setVisible(listOn); self.viewer:setVisible(listOn)
-    if listOn then self.entryList:clear(); self.viewer:setText("") end
-    if self.selected then
+    for _, key in ipairs(TAB_ORDER) do
+        Theme.applyButtonStyle(self.tabBtns[key], key == tab and "primary" or nil)
+    end
+    local hasPlayer = self.selected ~= nil
+    local stateOn = hasPlayer and tab == "state"
+    for _, row in ipairs(self.stateRows) do
+        for _, control in ipairs(row.controls) do control:setVisible(stateOn) end
+    end
+    local listOn = hasPlayer and (tab == "death" or tab == "snap")
+    self.entryList:setVisible(listOn)
+    self.viewer:setVisible(listOn)
+    if listOn then
+        self.entryList:clear()
+        self:setViewer({})
         if tab == "death" then request("deathLogList", { target = self.selected })
-        elseif tab == "snap" then request("snapshotList", { target = self.selected }) end
+        else request("snapshotList", { target = self.selected }) end
     end
 end
 
@@ -391,16 +502,16 @@ end
 
 function PANEL:render()
     ISCollapsableWindow.render(self)
-    local cx = 8 + 180 + 8
-    local cy = self:titleBarHeight() + 8 + 30
+    if self.isCollapsed then return end
     if self.selected == nil then
-        self:drawText("Select a player on the left.", cx, cy + 6, 0.8, 0.8, 0.8, 1, UIFont.Small)
+        self:drawText("Select a player on the left.", self.contentX, self.contentY, 0.8, 0.8, 0.8, 1, FONT)
         return
     end
     if self.tab == "state" then
-        self:drawText("Knockdown strikes:", cx, cy + 2, 1, 1, 1, 1, UIFont.Small)
-        self:drawText("Wounds:", cx, cy + 30, 1, 1, 1, 1, UIFont.Small)
-        self:drawText("Respawn (x, y, z):", cx, cy + 58, 1, 1, 1, 1, UIFont.Small)
+        local offset = math.floor((self.entryH - self.fontHgt) / 2)
+        for _, row in ipairs(self.stateRows) do
+            self:drawText(row.label, self.contentX, row.y + offset, 1, 1, 1, 1, FONT)
+        end
     end
 end
 
@@ -408,8 +519,12 @@ function DBNO.AdminUI.open()
     if DBNO.AdminUI._window then
         DBNO.AdminUI._window:setVisible(true); DBNO.AdminUI._window:bringToTop(); return
     end
-    local w = PANEL:new(120, 100, 780, 540)
+    local fontHgt = getTextManager():getFontHeight(FONT)
+    local minW, minH = fontHgt * 40, fontHgt * 22
+    local x, y, width, height = LayoutUtils.defaultWindowGeometry(fontHgt * 56, fontHgt * 38, minW, minH)
+    local w = PANEL:new(x, y, width, height)
     DBNO.AdminUI._window = w
+    w.minimumWidth, w.minimumHeight = minW, minH
     w:initialise(); w:instantiate()
     w.title = "DBNO Admin Panel"
     w:addToUIManager()
@@ -444,7 +559,7 @@ Events.OnServerCommand.Add(function(module, command, args)
     elseif command == "viewer" then
         local out = { tostring(args.title or ""), "" }
         for _, l in ipairs(args.lines or {}) do out[#out + 1] = withDates(l) end
-        w.viewer:setText(table.concat(out, "\n"))
+        w:setViewer(out)
     end
 end)
 
