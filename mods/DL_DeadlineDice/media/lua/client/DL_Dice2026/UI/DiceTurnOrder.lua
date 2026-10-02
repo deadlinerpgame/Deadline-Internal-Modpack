@@ -166,6 +166,9 @@ function DiceTurnOrder:renderRow(c, y, rowH, rowW, textA, opacity)
 
 	local displayName = c.name or "?"
 	local nameAlpha = rowTextA
+	if Core.isMyAlly(c.id) then
+		displayName = displayName .. " (ally)"
+	end
 	if c.online == false and not c.isNpc then
 		displayName = displayName .. " (offline)"
 		nameAlpha = rowTextA * 0.55
@@ -365,7 +368,8 @@ function DiceTurnOrder:removeFromUIManager()
 end
 
 function DiceTurnOrder:onRightMouseUp(x, y)
-	if not Core.isStaff() then
+	local canTagAlly = Core.isParticipant()
+	if not Core.isStaff() and not canTagAlly then
 		return false
 	end
 	local index = self:rowAtY(y)
@@ -373,10 +377,28 @@ function DiceTurnOrder:onRightMouseUp(x, y)
 	if not c then
 		return false
 	end
+	if not Core.isStaff() and c.isMe then
+		return false
+	end
 
 	local context = ISContextMenu.get(0, self:getAbsoluteX() + x, self:getAbsoluteY() + y)
 	if not context then
 		return false
+	end
+
+	if canTagAlly and not c.isMe then
+		local ally = Core.isMyAlly(c.id)
+		local option = context:addOption(ally and "Remove ally mark" or "Mark as ally", c.id, function(id)
+			Core.setAlly(id, not ally)
+		end)
+		local tooltip = ISToolTip:new()
+		tooltip:initialise()
+		tooltip:setVisible(false)
+		tooltip.description = "Allies never trigger your Spearwall attack of opportunity."
+		option.toolTip = tooltip
+	end
+	if not Core.isStaff() then
+		return true
 	end
 
 	local header = context:addOption(c.name .. " (staff)", nil, nil)
@@ -421,6 +443,13 @@ function DiceTurnOrder:onRightMouseUp(x, y)
 		stateMenu:addOption((c.spearwall and "* " or "") .. "Spearwall", c.id, function(id)
 			Core.staffSetSpearwall(id)
 		end)
+		local selected = Core.findCombatant(Core.state.selectedTargetId)
+		if selected and selected.id ~= c.id then
+			local marked = c.allies ~= nil and c.allies[selected.id] == true
+			stateMenu:addOption((marked and "* " or "") .. "Ally of " .. selected.name, c.id, function(id)
+				Core.staffToggleNpcAlly(id, selected.id)
+			end)
+		end
 		stateMenu:addOption((c.advantage == 1 and "* " or "") .. "Advantage (next roll)", c.id, function(id)
 			Core.staffSetNpcAdvantage(id, 1)
 		end)

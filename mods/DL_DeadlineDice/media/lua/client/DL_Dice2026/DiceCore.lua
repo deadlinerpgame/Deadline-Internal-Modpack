@@ -673,6 +673,15 @@ function DiceCore.disengage()
 	DiceCore.send("disengage", {})
 end
 
+function DiceCore.setAlly(id, flag)
+	DiceCore.send("setAlly", { targetId = id, flag = flag == true })
+end
+
+function DiceCore.isMyAlly(id)
+	local allies = DiceCore.me().allies
+	return allies ~= nil and allies[id] == true
+end
+
 function DiceCore.releaseGrapple()
 	DiceCore.send("releaseGrapple", {})
 end
@@ -980,6 +989,7 @@ function DiceCore.staffSetCover(id) staffSend("npcState", { id = id, field = "in
 function DiceCore.staffSetArmor(id) staffSend("npcState", { id = id, field = "armored" }) end
 function DiceCore.staffSetDisengaged(id) staffSend("npcState", { id = id, field = "disengaged" }) end
 function DiceCore.staffSetSpearwall(id) staffSend("npcState", { id = id, field = "spearwall" }) end
+function DiceCore.staffToggleNpcAlly(id, otherId) staffSend("npcState", { id = id, field = "ally", value = otherId }) end
 function DiceCore.staffSetNpcAdvantage(id, value) staffSend("npcState", { id = id, field = "advantage", value = value }) end
 function DiceCore.staffSetWeapon(id, class) staffSend("npcState", { id = id, field = "weapon", value = class }) end
 

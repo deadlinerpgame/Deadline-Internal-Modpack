@@ -1213,6 +1213,10 @@ local function resolveAoO(c, attacker, target, reason)
 	return true
 end
 
+local function isAllyOf(owner, other)
+	return owner.allies ~= nil and owner.allies[other.id] == true
+end
+
 local function canBeAoOTarget(m)
 	return m.status ~= "ko" and m.status ~= "surrendered"
 end
@@ -1275,7 +1279,7 @@ local function updateThreats(c)
 		for id in pairs(was) do
 			if not now[id] and not mover.aooTaken[id] then
 				local other = findCombatant(c, id)
-				if other and canTakeAoO(other) then
+				if other and canTakeAoO(other) and not isAllyOf(other, mover) then
 					mover.aooTaken[id] = true
 					if resolveAoO(c, other, mover, "Spearwall") then
 						changed = true
@@ -1292,14 +1296,17 @@ local function updateThreats(c)
 		local covering = false
 		for id in pairs(mine) do
 			local other = findCombatant(c, id)
-			if other and canTakeAoO(other) then
+			if other and canTakeAoO(other) and not isAllyOf(other, m) then
 				threatened = true
 			end
 		end
 		if canTakeAoO(m) then
-			for _ in pairs(mine) do
-				covering = true
-				break
+			for id in pairs(mine) do
+				local other = findCombatant(c, id)
+				if other and not isAllyOf(m, other) then
+					covering = true
+					break
+				end
 			end
 		end
 		if m.threatened ~= threatened then
@@ -1730,6 +1737,14 @@ function DiceServer.handle(player, cmd, args)
 				push(c)
 			end
 		end
+	elseif cmd == "setAlly" then
+		local target = findCombatant(c, args.targetId)
+		if target and target.id ~= m.id then
+			m.allies = m.allies or {}
+			m.allies[target.id] = args.flag == true or nil
+			addLog(c, m.name .. (args.flag and " marks " or " no longer marks ") .. target.name .. " as an ally.")
+			push(c)
+		end
 	elseif cmd == "releaseGrapple" then
 		if c.currentId == m.id and m.grappling then
 			local target = findCombatant(c, m.grappling)
@@ -2023,6 +2038,13 @@ function DiceServer.handleStaff(player, cmd, args, c, m)
 			addLog(c, target.name .. (target[args.field]
 				and (args.field == "inCover" and " takes cover." or " is wearing armor.")
 				or (args.field == "inCover" and " leaves cover." or " removes armor.")))
+		elseif args.field == "ally" then
+			local other = findCombatant(c, args.value)
+			if other and other.id ~= target.id then
+				target.allies = target.allies or {}
+				target.allies[other.id] = not target.allies[other.id] or nil
+				addLog(c, target.name .. (target.allies[other.id] and " marks " or " no longer marks ") .. other.name .. " as an ally.")
+			end
 		elseif args.field == "spearwall" then
 			target.spearwall = not target.spearwall
 			addLog(c, target.name .. (target.spearwall

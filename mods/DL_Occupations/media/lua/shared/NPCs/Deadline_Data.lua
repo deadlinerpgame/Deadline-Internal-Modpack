@@ -1319,7 +1319,6 @@ O.exclusives = {
     { "ThickSkinned", "Thinskinned" },
     { "FastHealer", "SlowHealer" },
     { "Dextrous", "AllThumbs" },
-    { "NightVision", "EagleEyed" },
     { "Graceful", "Clumsy" },
     { "Inconspicuous", "Conspicuous" },
     { "KeenHearing", "HardOfHearing" },
