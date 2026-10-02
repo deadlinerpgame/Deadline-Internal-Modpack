@@ -26,7 +26,8 @@ function DiceToolbar:createChildren()
 		{ label = "Rules", panelId = "rules" },
 	}
 
-	if Core.isLocalAdmin() then
+	Core.wasAdmin = Core.isLocalAdmin()
+	if Core.wasAdmin then
 		self.toggleDefs[#self.toggleDefs + 1] = { label = "Adm", panelId = "admin" }
 	end
 
