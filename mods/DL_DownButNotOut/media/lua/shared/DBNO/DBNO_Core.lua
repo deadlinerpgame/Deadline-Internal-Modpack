@@ -1073,8 +1073,6 @@ function DBNO.DeathWounds.applyTreated(player, captured)
     for i, w in pairs(captured) do
         local bp = parts:get(i)
 
-        if w.bullet then bp:setHaveBullet(false, 5) end
-        if w.glass  then bp:setHaveGlass(false) end
         if w.bite then
             bd:SetBitten(i, false)
             bp:setCut(true)
@@ -1084,13 +1082,16 @@ function DBNO.DeathWounds.applyTreated(player, captured)
             bp:setSplint(true, 1.0)
             bp:setSplintFactor(1.0)
         end
-        if w.deep    then bp:setDeepWounded(true) end
         if w.cut     then bp:setCut(true) end
         if w.scratch then bp:setScratchTime(w.scratch) end
-        if w.burn    then bp:setNeedBurnWash(false) end
+        if w.burn then
+            bp:setBurnTime(w.burn)
+            bp:setNeedBurnWash(false)
+        end
 
-        if w.bullet or w.glass or w.deep or w.cut or w.bite then
+        if w.bullet or w.glass or w.deep then
             bp:setStitched(true)
+            bp:setStitchTime(5)
         end
         bp:setBandaged(true, 100.0, false, "Base.Bandage")
         bp:setBleeding(false)
@@ -1139,9 +1140,15 @@ function DBNO.DeathWounds.applyRaw(player, captured)
         if w.glass    then bp:setHaveGlass(true) end
         if w.fracture then bp:setFractureTime(w.fracture) end
         if w.bite     then bd:SetBitten(i, true) end
-        if w.deep     then bp:setDeepWounded(true) end
+        if w.deep then
+            bp:setDeepWounded(true)
+            bp:setDeepWoundTime(15)
+        end
         if w.cut      then bp:setCut(true) end
-        if w.scratch  then bp:setScratchTime(w.scratch) end
+        if w.scratch then
+            bp:setScratched(true, true)
+            bp:setScratchTime(w.scratch)
+        end
         if w.burn     then bp:setBurnTime(w.burn) end
         if w.bleed then
             bp:setBleeding(true)
