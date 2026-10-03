@@ -47,9 +47,25 @@ local function ymd(ts)
     end
     return y, mon, days + 1, hh, mm, ss
 end
-local function monthKey(ts)
-    local y, mon = ymd(ts or getTimestamp())
+local function monthLength(y, mon)
+    local leap = (y % 4 == 0 and (y % 100 ~= 0 or y % 400 == 0))
+    local mlen = { 31, leap and 29 or 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }
+    return mlen[mon]
+end
+local function periodKey(day)
+    local y, mon, d = ymd(getTimestamp())
+    day = math.floor(tonumber(day) or 1)
+    if day < 1 then day = 1 end
+    if day > monthLength(y, mon) then day = monthLength(y, mon) end
+    if d < day then
+        mon = mon - 1
+        if mon < 1 then mon = 12; y = y - 1 end
+    end
     return string.format("%04d-%02d", y, mon)
+end
+local function monthIndex(key)
+    local y, mon = string.match(tostring(key), "^(%d+)-(%d+)$")
+    return (tonumber(y) or 0) * 12 + (tonumber(mon) or 0)
 end
 local function stampNow()
     local y, mo, d, hh, mm, ss = ymd(getTimestamp())
@@ -249,8 +265,8 @@ end
 local function grantMonthly(user)
     local entry = Players[user]
     if not entry or type(entry.monthly) ~= "table" then return false end
-    local mk = monthKey()
-    if DATA.monthly[user] == mk then return false end
+    local mk = periodKey(entry.day)
+    if DATA.monthly[user] ~= nil and monthIndex(DATA.monthly[user]) >= monthIndex(mk) then return false end
     for ptype, amt in pairs(entry.monthly) do
         applyDelta("SYSTEM", user, ptype, amt, "monthly:" .. mk)
     end

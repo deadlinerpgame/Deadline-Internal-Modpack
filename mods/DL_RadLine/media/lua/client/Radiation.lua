@@ -233,19 +233,26 @@ function isInRadiationZone()
     local secondaryItem = playerObj:getPrimaryHandItem()
     RadValue = MF.getMoodle("MoodleRad"):getValue()
     RadResValue = MF.getMoodle("MoodleRadRes"):getValue()
-    if player:isDead() or RadValue == nil then
+    if RadValue == nil then
+        RadValue = 1
+        MF.getMoodle("MoodleRad"):setValue(1)
+    end
+    if RadResValue == nil then
+        RadResValue = 0
+        MF.getMoodle("MoodleRadRes"):setValue(0)
+    end
+    if player:isDead() then
         RadValueNoise = 0
     else
         RadValueNoise = 1 - RadValue
     end
-    if radData.GCountType == nil then radData.GCountType = 0; end
-    if modData.RadPlayerData == nil then
-        modData.RadPlayerData = {};
-        local radData = modData.RadPlayerData;
+    if radData == nil then
+        radData = {};
+        modData.RadPlayerData = radData;
         radData.MRadValue = 1;
         radData.MRadResValue = 0;
-        radData.GCountType = 0;
     end
+    if radData.GCountType == nil then radData.GCountType = 0; end
 	
     if RadValue < 1 then
         MF.getMoodle("MoodleRad"):setValue(RadValue + 0.005);
@@ -469,18 +476,17 @@ end
 function createModData()
     local player = getPlayer()
     local modData = player:getModData();
-    local radData = modData.RadPlayerData;
     if modData.RadPlayerData == nil then
         modData.RadPlayerData = {};
-
+    end
+    local radData = modData.RadPlayerData;
+    if radData.MRadValue == nil or radData.MRadValue == 0.5 then
         radData.MRadValue = 1;
         radData.MRadResValue = 0;
         radData.GCountType = 0;
     end
-    if radData.MRadValue == 0.5 then
-        radData.MRadValue = 1;
+    if radData.MRadResValue == nil then
         radData.MRadResValue = 0;
-        radData.GCountType = 0;
     end
     MF.getMoodle("MoodleRad"):setValue(radData.MRadValue)
     MF.getMoodle("MoodleRadRes"):setValue(radData.MRadResValue)

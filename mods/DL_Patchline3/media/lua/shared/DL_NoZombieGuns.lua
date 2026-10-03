@@ -32,14 +32,12 @@ local function keepWeapons(def)
 end
 
 local function filterAttachedWeapons()
-    local emptyDefs = {}
     for id, def in pairs(AttachedWeaponDefinitions) do
         if id ~= "attachedWeaponCustomOutfit" and type(def) == "table" and def.weapons ~= nil and not keepWeapons(def) then
-            table.insert(emptyDefs, id)
+            def.outfit = { "DLNoZombieGuns" }
+            def.daySurvived = nil
+            def.chance = 0
         end
-    end
-    for _, id in ipairs(emptyDefs) do
-        AttachedWeaponDefinitions[id] = nil
     end
 
     local outfits = AttachedWeaponDefinitions.attachedWeaponCustomOutfit

@@ -243,25 +243,6 @@ end
 local function downFile(player)
     return DBNO.Paths.knockdownFile(player:getUsername())
 end
-local function strikeFile(player)
-    return DBNO.Paths.knockStrikeFile(player:getUsername())
-end
-
-local function readStrikes(player, now)
-    local sf = strikeFile(player)
-    local windowMs = DBNO.Config.knockdownWindowSec * 1000
-    local out = {}
-    if sf then
-        local raw = DBNO.Files.readString(sf)
-        if raw and raw ~= "" then
-            for t in string.gmatch(raw, "[^,]+") do
-                local n = tonumber(t)
-                if n and (now - n) < windowMs then out[#out + 1] = n end
-            end
-        end
-    end
-    return out, sf
-end
 
 local knock = {}
 
@@ -269,7 +250,7 @@ function knock.requestdown(player, args, user)
     local now = getTimestampMs()
     local limit = DBNO.Config.knockdownStrikeLimit
     local counters = (DBNO.Config.knockdownCounters ~= false)
-    local recent, sf = readStrikes(player, now)
+    local recent = DBNO.Strikes.recent(player:getUsername(), now)
 
     if counters then
         if (#recent + 1) > limit then
@@ -277,7 +258,7 @@ function knock.requestdown(player, args, user)
             return
         end
         recent[#recent + 1] = now
-        if sf then DBNO.Files.writeString(sf, table.concat(recent, ",")) end
+        DBNO.Strikes.write(player:getUsername(), recent)
     end
     DBNO.Players.touch(user)
     local df = downFile(player); if df then DBNO.Files.writeString(df, tostring(now)) end
@@ -344,7 +325,7 @@ function knock.forcedeath(player)
     md.dbno_downedStart = nil
     local df = downFile(player); if df then DBNO.Files.writeString(df, "0") end
 
-    local sf = strikeFile(player); if sf then DBNO.Files.writeString(sf, "") end
+    DBNO.Strikes.write(player:getUsername(), {})
     DBNO.releaseHealth(player)
     player:setGodMod(false)
     DBNO.setGeneralHealth(player, 0)
@@ -367,7 +348,7 @@ Events.OnCharacterDeath.Add(function(character)
     local u = character:getUsername()
     if u == nil then return end
 
-    local sf = DBNO.Paths.knockStrikeFile(u); if sf then DBNO.Files.writeString(sf, "") end
+    DBNO.Strikes.write(u, {})
     local df = DBNO.Paths.knockdownFile(u);  if df then DBNO.Files.writeString(df, "0") end
 end)
 
@@ -448,12 +429,10 @@ Events.OnClientCommand.Add(function(module, command, player, args)
 end)
 
 local function setStrikeCount(username, n)
-    local f = DBNO.Paths.knockStrikeFile(username)
-    if f == nil then return end
     local now = getTimestampMs()
     local parts = {}
-    for i = 1, n do parts[#parts + 1] = tostring(now) end
-    DBNO.Files.writeString(f, table.concat(parts, ","))
+    for i = 1, n do parts[#parts + 1] = now end
+    DBNO.Strikes.write(username, parts)
 end
 
 local function sendState(player, target)
@@ -487,11 +466,8 @@ local function hasData(username)
         local raw = DBNO.Files.readString(DBNO.Paths.snapshotSlot(username, slot))
         if raw and raw ~= "" and raw ~= "0" then return true end
     end
-    local w = tonumber(DBNO.Files.readString(DBNO.Paths.woundsFile(username)))
-    if w and w > 0 then return true end
-    local sf = DBNO.Paths.knockStrikeFile(username)
-    local sraw = sf and DBNO.Files.readString(sf)
-    if sraw and sraw ~= "" then return true end
+    if DBNO.Wounds.get(username) > 0 then return true end
+    if #DBNO.Strikes.list(username) > 0 then return true end
     local rf = DBNO.Paths.respawnFile(username)
     if rf and DBNO.Files.exists(rf) then return true end
     return false
