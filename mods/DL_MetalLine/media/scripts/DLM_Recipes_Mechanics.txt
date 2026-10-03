@@ -373,10 +373,10 @@ module Base
 
 	recipe Make Vehicle Locking Kit
 	{
-		Screws/Nails=4,
+		Screws/Nails=10,
 		ElectricWire=1,
-		MetalPipe/MetalBar/aerx.IronBar=1,
-		BlowTorch=1,
+		MetalPipe/MetalBar/aerx.IronBar=2,
+		BlowTorch=2,
 		keep PipeWrench/Wrench,
 		keep Screwdriver,
 		keep [Recipe.GetItemTypes.WeldingMask],
@@ -389,4 +389,5 @@ module Base
 	    Sound 					: CutSheet,
 		Category 		        : Scrapping,
 		AnimNode 				: Disassemble,
+	}
 }
