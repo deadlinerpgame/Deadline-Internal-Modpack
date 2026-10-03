@@ -138,7 +138,7 @@ local function snapshot(c)
 end
 
 local function combatFile(id)
-	return "DL_Dice2026/combat_" .. id .. ".json"
+	return "DL_Dice2026/combat_" .. id .. ".txt"
 end
 
 local function saveRegistry()
@@ -146,7 +146,7 @@ local function saveRegistry()
 	for id in pairs(DiceServer.combats) do
 		ids[#ids + 1] = id
 	end
-	FileUtils.writeJson("DL_Dice2026/active.json", { ids = ids, nextId = DiceServer.nextId }, MOD, { createIfNull = true })
+	FileUtils.writeJson("DL_Dice2026/active.txt", { ids = ids, nextId = DiceServer.nextId }, MOD, { createIfNull = true })
 end
 
 local function saveCombat(c)
@@ -156,12 +156,12 @@ end
 local function archiveCombat(c, reason)
 	c.endedReason = reason
 	c.endedAt = getTimestamp and getTimestamp() or 0
-	FileUtils.writeJson("DL_Dice2026/archive_" .. c.id .. ".json", c, MOD, { createIfNull = true })
+	FileUtils.writeJson("DL_Dice2026/archive_" .. c.id .. ".txt", c, MOD, { createIfNull = true })
 	FileUtils.writeJson(combatFile(c.id), {}, MOD, { createIfNull = true })
 end
 
 local function loadCombats()
-	local reg = FileUtils.readJson("DL_Dice2026/active.json", MOD, {})
+	local reg = FileUtils.readJson("DL_Dice2026/active.txt", MOD, {})
 	if type(reg) ~= "table" or type(reg.ids) ~= "table" then
 		saveRegistry()
 		return
