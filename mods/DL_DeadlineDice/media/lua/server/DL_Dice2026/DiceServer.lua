@@ -613,15 +613,21 @@ local function attackCtx(m, class, lunge)
 	}
 end
 
-local function firstAidSkill(player)
-	if player == nil then
+local SKILL_BONUS = {
+	firstaid = { perk = Perks.Doctor, divisor = 2, label = "First Aid" },
+	tracking = { perk = Perks.PlantScavenging, divisor = 1, label = "Foraging" },
+}
+
+local function skillBonus(player, kind)
+	local def = SKILL_BONUS[kind]
+	if def == nil or player == nil then
 		return 0, ""
 	end
-	local bonus = math.floor(player:getPerkLevel(Perks.Doctor) / 2)
+	local bonus = math.floor(player:getPerkLevel(def.perk) / def.divisor)
 	if bonus == 0 then
 		return 0, ""
 	end
-	return bonus, " [+" .. bonus .. " First Aid skill]"
+	return bonus, " [+" .. bonus .. " " .. def.label .. " skill]"
 end
 
 local function rollFor(c, m, kind, ctx)
@@ -639,6 +645,9 @@ local function rollFor(c, m, kind, ctx)
 		total = total - 2
 		suffix = suffix .. " [-2 poison]"
 	end
+	if kind == "agility" then
+		kind = DiceTraits.agilityKind(traitsOf(m))
+	end
 	if kind ~= nil then
 		local bonus, parts = DiceTraits.bonus(traitsOf(m), kind, ctx)
 		if bonus ~= 0 then
@@ -646,8 +655,8 @@ local function rollFor(c, m, kind, ctx)
 			suffix = suffix .. DiceTraits.suffix(bonus, parts)
 		end
 	end
-	if kind == "firstaid" and not m.isNpc then
-		local skill, text = firstAidSkill(findPlayer(m.id))
+	if SKILL_BONUS[kind] and not m.isNpc then
+		local skill, text = skillBonus(findPlayer(m.id), kind)
 		total = total + skill
 		suffix = suffix .. text
 	end
@@ -1428,7 +1437,7 @@ local function resolveFirstAid(c, m, targetId)
 	return true
 end
 
-local UTILITY = { firstaid = "First aid", sneak = "Sneak", notice = "Notice", physend = "Phys. endurance", mentend = "Ment. endurance", skill = "Skill roll", defclose = "Defend close", defranged = "Defend ranged", grapple = "Grapple" }
+local UTILITY = { firstaid = "First aid", tracking = "Tracking", agility = "Agility", sneak = "Sneak", notice = "Notice", physend = "Phys. endurance", mentend = "Ment. endurance", skill = "Skill roll", defclose = "Defend close", defranged = "Defend ranged", grapple = "Grapple" }
 
 local DWD_OUTCOMES = {
 	"died of their wounds. No actions after death without staff/opponent approval.",
@@ -1529,16 +1538,18 @@ function DiceServer.handleFreeRoll(player, args)
 		ctx = { class = class, cats = cats, thrown = true }
 		kind = "attack"
 	end
-	local bonus, parts = DiceTraits.bonus(DiceTraits.fromPlayer(player), kind, ctx)
+	local traits = DiceTraits.fromPlayer(player)
+	if kind == "agility" then
+		kind = DiceTraits.agilityKind(traits)
+	end
+	local bonus, parts = DiceTraits.bonus(traits, kind, ctx)
 	if bonus ~= 0 then
 		total = total + bonus
 		suffix = suffix .. DiceTraits.suffix(bonus, parts)
 	end
-	if kind == "firstaid" then
-		local skill, text = firstAidSkill(player)
-		total = total + skill
-		suffix = suffix .. text
-	end
+	local skill, text = skillBonus(player, kind)
+	total = total + skill
+	suffix = suffix .. text
 	local line = characterName(player) .. " rolls " .. label .. " (out of combat): " .. total .. suffix
 	ensureSeed()
 	plog("[free] " .. line .. " (account " .. player:getUsername() .. ")", currentDay)

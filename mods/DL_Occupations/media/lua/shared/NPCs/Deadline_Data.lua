@@ -1061,7 +1061,7 @@ O.traits = {
     scrapper = {
         planner = "scrapper",
         name = "Scrapper",
-        description = "Fights with whatever is at hand\n\nDice: +1 to Attack when using Unarmed and Improvised",
+        description = "Fights with whatever is at hand\n\nDice: +4 to Attack when using Unarmed and Improvised",
         cost = 2,
         section = "Combat Dice",
     },

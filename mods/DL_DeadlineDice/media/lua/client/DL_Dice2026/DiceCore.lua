@@ -272,6 +272,9 @@ function DiceCore.traitModifier(rollId)
 	if #traits == 0 then
 		return nil
 	end
+	if rollId == "agility" then
+		rollId = DiceTraits.agilityKind(traits)
+	end
 	if rollId ~= "attack" and rollId ~= "throw" then
 		return DiceTraits.modifierText(traits, rollId, nil)
 	end
@@ -730,6 +733,8 @@ DiceCore.ROLLS = {
 	{ id = "defclose", label = "Defend close", tip = "Reaction roll: grapples and attacks of opportunity" },
 	{ id = "defranged", label = "Defend ranged", tip = "Reaction roll against a thrown or fired attack" },
 	{ id = "firstaid", label = "First aid", turnBound = true, tip = "Treat the selected character, or yourself if nobody is selected. 12+ removes burning, or poison if they are not burning. Your action for the turn." },
+	{ id = "tracking", label = "Tracking", tip = "Tracking: d20 + your Foraging skill level" },
+	{ id = "agility", label = "Agility", tip = "Agility: d20 + your Defend (close) or Defend (ranged) trait modifiers, whichever is higher" },
 	{ id = "sneak", label = "Sneak" },
 	{ id = "notice", label = "Notice" },
 	{ id = "physend", label = "Phys. endurance" },

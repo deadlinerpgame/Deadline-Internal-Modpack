@@ -88,7 +88,7 @@ DiceTraits.defs = {
 	redhand = { name = "Redhand", text = "+4 Attack with Short Blades", attackCat = { SmallBlade = 4 } },
 	sticker = { name = "Sticker", text = "+2 Attack with Spears", attackCat = { Spear = 2 } },
 	longreach = { name = "Longreach", text = "+4 Attack with Spears", attackCat = { Spear = 4 } },
-	scrapper = { name = "Scrapper", text = "+1 Attack Unarmed and Improvised", attackCat = { Unarmed = 1, Improvised = 1 } },
+	scrapper = { name = "Scrapper", text = "+4 Attack Unarmed and Improvised", attackCat = { Unarmed = 4, Improvised = 4 } },
 
 	snapshooter = { name = "Snapshooter", text = "+1 Attack with Guns, +2 total with Close group guns", attackGun = 1, attackGunRange = { close = 1 } },
 	gunslinger = { name = "Gunslinger", text = "+2 Attack with Guns, +4 total with Close group guns", attackGun = 2, attackGunRange = { close = 2 } },
@@ -304,6 +304,8 @@ DiceTraits.ROLL_LABELS = {
 	physend = "Physical endurance",
 	mentend = "Mental endurance",
 	firstaid = "First aid",
+	tracking = "Tracking",
+	agility = "Agility",
 	skill = "Skill roll",
 	initiative = "Initiative",
 }
@@ -564,6 +566,15 @@ function DiceTraits.bonus(traits, kind, ctx)
 		end
 	end
 	return total, parts
+end
+
+function DiceTraits.agilityKind(traits)
+	local close = DiceTraits.bonus(traits, "defclose")
+	local ranged = DiceTraits.bonus(traits, "defranged")
+	if ranged > close then
+		return "defranged"
+	end
+	return "defclose"
 end
 
 function DiceTraits.signed(value)
