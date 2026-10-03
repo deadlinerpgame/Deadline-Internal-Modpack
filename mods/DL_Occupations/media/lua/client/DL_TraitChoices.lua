@@ -108,7 +108,10 @@ function DLTraitChoiceWindow:onButton(button)
         O.setChoice(screen, group, picked)
         O.clearPostponed(screen)
     else
-        O.postpone(screen, group)
+        O.removeParents(screen, group)
+        if O.hasParent(screen, group) then
+            O.postpone(screen, group)
+        end
     end
     O.updateChoices(screen)
 end
@@ -209,6 +212,21 @@ function O.setChoice(screen, group, id)
     CharacterCreationMain.sort(screen.listboxTraitSelected.items)
     O.refreshTraitLists(screen)
     return true
+end
+
+function O.removeParents(screen, group)
+    local wasSuppressed = screen.dlNoChoicePrompt
+    screen.dlNoChoicePrompt = true
+    for _, parent in ipairs(group.parents) do
+        for i, entry in ipairs(screen.listboxTraitSelected.items) do
+            if entry.item:getType() == parent then
+                screen.listboxTraitSelected.selected = i
+                screen:removeTrait()
+                break
+            end
+        end
+    end
+    screen.dlNoChoicePrompt = wasSuppressed
 end
 
 function O.postpone(screen, group)
