@@ -410,14 +410,14 @@ O.traits = {
     ThickSkinned = {
         planner = "thick_skinned",
         name = "Thick-Skinned",
-        description = "Less likely to be injured\n\nDice: Advantage to DWD Rolls",
+        description = "Less likely to be injured\n\nDice: +1 to DWD Rolls, unless you roll a 1",
         cost = 10,
         section = "Body & Stats",
     },
     Thinskinned = {
         planner = "thin_skinned",
         name = "Thin-Skinned",
-        description = "More likely to be injured\n\nDice: Disadvantage to DWD Rolls",
+        description = "More likely to be injured\n\nDice: -1 to DWD Rolls, unless you roll a 6",
         cost = -4,
         section = "Body & Stats",
     },

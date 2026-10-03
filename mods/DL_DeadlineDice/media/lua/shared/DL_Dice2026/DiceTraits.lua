@@ -42,8 +42,8 @@ end
 
 DiceTraits.defs = {
 
-	ThickSkinned = { name = "Thick-Skinned", text = "Advantage on Dice with Death", dwd = 1 },
-	Thinskinned = { name = "Thin-Skinned", text = "Disadvantage on Dice with Death", dwd = -1 },
+	ThickSkinned = { name = "Thick-Skinned", text = "+1 on Dice with Death unless you roll a 1", dwd = 1 },
+	Thinskinned = { name = "Thin-Skinned", text = "-1 on Dice with Death unless you roll a 6", dwd = -1 },
 	Dextrous = { name = "Dextrous", text = "+1 Initiative", initiative = 1 },
 	AllThumbs = { name = "All Thumbs", text = "-1 Initiative", initiative = -1 },
 
@@ -661,6 +661,20 @@ function DiceTraits.dwd(traits)
 		return -1
 	end
 	return 0
+end
+
+function DiceTraits.dwdResult(traits, raw)
+	local mod = DiceTraits.dwd(traits)
+	if raw <= 1 or raw >= 6 then
+		return raw, ""
+	end
+	if mod > 0 then
+		return raw + 1, " [" .. raw .. " +1 Thick-Skinned]"
+	end
+	if mod < 0 then
+		return raw - 1, " [" .. raw .. " -1 Thin-Skinned]"
+	end
+	return raw, ""
 end
 
 function DiceTraits.statusTurns(traits, base)

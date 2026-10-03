@@ -1495,14 +1495,7 @@ local function sendFreeLog(player, line)
 end
 
 function DiceServer.handleFreeDwd(player)
-	local r = roll(6)
-	local suffix = ""
-	local adv = DiceTraits.dwd(DiceTraits.fromPlayer(player))
-	if adv ~= 0 then
-		local r2 = roll(6)
-		suffix = string.format(" [%d/%d %s]", r, r2, adv > 0 and "adv" or "dis")
-		r = adv > 0 and math.max(r, r2) or math.min(r, r2)
-	end
+	local r, suffix = DiceTraits.dwdResult(DiceTraits.fromPlayer(player), roll(6))
 	local line = characterName(player) .. " Dices with Death (out of combat): rolls " .. r .. suffix .. " - " .. DWD_OUTCOMES[r]
 	ensureSeed()
 	plog("[free] " .. line .. " (account " .. player:getUsername() .. ")", currentDay)
@@ -1818,14 +1811,7 @@ function DiceServer.handle(player, cmd, args)
 		end
 	elseif cmd == "dwd" then
 		refreshTraits(m)
-		local r = croll(c, 6, "dwd:" .. m.name)
-		local suffix = ""
-		local adv = DiceTraits.dwd(traitsOf(m))
-		if adv ~= 0 then
-			local r2 = croll(c, 6, "dwdadv:" .. m.name)
-			suffix = string.format(" [%d/%d %s]", r, r2, adv > 0 and "adv" or "dis")
-			r = adv > 0 and math.max(r, r2) or math.min(r, r2)
-		end
+		local r, suffix = DiceTraits.dwdResult(traitsOf(m), croll(c, 6, "dwd:" .. m.name))
 		addLog(c, m.name .. " Dices with Death: rolls " .. r .. suffix .. " - " .. DWD_OUTCOMES[r])
 		push(c)
 	elseif cmd == "selfHP" then
