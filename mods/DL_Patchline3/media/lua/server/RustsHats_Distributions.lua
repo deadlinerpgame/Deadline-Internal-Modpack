@@ -575,36 +575,36 @@ table.insert(SuburbsDistributions["all"]["Outfit_Fisherman"].items, 2);
 table.insert(ProceduralDistributions.list.FishingStoreGear.items, "RustillerysHats.Hat_FishermanCap");
 table.insert(ProceduralDistributions.list.FishingStoreGear.items, 15);
 
---WardrobeClassy
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_FrenchBeret");
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, 3);
+--WardrobeClassy - doesn't seem to exist in b41 so patched
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_FrenchBeret");
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, 3);
 
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_FrenchBeretTINT");
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, 3);
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_FrenchBeretTINT");
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, 3);
 
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_Bowler");
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, 2);
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_Bowler");
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, 2);
 
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_BowlerTINT");
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, 1);
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_BowlerTINT");
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, 1);
 
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_Bowler_Fancy");
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, 1);
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_Bowler_Fancy");
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, 1);
 
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_Tophat");
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, 2);
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_Tophat");
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, 2);
 
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_TophatTINT");
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, 1);
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_TophatTINT");
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, 1);
 
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_Tophat_Fancy");
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, 1);
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_Tophat_Fancy");
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, 1);
 
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_Gaucho");
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, 0.3);
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_Gaucho");
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, 0.3);
 
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_GauchoTINT");
-table.insert(ProceduralDistributions.list.WardrobeClassy.items, 0.3);
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, "RustillerysHats.Hat_GauchoTINT");
+-- table.insert(ProceduralDistributions.list.WardrobeClassy.items, 0.3);
 
 --LockerClassy
 table.insert(ProceduralDistributions.list.LockerClassy.items, "RustillerysHats.Hat_FrenchBeret");
