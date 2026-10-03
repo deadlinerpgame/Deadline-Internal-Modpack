@@ -7,6 +7,10 @@ R.itemType = "Base.DLRetirePapers"
 local function onConfirm(_, button, player)
     if button.internal ~= "YES" or player:isDead() then return end
     R.player = player
+    sendClientCommand(player, "DBNOKnock", "retire", {})
+    DBNO.Wounds.count = 0
+    DBNO.Wounds.finalDeath = true
+    DBNO.Respawn.point = nil
     DBNO.Knockdown.finalKill(player)
 end
 
@@ -38,12 +42,12 @@ local function onTick()
     local player = R.player
     if player == nil then return end
     local panel = ISPostDeathUI.instance[player:getPlayerNum()]
-    if panel == nil then return end
+    if panel == nil or MainScreen.instance:isReallyVisible() then return end
     R.player = nil
-    sendClientCommand(player, "DBNOKnock", "retire", {})
     DBNO.OverkillRescue.pending = false
     DBNO.Wounds.finalDeath = true
     panel:onRespawn()
+    DBNO.Wounds.finalDeath = true
 end
 
 Events.OnFillInventoryObjectContextMenu.Add(onFillInventoryObjectContextMenu)

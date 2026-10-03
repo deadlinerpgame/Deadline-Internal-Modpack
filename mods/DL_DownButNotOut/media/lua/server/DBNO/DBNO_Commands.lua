@@ -335,6 +335,7 @@ end
 
 function knock.retire(player, args, user)
     DBNO.Life.wipe(user)
+    DBNO.Life.setFinalPending(user, true)
 end
 
 function knock.forcedeath(player)

@@ -31,7 +31,7 @@ T.teleportItems = {
 }
 
 T.pickerTiles = {
-    ["deadline_respawnpoints_02"] = true,
+    ["deadline02_22"] = true,
 }
 
 T.newCharacterHours = 0.05

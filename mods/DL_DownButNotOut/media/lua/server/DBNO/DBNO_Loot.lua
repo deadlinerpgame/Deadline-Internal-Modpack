@@ -596,15 +596,15 @@ local function onDeath(character, isReal)
     local unlimited   = threshold <= 0
     local knockdownOn = not (DBNO.Config.knockdownEnable == false)
     local counts      = isReal or not knockdownOn
+    local pending     = DBNO.Life.isFinalPending(username)
 
     if woundsOn and not unlimited and DBNO.Death.firstFire("wound", character) then
-        if counts then
+        if counts and not pending then
             DBNO.Wounds.add(username, 1)
             DBNO.Players.touch(username)
         end
     end
 
-    local pending = DBNO.Life.isFinalPending(username)
     local count   = (woundsOn and not unlimited) and DBNO.Wounds.get(username) or 0
     local final
     if not woundsOn then
