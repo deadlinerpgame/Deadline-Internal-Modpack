@@ -242,6 +242,12 @@ function DiceCore.sendTraits()
 end
 
 function DiceCore.moveRange()
+	if DiceCore.isParticipant() then
+		local me = DiceCore.me()
+		if me.move then
+			return me.move
+		end
+	end
 	return DiceTraits.moveRange(DiceCore.myTraits())
 end
 
@@ -982,6 +988,14 @@ function DiceCore.staffAdjustHP(id, delta) staffSend("adjustHP", { id = id, delt
 function DiceCore.staffSetKO(id, flag) staffSend("setKO", { id = id, flag = flag == true }) end
 function DiceCore.staffToggleStatus(id, field) staffSend("toggleStatus", { id = id, field = field }) end
 function DiceCore.staffSetInitiative(id, value) staffSend("setInitiative", { id = id, value = value }) end
+function DiceCore.staffSetNpcMove(id, value) staffSend("npcMove", { id = id, value = value }) end
+
+function DiceCore.moveTiles(combatant)
+	if combatant.grappled or combatant.grappling then
+		return 0
+	end
+	return combatant.move or DiceTraits.tuning.baseMove
+end
 function DiceCore.staffToggleMarker(id) staffSend("marker", { id = id }) end
 function DiceCore.adminSetPaused(flag) staffSend("pause", { flag = flag == true }) end
 function DiceCore.adminForceStart() staffSend("forceStart") end

@@ -1048,7 +1048,7 @@ O.traits = {
     spearwall = {
         planner = "spearwall",
         name = "Spearwall",
-        description = "Hold the line\n\nDice: -2 to Attack; Attack of Opportunity when someone leaves your melee range, needs a two handed melee weapon",
+        description = "Hold the line\n\nDice: -2 to Attack; no -4 penalty on Attacks of Opportunity, needs a two handed melee weapon",
         cost = 4,
         section = "Combat Dice",
     },

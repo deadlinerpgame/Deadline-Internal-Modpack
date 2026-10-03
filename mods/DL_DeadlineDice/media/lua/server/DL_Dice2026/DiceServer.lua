@@ -438,8 +438,46 @@ end
 local advanceTurn
 local syncGrapples
 
+local function baseMoveOf(m)
+	if m.isNpc then
+		return m.baseMove or DiceTraits.tuning.baseMove
+	end
+	refreshTraits(m)
+	return DiceTraits.moveRange(traitsOf(m))
+end
+
+local function applyMove(m)
+	local base = baseMoveOf(m)
+	if base <= 0 then
+		m.move = 0
+	else
+		m.move = math.max(1, base + (m.moveMod or 0))
+	end
+	return m.move
+end
+
+local function syncMoves(c)
+	for i = 1, #c.combatants do
+		applyMove(c.combatants[i])
+	end
+end
+
+local function rollMove(c, m)
+	m.moveMod = croll(c, 3, "move:" .. m.name) - 2
+	return applyMove(m)
+end
+
+local function moveLine(c, m)
+	local tiles = rollMove(c, m)
+	if m.grappled or m.grappling then
+		return ""
+	end
+	return " They can move " .. tiles .. " tiles this turn."
+end
+
 local function push(c)
 	syncGrapples(c)
+	syncMoves(c)
 	if c.phase == "active" and c.currentId == nil then
 		advanceTurn(c)
 	end
@@ -725,7 +763,7 @@ advanceTurn = function(c, depth)
 			end
 			c.currentId = m.id
 			markTurnStart(m)
-			addLog(c, "It is now " .. m.name .. "'s turn.")
+			addLog(c, "It is now " .. m.name .. "'s turn." .. moveLine(c, m))
 			if tickBurn(c, m) then
 				advanceTurn(c, depth)
 			end
@@ -839,7 +877,7 @@ local function startCombat(c, forced)
 	local first = findCombatant(c, c.currentId)
 	markTurnStart(first)
 	addLog(c, (forced and "STAFF force-starts combat! " or "Everyone is ready - combat begins! ")
-		.. (first and (first.name .. " acts first.") or ""))
+		.. (first and (first.name .. " acts first." .. moveLine(c, first)) or ""))
 end
 
 local function maybeAutoStart(c)
@@ -1180,7 +1218,11 @@ local function canTakeAoO(m)
 	if not m.isNpc and m.online == false then
 		return false
 	end
-	if (m.weapon or "unarmed") ~= "melee2h" then
+	return DiceTraits.isMelee(m.weapon or "unarmed")
+end
+
+local function hasSpearwall(m)
+	if m.weapon ~= "melee2h" then
 		return false
 	end
 	if m.spearwall == true then
@@ -1189,7 +1231,9 @@ local function canTakeAoO(m)
 	return DiceTraits.has(traitsOf(m), "spearwall")
 end
 
-local function resolveAoO(c, attacker, target, reason)
+local AOO_PENALTY = 4
+
+local function resolveAoO(c, attacker, target)
 	refreshTraits(attacker)
 	refreshWeapon(attacker)
 	if not canTakeAoO(attacker) then
@@ -1198,9 +1242,16 @@ local function resolveAoO(c, attacker, target, reason)
 	local traits = traitsOf(attacker)
 	local class = attacker.weapon or "unarmed"
 	local dmg = DAMAGE[class] or 1
-	local atkTotal, atkRaw, atkSuffix = rollFor(c, attacker, "attack", attackCtx(attacker, class, false))
+	local ctx = attackCtx(attacker, class, false)
+	ctx.aoo = true
+	local atkTotal, atkRaw, atkSuffix = rollFor(c, attacker, "attack", ctx)
+	local spearwall = hasSpearwall(attacker)
+	if not spearwall then
+		atkTotal = atkTotal - AOO_PENALTY
+		atkSuffix = atkSuffix .. " [-" .. AOO_PENALTY .. " no Spearwall]"
+	end
 	local critFrom, critFailTo = DiceTraits.critRange(traits)
-	local label = attacker.name .. " takes an attack of opportunity on " .. target.name .. " (" .. reason .. ")"
+	local label = attacker.name .. " takes an attack of opportunity on " .. target.name .. " (" .. (spearwall and "Spearwall" or WEAPON_NAMES[class]) .. ")"
 	if atkRaw <= critFailTo then
 		addLog(c, label .. ": CRITICAL FAILURE!")
 		return true
@@ -1290,7 +1341,7 @@ local function updateThreats(c)
 				local other = findCombatant(c, id)
 				if other and canTakeAoO(other) and not isAllyOf(other, mover) then
 					mover.aooTaken[id] = true
-					if resolveAoO(c, other, mover, "Spearwall") then
+					if resolveAoO(c, other, mover) then
 						changed = true
 					end
 				end
@@ -1303,17 +1354,27 @@ local function updateThreats(c)
 		local mine = near[m.id] or {}
 		local threatened = false
 		local covering = false
+		local reachThreatened = false
+		local reachCovering = false
 		for id in pairs(mine) do
 			local other = findCombatant(c, id)
 			if other and canTakeAoO(other) and not isAllyOf(other, m) then
-				threatened = true
+				if hasSpearwall(other) then
+					threatened = true
+				else
+					reachThreatened = true
+				end
 			end
 		end
 		if canTakeAoO(m) then
 			for id in pairs(mine) do
 				local other = findCombatant(c, id)
 				if other and not isAllyOf(m, other) then
-					covering = true
+					if hasSpearwall(m) then
+						covering = true
+					else
+						reachCovering = true
+					end
 					break
 				end
 			end
@@ -1324,6 +1385,14 @@ local function updateThreats(c)
 		end
 		if m.threatening ~= covering then
 			m.threatening = covering
+			changed = true
+		end
+		if m.reachThreatened ~= reachThreatened then
+			m.reachThreatened = reachThreatened
+			changed = true
+		end
+		if m.reachThreatening ~= reachCovering then
+			m.reachThreatening = reachCovering
 			changed = true
 		end
 	end
@@ -2070,7 +2139,7 @@ function DiceServer.handleStaff(player, cmd, args, c, m)
 		elseif args.field == "spearwall" then
 			target.spearwall = not target.spearwall
 			addLog(c, target.name .. (target.spearwall
-				and " holds a spearwall: they take attacks of opportunity with a two handed melee weapon."
+				and " holds a spearwall: their attacks of opportunity with a two handed melee weapon take no penalty."
 				or " no longer holds a spearwall."))
 		elseif args.field == "advantage" then
 			target.advantage = (target.advantage == args.value) and 0 or args.value
@@ -2079,6 +2148,14 @@ function DiceServer.handleStaff(player, cmd, args, c, m)
 			target.weaponScrap = false
 			addLog(c, target.name .. " switches to: " .. WEAPON_NAMES[args.value] .. ".")
 		end
+		push(c)
+	elseif cmd == "npcMove" and target and target.isNpc then
+		local v = MathUtils.parseNumber(args.value, nil, 0, 99)
+		if not v then
+			return
+		end
+		target.baseMove = math.floor(v)
+		addLog(c, "Staff set " .. target.name .. "'s base movement to " .. target.baseMove .. " tiles.")
 		push(c)
 	elseif cmd == "npcPlace" and target and target.isNpc then
 		target.pos = { x = args.x, y = args.y, z = args.z }

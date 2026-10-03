@@ -83,8 +83,10 @@ function DiceTurnOrder:columns(rowW, rowH)
 	c.traitStep = c.iconSize + Core.px(2)
 	c.traitsW = c.traitStep * 3 + pad
 	c.hpW = tm:MeasureStringX(self.font, "88/88") + Core.px(10)
-	c.nameW = math.max(Core.px(30), rowW - c.nameX - c.hpW - c.traitsW - c.statusW - c.initW - pad * 3)
-	c.hpX = c.nameX + c.nameW + pad
+	c.moveW = tm:MeasureStringX(self.font, "88") + Core.px(4)
+	c.nameW = math.max(Core.px(30), rowW - c.nameX - c.moveW - c.hpW - c.traitsW - c.statusW - c.initW - pad * 4)
+	c.moveX = c.nameX + c.nameW + pad
+	c.hpX = c.moveX + c.moveW + pad
 	c.traitsX = c.hpX + c.hpW
 	c.statusX = c.traitsX + c.traitsW
 	c.initX = c.statusX + c.statusW + pad
@@ -110,6 +112,8 @@ do
 	STATUS_DEFS[#STATUS_DEFS + 1] = { icon = "st_armor", tip = "Armored: no mechanical effect", has = function(c) return c.armored == true end }
 	STATUS_DEFS[#STATUS_DEFS + 1] = { icon = "st_threatened", tip = "Threatened: a Spearwall fighter with a two handed melee weapon is in melee range - stepping out of it on your turn gives them a free attack", has = function(c) return c.threatened == true end }
 	STATUS_DEFS[#STATUS_DEFS + 1] = { icon = "st_covering", tip = "Covering: your Spearwall reaches someone in melee range and you get a free attack if they step away on their turn", has = function(c) return c.threatening == true end }
+	STATUS_DEFS[#STATUS_DEFS + 1] = { icon = "st_inreach", tip = "In reach: a fighter who is unarmed or holds a melee weapon is in melee range - stepping out of it on your turn gives them a free attack at -4", has = function(c) return c.reachThreatened == true end }
+	STATUS_DEFS[#STATUS_DEFS + 1] = { icon = "st_reaching", tip = "Reaching: someone is in your melee range and you get a free attack at -4 if they step away on their turn", has = function(c) return c.reachThreatening == true end }
 end
 
 function DiceTurnOrder:activeStatusColumns()
@@ -175,6 +179,8 @@ function DiceTurnOrder:renderRow(c, y, rowH, rowW, textA, opacity)
 	end
 	local name = TextUtils.trimToWidth(self.font, displayName, col.nameW, "..") or ""
 	self:drawText(name, col.nameX, midY, T.text.r, T.text.g, T.text.b, nameAlpha, self.font)
+
+	self:drawText(tostring(Core.moveTiles(c)), col.moveX, midY, T.textDim.r, T.textDim.g, T.textDim.b, rowTextA, self.font)
 
 	local hpText = tostring(c.hp) .. "/" .. tostring(c.maxHp)
 	self:drawText(hpText, col.hpX, y + Core.px(1), T.textMuted.r, T.textMuted.g, T.textMuted.b, rowTextA, self.font)
@@ -318,6 +324,13 @@ function DiceTurnOrder:tipAt(x, y)
 		local rule = Core.WEAPON_RULES[c.weapon or "unarmed"]
 		return (rule and rule.name or "Weapon") .. " - " .. Core.weaponTip(c)
 	end
+	if x >= col.moveX and x <= col.moveX + col.moveW then
+		local tiles = Core.moveTiles(c)
+		if c.grappled or c.grappling then
+			return "Movement: 0 tiles - cannot move while grappled or grappling"
+		end
+		return "Movement: " .. tiles .. " tiles this turn, " .. (tiles * 2) .. " with a dash. Rolled at the start of each of their turns: normal, +1 or -1."
+	end
 	if x >= col.statusX and x <= col.statusX + col.statusW then
 		local slot = math.floor((x - col.statusX) / col.statusStep) + 1
 		local def = col.statusCols[slot]
@@ -394,7 +407,7 @@ function DiceTurnOrder:onRightMouseUp(x, y)
 		local tooltip = ISToolTip:new()
 		tooltip:initialise()
 		tooltip:setVisible(false)
-		tooltip.description = "Allies never trigger your Spearwall attack of opportunity."
+		tooltip.description = "Allies never trigger your attack of opportunity."
 		option.toolTip = tooltip
 	end
 	if not Core.isStaff() then
@@ -455,6 +468,21 @@ function DiceTurnOrder:onRightMouseUp(x, y)
 		end)
 		stateMenu:addOption((c.advantage == -1 and "* " or "") .. "Disadvantage (next roll)", c.id, function(id)
 			Core.staffSetNpcAdvantage(id, -1)
+		end)
+
+		context:addOption("Set movement...", c.id, function(id)
+			local target = Core.findCombatant(id)
+			local sw = getCore():getScreenWidth()
+			local sh = getCore():getScreenHeight()
+			local modal = ISTextBox:new((sw - 280) / 2, (sh - 180) / 2, 280, 180,
+				"Base movement in tiles for " .. (target and target.name or "?") .. ":",
+				tostring(target and target.baseMove or Core.traits.tuning.baseMove),
+				nil, DiceTurnOrder.onMoveEntered, 0, id)
+			modal:initialise()
+			modal:addToUIManager()
+			if modal.entry then
+				modal.entry:setOnlyNumbers(true)
+			end
 		end)
 
 		local weaponOption = context:addOption("Set weapon", nil, nil)
@@ -546,6 +574,15 @@ function DiceTurnOrder:onRightMouseUp(x, y)
 
 	context:addOption("Kick from combat", c.id, function(id) Core.staffKick(id) end)
 	return true
+end
+
+function DiceTurnOrder.onMoveEntered(target, button, id)
+	if button.internal == "OK" then
+		local text = button.parent.entry:getText()
+		if text and text ~= "" then
+			Core.staffSetNpcMove(id, text)
+		end
+	end
 end
 
 function DiceTurnOrder.onInitiativeEntered(target, button, id)
