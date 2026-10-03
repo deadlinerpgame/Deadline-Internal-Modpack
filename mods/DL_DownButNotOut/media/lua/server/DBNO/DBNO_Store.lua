@@ -249,20 +249,43 @@ DBNO.Flags     = DBNO.Flags     or {}
 DBNO.Strikes   = DBNO.Strikes   or {}
 
 
-function DBNO.Strikes.count(username, now)
-    local windowMs = DBNO.Config.knockdownWindowSec * 1000
-    local f = Paths.knockStrikeFile(username)
-    local c = 0
-    if f then
-        local raw = Files.readString(f)
-        if raw and raw ~= "" then
-            for t in string.gmatch(raw, "[^,]+") do
-                local n = tonumber(t)
-                if n and (now - n) < windowMs then c = c + 1 end
-            end
+DBNO.Strikes._cache = DBNO.Strikes._cache or {}
+
+function DBNO.Strikes.list(username)
+    local key = Paths.safeName(username)
+    if key == nil then return {} end
+    local cached = DBNO.Strikes._cache[key]
+    if cached ~= nil then return cached end
+    local out = {}
+    local raw = Files.readString(Paths.knockStrikeFile(username))
+    if raw and raw ~= "" then
+        for t in string.gmatch(raw, "[^,]+") do
+            local n = tonumber(t)
+            if n then out[#out + 1] = n end
         end
     end
-    return c
+    DBNO.Strikes._cache[key] = out
+    return out
+end
+
+function DBNO.Strikes.write(username, list)
+    local key = Paths.safeName(username)
+    if key == nil then return end
+    DBNO.Strikes._cache[key] = list
+    Files.writeString(Paths.knockStrikeFile(username), table.concat(list, ","))
+end
+
+function DBNO.Strikes.recent(username, now)
+    local windowMs = DBNO.Config.knockdownWindowSec * 1000
+    local out = {}
+    for _, n in ipairs(DBNO.Strikes.list(username)) do
+        if (now - n) < windowMs then out[#out + 1] = n end
+    end
+    return out
+end
+
+function DBNO.Strikes.count(username, now)
+    return #DBNO.Strikes.recent(username, now)
 end
 
 local function readMeta(username)
@@ -327,29 +350,50 @@ function DBNO.SnapStore.newest(username)
     return Files.readString(Paths.snapshotSlot(username, meta.newest))
 end
 
+DBNO.Wounds._cache = DBNO.Wounds._cache or {}
+
+local function woundEntry(username)
+    local key = Paths.safeName(username)
+    if key == nil then return nil end
+    local e = DBNO.Wounds._cache[key]
+    if e == nil then
+        e = { n = tonumber(Files.readString(Paths.woundsFile(username))) or 0 }
+        DBNO.Wounds._cache[key] = e
+    end
+    return e
+end
+
 function DBNO.Wounds.get(username)
-    local s = Files.readString(Paths.woundsFile(username))
-    local n = tonumber(s)
-    return n or 0
+    local e = woundEntry(username)
+    return e and e.n or 0
 end
 
 function DBNO.Wounds.stamp(username, when)
-    local p = Paths.woundTimeFile(username)
-    if p then Files.writeString(p, tostring(math.floor(when or getTimestamp()))) end
+    local e = woundEntry(username)
+    if e == nil then return end
+    e.stamp = math.floor(when or getTimestamp())
+    Files.writeString(Paths.woundTimeFile(username), tostring(e.stamp))
 end
 
 function DBNO.Wounds.stampedAt(username)
-    return tonumber(Files.readString(Paths.woundTimeFile(username) or "")) or 0
+    local e = woundEntry(username)
+    if e == nil then return 0 end
+    if e.stamp == nil then
+        e.stamp = tonumber(Files.readString(Paths.woundTimeFile(username))) or 0
+    end
+    return e.stamp
 end
 
 function DBNO.Wounds.set(username, n)
     n = math.floor(tonumber(n) or 0)
     if n < 0 then n = 0 end
-    if Paths.woundsFile(username) == nil then
+    local e = woundEntry(username)
+    if e == nil then
         return false
     end
     local ok = Files.writeString(Paths.woundsFile(username), tostring(n))
     if ok then
+        e.n = n
         DBNO.Wounds.stamp(username)
     end
     return ok
@@ -445,8 +489,7 @@ function DBNO.Life.wipe(username)
     if rf then DBNO.Files.writeString(rf, "") end
     local kf = DBNO.Paths.knockdownFile(username)
     if kf then DBNO.Files.writeString(kf, "0") end
-    local sf = DBNO.Paths.knockStrikeFile(username)
-    if sf then DBNO.Files.writeString(sf, "") end
+    DBNO.Strikes.write(username, {})
 
     DBNO.Snap._lastSave[username] = nil
 
@@ -456,7 +499,10 @@ end
 DBNO.Players = DBNO.Players or {}
 local function playersIndexPath() return DBNO.Config.dataRoot .. "/_players.txt" end
 function DBNO.Players.list()
-    return DBNO.Files.readLines(playersIndexPath()) or {}
+    if DBNO.Players._list == nil then
+        DBNO.Players._list = DBNO.Files.readLines(playersIndexPath()) or {}
+    end
+    return DBNO.Players._list
 end
 function DBNO.Players.touch(username)
     local u = DBNO.Paths.safeName(username)
