@@ -370,4 +370,23 @@ module Base
 		CanBeDoneFromFloor      : False,
 		NearItem:Simple Forge,
     }
+
+	recipe Make Vehicle Locking Kit
+	{
+		Screws/Nails=4,
+		ElectricWire=1,
+		MetalPipe/MetalBar/aerx.IronBar=1,
+		BlowTorch=1,
+		keep PipeWrench/Wrench,
+		keep Screwdriver,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		keep [Recipe.GetItemTypes.Hammer],
+
+		NoBrokenItems			: false,
+		SkillRequired:Mechanics=4,
+		Result           		: KI5.PinkSlip=1,
+		Time             		: 200.0,
+	    Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
 }
