@@ -1048,14 +1048,14 @@ O.traits = {
     spearwall = {
         planner = "spearwall",
         name = "Spearwall",
-        description = "Hold the line\n\nDice: -2 to Attack; no -4 penalty on Attacks of Opportunity, needs a two handed melee weapon",
+        description = "Hold the line\n\nDice: -2 to melee Attack; no -4 penalty on Attacks of Opportunity, needs a two handed melee weapon",
         cost = 4,
         section = "Combat Dice",
     },
     strong_arm = {
         planner = "strong_arm",
         name = "Strong Arm",
-        description = "Born to throw\n\nDice: +1 thrown damage and +3 throw range; Can throw short blunt and short blade weapons; -1 to non-thrown attacks",
+        description = "Born to throw\n\nDice: +1 thrown damage and +5 throw range; Can throw short blunt and short blade weapons",
         cost = 2,
         section = "Combat Dice",
     },

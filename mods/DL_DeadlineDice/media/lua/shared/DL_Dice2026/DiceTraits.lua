@@ -107,9 +107,9 @@ DiceTraits.defs = {
 	heavyweight = { name = "Heavyweight", text = "+1 Attack in melee, -1 movement tile", attackMelee = 1, move = -1 },
 	featherweight = { name = "Featherweight", text = "-1 Attack in melee, +1 movement tile", attackMelee = -1, move = 1 },
 	lunger = { name = "Lunger", text = "+2 Attack in melee after moving 3 or more tiles in a straight line", lunge = 2 },
-	spearwall = { name = "Spearwall", text = "-2 Attack on your own attacks. Attacks of opportunity with a two handed melee weapon take no penalty instead of -4", attack = -2, aoo = true },
-	strong_arm = { name = "Strong Arm", text = "+1 thrown damage, +3 throw range, -1 on every attack that is not a throw",
-		throwDamage = 1, throwRange = 3, attackNonThrown = -1, canThrowMelee = true },
+	spearwall = { name = "Spearwall", text = "-2 on your own melee attacks. Attacks of opportunity with a two handed melee weapon take no penalty instead of -4", attackMelee = -2, aoo = true },
+	strong_arm = { name = "Strong Arm", text = "+1 thrown damage, +5 throw range",
+		throwDamage = 1, throwRange = 5, canThrowMelee = true },
 
 	spry = { name = "Spry", text = "+1 Defend close", defclose = 1 },
 	furtive = { name = "Furtive", text = "+2 Defend close", defclose = 2 },
@@ -508,11 +508,10 @@ end
 local function attackValue(def, ctx)
 	local class = ctx and ctx.class or "unarmed"
 	local value = def.attack or 0
-	if ctx and ctx.aoo and def.aoo then
-		value = 0
-	end
 	if MELEE_CLASSES[class] then
-		value = value + (def.attackMelee or 0)
+		if not (ctx and ctx.aoo and def.aoo) then
+			value = value + (def.attackMelee or 0)
+		end
 		if ctx and ctx.lunge then
 			value = value + (def.lunge or 0)
 		end
