@@ -4,6 +4,11 @@ local ServerPointsAdminPanel = ISPanel:derive("ServerPointsAdminPanel")
 local FONT_HGT_SMALL = getTextManager():getFontHeight(UIFont.Small)
 local FONT_HGT_MEDIUM = getTextManager():getFontHeight(UIFont.Medium)
 local FONT_SCALE = FONT_HGT_SMALL / 14
+local WIPE_ACCOUNT = "Staff Milo"
+
+local function canWipe()
+    return getPlayer():getUsername() == WIPE_ACCOUNT
+end
 
 if not _ServerPoints_DBHandlersPatched then
     _ServerPoints_DBHandlersPatched = true
@@ -45,6 +50,9 @@ local function onServerCommand(module, command, args)
         if args.username == inst.balanceUser then
             inst.balances = args.balances or {}
         end
+    elseif command == "wiped" and args then
+        inst.balances = {}
+        inst:flash("Wiped " .. tostring(args.total) .. " point(s) from " .. tostring(args.accounts) .. " account(s).")
     elseif command == "reloaded" then
         inst.status = "Config reloaded."
         inst.statusUntil = getTimestampMs() + 2500
@@ -185,7 +193,7 @@ function ServerPointsAdminPanel:createChildren()
 
     self.presetLabelY = y
     y = y + FONT_HGT_SMALL + 2 * FONT_SCALE
-    local presetH = self.height - y - pad - (btnHgt + pad) * 3
+    local presetH = self.height - y - pad - (btnHgt + pad) * (canWipe() and 4 or 3)
     if presetH < btnHgt * 2 then presetH = btnHgt * 2 end
     self.presetList = ISScrollingListBox:new(pad, y, self.width - pad * 2, presetH)
     self.presetList:initialise()
@@ -208,6 +216,14 @@ function ServerPointsAdminPanel:createChildren()
     self.reloadBtn:initialise(); self:addChild(self.reloadBtn)
     self.closeBtn = ISButton:new(pad * 2 + closeW, y, closeW, btnHgt, getText("UI_btn_close"), self, function() self:close() end)
     self.closeBtn:initialise(); self:addChild(self.closeBtn)
+    y = y + btnHgt + 4 * FONT_SCALE
+
+    if canWipe() then
+        self.wipeBtn = ISButton:new(pad, y, self.width - pad * 2, btnHgt, "WIPE ALL POINTS", self, function() self:onWipeAll() end)
+        self.wipeBtn:initialise(); self:addChild(self.wipeBtn)
+        self.wipeBtn.backgroundColor = { r = 0.45, g = 0.1, b = 0.1, a = 1 }
+        self.wipeBtn.backgroundColorMouseOver = { r = 0.65, g = 0.15, b = 0.15, a = 1 }
+    end
 
     Events.OnServerCommand.Add(onServerCommand)
     Events.OnGetDBSchema.Add(onDBSchema)
@@ -250,6 +266,22 @@ function ServerPointsAdminPanel:onSpawn()
     md.serverPointsTypeName = self:typeLabel(ptype)
     item:setName(amount .. " " .. self:typeLabel(ptype))
     self:flash("Spawned token: " .. amount .. " " .. self:typeLabel(ptype))
+end
+
+local function onWipeConfirm(panel, button)
+    if button.internal ~= "YES" then return end
+    sendClientCommand("ServerPoints", "wipeAll", nil)
+end
+
+function ServerPointsAdminPanel:onWipeAll()
+    local core = getCore()
+    local w, h = 380 * FONT_SCALE, 150 * FONT_SCALE
+    local modal = ISModalDialog:new((core:getScreenWidth() - w) / 2, (core:getScreenHeight() - h) / 2, w, h,
+        "Remove ALL points of every type from EVERY account? This cannot be undone.",
+        true, self, onWipeConfirm)
+    modal:initialise()
+    modal:addToUIManager()
+    modal:setAlwaysOnTop(true)
 end
 
 function ServerPointsAdminPanel:onReload()

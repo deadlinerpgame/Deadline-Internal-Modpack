@@ -59,6 +59,7 @@ end
 local CONFIG_FILE  = "ServerPointsConfig.lua"
 local PLAYERS_FILE = "ServerPointsPlayers.lua"
 local LOG_FILE     = "ServerPoints_audit.txt"
+local WIPE_ACCOUNT = "Staff Milo"
 
 local Config  = { pointTypes = {}, store = {}, presets = {} }
 local Players = {}
@@ -406,6 +407,34 @@ function Cmd.admincfg(module, command, player, args)
     for u in pairs(Players) do if DATA.known[u] == nil then known[#known + 1] = u end end
     sendServerCommand(player, "ServerPoints", "admincfg",
         { pointTypes = Config.pointTypes, presets = Config.presets, known = known })
+end
+
+function Cmd.wipeAll(module, command, player, args)
+    if not isStaff(player) or player:getUsername() ~= WIPE_ACCOUNT then return end
+    local actor = player:getUsername()
+    local accounts, total = 0, 0
+    for user, balances in pairs(DATA.balances) do
+        local had = false
+        for ptype, amount in pairs(balances) do
+            local before = tonumber(amount) or 0
+            if before ~= 0 then
+                audit(actor, user, ptype, -before, before, 0, "globalwipe")
+                total = total + before
+                had = true
+            end
+        end
+        if had then accounts = accounts + 1 end
+    end
+    DATA.balances = {}
+    log("GLOBAL WIPE by '" .. actor .. "': " .. total .. " point(s) removed from " .. accounts .. " account(s)")
+    local players = getOnlinePlayers()
+    if players then
+        for i = 0, players:size() - 1 do
+            local u = players:get(i):getUsername()
+            if u then pushBalancesTo(u) end
+        end
+    end
+    sendServerCommand(player, "ServerPoints", "wiped", { accounts = accounts, total = total })
 end
 
 function Cmd.reload(module, command, player, args)
