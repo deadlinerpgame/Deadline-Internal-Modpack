@@ -71,8 +71,10 @@ O.occupations = {
     gravepicker = {
         name = "Gravepicker",
         category = "Survival",
-        description = "Woodsman - Foraging, Trapping and Fishing to Level 6\nCarrion Eye - Rare chance of finding corpses and shallow caches with various items\nIron Gut - Less chance for food illness",
-        preset = { "woodsman", "carrion_eye", "IronGut" },
+        description = "Woodsman - Foraging, Trapping and Fishing to Level 6\nForage: Carrion Eye - Rare chance of finding corpses and shallow caches with various items\nIron Gut - Less chance for food illness",
+        preset = { "woodsman", "IronGut" },
+        choices = { "carrion_eye" },
+        points = O.startingPoints - 4,
     },
     sodbuster = {
         name = "Sodbuster",
@@ -138,8 +140,10 @@ O.occupations = {
     huntsman = {
         name = "Huntsman",
         category = "Hybrid",
-        description = "Woodsman - Foraging, Trapping and Fishing to Level 6\nSpotter - Aiming to Level 8\nTracker - Increased chances of finding animal tracks to find and hunt animals",
-        preset = { "woodsman", "spotter", "tracker" },
+        description = "Woodsman - Foraging, Trapping and Fishing to Level 6\nSpotter - Aiming to Level 8\nForage: Bones & Hide - Can forage bones and hide, and better at finding animal tracks",
+        preset = { "woodsman", "spotter" },
+        choices = { "forage_bones" },
+        points = O.startingPoints - 4,
     },
 }
 
@@ -905,17 +909,19 @@ O.traits = {
     },
     carrion_eye = {
         planner = "carrion_eye",
-        name = "Carrion Eye",
+        name = "Forage: Carrion Eye",
         description = "Rare chance of finding corpses and shallow caches with various items",
-        cost = 4,
+        cost = 0,
         section = "Survival",
+        hidden = true,
     },
     tracker = {
         planner = "tracker",
         name = "Tracker",
         description = "Increased chances of finding animal tracks to find and hunt animals",
-        cost = 4,
+        cost = 0,
         section = "Survival",
+        hidden = true,
     },
     harvest_child = {
         planner = "harvest_child",
@@ -1180,7 +1186,7 @@ O.traits = {
     forage_bones = {
         planner = "forage_bones",
         name = "Forage: Bones & Hide",
-        description = "Can forage bones and hide",
+        description = "Can forage bones and hide, and better at finding animal tracks",
         cost = 0,
         section = "Survival",
         hidden = true,
@@ -1563,6 +1569,11 @@ O.exclusives = {
     { "forage_alcohol", "forage_ores" },
     { "forage_alcohol", "forage_urban" },
     { "forage_ores", "forage_urban" },
+    { "carrion_eye", "forage_chemicals" },
+    { "carrion_eye", "forage_bones" },
+    { "carrion_eye", "forage_alcohol" },
+    { "carrion_eye", "forage_ores" },
+    { "carrion_eye", "forage_urban" },
     { "addiction_alcohol", "addiction_opiate" },
     { "addiction_alcohol", "addiction_stimulant" },
     { "addiction_alcohol", "addiction_depressant" },
@@ -1586,7 +1597,7 @@ O.choiceGroups = {
         title = "Choose an extra foraging group",
         text = "Your wilderness training lets your Foraging skill find one extra resource group.",
         parents = { "woodsman", "provider" },
-        options = { "forage_chemicals", "forage_bones", "forage_alcohol", "forage_ores", "forage_urban" },
+        options = { "forage_chemicals", "forage_bones", "forage_alcohol", "forage_ores", "forage_urban", "carrion_eye" },
     },
     {
         key = "addiction",

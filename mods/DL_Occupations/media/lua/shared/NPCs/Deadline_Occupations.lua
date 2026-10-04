@@ -69,7 +69,7 @@ for _, id in ipairs(O.occupationOrder) do
     PF.addProfession(id, {
         name = occupation.name,
         icon = occupation.icon or "",
-        cost = O.startingPoints,
+        cost = occupation.points or O.startingPoints,
     })
 end
 

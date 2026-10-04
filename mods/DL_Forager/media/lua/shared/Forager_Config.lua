@@ -751,6 +751,12 @@ C.forageTraitBonuses = C.forageTraitBonuses or {
         darknessEffect  = 0,
         specialisations = { DeadAnimals = 100, Animals = 50 },
     },
+    forage_bones = {
+        visionBonus     = 0,
+        weatherEffect   = 0,
+        darknessEffect  = 0,
+        specialisations = { DeadAnimals = 100, Animals = 50 },
+    },
 }
 
 if DL.log ~= nil then
