@@ -226,6 +226,8 @@ return {
         "B42Bags.Bag_CraftedFramepack_Small",
         "B42Bags.Bag_CraftedFramepack_Large3",
         "B42Bags.Bag_NormalHikingBagB42",  
-        "B42Bags.Bag_BigHikingBagB42"
+        "B42Bags.Bag_BigHikingBagB42",
+        "Bag_SheetSlingBag",
+        "Bag_TarpSlingBag"
     },
 }
