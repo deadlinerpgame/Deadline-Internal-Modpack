@@ -34350,7 +34350,7 @@ local function addDeadlineCurtainsToMenu()
         { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 124, 126, 125, 127 } },
         { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 132, 134, 133, 135 } },
         { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 140, 142, 141, 143 } },
-        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 148, 150, 149, 151 } }
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 148, 150, 149, 151 } },
         { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 156, 158, 157, 159 } },
         { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 164, 166, 165, 167 } },
         { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 172, 174, 173, 175 } },
