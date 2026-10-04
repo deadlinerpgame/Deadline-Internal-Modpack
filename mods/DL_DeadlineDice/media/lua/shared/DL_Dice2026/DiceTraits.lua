@@ -107,7 +107,7 @@ DiceTraits.defs = {
 	heavyweight = { name = "Heavyweight", text = "+1 Attack in melee, -1 movement tile", attackMelee = 1, move = -1 },
 	featherweight = { name = "Featherweight", text = "-1 Attack in melee, +1 movement tile", attackMelee = -1, move = 1 },
 	lunger = { name = "Lunger", text = "+2 Attack in melee after moving 3 or more tiles in a straight line", lunge = 2 },
-	spearwall = { name = "Spearwall", text = "-2 on your own melee attacks. Attacks of opportunity with a two handed melee weapon take no penalty instead of -4", attackMelee = -2, aoo = true },
+	spearwall = { name = "Spearwall", text = "-2 on your own melee attacks. Attacks of opportunity with a melee weapon take no penalty instead of -4", attackMelee = -2, aoo = true },
 	strong_arm = { name = "Strong Arm", text = "+1 thrown damage, +5 throw range",
 		throwDamage = 1, throwRange = 5, canThrowMelee = true },
 

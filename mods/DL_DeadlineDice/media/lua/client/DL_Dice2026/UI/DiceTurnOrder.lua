@@ -110,7 +110,7 @@ do
 	STATUS_DEFS[#STATUS_DEFS + 1] = { icon = "st_grapple", tip = "Grappling: holding someone in a grapple - cannot move until released", has = function(c) return c.grappling ~= nil end }
 	STATUS_DEFS[#STATUS_DEFS + 1] = { icon = "st_cover", tip = "In cover: +2 Defense against ranged attacks", has = function(c) return c.inCover == true end }
 	STATUS_DEFS[#STATUS_DEFS + 1] = { icon = "st_armor", tip = "Armored: no mechanical effect", has = function(c) return c.armored == true end }
-	STATUS_DEFS[#STATUS_DEFS + 1] = { icon = "st_threatened", tip = "Threatened: a Spearwall fighter with a two handed melee weapon is in melee range - stepping out of it on your turn gives them a free attack", has = function(c) return c.threatened == true end }
+	STATUS_DEFS[#STATUS_DEFS + 1] = { icon = "st_threatened", tip = "Threatened: a Spearwall fighter with a melee weapon is in melee range - stepping out of it on your turn gives them a free attack", has = function(c) return c.threatened == true end }
 	STATUS_DEFS[#STATUS_DEFS + 1] = { icon = "st_covering", tip = "Covering: your Spearwall reaches someone in melee range and you get a free attack if they step away on their turn", has = function(c) return c.threatening == true end }
 	STATUS_DEFS[#STATUS_DEFS + 1] = { icon = "st_inreach", tip = "In reach: a fighter who is unarmed or holds a melee weapon is in melee range - stepping out of it on your turn gives them a free attack at -4", has = function(c) return c.reachThreatened == true end }
 	STATUS_DEFS[#STATUS_DEFS + 1] = { icon = "st_reaching", tip = "Reaching: someone is in your melee range and you get a free attack at -4 if they step away on their turn", has = function(c) return c.reachThreatening == true end }

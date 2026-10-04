@@ -1222,7 +1222,7 @@ local function canTakeAoO(m)
 end
 
 local function hasSpearwall(m)
-	if m.weapon ~= "melee2h" then
+	if m.weapon ~= "melee1h" and m.weapon ~= "melee2h" then
 		return false
 	end
 	if m.spearwall == true then
@@ -2139,7 +2139,7 @@ function DiceServer.handleStaff(player, cmd, args, c, m)
 		elseif args.field == "spearwall" then
 			target.spearwall = not target.spearwall
 			addLog(c, target.name .. (target.spearwall
-				and " holds a spearwall: their attacks of opportunity with a two handed melee weapon take no penalty."
+				and " holds a spearwall: their attacks of opportunity with a melee weapon take no penalty."
 				or " no longer holds a spearwall."))
 		elseif args.field == "advantage" then
 			target.advantage = (target.advantage == args.value) and 0 or args.value
