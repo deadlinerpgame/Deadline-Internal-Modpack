@@ -2,7 +2,7 @@ DL = DL or {}
 DL.Occupations = DL.Occupations or {}
 local O = DL.Occupations
 
-O.startingPoints = 22
+O.startingPoints = 24
 O.defaultOccupation = "drifter"
 
 O.pickLimits = {
