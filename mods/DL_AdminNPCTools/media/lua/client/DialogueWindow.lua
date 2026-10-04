@@ -12,7 +12,6 @@ local HINT_EXTRA   = 16
 local COL_X  = PAD + PORTRAIT_SZ + PAD
 local COL_W  = W - COL_X - PAD
 
--- Keys that close the window. Edit this list to rebind.
 local CLOSE_KEYS = { Keyboard.KEY_F, Keyboard.KEY_V }
 
 function DialogueWindow:new()
@@ -44,7 +43,6 @@ function DialogueWindow:new()
     return o
 end
 
--- Global key hook, active only while the window is open.
 local function onGlobalKeyPressed(key)
     local inst = DialogueWindow._instance
     if not inst or not inst.active then return end
@@ -92,8 +90,8 @@ function DialogueWindow:openForZone(zoneId, npcName, nodes, rootId, portraitPath
             portraitPath,
         }
         for _, path in ipairs(tried) do
-            local ok, tex = pcall(getTexture, path)
-            if ok and tex then self.portrait = tex; break end
+            local tex = getTexture(path)
+            if tex then self.portrait = tex; break end
         end
     end
 
@@ -115,7 +113,6 @@ function DialogueWindow:endSession()
     if self.zoneId then
         sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "EndSession", { zoneId = self.zoneId })
     end
-    -- start fade-out; update() hides the panel when alpha reaches 0
     self.fadeDir = -1
 end
 
@@ -148,10 +145,8 @@ local function describeConsume(consumeList)
     for _, entry in ipairs(consumeList) do
         local amt = tonumber(entry.amount) or 1
         local display = entry.itemName or "item"
-        local ok, scriptItem = pcall(function()
-            return ScriptManager.instance:getItem(entry.itemName)
-        end)
-        if ok and scriptItem then display = scriptItem:getDisplayName() end
+        local scriptItem = entry.itemName and ScriptManager.instance:getItem(entry.itemName)
+        if scriptItem then display = scriptItem:getDisplayName() end
         parts[#parts + 1] = (amt > 1) and (amt .. "x " .. display) or display
     end
     return table.concat(parts, ", ")
@@ -167,7 +162,7 @@ function DialogueWindow:executeResponse(resp)
                 while remaining > 0 do
                     local item = inv:getFirstTypeRecurse(entry.itemName)
                     if not item then break end
-                    inv:Remove(item)
+                    item:getContainer():DoRemoveItem(item)
                     remaining = remaining - 1
                 end
             end

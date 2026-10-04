@@ -71,7 +71,7 @@ function DLLootTicketChancesUI:updateItem(item, newQuantity, newChance)
 end
 
 function DLLootTicketChancesUI:doDrawItem(y, item, alt)
-    if not item.height then item.height = self.itemheight end -- compatibililty
+    if not item.height then item.height = self.itemheight end
     if self.selected == item.index then
         self:drawRect(0, (y), self:getWidth(), item.height-1, 0.3, 0.7, 0.35, 0.15);
     end
@@ -90,7 +90,6 @@ function DLLootTicketChancesUI:onDoubleClickItem(item)
     local halfScreenX = Math.ceil(getCore():getScreenWidth() / 2);
     local halfScreenY = Math.ceil(getCore():getScreenHeight() / 2);
 
-    -- Show modal
     local itemEditUI = DLLootTicketItemEditUI:new(halfScreenX - 400, halfScreenY - 200, 400, 200, item, self);
     itemEditUI:initialise();
     itemEditUI:addToUIManager();
@@ -137,7 +136,6 @@ function DLLootTicketChancesUI:populateItemTable(startY)
 
     local xOffset = 8 + getTextManager():MeasureStringX(UIFont.NewSmall, "X");
 
-    -- Add the table headers.
     self.datas = ISScrollingListBox:new(xOffset, startY + 32, 600, 200);
     self.datas:initialise();
     self.datas:instantiate();
@@ -148,7 +146,6 @@ function DLLootTicketChancesUI:populateItemTable(startY)
     self.datas.doDrawItem = self.doDrawItem;
     self.datas.drawBorder = true;
     self.datas:setOnMouseDoubleClick(self, self.onDoubleClickItem);
---    self.datas.parent = self;
     self.datas:addColumn("Name", 0);
     self.datas:addColumn("Quantity", 350);
     self.datas:addColumn("Chance", 450);
@@ -164,7 +161,6 @@ function DLLootTicketChancesUI:populateItemTable(startY)
     end
 
     if itemCount > 0 then
-        -- Get evenly distributed chances.
         local evenChance = Math.floor(100 / itemCount);
 
         for i = 1, itemCount do
@@ -253,11 +249,11 @@ function DLLootTicketChancesUI:createButtons(startY)
     return confirmButton:getBottom() + confirmHeight;
 end
 
-function DLLootTicketChancesUI:prerender() -- Call before render, it's for harder stuff that need init, ect
+function DLLootTicketChancesUI:prerender()
     ISCollapsableWindow.prerender(self);
 end
 
-function DLLootTicketChancesUI:render() -- Use to render text and other
+function DLLootTicketChancesUI:render()
     ISCollapsableWindow.render(self);
 end
 
@@ -300,7 +296,7 @@ function DLLootTicketChancesUI:new(x, y, width, height, item, itemTable)
     o.tooltipForced = nil;
 	o.colorPanel = {};
     o.resizable = false;
-    o.item = item; -- The original ticket item to be updated.
+    o.item = item;
     o.itemTable = itemTable;
     o.title = "Loot Ticket Chances Setting";
     o.playerNum = playerNum;

@@ -1,42 +1,29 @@
+if isClient() then return end
+
 require "NPCDialogueShared"
+require "NPCDialogueStore"
 
-local NPCDialogueServerCommands = {}
-local PERSIST_KEY = "NPCDialogueZones_Server"
+local MODULE = NPCDialogue.MODULE
+local CMD    = NPCDialogue.CMD
+local Store  = NPCDialogue.Store
 
-local zones = {}
-local loaded = false
+local Commands = {}
+local activeSessions = {}
 
-local function loadZones()
-    if loaded then return end
-    local gt = getGameTime and getGameTime()
-    if not gt then return end
-    local md = gt:getModData()
-    if md and type(md[PERSIST_KEY]) == "table" then
-        for id, zone in pairs(md[PERSIST_KEY]) do
-            zones[id] = zone
+local function send(player, command, args)
+    if isServer() then
+        if player then
+            sendServerCommand(player, MODULE, command, args)
+        else
+            sendServerCommand(MODULE, command, args)
         end
+    else
+        triggerEvent("OnServerCommand", MODULE, command, NPCDialogue.deepCopy(args))
     end
-    loaded = true
 end
 
-local function getZones()
-    if not loaded then loadZones() end
-    return zones
-end
-
-local function persistZones()
-    local gt = getGameTime and getGameTime()
-    if not gt then return end
-    local md = gt:getModData()
-    if not md then return end
-    md[PERSIST_KEY] = getZones()
-end
-
-if Events.OnServerStarted then
-    Events.OnServerStarted.Add(loadZones)
-end
-if Events.OnInitWorld then
-    Events.OnInitWorld.Add(loadZones)
+local function broadcast(command, args)
+    send(nil, command, args)
 end
 
 local function isAdminOrDebug(player)
@@ -47,116 +34,173 @@ local function isAdminOrDebug(player)
     return isAdmin or isDebug
 end
 
-local function broadcastAllZones()
-    for _, zone in pairs(getZones()) do
-        sendServerCommand("NPCDialogue", "SyncZone", { zone = zone })
-    end
+local function who(player)
+    return player and tostring(player:getUsername()) or "?"
 end
 
-function NPCDialogueServerCommands.RequestSync(playerObj, args)
-    broadcastAllZones()
-    sendServerCommand("NPCDialogue", "SyncReady", {})
+local function describe(zone)
+    return zone.id .. " '" .. tostring(zone.name) .. "' at " .. zone.x .. "," .. zone.y .. "," .. zone.z
 end
 
-function NPCDialogueServerCommands.PlaceZone(playerObj, args)
-    if not isAdminOrDebug(playerObj) then return end
-
-    local zoneId = args.existingId or NPCDialogue.generateId()
-    local zone = NPCDialogue.newZone(
-        zoneId,
-        args.name or "Unnamed NPC",
-        math.floor(args.x), math.floor(args.y), math.floor(args.z)
-    )
-
-    getZones()[zoneId] = zone
-    persistZones()
-
-    sendServerCommand("NPCDialogue", "SyncZone", { zone = zone })
-end
-
-function NPCDialogueServerCommands.RemoveZone(playerObj, args)
-    if not isAdminOrDebug(playerObj) then return end
-    if not args.id then return end
-
-    getZones()[args.id] = nil
-    persistZones()
-
-    sendServerCommand("NPCDialogue", "RemoveAck", { id = args.id, x = args.x, y = args.y, z = args.z })
-end
-
-function NPCDialogueServerCommands.UpdateZone(playerObj, args)
-    if not isAdminOrDebug(playerObj) then return end
-    if not args.zone or not args.zone.id then return end
-
-    getZones()[args.zone.id] = args.zone
-    persistZones()
-
-    sendServerCommand("NPCDialogue", "SyncZone", { zone = args.zone })
-end
-
-local function onClientCommand(module, command, playerObj, args)
-    if module ~= "NPCDialogue" then return end
-    if NPCDialogueServerCommands[command] then
-        NPCDialogueServerCommands[command](playerObj, args)
-    end
-end
-
-Events.OnClientCommand.Add(onClientCommand)
-
-local activeSessions = {}
-local syncedPlayers = {}
-
-function NPCDialogueServerCommands.StartSession(playerObj, args)
-    local zoneId = args.zoneId
-    if not zoneId then return end
-
-    local username = playerObj:getUsername()
-    local zone = getZones()[zoneId]
-
-    local zoneName   = (zone and zone.name)       or args.name or "NPC"
-    local concurrent = (zone and zone.concurrent)
-    if concurrent == nil then concurrent = true end
-
-    if not concurrent and activeSessions[zoneId] then
-        local occupant = activeSessions[zoneId]
-        if occupant ~= username then
-            sendServerCommand(playerObj, "NPCDialogue", "SessionDenied", {
-                zoneId  = zoneId,
-                message = zoneName .. " is already talking to someone.",
-            })
-            return
+local function copyPlain(v, depth)
+    local t = type(v)
+    if t == "string" or t == "number" or t == "boolean" then return v end
+    if t ~= "table" or depth > 24 then return nil end
+    local out = {}
+    for k, val in pairs(v) do
+        local tk = type(k)
+        if tk == "string" or tk == "number" then
+            local c = copyPlain(val, depth + 1)
+            if c ~= nil then out[k] = c end
         end
     end
+    return out
+end
 
+local function newId()
+    local id = NPCDialogue.generateId()
+    while Store.get(id) do id = NPCDialogue.generateId() end
+    return id
+end
+
+function Commands.RequestSync(player, args)
+    local list = {}
+    for _, zone in pairs(Store.all()) do
+        list[#list + 1] = NPCDialogue.zoneSummary(zone)
+    end
+    send(player, CMD.SYNC_ALL, { zones = list })
+end
+
+function Commands.StartSession(player, args)
+    local zoneId = args.zoneId
+    local zone = Store.get(zoneId)
+    if not zone then
+        send(player, CMD.SESSION_DENIED, { zoneId = zoneId, message = "There's nobody here to talk to." })
+        send(player, CMD.ZONE_REMOVED, { id = zoneId })
+        return
+    end
+
+    local reach = (zone.radius or NPCDialogue.DEFAULT_RADIUS) + 3
+    if math.floor(player:getZ()) ~= zone.z
+       or NPCDialogue.distanceTo(player:getX(), player:getY(), zone.x, zone.y) > reach then
+        send(player, CMD.SESSION_DENIED, { zoneId = zoneId, message = "You're too far away from " .. zone.name .. "." })
+        return
+    end
+
+    local username = player:getUsername()
+    local occupant = activeSessions[zoneId]
+    if zone.concurrent == false and occupant and occupant ~= username then
+        send(player, CMD.SESSION_DENIED, { zoneId = zoneId, message = zone.name .. " is already talking to someone." })
+        return
+    end
     activeSessions[zoneId] = username
 
-    sendServerCommand(playerObj, "NPCDialogue", "SessionGranted", {
-        zoneId = zoneId,
-        name   = zoneName,
-        x      = math.floor(args.x),
-        y      = math.floor(args.y),
-        z      = math.floor(args.z),
+    send(player, CMD.SESSION_GRANTED, {
+        zoneId   = zoneId,
+        name     = zone.name,
+        portrait = zone.portrait,
+        tree     = zone.dialogueTree,
     })
 end
 
-function NPCDialogueServerCommands.EndSession(playerObj, args)
+function Commands.EndSession(player, args)
     local zoneId = args.zoneId
-    if not zoneId then return end
-    local username = playerObj:getUsername()
-    if activeSessions[zoneId] == username then
+    if zoneId and activeSessions[zoneId] == player:getUsername() then
         activeSessions[zoneId] = nil
     end
 end
 
-local function onPlayerDisconnect(playerObj)
-    if not playerObj then return end
-    local username = playerObj:getUsername()
+function Commands.RequestZone(player, args)
+    if not isAdminOrDebug(player) then return end
+    local zone = Store.get(args.id)
+    if zone then
+        send(player, CMD.ZONE_DATA, { zone = zone })
+    else
+        send(player, CMD.ZONE_REMOVED, { id = args.id })
+    end
+end
+
+function Commands.PlaceZone(player, args)
+    if not isAdminOrDebug(player) then return end
+    local x, y, z = tonumber(args.x), tonumber(args.y), tonumber(args.z)
+    if not (x and y and z) then return end
+    x, y, z = math.floor(x), math.floor(y), math.floor(z)
+
+    local existing = Store.findAt(x, y, z)
+    if existing then
+        send(player, CMD.ZONE_UPDATED, { zone = NPCDialogue.zoneSummary(existing) })
+        return
+    end
+
+    local zone = NPCDialogue.newZone(newId(), tostring(args.name or "New NPC"), x, y, z)
+    Store.put(zone)
+    Store.log(who(player) .. " placed " .. describe(zone))
+    broadcast(CMD.ZONE_UPDATED, { zone = NPCDialogue.zoneSummary(zone) })
+end
+
+function Commands.UpdateZone(player, args)
+    if not isAdminOrDebug(player) then return end
+    local incoming = args.zone
+    local id = type(incoming) == "table" and incoming.id or nil
+    local zone = Store.get(id)
+    if not zone then
+        send(player, CMD.SAVE_RESULT, { id = id, ok = false, message = "This NPC was removed; nothing was saved." })
+        send(player, CMD.ZONE_REMOVED, { id = id })
+        return
+    end
+
+    if incoming.name ~= nil then zone.name = tostring(incoming.name) end
+    if incoming.portrait ~= nil then zone.portrait = tostring(incoming.portrait) end
+    local r = tonumber(incoming.radius)
+    if r and r > 0 then zone.radius = r end
+    if incoming.concurrent ~= nil then zone.concurrent = incoming.concurrent and true or false end
+    if type(incoming.dialogueTree) == "table" then
+        local tree = copyPlain(incoming.dialogueTree, 0)
+        if type(tree.nodes) ~= "table" then tree.nodes = {} end
+        if type(tree.nodeOrder) ~= "table" then tree.nodeOrder = {} end
+        zone.dialogueTree = tree
+    end
+
+    local ok = Store.save()
+    Store.log(who(player) .. " edited " .. describe(zone))
+    broadcast(CMD.ZONE_UPDATED, { zone = NPCDialogue.zoneSummary(zone) })
+    send(player, CMD.SAVE_RESULT, {
+        id      = id,
+        ok      = ok,
+        message = (not ok) and "The server could not write its NPC file; see the server console." or nil,
+    })
+end
+
+function Commands.RemoveZone(player, args)
+    if not isAdminOrDebug(player) then return end
+    local id = args.id
+    if not id then return end
+    local zone = Store.remove(id, who(player))
+    activeSessions[id] = nil
+    if zone then
+        Store.log(who(player) .. " removed " .. describe(zone))
+        broadcast(CMD.ZONE_REMOVED, { id = id })
+    else
+        send(player, CMD.ZONE_REMOVED, { id = id })
+    end
+end
+
+local function onClientCommand(module, command, player, args)
+    if module ~= MODULE or not player then return end
+    local fn = Commands[command]
+    if fn then fn(player, args or {}) end
+end
+
+Events.OnClientCommand.Add(onClientCommand)
+
+if Events.OnServerStarted then Events.OnServerStarted.Add(Store.load) end
+if Events.OnGameStart then Events.OnGameStart.Add(Store.load) end
+
+local function onPlayerDisconnect(player)
+    local username = player and player:getUsername()
     if not username then return end
-    syncedPlayers[username] = nil
     for zoneId, occupant in pairs(activeSessions) do
-        if occupant == username then
-            activeSessions[zoneId] = nil
-        end
+        if occupant == username then activeSessions[zoneId] = nil end
     end
 end
 
@@ -165,96 +209,15 @@ if Events.OnClientDisconnect then Events.OnClientDisconnect.Add(onPlayerDisconne
 
 if Events.EveryTenMinutes then
     Events.EveryTenMinutes.Add(function()
-        local online = {}
-        local players = getOnlinePlayers and getOnlinePlayers() or nil
+        local players = getOnlinePlayers and getOnlinePlayers()
         if not players then return end
+        local online = {}
         for i = 0, players:size() - 1 do
             local p = players:get(i)
             if p then online[p:getUsername()] = true end
         end
         for zoneId, occupant in pairs(activeSessions) do
-            if not online[occupant] then
-                activeSessions[zoneId] = nil
-            end
+            if not online[occupant] then activeSessions[zoneId] = nil end
         end
-    end)
-end
-
-local broadcastCountdown = 0
-
-local function scheduleBroadcast(ticks)
-    if broadcastCountdown == 0 or ticks < broadcastCountdown then
-        broadcastCountdown = ticks
-    end
-end
-
-local function pollPlayers()
-    local players = getOnlinePlayers and getOnlinePlayers() or nil
-    if not players then return end
-    local current = {}
-    local newPlayer = false
-    for i = 0, players:size() - 1 do
-        local p = players:get(i)
-        if p then
-            local username = p:getUsername()
-            if username then
-                current[username] = true
-                if not syncedPlayers[username] then
-                    syncedPlayers[username] = true
-                    newPlayer = true
-                end
-            end
-        end
-    end
-    for username in pairs(syncedPlayers) do
-        if not current[username] then
-            syncedPlayers[username] = nil
-        end
-    end
-    if newPlayer then
-        scheduleBroadcast(300)
-    end
-end
-
-local pollTicks = 0
-local POLL_INTERVAL_TICKS = 60
-if Events.OnTick then
-    Events.OnTick.Add(function()
-        pollTicks = pollTicks + 1
-        if pollTicks >= POLL_INTERVAL_TICKS then
-            pollTicks = 0
-            pollPlayers()
-        end
-        if broadcastCountdown > 0 then
-            broadcastCountdown = broadcastCountdown - 1
-            if broadcastCountdown == 0 then
-                broadcastAllZones()
-                sendServerCommand("NPCDialogue", "SyncReady", {})
-            end
-        end
-    end)
-end
-
-local function onPlayerConnectEvent(playerObj)
-    if not playerObj then return end
-    local username = playerObj:getUsername()
-    if username then
-        syncedPlayers[username] = true
-        scheduleBroadcast(300)
-    end
-end
-
-if Events.OnPlayerConnect then
-    Events.OnPlayerConnect.Add(onPlayerConnectEvent)
-end
-if Events.OnCreatePlayer then
-    Events.OnCreatePlayer.Add(function(playerIndex, playerObj)
-        onPlayerConnectEvent(playerObj)
-    end)
-end
-
-if Events.EveryOneMinute then
-    Events.EveryOneMinute.Add(function()
-        broadcastAllZones()
     end)
 end

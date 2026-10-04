@@ -134,7 +134,6 @@ function RadiationZonePanel:onClick(button)
     if button.internal == "OK" then
         self:setVisible(false);
         self:removeFromUIManager();
-        --self.player:setSeeNonPvpZone(false);
     end
     if button.internal == "REMOVEZONE" then
         local modal = ISModalDialog:new(0,0, 350, 150, getText("Confirm Removal?", self.selectedZoneTitle), true, nil, RadiationZonePanel.onRemoveZone, self.player:getPlayerNum());
@@ -173,7 +172,6 @@ function RadiationZonePanel:onClick(button)
 				end
 			end
 		end
-		--end
     end
     if button.internal == "TELEPORTTOZONE" then
 		local RadiationZone = RadiationZonePanel:requestModData();
@@ -184,7 +182,6 @@ function RadiationZonePanel:onClick(button)
             getPlayer():setY(startY)
             getPlayer():setLx(startX)
             getPlayer():setLy(startY)
-		--end
     end
 end
 
@@ -227,14 +224,11 @@ function RadiationZonePanel:new(x, y, width, height, player)
 end
 
 Zoneslist = Zoneslist or {};
-Zoneslist.Data = Zoneslist.Data or {}; -- storing modData tables in here
-Zoneslist.ServerCommands = Zoneslist.ServerCommands or {}; -- storing server commands handlers here
+Zoneslist.Data = Zoneslist.Data or {};
+Zoneslist.ServerCommands = Zoneslist.ServerCommands or {};
 
---- handle initializing moddata
 local function initGlobalModData(isNewGame)
-    -- clear only if its a client, if it's single-player we dont need to clear
     if isClient() and ModData.exists("RadiationZone") then
-        -- clear the current copy for a client cause it might be outdated
         ModData.remove("RadiationZone");
     end
 

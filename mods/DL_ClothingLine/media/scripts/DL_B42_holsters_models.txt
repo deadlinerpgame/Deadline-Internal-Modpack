@@ -1,0 +1,76 @@
+module Base
+{
+    model FemaleBody
+    {
+        mesh = Skinned/FemaleBody,
+
+        attachment ShoulderHolster
+        {
+            offset = 0.0247 0.068 0.0823,
+            rotate = 7.411 -60.5349 88.0811,
+            scale = 0.855,
+            bone = Bip01_Spine1,
+        }
+
+        attachment AnkleHolster
+        {
+            offset = 0.0501 0.0276 -0.0164,
+            rotate = -167.3949 -10.8863 -89.7228,
+            scale = 0.8037,
+            bone = Bip01_R_Calf,
+        }
+
+        attachment webbing_right_walkie { offset = -0.0147 -0.0694 0.0895, rotate = -78.9636 -2.2401 -90.466, bone = Bip01_Spine1, }
+        attachment webbing_left_walkie { offset = -0.0143 0.0697 0.0887, rotate = -101.3686 2.3431 -90.4975, bone = Bip01_Spine1, }
+        attachment webbing_right_knife { offset = 0.0945 -0.0689 0.0729, rotate = -100.2981 -0.4087 94.2954, bone = Bip01_Spine1, }
+        attachment webbing_left_knife { offset = 0.0937 0.0637 0.0636, rotate = 84.8877 -1.9133 81.7104, bone = Bip01_Spine1, }
+    }
+
+    model MaleBody
+    {
+        mesh = Skinned/MaleBody,
+
+        attachment ShoulderHolster
+        {
+            offset = 0.0138 0.0748 0.0822,
+            rotate = 10.3088 -51.0866 93.3513,
+            bone = Bip01_Spine1,
+        }
+
+        attachment AnkleHolster
+        {
+            offset = 0.0502 0.0294 -0.0032,
+            rotate = -167.3949 -10.8863 -89.7228,
+            bone = Bip01_R_Calf,
+        }
+
+        attachment webbing_right_walkie { offset = -0.0147 -0.0694 0.0895, rotate = -78.9636 -2.2401 -90.466, bone = Bip01_Spine1, }
+        attachment webbing_left_walkie { offset = -0.0143 0.0697 0.0887, rotate = -101.3686 2.3431 -90.4975, bone = Bip01_Spine1, }
+        attachment webbing_right_knife { offset = 0.0945 -0.0689 0.0729, rotate = -100.2981 -0.4087 94.2954, bone = Bip01_Spine1, }
+        attachment webbing_left_knife { offset = 0.0937 0.0637 0.0636, rotate = 84.8877 -1.9133 81.7104, bone = Bip01_Spine1, }
+    }
+
+    model ShoulderHolster_Ground
+    {
+        mesh = WorldItems/Clothing/ShoulderHolster_Ground,
+        scale = 0.125,
+    }
+
+    model AnkleHolster_Ground
+    {
+        mesh = WorldItems/Clothing/AnkleHolster_Ground,
+        scale = 0.125,
+    }
+
+    model HolsterSingle_Ground
+    {
+        mesh = WorldItems/Clothing/HolsterSingle_Ground,
+        scale = 0.125,
+    }
+
+    model HolsterDouble_Ground
+    {
+        mesh = WorldItems/Clothing/HolsterDouble_Ground,
+        scale = 0.125,
+    }
+}

@@ -1,0 +1,233 @@
+module aerx
+{
+	imports
+	{
+		Base,
+	}
+
+	item ClayIngotMoldUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Ingot Mold,
+		Icon                = CeramicCast_Bar_Unfired,
+		StaticModel         = CeramicIngotCastUnfired,
+		WorldStaticModel    = CeramicIngotCastUnfired,
+	}
+
+	item ClayIngotMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Ingot Mold,
+		Icon                = CeramicCast_Bar_Fired,
+		StaticModel         = CeramicIngotCast,
+		WorldStaticModel    = CeramicIngotCast,
+		Tags = DLIngotMold,
+	}
+
+item ClayBarMoldUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Bar Mold,
+		Icon                = CeramicCast_LongBar_Unfired,
+		StaticModel         = ClayBarStockMoldUnfired,
+		WorldStaticModel    = ClayBarStockMoldUnfired,
+	}
+
+	item ClayBarMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Bar Mold,
+		Icon                = CeramicCast_LongBar_Fired,
+		StaticModel         = ClayBarStockMold,
+		WorldStaticModel    = ClayBarStockMold,
+		Tags = Destructible,
+	}
+
+	item ClaySheetMoldUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Sheet Mold,
+		Icon                = ClayMold_GlassPane_Unfired,
+		StaticModel         = MoldGlass_Unfired,
+		WorldStaticModel    = MoldGlass_Unfired,
+	}
+
+	item ClaySheetMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Sheet Mold,
+		Icon                = ClayMold_GlassPane_Fired,
+		StaticModel         = MoldGlass_Fired,
+		WorldStaticModel    = MoldGlass_Fired,
+	}
+
+	item ClayBenchAnvilMoldUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Bench Anvil Mold,
+		Icon                = Ceramic_Anvil_Unfired,
+		StaticModel         = ClayBenchAnvilMoldUnfired,
+		WorldStaticModel    = ClayBenchAnvilMoldUnfired,
+	}
+
+	item ClayBenchAnvilMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Bench Anvil Mold,
+		Icon                = Ceramic_Anvil_Fired,
+		StaticModel         = ClayBenchAnvilMold,
+		WorldStaticModel    = ClayBenchAnvilMold,
+	}
+
+	item ClayBlockAnvilMoldUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Block Anvil Mold,
+		Icon                = Ceramic_BlockAnvil_Unfired,
+		StaticModel         = ClayBlockAnvilMoldUnfired,
+		WorldStaticModel    = ClayBlockAnvilMoldUnfired,
+	}
+
+	item ClayBlockAnvilMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Bench Block Mold,
+		Icon                = Ceramic_BlockAnvil_Fired,
+		StaticModel         = ClayBlockAnvilMoldFired,
+		WorldStaticModel    = ClayBlockAnvilMoldFired,
+	}
+
+	item ClayCrudeBenchVisePartsMoldUnfired
+	{
+		DisplayName = Unfired Crude Bench Vise Parts Mold,
+		DisplayCategory = Tool,
+		Type = Normal,
+		Weight = 0.3,
+		Icon = Ceramic_Clamp_Unfired,
+		StaticModel = ClayCrudeBenchVisePartsMoldUnfired,
+		WorldStaticModel = ClayCrudeBenchVisePartsMoldUnfired,
+		Tags = HasMetal,
+	}
+
+	item ClayCrudeBenchVisePartsMold
+	{
+		DisplayName = Crude Bench Vise Parts Mold,
+		DisplayCategory = Tool,
+		Type = Normal,
+		Weight = 0.3,
+		Icon = Ceramic_Clamp_Fired,
+		StaticModel = ClayCrudeBenchVisePartsMold,
+		WorldStaticModel = ClayCrudeBenchVisePartsMold,
+		Tags = HasMetal,
+	}
+
+	item WoodenIngotCastMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Ingot Cast Mold,
+		Icon                = WoodMold_BarCast,
+		StaticModel         = WoodenIngotCastMold,
+		WorldStaticModel    = WoodenIngotCastMold,
+	}
+
+	item WoodenBarCastMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Bar Cast Mold,
+		Icon                = WoodMold_LonbBarCast,
+		StaticModel         = WoodenBarStockCastMold,
+		WorldStaticModel    = WoodenBarStockCastMold,
+	}
+
+	item WoodenBenchAnvilMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Bench Anvil Mold,
+		Icon                = WoodMold_AnvilCast,
+		StaticModel         = WoodenBenchAnvilMold,
+		WorldStaticModel    = WoodenBenchAnvilMold,
+	}
+
+	item WoodenBlockAnvilMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Block Anvil Mold,
+		Icon                = WoodMold_BlockAnvilCast,
+		StaticModel         = WoodenBlockAnvilMold,
+		WorldStaticModel    = WoodenBlockAnvilMold,
+	}
+
+	item WoodenCrudeBenchVisePartsMold
+	{
+		DisplayName = Wooden Crude Bench Vise Parts Mold,
+		DisplayCategory = Tool,
+		Type = Normal,
+		Weight = 0.3,
+		Icon = WoodMold_ClampCast,
+		StaticModel = WoodenCrudeBenchVisePartsMold,
+		WorldStaticModel = WoodenCrudeBenchVisePartsMold,
+		Tags = HasMetal,
+	}
+
+	item WoodenCrucibleMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Crucible Mold,
+		Icon                = WoodMold_CrucibleCast,
+		StaticModel         = WoodenCrucibleMold,
+		WorldStaticModel    = WoodenCrucibleMold,
+	}
+
+	item WoodenBrickMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Brick Mold,
+		Icon                = WoodMold_BarCast,
+		StaticModel         = WoodenIngotCastMold,
+		WorldStaticModel    = WoodenIngotCastMold,
+	}
+
+	item WoodenTileMold
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Wooden Tile Mold,
+		Icon                = WoodMold_BarCast,
+		StaticModel         = WoodenIngotCastMold,
+		WorldStaticModel    = WoodenIngotCastMold,
+	}
+
+}

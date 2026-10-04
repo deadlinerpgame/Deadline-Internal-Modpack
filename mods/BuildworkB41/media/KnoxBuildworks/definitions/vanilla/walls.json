@@ -1,0 +1,1632 @@
+{
+ "schemaVersion": 1,
+ "source": "Project Zomboid Build 42 generated entity scripts",
+ "category": "Walls",
+ "buildables": [
+  {
+   "id": "kbw.vanilla.woodenpole",
+   "displayName": "Wood Pole",
+   "translationKey": "IGUI_KBW_Vanilla_WoodenPole",
+   "tooltipKey": "Tooltip_craft_woodenPoleDesc",
+   "category": "Walls",
+   "subcategory": "Poles",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "walls"
+   ],
+   "placement": {
+    "kind": "wall",
+    "isPole": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "geometry": {
+      "faces": {
+       "SINGLE": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 50,
+     "object": {
+      "isPole": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.WoodenPole"
+    }
+   ],
+   "iconName": "Build_WoodPole_Tall"
+  },
+  {
+   "id": "kbw.vanilla.metalwallframe",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Wall Frame",
+   "translationKey": "IGUI_KBW_Vanilla_MetalWallFrame",
+   "tooltipKey": "Tooltip_craft_woodenWallFrameDesc",
+   "category": "Walls",
+   "subcategory": "Wall Frames",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "walls"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "object": {
+      "cornerSprite": "constructedobjects_01_70",
+      "pillarSprite": "constructedobjects_01_51"
+     },
+     "sprites": {
+      "W": "constructedobjects_01_68",
+      "N": "constructedobjects_01_69"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_68"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_69"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 100,
+     "skillBaseHealth": 20,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.MetalBar"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 20
+      }
+     },
+     "_b41Entity": "Base.MetalWallFrame"
+    }
+   ],
+   "iconName": "Build_WallframeMetal"
+  },
+  {
+   "id": "kbw.vanilla.woodenwallframe",
+   "displayName": "Wooden Wall Frame",
+   "translationKey": "IGUI_KBW_Vanilla_WoodenWallFrame",
+   "tooltipKey": "Tooltip_craft_woodenWallFrameDesc",
+   "category": "Walls",
+   "subcategory": "Wall Frames",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "walls"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "object": {
+      "cornerSprite": "carpentry_02_102",
+      "pillarSprite": "walls_exterior_wooden_01_27"
+     },
+     "sprites": {
+      "W": "carpentry_02_100",
+      "N": "carpentry_02_101"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_100"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_101"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 50,
+     "skillBaseHealth": 20,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.WoodenWallFrame"
+    }
+   ],
+   "iconName": "Build_WallframeWood"
+  },
+  {
+   "id": "kbw.vanilla.brickwalllvl2",
+   "displayName": "Classic Brick Wall",
+   "translationKey": "IGUI_KBW_Vanilla_BrickWallLvl2",
+   "tooltipKey": "Tooltip_KBW_Shared_ClassicBrickWall",
+   "category": "Walls",
+   "subcategory": "Classic Brick",
+   "material": "Brick",
+   "materialTags": [
+    "Brick",
+    "Concrete"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "walls"
+   ],
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.finish.brick.wall",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_exterior_house_02_36",
+       "N": "walls_exterior_house_02_37",
+       "Corner": "walls_exterior_house_02_38",
+       "Pillar": "walls_exterior_house_02_38"
+      },
+      "PaintBlue": {
+       "W": "walls_exterior_house_01_0",
+       "N": "walls_exterior_house_01_1",
+       "Corner": "walls_exterior_house_01_2",
+       "Pillar": "walls_exterior_house_01_2"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_house_02_96",
+       "N": "walls_exterior_house_02_97",
+       "Corner": "walls_exterior_house_02_98",
+       "Pillar": "walls_exterior_house_02_98"
+      },
+      "PaintGreen": {
+       "W": "walls_exterior_house_02_52",
+       "N": "walls_exterior_house_02_53",
+       "Corner": "walls_exterior_house_02_54",
+       "Pillar": "walls_exterior_house_02_54"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_house_02_16",
+       "N": "walls_exterior_house_02_17",
+       "Corner": "walls_exterior_house_02_18",
+       "Pillar": "walls_exterior_house_02_18"
+      },
+      "PaintPink": {
+       "W": "walls_exterior_house_01_4",
+       "N": "walls_exterior_house_01_5",
+       "Corner": "walls_exterior_house_01_6",
+       "Pillar": "walls_exterior_house_01_6"
+      },
+      "PaintRed": {
+       "W": "walls_exterior_house_02_64",
+       "N": "walls_exterior_house_02_65",
+       "Corner": "walls_exterior_house_02_66",
+       "Pillar": "walls_exterior_house_02_66"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_house_02_48",
+       "N": "walls_exterior_house_02_49",
+       "Corner": "walls_exterior_house_02_50",
+       "Pillar": "walls_exterior_house_02_50"
+      },
+      "PaintWhite+PaintYellow": {
+       "W": "walls_exterior_house_02_84",
+       "N": "walls_exterior_house_02_85",
+       "Corner": "walls_exterior_house_02_86",
+       "Pillar": "walls_exterior_house_02_86"
+      },
+      "PaintGreen+PaintWhite": {
+       "W": "location_restaurant_pie_01_0",
+       "N": "location_restaurant_pie_01_1",
+       "Corner": "location_restaurant_pie_01_2",
+       "Pillar": "location_restaurant_pie_01_2"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_house_01_4",
+      "walls_exterior_house_01_5",
+      "walls_exterior_house_01_6",
+      "walls_exterior_house_01_7",
+      "walls_exterior_house_01_16",
+      "walls_exterior_house_01_17",
+      "walls_exterior_house_01_18",
+      "walls_exterior_house_01_52",
+      "walls_exterior_house_01_53",
+      "walls_exterior_house_01_54"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "health": 800,
+     "skillBaseHealth": 70,
+     "level": 1,
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "base:masonstrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "base:concrete"
+        ],
+        "amount": 1,
+        "uses": 2,
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Masonry": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Masonry": 50
+      },
+      "category": "Masonry"
+     },
+     "callbacks": {
+      "onAddToMenu": "KnoxBuildworks.JsonCallbacks.Visibility.BrickWallLvl2"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "walls_exterior_house_01_18",
+      "pillarSprite": "walls_exterior_house_01_19"
+     }
+    }
+   ],
+   "variants": [
+    {
+     "id": "vanilla",
+     "labelKey": "IGUI_KBW_Variant_BrickVanilla",
+     "iconSprite": "walls_exterior_house_01_4",
+     "stages": [
+      {
+       "id": "built",
+       "level": 1,
+       "entityCompat": {
+        "module": "Base",
+        "entity": "BrickWallLvl2"
+       }
+      }
+     ]
+    },
+    {
+     "id": "old_weathered",
+     "labelKey": "IGUI_KBW_Variant_BrickOldWeathered",
+     "iconSprite": "walls_exterior_house_01_52",
+     "stages": [
+      {
+       "id": "built",
+       "health": 800,
+       "skillBaseHealth": 70,
+       "level": 1,
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_exterior_house_01_52"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_exterior_house_01_53"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "base:masonstrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "base:concrete"
+          ],
+          "amount": 1,
+          "uses": 2,
+          "flags": [
+           "DontRecordInput"
+          ]
+         },
+         {
+          "id": "masonry_units",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayBrick"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Masonry": 5
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Masonry": 50
+        },
+        "category": "Masonry"
+       },
+       "callbacks": {
+        "onAddToMenu": "KnoxBuildworks.JsonCallbacks.Visibility.BrickWallLvl2"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_exterior_house_01_54"
+       }
+      }
+     ]
+    }
+   ],
+   "group": {
+    "id": "vanilla.brickwall",
+    "name": "Classic Brick Wall",
+    "translationKey": "IGUI_KBW_Group_vanilla_brickwall",
+    "level": 2
+   },
+   "iconSprite": "walls_exterior_house_01_16",
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanilla.brickwalllvl1",
+   "displayName": "Brick Wall (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_BrickWallLvl1",
+   "tooltipKey": "Tooltip_craft_brickWallDesc",
+   "category": "Walls",
+   "subcategory": "Walls",
+   "materialTags": [
+    "Brick",
+    "Concrete"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "walls"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_exterior_house_01_20",
+      "N": "walls_exterior_house_01_21"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_21"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 500,
+     "skillBaseHealth": 70,
+     "object": {
+      "pillarSprite": "walls_exterior_house_01_23"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "tags": [
+         "Concrete"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.ClayBrick"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "category": "Masonry",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.BrickWallLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.brickwall",
+    "name": "Classic Brick Wall",
+    "translationKey": "IGUI_KBW_Group_vanilla_brickwall",
+    "level": 1
+   },
+   "iconName": "Build_WallBrick"
+  },
+  {
+   "id": "kbw.vanilla.logwall",
+   "displayName": "Log Wall",
+   "translationKey": "IGUI_KBW_Vanilla_LogWall",
+   "tooltipKey": "Tooltip_craft_wallLogDesc",
+   "category": "Walls",
+   "subcategory": "Walls",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "walls"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_80",
+      "N": "carpentry_02_81"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_80"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_81"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 500,
+     "skillBaseHealth": 50,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.LogWall"
+    }
+   ],
+   "iconName": "Build_WallLogs"
+  },
+  {
+   "id": "kbw.vanilla.metalwalllvl2",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Wall (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_MetalWallLvl2",
+   "tooltipKey": "Tooltip_craft_NeedsWallframeDesc",
+   "category": "Walls",
+   "subcategory": "Walls",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "walls"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_48",
+      "N": "constructedobjects_01_49"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_49"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 800,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "constructedobjects_01_51"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 50
+      }
+     },
+     "_b41Entity": "Base.MetalWallLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metalwall",
+    "name": "Metal Wall",
+    "translationKey": "IGUI_KBW_Group_vanilla_metalwall",
+    "level": 2
+   },
+   "iconName": "Build_WallMetal"
+  },
+  {
+   "id": "kbw.vanilla.metalwalllvl1",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Wall (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_MetalWallLvl1",
+   "tooltipKey": "Tooltip_craft_NeedsWallframeDesc",
+   "category": "Walls",
+   "subcategory": "Walls",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "walls"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_64",
+      "N": "constructedobjects_01_65"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_64"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_65"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 700,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "constructedobjects_01_51"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalWallLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metalwall",
+    "name": "Metal Wall",
+    "translationKey": "IGUI_KBW_Group_vanilla_metalwall",
+    "level": 1
+   },
+   "iconName": "Build_WallMetal"
+  },
+  {
+   "id": "kbw.vanilla.stonewall",
+   "displayName": "Stone Wall",
+   "translationKey": "IGUI_KBW_Vanilla_StoneWall",
+   "tooltipKey": "Tooltip_craft_stoneWallDesc",
+   "category": "Walls",
+   "subcategory": "Walls",
+   "materialTags": [
+    "Concrete",
+    "Stone"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "walls"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_logs_96",
+      "N": "walls_logs_97"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_96"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_97"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 400,
+     "object": {
+      "pillarSprite": "walls_logs_99"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "tags": [
+         "Concrete"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 6,
+        "items": [
+         "Base.Stone2"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "category": "Masonry",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.StoneWall"
+    }
+   ],
+   "iconName": "Build_WallStone",
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.woodenwalllvl3",
+   "displayName": "Wooden Wall (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodenWallLvl3",
+   "tooltipKey": "Tooltip_craft_NeedsWallframeDesc",
+   "category": "Walls",
+   "subcategory": "Walls",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "walls"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_exterior_wooden_01_24",
+      "N": "walls_exterior_wooden_01_25"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 650,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27",
+      "onCreate": "BuildRecipeCode.canBePlastered.OnCreate"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 6
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 60
+      }
+     },
+     "_b41Entity": "Base.WoodenWallLvl3"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodenwall",
+    "name": "Wooden Wall",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodenwall",
+    "level": 3
+   },
+   "iconName": "Build_WallWood"
+  },
+  {
+   "id": "kbw.vanilla.woodenwalllvl2",
+   "displayName": "Wooden Wall (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodenWallLvl2",
+   "tooltipKey": "Tooltip_craft_NeedsWallframeDesc",
+   "category": "Walls",
+   "subcategory": "Walls",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "walls"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_exterior_wooden_01_40",
+      "N": "walls_exterior_wooden_01_41"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 550,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 40
+      }
+     },
+     "_b41Entity": "Base.WoodenWallLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodenwall",
+    "name": "Wooden Wall",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodenwall",
+    "level": 2
+   },
+   "iconName": "Build_WallWood"
+  },
+  {
+   "id": "kbw.vanilla.woodenwalllvl1",
+   "displayName": "Wooden Wall (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodenWallLvl1",
+   "tooltipKey": "Tooltip_craft_NeedsWallframeDesc",
+   "category": "Walls",
+   "subcategory": "Walls",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "walls"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_exterior_wooden_01_44",
+      "N": "walls_exterior_wooden_01_45"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_45"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 450,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.WoodenWallLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodenwall",
+    "name": "Wooden Wall",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodenwall",
+    "level": 1
+   },
+   "iconName": "Build_WallWood"
+  }
+ ]
+}

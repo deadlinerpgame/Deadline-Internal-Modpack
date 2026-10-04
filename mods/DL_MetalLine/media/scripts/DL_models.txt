@@ -1,0 +1,20 @@
+module DL_MetalLine
+{
+
+imports {
+        Base
+        }
+
+    model M_Ingot
+	{
+		mesh = WorldItems/Ingot,
+		texture = WorldItems/Ingot_Base,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+}

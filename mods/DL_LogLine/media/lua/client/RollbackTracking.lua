@@ -20,7 +20,6 @@ end
 
 function LogLine_RollbackTracking.EveryOneMinute()
 
-    -- Do save check.
     if not LogLine_RollbackTracking.NextSaveTime then
         local saveTime = LogLine_RollbackTracking.getNextSaveTime();
         print("No save time set - next save time is " .. tostring(saveTime));
@@ -42,7 +41,6 @@ function LogLine_RollbackTracking.EveryOneMinute()
 end
 
 function LogLine_RollbackTracking.OnDisconnect()
-    -- Send a log of all existing inventory items.
 
     LogLine_RollbackTracking.LogInventory("DISCONNECT");
 end

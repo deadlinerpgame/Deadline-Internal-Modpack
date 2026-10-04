@@ -1,0 +1,1173 @@
+{
+ "schemaVersion": 1,
+ "templates": {
+  "kbwve.light.electrical": {
+   "category": "Lighting",
+   "material": "Electronics",
+   "materialTags": [
+    "Electronics",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "lighting",
+    "electrical"
+   ],
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true
+   },
+   "tools": [
+    {
+     "id": "screwdriver",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:screwdriver"
+     ],
+     "flags": [
+      "Prop1",
+      "MayDegradeVeryLight"
+     ],
+     "amount": 1
+    }
+   ],
+   "construction": {
+    "time": 150,
+    "timedAction": "BuildWallMetal",
+    "completionSound": "BuildMetalStructureSmall",
+    "canWalk": false,
+    "category": "Electrical",
+    "xp": {
+     "Electricity": 20
+    }
+   }
+  }
+ },
+ "materialGroups": {
+  "kbwve.light.basic": [
+   {
+    "id": "electronics",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.ElectronicsScrap"
+    ],
+    "amount": 10
+   },
+   {
+    "id": "electric_wire",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.ElectricWire"
+    ],
+    "amount": 4
+   },
+   {
+    "id": "scrap_metal",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.ScrapMetal"
+    ],
+    "amount": 5
+   },
+   {
+    "id": "light_bulb",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.LightBulb"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "screws",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.Screws"
+    ],
+    "amount": 5
+   }
+  ]
+ },
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.light_switch",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_LightSwitch",
+   "displayName": "Light Switch",
+   "tooltipKey": "Tooltip_KBW_Shared_LightSwitch",
+   "subcategory": "Light Switches",
+   "iconSprite": "lighting_indoor_01_0",
+   "placement": {
+    "needToBeAgainstWall": true,
+    "requiresFloor": false
+   },
+   "group": {
+    "id": "kbwve.lighting.indoor.switches",
+    "translationKey": "IGUI_KBWVE_Group_LightSwitches",
+    "level": 1
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "lightSource": {
+      "radius": 8,
+      "item": "Base.LightBulb",
+      "fuel": "Base.LightBulb"
+     },
+     "object": {
+      "isThumpable": true,
+      "dismantable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "drawFloorGrid": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.light_switch_alternate",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_LightSwitchAlternate",
+   "displayName": "Light Switch (Alternate)",
+   "tooltipKey": "Tooltip_KBW_Shared_LightSwitch",
+   "subcategory": "Light Switches",
+   "iconSprite": "lighting_indoor_01_4",
+   "placement": {
+    "needToBeAgainstWall": true,
+    "requiresFloor": false
+   },
+   "group": {
+    "id": "kbwve.lighting.indoor.switches",
+    "translationKey": "IGUI_KBWVE_Group_LightSwitches",
+    "level": 2
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_7"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "lightSource": {
+      "radius": 8,
+      "item": "Base.LightBulb",
+      "fuel": "Base.LightBulb"
+     },
+     "object": {
+      "isThumpable": true,
+      "dismantable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "drawFloorGrid": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.striped_lamp",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_StripedLamp",
+   "displayName": "Striped Lamp",
+   "tooltipKey": "Tooltip_KBW_Shared_TableLamp",
+   "subcategory": "Table Lamps",
+   "iconSprite": "lighting_indoor_01_8",
+   "group": {
+    "id": "kbwve.lighting.indoor.table_lamps",
+    "translationKey": "IGUI_KBWVE_Group_TableLamps",
+    "level": 1
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_32"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "nativeObject": {
+      "type": "lightSwitch"
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.gray_lamp",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_GrayLamp",
+   "displayName": "Grey Lamp",
+   "tooltipKey": "Tooltip_KBW_Shared_TableLamp",
+   "subcategory": "Table Lamps",
+   "iconSprite": "lighting_indoor_01_9",
+   "group": {
+    "id": "kbwve.lighting.indoor.table_lamps",
+    "translationKey": "IGUI_KBWVE_Group_TableLamps",
+    "level": 2
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "nativeObject": {
+      "type": "lightSwitch"
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.red_lamp",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_RedLamp",
+   "displayName": "Red Lamp",
+   "tooltipKey": "Tooltip_KBW_Shared_TableLamp",
+   "subcategory": "Table Lamps",
+   "iconSprite": "lighting_indoor_01_10",
+   "group": {
+    "id": "kbwve.lighting.indoor.table_lamps",
+    "translationKey": "IGUI_KBWVE_Group_TableLamps",
+    "level": 3
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_50"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_34"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "nativeObject": {
+      "type": "lightSwitch"
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.gray_desk_lamp",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_GrayDeskLamp",
+   "displayName": "Grey Desk Lamp",
+   "tooltipKey": "Tooltip_KBW_Shared_TableLamp",
+   "subcategory": "Table Lamps",
+   "iconSprite": "lighting_indoor_01_11",
+   "group": {
+    "id": "kbwve.lighting.indoor.table_lamps",
+    "translationKey": "IGUI_KBWVE_Group_TableLamps",
+    "level": 4
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_43"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_51"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_11"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "nativeObject": {
+      "type": "lightSwitch"
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.blue_lamp",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_BlueLamp",
+   "displayName": "Blue Lamp",
+   "tooltipKey": "Tooltip_KBW_Shared_TableLamp",
+   "subcategory": "Table Lamps",
+   "iconSprite": "lighting_indoor_01_12",
+   "group": {
+    "id": "kbwve.lighting.indoor.table_lamps",
+    "translationKey": "IGUI_KBWVE_Group_TableLamps",
+    "level": 5
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "nativeObject": {
+      "type": "lightSwitch"
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.white_lamp",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_WhiteLamp",
+   "displayName": "White Lamp",
+   "tooltipKey": "Tooltip_KBW_Shared_TableLamp",
+   "subcategory": "Table Lamps",
+   "iconSprite": "lighting_indoor_01_13",
+   "group": {
+    "id": "kbwve.lighting.indoor.table_lamps",
+    "translationKey": "IGUI_KBWVE_Group_TableLamps",
+    "level": 6
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "nativeObject": {
+      "type": "lightSwitch"
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.pink_wall_lamp",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_PinkWallLamp",
+   "displayName": "Pink Wall Lamp",
+   "tooltipKey": "Tooltip_KBW_Shared_WallLamp",
+   "subcategory": "Wall Lights",
+   "iconSprite": "lighting_indoor_01_16",
+   "placement": {
+    "needToBeAgainstWall": true,
+    "requiresFloor": false
+   },
+   "group": {
+    "id": "kbwve.lighting.indoor.wall_lamps",
+    "translationKey": "IGUI_KBWVE_Group_WallLamps",
+    "level": 1
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "nativeObject": {
+      "type": "lightSwitch"
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "drawFloorGrid": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.dark_wall_lamp",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_DarkWallLamp",
+   "displayName": "Dark Wall Lamp",
+   "tooltipKey": "Tooltip_KBW_Shared_WallLamp",
+   "subcategory": "Wall Lights",
+   "iconSprite": "lighting_indoor_01_20",
+   "placement": {
+    "needToBeAgainstWall": true,
+    "requiresFloor": false
+   },
+   "group": {
+    "id": "kbwve.lighting.indoor.wall_lamps",
+    "translationKey": "IGUI_KBWVE_Group_WallLamps",
+    "level": 2
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_23"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "nativeObject": {
+      "type": "lightSwitch"
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "drawFloorGrid": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.exit_sign",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_ExitSign",
+   "displayName": "Exit Sign",
+   "tooltipKey": "Tooltip_KBW_Shared_ExitSign",
+   "subcategory": "Exit Signs",
+   "iconSprite": "lighting_indoor_01_24",
+   "placement": {
+    "needToBeAgainstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "nativeObject": {
+      "type": "lightSwitch"
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "drawFloorGrid": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.floor_lamp_1",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_FloorLamp1",
+   "displayName": "Floor Lamp (Style 1)",
+   "tooltipKey": "Tooltip_KBW_Shared_FloorLamp",
+   "subcategory": "Floor Lamps",
+   "iconSprite": "lighting_indoor_01_56",
+   "group": {
+    "id": "kbwve.lighting.indoor.floor_lamps",
+    "translationKey": "IGUI_KBWVE_Group_FloorLamps",
+    "level": 1
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_56"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "inputs": [
+       {
+        "id": "metal_pipe",
+        "role": "material",
+        "mode": "consume",
+        "items": [
+         "Base.MetalPipe"
+        ],
+        "amount": 1
+       }
+      ],
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "nativeObject": {
+      "type": "lightSwitch"
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.floor_lamp_2",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_FloorLamp2",
+   "displayName": "Floor Lamp (Style 2)",
+   "tooltipKey": "Tooltip_KBW_Shared_FloorLamp",
+   "subcategory": "Floor Lamps",
+   "iconSprite": "lighting_indoor_01_57",
+   "group": {
+    "id": "kbwve.lighting.indoor.floor_lamps",
+    "translationKey": "IGUI_KBWVE_Group_FloorLamps",
+    "level": 2
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_57"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "inputs": [
+       {
+        "id": "metal_pipe",
+        "role": "material",
+        "mode": "consume",
+        "items": [
+         "Base.MetalPipe"
+        ],
+        "amount": 1
+       }
+      ],
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "nativeObject": {
+      "type": "lightSwitch"
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.lighting.indoor.floor_lamp_3",
+   "extends": "kbwve.light.electrical",
+   "translationKey": "IGUI_KBWVE_Buildable_Lighting_FloorLamp3",
+   "displayName": "Floor Lamp (Style 3)",
+   "tooltipKey": "Tooltip_KBW_Shared_FloorLamp",
+   "subcategory": "Floor Lamps",
+   "iconSprite": "lighting_indoor_01_58",
+   "group": {
+    "id": "kbwve.lighting.indoor.floor_lamps",
+    "translationKey": "IGUI_KBWVE_Group_FloorLamps",
+    "level": 3
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "lighting_indoor_01_58"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.light.basic",
+      "inputs": [
+       {
+        "id": "metal_pipe",
+        "role": "material",
+        "mode": "consume",
+        "items": [
+         "Base.MetalPipe"
+        ],
+        "amount": 1
+       }
+      ],
+      "skills": {
+       "Electricity": 4
+      }
+     },
+     "nativeObject": {
+      "type": "lightSwitch"
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  }
+ ]
+}

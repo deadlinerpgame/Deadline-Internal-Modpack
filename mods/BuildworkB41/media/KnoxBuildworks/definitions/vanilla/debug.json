@@ -1,0 +1,116 @@
+{
+ "schemaVersion": 1,
+ "source": "Project Zomboid Build 42 generated entity scripts",
+ "category": "Debug",
+ "buildables": [
+  {
+   "id": "kbw.vanilla.piano",
+   "displayName": "Piano",
+   "translationKey": "IGUI_KBW_Vanilla_Piano",
+   "tooltipKey": "Tooltip_craft_debugModeDesc",
+   "category": "Debug",
+   "subcategory": "Admin",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "debug"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "E": "recreational_01_13",
+      "S": "recreational_01_8"
+     },
+     "geometry": {
+      "faces": {
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "recreational_01_13",
+            "recreational_01_15"
+           ],
+           [
+            "recreational_01_12",
+            "recreational_01_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "recreational_01_8",
+            "recreational_01_9"
+           ],
+           [
+            "recreational_01_10",
+            "recreational_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 10,
+      "category": "Debug"
+     },
+     "_b41Entity": "Base.Piano"
+    }
+   ]
+  }
+ ]
+}

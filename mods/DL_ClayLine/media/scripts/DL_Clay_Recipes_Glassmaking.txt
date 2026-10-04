@@ -1,0 +1,267 @@
+module Base
+{
+
+	recipe Melt Sand
+	{
+		aerx.CeramicCrucibleSmall,
+		Base.Sandbag,
+		Result:aerx.CeramicCrucibleWithGlass,
+        	OnCreate:Recipe.OnCreate.OpenSackProduce,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+	recipe Melt Glass
+	{
+		aerx.CeramicCrucibleSmall,
+		Base.brokenglass_1_0=6,
+		Result:aerx.CeramicCrucibleWithGlass,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+	recipe Scramble Glass
+	{
+		Base.brokenglass_1_1/Base.brokenglass_1_2/Base.brokenglass_1_3,
+		Result:Base.brokenglass_1_0,
+		CanBeDoneFromFloor      : TRUE,
+		Time:10,
+		Category:Glassmaking,
+	}
+
+	recipe Make Standard Windshield
+	{
+		aerx.CeramicCrucibleWithGlass=5,
+		keep aerx.GlassBlowingPipe,
+		Result:Windshield1,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+	recipe Make Heavy-Duty Windshield
+	{
+		aerx.CeramicCrucibleWithGlass=5,
+		keep aerx.GlassBlowingPipe,
+		Result:Windshield2,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+
+	recipe Make Sports Windshield
+	{
+		aerx.CeramicCrucibleWithGlass=5,
+		keep aerx.GlassBlowingPipe,
+		Result:Windshield3,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+
+
+	recipe Make Standard Rear Windshield
+	{
+		aerx.CeramicCrucibleWithGlass=5,
+		keep aerx.GlassBlowingPipe,
+		Result:RearWindshield1,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+	recipe Make Heavy-Duty Rear Windshield
+	{
+		aerx.CeramicCrucibleWithGlass=5,
+		keep aerx.GlassBlowingPipe,
+		Result:RearWindshield2,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+
+	recipe Make Sports Rear Windshield
+	{
+		aerx.CeramicCrucibleWithGlass=5,
+		keep aerx.GlassBlowingPipe,
+		Result:RearWindshield3,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+
+
+
+	recipe Make Standard Front Window
+	{
+		aerx.CeramicCrucibleWithGlass=2,
+		keep aerx.GlassBlowingPipe,
+		Result:FrontWindow1,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+	recipe Make Heavy-Duty Front Window
+	{
+		aerx.CeramicCrucibleWithGlass=2,
+		keep aerx.GlassBlowingPipe,
+		Result:FrontWindow2,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+
+	recipe Make Sports Front Window
+	{
+		aerx.CeramicCrucibleWithGlass=2,
+		keep aerx.GlassBlowingPipe,
+		Result:FrontWindow3,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+
+
+	recipe Make Standard Rear Window
+	{
+		aerx.CeramicCrucibleWithGlass=2,
+		keep aerx.GlassBlowingPipe,
+		Result:RearWindow1,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+	recipe Make Heavy-Duty Rear Window
+	{
+		aerx.CeramicCrucibleWithGlass=2,
+		keep aerx.GlassBlowingPipe,
+		Result:RearWindow2,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+
+	recipe Make Sports Rear Window
+	{
+		aerx.CeramicCrucibleWithGlass=2,
+		keep aerx.GlassBlowingPipe,
+		Result:RearWindow3,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+
+
+
+	recipe Make Glass Jar
+	{
+		aerx.CeramicCrucibleWithGlass,
+		keep aerx.GlassBlowingPipe,
+		Result:Base.EmptyJar,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+	recipe Make Glass Bottle
+	{
+		aerx.CeramicCrucibleWithGlass,
+		keep aerx.GlassBlowingPipe,
+		Result:Base.BeerEmpty,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+	recipe Make Wine Glass
+	{
+		aerx.CeramicCrucibleWithGlass,
+		keep aerx.GlassBlowingPipe,
+		Result:Base.GlassWine,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+	recipe Make Lowball Glass
+	{
+		aerx.CeramicCrucibleWithGlass,
+		keep aerx.GlassBlowingPipe,
+		Result:SapphCooking.LowballGlass,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+	recipe Make Cocktail Glass
+	{
+		aerx.CeramicCrucibleWithGlass,
+		keep aerx.GlassBlowingPipe,
+		Result:SapphCooking.CocktailGlass,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+	recipe Make Wine Bottle
+	{
+		aerx.CeramicCrucibleWithGlass=2,
+		keep aerx.GlassBlowingPipe,
+		Result:WineEmpty,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:600,
+		Category:Glassmaking,
+	}
+
+	recipe Make Glass Pane
+	{
+		aerx.CeramicCrucibleWithGlass,
+		keep aerx.ClaySheetMold,
+		Result:Base.GlassPane,
+		CanBeDoneFromFloor      : TRUE,
+		Time:400,
+		Category:Glassmaking,
+	}
+
+	recipe Make Beer Bottle
+	{
+		aerx.CeramicCrucibleWithGlass=2,
+		keep aerx.GlassBlowingPipe,
+		Result:BeerEmpty,
+		SkillRequired:Woodwork=5,
+		CanBeDoneFromFloor      : TRUE,
+		Time:600,
+		Category:Glassmaking,
+	}
+
+}

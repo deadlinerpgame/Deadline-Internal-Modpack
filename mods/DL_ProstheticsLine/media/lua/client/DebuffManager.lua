@@ -13,7 +13,6 @@ function DebuffManager.AmputationChecks()
     local armAmputations = 0;
     local legAmputations = 0;
 
-    -- Clear amputations.
     player:getModData().ProstheticsLine_ArmAmputations = {};
     player:getModData().ProstheticsLine_LegAmputations = {};
 
@@ -29,8 +28,6 @@ function DebuffManager.AmputationChecks()
             table.insert(getPlayer():getModData().ProstheticsLine_LegAmputations, slot);
         end
     end
-
-    -- The movement speed debuff is handled by the actual items themselves.
 
     player:transmitModData();
 end

@@ -2,10 +2,6 @@ require "QueueLine_Traits";
 
 if isServer() then return end;
 
---[[
-        Dependencies
---]]
-
 WRC = WRC or {};
 WRC.Meta = WRC.Meta or {};
 WRC.SpecialCommands = WRC.SpecialCommands or {};
@@ -84,9 +80,6 @@ function WRC.Commands.QueueLanguage(args)
     local queuedStr = string.format("[QueueLine] Added language %s to the queue for player %s on their next connection.", lang, username);
     WL_Utils.addInfoToChat(queuedStr);
 end
---[[
-        QueueLine Main
---]]
 
 QueueLine_Client = {};
 
@@ -120,17 +113,15 @@ function QueueLine_Client.OnServerCommand(module, command, args)
 
                 print("[QueueLine_Client] Received queue item " .. item.type .. " for username: " .. item.username);
 
-                -- Check the function is valid
                 if not QueueLine_Client.Functions[item.type] then
                     print("[QueueLine_Client] Type received with no function: " .. item.type);
                     return;
                 end
 
-                -- If the function for the queue item is called successfully, then remove it from queue
                 local queueItemFunction = QueueLine_Client.Functions[item.type];
-                local queueFuncStatus, queueFuncError = pcall(queueItemFunction, unpack(item.params));
+                local queueFuncError = queueItemFunction(unpack(item.params or {}));
 
-                if queueFuncStatus and not queueFuncError then
+                if not queueFuncError then
                     print("[QueueLine_Client] Queue item redeemed successfully.");
                     sendClientCommand(getPlayer(), "QueueLine", "RemoveOnSuccess", { id = item.id });
                     QueueLine_Client.QueueQueriedThisConnect = true;
@@ -145,14 +136,12 @@ end
 
 function QueueLine_Client.AddItem(username, item, quantity)
     if username ~= getPlayer():getUsername() then
-        error("Attempted to give item to invalid player, terminating.", 1);
-        return;
+        return "Attempted to give item to invalid player, terminating.";
     end
 
     local itemMock = InventoryItemFactory.CreateItem(item);
     if not itemMock then
-        error("Attempted to give invalid item.", 1);
-        return;
+        return "Attempted to give invalid item.";
     end
 
     for _ = 1, quantity do

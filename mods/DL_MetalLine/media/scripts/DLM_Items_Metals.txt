@@ -1,0 +1,318 @@
+module aerx
+{
+    imports { Base }
+
+	item AluminumChunk
+	{
+		DisplayName = Aluminum Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1,
+		Icon = AluminumScrap,
+		Tags	             =  meltable,
+		WorldStaticModel = AluminumScrap,
+	}
+
+	item AluminumFragments
+	{
+		DisplayName = Aluminum Fragments,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
+	item AluminumScrap
+	{
+		DisplayName = Aluminum Scrap,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = AluminumScrap,
+		Tags	             =  meltable,
+		WorldStaticModel = AluminumScrap,
+	}
+
+	item CopperChunk
+	{
+		DisplayName = Copper Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
+	item CopperFragments
+	{
+		DisplayName = Copper Fragments,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
+	item CopperScrap
+	{
+		DisplayName = Copper Scrap,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
+	item GoldScrap
+	{
+		DisplayName = Gold Fragments,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = GoldScrap,
+		WorldStaticModel = GoldScrap,
+		Tags	             =  meltable,
+
+	}
+
+    item IronBar
+    {
+        DisplayName = Bar,
+        DisplayCategory = Material,
+        Type = Weapon,
+        Weight = 2,
+        Icon = IronBar_Whole,
+        AttachmentType = BigBlade,
+        BaseSpeed = 1,
+        Categories = Blunt,
+        ConditionLowerChanceOneIn = 15,
+        ConditionMax = 8,
+        CritDmgMultiplier = 2,
+        CriticalChance = 20,
+        DoorDamage = 1,
+        HitAngleMod = -30,
+        KnockBackOnNoDeath = TRUE,
+        KnockdownMod = 0,
+        MaxDamage = 1.15,
+        MaxHitCount = 3,
+        MaxRange = 1.25,
+        MetalValue = 150,
+        MinAngle = 0.75,
+        MinDamage = 0.6,
+        MinRange = 0.61,
+        MinimumSwingTime = 3,
+        PushBackMod = 0.5,
+        RunAnim = Run_Weapon2,
+        SubCategory = Swinging,
+        SwingAmountBeforeImpact = 0.02,
+        SwingAnim = Bat,
+        SwingTime = 3,
+        TreeDamage = 0,
+        TwoHandWeapon = TRUE,
+        WeaponLength = 0.4,
+        WeaponSprite = IronBarStock,
+        BreakSound  =   MetalPipeBreak,
+        DoorHitSound = MetalPipeHit,
+		HitSound = MetalPipeHit,
+		HitFloorSound = MetalPipeHit,
+		SwingSound = MetalPipeSwing,
+    }
+
+	item IronChunk
+	{
+		DisplayName = Iron Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1,
+		Icon = IronScrap,
+		WorldStaticModel = IronScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item IronFragments
+	{
+		DisplayName = Iron Fragments,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = SteelScrap,
+		WorldStaticModel = SteelScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item IronScrap
+	{
+		DisplayName = Iron Scrap,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = IronScrap,
+		WorldStaticModel = IronScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item LeadChunk
+	{
+		DisplayName = Lead Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1,
+		Icon = IronScrap,
+		WorldStaticModel = IronScrap,
+		Tags	             =  meltable,
+	}
+
+	item LeadFragments
+	{
+		DisplayName = Lead Fragments,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = IronScrap,
+		WorldStaticModel = IronScrap,
+		Tags	             =  meltable,
+	}
+
+	item LeadScrap
+	{
+		DisplayName = Lead Scrap,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = IronScrap,
+		WorldStaticModel = IronScrap,
+		Tags	             =  meltable,
+	}
+
+	item NickelChunk
+	{
+		DisplayName = Nickel Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1,
+		Icon = BrassScrap,
+		WorldStaticModel = BrassScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item NickelFragments
+	{
+		DisplayName = Nickel Fragments,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = BrassScrap,
+		WorldStaticModel = BrassScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item NickelScrap
+	{
+		DisplayName = Nickel Scrap,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = BrassScrap,
+		WorldStaticModel = BrassScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item SilverScrap
+	{
+		DisplayName = Silver Fragments,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = SilverScrap,
+		WorldStaticModel = SilverScrap,
+		Tags	             =  meltable,
+
+	}
+
+		item TinChunk
+	{
+		DisplayName = Tin Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
+	item TinFragments
+	{
+		DisplayName = Tin Fragments,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
+		item TinScrap
+	{
+		DisplayName = Tin Scrap,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = MetalBits,
+		MetalValue = 5,
+		Tags	             =  meltable,
+		WorldStaticModel = MetalPieces,
+	}
+
+	item ZincChunk
+	{
+		DisplayName = Zinc Chunk,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 1,
+		Icon = SilverScrap,
+		WorldStaticModel = SilverScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item ZincFragments
+	{
+		DisplayName = Zinc Fragments,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.01,
+		Icon = SilverScrap,
+		WorldStaticModel = SilverScrap,
+		Tags	             =  meltable,
+
+	}
+
+	item ZincScrap
+	{
+		DisplayName = Zinc Scrap,
+		DisplayCategory = Metals,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = SilverScrap,
+		WorldStaticModel = SilverScrap,
+		Tags	             =  meltable,
+
+	}
+}
