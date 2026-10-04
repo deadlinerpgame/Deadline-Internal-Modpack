@@ -151,6 +151,10 @@ function DiceRolls:refreshButtons()
 		if modifier then
 			tip = tip .. " | Your traits: " .. modifier
 		end
+		local skill, skillLabel = Core.skillModifier(b.rollId)
+		if skill ~= 0 then
+			tip = tip .. " | " .. skillLabel .. " skill: +" .. skill
+		end
 		b:setTooltip(tip)
 	end
 	self:applyOpacity()

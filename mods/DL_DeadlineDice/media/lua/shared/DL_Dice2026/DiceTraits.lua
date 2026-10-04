@@ -587,6 +587,19 @@ function DiceTraits.agilityKind(traits)
 	return "defclose"
 end
 
+DiceTraits.skillBonuses = {
+	firstaid = { perk = "Doctor", divisor = 2, label = "First Aid" },
+	tracking = { perk = "PlantScavenging", divisor = 1, label = "Foraging" },
+}
+
+function DiceTraits.skillBonus(player, kind)
+	local def = DiceTraits.skillBonuses[kind]
+	if def == nil or player == nil then
+		return 0, nil
+	end
+	return math.floor(player:getPerkLevel(Perks[def.perk]) / def.divisor), def.label
+end
+
 function DiceTraits.signed(value)
 	if value > 0 then
 		return "+" .. value

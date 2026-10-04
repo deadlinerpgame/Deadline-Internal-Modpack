@@ -651,21 +651,12 @@ local function attackCtx(m, class, lunge)
 	}
 end
 
-local SKILL_BONUS = {
-	firstaid = { perk = Perks.Doctor, divisor = 2, label = "First Aid" },
-	tracking = { perk = Perks.PlantScavenging, divisor = 1, label = "Foraging" },
-}
-
 local function skillBonus(player, kind)
-	local def = SKILL_BONUS[kind]
-	if def == nil or player == nil then
-		return 0, ""
-	end
-	local bonus = math.floor(player:getPerkLevel(def.perk) / def.divisor)
+	local bonus, label = DiceTraits.skillBonus(player, kind)
 	if bonus == 0 then
 		return 0, ""
 	end
-	return bonus, " [+" .. bonus .. " " .. def.label .. " skill]"
+	return bonus, " [+" .. bonus .. " " .. label .. " skill]"
 end
 
 local function rollFor(c, m, kind, ctx)
@@ -693,7 +684,7 @@ local function rollFor(c, m, kind, ctx)
 			suffix = suffix .. DiceTraits.suffix(bonus, parts)
 		end
 	end
-	if SKILL_BONUS[kind] and not m.isNpc then
+	if DiceTraits.skillBonuses[kind] and not m.isNpc then
 		local skill, text = skillBonus(findPlayer(m.id), kind)
 		total = total + skill
 		suffix = suffix .. text

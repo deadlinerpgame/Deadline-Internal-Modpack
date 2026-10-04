@@ -237,6 +237,36 @@ function DiceCore.clearTraitCache()
 	myTraits = nil
 end
 
+local skillSignature = nil
+
+function DiceCore.checkTraitChange()
+	local p = getPlayer and getPlayer() or nil
+	if p == nil then
+		return
+	end
+	local current = DiceTraits.fromPlayer(p)
+	local skills = {}
+	for kind in pairs(DiceTraits.skillBonuses) do
+		skills[#skills + 1] = kind .. DiceTraits.skillBonus(p, kind)
+	end
+	table.sort(skills)
+	local signature = table.concat(skills, ",")
+	local sameTraits = myTraits ~= nil and table.concat(current, ",") == table.concat(myTraits, ",")
+	if sameTraits and signature == skillSignature then
+		return
+	end
+	skillSignature = signature
+	myTraits = current
+	if not sameTraits then
+		DiceCore.sendTraits()
+	end
+	DiceCore.notify("state")
+end
+
+function DiceCore.skillModifier(rollId)
+	return DiceTraits.skillBonus(getPlayer and getPlayer() or nil, rollId)
+end
+
 function DiceCore.sendTraits()
 	DiceCore.send("traitPing", { traits = DiceCore.myTraits() })
 end
@@ -1071,6 +1101,7 @@ Events.OnTick.Add(function()
 		viewTick = 0
 		refreshView()
 		DiceCore.checkAdminChange()
+		DiceCore.checkTraitChange()
 	end
 end)
 
