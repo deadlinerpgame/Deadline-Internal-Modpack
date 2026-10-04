@@ -88,4 +88,34 @@ module SP
         Category:Electrical,
     }
 
+	recipe Make Jumpstarter (mechanic)
+	{
+		CarBattery1/CarBattery2/CarBattery3=3,
+		Battery=5,
+		ElectricWire=5,
+		ElectronicsScrap=20,
+		keep Screwdriver,
+
+		Result:Jumpstarter,
+		Time:70.0,
+		Sound:Screwdriver,
+		SkillRequired:Electricity=3,
+		Category:Electrical,
+	}
+
+	recipe Make Jumpstarter (electrician)
+	{
+		CarBattery1/CarBattery2/CarBattery3=3,
+		Battery=5,
+		ElectricWire=5,
+		ElectronicsScrap=20,
+		keep Screwdriver,
+
+		Result:Jumpstarter,
+		Time:70.0,
+		Sound:Screwdriver,
+		SkillRequired:Mechanic=3,
+		Category:Electrical,
+	}
+
 }
