@@ -150,10 +150,24 @@ local function onCharacterReady(player, payload)
     return hadSnapshot
 end
 
+local function isBlankSave(player, username, payload)
+    local enc = type(payload) == "table" and payload.snap or nil
+    local incoming = type(enc) == "string" and DBNO.Snap.decode(enc) or nil
+    local traits = incoming and incoming.traits or DBNO.getTraitNames(player)
+    if #traits > 0 then return false end
+    local stored = DBNO.SnapStore.newestValid(username)
+    local snap = stored and DBNO.Snap.decode(stored) or nil
+    return snap ~= nil and #snap.traits > 0
+end
+
 local function doSave(player, payload)
     local username = DBNO.accountName(player)
     if username == nil then return end
     local admin = DBNO.isAdmin(player)
+    if not admin and isBlankSave(player, username, payload) then
+        sendServerCommand(player, "DBNOSnapshot", "saveResult", { ok = false, reason = "blank" })
+        return
+    end
     local now = DBNO.nowMs()
     if not admin then
         local last = DBNO.Snap._lastSave[username] or 0
@@ -224,7 +238,9 @@ Events.OnClientCommand.Add(function(module, command, player, args)
     if command == "sleepSave" then
         if DBNO.Config.skillRestoreMode ~= "immersive" then return end
         local u = DBNO.accountName(player)
-        if u ~= nil and writeSnapshot(player, u, payload) then DBNO.Flags.resetRestore(u) end
+        if u ~= nil and not isBlankSave(player, u, payload) and writeSnapshot(player, u, payload) then
+            DBNO.Flags.resetRestore(u)
+        end
         return
     end
 

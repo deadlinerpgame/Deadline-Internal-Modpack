@@ -123,6 +123,7 @@ Events.OnServerCommand.Add(function(module, command, args)
     if command == "saveResult" then
         if args.ok then notify("Snapshot saved.")
         elseif args.reason == "cooldown" then notify("Wait " .. tostring(args.wait) .. "s before saving again.")
+        elseif args.reason == "blank" then notify("Load your snapshot first.")
         else notify("Snapshot save failed.") end
     elseif command == "restoreResult" then
         if args.reason == "used" then notify("Already restored this life.")
