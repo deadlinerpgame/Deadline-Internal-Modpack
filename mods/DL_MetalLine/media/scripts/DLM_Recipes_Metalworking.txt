@@ -1,20 +1,6 @@
 module Base
 {
 
-	recipe Make Box of Nails
-	{
-        	aerx.IronFragments=8,
-        	BlowTorch=2,
-        	keep [Recipe.GetItemTypes.Hammer],
-        	keep WeldingMask,
-
-		SkillRequired:MetalWelding=2,
-        	Result:NailsBox,
-        	Time:140.0,
-        	Sound:BlowTorch,
-        	Category:Welding,
-    	}
-
 	recipe Make Jar Lid
 	{
         	aerx.IronFragments=2,
@@ -73,6 +59,7 @@ module Base
         	Result:Doorknob=10,
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLForgeX10,
+		SkillRequired:MetalWelding=3,
         	Time:10.0,
         	Sound:BlowTorch,
         	Category:Welding,
@@ -86,6 +73,7 @@ module Base
         	Result:Hinge=10,
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLForgeX10,
+		SkillRequired:MetalWelding=3,
         	Time:10.0,
         	Sound:BlowTorch,
         	Category:Welding,
@@ -100,6 +88,7 @@ module Base
         	Result:Doorknob=4,
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLForgeX4,
+		SkillRequired:MetalWelding=3,
         	Time:10.0,
         	Sound:BlowTorch,
         	Category:Welding,
@@ -113,6 +102,7 @@ module Base
         	Result:Hinge=4,
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLForgeX4,
+		SkillRequired:MetalWelding=3,
         	Time:10.0,
         	Sound:BlowTorch,
         	Category:Welding,
@@ -127,6 +117,7 @@ module Base
         	Result:aerx.Buckle=10,
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLForgeX10,
+		SkillRequired:MetalWelding=3,
         	Time:10.0,
         	Sound:BlowTorch,
         	Category:Welding,
@@ -141,6 +132,7 @@ module Base
         	Result:aerx.Buckle=4,
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLForgeX4,
+		SkillRequired:MetalWelding=3,
         	Time:10.0,
         	Sound:BlowTorch,
         	Category:Welding,
@@ -168,7 +160,7 @@ module Base
 		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
 		SkillRequired:MetalWelding=3,
 
-        	Result:WeldingRods=2,
+        	Result:WeldingRods=4,
         	Time:140.0,
         	Sound:Hammering,
         	Category:Welding,
@@ -183,16 +175,37 @@ module Base
 
 		NoBrokenItems			: false,
 		SkillRequired:MetalWelding=4,
-        	Result           		: NailsBox,
+        	Result           		: NailsBox=4,
         	Time             		: 500.0,
 	    	Sound 					: CutSheet,
 		OnGiveXP 				: Give2MWXP,
 		Category 		        : Scrapping,
-		AnimNode 				: Disassemble
+		AnimNode 				: Disassemble,
 
 		CanBeDoneFromFloor      : False,
 		NeedToBeLearn: false,
 		NearItem:Simple Forge,
+    }
+
+	recipe Melt Ingots into Nails
+    {
+
+	[Recipe.GetItemTypes.DLIngot]=1,
+
+		keep [Recipe.GetItemTypes.WeldingMask],
+
+		NoBrokenItems			: false,
+		SkillRequired:MetalWelding=8,
+        	Result           		: NailsBox=5,
+        	Time             		: 500.0,
+	    	Sound 					: CutSheet,
+		OnGiveXP 				: Give2MWXP,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+
+		CanBeDoneFromFloor      : False,
+		NeedToBeLearn: false,
+		NearItem:Advanced Forge,
     }
 
 	recipe Melt Ingot into Electric Wire
@@ -208,7 +221,7 @@ module Base
         	Time             		: 500.0,
 	    	Sound 					: CutSheet,
 		Category 		        : Scrapping,
-		AnimNode 				: Disassemble
+		AnimNode 				: Disassemble,
 
 		CanBeDoneFromFloor      : False,
 		NeedToBeLearn: false,

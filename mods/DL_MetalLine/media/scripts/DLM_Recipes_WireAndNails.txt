@@ -27,25 +27,4 @@ module TW
 
     }
 
-    recipe Cut Wire Into Nails
-    {
-
-    		Wire=4,
-		BlowTorch=2,
-		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
-
-		NoBrokenItems			: false,
-		AllowDestroyedItem      : true,
-		SkillRequired:MetalWelding=2,
-        	Result:NailsBox,
-        	Time             		: 1500.0,
-	    	Sound 					: CutSheet,
-		OnGiveXP 				: Give2MWXP,
-		Category 		        : Scrapping,
-		AnimNode 				: Disassemble,
-
-		CanBeDoneFromFloor      : False,
-		NeedToBeLearn: false,
-
-    }
 }
