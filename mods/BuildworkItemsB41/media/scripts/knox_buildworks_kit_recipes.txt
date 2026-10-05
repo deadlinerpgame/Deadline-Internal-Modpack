@@ -76,7 +76,7 @@ module Base
         Time:600.0,
         Category:Construction,
         SkillRequired:Woodwork=6,
-        NeedToBeLearn:true,
+        NeedToBeLearn:false,
     }
 
     recipe Craft a Sculpting Table Kit
@@ -88,7 +88,7 @@ module Base
         Time:600.0,
         Category:Construction,
         SkillRequired:Woodwork=6,
-        NeedToBeLearn:true,
+        NeedToBeLearn:false,
     }
 
     recipe Craft a Drying Rack Kit
@@ -101,7 +101,7 @@ module Base
         CanBeDoneFromFloor:true,
         Result:Base.DryingRackConstructionSet,
         Time:600.0,
-        SkillRequired:Woodwork=3,
+        SkillRequired:Woodwork=4,
         Category:Construction,
     }
 
@@ -111,13 +111,15 @@ module Base
         keep Hammer,
         aerx.LongStick=6,
         Base.Plank=7,
-        Base.Nails=5,
+        Base.Nails=12,
+        Base.Screws=12,
+        EngineParts=2,        
         CanBeDoneFromFloor:true,
         Result:Base.TailorTableConstructionSet,
         Time:600.0,
-        SkillRequired:Woodwork=3,
+        SkillRequired:Electricity=8,
         Category:Construction,
-        NeedToBeLearn:true,
+        NeedToBeLearn:false,
     }
 
     recipe Craft a Brewing Station Kit
@@ -127,13 +129,13 @@ module Base
         Base.BucketEmpty,
         Base.Plank=6,
         Base.Nails=10,
-        Base.GlassPane,
+        Base.GlassPane=4,
         CanBeDoneFromFloor:true,
         Result:Base.BrewingStationConstructionSet,
         Time:600.0,
-        SkillRequired:Woodwork=3,
+        SkillRequired:Electricity=6,
         Category:Construction,
-        NeedToBeLearn:true,
+        NeedToBeLearn:false,
     }
 
     recipe Craft a Distiller Kit
@@ -144,10 +146,11 @@ module Base
         MetalPipe=5,
         ElectricWire=3,
         ElectronicsScrap=10,
+        EngineParts=8,
         CanBeDoneFromFloor:true,
         Result:Base.DistillerConstructionSet,
         Time:600.0,
-        SkillRequired:Electricity=4,
+        SkillRequired:Electricity=8,
         Category:Construction,
     }
 
@@ -165,13 +168,14 @@ module Base
         LightBulbRed=1,
         LightBulbGreen=1,
         LightBulbYellow=1,
-        Base.Nails=2,
+        Base.Nails=12,
+        EngineParts=8,
         CanBeDoneFromFloor:true,
         Result:Base.DigesterConstructionSet,
         Time:600.0,
-        SkillRequired:Electricity=8;MetalWelding=4,
+        SkillRequired:Electricity=8;MetalWelding=2,
         Category:Construction,
-        NeedToBeLearn:true,
+        NeedToBeLearn:false,
     }
 
     recipe Craft a Paint Mixing Kit
@@ -183,12 +187,13 @@ module Base
         Base.Nails=10,
         Base.MortarPestle,
         Base.Paintbrush,
+        Base.GlassPane=4,
         CanBeDoneFromFloor:true,
         Result:Base.PaintMixingConstructionSet,
         Time:600.0,
-        SkillRequired:Woodwork=3,
+        SkillRequired:Electricity=4,
         Category:Construction,
-        NeedToBeLearn:true,
+        NeedToBeLearn:false,
     }
 
     recipe Craft a Butchering Hook Kit
@@ -198,7 +203,7 @@ module Base
         CanBeDoneFromFloor:true,
         Result:Base.ButcheringHookConstructionSet,
         Time:600.0,
-        SkillRequired:Woodwork=3,
+        SkillRequired:Woodwork=4,
         Category:Construction,
     }
 
@@ -207,13 +212,14 @@ module Base
         keep Saw,
         keep Hammer,
         Base.Plank=6,
-        Base.Nails=8,
-        Base.Screws=6,
-        Base.SmallSheetMetal=2,
+        Base.Nails=12,
+        Base.Screws=12,
+        SheetMetal=2,
+        Base.SmallSheetMetal=4,
         CanBeDoneFromFloor:true,
         Result:Base.RepairBenchConstructionSet,
         Time:600.0,
-        SkillRequired:Woodwork=3,
+        SkillRequired:Metalwelding=4,
         Category:Construction,
     }
 
@@ -223,12 +229,17 @@ module Base
         keep Hammer,
         Base.Plank=6,
         Base.Nails=8,
-        Base.RippedSheets=4,
+        aerx.Buckle = 2,
         Base.Thread=2,
+        Base.FabricRoll_Cotton/aerx.FabricRoll_Cotton/Base.FabricRoll = 2,
+        aerx.FabricRoll_DenimDarkBlue = 5,
+        aerx.FabricRoll_DenimBlack = 5,
+        aerx.FabricRoll_DenimBlue = 5,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 5,
         CanBeDoneFromFloor:true,
         Result:Base.ClothingBenchConstructionSet,
         Time:600.0,
-        SkillRequired:Woodwork=3,
+        SkillRequired:Woodwork=6,
         Category:Construction,
     }
 }
