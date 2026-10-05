@@ -173,7 +173,8 @@ local function doRestore(player, silent)
     local username = DBNO.accountName(player)
     if username == nil then return end
     local admin = DBNO.isAdmin(player)
-    if not admin and DBNO.Flags.isRestoreUsed(username) then
+    local forced = DBNO.Flags.isLoadForced(username)
+    if not admin and not forced and DBNO.Flags.isRestoreUsed(username) then
         if not silent then
             sendServerCommand(player, "DBNOSnapshot", "restoreResult", { ok = false, reason = "used" })
         end
@@ -198,6 +199,7 @@ local function doRestore(player, silent)
     if mdl then DBNO.ModData.apply(player, mdl) end
 
     if not admin then DBNO.Flags.markRestoreUsed(username) end
+    if forced then DBNO.Flags.clearLoadForced(username) end
     sendServerCommand(player, "DBNOSnapshot", "applyRestore", { data = enc, know = know, md = mdl })
 end
 

@@ -448,6 +448,21 @@ function DBNO.Flags.resetRestore(username)
     DBNO.Files.writeString(restoreFlagPath(username), "0")
 end
 
+local function loadFlagPath(username)
+    local d = DBNO.Paths.accountDir(username)
+    if d == nil then return nil end
+    return d .. "/load.txt"
+end
+
+function DBNO.Flags.isLoadForced(username)
+    local v = DBNO.Files.readString(loadFlagPath(username))
+    return v ~= nil and string.match(v, "%d") == "1"
+end
+
+function DBNO.Flags.clearLoadForced(username)
+    DBNO.Files.writeString(loadFlagPath(username), "0")
+end
+
 DBNO.Life = DBNO.Life or {}
 
 local function finalFlagPath(username)

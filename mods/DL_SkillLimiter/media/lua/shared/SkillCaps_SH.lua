@@ -120,7 +120,7 @@ end
 
 function DL.Caps.pinAtCap(character)
     if character == nil or DL.Caps.isExempt(character) then return 0 end
-    local caps = DL.Caps.computeCapsCached(character)
+    local caps = DL.Caps.computeCaps(character)
     local maxLevel = DL.Caps.maxLevel()
     local xp = character:getXp()
     local overCap = 0
