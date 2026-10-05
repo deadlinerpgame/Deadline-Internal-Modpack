@@ -60,7 +60,7 @@ local function onCreateUI()
     UI:addImage("image1", "media/ui/maptest.png")
     UI:nextLine();
 
-
+    UI:addButton("button1", spawnpointnames[1], mapa);
     UI:addButton("button2", spawnpointnames[2], mapb);
     UI:addButton("button3", spawnpointnames[3], mapc);
     UI:addButton("button4", spawnpointnames[4], mapd);
