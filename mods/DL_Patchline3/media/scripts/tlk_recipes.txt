@@ -1,0 +1,126 @@
+module Base
+{
+    imports {
+	Base,
+    }
+
+	recipe Make Maggot Meat Balls
+	{
+		Base.Maggots=40,
+		Water=2,
+		Base.Maize=2,
+		keep Base.Saucepan,
+
+		Result:tlkitems.maggot_meat_balls=2,
+		Time:900.0,
+		Category:Survivalist,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+	}
+
+	recipe Make Pot of Spaghetti Meatballs
+	{
+		tlkitems.maggot_meat_balls=2,
+		Water=2,
+		Base.CannedBologneseOpen=1, 
+		Base.Pot,
+		
+		Result:tlkitems.potspaghettimeatballs,
+		Time:900.0,
+		Category:Survivalist,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+	}
+	
+	recipe Pour 2 Bowls of Spaghetti Meatballs
+	{
+		tlkitems.potspaghettimeatballs;60,
+		Base.Bowl=2,
+
+		Result:tlkitems.maggot_spbowl30=2,
+		Time:900.0,
+		Category:Survivalist,
+	}
+
+	recipe Pour 4 Bowls of Spaghetti Meatballs
+	{
+		tlkitems.potspaghettimeatballs;60,
+
+		Result:tlkitems.maggot_spbowl15=4,
+		Time:900.0,
+		Category:Survivalist,
+	}
+
+		recipe Make Wild Berry Juice
+	{
+		Base.WaterBottleEmpty/Base.PopBottleEmpty/BZMClothing.WaterBottleEmpty=1,
+		keep Base.MortarPestle,
+
+		Result:tlkitems.wildjuice,
+		Time:900.0,
+		Category:Survivalist,
+		OnCanPerform :tlk_crafting.CanExtractBerries,
+		OnCreate :tlk_crafting.DoExtractBerries,
+	}
+
+		recipe Make Falafel
+	{
+		keep Base.MortarPestle,
+		Water=2,
+		Base.DriedBlackBeans/Base.DriedChickPeas/Base.DriedLentils/Base.DriedSplitPeas/Base.DriedWhiteBeans/Base.DriedKidneyBeans = 1,
+
+		RequiredSkill:Cooking=4,
+		Result:tlkitems.falafel = 4,
+		Time:900.0,
+		Category:Survivalist,
+
+	}
+
+		recipe Make Potato Chips
+	{
+		farming.Potato = 2, 
+		keep tlkitems.RingMould,
+
+		Result:tlkitems.PotatoChips = 16,
+		RequiredSkill:Cooking=2,
+		Time:900.0,
+		Category:Survivalist,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+	}
+
+
+		recipe Make Springles
+	{
+		Base.Aluminum = 1,
+		tlkitems.PotatoChips = 16,
+
+	
+		Result:tlkitems.Springles = 1,
+		Time:900.0,
+		Category:Survivalist,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+	}	
+
+
+	recipe Make RingMould
+	{
+		Base.ScrapMetal = 4,
+		RequiredSkill:MetalWelding=4,
+
+		Result:tlkitems.RingMould = 1,
+		Time:900.0,
+		Category:survivalist,
+		OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
+	}
+
+	recipe Peel Prickly Pear
+	{
+		tlkitems.pricklypear = 1,
+		keep [Recipe.GetItemTypes.SharpKnife],
+
+		Result:tlkitems.pricklypearpeeled = 1,
+		Time:900.0,
+		Category:Survivalist,
+		OnGiveXP:Recipe.OnGiveXP.Cooking10,
+	}
+
+
+}
