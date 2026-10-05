@@ -358,7 +358,7 @@ Events.OnCreatePlayer.Add(function(playerIndex, player)
     DBNO.Respawn._desc = nil
 
     restoreSkin(player, DBNO.Respawn._skin)
-    restoreModData(player, DBNO.Respawn._md)
+    restoreModData(player, DBNO.Respawn._md, true)
     local nv = player:getHumanVisual()
     local dv = d:getHumanVisual()
     nv:copyFrom(dv)
