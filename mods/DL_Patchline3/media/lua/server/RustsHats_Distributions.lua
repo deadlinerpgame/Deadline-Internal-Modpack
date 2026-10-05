@@ -944,7 +944,7 @@ table.insert(ProceduralDistributions.list.ArmyHangarOutfit.items, 10);
 
 table.insert(ProceduralDistributions.list.ArmyHangarOutfit.items, "RustillerysHats.Hat_M1_Net2");
 table.insert(ProceduralDistributions.list.ArmyHangarOutfit.items, 6);
-
+--[[ I hate this mod and it's distribution error patch :)
 --ArmyBunkerLockers
 table.insert(ProceduralDistributions.list.ArmyBunkerLockers.items, "RustillerysHats.Glasses_AviatorGoggles");
 table.insert(ProceduralDistributions.list.ArmyBunkerLockers.items, 4);
@@ -2089,4 +2089,4 @@ table.insert(ProceduralDistributions.list.HuntingLockers.items, "RustillerysHats
 table.insert(ProceduralDistributions.list.HuntingLockers.items, 6);
 
 table.insert(ProceduralDistributions.list.HuntingLockers.items, "RustillerysHats.Hat_HatCanteen");
-table.insert(ProceduralDistributions.list.HuntingLockers.items, 6);
+table.insert(ProceduralDistributions.list.HuntingLockers.items, 6); ]]
