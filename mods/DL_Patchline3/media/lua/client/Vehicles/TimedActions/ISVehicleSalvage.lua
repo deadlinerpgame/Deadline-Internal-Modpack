@@ -2,33 +2,44 @@ require "TimedActions/ISBaseTimedAction"
 
 ISVehicleSalvage = ISBaseTimedAction:derive("ISVehicleSalvage")
 
-ISVehicleSalvage.BASE_ROLLS = 2
-ISVehicleSalvage.LEVELS_PER_ROLL = 3
+ISVehicleSalvage.ROLLS = {
+    [0] = { 5, 7 },
+    { 5, 7 },
+    { 6, 7 },
+    { 6, 7 },
+    { 6, 8 },
+    { 6, 8 },
+    { 7, 9 },
+    { 8, 11 },
+    { 10, 13 },
+    { 12, 16 },
+    { 14, 19 },
+}
 
 ISVehicleSalvage.POOL = {
-    { "DL_MetalLine.Scrap_Iron_S", 14 },
-    { "DL_MetalLine.Scrap_Iron_M", 10 },
-    { "DL_MetalLine.Scrap_Iron_L", 3 },
-    { "DL_MetalLine.Scrap_Carbon_S", 6 },
-    { "DL_MetalLine.Scrap_Carbon_M", 3 },
+    { "DL_MetalLine.Scrap_Iron_S", 10 },
+    { "DL_MetalLine.Scrap_Iron_M", 12 },
+    { "DL_MetalLine.Scrap_Iron_L", 8 },
+    { "DL_MetalLine.Scrap_Carbon_S", 5 },
+    { "DL_MetalLine.Scrap_Carbon_M", 4 },
     { "DL_MetalLine.Scrap_Aluminum_S", 8 },
-    { "DL_MetalLine.Scrap_Aluminum_M", 4 },
-    { "DL_MetalLine.Scrap_Copper_S", 6 },
-    { "DL_MetalLine.Scrap_Copper_M", 2 },
-    { "DL_MetalLine.Scrap_Lead_S", 4 },
-    { "DL_MetalLine.Scrap_Lead_M", 1 },
-    { "DL_MetalLine.Scrap_Zinc_S", 3 },
-    { "DL_MetalLine.Scrap_Nickel_S", 3 },
+    { "DL_MetalLine.Scrap_Aluminum_M", 8 },
+    { "DL_MetalLine.Scrap_Copper_S", 4 },
+    { "DL_MetalLine.Scrap_Copper_M", 1 },
+    { "DL_MetalLine.Scrap_Lead_S", 5 },
+    { "DL_MetalLine.Scrap_Lead_M", 2 },
+    { "DL_MetalLine.Scrap_Zinc_S", 4 },
+    { "DL_MetalLine.Scrap_Nickel_S", 2 },
     { "DL_MetalLine.Scrap_Chromium_S", 3 },
     { "DL_MetalLine.Scrap_Chromium_M", 1 },
-    { "DL_MetalLine.Scrap_Tin_S", 2 },
-    { "DL_MetalLine.Scrap_Silver_S", 1 },
-    { "DL_MetalLine.Scrap_Gold_S", 1 },
-    { "Base.SmallSheetMetal", 6 },
-    { "Base.SheetMetal", 3 },
-    { "Base.MetalBar", 3 },
-    { "Base.MetalPipe", 3 },
-    { "Base.ScrapMetal", 4 },
+    { "DL_MetalLine.Scrap_Tin_S", 1 },
+    { "DL_MetalLine.Scrap_Silver_S", 2 },
+    { "DL_MetalLine.Scrap_Gold_S", 2 },
+    { "Base.SmallSheetMetal", 16 },
+    { "Base.SheetMetal", 4 },
+    { "Base.MetalBar", 20 },
+    { "Base.MetalPipe", 20 },
+    { "Base.ScrapMetal", 20 },
 }
 
 function ISVehicleSalvage:isValid()
@@ -72,7 +83,8 @@ function ISVehicleSalvage:perform()
         self.character:getEmitter():stopSound(self.sound)
     end
     local level = self.character:getPerkLevel(Perks.MetalWelding)
-    local rolls = ISVehicleSalvage.BASE_ROLLS + math.floor(level / ISVehicleSalvage.LEVELS_PER_ROLL)
+    local range = ISVehicleSalvage.ROLLS[level]
+    local rolls = ZombRand(range[1], range[2] + 1)
     local totalXp = 10;
     for i = 1, rolls do
         self:dropItem(DLSalvage.pick(ISVehicleSalvage.POOL))
