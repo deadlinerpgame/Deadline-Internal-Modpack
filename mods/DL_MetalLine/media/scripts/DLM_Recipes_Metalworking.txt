@@ -8,7 +8,7 @@ module Base
         	keep [Recipe.GetItemTypes.Hammer],
         	keep WeldingMask,
 
-		SkillRequired:MetalWelding=6,
+		SkillRequired:MetalWelding=2,
         	Result:NailsBox,
         	Time:140.0,
         	Sound:BlowTorch,
@@ -22,7 +22,7 @@ module Base
         	keep [Recipe.GetItemTypes.Hammer],
         	keep WeldingMask,
 
-		SkillRequired:MetalWelding=6,
+		SkillRequired:MetalWelding=1,
         	Result:JarLid,
         	Time:140.0,
         	Sound:BlowTorch,
@@ -35,7 +35,7 @@ module Base
         	BlowTorch=5,
         	keep [Recipe.GetItemTypes.Hammer],
         	keep WeldingMask,
-		SkillRequired:MetalWelding=6,
+		SkillRequired:MetalWelding=4,
 
         	Result:ScrewsBox,
         	Time:140.0,
@@ -151,7 +151,7 @@ module Base
 		aerx.IronBar=2,
 		Wire,
 		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
-		SkillRequired:MetalWelding=4,
+		SkillRequired:MetalWelding=3,
 
         	Result:Base.PaintbucketEmpty,
         	Time:140.0,
@@ -166,7 +166,7 @@ module Base
 		DL_MetalLine.Ingot_Iron=2,
 		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
 		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
-		SkillRequired:MetalWelding=4,
+		SkillRequired:MetalWelding=3,
 
         	Result:WeldingRods=2,
         	Time:140.0,
@@ -182,7 +182,7 @@ module Base
 		keep [Recipe.GetItemTypes.WeldingMask],
 
 		NoBrokenItems			: false,
-		SkillRequired:MetalWelding=8,
+		SkillRequired:MetalWelding=4,
         	Result           		: NailsBox,
         	Time             		: 500.0,
 	    	Sound 					: CutSheet,
@@ -203,7 +203,7 @@ module Base
 		keep [Recipe.GetItemTypes.WeldingMask],
 
 		NoBrokenItems			: false,
-		SkillRequired:MetalWelding=6,
+		SkillRequired:MetalWelding=5,
         	Result           		: Radio.ElectricWire=8,
         	Time             		: 500.0,
 	    	Sound 					: CutSheet,
@@ -225,7 +225,7 @@ module Base
         Category:Smithing,
 	RemoveResultItem:true,
 	OnCreate:Recipe.OnCreate.DLForgeX4,
-	SkillRequired:MetalWelding=5,
+	SkillRequired:MetalWelding=1,
 
     }
 
@@ -238,7 +238,7 @@ module Base
         Time:255.0,
         Category:Smithing,
 	OnCreate:Recipe.OnCreate.DLForge,
-	SkillRequired:MetalWelding=5,
+	SkillRequired:MetalWelding=3,
 
     }
 
@@ -251,7 +251,7 @@ module Base
 		keep Saw,
 		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
 		keep [Recipe.GetItemTypes.WeldingMask],
-		SkillRequired:MetalWelding=6,
+		SkillRequired:MetalWelding=5,
 
         	Result:aerx.File,
         OnCreate:Recipe.OnCreate.DLForge,
