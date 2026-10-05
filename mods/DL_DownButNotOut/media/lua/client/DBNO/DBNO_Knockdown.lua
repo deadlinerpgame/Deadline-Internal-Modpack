@@ -276,6 +276,7 @@ function K.onPlayerUpdate(player)
 
     if md.dbno_downed then
         setUntargetable(player, true)
+        player:getBodyDamage():setFoodSicknessLevel(0)
         local crawled = DBNO.Crawl.track(player, md.dbno_downedStart)
         if not DBNO.tickDownedHealth(player, md.dbno_downedStart, crawled) then
             K.realDeath(player)

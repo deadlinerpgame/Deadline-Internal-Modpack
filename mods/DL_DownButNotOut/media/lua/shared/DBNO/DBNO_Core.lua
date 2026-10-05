@@ -1059,16 +1059,26 @@ local function countWounds(captured)
     return c
 end
 
+local function cureInfection(bd, parts)
+    bd:setInfected(false)
+    bd:setInfectionLevel(0)
+    bd:setInfectionTime(-1)
+    bd:setInfectionMortalityDuration(-1)
+    bd:setIsFakeInfected(false)
+    bd:setFakeInfectionLevel(0)
+    bd:setReduceFakeInfection(false)
+    for i = 0, partCount() - 1 do
+        local bp = parts:get(i)
+        bp:SetInfected(false)
+        bp:SetFakeInfected(false)
+    end
+end
+
 function DBNO.DeathWounds.applyTreated(player, captured)
     if captured == nil then return end
     local C = DBNO.cfg()
     local bd = player:getBodyDamage()
     local parts = bd:getBodyParts()
-
-    if C.reviveCureInfection then
-        bd:setInfected(false)
-        bd:setInfectionMortalityDuration(-1)
-    end
 
     for i, w in pairs(captured) do
         local bp = parts:get(i)
@@ -1105,6 +1115,8 @@ function DBNO.DeathWounds.applyTreated(player, captured)
         bp:setBleeding(false)
         bp:setBleedingTime(0)
     end
+
+    if C.reviveCureInfection then cureInfection(bd, parts) end
 
     local count = countWounds(captured)
     local hp = 100 - C.reviveWoundHpPenalty * count
@@ -1155,4 +1167,5 @@ function DBNO.DeathWounds.applyRaw(player, captured)
             bp:setBleedingTime(20)
         end
     end
+    if DBNO.cfg().reviveCureInfection then cureInfection(bd, parts) end
 end
