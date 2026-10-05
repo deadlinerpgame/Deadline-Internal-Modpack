@@ -496,6 +496,42 @@ function DBNO.Life.wipe(username)
     return true
 end
 
+DBNO.Retire = DBNO.Retire or {}
+DBNO.Retire._noBag = DBNO.Retire._noBag or {}
+
+function DBNO.Retire.suppressBag(username)
+    if username == nil then return end
+    DBNO.Retire._noBag[username] = true
+end
+
+function DBNO.Retire.takeBagSuppression(username)
+    if username == nil then return false end
+    local on = DBNO.Retire._noBag[username] == true
+    DBNO.Retire._noBag[username] = nil
+    return on
+end
+
+function DBNO.Life.retire(username)
+    if username == nil or DBNO.Paths.accountDir(username) == nil then
+        return false
+    end
+
+    DBNO.Life.wipe(username)
+    DBNO.Life.setFinalPending(username, false)
+
+    local wt = DBNO.Paths.woundTimeFile(username)
+    if wt then DBNO.Files.writeString(wt, "") end
+    local ds = DBNO.Paths.deathSpotFile(username)
+    if ds then DBNO.Files.writeString(ds, "") end
+
+    if DBNO.Respawn and DBNO.Respawn._spawnAt then
+        DBNO.Respawn._spawnAt[username] = nil
+    end
+
+    DBNO.Retire.suppressBag(username)
+    return true
+end
+
 DBNO.Players = DBNO.Players or {}
 local function playersIndexPath() return DBNO.Config.dataRoot .. "/_players.txt" end
 function DBNO.Players.list()

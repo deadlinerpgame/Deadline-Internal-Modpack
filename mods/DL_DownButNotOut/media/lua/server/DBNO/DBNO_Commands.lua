@@ -23,6 +23,29 @@ end
 DBNO.Respawn = DBNO.Respawn or {}
 DBNO.Respawn._spawnAt = DBNO.Respawn._spawnAt or {}
 
+DBNO.Retire = DBNO.Retire or {}
+
+function DBNO.Retire.run(player, actor)
+    if player == nil then return false end
+    local user = DBNO.accountName(player)
+    if user == nil then return false end
+
+    DBNO.Retire.stripAndLog(player)
+    local ok = DBNO.Life.retire(user)
+    if not ok then return false end
+
+    sendServerCommand(player, "DBNOLife", "retired", {})
+    DBNO.Audit.log(tostring(actor or user), user, "retirement", "active", "retired")
+    return true
+end
+
+Events.OnClientCommand.Add(function(module, command, player, args)
+    if module ~= "DBNOLife" or player == nil then return end
+    if command == "retire" then
+        DBNO.Retire.run(player, DBNO.accountName(player))
+    end
+end)
+
 Events.OnClientCommand.Add(function(module, command, player, args)
     if module ~= "DBNORespawn" or player == nil then return end
     if command == "setRespawn" then
@@ -109,6 +132,8 @@ local function onCharacterReady(player, payload)
     end
 
     DBNO.Rescue.respawnClothes(player, user)
+
+    DBNO.Retire.takeBagSuppression(user)
 
     local pt = DBNO.Respawn._spawnAt[user]
     if pt ~= nil then
@@ -315,8 +340,7 @@ function knock.realdeath(player, args, user)
 end
 
 function knock.retire(player, args, user)
-    DBNO.Life.wipe(user)
-    DBNO.Life.setFinalPending(user, true)
+    DBNO.Retire.run(player, user)
 end
 
 function knock.forcedeath(player)

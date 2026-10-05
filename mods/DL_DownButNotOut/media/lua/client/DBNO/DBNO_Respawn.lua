@@ -146,6 +146,21 @@ function DBNO.Wounds.isFinalNow()
 end
 
 Events.OnServerCommand.Add(function(module, command, args)
+    if module ~= "DBNOLife" then return end
+    if command == "retired" then
+        DBNO.Respawn._finalSpawn = nil
+        DBNO.Respawn._pendingSpawn = nil
+        DBNO.Respawn._pendingUntil = nil
+        DBNO.Respawn.point = nil
+        DBNO.Respawn._desc = nil
+        DBNO.Respawn._md = nil
+        DBNO.Respawn._skin = nil
+        DBNO.Wounds.finalDeath = false
+        DBNO.Wounds.count = 0
+    end
+end)
+
+Events.OnServerCommand.Add(function(module, command, args)
     if module ~= "DBNOWounds" then return end
     if command == "deathState" then
         DBNO.Wounds.finalDeath = args.final and true or false

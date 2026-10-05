@@ -18,26 +18,26 @@ local function newItem(fullType)
     return InventoryItemFactory.CreateItem(fullType)
 end
 
-local function writeDeathLog(username, lines, moved, woundLog, character)
+local function writeDeathLog(username, lines, moved, woundLog, character, kind)
     local dir = DBNO.Paths.accountDir(username) .. "/DeathItemLogs"
     local counterPath = dir .. "/next.txt"
     local n = tonumber(DBNO.Files.readString(counterPath)) or 1
     local out = {
-        "Death drop: user '" .. username .. "', entry #" .. tostring(n),
+        (kind or "Death drop") .. ": user '" .. username .. "', entry #" .. tostring(n),
         "ts=" .. tostring(getTimestamp()),
         "items moved=" .. tostring(moved),
         "",
     }
     for _, l in ipairs(lines) do out[#out + 1] = l end
     out[#out + 1] = ""
-    out[#out + 1] = "Wounds at death:"
+    out[#out + 1] = (kind == nil) and "Wounds at death:" or "Wounds when retired:"
     if woundLog and #woundLog > 0 then
         for _, wl in ipairs(woundLog) do out[#out + 1] = "  " .. tostring(wl) end
     else
         out[#out + 1] = "  (none recorded)"
     end
     out[#out + 1] = ""
-    out[#out + 1] = "Character at death:"
+    out[#out + 1] = (kind == nil) and "Character at death:" or "Character when retired:"
     local described = DBNO.Rescue.takeDeathInfo(username) or DBNO.Snap.describe(character)
     for _, l in ipairs(described) do out[#out + 1] = "  " .. tostring(l) end
 
@@ -48,8 +48,13 @@ local function writeDeathLog(username, lines, moved, woundLog, character)
     end
 end
 
-local function dumpOnDeath(character, isReal)
+local function dumpOnDeath(character, isReal, retiring)
     local username = character:getUsername() or "?"
+
+    if not retiring and DBNO.Retire.takeBagSuppression(username) then
+        DBNO.Death.firstFire("dump", character)
+        return
+    end
 
     if not DBNO.Death.firstFire("dump", character) then
         return
@@ -59,7 +64,7 @@ local function dumpOnDeath(character, isReal)
     if sq == nil then sq = character:getSquare() end
     if sq == nil then return end
 
-    local rescue = (not (DBNO.Config.knockdownEnable == false)) and not isReal
+    local rescue = (not (DBNO.Config.knockdownEnable == false)) and not isReal and not retiring
 
     local bagType = DBNO.Config.deathBagType
     local bag = newItem(bagType)
@@ -174,7 +179,14 @@ local function dumpOnDeath(character, isReal)
     end
 
     local lines = DBNO.ItemTree.containerLines(bagCont)
-    writeDeathLog(username, lines, moved, character:getModData().dbno_deathWoundLog, character)
+    writeDeathLog(username, lines, moved, character:getModData().dbno_deathWoundLog, character,
+        retiring and "Retirement" or nil)
+
+    if retiring then
+        DBNO.DeathSpot.clear(username)
+        DBNO.Rescue.broadcastCorpseRemoval(sq:getX(), sq:getY(), sq:getZ(), onlineId, tag)
+        return
+    end
 
     DBNO.DeathSpot.set(username, sq:getX(), sq:getY(), sq:getZ())
 
@@ -189,6 +201,14 @@ local function dumpOnDeath(character, isReal)
     end
 
     DBNO.Rescue.broadcastCorpseRemoval(sq:getX(), sq:getY(), sq:getZ(), onlineId, tag)
+end
+
+DBNO.Retire = DBNO.Retire or {}
+
+function DBNO.Retire.stripAndLog(character)
+    if character == nil then return false end
+    dumpOnDeath(character, true, true)
+    return true
 end
 
 Events.OnClientCommand.Add(function(module, command, player, args)
