@@ -31,14 +31,8 @@ ISVehicleSalvage.POOL = {
     { "Base.ScrapMetal", 4 },
 }
 
-local function predicateBlowTorch(item)
-    return (item ~= nil) and
-            (item:hasTag("BlowTorch") or item:getType() == "BlowTorch") and
-            (item:getDrainableUsesInt() >= 10)
-end
-
 function ISVehicleSalvage:isValid()
-    if not predicateBlowTorch(self.character:getPrimaryHandItem()) then
+    if not DLSalvage.isTorch(self.character:getPrimaryHandItem()) then
         return false
     end
     return self.vehicle and not self.vehicle:isRemovedFromWorld() and not DLSalvage.isSalvaged(self.vehicle)
@@ -84,7 +78,7 @@ function ISVehicleSalvage:perform()
         self:dropItem(DLSalvage.pick(ISVehicleSalvage.POOL))
         totalXp = totalXp + 2
     end
-    for i = 1, 10 do
+    for i = 1, DLSalvage.REQUIRE.torchUses do
         self.item:Use();
     end
     self.character:getXp():AddXP(Perks.MetalWelding, totalXp);
