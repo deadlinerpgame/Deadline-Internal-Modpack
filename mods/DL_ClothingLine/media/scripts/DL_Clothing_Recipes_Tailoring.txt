@@ -92,7 +92,7 @@ module Base
 
         	Result:Hat_Beany,
         	Time:500.0,
-		SkillRequired:Tailoring=6,
+		SkillRequired:Tailoring=3,
 		Sound:ClothesRipping,
 		Prop1:KnittingNeedles,
 		Prop2:Yarn,
@@ -130,6 +130,145 @@ module Base
         	Category:Tailoring,
 	}
 
+    recipe Make Ankle Holster
+    {
+        Thread=4,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=1,
+        aerx.Buckle=1,
+        keep Needle,
+        LeatherStrips/LeatherStripsDirty=4,
+
+        Result:HolsterAnkle,
+        Time:100.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Shoulder Holster
+    {
+        Thread=6,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=2,
+        aerx.Buckle=2,
+        keep Needle,
+        LeatherStrips/LeatherStripsDirty=6,
+
+        Result:HolsterShoulder,
+        Time:100.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make B42 Double Holster
+    {
+        Belt2=1,
+        Thread=8,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=2,
+        aerx.Buckle=1,
+        keep Needle,
+        LeatherStrips/LeatherStripsDirty=8,
+
+        Result:HolsterDoubleB42,
+        Time:100.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make B42 Holster
+    {
+        Belt2=1,
+        Thread=4,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=1,
+        aerx.Buckle=1,
+        keep Needle,
+        LeatherStrips/LeatherStripsDirty=4,
+
+        Result:HolsterSimpleB42,
+        Time:100.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Black Holster
+    {
+        Belt2=1,
+        Thread=4,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=1,
+        aerx.Buckle=1,
+        keep Needle,
+        LeatherStrips/LeatherStripsDirty=4,
+
+        Result:HolsterSimple_Black,
+        Time:100.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Brown Holster
+    {
+        Belt2=1,
+        Thread=4,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=1,
+        aerx.Buckle=1,
+        keep Needle,
+        LeatherStrips/LeatherStripsDirty=4,
+
+        Result:HolsterSimple_Brown,
+        Time:100.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Green Holster
+    {
+        Belt2=1,
+        Thread=4,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=1,
+        aerx.Buckle=1,
+        keep Needle,
+        LeatherStrips/LeatherStripsDirty=4,
+
+        Result:HolsterSimple_Green,
+        Time:100.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Hide Holster
+    {
+        Belt2=1,
+        Thread=4,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan=1,
+        aerx.Buckle=1,
+        keep Needle,
+        LeatherStrips/LeatherStripsDirty=4,
+
+        Result:Holster_Hide,
+        Time:100.0,
+        SkillRequired:Tailoring=6,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
+    recipe Make Duct Tape Holster
+    {
+        Belt2=1,
+        DuctTape=2,
+        LeatherStrips/LeatherStripsDirty=2,
+
+        Result:Holster_DuctTape,
+        Time:50.0,
+        SkillRequired:Tailoring=2,
+        Sound:ClothesRipping,
+        Category:Tailoring,
+    }
+
     recipe Craft John Rhoul's Hat
 	{
 		LeatherStrips=3,
@@ -142,7 +281,7 @@ module Base
        		NeedToBeLearn:true,
        		Time:70.0,
       		Category:Tailoring,
-		SkillRequired:Tailoring=8,
+		SkillRequired:Tailoring=6,
     	}
 
     recipe Craft Sturdy Rope
@@ -207,7 +346,7 @@ module Base
        		Result:CBX_Sumk_2_L,
        		Time:70.0,
       		Category:Tailoring,
-		SkillRequired:Tailoring=7,
+		SkillRequired:Tailoring=6,
     	}
 
     recipe Create a Cotton Fabric Roll
@@ -460,7 +599,7 @@ module Base
 
         Result:Big_HoodieDOWN_WhiteTINT,
         Time:100.0,
-        SkillRequired:Tailoring=10,
+        SkillRequired:Tailoring=6,
         Sound:ClothesRipping,
         Category:Tailoring,
     }
@@ -476,7 +615,7 @@ module Base
 
         Result:Big_HoodieDOWN_WhiteTINT_Decal,
         Time:100.0,
-        SkillRequired:Tailoring=10,
+        SkillRequired:Tailoring=6,
         Sound:ClothesRipping,
         Category:Tailoring,
     }
@@ -492,7 +631,7 @@ module Base
 
         Result:Big_Sweater_WhiteTINT,
         Time:100.0,
-        SkillRequired:Tailoring=10,
+        SkillRequired:Tailoring=6,
         Sound:ClothesRipping,
         Category:Tailoring,
     }
@@ -508,7 +647,7 @@ module Base
 
         Result:Big_Sweater_WhiteTINT_Decal,
         Time:100.0,
-        SkillRequired:Tailoring=10,
+        SkillRequired:Tailoring=6,
         Sound:ClothesRipping,
         Category:Tailoring,
     }
