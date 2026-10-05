@@ -637,87 +637,87 @@ table.insert(ProceduralDistributions.list.LockerClassy.items, 0.4);
 table.insert(ProceduralDistributions.list.LockerClassy.items, "RustillerysHats.Hat_GauchoTINT");
 table.insert(ProceduralDistributions.list.LockerClassy.items, 0.4);
 
---WardrobeGeneric
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Flatcap");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
+--WardrobeGeneric - looks to be bugged
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Flatcap");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Flatcap_PlaidTINT");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Flatcap_PlaidTINT");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Flatcap_Tweed");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Flatcap_Tweed");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_FlatcapTINT");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.4);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_FlatcapTINT");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.4);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_BakerBoy");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_BakerBoy");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_BakerBoy_Tweed");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_BakerBoy_Tweed");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_BakerBoyTINT");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.4);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_BakerBoyTINT");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.4);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_BakerBoy_PlaidTINT");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.4);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_BakerBoy_PlaidTINT");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.4);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_FishermanCap");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.4);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_FishermanCap");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.4);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_FishermanCapPunk");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.4);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_FishermanCapPunk");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.4);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Punkcap_Leather");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.4);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Punkcap_Leather");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.4);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_FrenchBeret");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_FrenchBeret");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_FrenchBeretTINT");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_FrenchBeretTINT");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.6);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Bowler");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Bowler");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_BowlerTINT");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_BowlerTINT");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Bowler_Fancy");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Bowler_Fancy");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Tophat");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Tophat");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_TophatTINT");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_TophatTINT");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Tophat_Fancy");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Tophat_Fancy");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Glasses_MechanicGoggles_Cosmetic");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.3);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Glasses_MechanicGoggles_Cosmetic");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.3);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_TamOShanter");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_TamOShanter");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Ushanka");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.3);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Ushanka");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.3);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_UshankaTINT");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.3);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_UshankaTINT");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.3);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_UshankaCamo");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.3);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_UshankaCamo");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.3);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Slouch_Right");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.3);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Slouch_Right");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.3);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Gaucho");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_Gaucho");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
 
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_GauchoTINT");
-table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, "RustillerysHats.Hat_GauchoTINT");
+-- table.insert(ProceduralDistributions.list.WardrobeGeneric.items, 0.1);
 
 --ArmySurplusHeadwear
 table.insert(ProceduralDistributions.list.ArmySurplusHeadwear.items, "RustillerysHats.Glasses_AviatorGoggles");
