@@ -69,6 +69,7 @@ module Base
 
     recipe Craft a Hand Press Kit
     {
+        Base.Stone=10,
         Base.Plank=4,
         Base.Nails=4,
         CanBeDoneFromFloor:true,
@@ -81,6 +82,7 @@ module Base
 
     recipe Craft a Sculpting Table Kit
     {
+        Base.Stone=10,
         Base.Plank=4,
         Base.Nails=4,
         CanBeDoneFromFloor:true,
@@ -97,7 +99,7 @@ module Base
         keep Hammer,
         aerx.LongStick=6,
         Base.Twine=8,
-        Base.Nails=2,
+        Base.Nails=4,
         CanBeDoneFromFloor:true,
         Result:Base.DryingRackConstructionSet,
         Time:600.0,
@@ -129,6 +131,7 @@ module Base
         Base.BucketEmpty,
         Base.Plank=6,
         Base.Nails=10,
+        Base.Screws=10,
         Base.GlassPane=4,
         CanBeDoneFromFloor:true,
         Result:Base.BrewingStationConstructionSet,
@@ -185,6 +188,7 @@ module Base
         Base.BucketEmpty,
         Base.Plank=6,
         Base.Nails=10,
+        Base.Screws=10,
         Base.MortarPestle,
         Base.Paintbrush,
         Base.GlassPane=4,
@@ -229,6 +233,7 @@ module Base
         keep Hammer,
         Base.Plank=6,
         Base.Nails=8,
+        Base.Screws=8,
         aerx.Buckle = 2,
         Base.Thread=2,
         Base.FabricRoll_Cotton/aerx.FabricRoll_Cotton/Base.FabricRoll = 2,
