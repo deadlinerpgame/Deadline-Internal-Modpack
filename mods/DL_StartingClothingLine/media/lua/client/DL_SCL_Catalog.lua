@@ -218,4 +218,15 @@ return {
         "AuthenticZLite.CrutchLEFT",
         "AuthenticZLite.CrutchRIGHT",
     },
+    Back = {
+        "B42Bags.Bag_BigHikingBag_Travel",
+        "B42Bags.Bag_CraftedFramepack_Large",
+        "B42Bags.Bag_CraftedFramepack_Large",
+        "B42Bags.Bag_TarpFramepack_Small",
+        "B42Bags.Bag_CraftedFramepack_Small",
+        "B42Bags.Bag_CraftedFramepack_Large3",
+        "B42Bags.Bag_HikingBag_Travel",
+        "Bag_SheetSlingBag",
+        "Bag_TarpSlingBag"
+    },
 }
