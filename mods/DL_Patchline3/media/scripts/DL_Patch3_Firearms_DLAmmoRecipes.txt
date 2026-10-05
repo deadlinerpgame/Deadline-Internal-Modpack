@@ -1,0 +1,482 @@
+module Base
+{
+    recipe Gather Gunpowder
+    {
+        DLBullets22=4,
+        Result:GunPowder,
+        Time:30.0,
+    }
+
+    recipe Gather Gunpowder
+    {
+        DLBullets38=4,
+        Result:GunPowder,
+        Time:30.0,
+    }
+
+    recipe Gather Gunpowder
+    {
+        DLBullets357=4,
+        Result:GunPowder,
+        Time:30.0,
+    }
+
+    recipe Gather Gunpowder
+    {
+        DLBullets44=3,
+        Result:GunPowder,
+        Time:30.0,
+    }
+
+    recipe Gather Gunpowder
+    {
+        DLBullets45=4,
+        Result:GunPowder,
+        Time:30.0,
+    }
+
+    recipe Gather Gunpowder
+    {
+        DLBullets9mm=4,
+        Result:GunPowder,
+        Time:30.0,
+    }
+
+    recipe Gather Gunpowder
+    {
+        DL223Bullets=3,
+        Result:GunPowder,
+        Time:30.0,
+    }
+
+    recipe Gather Gunpowder
+    {
+        DL556Bullets=3,
+        Result:GunPowder,
+        Time:30.0,
+    }
+
+    recipe Gather Gunpowder
+    {
+        DL762x39Bullets=2,
+        Result:GunPowder,
+        Time:30.0,
+    }
+
+    recipe Gather Gunpowder
+    {
+        DL308Bullets=2,
+        Result:GunPowder,
+        Time:30.0,
+    }
+
+    recipe Gather Gunpowder
+    {
+        DL762x51Bullets=2,
+        Result:GunPowder,
+        Time:30.0,
+    }
+
+    recipe Gather Gunpowder
+    {
+        DLShotgunShells=2,
+        Result:GunPowder,
+        Time:30.0,
+    }
+
+    recipe Gather Gunpowder
+    {
+        DLBullets3006=2,
+        Result:GunPowder,
+        Time:30.0,
+    }
+
+    recipe Use as 5.56x45mm
+    {
+        DL223Bullets,
+        Result:DL556Bullets=1,
+        Time:0,
+        StopOnWalk:false,
+    }
+
+    recipe Use as .223
+    {
+        DL556Bullets,
+        Result:DL223Bullets=1,
+        Time:0,
+        StopOnWalk:false,
+    }
+
+    recipe Use as 7.62x51mm
+    {
+        DL308Bullets,
+        Result:DL762x51Bullets=1,
+        Time:0,
+        StopOnWalk:false,
+    }
+
+    recipe Use as .308
+    {
+        DL762x51Bullets,
+        Result:DL308Bullets=1,
+        Time:0,
+        StopOnWalk:false,
+    }
+
+    recipe Convert to .357
+    {
+        DLBullets38,
+        Result:DLBullets357=1,
+        Time:0,
+        StopOnWalk:false,
+    }
+
+    recipe Use as 5.56x45mm
+    {
+        DL223Box,
+        Result:DL556Box=1,
+        Time:0,
+        StopOnWalk:false,
+    }
+
+    recipe Use as .223
+    {
+        DL556Box,
+        Result:DL223Box=1,
+        Time:0,
+        StopOnWalk:false,
+    }
+
+    recipe Use as 7.62x51mm
+    {
+        DL308Box,
+        Result:DL762x51Box=1,
+        Time:0,
+        StopOnWalk:false,
+    }
+
+    recipe Use as .308
+    {
+        DL762x51Box,
+        Result:DL308Box=1,
+        Time:0,
+        StopOnWalk:false,
+    }
+
+    recipe Convert Box to .357
+    {
+        DLBullets38Box,
+        Result:DLBullets357Box=1,
+        Time:0,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of 9mm Bullets
+    {
+        DLBullets9mmBox,
+        Result:DLBullets9mm=10,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of .45 Auto Bullets
+    {
+        DLBullets45Box,
+        Result:DLBullets45=10,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of .38 Special Bullets
+    {
+        DLBullets38Box,
+        Result:DLBullets38=10,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of .44 Magnum Bullets
+    {
+        DLBullets44Box,
+        Result:DLBullets44=10,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of Shotgun Shells
+    {
+        DLShotgunShellsBox,
+        Result:DLShotgunShells=5,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of .556 Ammo
+    {
+        DL556Box,
+        Result:DL556Bullets=4,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place .556 Ammo in Box
+    {
+        DL556Bullets=20,
+        Result:DL556Box,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of .223 Ammo
+    {
+        DL223Box,
+        Result:DL223Bullets=4,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place .223 Ammo in Box
+    {
+        DL223Bullets=20,
+        Result:DL223Box,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of .308 Ammo
+    {
+        DL308Box,
+        Result:DL308Bullets=4,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place .308 Ammo in Box
+    {
+        DL308Bullets=20,
+        Result:DL308Box,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place 9mm Bullets in Box
+    {
+        DLBullets9mm=50,
+        Result:DLBullets9mmBox,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place .45 Auto Bullets in Box
+    {
+        DLBullets45=50,
+        Result:DLBullets45Box,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place .38 Speciam Bullets in Box
+    {
+        DLBullets38=50,
+        Result:DLBullets38Box,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place .44 Magnum Bullets in Box
+    {
+        DLBullets44=50,
+        Result:DLBullets44Box,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place Shotgun Shells in Box
+    {
+        DLShotgunShells=25,
+        Result:DLShotgunShellsBox,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of 7.62x51mm Ammo
+    {
+        DL762x51Box,
+        Result:DL762x51Bullets=4,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place 7.62x51mm in Box
+    {
+        DL762x51Bullets=20,
+        Result:DL762x51Box,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of 7.62x39mm Ammo
+    {
+        DL762x39Box,
+        Result:DL762x39Bullets=4,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place 7.62x39mm in Box
+    {
+        DL762x39Bullets=20,
+        Result:DL762x39Box,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of .44-40 WCF Ammo
+    {
+        DLBullets4440Box,
+        Result:DLBullets4440=10,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place .44-40 WCF in Box
+    {
+        DLBullets4440=50,
+        Result:DLBullets4440Box,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of .22 LR Ammo
+    {
+        DLBullets22Box,
+        Result:DLBullets22=10,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place .22 LR Ammo in Box
+    {
+        DLBullets22=50,
+        Result:DLBullets22Box,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of .357 Ammo
+    {
+        DLBullets357Box,
+        Result:DLBullets357=10,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place .357 Ammo in Box
+    {
+        DLBullets357=50,
+        Result:DLBullets357Box,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Open Box of .30-06 Ammo
+    {
+        DLBullets3006Box,
+        Result:DLBullets3006=4,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+    recipe Place .30-06 Ammo in Box
+    {
+        DLBullets3006=20,
+        Result:DLBullets3006Box,
+        Sound:OpenAmmoBox,
+        Time:30.0,
+        Prop1:Bullet_Casing,
+        Prop2:Ammobox,
+        StopOnWalk:false,
+    }
+
+}

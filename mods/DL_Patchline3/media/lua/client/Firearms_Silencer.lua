@@ -74,7 +74,7 @@ function Firearms_Jay_silence(wielder, weapon, overridePart)
     if canon then
 		if getDebug() then print(canon:getType()) end
 		if string.find(canon:getType(), "Silencer") and not string.find(canon:getType(), "Broken") then
-			local weaponAmmo, replaced = string.gsub(weapon:getAmmoType(), "Base.", "")
+			local weaponAmmo = string.gsub(weapon:getAmmoType(), "Base.", ""):gsub("^DL", "")
 			local suppressor = "type" .. canon:getType():gsub("^DL", "")
 			local ammo = "caliber" .. weaponAmmo
 			if getDebug() then
@@ -179,9 +179,10 @@ function breakSuppressor(playerObj, weapon)
 	local prefix = canon:getType():match("^DL") or ""
 	local breakChanceMulti = 1
 	
-	if weapon:getAmmoBox() == "Bullets22Box" or weapon:getAmmoBox() == "Bullets38Box" then
+	local ammoBox = string.gsub(weapon:getAmmoBox() or "", "^DL", "")
+	if ammoBox == "Bullets22Box" or ammoBox == "Bullets38Box" then
 		breakChanceMulti = 4
-	elseif weapon:getAmmoBox() == "Bullets9mmBox" or weapon:getAmmoBox() == "Bullets45Box" then
+	elseif ammoBox == "Bullets9mmBox" or ammoBox == "Bullets45Box" then
 		breakChanceMulti = 2
 	end
 	
