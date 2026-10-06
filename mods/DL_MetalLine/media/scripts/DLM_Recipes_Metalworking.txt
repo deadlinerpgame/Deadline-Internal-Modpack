@@ -17,13 +17,27 @@ module Base
 
     	recipe Make Box of Screws
     	{
-        	aerx.IronFragments=5,
+        	aerx.IronScrap=5,
         	BlowTorch=5,
         	keep [Recipe.GetItemTypes.Hammer],
         	keep WeldingMask,
 		SkillRequired:MetalWelding=4,
 
         	Result:ScrewsBox,
+        	Time:140.0,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Box of Nails
+    	{
+        	aerx.IronScrap=5,
+        	BlowTorch=1,
+        	keep [Recipe.GetItemTypes.Hammer],
+        	keep WeldingMask,
+		SkillRequired:MetalWelding=4,
+
+        	Result:NailsBox,
         	Time:140.0,
         	Sound:BlowTorch,
         	Category:Welding,
