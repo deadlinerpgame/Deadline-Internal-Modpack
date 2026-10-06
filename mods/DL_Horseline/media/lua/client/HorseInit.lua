@@ -45,6 +45,10 @@ HORSE_FEED_TYPES = {
 HORSE_WATER_TYPES = {
     "Base.WaterBottleFull",
     "Base.WaterBottlePop",
+    "Base.BucketWaterFull",
+    "Base.WhiskeyWaterFull",
+    "Base.BeerWaterFull",
+    "Base.WineWaterFull",
     "AuthenticZLite.AuthenticCanteenForestGreenfull",
     "AuthenticZLite.AuthenticCanteenDarkGreenfull",
     "AuthenticZLite.AuthenticCanteenSilverfull",
