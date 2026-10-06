@@ -984,7 +984,7 @@ end
 
     local hasMouth = data.equipment.mouth and (data.equipment.mouthWear or 0) > 0 and (data.equipment.mouthFill or 0) > 0
     local mouthInfo = hasMouth and HORSE_MOUTH_TYPES[data.equipment.mouth] or nil
-    local hungerDrainMult = getTemperamentMult(data, "hungerDrainMult")
+    local hungerDrainMult = 0
     local thirstDrainMult = getTemperamentMult(data, "thirstDrainMult")
     if hasMouth and mouthInfo then
         if mouthInfo.fillType == "food" then
