@@ -712,7 +712,6 @@ function ISDonatorClothesConfirmation:onSecondConfirm(button, x, y)
         self:close()
     elseif button.internal == "YES" then
 
-
         local clothesList = {};
 
         local wornItems = self.parent.desc:getWornItems();
@@ -733,6 +732,7 @@ function ISDonatorClothesConfirmation:onSecondConfirm(button, x, y)
         self.parent:close();
         self.parent:removeFromUIManager();
 
+        local ticketItem = getPlayer():getModData()["DeadlineDonatorClothes_Item"];
         local container = ticketItem:getContainer() or getPlayer():getInventory();
         container:DoRemoveItem(ticketItem);
         container:requestSync();
