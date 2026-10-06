@@ -17,7 +17,7 @@ end
 function Recipe.OnTest.FullAndNotTainted(items)
     local item = items:get(0)
     return item
-    and item:getUsedDelta() == 1and Recipe.OnTest.NotTaintedWater(item)
+    and item:getUsedDelta() == 1 and Recipe.OnTest.NotTaintedWater(item)
 end
 
 function Recipe.OnTest.WholeFood(item)
