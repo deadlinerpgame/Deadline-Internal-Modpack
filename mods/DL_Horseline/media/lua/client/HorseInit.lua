@@ -44,6 +44,27 @@ HORSE_FEED_TYPES = {
 
 HORSE_WATER_TYPES = {
     "Base.WaterBottleFull",
+    "Base.WaterBottlePop",
+    "AuthenticZLite.AuthenticCanteenForestGreenfull",
+    "AuthenticZLite.AuthenticCanteenDarkGreenfull",
+    "AuthenticZLite.AuthenticCanteenSilverfull",
+    "AuthenticZLite.AuthenticCanteenCadetBluefull",
+    "AuthenticZLite.AuthenticCanteenDarkGreyfull",
+    "AuthenticZLite.AuthenticCanteenGreyfull",
+    "HCustoms.ModularPackCanteenBlackfull",
+    "HCustoms.ModularPackCanteenBluefull",
+    "HCustoms.ModularPackCanteenOlivefull",
+    "HCustoms.ModularPackCanteenPinkfull",
+    "HCustoms.ModularPackCanteenRedfull",
+    "HCustoms.ModularPackCanteenTanfull",
+    "HCustoms.ModularPackCanteenWhitefull",
+    "HCustoms.ModularPackCanteenBlackfull",
+    "HCustoms.ModularPackCanteenBluefull",
+    "HCustoms.ModularPackCanteenOlivefull",
+    "HCustoms.ModularPackCanteenPinkfull",
+    "HCustoms.ModularPackCanteenRedfull",
+    "HCustoms.ModularPackCanteenTanfull",
+    "HCustoms.ModularPackCanteenWhitefull", 
 }
 
 HORSE_SADDLE_TYPES = {
