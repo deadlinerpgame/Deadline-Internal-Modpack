@@ -7,7 +7,7 @@ module Base
 		MetalPipe/MetalBar=1,
 		WeldingRods=1,
 		BlowTorch=1,
-		keep WeldingMask,
+		keep [Recipe.GetItemTypes.WeldingMask],
 		SkillRequired:MetalWelding=4,
 
         	Result:Base.EmptyMethaneTank,
@@ -23,7 +23,7 @@ module Base
 		MetalPipe/MetalBar=1,
 		WeldingRods=1,
 		BlowTorch=1,
-		keep WeldingMask,
+		keep [Recipe.GetItemTypes.WeldingMask],
 		SkillRequired:MetalWelding=6,
 		NearItem:Simple Forge,
         Result:Base.PropaneTank,
