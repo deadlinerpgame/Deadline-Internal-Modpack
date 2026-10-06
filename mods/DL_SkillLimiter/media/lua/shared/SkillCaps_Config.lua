@@ -17,7 +17,7 @@ local S = DL.SkillCaps
 
 S.maxLevel = 10
 S.adminExempt = true
-S.legacyExempt = true
+S.legacyExempt = false
 S.markerKey = "DL_SkillCaps"
 S.auditSeconds = 60
 
