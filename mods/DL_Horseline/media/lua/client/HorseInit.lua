@@ -41,7 +41,7 @@ HORSE_FEED_TYPES = {
     "Base.Apple",
 
 }
-
+-- not used
 HORSE_WATER_TYPES = {
     "Base.WaterBottleFull",
     "Base.WaterBottlePop",
