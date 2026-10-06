@@ -19,7 +19,7 @@ Events.OnPlayerUpdate.Add(function(player)
 end)
 
 Events.OnNewGame.Add(function(player, square)
-    if not isLocalPlayer(player) then return end
+    if DBNO.Respawn._lastRespawn ~= nil then return end
     DL.Caps.markNewCharacter(player)
 end)
 
