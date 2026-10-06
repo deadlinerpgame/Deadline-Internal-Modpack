@@ -24,11 +24,13 @@ local function mapd(button, args)
     chosenpoint = 4
 end
 
+
+
 local function spawn()
     local playerObj = getSpecificPlayer(0)
     if chosenpoint == 1 then
-        playerObj:setX(13033);
-        playerObj:setY(5423);
+        playerObj:setX(3355);
+        playerObj:setY(2031);
         playerObj:setZ(0);
     elseif chosenpoint == 2 then
         playerObj:setX(4072);
