@@ -52,6 +52,7 @@ local function spawn()
 end
 
 local function onCreateUI()
+    if UI then UI:close() end
     UI = NewUI(0.15);
     UI:addText("title1", "Choose a Spawn Location", "Title", "Center");
     UI:setLineHeightPercent(0.03);    
@@ -93,7 +94,7 @@ local function isTileB(spr)
 end
 
 local function steppedonTile(char)
-    if not char then return end
+    if not char or char ~= getPlayer() then return end
     local sq = getCell():getGridSquare(char:getX(),char:getY(),char:getZ()) 
 	if sq and sq:getObjects() then
 		local objects = sq:getObjects()
