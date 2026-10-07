@@ -11,7 +11,7 @@ function HuntLineCow.Context(player, context, worldobjects)
 	if sq then
 		zed = sq:getZombie()
 
-		if (getCore():getDebug() or isAdmin()) then
+		if getCore():getDebug() then
 
 			local Main = context:addOptionOnTop(getText('ContextMenu_AnimalDebug'))
 
