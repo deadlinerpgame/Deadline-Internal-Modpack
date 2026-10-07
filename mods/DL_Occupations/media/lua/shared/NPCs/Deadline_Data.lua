@@ -74,7 +74,6 @@ O.occupations = {
         description = "Woodsman - Foraging, Trapping and Fishing to Level 6\nForage: Carrion Eye - Rare chance of finding corpses and shallow caches with various items\nIron Gut - Less chance for food illness",
         preset = { "woodsman", "IronGut" },
         choices = { "carrion_eye" },
-        points = O.startingPoints - 4,
     },
     sodbuster = {
         name = "Sodbuster",
@@ -143,7 +142,6 @@ O.occupations = {
         description = "Woodsman - Foraging, Trapping and Fishing to Level 6\nSpotter - Aiming to Level 8\nForage: Bones & Hide - Can forage bones and hide, and better at finding animal tracks",
         preset = { "woodsman", "spotter" },
         choices = { "forage_bones" },
-        points = O.startingPoints - 4,
     },
 }
 
