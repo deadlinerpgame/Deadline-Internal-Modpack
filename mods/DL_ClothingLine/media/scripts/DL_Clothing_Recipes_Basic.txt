@@ -1,0 +1,116 @@
+module Base
+{
+
+	recipe Craft Thread
+	{
+		RippedSheets/DenimStrips=5,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Thread,
+		Sound:ClothesRipping,
+		Time:100.0,
+		AnimNode:RipSheets,
+        SkillRequired:Tailoring=3,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Thread
+	{
+		Twine=6,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Thread,
+		Sound:ClothesRipping,
+		Time:100.0,
+		AnimNode:RipSheets,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Thread
+	{
+		Yarn=3,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Thread,
+		Sound:ClothesRipping,
+		Time:100.0,
+		AnimNode:RipSheets,
+        SkillRequired:Tailoring=3,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Twine
+	{
+		Thread=20,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Twine,
+		Time:200.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Twine
+	{
+		CottonBalls=10,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Twine,
+		Time:200.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Twine
+	{
+		Rope,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Twine=4,
+		Time:400.0,
+		SkillRequired:Tailoring=3,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+	
+	recipe Craft Yarn
+	{
+		Thread=20,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],   
+
+		CanBeDoneFromFloor:true,
+		Result:Yarn=5,
+		Time:300.0,
+		AnimNode:RipSheets,
+        SkillRequired:Tailoring=3,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+
+	recipe Craft Rope
+	{
+		Twine=25,
+		keep [Recipe.GetItemTypes.Scissors]/[Recipe.GetItemTypes.SharpKnife],
+
+		CanBeDoneFromFloor:true,
+		Result:Rope,
+		Time:400.0,
+		AnimNode:RipSheets,
+        SkillRequired:Tailoring=3,
+		Category:Tailoring,	
+		OnGiveXP:Recipe.OnGiveXP.TailoringLow,
+	}
+
+}
