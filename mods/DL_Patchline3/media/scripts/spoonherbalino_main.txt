@@ -1,0 +1,321 @@
+module Base
+{
+
+	/****************************** HERBAL MEDICINE ******************************/
+	
+	recipe Empty Bowl of Brew
+    {      
+	   AntibioticsHerbalBrew/PainkillersHerbalBrew,
+
+       Result:Bowl,
+       Time:20.0,
+       Category:Cooking,
+	   AllowRottenItem:true,
+    }
+	
+	recipe Craft Herbal Vitamins
+    {
+		Carrots;15,
+		WildGarlic2/WildGarlic=10,
+		Ginseng=10,
+		Cabbage/Ginseng/Cherry/Pineapple/Peach/Lemon/Orange/Apple/Banana/Grapes=2,
+		keep MortarPestle,
+		keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+		
+        Result: PillsVitamins,
+        Time: 450.0,
+        Category:Health,
+		NeedToBeLearn:true,
+		SkillRequired:Doctor=4;Cooking=2,
+        OnGiveXP:Recipe.OnGiveXP.MedicineMed,
+    }
+	
+	recipe Craft Herbal Antibiotics Brew
+    {
+		Bowl,
+        Vinegar=1,
+		WildGarlic2/WildGarlic=20,
+		Ginseng=10,
+		Plantain=10,
+		MushroomGeneric1/MushroomGeneric2/MushroomGeneric3/MushroomGeneric4/MushroomGeneric5/MushroomGeneric6/MushroomGeneric7;75,
+		keep MortarPestle,
+		keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+		
+        Result: AntibioticsHerbalBrew,
+        Time: 250.0,
+        Category:Health,
+		NeedToBeLearn:true,
+		SkillRequired:Doctor=6;Cooking=2,
+        OnGiveXP:Recipe.OnGiveXP.MedicineHigh,
+    }
+	
+	item AntibioticsHerbalBrew
+	{
+		DisplayCategory = Food,
+		Type			= Food,
+		Icon = BowlFull,
+		Weight		  	= 1,
+		DisplayName		= Herbal Antibiotics (Brewing),
+		CantBeFrozen 		= TRUE,
+		ReplaceOnRotten 	= AntibioticsHerbalBrewReady,
+		DaysFresh 			=		2,
+		DaysTotallyRotten 	=	 	8,
+		WorldStaticModel = BowlSoup_Ground,
+	}
+	
+	item AntibioticsHerbalBrewReady
+	{
+		DisplayCategory = Food,
+		Type			= Food,
+		Icon = BowlFull,
+		Weight		  	= 25,
+		DisplayName		= Herbal Antibiotics (Brew Ready),
+		WorldStaticModel = BowlSoup_Ground,
+	}
+	
+	recipe Empty Bowl of Antibiotics
+    {
+        AntibioticsHerbalBrewReady,
+		
+        Result: AntibioticsHerbal=3,
+        Time: 50.0,
+        Category:Health,
+        OnCreate: GetEmptySpoonBowl_OnCreate
+    }
+	
+	item AntibioticsHerbal
+    {
+        DisplayCategory = FirstAid,
+        Weight	=	0.1,
+        Type	=	Food,
+        DisplayName	=	Herbal Antibiotics,
+        Icon	=	Antibiotics,
+        ReduceInfectionPower     =   25,
+        CustomContextMenu   =   Take,
+        CantBeFrozen = TRUE,
+        Tooltip = Tooltip_Antibiotics,
+        Medical = TRUE,
+        WorldStaticModel = Antibiotics,
+    }
+	
+	recipe Craft Herbal Painkillers Brew
+    {
+		Bowl,
+        Vinegar=1,
+		Ginseng=10,
+		Rosehips/BlackSage=20,
+		MushroomGeneric1/MushroomGeneric2/MushroomGeneric3/MushroomGeneric4/MushroomGeneric5/MushroomGeneric6/MushroomGeneric7;75,
+		keep MortarPestle,
+		keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+		
+        Result: PainkillersHerbalBrew,
+        Time: 250.0,
+        Category:Health,
+		NeedToBeLearn:true,
+		SkillRequired:Doctor=5;Cooking=2,
+        OnGiveXP:Recipe.OnGiveXP.MedicineHigh,
+    }
+	
+	item PainkillersHerbalBrew
+	{
+		DisplayCategory = Food,
+		Type			= Food,
+		Icon = BowlFull,
+		Weight		  	= 1,
+		DisplayName		= Herbal Painkillers (Brewing),
+		CantBeFrozen 		= TRUE,
+		ReplaceOnRotten 	= PainkillersHerbalBrewReady,
+		DaysFresh 			=		2,
+		DaysTotallyRotten 	=	 	8,
+		WorldStaticModel = BowlSoup_Ground,
+	}
+	
+	item PainkillersHerbalBrewReady
+	{
+		DisplayCategory = Food,
+		Type			= Food,
+		Icon = BowlFull,
+		Weight		  	= 25,
+		DisplayName		= Herbal Painkillers (Brew Ready),
+		WorldStaticModel = BowlSoup_Ground,
+	}
+	
+	recipe Empty Bowl of Painkillers
+    {
+        PainkillersHerbalBrewReady,
+		
+        Result:Pills,
+        Time: 50.0,
+        Category:Health,
+        OnCreate: GetEmptySpoonBowl_OnCreate
+    }
+	
+	item PainkillersHerbal
+    {
+        DisplayCategory = FirstAid,
+		Weight	=	0.2,
+		Type	=	Drainable,
+        UseDelta	=	0.1,
+		UseWhileEquipped	=	FALSE,
+		DisplayName	=	Herbal Painkillers,
+		Icon	=	PillsPainkiller,
+		Tooltip = Tooltip_Painkillers,
+		StaticModel = PillBottle,
+		WorldStaticModel = PainKillers_Ground,
+		Medical = TRUE,
+    }
+	
+	recipe Convert HerbalPainkillers to Painkillers((DEBUG RECIPE))
+    {
+        destroy PainkillersHerbal,
+
+        Result:Pills,
+        Time:40.0,
+        Category:Health,
+		Override:true
+    }
+	
+	recipe Disinfect Rag
+    {
+        destroy RippedSheets,
+        [Recipe.GetItemTypes.Liquor];2,
+
+        Result:AlcoholRippedSheets,
+        Time:40.0,
+        Category:Health,
+		Override:true
+    }
+
+    recipe Disinfect Bandage
+    {
+        destroy Bandage,
+        [Recipe.GetItemTypes.Liquor];2,
+
+        Result:AlcoholBandage,
+        Time:40.0,
+        Category:Health,
+		Override:true
+    }
+	
+	recipe Make Mortar and Pestle
+	{
+	   Plank/Log,
+	   keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+
+	   Result:MortarPestle,
+	   SkillRequired:Woodwork=3,
+	   Sound:Hammering,
+	   Time:150.0,
+	   Category:Carpentry,
+	   Override:true
+	}
+	
+	/****************************** HERBAL TEA ******************************/
+	
+	recipe Prepare Herbal Tea
+    {      
+	   CommonMallow/Ginseng/WildGarlic2/WildGarlic=3,
+	   MugWhite,
+	   Water=3,
+
+       Result:SpoonHerbalTea,
+       Time:200.0,
+       Category:Cooking,
+	   NeedToBeLearn:true,
+		SkillRequired:Cooking=3,
+        OnGiveXP:Recipe.OnGiveXP.MedicineMed,
+    }
+
+	recipe Prepare Herbal Tea
+    {      
+	   CommonMallow/Ginseng/WildGarlic2/WildGarlic=3,
+	   MugWhite,
+	   Water=3,
+
+       Result:SpoonHerbalTea,
+       Time:200.0,
+       Category:Cooking,
+	   NeedToBeLearn:true,
+		SkillRequired:Doctor=3,
+        OnGiveXP:Recipe.OnGiveXP.MedicineMed,
+    }
+	
+	item SpoonHerbalTea
+	{
+		DisplayName = Herbal Tea,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.2,
+		Icon 				= MugWhite,
+		DaysFresh = 4,
+		GoodHot = true,
+		DaysTotallyRotten = 8,
+		HungerChange = -2,
+		ThirstChange = -15,
+		Calories = 4,
+		Carbohydrates = 0,
+		Lipids = 0.05,
+		Proteins = 0.02,
+		MinutesToCook = 10,
+		MinutesToBurn = 60,
+		EnduranceChange = 8,
+		FluReduction = 20,
+		Tooltip = Tooltip_Mallow,
+		IsCookable = TRUE,
+		RemoveNegativeEffectOnCooked = TRUE,
+		DangerousUncooked = TRUE,
+		BadInMicrowave = TRUE,
+		UnhappyChange = 30,
+		ReplaceOnUse = MugWhite,
+		StaticModel = MugWhite,
+		WorldStaticModel = MugWhite,
+	}
+	
+	recipe Empty Mug of Tea
+    {      
+	   SpoonHerbalTea,
+
+       Result:MugWhite,
+       Time:20.0,
+       Category:Cooking,
+	   AllowRottenItem:true,
+    }
+	
+	recipe Break pieces of charcoal
+    {      
+	   Charcoal;1,
+
+       Result:PieceOfCharcoal=5,
+       Time:20.0,
+       Category:Cooking,
+    }
+	
+	item PieceOfCharcoal
+	{
+		DisplayName = Piece Of Charcoal,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.1,
+		Icon 				= PieceOfCharcoal,
+		Tooltip = Tooltip_LemonGrass,
+		ReduceFoodSickness = 3,
+		UnhappyChange = 5,
+		HungerChange = -0.1,
+		ThirstChange = 10,
+	}
+	
+	/****************************** LITERATURE ******************************/
+	
+	item SpoonMagazineHerbal
+	{
+    Weight	=	0.1,
+    Type	=	Literature,
+    DisplayName	=	Herbal Medicine,
+    Icon	=	MagazineHerbalist,
+    TeachedRecipes  =   Craft Herbal Vitamins;Craft Herbal Antibiotics Brew;Craft Herbal Painkillers Brew;Extract Antibiotics from Moldy Bread;Make Herbal Antibiotics;Make Vitamins;Make Natural Antidepressants;Make Natural Beta Blockers;Make Wild Garlic Poultice;Make Comfrey Poultice;Make Plantain Poultice;Prepare Herbal Tea,
+    ReplaceOnUse    =   SpoonMagazineHerbal,
+    StaticModel = Magazine,
+    WorldStaticModel = MagazineMetal1Ground,
+	}
+
+}

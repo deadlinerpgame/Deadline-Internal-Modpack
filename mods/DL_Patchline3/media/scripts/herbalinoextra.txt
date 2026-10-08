@@ -1,0 +1,103 @@
+module Base
+{	
+	recipe Extract Antibiotics from Moldy Bread
+	{
+		BreadSlices;100,
+		Aluminum,
+		AlcoholRippedSheets,
+		Bowl,
+		keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+		
+		Result:AntibioticsHerbalBrew,
+		Time:180.0,
+		SkillRequired:Doctor=6;Cooking=2,
+		Category:Health,
+		OnGiveXP:Recipe.OnGiveXP.MedicineHigh,
+		NeedToBeLearn:true,
+		Override:true
+	}
+	
+	recipe Make Herbal Antibiotics
+	{
+		Bowl,
+		WildGarlic/WildGarlic2=10,
+		Honey;10,
+		Aluminum,
+		AlcoholRippedSheets,
+		keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+		keep RollingPin,
+		keep MortarPestle,
+		
+		Result:AntibioticsHerbalBrew,
+		Time:160.0,
+		SkillRequired:Doctor=6;Cooking=2,
+		Category:Health,
+		OnGiveXP:Recipe.OnGiveXP.MedicineHigh,
+		NeedToBeLearn:true,
+		Override:true
+	}
+	
+	recipe Make Vitamins
+	{
+		Rosehips=10,
+		Lemon/Orange;10,
+		BerryBlue;50,
+		Carrots;10,
+		Honey;10,
+		Sugar;1,
+		AlcoholRippedSheets,
+		keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+		keep [Recipe.GetItemTypes.Hammer],
+		keep Pot,
+		keep MortarPestle,
+		
+		Result:PillsVitamins=2,
+		Time:160.0,
+		SkillRequired:Doctor=4;Cooking=2,
+		Category:Health,
+		OnGiveXP:Recipe.OnGiveXP.MedicineMed,
+		NeedToBeLearn:true,
+		Override:true
+	}
+
+	recipe Make Natural Antidepressants
+	{
+		FishFillet;20,
+		SunflowerSeeds=2,
+		Peanuts=2,
+		AlcoholRippedSheets,
+		Water=5,
+		keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+		keep MortarPestle,
+		
+		Result:PillsAntiDep,
+		Time:160.0,
+		SkillRequired:Doctor=6;Cooking=2,
+		Category:Health,
+		OnGiveXP:Recipe.OnGiveXP.MedicineHigh,
+		NeedToBeLearn:true,
+		Override:true
+	}
+	
+	recipe Make Natural Beta Blockers
+	{
+		WildGarlic/WildGarlic2=3,
+		Banana;10,
+		Potato;15,
+		FishFillet;20,
+		BerryBlue;50,
+		AlcoholRippedSheets,
+		Water=5,
+		keep [Recipe.GetItemTypes.SharpKnife]/MeatCleaver,
+		keep MortarPestle,
+		
+		Result:PillsBeta,
+		Time:160.0,
+		SkillRequired:Doctor=6;Cooking=2,
+		Category:Health,
+		OnGiveXP:Recipe.OnGiveXP.MedicineHigh,
+		NeedToBeLearn:true,
+		Override:true
+	}
+	
+}
