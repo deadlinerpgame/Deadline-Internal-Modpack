@@ -1,5 +1,3 @@
--- JukeboxHero Trait
-
 local Jukebox = require("Jukebox/Utility")
 
 local JukeboxHero = {}

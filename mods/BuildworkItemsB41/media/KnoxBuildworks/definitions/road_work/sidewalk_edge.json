@@ -1,0 +1,2213 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_0",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_0"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_2",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_1",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_3",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_45",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_2"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_4",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_3",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_5",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_4",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_5"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_6",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_6",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_7",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_9",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_8"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_8",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_11",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_11"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_10"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_9",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_13",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_12"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_10",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_15",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_15"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_14"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_11",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_16",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_12",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_19",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_18"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_13",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_21",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_20"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_14",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_22",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_23"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_15",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_24",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_16",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_35",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_32"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_17",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_34",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_18",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_36",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_38"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_19",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_37",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_39"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_20",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_48",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_21",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_49",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_50"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_22",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_53",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_52"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_23",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_56",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_56"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.sidewalk_edge.sidewalk_edge_24",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_sidewalk_edge_sidewalk_edge",
+   "displayName": "Sidewalk Edge",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_sidewalk_edge_sidewalk_edge",
+   "category": "Road Work",
+   "subcategory": "Sidewalk Edge",
+   "material": "Concrete",
+   "iconSprite": "street_curbs_01_59",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_59"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_60"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_61"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "street_curbs_01_62"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "DropSoilFromGravelBag",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  }
+ ]
+}

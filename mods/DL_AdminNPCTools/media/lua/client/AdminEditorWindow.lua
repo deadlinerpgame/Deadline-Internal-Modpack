@@ -64,7 +64,8 @@ function AdminEditorWindow:initialise()
 end
 
 function AdminEditorWindow:openForZone(zone)
-    self.zone        = zone
+    self.savedZone   = deepCopyTree(zone)
+    self.zone        = deepCopyTree(zone)
     self.workingTree = deepCopyTree(zone.dialogueTree) or { nodes = {}, nodeOrder = {} }
     if not self.workingTree.nodes     then self.workingTree.nodes     = {} end
     if not self.workingTree.nodeOrder then self.workingTree.nodeOrder = {} end
@@ -81,7 +82,6 @@ function AdminEditorWindow:buildStaticButtons()
     self.btnDiscard = ISButton:new(W - PAD - BTN_W, 4, BTN_W, BTN_H, "Discard", self, AdminEditorWindow.onDiscard)
     self.btnDiscard:initialise(); self.btnDiscard:instantiate(); self:addChild(self.btnDiscard)
 
-    -- Export / Import sit to the left of Save.
     self.btnExport = ISButton:new(W - PAD - BTN_W*4 - 12, 4, BTN_W, BTN_H, "Export", self, AdminEditorWindow.onExport)
     self.btnExport:initialise(); self.btnExport:instantiate(); self:addChild(self.btnExport)
 
@@ -113,11 +113,38 @@ end
 function AdminEditorWindow:onImport()
     local self_ref = self
     JsonIOWindow.openImport("Import NPC (replaces current data)", function(data)
-        if type(data) ~= "table" then error("not an object") end
-        if type(data.dialogueTree) ~= "table" then error("missing dialogueTree") end
+        if type(data) ~= "table" then return "not an object" end
+        if type(data.dialogueTree) ~= "table" then return "missing dialogueTree" end
         local tree = data.dialogueTree
         if type(tree.nodes) ~= "table" then tree.nodes = {} end
         if type(tree.nodeOrder) ~= "table" then tree.nodeOrder = {} end
+        local order = {}
+        for _, nid in ipairs(tree.nodeOrder) do
+            local node = tree.nodes[nid]
+            if type(nid) == "string" and type(node) == "table" then
+                if type(node.editorName) ~= "string" then node.editorName = "" end
+                if type(node.npcText) ~= "string" then node.npcText = "" end
+                local responses = {}
+                if type(node.responses) == "table" then
+                    for _, resp in ipairs(node.responses) do
+                        if type(resp) == "table" then
+                            if resp.label ~= nil then resp.label = tostring(resp.label) end
+                            local conds = {}
+                            if type(resp.conditions) == "table" then
+                                for _, cond in ipairs(resp.conditions) do
+                                    if type(cond) == "table" then conds[#conds + 1] = cond end
+                                end
+                            end
+                            resp.conditions = conds
+                            responses[#responses + 1] = resp
+                        end
+                    end
+                end
+                node.responses = responses
+                order[#order + 1] = nid
+            end
+        end
+        tree.nodeOrder = order
 
         self_ref.zone.name     = tostring(data.name or self_ref.zone.name or "")
         self_ref.zone.portrait = tostring(data.portrait or "")
@@ -517,13 +544,15 @@ function AdminEditorWindow:onSave()
 
     zone.dialogueTree = deepCopyTree(self.workingTree)
 
-    sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "UpdateZone", { zone = zone })
+    sendClientCommand(getSpecificPlayer(0), NPCDialogue.MODULE, NPCDialogue.CMD.UPDATE_ZONE, { zone = zone })
 
-    self.unsaved = false
+    self.savedZone = deepCopyTree(zone)
+    self.unsaved   = false
 end
 
 function AdminEditorWindow:onDiscard()
-    if not self.zone then return end
+    if not self.savedZone then return end
+    self.zone        = deepCopyTree(self.savedZone)
     self.workingTree = deepCopyTree(self.zone.dialogueTree) or { nodes = {}, nodeOrder = {} }
     if not self.workingTree.nodes     then self.workingTree.nodes     = {} end
     if not self.workingTree.nodeOrder then self.workingTree.nodeOrder = {} end
@@ -638,4 +667,22 @@ function AdminEditorWindow.getInstance()
         instance:setVisible(false)
     end
     return instance
+end
+
+function AdminEditorWindow.onSaveResult(args)
+    if not (instance and instance.zone and instance.zone.id == args.id) then return end
+    local player = getSpecificPlayer(0)
+    if args.ok then
+        if player then player:setHaloNote("NPC saved.", 150, 255, 150, 150) end
+    else
+        instance.unsaved = true
+        if player then player:setHaloNote(args.message or "The NPC was not saved.", 255, 120, 120, 300) end
+    end
+end
+
+function AdminEditorWindow.closeFor(id, message)
+    if not (instance and instance:isVisible() and instance.zone and instance.zone.id == id) then return end
+    instance:setVisible(false)
+    local player = getSpecificPlayer(0)
+    if player and message then player:setHaloNote(message, 255, 200, 100, 300) end
 end

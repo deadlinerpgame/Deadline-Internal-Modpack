@@ -1,0 +1,1285 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.walls.classic_brick.classic_brick_dbl_window_wall_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_classic_brick_classic_brick_dbl_window_wall_1",
+   "displayName": "Classic Brick Double Window Wall 1",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_classic_brick_classic_brick_window_frame",
+   "category": "Walls",
+   "subcategory": "Classic Brick",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_04_9",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.brick.dbl_window_wall_1",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBlue": {
+       "W": "walls_exterior_house_04_1",
+       "N": "walls_exterior_house_04_2"
+      },
+      "PaintPink": {
+       "W": "walls_exterior_house_04_5",
+       "N": "walls_exterior_house_04_6"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_house_04_33",
+       "N": "walls_exterior_house_04_34"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_house_04_45",
+       "N": "walls_exterior_house_04_46"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_house_04_49",
+       "N": "walls_exterior_house_04_50"
+      },
+      "PaintGreen": {
+       "W": "walls_exterior_house_04_53",
+       "N": "walls_exterior_house_04_54"
+      },
+      "PaintRed": {
+       "W": "walls_exterior_house_04_57",
+       "N": "walls_exterior_house_04_58"
+      },
+      "PaintWhite+PaintYellow": {
+       "W": "walls_exterior_house_04_69",
+       "N": "walls_exterior_house_04_70"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_house_04_73",
+       "N": "walls_exterior_house_04_74"
+      }
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_04_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_04_10"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.classic_brick.classic_brick_dbl_window_wall",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_classic_brick_classic_brick_dbl_window_wall"
+   },
+   "variants": [
+    {
+     "id": "old_weathered",
+     "labelKey": "IGUI_KBWVE_Variant_BrickOldWeathered",
+     "iconSprite": "walls_exterior_house_04_21",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_exterior_house_04_21"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_exterior_house_04_22"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 2
+         },
+         {
+          "id": "masonry_units",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayBrick"
+          ],
+          "amount": 5
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "poor_brick",
+     "labelKey": "IGUI_KBWVE_Variant_BrickPoor",
+     "iconSprite": "walls_exterior_house_04_77",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_exterior_house_04_77"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_exterior_house_04_78"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 2
+         },
+         {
+          "id": "masonry_units",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayBrick"
+          ],
+          "amount": 5
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       }
+      }
+     ],
+     "finishes": {
+      "enabled": true,
+      "wallType": "kbw.vanillaexpanded.finish.brick.poor",
+      "surface": {
+       "canPlaster": false,
+       "canPaint": false,
+       "canWallpaper": false
+      }
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_house_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.classic_brick.classic_brick_dbl_window_wall_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_classic_brick_classic_brick_dbl_window_wall_2",
+   "displayName": "Classic Brick Double Window Wall 2",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_classic_brick_classic_brick_window_frame",
+   "category": "Walls",
+   "subcategory": "Classic Brick",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_04_8",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.brick.dbl_window_wall_2",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintBlue": {
+       "W": "walls_exterior_house_04_0",
+       "N": "walls_exterior_house_04_3"
+      },
+      "PaintPink": {
+       "W": "walls_exterior_house_04_4",
+       "N": "walls_exterior_house_04_7"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_house_04_32",
+       "N": "walls_exterior_house_04_35"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_house_04_44",
+       "N": "walls_exterior_house_04_47"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_house_04_48",
+       "N": "walls_exterior_house_04_51"
+      },
+      "PaintGreen": {
+       "W": "walls_exterior_house_04_52",
+       "N": "walls_exterior_house_04_55"
+      },
+      "PaintRed": {
+       "W": "walls_exterior_house_04_56",
+       "N": "walls_exterior_house_04_59"
+      },
+      "PaintWhite+PaintYellow": {
+       "W": "walls_exterior_house_04_68",
+       "N": "walls_exterior_house_04_71"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_house_04_72",
+       "N": "walls_exterior_house_04_75"
+      }
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_04_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_04_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.classic_brick.classic_brick_dbl_window_wall",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_classic_brick_classic_brick_dbl_window_wall"
+   },
+   "variants": [
+    {
+     "id": "old_weathered",
+     "labelKey": "IGUI_KBWVE_Variant_BrickOldWeathered",
+     "iconSprite": "walls_exterior_house_04_20",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_exterior_house_04_20"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_exterior_house_04_23"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 2
+         },
+         {
+          "id": "masonry_units",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayBrick"
+          ],
+          "amount": 5
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "poor_brick",
+     "labelKey": "IGUI_KBWVE_Variant_BrickPoor",
+     "iconSprite": "walls_exterior_house_04_76",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_exterior_house_04_76"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_exterior_house_04_79"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 2
+         },
+         {
+          "id": "masonry_units",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayBrick"
+          ],
+          "amount": 5
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       }
+      }
+     ],
+     "finishes": {
+      "enabled": true,
+      "wallType": "kbw.vanillaexpanded.finish.brick.poor",
+      "surface": {
+       "canPlaster": false,
+       "canPaint": false,
+       "canWallpaper": false
+      }
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_house_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.white_clapboard.white_clapboard_dbl_window_wall_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_white_clapboard_white_clapboard_dbl_window_wall_1",
+   "displayName": "Clapboard Double Window Wall 1",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_white_clapboard_white_clapboard_window_frame",
+   "category": "Walls",
+   "subcategory": "Clapboard",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_house_04_13",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.clapboard.dbl_window_wall_1",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintWhite": {
+       "W": "walls_exterior_house_04_13",
+       "N": "walls_exterior_house_04_14"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_house_04_17",
+       "N": "walls_exterior_house_04_18"
+      },
+      "PaintBlue": {
+       "W": "walls_exterior_house_04_37",
+       "N": "walls_exterior_house_04_38"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_house_04_41",
+       "N": "walls_exterior_house_04_42"
+      },
+      "PaintPink": {
+       "W": "walls_exterior_house_04_61",
+       "N": "walls_exterior_house_04_62"
+      },
+      "PaintTurquoise": {
+       "W": "walls_exterior_house_04_65",
+       "N": "walls_exterior_house_04_66"
+      }
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_04_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_04_14"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.white_clapboard.white_clapboard_dbl_window_wall",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_white_clapboard_white_clapboard_dbl_window_wall"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_house_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.white_clapboard.white_clapboard_dbl_window_wall_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_white_clapboard_white_clapboard_dbl_window_wall_2",
+   "displayName": "Clapboard Double Window Wall 2",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_white_clapboard_white_clapboard_window_frame",
+   "category": "Walls",
+   "subcategory": "Clapboard",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_house_04_12",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.clapboard.dbl_window_wall_2",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintWhite": {
+       "W": "walls_exterior_house_04_12",
+       "N": "walls_exterior_house_04_15"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_house_04_16",
+       "N": "walls_exterior_house_04_19"
+      },
+      "PaintBlue": {
+       "W": "walls_exterior_house_04_36",
+       "N": "walls_exterior_house_04_39"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_house_04_40",
+       "N": "walls_exterior_house_04_43"
+      },
+      "PaintPink": {
+       "W": "walls_exterior_house_04_60",
+       "N": "walls_exterior_house_04_63"
+      },
+      "PaintTurquoise": {
+       "W": "walls_exterior_house_04_64",
+       "N": "walls_exterior_house_04_67"
+      }
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_04_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_04_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.white_clapboard.white_clapboard_dbl_window_wall",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_white_clapboard_white_clapboard_dbl_window_wall"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_house_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_dbl_window_wall_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_grey_stone_dbl_window_wall_1",
+   "displayName": "Stone Double Window Wall 1",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_grey_stone_grey_stone_window_frame",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_house_04_25",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.dbl_window_wall_1",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_house_04_25",
+       "N": "walls_exterior_house_04_26"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_house_04_29",
+       "N": "walls_exterior_house_04_30"
+      }
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_04_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_04_26"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_dbl_window_wall",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_grey_stone_dbl_window_wall"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_house_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_dbl_window_wall_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_grey_stone_dbl_window_wall_2",
+   "displayName": "Stone Double Window Wall 2",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_grey_stone_grey_stone_window_frame",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_house_04_24",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.dbl_window_wall_2",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_house_04_24",
+       "N": "walls_exterior_house_04_27"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_house_04_28",
+       "N": "walls_exterior_house_04_31"
+      }
+     }
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_04_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_04_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_dbl_window_wall",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_grey_stone_dbl_window_wall"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_house_04"
+   ]
+  }
+ ]
+}

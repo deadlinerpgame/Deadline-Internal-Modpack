@@ -1,0 +1,8651 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_wall",
+   "displayName": "Tent Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_TentWall",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_0",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "location_military_tent_01_2",
+      "pillarSprite": "location_military_tent_01_3"
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_0"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_1"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "location_military_tent_01_2"
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_0"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_1"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "location_military_tent_01_2"
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_0"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_1"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "location_military_tent_01_2"
+       }
+      }
+     ]
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_door_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_door_frame",
+   "displayName": "Tent Door Frame",
+   "tooltipKey": "Tooltip_KBW_Shared_TentWall",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_10",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "callbacks": {
+      "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+     },
+     "object": {
+      "isThumpable": false,
+      "isDoorFrame": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_10"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_11"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_10"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_11"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_10"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_11"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_window_frame",
+   "displayName": "Tent Window Frame",
+   "tooltipKey": "Tooltip_KBW_Shared_TentWall",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_8",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_9"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_8"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_9"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_8"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_9"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_8"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_9"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_corner_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_corner_wall",
+   "displayName": "Tent Corner Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_TentWall",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_2"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "location_military_tent_01_2"
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_2"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "location_military_tent_01_2"
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_2"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "location_military_tent_01_2"
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_2"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "location_military_tent_01_2"
+       }
+      }
+     ]
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_pillar",
+   "displayName": "Tent Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_TentPillar",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_3",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_3"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_3"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_3"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_edge",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_edge",
+   "displayName": "Tent Edge",
+   "tooltipKey": "Tooltip_KBW_Shared_TentPillar",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_33",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_38"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_33"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_38"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_33"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_38"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_33"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_38"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_edge_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_edge",
+   "displayName": "Tent Edge",
+   "tooltipKey": "Tooltip_KBW_Shared_TentPillar",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_32",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_39"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_32"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_39"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_32"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_39"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_32"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_39"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_edge_3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_edge",
+   "displayName": "Tent Edge",
+   "tooltipKey": "Tooltip_KBW_Shared_TentPillar",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_34",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_34"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_37"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_34"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_37"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_34"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_37"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_edge_4",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_edge",
+   "displayName": "Tent Edge",
+   "tooltipKey": "Tooltip_KBW_Shared_TentPillar",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_35",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_35"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_36"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_35"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_36"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_35"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_36"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_wall_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_wall",
+   "displayName": "Tent Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_TentWall",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_64",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_64"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_65"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "location_military_tent_01_66",
+      "pillarSprite": "location_military_tent_01_67"
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_64"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_65"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "location_military_tent_01_66"
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_64"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_65"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "location_military_tent_01_66"
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_64"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_65"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "location_military_tent_01_66"
+       }
+      }
+     ]
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_door_frame_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_door_frame",
+   "displayName": "Tent Door Frame",
+   "tooltipKey": "Tooltip_KBW_Shared_TentWall",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_74",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_74"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_75"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "callbacks": {
+      "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+     },
+     "object": {
+      "isThumpable": false,
+      "isDoorFrame": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_74"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_75"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_74"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_75"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_74"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_75"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_window_frame_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_window_frame",
+   "displayName": "Tent Window Frame",
+   "tooltipKey": "Tooltip_KBW_Shared_TentWall",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_72",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_72"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_73"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_72"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_73"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_72"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_73"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_72"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_73"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_corner_wall_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_corner_wall",
+   "displayName": "Tent Corner Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_TentWall",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_66"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "location_military_tent_01_66"
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_66"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "location_military_tent_01_66"
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_66"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "location_military_tent_01_66"
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_66"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 2
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "location_military_tent_01_66"
+       }
+      }
+     ]
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_pillar_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_pillar",
+   "displayName": "Tent Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_TentPillar",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_67",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_67"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_67"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_67"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_67"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 4
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 40
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_edge_5",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_edge",
+   "displayName": "Tent Edge",
+   "tooltipKey": "Tooltip_KBW_Shared_TentPillar",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_97",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_97"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_102"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_97"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_102"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_97"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_102"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_97"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_102"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_edge_6",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_edge",
+   "displayName": "Tent Edge",
+   "tooltipKey": "Tooltip_KBW_Shared_TentPillar",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_96",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_96"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_103"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_96"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_103"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_96"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_103"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_96"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_103"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_edge_7",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_edge",
+   "displayName": "Tent Edge",
+   "tooltipKey": "Tooltip_KBW_Shared_TentPillar",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_98",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_98"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_101"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_98"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_101"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_98"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_101"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_98"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_101"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.tent_walls.tent_edge_8",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_tent_walls_tent_edge",
+   "displayName": "Tent Edge",
+   "tooltipKey": "Tooltip_KBW_Shared_TentPillar",
+   "category": "Walls",
+   "subcategory": "Tent Walls",
+   "material": "Fabric",
+   "iconSprite": "location_military_tent_01_99",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_99"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_military_tent_01_100"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wall_supports",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe",
+         "Base.LongStick"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 30
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true
+     }
+    }
+   ],
+   "materialRequired": true,
+   "materialOptions": [
+    {
+     "id": "material_1",
+     "translationKey": "IGUI_KBWVE_Material_Tarp",
+     "displayName": "Tarp",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_99"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_100"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_tarp",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.Tarp"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_2",
+     "translationKey": "IGUI_KBWVE_Material_RippedSheets",
+     "displayName": "Ripped Sheets",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_99"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_100"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_rags",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.RippedSheets",
+           "Base.RippedSheetsDirty"
+          ],
+          "amount": 6
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    },
+    {
+     "id": "material_3",
+     "translationKey": "IGUI_KBWVE_Material_DenimStrips",
+     "displayName": "Denim Strips",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_99"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "location_military_tent_01_100"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "wall_supports",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.MetalPipe",
+           "Base.LongStick"
+          ],
+          "amount": 1
+         },
+         {
+          "id": "covering_denim",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.DenimStrips",
+           "Base.DenimStripsDirty"
+          ],
+          "amount": 4
+         },
+         {
+          "id": "tool_cutting",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "Scissors",
+           "SharpKnife"
+          ],
+          "amount": 1,
+          "flags": [
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "tool_sewing_needle",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "SewingNeedle",
+           "Awl"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop2",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "thread",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Thread",
+           "Twine"
+          ],
+          "amount": 1,
+          "uses": 4
+         }
+        ],
+        "skills": {
+         "Tailoring": 3
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Tailoring": 30
+        },
+        "category": "Tailoring"
+       },
+       "object": {
+        "isThumpable": true,
+        "blockAllSquare": false,
+        "canPassThrough": true
+       }
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

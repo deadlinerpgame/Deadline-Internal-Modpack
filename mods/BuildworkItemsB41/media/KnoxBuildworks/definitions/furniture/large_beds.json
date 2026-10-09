@@ -1,0 +1,605 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_beds.furniture_bedding_01_23",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_beds_furniture_bedding_large_modern_bed",
+   "displayName": "Large Modern Bed",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_beds_furniture_bedding_large_modern_bed",
+   "category": "Furniture",
+   "subcategory": "Large Beds",
+   "material": "Fabric",
+   "iconSprite": "furniture_bedding_01_23",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_bedding_01_30",
+            "furniture_bedding_01_31"
+           ],
+           [
+            "furniture_bedding_01_28",
+            "furniture_bedding_01_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_bedding_01_25",
+            "furniture_bedding_01_27"
+           ],
+           [
+            "furniture_bedding_01_24",
+            "furniture_bedding_01_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_bedding_01_18",
+            "furniture_bedding_01_19"
+           ],
+           [
+            "furniture_bedding_01_16",
+            "furniture_bedding_01_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_bedding_01_17",
+            "furniture_bedding_01_23"
+           ],
+           [
+            "furniture_bedding_01_20",
+            "furniture_bedding_01_22"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "mattress",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Mattress"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_beds.furniture_bedding_01_43",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_beds_furniture_bedding_large_oak_bed",
+   "displayName": "Large Oak Bed",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_beds_furniture_bedding_large_oak_bed",
+   "category": "Furniture",
+   "subcategory": "Large Beds",
+   "material": "Fabric",
+   "iconSprite": "furniture_bedding_01_43",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_bedding_01_42",
+            "furniture_bedding_01_43"
+           ],
+           [
+            "furniture_bedding_01_40",
+            "furniture_bedding_01_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_bedding_01_45",
+            "furniture_bedding_01_47"
+           ],
+           [
+            "furniture_bedding_01_44",
+            "furniture_bedding_01_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_bedding_01_50",
+            "furniture_bedding_01_51"
+           ],
+           [
+            "furniture_bedding_01_48",
+            "furniture_bedding_01_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_bedding_01_53",
+            "furniture_bedding_01_55"
+           ],
+           [
+            "furniture_bedding_01_52",
+            "furniture_bedding_01_54"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "mattress",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Mattress"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.large_beds.furniture_bedding_01_15",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_large_beds_furniture_bedding_large_fancy_bed",
+   "displayName": "Large Fancy Bed",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_large_beds_furniture_bedding_large_fancy_bed",
+   "category": "Furniture",
+   "subcategory": "Large Beds",
+   "material": "Fabric",
+   "iconSprite": "furniture_bedding_01_15",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_bedding_01_14",
+            "furniture_bedding_01_15"
+           ],
+           [
+            "furniture_bedding_01_12",
+            "furniture_bedding_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_bedding_01_5",
+            "furniture_bedding_01_7"
+           ],
+           [
+            "furniture_bedding_01_4",
+            "furniture_bedding_01_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_bedding_01_82",
+            "furniture_bedding_01_83"
+           ],
+           [
+            "furniture_bedding_01_80",
+            "furniture_bedding_01_81"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_bedding_01_73",
+            "furniture_bedding_01_75"
+           ],
+           [
+            "furniture_bedding_01_72",
+            "furniture_bedding_01_74"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "wood_frame",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "mattress",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Mattress"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 4,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Tailoring": 40,
+       "Woodwork": 30
+      },
+      "category": "Tailoring"
+     }
+    }
+   ]
+  }
+ ]
+}

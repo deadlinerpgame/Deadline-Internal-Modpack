@@ -1,0 +1,199 @@
+module Base
+{
+
+	recipe Press Blacksmith Anvil Mold
+	{
+		keep aerx.WoodenBenchAnvilMold,
+		aerx.Clay=8,
+		Result:aerx.ClayBenchAnvilMoldUnfired,
+		Time:700,
+		Category:ClayMolds,
+		NearItem:Hand Press,
+	}
+
+	recipe Fire Blacksmith Anvil Mold
+	{
+		aerx.ClayBenchAnvilMoldUnfired,
+		[Recipe.GetItemTypes.StartFire],
+		Log/Coke/Charcoal=1,
+		Result:aerx.ClayBenchAnvilMold,
+		Time:300,
+		Category:ClayMolds,
+	}
+
+
+	recipe Press Bar Cast Mold
+	{
+		keep aerx.WoodenBarCastMold,
+		aerx.Clay=4,
+		Result:aerx.ClayBarMoldUnfired,
+		Time:700,
+		Category:ClayMolds,
+		NearItem:Hand Press,
+	}
+
+	recipe Fire Bar Cast Mold
+	{
+		aerx.ClayBarMoldUnfired,
+		[Recipe.GetItemTypes.StartFire],
+		Log/Coke/Charcoal=1,
+		Result:aerx.ClayBarMold,
+		Time:300,
+		Category:ClayMolds,
+	}
+
+
+	recipe Press Ingot Cast Mold
+	{
+		keep aerx.WoodenIngotCastMold,
+		aerx.Clay=4,
+		Result:aerx.ClayIngotMoldUnfired,
+		Time:700,
+		Category:ClayMolds,
+		NearItem:Hand Press,
+	}
+
+	recipe Fire Ingot Cast Mold
+	{
+		aerx.ClayIngotMoldUnfired,
+		[Recipe.GetItemTypes.StartFire],
+		Log/Coke/Charcoal=1,
+		Result:aerx.ClayIngotMold,
+		Time:300,
+		Category:ClayMolds,
+	}
+
+	recipe Make Small Crucible
+	{
+		aerx.Clay=1,
+		Sandbag=1,
+		Result:aerx.CeramicCrucibleSmallUnfired,
+		Time:300,
+		Category:ClayMolds,
+		NearItem:Sculpting Table,
+	}
+
+	recipe Make Large Crucible
+	{
+		aerx.Clay=2,
+		Sandbag=1,
+		Result:aerx.CeramicCrucibleUnfired,
+		Time:300,
+		Category:ClayMolds,
+		NearItem:Sculpting Table,
+	}
+
+	recipe Make Sheet Mold
+	{
+		aerx.Clay=2,
+		Result:aerx.ClaySheetMoldUnfired,
+		Time:300,
+		Category:ClayMolds,
+		NearItem:Sculpting Table,
+	}
+
+	recipe Fire Sheet Mold
+	{
+		aerx.ClaySheetMoldUnfired,
+		[Recipe.GetItemTypes.StartFire],
+		Log/Coke/Charcoal=1,
+		Result:aerx.ClaySheetMold,
+		Time:300,
+		Category:ClayMolds,
+	}
+
+	recipe Fire Small Crucible
+	{
+		aerx.CeramicCrucibleSmallUnfired,
+		[Recipe.GetItemTypes.StartFire],
+		Log/Coke/Charcoal=1,
+		Result:aerx.CeramicCrucibleSmall,
+		Time:300,
+		Category:ClayMolds,
+	}
+
+	recipe Fire Large Crucible
+	{
+		aerx.CeramicCrucibleUnfired,
+		[Recipe.GetItemTypes.StartFire],
+		Log/Coke/Charcoal=1,
+		Result:aerx.CeramicCrucible,
+		Time:300,
+		Category:ClayMolds,
+	}
+
+
+	recipe Press Brick
+	{
+		keep aerx.WoodenBrickMold,
+		aerx.Clay=1,
+		Result:aerx.ClayBrickUnfired,
+		Time:200,
+		Category:ClayMolds,
+		NearItem:Hand Press,
+	}
+
+	recipe Fire Brick
+	{
+		aerx.ClayBrickUnfired=1,
+		[Recipe.GetItemTypes.StartFire],
+		Result:aerx.ClayBrick,
+		Time:400,
+		Category:ClayMolds,
+	}
+
+	recipe Press Tile
+	{
+		keep aerx.WoodenTileMold,
+		aerx.Clay=1,
+		Result:aerx.ClayTileUnfired,
+		Time:200,
+		Category:ClayMolds,
+		NearItem:Hand Press,
+	}
+
+	recipe Fire Tile
+	{
+		aerx.ClayTileUnfired=1,
+		[Recipe.GetItemTypes.StartFire],
+		Result:aerx.ClayTile,
+		Time:400,
+		Category:ClayMolds,
+	}
+	recipe Make Glassblowing Pipe
+	{
+		aerx.Clay=2,
+		Result:aerx.GlassBlowingPipeUnfired,
+		Time:200,
+		Category:ClayMolds,
+		NearItem:Sculpting Table,
+	}
+	recipe Fire Glassblowing Pipe
+	{
+		aerx.GlassBlowingPipeUnfired=1,
+		[Recipe.GetItemTypes.StartFire],
+		Result:aerx.GlassBlowingPipe,
+		Time:400,
+		Category:ClayMolds,
+	}
+
+	recipe Make Clay Jar
+	{
+		aerx.Clay=5,
+		Result:aerx.ClayJarUnfired,
+		Time:200,
+		Category:ClayMolds,
+		NearItem:Sculpting Table,
+	}
+	recipe Fire Clay Jar
+	{
+		aerx.ClayJarUnfired=1,
+		[Recipe.GetItemTypes.StartFire],
+		Result:aerx.ClayJar,
+		Time:400,
+		Category:ClayMolds,
+	}
+
+
+
+}

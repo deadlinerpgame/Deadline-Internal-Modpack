@@ -12,21 +12,14 @@ module Base {
 	{
         WorldStaticModel = Sheep_Dead,
 	DisplayCategory = Food,
-	Weight	=	5.0,
-	Type	=	Food,
-	DaysFresh 			=		5,
-	DaysTotallyRotten 	=	 	5,
+	Weight	=	25.0,
+	Type	=	Normal,
+	DaysFresh 			=		10,
+	DaysTotallyRotten 	=	 	15,
 	DisplayName = Sheep Carcass,
 	Icon = DeadPerson_MaleZombie,
-	CantBeFrozen = TRUE,
-	Poison = true,
-	PoisonDetectionLevel = 7,
-	PoisonPower = 500,
-	HungerChange = -100,
-	ThirstChange = -100,
-	UnhappyChange = 99,
-	ReplaceOnRotten = DummyItem,
-
+	RequiresEquippedBothHands = true,
+	Tags = HeavyItem,
 	}
 
 

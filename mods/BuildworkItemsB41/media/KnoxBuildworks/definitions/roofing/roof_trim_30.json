@@ -1,0 +1,1576 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.roofing.roof_trim.trim_30_fascia_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_trim_30_fascia_1",
+   "displayName": "30 Degree Roof Fascia 1",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_RoofTrim",
+   "category": "Roofing",
+   "subcategory": "Roof Trim",
+   "material": "Wood",
+   "iconSprite": "roofs_accents_30_01_16",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_29"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.roof_trim.trim_30_fascia",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_trim_30_fascia"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_accents_30_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.roof_trim.trim_30_fascia_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_trim_30_fascia_2",
+   "displayName": "30 Degree Roof Fascia 2",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_RoofTrim",
+   "category": "Roofing",
+   "subcategory": "Roof Trim",
+   "material": "Wood",
+   "iconSprite": "roofs_accents_30_01_17",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_28"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.roof_trim.trim_30_fascia",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_trim_30_fascia"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_accents_30_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.roof_trim.trim_30_fascia_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_trim_30_fascia_3",
+   "displayName": "30 Degree Roof Fascia 3",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_RoofTrim",
+   "category": "Roofing",
+   "subcategory": "Roof Trim",
+   "material": "Wood",
+   "iconSprite": "roofs_accents_30_01_18",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_11"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.roof_trim.trim_30_fascia",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_trim_30_fascia"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_accents_30_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.roof_trim.trim_30_fascia_4",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_trim_30_fascia_4",
+   "displayName": "30 Degree Roof Fascia 4",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_RoofTrim",
+   "category": "Roofing",
+   "subcategory": "Roof Trim",
+   "material": "Wood",
+   "iconSprite": "roofs_accents_30_01_19",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_26"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.roof_trim.trim_30_fascia",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_roofing_trim_30_fascia"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_accents_30_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.roof_trim.trim_30_fascia_5",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_trim_30_fascia_5",
+   "displayName": "30 Degree Roof Fascia 5",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_RoofTrim",
+   "category": "Roofing",
+   "subcategory": "Roof Trim",
+   "material": "Wood",
+   "iconSprite": "roofs_accents_30_01_20",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.roof_trim.trim_30_fascia",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_roofing_trim_30_fascia"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_accents_30_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.roof_trim.trim_30_fascia_6",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_trim_30_fascia_6",
+   "displayName": "30 Degree Roof Fascia 6",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_RoofTrim",
+   "category": "Roofing",
+   "subcategory": "Roof Trim",
+   "material": "Wood",
+   "iconSprite": "roofs_accents_30_01_21",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_24"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.roof_trim.trim_30_fascia",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_roofing_trim_30_fascia"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_accents_30_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.roof_trim.trim_30_fascia_7",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_trim_30_fascia_7",
+   "displayName": "30 Degree Roof Fascia 7",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_RoofTrim",
+   "category": "Roofing",
+   "subcategory": "Roof Trim",
+   "material": "Wood",
+   "iconSprite": "roofs_accents_30_01_22",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_30"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.roof_trim.trim_30_fascia",
+    "level": 7,
+    "translationKey": "IGUI_KBW_Group_roofing_trim_30_fascia"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_accents_30_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.roof_trim.trim_30_fascia_peak_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_trim_30_fascia_peak_1",
+   "displayName": "30 Degree Roof Fascia Peak 1",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_RoofTrim",
+   "category": "Roofing",
+   "subcategory": "Roof Trim",
+   "material": "Wood",
+   "iconSprite": "roofs_accents_30_01_32",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_40"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.roof_trim.trim_30_fascia_peak",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_trim_30_fascia_peak"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_accents_30_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.roof_trim.trim_30_fascia_peak_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_trim_30_fascia_peak_2",
+   "displayName": "30 Degree Roof Fascia Peak 2",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_RoofTrim",
+   "category": "Roofing",
+   "subcategory": "Roof Trim",
+   "material": "Wood",
+   "iconSprite": "roofs_accents_30_01_33",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.roof_trim.trim_30_fascia_peak",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_trim_30_fascia_peak"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_accents_30_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.roof_trim.trim_30_fascia_peak_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_trim_30_fascia_peak_3",
+   "displayName": "30 Degree Roof Fascia Peak 3",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_RoofTrim",
+   "category": "Roofing",
+   "subcategory": "Roof Trim",
+   "material": "Wood",
+   "iconSprite": "roofs_accents_30_01_34",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_42"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.roof_trim.trim_30_fascia_peak",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_trim_30_fascia_peak"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_accents_30_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.roof_trim.trim_30_fascia_peak_4",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_trim_30_fascia_peak_4",
+   "displayName": "30 Degree Roof Fascia Peak 4",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_RoofTrim",
+   "category": "Roofing",
+   "subcategory": "Roof Trim",
+   "material": "Wood",
+   "iconSprite": "roofs_accents_30_01_35",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.roof_trim.trim_30_fascia_peak",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_roofing_trim_30_fascia_peak"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_accents_30_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.roof_trim.trim_30_fascia_peak_5",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_trim_30_fascia_peak_5",
+   "displayName": "30 Degree Roof Fascia Peak 5",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_RoofTrim",
+   "category": "Roofing",
+   "subcategory": "Roof Trim",
+   "material": "Wood",
+   "iconSprite": "roofs_accents_30_01_36",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_44"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.roof_trim.trim_30_fascia_peak",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_roofing_trim_30_fascia_peak"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_accents_30_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.roof_trim.trim_30_fascia_peak_6",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_trim_30_fascia_peak_6",
+   "displayName": "30 Degree Roof Fascia Peak 6",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_RoofTrim",
+   "category": "Roofing",
+   "subcategory": "Roof Trim",
+   "material": "Wood",
+   "iconSprite": "roofs_accents_30_01_37",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_accents_30_01_45"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 120,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 15
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.roof_trim.trim_30_fascia_peak",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_roofing_trim_30_fascia_peak"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_accents_30_01"
+   ]
+  }
+ ]
+}

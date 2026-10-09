@@ -11,7 +11,7 @@ function HuntLineSheep.Context(player, context, worldobjects)
 	if sq then
 		zed = sq:getZombie()
 
-		if (getCore():getDebug() or isAdmin()) then
+		if getCore():getDebug() then
 
 			local Main = context:addOptionOnTop(getText('ContextMenu_AnimalDebug'))
 
@@ -50,7 +50,7 @@ function HuntLineSheep.Context(player, context, worldobjects)
 				if fit then
 					opt:addOption('set stats: '..tostring(fit), worldobjects, function()
 						HuntLineSheep.setStats(zed)
-						--print(HuntLineSheep.getOutfitName(zed))
+						print(HuntLineSheep.getOutfitName(zed))
 					end);
 				end
 				local isCrawler = HuntLineSheep.isCrawler(zed)

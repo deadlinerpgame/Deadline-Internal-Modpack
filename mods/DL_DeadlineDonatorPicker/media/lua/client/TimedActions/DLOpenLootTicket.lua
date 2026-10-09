@@ -43,7 +43,6 @@ function DLOpenLootTicketAction:rollForLoot()
 
     sendClientCommand("LootTicket", "RequestRoll", { ticket = self.item, lootData = lootData });
 
-    --LogLineUtils.LogFromClient("LootTicket", logStr);
 end
 
 function DLOpenLootTicketAction:perform()
@@ -56,10 +55,9 @@ function DLOpenLootTicketAction:new(item)
     local o = {};
 	setmetatable(o, self);
 	self.__index = self;
-    o.character = getPlayer(); -- Required for an ISBaseTimedAction to work.
+    o.character = getPlayer();
     o.stopOnWalk = true;
     o.item = item;
     o.maxTime = 250;
 	return o;
 end
-

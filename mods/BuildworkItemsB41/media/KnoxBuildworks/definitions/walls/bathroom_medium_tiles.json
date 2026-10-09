@@ -1,0 +1,5974 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.walls.bathroom_medium_tiles.bathroom_medium_tiles_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_bathroom_medium_tiles_wall",
+   "displayName": "Bathroom Medium Tiles Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_WhiteBathroomTileWall",
+   "category": "Walls",
+   "subcategory": "Bathroom Medium Tiles",
+   "material": "Brick",
+   "iconSprite": "walls_interior_bathroom_01_0",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_bathroom_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_bathroom_01_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_tiles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayTile"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "walls_interior_bathroom_01_2",
+      "pillarSprite": "walls_interior_bathroom_01_3"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ],
+   "allowSpriteReuse": true,
+   "variants": [
+    {
+     "id": "tile_02",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile02",
+     "iconSprite": "walls_interior_bathroom_01_4",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_4"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_5"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_6",
+        "pillarSprite": "walls_interior_bathroom_01_7"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_03",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile03",
+     "iconSprite": "walls_interior_bathroom_01_16",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_16"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_17"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_18",
+        "pillarSprite": "walls_interior_bathroom_01_19"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_04",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile04",
+     "iconSprite": "walls_interior_bathroom_01_20",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_20"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_21"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_22",
+        "pillarSprite": "walls_interior_bathroom_01_23"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_05",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile05",
+     "iconSprite": "walls_interior_bathroom_01_32",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_32"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_33"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_34",
+        "pillarSprite": "walls_interior_bathroom_01_35"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_06",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile06",
+     "iconSprite": "walls_interior_bathroom_01_36",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_36"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_37"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_38",
+        "pillarSprite": "walls_interior_bathroom_01_39"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_07",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile07",
+     "iconSprite": "walls_interior_bathroom_01_48",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_48"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_49"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_50",
+        "pillarSprite": "walls_interior_bathroom_01_51"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_08",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile08",
+     "iconSprite": "walls_interior_bathroom_01_52",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_52"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_53"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_54",
+        "pillarSprite": "walls_interior_bathroom_01_55"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_09",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile09",
+     "iconSprite": "walls_interior_bathroom_01_64",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_64"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_65"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_66",
+        "pillarSprite": "walls_interior_bathroom_01_67"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_10",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile10",
+     "iconSprite": "walls_interior_bathroom_01_68",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_68"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_69"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_70",
+        "pillarSprite": "walls_interior_bathroom_01_71"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_11",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile11",
+     "iconSprite": "walls_interior_bathroom_01_80",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_80"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_81"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_82",
+        "pillarSprite": "walls_interior_bathroom_01_83"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_12",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile12",
+     "iconSprite": "walls_interior_bathroom_01_84",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_84"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_85"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_86",
+        "pillarSprite": "walls_interior_bathroom_01_87"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_13",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile13",
+     "iconSprite": "walls_interior_bathroom_01_96",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_96"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_97"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_98",
+        "pillarSprite": "walls_interior_bathroom_01_99"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.bathroom_medium_tiles.bathroom_medium_tiles_door_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_bathroom_medium_tiles_door_frame",
+   "displayName": "Bathroom Medium Tiles Door Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_bathroom_medium_tiles_bathroom_medium_tiles_door_frame",
+   "category": "Walls",
+   "subcategory": "Bathroom Medium Tiles",
+   "material": "Brick",
+   "iconSprite": "walls_interior_bathroom_01_10",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_bathroom_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_bathroom_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_tiles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayTile"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ],
+     "callbacks": {
+      "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+     },
+     "object": {
+      "isThumpable": false,
+      "isDoorFrame": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "variants": [
+    {
+     "id": "tile_02",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile02",
+     "iconSprite": "walls_interior_bathroom_01_14",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_14"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_15"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ],
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       },
+       "object": {
+        "isThumpable": false,
+        "isDoorFrame": true,
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_03",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile03",
+     "iconSprite": "walls_interior_bathroom_01_26",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_26"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_27"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ],
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       },
+       "object": {
+        "isThumpable": false,
+        "isDoorFrame": true,
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_04",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile04",
+     "iconSprite": "walls_interior_bathroom_01_30",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_30"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_31"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ],
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       },
+       "object": {
+        "isThumpable": false,
+        "isDoorFrame": true,
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_05",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile05",
+     "iconSprite": "walls_interior_bathroom_01_42",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_42"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_43"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ],
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       },
+       "object": {
+        "isThumpable": false,
+        "isDoorFrame": true,
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_06",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile06",
+     "iconSprite": "walls_interior_bathroom_01_46",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_46"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_47"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ],
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       },
+       "object": {
+        "isThumpable": false,
+        "isDoorFrame": true,
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_07",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile07",
+     "iconSprite": "walls_interior_bathroom_01_58",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_58"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_59"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ],
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       },
+       "object": {
+        "isThumpable": false,
+        "isDoorFrame": true,
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_08",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile08",
+     "iconSprite": "walls_interior_bathroom_01_62",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_62"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_63"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ],
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       },
+       "object": {
+        "isThumpable": false,
+        "isDoorFrame": true,
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_09",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile09",
+     "iconSprite": "walls_interior_bathroom_01_74",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_74"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_75"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ],
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       },
+       "object": {
+        "isThumpable": false,
+        "isDoorFrame": true,
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_10",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile10",
+     "iconSprite": "walls_interior_bathroom_01_78",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_78"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_79"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ],
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       },
+       "object": {
+        "isThumpable": false,
+        "isDoorFrame": true,
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_11",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile11",
+     "iconSprite": "walls_interior_bathroom_01_90",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_90"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_91"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ],
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       },
+       "object": {
+        "isThumpable": false,
+        "isDoorFrame": true,
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_12",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile12",
+     "iconSprite": "walls_interior_bathroom_01_94",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_94"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_95"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ],
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       },
+       "object": {
+        "isThumpable": false,
+        "isDoorFrame": true,
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_13",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile13",
+     "iconSprite": "walls_interior_bathroom_01_106",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_106"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_107"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ],
+       "callbacks": {
+        "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+       },
+       "object": {
+        "isThumpable": false,
+        "isDoorFrame": true,
+        "blockAllSquare": false,
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.bathroom_medium_tiles.bathroom_medium_tiles_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_bathroom_medium_tiles_window_frame",
+   "displayName": "Bathroom Medium Tiles Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_bathroom_medium_tiles_bathroom_medium_tiles_window_frame",
+   "category": "Walls",
+   "subcategory": "Bathroom Medium Tiles",
+   "material": "Brick",
+   "iconSprite": "walls_interior_bathroom_01_8",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_bathroom_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_bathroom_01_9"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_tiles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayTile"
+        ],
+        "amount": 3
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ],
+   "variants": [
+    {
+     "id": "tile_02",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile02",
+     "iconSprite": "walls_interior_bathroom_01_12",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_12"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_13"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 3
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_03",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile03",
+     "iconSprite": "walls_interior_bathroom_01_24",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_24"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_25"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 3
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_04",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile04",
+     "iconSprite": "walls_interior_bathroom_01_28",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_28"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_29"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 3
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_05",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile05",
+     "iconSprite": "walls_interior_bathroom_01_40",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_40"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_41"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 3
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_06",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile06",
+     "iconSprite": "walls_interior_bathroom_01_44",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_44"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_45"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 3
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_07",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile07",
+     "iconSprite": "walls_interior_bathroom_01_56",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_56"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_57"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 3
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_08",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile08",
+     "iconSprite": "walls_interior_bathroom_01_60",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_60"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_61"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 3
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_09",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile09",
+     "iconSprite": "walls_interior_bathroom_01_72",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_72"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_73"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 3
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_10",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile10",
+     "iconSprite": "walls_interior_bathroom_01_76",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_76"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_77"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 3
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_11",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile11",
+     "iconSprite": "walls_interior_bathroom_01_88",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_88"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_89"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 3
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_12",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile12",
+     "iconSprite": "walls_interior_bathroom_01_92",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_92"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_93"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 3
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "tile_13",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile13",
+     "iconSprite": "walls_interior_bathroom_01_104",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_104"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_105"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 3
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       },
+       "previousStage": [
+        "WoodenWallFrame",
+        "MetalWallFrame"
+       ]
+      }
+     ]
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.bathroom_medium_tiles.bathroom_medium_tiles_corner_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_bathroom_medium_tiles_corner_wall",
+   "displayName": "Bathroom Medium Tiles Corner Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_WhiteBathroomTileWall",
+   "category": "Walls",
+   "subcategory": "Bathroom Medium Tiles",
+   "material": "Brick",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_bathroom_01_2"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_tiles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayTile"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "walls_interior_bathroom_01_2"
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "variants": [
+    {
+     "id": "tile_02",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile02",
+     "iconSprite": "walls_interior_bathroom_01_6",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_6"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_6"
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_03",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile03",
+     "iconSprite": "walls_interior_bathroom_01_18",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_18"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_18"
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_04",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile04",
+     "iconSprite": "walls_interior_bathroom_01_22",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_22"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_22"
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_05",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile05",
+     "iconSprite": "walls_interior_bathroom_01_34",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_34"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_34"
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_06",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile06",
+     "iconSprite": "walls_interior_bathroom_01_38",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_38"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_38"
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_07",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile07",
+     "iconSprite": "walls_interior_bathroom_01_50",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_50"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_50"
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_08",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile08",
+     "iconSprite": "walls_interior_bathroom_01_54",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_54"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_54"
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_09",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile09",
+     "iconSprite": "walls_interior_bathroom_01_66",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_66"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_66"
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_10",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile10",
+     "iconSprite": "walls_interior_bathroom_01_70",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_70"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_70"
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_11",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile11",
+     "iconSprite": "walls_interior_bathroom_01_82",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_82"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_82"
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_12",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile12",
+     "iconSprite": "walls_interior_bathroom_01_86",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_86"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_86"
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_13",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile13",
+     "iconSprite": "walls_interior_bathroom_01_98",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_98"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 4
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "canBarricade": false,
+        "cornerSprite": "walls_interior_bathroom_01_98"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.bathroom_medium_tiles.bathroom_medium_tiles_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_bathroom_medium_tiles_pillar",
+   "displayName": "Bathroom Medium Tiles Pillar",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_bathroom_medium_tiles_bathroom_medium_tiles_pillar",
+   "category": "Walls",
+   "subcategory": "Bathroom Medium Tiles",
+   "material": "Brick",
+   "iconSprite": "walls_interior_bathroom_01_3",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_bathroom_01_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_tiles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayTile"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "variants": [
+    {
+     "id": "tile_02",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile02",
+     "iconSprite": "walls_interior_bathroom_01_7",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_7"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_03",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile03",
+     "iconSprite": "walls_interior_bathroom_01_19",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_19"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_04",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile04",
+     "iconSprite": "walls_interior_bathroom_01_23",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_23"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_05",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile05",
+     "iconSprite": "walls_interior_bathroom_01_35",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_35"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_06",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile06",
+     "iconSprite": "walls_interior_bathroom_01_39",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_39"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_07",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile07",
+     "iconSprite": "walls_interior_bathroom_01_51",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_51"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_08",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile08",
+     "iconSprite": "walls_interior_bathroom_01_55",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_55"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_09",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile09",
+     "iconSprite": "walls_interior_bathroom_01_67",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_67"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_10",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile10",
+     "iconSprite": "walls_interior_bathroom_01_71",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_71"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_11",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile11",
+     "iconSprite": "walls_interior_bathroom_01_83",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_83"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_12",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile12",
+     "iconSprite": "walls_interior_bathroom_01_87",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_87"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    },
+    {
+     "id": "tile_13",
+     "labelKey": "IGUI_KBWVE_Variant_BathroomTile13",
+     "iconSprite": "walls_interior_bathroom_01_99",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_interior_bathroom_01_99"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "MasonsTrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "Concrete"
+          ],
+          "amount": 1,
+          "uses": 1
+         },
+         {
+          "id": "masonry_tiles",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayTile"
+          ],
+          "amount": 2
+         }
+        ],
+        "skills": {
+         "Woodwork": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Woodwork": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "canPassThrough": true,
+        "canBarricade": false
+       }
+      }
+     ]
+    }
+   ],
+   "allowSpriteReuse": true
+  }
+ ]
+}

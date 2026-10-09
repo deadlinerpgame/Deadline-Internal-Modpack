@@ -1,0 +1,156 @@
+module aerx
+{
+	imports
+	{
+		Base,
+	}
+
+	item Clay
+	{
+	    	DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay,
+		Icon                = Clay,
+		StaticModel         = Clay,
+		WorldStaticModel    = Clay,
+	}
+
+	item ClayTool
+	{
+	    	DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay Sculpting Tool,
+		Icon                = ClayTool_01,
+		StaticModel         = ClayTool,
+		WorldStaticModel    = ClayTool,
+	}
+
+	item ClayTool2
+	{
+	    	DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay Sculpting Tool,
+		Icon                = ClayTool_02,
+		StaticModel         = ClayTool2,
+		WorldStaticModel    = ClayTool2,
+	}
+
+		item ClayBrickUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Clay Brick,
+		Icon                = ClayBrick_Unfired,
+		StaticModel         = ClayBrickUnfired,
+		WorldStaticModel    = ClayBrickUnfired,
+	}
+
+	item ClayBrick
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay Brick,
+		Icon                = ClayBrick_Fired,
+		StaticModel         = ClayBrick,
+		WorldStaticModel    = ClayBrick,
+	}
+
+	item ClayTileUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Clay Tile,
+		Icon                = ClayTile_Unfired,
+		StaticModel         = ClayTileUnfired,
+		WorldStaticModel    = ClayTileUnfired,
+	}
+
+	item ClayTile
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay Tile,
+		Icon                = ClayTile_Fired,
+		StaticModel         = ClayTile,
+		WorldStaticModel    = ClayTile,
+	}
+
+	item ClayPotUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Clay Pot,
+		Icon                = ClayJar_Unfired,
+		StaticModel         = ClayJarUnfired,
+		WorldStaticModel    = ClayJarUnfired,
+	}
+
+	item ClayPot
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay Pot,
+		Icon                = ClayJar_Fired,
+		StaticModel         = ClayJar,
+		WorldStaticModel    = ClayJar,
+	}
+
+	item ClayJarUnfired
+	{
+	    DisplayCategory     = Material,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Unfired Clay Jar,
+		Icon                = ClayJar_Unfired,
+		StaticModel         = ClayJarUnfired,
+		WorldStaticModel    = ClayJarUnfired,
+	}
+
+	item ClayJar
+	{
+	    DisplayCategory     = WaterContainer,
+		Weight              = 0.3,
+		Type                = Normal,
+		DisplayName         = Clay Jar,
+		Icon                = ClayJar_Fired,
+		StaticModel         = ClayJar,
+		WorldStaticModel    = ClayJar,
+		ReplaceOnUseOn = WaterSource-ClayJarWater,
+		ReplaceTypes = WaterSource 	item ClayJarWater,
+		CanStoreWater	=	TRUE,
+		RainFactor = 0.05,
+		Tooltip = Tooltip_item_RainFromGround,
+	}
+
+	item ClayJarWater
+	{
+		DisplayCategory = Water,
+		Type = Drainable,
+		Weight = 5,
+		CanStoreWater = TRUE,
+		RainFactor = 0.05,
+		Tooltip = Tooltip_item_RainFromGround,
+		FillFromDispenserSound = GetWaterFromDispenserPlasticMedium,
+		FillFromTapSound = GetWaterFromTapPlasticMedium,
+		IsWaterSource = TRUE,
+		ReplaceOnDeplete = ClayJar,
+		ReplaceOnUseOn = WaterSource-ClayJarWater,
+		UseDelta = 0.01,
+		UseWhileEquipped = FALSE,
+		CustomEatSound = DrinkingFromBottlePlastic,
+		DisplayName         = Clay Jar with Water,
+		Icon                = ClayJar_Fired,
+		StaticModel         = ClayJar,
+		WorldStaticModel    = ClayJar,
+	}
+
+}

@@ -1,8 +1,8 @@
 local UI
-chosenpoint = 1
+chosenpoint = 2
 opened = 0
 
-local spawnpointnames = {"Airport Camp", "Police Station Camp", "Beach Camp", "Boat Camp"}
+local spawnpointnames = {"#1", "#2", "#3", "#4"}
 
 local function mapa(button, args)
     UI["image1"]:setPath("media/ui/MapA.png")
@@ -24,23 +24,25 @@ local function mapd(button, args)
     chosenpoint = 4
 end
 
+
+
 local function spawn()
     local playerObj = getSpecificPlayer(0)
     if chosenpoint == 1 then
-        playerObj:setX(13033);
-        playerObj:setY(5423);
+        playerObj:setX(3355);
+        playerObj:setY(2031);
         playerObj:setZ(0);
     elseif chosenpoint == 2 then
-        playerObj:setX(11167);
-        playerObj:setY(2271);
-        playerObj:setZ(1);
+        playerObj:setX(4072);
+        playerObj:setY(6269);
+        playerObj:setZ(0);
     elseif chosenpoint == 3 then
-        playerObj:setX(10478);
-        playerObj:setY(3863);
+        playerObj:setX(1717);
+        playerObj:setY(235);
         playerObj:setZ(0);
     elseif chosenpoint == 4 then
-        playerObj:setX(16477);
-        playerObj:setY(5744);
+        playerObj:setX(7018);
+        playerObj:setY(5191);
         playerObj:setZ(0);
     end
 	playerObj:setLx(playerObj:getX());
@@ -50,6 +52,7 @@ local function spawn()
 end
 
 local function onCreateUI()
+    if UI then UI:close() end
     UI = NewUI(0.15);
     UI:addText("title1", "Choose a Spawn Location", "Title", "Center");
     UI:setLineHeightPercent(0.03);    
@@ -74,11 +77,11 @@ end
 
 
 local TargetTileA = {
-    ['aerx_testscifi_52']=true,
+    ['deadline02_22']=true,
 }
 
 local TargetTileB = {
-    ['aerx_testscifi_53']=true,
+    ['deadline02_17']=true,
 }
 
 
@@ -91,7 +94,7 @@ local function isTileB(spr)
 end
 
 local function steppedonTile(char)
-    if not char then return end
+    if not char or char ~= getPlayer() then return end
     local sq = getCell():getGridSquare(char:getX(),char:getY(),char:getZ()) 
 	if sq and sq:getObjects() then
 		local objects = sq:getObjects()

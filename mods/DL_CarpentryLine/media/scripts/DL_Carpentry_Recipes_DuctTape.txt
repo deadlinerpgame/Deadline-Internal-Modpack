@@ -1,0 +1,31 @@
+module SP
+{
+    imports
+    {
+        Base,
+    }
+
+    recipe Make Duct Tape from Glue
+    {
+        LeatherStrips=5,
+        Water=5,
+        Glue=2,
+
+        Result:DuctTape,
+        Time:230.0,
+        Category:Expertise,
+        NeedToBeLearn:true,
+    }
+
+    recipe Make Duct Tape from Wood Glue
+    {
+        LeatherStrips=5,
+        Water=5,
+        Woodglue=2,
+
+        Result:DuctTape,
+        Time:230.0,
+        Category:Expertise,
+        NeedToBeLearn:true,
+    }
+}

@@ -4,15 +4,71 @@ HORSE_ITEM_TYPES = {
     ["2TK_models.2TK_Horse_02"] = true,
     ["2TK_models.2TK_Horse_03"] = true,
     ["2TK_models.2TK_Horse_04"] = true,
+    ["2TK_models.2TK_Horse_SaddlebagS"] = true,
+    ["2TK_models.2TK_Horse_01_SaddlebagS"] = true,
+    ["2TK_models.2TK_Horse_02_SaddlebagS"] = true,
+    ["2TK_models.2TK_Horse_03_SaddlebagS"] = true,
+    ["2TK_models.2TK_Horse_04_SaddlebagS"] = true,
+    ["2TK_models.2TK_Horse_SaddlebagM"] = true,
+    ["2TK_models.2TK_Horse_01_SaddlebagM"] = true,
+    ["2TK_models.2TK_Horse_02_SaddlebagM"] = true,
+    ["2TK_models.2TK_Horse_03_SaddlebagM"] = true,
+    ["2TK_models.2TK_Horse_04_SaddlebagM"] = true,
+    ["2TK_models.2TK_Horse_SaddlebagL"] = true,
+    ["2TK_models.2TK_Horse_01_SaddlebagL"] = true,
+    ["2TK_models.2TK_Horse_02_SaddlebagL"] = true,
+    ["2TK_models.2TK_Horse_03_SaddlebagL"] = true,
+    ["2TK_models.2TK_Horse_04_SaddlebagL"] = true,
+    ["2TK_models.2TK_Horse_SaddlebagSH"] = true,
+    ["2TK_models.2TK_Horse_01_SaddlebagSH"] = true,
+    ["2TK_models.2TK_Horse_02_SaddlebagSH"] = true,
+    ["2TK_models.2TK_Horse_03_SaddlebagSH"] = true,
+    ["2TK_models.2TK_Horse_04_SaddlebagSH"] = true,
+    ["2TK_models.2TK_Horse_SaddlebagMH"] = true,
+    ["2TK_models.2TK_Horse_01_SaddlebagMH"] = true,
+    ["2TK_models.2TK_Horse_02_SaddlebagMH"] = true,
+    ["2TK_models.2TK_Horse_03_SaddlebagMH"] = true,
+    ["2TK_models.2TK_Horse_04_SaddlebagMH"] = true,
+    ["2TK_models.2TK_Horse_SaddlebagLH"] = true,
+    ["2TK_models.2TK_Horse_01_SaddlebagLH"] = true,
+    ["2TK_models.2TK_Horse_02_SaddlebagLH"] = true,
+    ["2TK_models.2TK_Horse_03_SaddlebagLH"] = true,
+    ["2TK_models.2TK_Horse_04_SaddlebagLH"] = true,
+
 }
 
 HORSE_FEED_TYPES = {
     "Base.Apple",
 
 }
-
+-- not used
 HORSE_WATER_TYPES = {
     "Base.WaterBottleFull",
+    "Base.WaterBottlePop",
+    "Base.BucketWaterFull",
+    "Base.WhiskeyWaterFull",
+    "Base.BeerWaterFull",
+    "Base.WineWaterFull",
+    "AuthenticZLite.AuthenticCanteenForestGreenfull",
+    "AuthenticZLite.AuthenticCanteenDarkGreenfull",
+    "AuthenticZLite.AuthenticCanteenSilverfull",
+    "AuthenticZLite.AuthenticCanteenCadetBluefull",
+    "AuthenticZLite.AuthenticCanteenDarkGreyfull",
+    "AuthenticZLite.AuthenticCanteenGreyfull",
+    "HCustoms.ModularPackCanteenBlackfull",
+    "HCustoms.ModularPackCanteenBluefull",
+    "HCustoms.ModularPackCanteenOlivefull",
+    "HCustoms.ModularPackCanteenPinkfull",
+    "HCustoms.ModularPackCanteenRedfull",
+    "HCustoms.ModularPackCanteenTanfull",
+    "HCustoms.ModularPackCanteenWhitefull",
+    "HCustoms.ModularPackCanteenBlackfull",
+    "HCustoms.ModularPackCanteenBluefull",
+    "HCustoms.ModularPackCanteenOlivefull",
+    "HCustoms.ModularPackCanteenPinkfull",
+    "HCustoms.ModularPackCanteenRedfull",
+    "HCustoms.ModularPackCanteenTanfull",
+    "HCustoms.ModularPackCanteenWhitefull", 
 }
 
 HORSE_SADDLE_TYPES = {
@@ -214,6 +270,9 @@ local function initHorseStats(item)
 
     if data._initialized and not data.temperament then
         applyTemperamentToExistingHorse(data, rollHorseTemperament())
+        data.equipment = data.equipment or {}
+        data.equipment.saddle = "Animals.Saddle"
+        data.equipment.saddleWear = 100
     end
 end
 
@@ -805,12 +864,48 @@ end
                 getSoundManager():playUISound("horse_stop_01")
             end
         end
-        if inventory:contains("2TK_models.2TK_Horse") or inventory:contains("2TK_models.2TK_Horse_01") or inventory:contains("2TK_models.2TK_Horse_02") or inventory:contains("2TK_models.2TK_Horse_03") or inventory:contains("2TK_models.2TK_Horse_04") then
+        if inventory:contains("2TK_models.2TK_Horse") or inventory:contains("2TK_models.2TK_Horse_01") or inventory:contains("2TK_models.2TK_Horse_02") or inventory:contains("2TK_models.2TK_Horse_03") or inventory:contains("2TK_models.2TK_Horse_04")
+        or inventory:contains("2TK_models.2TK_Horse_SaddlebagS") or inventory:contains("2TK_models.2TK_Horse_01_SaddlebagS") or inventory:contains("2TK_models.2TK_Horse_02_SaddlebagS") or inventory:contains("2TK_models.2TK_Horse_03_SaddlebagS") or inventory:contains("2TK_models.2TK_Horse_04_SaddlebagS")
+        or inventory:contains("2TK_models.2TK_Horse_SaddlebagM") or inventory:contains("2TK_models.2TK_Horse_01_SaddlebagM") or inventory:contains("2TK_models.2TK_Horse_02_SaddlebagM") or inventory:contains("2TK_models.2TK_Horse_03_SaddlebagM") or inventory:contains("2TK_models.2TK_Horse_04_SaddlebagM")
+        or inventory:contains("2TK_models.2TK_Horse_SaddlebagL") or inventory:contains("2TK_models.2TK_Horse_01_SaddlebagL") or inventory:contains("2TK_models.2TK_Horse_02_SaddlebagL") or inventory:contains("2TK_models.2TK_Horse_03_SaddlebagL") or inventory:contains("2TK_models.2TK_Horse_04_SaddlebagL")
+        or inventory:contains("2TK_models.2TK_Horse_SaddlebagSH") or inventory:contains("2TK_models.2TK_Horse_01_SaddlebagSH") or inventory:contains("2TK_models.2TK_Horse_02_SaddlebagSH") or inventory:contains("2TK_models.2TK_Horse_03_SaddlebagSH") or inventory:contains("2TK_models.2TK_Horse_04_SaddlebagSH")
+        or inventory:contains("2TK_models.2TK_Horse_SaddlebagMH") or inventory:contains("2TK_models.2TK_Horse_01_SaddlebagMH") or inventory:contains("2TK_models.2TK_Horse_02_SaddlebagMH") or inventory:contains("2TK_models.2TK_Horse_03_SaddlebagMH") or inventory:contains("2TK_models.2TK_Horse_04_SaddlebagMH")
+        or inventory:contains("2TK_models.2TK_Horse_SaddlebagLH") or inventory:contains("2TK_models.2TK_Horse_01_SaddlebagLH") or inventory:contains("2TK_models.2TK_Horse_02_SaddlebagLH") or inventory:contains("2TK_models.2TK_Horse_03_SaddlebagLH") or inventory:contains("2TK_models.2TK_Horse_04_SaddlebagLH") then
             if inventory:contains("2TK_models.2TK_Horse") then inventory:Remove("2TK_Horse")
             elseif inventory:contains("2TK_models.2TK_Horse_01") then inventory:Remove("2TK_Horse_01")
             elseif inventory:contains("2TK_models.2TK_Horse_02") then inventory:Remove("2TK_Horse_02")
             elseif inventory:contains("2TK_models.2TK_Horse_03") then inventory:Remove("2TK_Horse_03")
             elseif inventory:contains("2TK_models.2TK_Horse_04") then inventory:Remove("2TK_Horse_04")
+            elseif inventory:contains("2TK_models.2TK_Horse_SaddlebagS") then inventory:Remove("2TK_Horse_SaddlebagS")
+            elseif inventory:contains("2TK_models.2TK_Horse_01_SaddlebagS") then inventory:Remove("2TK_Horse_01_SaddlebagS")
+            elseif inventory:contains("2TK_models.2TK_Horse_02_SaddlebagS") then inventory:Remove("2TK_Horse_02_SaddlebagS")
+            elseif inventory:contains("2TK_models.2TK_Horse_03_SaddlebagS") then inventory:Remove("2TK_Horse_03_SaddlebagS")
+            elseif inventory:contains("2TK_models.2TK_Horse_04_SaddlebagS") then inventory:Remove("2TK_Horse_04_SaddlebagS")
+            elseif inventory:contains("2TK_models.2TK_Horse_SaddlebagM") then inventory:Remove("2TK_Horse_SaddlebagM")
+            elseif inventory:contains("2TK_models.2TK_Horse_01_SaddlebagM") then inventory:Remove("2TK_Horse_01_SaddlebagM")
+            elseif inventory:contains("2TK_models.2TK_Horse_02_SaddlebagM") then inventory:Remove("2TK_Horse_02_SaddlebagM")
+            elseif inventory:contains("2TK_models.2TK_Horse_03_SaddlebagM") then inventory:Remove("2TK_Horse_03_SaddlebagM")
+            elseif inventory:contains("2TK_models.2TK_Horse_04_SaddlebagM") then inventory:Remove("2TK_Horse_04_SaddlebagM")
+            elseif inventory:contains("2TK_models.2TK_Horse_SaddlebagL") then inventory:Remove("2TK_Horse_SaddlebagL")
+            elseif inventory:contains("2TK_models.2TK_Horse_01_SaddlebagL") then inventory:Remove("2TK_Horse_01_SaddlebagL")
+            elseif inventory:contains("2TK_models.2TK_Horse_02_SaddlebagL") then inventory:Remove("2TK_Horse_02_SaddlebagL")
+            elseif inventory:contains("2TK_models.2TK_Horse_03_SaddlebagL") then inventory:Remove("2TK_Horse_03_SaddlebagL")
+            elseif inventory:contains("2TK_models.2TK_Horse_04_SaddlebagL") then inventory:Remove("2TK_Horse_04_SaddlebagL")
+            elseif inventory:contains("2TK_models.2TK_Horse_SaddlebagSH") then inventory:Remove("2TK_Horse_SaddlebagSH")
+            elseif inventory:contains("2TK_models.2TK_Horse_01_SaddlebagSH") then inventory:Remove("2TK_Horse_01_SaddlebagSH")
+            elseif inventory:contains("2TK_models.2TK_Horse_02_SaddlebagSH") then inventory:Remove("2TK_Horse_02_SaddlebagSH")
+            elseif inventory:contains("2TK_models.2TK_Horse_03_SaddlebagSH") then inventory:Remove("2TK_Horse_03_SaddlebagSH")
+            elseif inventory:contains("2TK_models.2TK_Horse_04_SaddlebagSH") then inventory:Remove("2TK_Horse_04_SaddlebagSH")
+            elseif inventory:contains("2TK_models.2TK_Horse_SaddlebagMH") then inventory:Remove("2TK_Horse_SaddlebagMH")
+            elseif inventory:contains("2TK_models.2TK_Horse_01_SaddlebagMH") then inventory:Remove("2TK_Horse_01_SaddlebagMH")
+            elseif inventory:contains("2TK_models.2TK_Horse_02_SaddlebagMH") then inventory:Remove("2TK_Horse_02_SaddlebagMH")
+            elseif inventory:contains("2TK_models.2TK_Horse_03_SaddlebagMH") then inventory:Remove("2TK_Horse_03_SaddlebagMH")
+            elseif inventory:contains("2TK_models.2TK_Horse_04_SaddlebagMH") then inventory:Remove("2TK_Horse_04_SaddlebagMH")
+            elseif inventory:contains("2TK_models.2TK_Horse_SaddlebagLH") then inventory:Remove("2TK_Horse_SaddlebagLH")
+            elseif inventory:contains("2TK_models.2TK_Horse_01_SaddlebagLH") then inventory:Remove("2TK_Horse_01_SaddlebagLH")
+            elseif inventory:contains("2TK_models.2TK_Horse_02_SaddlebagLH") then inventory:Remove("2TK_Horse_02_SaddlebagLH")
+            elseif inventory:contains("2TK_models.2TK_Horse_03_SaddlebagLH") then inventory:Remove("2TK_Horse_03_SaddlebagLH")
+            elseif inventory:contains("2TK_models.2TK_Horse_04_SaddlebagLH") then inventory:Remove("2TK_Horse_04_SaddlebagLH")
             end
             local square = player:getSquare()
             local x = square:getX()
@@ -914,7 +1009,7 @@ end
 
     local hasMouth = data.equipment.mouth and (data.equipment.mouthWear or 0) > 0 and (data.equipment.mouthFill or 0) > 0
     local mouthInfo = hasMouth and HORSE_MOUTH_TYPES[data.equipment.mouth] or nil
-    local hungerDrainMult = getTemperamentMult(data, "hungerDrainMult")
+    local hungerDrainMult = 0
     local thirstDrainMult = getTemperamentMult(data, "thirstDrainMult")
     if hasMouth and mouthInfo then
         if mouthInfo.fillType == "food" then
@@ -1025,11 +1120,11 @@ end
     local DECELERATION_RATE = 0.7
 
 
-    local speedMult = 1.0
+    local speedMult = 1.2
     if not hasSaddle then
         speedMult = 0.9
     elseif saddleType == "Animals.RacingSaddle" then
-        speedMult = 1.25
+        speedMult = 1.45
     end
 
     local hasHoof = data.equipment.hoof and (data.equipment.hoofWear or 0) > 0
@@ -1769,9 +1864,9 @@ end
 function getBackTooltip(bagType)
     local info = HORSE_BACK_TYPES[bagType]
     if not info then return "Unknown back equipment." end
-    if info.size == "S" then return "Small saddlebag. +25 carry capacity."
-    elseif info.size == "M" then return "Medium saddlebag. +50 carry capacity."
-    elseif info.size == "L" then return "Large saddlebag. +75 carry capacity." end
+    if info.size == "S" then return "Small saddlebag. +10 carry capacity."
+    elseif info.size == "M" then return "Medium saddlebag. +15 carry capacity."
+    elseif info.size == "L" then return "Large saddlebag. +20 carry capacity." end
     return "Saddlebag."
 end
 

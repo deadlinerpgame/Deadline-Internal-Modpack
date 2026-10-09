@@ -1,0 +1,247 @@
+module Base
+{
+
+
+    item Paintbrush
+    {
+        DisplayCategory  = Tool,
+        Weight           = 0.2,
+        Type             = Normal,
+        DisplayName      = Paint Brush,
+        Icon             = Paintbrush,
+        StaticModel      = PaintBrush,
+        WorldStaticModel = PaintBrush_Ground,
+        Tags             = Paintbrush,
+    }
+
+    item Thread
+    {
+        DisplayCategory   = Material,
+        Weight            = 0.1,
+        Type              = Drainable,
+        UseWhileEquipped  = FALSE,
+        UseDelta          = 0.1,
+        DisplayName       = Thread,
+        Icon              = Thread,
+        ConsolidateOption = ContextMenu_Merge,
+        SurvivalGear      = TRUE,
+        WorldStaticModel  = Thread,
+        Tags              = Thread,
+    }
+
+    item Twine
+    {
+        DisplayCategory   = Material,
+        Type              = Drainable,
+        UseDelta          = 0.2,
+        UseWhileEquipped  = FALSE,
+        DisplayName       = Twine,
+        Icon              = Twine,
+        Weight            = 0.1,
+        SurvivalGear      = TRUE,
+        ConsolidateOption = ContextMenu_Merge,
+        WorldStaticModel  = Twine,
+        Tags              = Twine,
+    }
+
+
+    item Awl
+    {
+        DisplayCategory  = Tool,
+        Type             = Normal,
+        DisplayName      = Awl,
+        Weight           = 0.2,
+        Icon             = Screwdriver,
+        StaticModel      = Screwdriver,
+        WorldStaticModel = ScrewdriverGround,
+        MetalValue       = 8,
+        SurvivalGear     = TRUE,
+        ConditionMax     = 10,
+        ConditionLowerChanceOneIn = 60,
+        Tags             = Awl,
+    }
+
+    item MasonsTrowel
+    {
+        DisplayCategory  = Tool,
+        Type             = Normal,
+        DisplayName      = Mason's Trowel,
+        Weight           = 0.4,
+        Icon             = Trowel,
+        StaticModel      = Trowel,
+        WorldStaticModel = TrowelGround,
+        MetalValue       = 12,
+        SurvivalGear     = TRUE,
+        ConditionMax     = 10,
+        ConditionLowerChanceOneIn = 60,
+        Tags             = MasonsTrowel,
+    }
+
+    item CarpentryChisel
+    {
+        DisplayCategory  = Tool,
+        Type             = Normal,
+        DisplayName      = Carpentry Chisel,
+        Weight           = 0.3,
+        Icon             = Screwdriver,
+        StaticModel      = Screwdriver,
+        WorldStaticModel = ScrewdriverGround,
+        MetalValue       = 10,
+        SurvivalGear     = TRUE,
+        ConditionMax     = 10,
+        ConditionLowerChanceOneIn = 60,
+        Tags             = CarpentryChisel,
+    }
+
+    item MasonsChisel
+    {
+        DisplayCategory  = Tool,
+        Type             = Normal,
+        DisplayName      = Mason's Chisel,
+        Weight           = 0.3,
+        Icon             = Screwdriver,
+        StaticModel      = Screwdriver,
+        WorldStaticModel = ScrewdriverGround,
+        MetalValue       = 10,
+        SurvivalGear     = TRUE,
+        ConditionMax     = 10,
+        ConditionLowerChanceOneIn = 60,
+        Tags             = MasonsChisel,
+    }
+
+    item CrudeChisel
+    {
+        DisplayCategory  = Tool,
+        Type             = Normal,
+        DisplayName      = Crude Chisel,
+        Weight           = 0.3,
+        Icon             = Screwdriver,
+        StaticModel      = Screwdriver,
+        WorldStaticModel = ScrewdriverGround,
+        MetalValue       = 6,
+        SurvivalGear     = TRUE,
+        ConditionMax     = 6,
+        ConditionLowerChanceOneIn = 35,
+        Tags             = CrudeChisel,
+    }
+
+
+    item ClayShingle
+    {
+        DisplayCategory  = Material,
+        Type             = Normal,
+        DisplayName      = Clay Shingle,
+        Weight           = 0.4,
+        Icon             = TileCut,
+        WorldStaticModel = MetalSheetGround,
+    }
+
+    item ClayTile
+    {
+        DisplayCategory  = Material,
+        Type             = Normal,
+        DisplayName      = Clay Tile,
+        Weight           = 0.4,
+        Icon             = TileCut,
+        WorldStaticModel = MetalSheetGround,
+    }
+
+    item ClayBrick
+    {
+        DisplayCategory  = Material,
+        Type             = Normal,
+        DisplayName      = Clay Brick,
+        Weight           = 1.0,
+        Icon             = Stone,
+        WorldStaticModel = StoneGround,
+    }
+
+    item ClayPot
+    {
+        DisplayCategory  = Material,
+        Type             = Normal,
+        DisplayName      = Clay Pot,
+        Weight           = 1.2,
+        Icon             = PotEmpty,
+        WorldStaticModel = PotGround,
+    }
+
+    item StoneBlock
+    {
+        DisplayCategory  = Material,
+        Type             = Normal,
+        DisplayName      = Stone Block,
+        Weight           = 3.0,
+        Icon             = Stone,
+        WorldStaticModel = StoneGround,
+        Tags             = Concrete,
+    }
+
+    item IronBar
+    {
+        DisplayCategory  = Material,
+        Type             = Normal,
+        DisplayName      = Iron Bar,
+        Weight           = 2.0,
+        Icon             = MetalBar,
+        MetalValue       = 60,
+        WorldStaticModel = MetalBarGround,
+        Tags             = HasMetal,
+    }
+
+    item SteelBar
+    {
+        DisplayCategory  = Material,
+        Type             = Normal,
+        DisplayName      = Steel Bar,
+        Weight           = 2.2,
+        Icon             = MetalBar,
+        MetalValue       = 80,
+        WorldStaticModel = MetalBarGround,
+        Tags             = HasMetal,
+    }
+
+    item GlassPanel
+    {
+        DisplayCategory  = Material,
+        Type             = Normal,
+        DisplayName      = Glass Panel,
+        Weight           = 1.5,
+        Icon             = GlassPane,
+        WorldStaticModel = MetalSheetGround,
+        Tags             = Glass,
+    }
+
+    item FabricRoll_Cotton
+    {
+        DisplayCategory  = Material,
+        Type             = Normal,
+        DisplayName      = Cotton Fabric Roll,
+        Weight           = 1.0,
+        Icon             = Sheet,
+        WorldStaticModel = SheetGround,
+    }
+
+    item Concrete
+    {
+        DisplayCategory  = Material,
+        Type             = Normal,
+        DisplayName      = Bag of Concrete,
+        Weight           = 6.0,
+        Icon             = Stone,
+        WorldStaticModel = StoneGround,
+        Tags             = Concrete,
+    }
+
+    item SprayPaint
+    {
+        DisplayCategory  = Material,
+        Type             = Drainable,
+        DisplayName      = Spray Paint,
+        Weight           = 0.6,
+        Icon             = SpraycanRed,
+        UseDelta         = 0.1,
+        UseWhileEquipped = FALSE,
+        WorldStaticModel = BleachGround,
+    }
+}

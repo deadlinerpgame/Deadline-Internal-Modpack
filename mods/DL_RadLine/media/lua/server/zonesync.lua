@@ -1,10 +1,10 @@
 ZoneSync = ZoneSync or {};
-ZoneSync.Data = ZoneSync.Data or {}; -- storing moddata table here
-ZoneSync.ClientCommands = ZoneSync.ClientCommands or {}; -- storing client command handlers here
+ZoneSync.Data = ZoneSync.Data or {};
+ZoneSync.ClientCommands = ZoneSync.ClientCommands or {};
 
 Event = Event or {};
-Event.Data = Event.Data or {}; -- storing moddata table here
-Event.ClientCommands = Event.ClientCommands or {}; -- storing client command handlers here
+Event.Data = Event.Data or {};
+Event.ClientCommands = Event.ClientCommands or {};
 
 
 local function initGlobalModData(isNewGame)
@@ -17,7 +17,6 @@ Events.OnInitGlobalModData.Add(initGlobalModData);
 
 
 local function handleReceiveGlobalModData(name, data)
-    -- ignore other keys (e.g. from other mods)
     if name == "RadiationZone" then
         ModData.add(name, data) 
         print(data)

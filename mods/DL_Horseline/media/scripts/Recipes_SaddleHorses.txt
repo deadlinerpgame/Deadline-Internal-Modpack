@@ -93,14 +93,14 @@ module Animals
         LeatherStrips = 5,
         Thread = 20,
         Sheet = 1,
-        aerx.Buckle = 6,
-		Deadline.Kevlar = 1,
-        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 5,
+        Rope = 2,
+        keep [Recipe.GetItemTypes.SharpKnife],
+        keep Needle,
+        keep [Recipe.GetItemTypes.Scissors],
         Result:SaddlebagSmall,
         Time:150.0,
         Category:Horses,
-        NearItem:TailoringWorkbench,
-        SkillRequired:Tailoring=10,
+        SkillRequired:Tailoring=6,
     }
 	
     recipe Make Medium Saddlebag
@@ -149,7 +149,7 @@ module Animals
         Result:Horseshoes,
         Time:150.0,
         Category:Horses,
-        SkillRequired:MetalWelding=10,
+        SkillRequired:MetalWelding=6,
     }
 	
     recipe Make Hoofwraps

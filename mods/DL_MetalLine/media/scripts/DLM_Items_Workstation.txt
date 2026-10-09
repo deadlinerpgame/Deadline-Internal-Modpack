@@ -1,0 +1,100 @@
+module aerx
+{
+	imports
+	{
+		Base,
+	}
+
+	item File
+	{
+		DisplayName = File,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = LargeFile_Forged,
+		WorldStaticModel = MetalworkingFile,
+	}
+
+		item Coke
+	{
+		DisplayName = Coke,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = CokeCoal,
+		StaticModel = Coke,
+		WorldStaticModel = Coke,
+	}
+
+	item CrudeBenchVise
+	{
+		DisplayName = Crude Bench Vise,
+		DisplayCategory = Tool,
+		Type = Normal,
+		Weight = 5,
+		Icon = Clamp_Forged,
+		StaticModel = CrudeBenchVise,
+		WorldStaticModel = CrudeBenchVise,
+		Tags = HasMetal,
+	}
+
+	item CrudeBenchViseParts
+	{
+		DisplayName = Crude Bench Vise Parts,
+		DisplayCategory = Tool,
+		Type = Normal,
+		Weight = 5,
+		Icon = ClampComponents_Forged,
+		StaticModel = CrudeBenchVise,
+		WorldStaticModel = CrudeBenchViseParts,
+		Tags = HasMetal,
+	}
+
+	item BenchAnvil
+	{
+	    DisplayCategory     = Tool,
+		Weight	=	20,
+		Type	             =	Container,
+		Capacity	         =	1,
+		AcceptItemFunction	 =	AcceptItemFunction.Anvil,
+		Icon = Anvil_Forged,
+		DisplayName	=	Bench Anvil,
+		StaticModel = BenchAnvil,
+		WorldStaticModel = BenchAnvil,
+	}
+
+	item BenchAnvilUntreated
+	{
+	    DisplayCategory     = Material,
+		Weight	=	20,
+		Type	=	Normal,
+		Icon = Anvil_Forged,
+		DisplayName	=	Untreated Bench Anvil,
+		StaticModel = BenchAnvilUntreated,
+		WorldStaticModel = BenchAnvilUntreated,
+
+	}
+
+	item BlockAnvil
+	{
+	    DisplayCategory     = Tool,
+		Weight	=	30,
+		Type = Normal,
+		Icon = BlockAnvil,
+		DisplayName	=	Block Anvil,
+		StaticModel = BlockAnvil,
+		WorldStaticModel = BlockAnvil,
+	}
+
+	item BlockAnvilUntreated
+	{
+	    DisplayCategory     = Material,
+		Weight	=	30,
+		Type	=	Normal,
+		Icon = BlockAnvil,
+		DisplayName	=	Untreated Block Anvil,
+		StaticModel = BlockAnvil,
+		WorldStaticModel = BlockAnvil,
+	}
+
+}

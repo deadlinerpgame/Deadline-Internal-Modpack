@@ -1,0 +1,1142 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "KnoxBuildworks/buildables.schema.json",
+  "title": "Knox Buildworks definition bundle v1",
+  "type": "object",
+  "required": [
+    "schemaVersion"
+  ],
+  "$defs": {
+    "input": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "material",
+            "tool",
+            "consumable",
+            "component",
+            "resource"
+          ]
+        },
+        "mode": {
+          "enum": [
+            "consume",
+            "keep",
+            "drain",
+            "destroy"
+          ]
+        },
+        "resourceType": {
+          "enum": [
+            "Item",
+            "Fluid",
+            "Energy"
+          ]
+        },
+        "label": {
+          "type": "string"
+        },
+        "labelKey": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "amount": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "amountMax": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "uses": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "flags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "materialTags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "items"
+          ]
+        },
+        {
+          "required": [
+            "tags"
+          ]
+        }
+      ]
+    },
+    "localizedOption": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "translationKey": {
+          "type": "string"
+        },
+        "labelKey": {
+          "type": "string"
+        },
+        "displayName": {
+          "type": "string"
+        },
+        "label": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "iconSprite": {
+          "type": "string",
+          "description": "Sprite shown for this option in the catalogue."
+        },
+        "stages": {
+          "type": "array",
+          "description": "Stages that replace the buildable’s own when this option is selected. This is how a variant swaps geometry while keeping the buildable’s recipe and placement.",
+          "items": {
+            "$ref": "#/properties/buildables/items/properties/stages/items"
+          }
+        },
+        "finishes": {
+          "$ref": "#/properties/buildables/items/properties/finishes",
+          "description": "Surface capabilities for this option, merged over the buildable’s. Use it when an option is not the same surface as the rest of the family - the poor brick is an unfinished construction stage, so it sets canPlaster, canPaint and canWallpaper false."
+        }
+      }
+    },
+    "group": {
+      "type": "object",
+      "required": [
+        "id"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "translationKey": {
+          "type": "string"
+        },
+        "level": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "cell": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "sprite": {
+              "type": "string"
+            },
+            "empty": {
+              "type": "boolean"
+            },
+            "blocks": {
+              "type": "boolean"
+            },
+            "kind": {
+              "type": "string"
+            },
+            "properties": {
+              "type": "object"
+            }
+          }
+        }
+      ]
+    },
+    "face": {
+      "type": "object",
+      "required": [
+        "layers"
+      ],
+      "properties": {
+        "layers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "rows"
+            ],
+            "properties": {
+              "rows": {
+                "type": "array",
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/cell"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "placement": {
+      "type": "object",
+      "description": "Knox-owned placement rules. These work with or without entityCompat.",
+      "properties": {
+        "kind": {
+          "enum": [
+            "object",
+            "wall",
+            "floor",
+            "stairs",
+            "overlay",
+            "wallCovering"
+          ]
+        },
+        "requiresFloor": {
+          "type": "boolean"
+        },
+        "allowSharedSquare": {
+          "type": "boolean",
+          "description": "Allows the piece onto a square that already carries a BlocksPlacement object, so framing parts such as posts, beams and braces can be combined on one tile. Solid and solid-trans terrain still rejects."
+        },
+        "maxDistance": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "againstWall": {
+          "type": "boolean"
+        },
+        "needToBeAgainstWall": {
+          "type": "boolean"
+        },
+        "dontNeedFrame": {
+          "type": "boolean"
+        },
+        "needWindowFrame": {
+          "type": "boolean"
+        },
+        "providesWindowFrame": {
+          "type": "boolean",
+          "description": "Marks the completed wall edge as a valid frame for a separately built window. Use this when a visual window-frame sprite does not declare native WindowN or WindowW tile properties."
+        },
+        "windowSupportSprites": {
+          "type": "array",
+          "description": "Additional support sprites accepted by this window alongside native window frames. A trailing * matches a sprite-name prefix.",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "isPole": {
+          "type": "boolean"
+        },
+        "wallCoveringType": {
+          "enum": [
+            "plaster",
+            "paint",
+            "paintThump",
+            "wallpaper",
+            "paintSign"
+          ]
+        },
+        "sign": {
+          "type": [
+            "integer",
+            "string",
+            "null"
+          ]
+        },
+        "ignoreWindowShape": {
+          "type": "boolean",
+          "description": "Windows and the openings they sit in both declare a WindowShape, and a window is normally refused an opening of a different shape. Set this when the window declares a shape no opening in the game actually uses, so the shape cannot say where it belongs."
+        }
+      }
+    },
+    "construction": {
+      "type": "object",
+      "description": "Knox-owned build-action metadata. It does not create a native CraftRecipe component.",
+      "properties": {
+        "time": {
+          "type": "number",
+          "minimum": 0
+        },
+        "timedAction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sound": {
+          "type": "string",
+          "minLength": 1
+        },
+        "completionSound": {
+          "type": "string",
+          "minLength": 1
+        },
+        "actionAnim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "animVariable": {
+          "type": "object",
+          "required": [
+            "key",
+            "value"
+          ],
+          "properties": {
+            "key": {
+              "type": "string",
+              "minLength": 1
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        },
+        "canWalk": {
+          "type": "boolean"
+        },
+        "category": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "xp": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0
+          }
+        }
+      }
+    },
+    "objectConfig": {
+      "type": "object",
+      "description": "World-object flags applied by the Knox construction path; no engine component is created.",
+      "properties": {
+        "isThumpable": {
+          "type": "boolean"
+        },
+        "isProp": {
+          "type": "boolean",
+          "description": "Uses B42 moveable-style world-object construction instead of a generic IsoThumpable. Use this for decorative pass-through objects. Non-floor sprites carrying native roof metadata are handled this way automatically."
+        },
+        "dismantable": {
+          "type": "boolean"
+        },
+        "blockAllSquare": {
+          "type": "boolean"
+        },
+        "canPassThrough": {
+          "type": "boolean"
+        },
+        "isDoorFrame": {
+          "type": "boolean",
+          "description": "Marks the completed IsoThumpable as a passable door frame. Use this for decorative door-frame sprites whose tile type is reported as a wall instead of doorFrN/doorFrW."
+        },
+        "isCorner": {
+          "type": "boolean",
+          "description": "Marks a completed object as a corner and, for wall overlays that require wall support, restricts placement to WallNW or WallSE corner/pillar objects."
+        },
+        "hoppable": {
+          "type": "boolean"
+        },
+        "canBarricade": {
+          "type": "boolean"
+        },
+        "canBePadlocked": {
+          "type": "boolean"
+        },
+        "thumpDamage": {
+          "type": "number",
+          "minimum": 0
+        },
+        "breakSound": {
+          "type": "string"
+        },
+        "cornerSprite": {
+          "type": "string",
+          "description": "V-shaped WallNW sprite used when matching north and west pieces of the same buildable meet on one square."
+        },
+        "pillarSprite": {
+          "type": "string",
+          "description": "Optional post/pillar sprite used to close the offset gap where matching perpendicular wall or fence ends meet around an adjacent square."
+        },
+        "buildLow": {
+          "type": "boolean"
+        },
+        "drawFloorGrid": {
+          "type": "boolean"
+        }
+      }
+    },
+    "callbacks": {
+      "type": "object",
+      "description": "Optional namespaced Lua overrides invoked by Knox with its documented compatibility payload. JSON-only floors receive Knox-owned floor lifecycle defaults, while JSON-only stairs receive the vanilla BuildRecipeCode.stairs placement and creation defaults when the corresponding fields are omitted. Callback portability still depends on the function's object, recipe-data, sprite, and native-system assumptions.",
+      "properties": {
+        "onAddToMenu": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*(\\.[A-Za-z_][A-Za-z0-9_]*)+$"
+        },
+        "onCreate": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*(\\.[A-Za-z_][A-Za-z0-9_]*)+$"
+        },
+        "onIsValid": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*(\\.[A-Za-z_][A-Za-z0-9_]*)+$"
+        },
+        "timedActionOnIsValid": {
+          "type": "string",
+          "pattern": "^[A-Za-z_][A-Za-z0-9_]*(\\.[A-Za-z_][A-Za-z0-9_]*)+$"
+        }
+      },
+      "additionalProperties": false
+    },
+    "lightOffset": {
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      },
+      "additionalProperties": false
+    },
+    "lightSource": {
+      "type": "object",
+      "required": [
+        "radius"
+      ],
+      "description": "Knox-created thumpable light source. Provide item and/or tags unless debugItem is cheat-only.",
+      "properties": {
+        "radius": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "item": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fuel": {
+          "type": "string"
+        },
+        "debugItem": {
+          "type": "string"
+        },
+        "offsets": {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "N",
+              "E",
+              "S",
+              "W"
+            ]
+          },
+          "additionalProperties": {
+            "$ref": "#/$defs/lightOffset"
+          }
+        }
+      },
+      "anyOf": [
+        {
+          "required": [
+            "item"
+          ]
+        },
+        {
+          "required": [
+            "tags"
+          ]
+        },
+        {
+          "required": [
+            "debugItem"
+          ]
+        }
+      ]
+    }
+  },
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "templates": {
+      "type": "object"
+    },
+    "materialGroups": {
+      "type": "object"
+    },
+    "buildables": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "stages"
+        ],
+        "anyOf": [
+          {
+            "required": [
+              "category"
+            ]
+          },
+          {
+            "required": [
+              "extends"
+            ]
+          }
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_.-]+$"
+          },
+          "extends": {
+            "type": "string"
+          },
+          "translationKey": {
+            "type": "string"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "descriptionKey": {
+            "type": "string"
+          },
+          "tooltipKey": {
+            "type": "string"
+          },
+          "icon": {
+            "type": "string"
+          },
+          "iconName": {
+            "type": "string"
+          },
+          "iconTexture": {
+            "type": "string"
+          },
+          "iconItem": {
+            "type": "string"
+          },
+          "iconSprite": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "subcategory": {
+            "type": "string"
+          },
+          "material": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "materialTags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "styleTags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "aliases": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allowSpriteReuse": {
+            "type": "boolean",
+            "description": "Explicitly allows this definition to share its sprites with other definitions that also opt in."
+          },
+          "group": {
+            "$ref": "#/$defs/group"
+          },
+          "variants": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/localizedOption"
+            }
+          },
+          "materialOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/localizedOption"
+            }
+          },
+          "materialRequired": {
+            "type": "boolean",
+            "description": "When true the base stages are not buildable on their own; a materialOptions entry must always be selected, and the UI offers no base-material row."
+          },
+          "tools": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/input"
+            }
+          },
+          "placement": {
+            "$ref": "#/$defs/placement"
+          },
+          "construction": {
+            "$ref": "#/$defs/construction"
+          },
+          "finishes": {
+            "type": "object",
+            "description": "Paint/plaster/wallpaper surface capabilities and optional sprite mappings. Non-wall custom-color objects may use wallType as their native PaintingType. paintRequiresPlaster/wallpaperRequiresPlaster default to true.",
+            "properties": {
+              "enabled": {
+                "type": "boolean"
+              },
+              "wallType": {
+                "type": "string",
+                "description": "Surface mapping id. For vanilla custom-color objects this is the native PaintingType, such as crates, chair, door or table."
+              },
+              "paints": {
+                "type": [
+                  "array",
+                  "boolean"
+                ],
+                "items": {
+                  "type": "string"
+                }
+              },
+              "wallpapers": {
+                "type": [
+                  "array",
+                  "boolean"
+                ],
+                "items": {
+                  "type": "string"
+                }
+              },
+              "surface": {
+                "type": "object",
+                "properties": {
+                  "canPlaster": {
+                    "type": "boolean"
+                  },
+                  "canPaint": {
+                    "type": "boolean"
+                  },
+                  "canWallpaper": {
+                    "type": "boolean"
+                  },
+                  "paintRequiresPlaster": {
+                    "type": "boolean"
+                  },
+                  "wallpaperRequiresPlaster": {
+                    "type": "boolean"
+                  }
+                }
+              },
+              "mapping": {
+                "type": "object",
+                "properties": {
+                  "plaster": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  },
+                  "paints": {
+                    "type": "object"
+                  },
+                  "wallpapers": {
+                    "type": "object"
+                  },
+                  "directPaints": {
+                    "type": "object",
+                    "description": "Paint sprite mappings for surfaces that do not require plaster. The '*' key may provide one directional neutral base for every color in the surface's native OtherPainting table. A key may also name a blend of paints rather than a single item: \"PaintGreen+PaintBlack\" is one part each, and \"PaintWhite*3+PaintYellow\" is three parts white to one of yellow. Every component must be a real paint item; all of them are required in the inventory and all of them are consumed, and the catalogue shows the blend as its parts with the swatch mixed in the stated ratio. Use a blend when a sheet holds a shade the base game has no single can for, instead of adding a subcategory for the colour.",
+                    "propertyNames": {
+                      "pattern": "^\\*$|^[A-Za-z0-9_.]+(\\*[1-9][0-9]*)?(\\+[A-Za-z0-9_.]+(\\*[1-9][0-9]*)?)*$"
+                    }
+                  },
+                  "directWallpapers": {
+                    "type": "object"
+                  },
+                  "baseSprites": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "surface": {
+                    "type": "object",
+                    "description": "Legacy inline location for surface capabilities. Prefer finishes.surface."
+                  },
+                  "paintLabels": {
+                    "type": "object",
+                    "description": "Optional display name per paint key, given as a translation key. Use it when a finish is not \"this wall, painted X\" but a wall the game draws in its own right that happens to be reached with paint X - Classic Brick's black is the old weathered brick, and naming it after the can describes the wrong thing. Falls back to the paint's own name when the key does not resolve.",
+                    "additionalProperties": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "spritePattern": {
+            "type": "object"
+          },
+          "postBuildActions": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "stages": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "level": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "translationKey": {
+                  "type": "string"
+                },
+                "labelKey": {
+                  "type": "string"
+                },
+                "displayName": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "previousStage": {
+                  "oneOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "array",
+                      "minItems": 1,
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  ]
+                },
+                "icon": {
+                  "type": "string"
+                },
+                "iconName": {
+                  "type": "string"
+                },
+                "iconTexture": {
+                  "type": "string"
+                },
+                "iconItem": {
+                  "type": "string"
+                },
+                "iconSprite": {
+                  "type": "string"
+                },
+                "health": {
+                  "type": "number"
+                },
+                "skillBaseHealth": {
+                  "type": "number"
+                },
+                "bonusHealth": {
+                  "type": "number"
+                },
+                "xp": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "number",
+                    "minimum": 0
+                  }
+                },
+                "object": {
+                  "$ref": "#/$defs/objectConfig"
+                },
+                "callbacks": {
+                  "$ref": "#/$defs/callbacks"
+                },
+                "lightSource": {
+                  "$ref": "#/$defs/lightSource"
+                },
+                "placement": {
+                  "$ref": "#/$defs/placement"
+                },
+                "construction": {
+                  "$ref": "#/$defs/construction"
+                },
+                "allowSpriteReuse": {
+                  "type": "boolean",
+                  "description": "Explicitly allows this stage to share its sprites with other opted-in definitions."
+                },
+                "finishes": {
+                  "type": "object"
+                },
+                "finishOptions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                },
+                "entityCompat": {
+                  "type": "object",
+                  "description": "Reference to an already-registered B42 GameEntityScript. Native component metadata is derived from that script at runtime and must not be copied into JSON.",
+                  "required": [
+                    "entity"
+                  ],
+                  "additionalProperties": false,
+                  "properties": {
+                    "module": {
+                      "type": "string"
+                    },
+                    "entity": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "nativeObject": {
+                  "description": "Creates a Knox-supported native world-object subclass instead of a generic IsoThumpable.",
+                  "oneOf": [
+                    {
+                      "type": "object",
+                      "required": [
+                        "type",
+                        "item"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "type": {
+                          "const": "generator",
+                          "description": "Creates a usable IsoGenerator."
+                        },
+                        "item": {
+                          "type": "string",
+                          "minLength": 1,
+                          "description": "Full item type used to initialize the native generator, for example Base.Generator."
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "type"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "type": {
+                          "const": "fireplace",
+                          "description": "Creates a usable IsoFireplace with native fuel, light, heat and context-menu behavior."
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "type"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "type": {
+                          "const": "mannequin",
+                          "description": "Creates an IsoMannequin: a 3D-model display body with its own mannequin container. Built mannequins always arrive undressed."
+                        },
+                        "script": {
+                          "type": "string",
+                          "minLength": 1,
+                          "description": "Mannequin script name (media/scripts/generated/mannequins.txt) that decides body, skin and pose. When omitted, Knox Buildworks uses the script the engine assigns to the tile's sprite."
+                        }
+                      }
+                    },
+                    {
+                      "type": "object",
+                      "required": [
+                        "type"
+                      ],
+                      "additionalProperties": false,
+                      "properties": {
+                        "type": {
+                          "enum": [
+                            "barbecue",
+                            "clothingDryer",
+                            "clothingWasher",
+                            "combinationWasherDryer",
+                            "lightSwitch",
+                            "stove"
+                          ],
+                          "description": "Creates the matching native B42 appliance or light-switch class. When omitted, Knox Buildworks detects it from the tile's IsoType property or native sprite type."
+                        }
+                      }
+                    }
+                  ]
+                },
+                "fluidContainer": {
+                  "description": "Creates a native B42 FluidContainer on the built object so it collects rain. Used for buildables whose sprite is not part of a vanilla rain-collector entity's SpriteConfig.",
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "capacity": {
+                      "type": "number",
+                      "minimum": 1
+                    },
+                    "rainFactor": {
+                      "type": "number",
+                      "minimum": 0
+                    },
+                    "initialPercent": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 100
+                    },
+                    "containerName": {
+                      "type": "string"
+                    },
+                    "emptySprite": {
+                      "type": "string",
+                      "description": "Sprite shown while the container is below filledPercent. Must be set together with filledSprite."
+                    },
+                    "filledSprite": {
+                      "type": "string",
+                      "description": "Sprite shown once the container reaches filledPercent."
+                    },
+                    "filledPercent": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 100,
+                      "description": "Fill percentage at which filledSprite replaces emptySprite. Defaults to 1."
+                    },
+                    "fireSprite": {
+                      "type": "string",
+                      "description": "Makes the object dual mode: players can switch it between collecting rain and burning fuel, and this sprite is shown while it is a burn barrel. Requires nativeObject type fireplace."
+                    }
+                  }
+                },
+                "well": {
+                  "description": "Marks the first built part as a water well. True uses sandbox defaults; an object overrides individual finite-well settings.",
+                  "oneOf": [
+                    {
+                      "const": true
+                    },
+                    {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "properties": {
+                        "capacity": {
+                          "type": "number",
+                          "minimum": 1
+                        },
+                        "initialPercent": {
+                          "type": "number",
+                          "minimum": 0,
+                          "maximum": 100
+                        },
+                        "refillPerHour": {
+                          "type": "number",
+                          "minimum": 0
+                        },
+                        "rainFactor": {
+                          "type": "number",
+                          "minimum": 0
+                        }
+                      }
+                    }
+                  ]
+                },
+                "sprites": {
+                  "type": "object",
+                  "additionalProperties": {
+                    "type": "string"
+                  }
+                },
+                "geometry": {
+                  "type": "object",
+                  "properties": {
+                    "faces": {
+                      "type": "object",
+                      "propertyNames": {
+                        "enum": [
+                          "N",
+                          "E",
+                          "S",
+                          "W"
+                        ]
+                      },
+                      "additionalProperties": {
+                        "$ref": "#/$defs/face"
+                      }
+                    }
+                  }
+                },
+                "requirements": {
+                  "type": "object",
+                  "properties": {
+                    "inputs": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/input"
+                      }
+                    },
+                    "materials": {
+                      "oneOf": [
+                        {
+                          "type": "string"
+                        },
+                        {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/$defs/input"
+                          }
+                        }
+                      ]
+                    },
+                    "tools": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/input"
+                      }
+                    },
+                    "skills": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "integer",
+                        "minimum": 0
+                      }
+                    },
+                    "knowledge": {
+                      "type": "object",
+                      "properties": {
+                        "needToBeLearned": {
+                          "type": "boolean"
+                        },
+                        "recipes": {
+                          "type": "array",
+                          "items": {
+                            "type": "string"
+                          }
+                        },
+                        "sources": {
+                          "type": "array"
+                        },
+                        "skillAlternatives": {
+                          "type": "array",
+                          "items": {
+                            "type": "object",
+                            "required": [
+                              "skills"
+                            ],
+                            "properties": {
+                              "mode": {
+                                "enum": [
+                                  "any",
+                                  "all"
+                                ]
+                              },
+                              "skills": {
+                                "type": "object",
+                                "minProperties": 1,
+                                "additionalProperties": {
+                                  "type": "integer",
+                                  "minimum": 0
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "recipes": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "debugOnly": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "description": "Buildables declared by this file."
+    },
+    "patches": {
+      "type": "object",
+      "description": "Amendments to buildables declared elsewhere, keyed by buildable id. Buildable ids are unique, so a companion mod uses this to re-file or rename an entry another mod owns instead of restating it. Merged before the player overrides file and independent of mod load order.",
+      "additionalProperties": {
+        "type": "object",
+        "description": "Partial buildable, deep-merged over the registered definition."
+      }
+    }
+  }
+}

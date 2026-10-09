@@ -1,0 +1,1043 @@
+{
+ "schemaVersion": 1,
+ "templates": {
+  "kbwve.appliance.metal": {
+   "category": "Appliances",
+   "material": "Metal",
+   "materialTags": [
+    "Metal"
+   ],
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true
+   },
+   "construction": {
+    "time": 200,
+    "timedAction": "BuildWallMetal",
+    "completionSound": "BuildMetalStructureMedium",
+    "canWalk": false,
+    "category": "Welding",
+    "xp": {
+     "MetalWelding": 60,
+     "Electricity": 20
+    }
+   }
+  },
+  "kbwve.appliance.plumbed": {
+   "category": "Appliances",
+   "subcategory": "Bathroom Fixtures",
+   "material": "Metal",
+   "materialTags": [
+    "Metal",
+    "Plumbing"
+   ],
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true
+   },
+   "construction": {
+    "time": 150,
+    "timedAction": "BuildWallMetal",
+    "completionSound": "BuildMetalStructureMedium",
+    "canWalk": false,
+    "category": "Welding",
+    "xp": {
+     "MetalWelding": 40
+    }
+   }
+  }
+ },
+ "materialGroups": {
+  "kbwve.appliance.electricOven": [
+   {
+    "id": "welding_mask",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:weldingmask"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "screwdriver",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:screwdriver"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "torch_fuel",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.BlowTorch"
+    ],
+    "uses": 5
+   },
+   {
+    "id": "welding_rods",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.WeldingRods"
+    ],
+    "uses": 5
+   },
+   {
+    "id": "sheet_metal",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.SheetMetal"
+    ],
+    "amount": 6
+   },
+   {
+    "id": "electronics",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.ElectronicsScrap"
+    ],
+    "amount": 20
+   },
+   {
+    "id": "electric_wire",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.ElectricWire"
+    ],
+    "amount": 4
+   },
+   {
+    "id": "screws",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.Screws"
+    ],
+    "amount": 15
+   }
+  ],
+  "kbwve.appliance.largeElectricOven": [
+   {
+    "id": "welding_mask",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:weldingmask"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "screwdriver",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:screwdriver"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "torch_fuel",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.BlowTorch"
+    ],
+    "uses": 8
+   },
+   {
+    "id": "welding_rods",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.WeldingRods"
+    ],
+    "uses": 8
+   },
+   {
+    "id": "sheet_metal",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.SheetMetal"
+    ],
+    "amount": 10
+   },
+   {
+    "id": "metal_pipe",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.MetalPipe"
+    ],
+    "amount": 6
+   },
+   {
+    "id": "electronics",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.ElectronicsScrap"
+    ],
+    "amount": 30
+   },
+   {
+    "id": "electric_wire",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.ElectricWire"
+    ],
+    "amount": 6
+   },
+   {
+    "id": "screws",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.Screws"
+    ],
+    "amount": 24
+   }
+  ],
+  "kbwve.appliance.solidFuelCooker": [
+   {
+    "id": "welding_mask",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:weldingmask"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "torch_fuel",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.BlowTorch"
+    ],
+    "uses": 7
+   },
+   {
+    "id": "welding_rods",
+    "role": "consumable",
+    "mode": "drain",
+    "items": [
+     "Base.WeldingRods"
+    ],
+    "uses": 7
+   },
+   {
+    "id": "sheet_metal",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.SheetMetal"
+    ],
+    "amount": 8
+   },
+   {
+    "id": "metal_pipe",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.MetalPipe"
+    ],
+    "amount": 4
+   },
+   {
+    "id": "screws",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.Screws"
+    ],
+    "amount": 20
+   }
+  ]
+ },
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.appliances.cooking.green_oven",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_GreenOven",
+   "displayName": "Green Oven",
+   "tooltipKey": "Tooltip_KBW_Shared_ElectricOven",
+   "subcategory": "Cooking",
+   "iconSprite": "appliances_cooking_01_0",
+   "group": {
+    "id": "kbwve.appliances.ovens",
+    "translationKey": "IGUI_KBWVE_Group_Ovens",
+    "level": 1
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.electricOven",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.cooking.grey_oven",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_GreyOven",
+   "displayName": "Grey Oven",
+   "tooltipKey": "Tooltip_KBW_Shared_ElectricOven",
+   "subcategory": "Cooking",
+   "iconSprite": "appliances_cooking_01_4",
+   "group": {
+    "id": "kbwve.appliances.ovens",
+    "translationKey": "IGUI_KBWVE_Group_Ovens",
+    "level": 2
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.electricOven",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.cooking.red_oven",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_RedOven",
+   "displayName": "Red Oven",
+   "tooltipKey": "Tooltip_KBW_Shared_ElectricOven",
+   "subcategory": "Cooking",
+   "iconSprite": "appliances_cooking_01_8",
+   "group": {
+    "id": "kbwve.appliances.ovens",
+    "translationKey": "IGUI_KBWVE_Group_Ovens",
+    "level": 3
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.electricOven",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.cooking.modern_oven",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_ModernOven",
+   "displayName": "Modern Oven",
+   "tooltipKey": "Tooltip_KBW_Shared_ElectricOven",
+   "subcategory": "Cooking",
+   "iconSprite": "appliances_cooking_01_12",
+   "group": {
+    "id": "kbwve.appliances.ovens",
+    "translationKey": "IGUI_KBWVE_Group_Ovens",
+    "level": 4
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.electricOven",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.cooking.industrial_oven",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_IndustrialOven",
+   "displayName": "Industrial Oven",
+   "tooltipKey": "Tooltip_KBW_Shared_ElectricOven",
+   "subcategory": "Cooking",
+   "iconSprite": "appliances_cooking_01_20",
+   "group": {
+    "id": "kbwve.appliances.ovens",
+    "translationKey": "IGUI_KBWVE_Group_Ovens",
+    "level": 5
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_23"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.electricOven",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.cooking.industrial_2000_oven",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_Industrial2000Oven",
+   "displayName": "Industrial 2000 Oven",
+   "tooltipKey": "Tooltip_KBW_Shared_ElectricOven",
+   "subcategory": "Cooking",
+   "iconSprite": "appliances_cooking_01_52",
+   "group": {
+    "id": "kbwve.appliances.ovens",
+    "translationKey": "IGUI_KBWVE_Group_Ovens",
+    "level": 6
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.electricOven",
+      "skills": {
+       "MetalWelding": 6,
+       "Electricity": 3
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.cooking.antique_wood_stove",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_AntiqueWoodStove",
+   "displayName": "Antique Wood Stove",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodStove",
+   "subcategory": "Cooking",
+   "iconSprite": "appliances_cooking_01_16",
+   "construction": {
+    "xp": {
+     "MetalWelding": 50,
+     "Electricity": 0
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_18"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.solidFuelCooker",
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.cooking.large_modern_oven",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_LargeModernOven",
+   "displayName": "Large Modern Oven",
+   "tooltipKey": "Tooltip_KBW_Shared_ElectricOven",
+   "subcategory": "Cooking",
+   "iconSprite": "appliances_cooking_01_40",
+   "construction": {
+    "xp": {
+     "MetalWelding": 80,
+     "Electricity": 30
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_41"
+           ],
+           [
+            "appliances_cooking_01_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_42",
+            "appliances_cooking_01_43"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_49"
+           ],
+           [
+            "appliances_cooking_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_50",
+            "appliances_cooking_01_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.largeElectricOven",
+      "skills": {
+       "MetalWelding": 7,
+       "Electricity": 5
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.cooking.charcoal_barbecue",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_CharcoalBarbecue",
+   "displayName": "Charcoal Barbecue",
+   "tooltipKey": "Tooltip_KBW_Shared_Barbecue",
+   "subcategory": "Cooking",
+   "iconSprite": "appliances_cooking_01_35",
+   "construction": {
+    "xp": {
+     "MetalWelding": 50,
+     "Electricity": 0
+    }
+   },
+   "group": {
+    "id": "kbwve.appliances.barbecues",
+    "translationKey": "IGUI_KBWVE_Group_Barbecues",
+    "level": 1
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.solidFuelCooker",
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.appliances.cooking.propane_barbecue",
+   "extends": "kbwve.appliance.metal",
+   "translationKey": "IGUI_KBWVE_Buildable_Appliance_PropaneBarbecue",
+   "displayName": "Propane Barbecue",
+   "tooltipKey": "Tooltip_KBW_Shared_Barbecue",
+   "subcategory": "Cooking",
+   "iconSprite": "appliances_cooking_01_44",
+   "construction": {
+    "xp": {
+     "MetalWelding": 50,
+     "Electricity": 0
+    }
+   },
+   "group": {
+    "id": "kbwve.appliances.barbecues",
+    "translationKey": "IGUI_KBWVE_Group_Barbecues",
+    "level": 2
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "appliances_cooking_01_47"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.appliance.solidFuelCooker",
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "object": {
+      "isProp": true,
+      "dismantable": true,
+      "blockAllSquare": true
+     }
+    }
+   ]
+  }
+ ]
+}

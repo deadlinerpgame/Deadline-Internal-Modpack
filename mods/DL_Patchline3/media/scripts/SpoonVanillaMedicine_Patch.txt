@@ -1,0 +1,104 @@
+module Base
+{
+
+    recipe Make Plantain Poultice
+    {
+        keep [Recipe.GetItemTypes.MortarPestle],
+        Plantain=5,
+
+        Result:PlantainCataplasm,
+        Time:60.0,
+        Category:Health,
+		NeedToBeLearn:true,
+		SkillRequired:Doctor=4
+        OnGiveXP:Recipe.OnGiveXP.MedicineMed,
+		Override:true
+    }
+
+    recipe Make Comfrey Poultice
+    {
+        keep [Recipe.GetItemTypes.MortarPestle],
+        Comfrey=5,
+
+        Result:ComfreyCataplasm,
+        Time:60.0,
+        Category:Health,
+		NeedToBeLearn:true,
+		SkillRequired:Doctor=4
+        OnGiveXP:Recipe.OnGiveXP.MedicineMed,
+		Override:true
+    }
+	/*obsolete, as it is replaced by WildGarlic2, which is also a Food*/
+    recipe Make Wild Garlic Poultice
+    {
+        keep [Recipe.GetItemTypes.MortarPestle],
+        WildGarlic/WildGarlic2=5,
+
+        Result:WildGarlicCataplasm,
+        Time:60.0,
+        Category:Health,
+		IsHidden:true,
+		NeedToBeLearn:true,
+		SkillRequired:Doctor=4,
+        OnGiveXP:Recipe.OnGiveXP.MedicineMed,
+		Override:true
+    }
+
+    recipe Make Wild Garlic Poultice
+    {
+        keep [Recipe.GetItemTypes.MortarPestle],
+        WildGarlic2/WildGarlic=5,
+
+        Result:WildGarlicCataplasm,
+        Time:60.0,
+        Category:Health,
+		isHidden:true,
+		NeedToBeLearn:true,
+		SkillRequired:Doctor=4,
+        OnGiveXP:Recipe.OnGiveXP.MedicineMed,
+		Override:true
+    }
+	
+	item Honey
+	{
+		DisplayName = Honey,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.4,
+		Icon = Honeybottle,
+		CantBeFrozen = TRUE,
+		EvolvedRecipe = Beverage:2;Beverage2:2;Cake:5;Sandwich:2;Sandwich Baguette:2;FruitSalad:2;HotDrink:2;HotDrinkRed:2;HotDrinkWhite:2;HotDrinkSpiffo:2;HotDrinkTea:2;Pancakes:2;Waffles:2;ConeIcecream:2;PieSweet:5;Toast:2;Oatmeal:2,
+		Packaged = TRUE,
+		Spice = true,
+		FluReduction = 10,
+		HungerChange = -40,
+		Calories = 1250,
+		Carbohydrates = 320,
+		Lipids = 0,
+		Proteins = 0,
+		WorldStaticModel = Honey,
+		Tags = HerbalTea,	
+	}
+	
+	item WildGarlic2
+    {
+        DisplayCategory = FirstAid,
+        Weight	=	0.05,
+        Type	=	Food,
+        DisplayName	=	Wild Garlic,
+        Icon	=	WildGarlic,
+		EvolvedRecipe = Pizza:1;Omelette:1;Soup:1;Stew:1;Pie:1;Stir fry Griddle Pan:1;Stir fry:1;Sandwich:1;Sandwich Baguette:1;Burger:1;Salad:1;Roasted Vegetables:1;RicePot:1;RicePan:1;PastaPot:1;PastaPan:1;Taco:1;Burrito:1;Salad:1;Toast:1,
+		FoodType = Herb,
+		Spice = true,
+		FluReduction = 1,
+		HungerChange = -2,
+		Calories = 25,
+		Carbohydrates = 0,
+		Lipids = 0,
+		Proteins = 1,
+        Tooltip = Tooltip_Garlic,
+        WorldStaticModel = MedicinalHerbsLeafBundle,
+		Tags = HerbalTea,
+    }
+	
+}
