@@ -19,33 +19,6 @@ function isAnyCowStressSoundPlaying(zed)
     return false
 end
 
-function HuntLineCow.removeCowOutfit(zed)
-    if not zed then return end
-    
-    -- Get the outfit name
-    local outfit = zed:getOutfitName()
-
-    -- Check if it's one of the generic outfits
-    if outfit == "Generic01" or outfit == "Generic02" or 
-       outfit == "Generic03" or outfit == "Generic04" or outfit == "Outfit_Generic05" then
-
-        local wornItems = zed:getWornItems()
-        local inventory = zed:getInventory()
-        
-        for i = 0, wornItems:size() - 1 do
-            local wornItem = inv:getItemByIndex(i)
-            local Type = wornItem:getFullType()
-            if wornItem and (string.find(Type, "Internal")) then
-                print("Gottem")
-                return true 
-            end
-        end
-    end
-end
-
-Events.OnZombieUpdate.Add(HuntLineCow.removeCowOutfit)
-
-
 function HuntLineCow.coreFunc(zed)
     if not zed then return end
     if zed:isReanimatedPlayer() then
