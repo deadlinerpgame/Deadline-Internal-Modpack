@@ -38,9 +38,42 @@ HORSE_ITEM_TYPES = {
 }
 
 HORSE_FEED_TYPES = {
+    "DeadlineHorse.FoodHorseA",
+    "DeadlineHorse.FoodHorseB",
     "Base.Apple",
-
+    "Base.Pear",
+    "Base.Carrots",
+    "Base.Corn",
+    "Base.Lettuce",
+    "Base.Banana",
+    "Base.Peach",
+    "Base.Grapes",
+    "Base.Cherry",
+    "Base.Strewberrie",
+    "Base.BerryBlue",
+    "Base.BerryBlack",
+    "Base.Watermelon",
+    "Base.WatermelonSliced",
+    "Base.WatermelonSmashed",
+    "Base.Pumpkin",
+    "Base.Zucchini",
+    "Base.Daikon",
+    "Base.RedRadish",
+    "Base.Peas",
+    "Base.BellPepper",
+    "Base.OatsRaw",
+    "Base.Cereal",
+    "Base.Bread",
+    "Base.BreadSlices",
+    "Base.Sugar",
+    "Base.SugarBrown",
+    "Base.SunflowerSeeds",
+    "Base.Peanuts",
+    "Base.MintCandy",
+    "Base.Candycane",
 }
+
+HORSE_GRAZE_PER_HOUR = 12
 -- not used
 HORSE_WATER_TYPES = {
     "Base.WaterBottleFull",
@@ -312,7 +345,7 @@ local function assignHorseGUID(item, player)
 end
 
 local function predicateEvalWaterItem(item)
-    return item:canStoreWater() and item:IsDrainable() and item:getUsedDelta() > 0.0;
+    return item:isWaterSource() and item:IsDrainable() and item:getUsedDelta() > 0.0;
 end
 
 local function addWaterItemsToHorse(player, context, menuOption, horse)
@@ -500,23 +533,23 @@ local function horseContextMenu(player, context, items)
                     local subMenu = ISContextMenu:getNew(context);
                     context:addSubMenu(menuOption, subMenu);
 
+                    local hasFood = false
                     for _, foodType in ipairs(HORSE_FEED_TYPES) do
                         local foodItem = player:getInventory():FindAndReturn(foodType)
-                        local scriptManager = getScriptManager()
-                        local name = scriptManager:getItem(foodType):getDisplayName()
-                        local opt
-                        local hunger
                         if foodItem and (not foodItem:IsFood() or not foodItem:isRotten()) then
-                            opt = subMenu:addOption(name, player, onFeedHorse, item, foodItem)
-                            hunger = (Math.abs(foodItem:getHungerChange() * 100))
+                            hasFood = true
+                            local opt = subMenu:addOption(foodItem:getDisplayName(), player, onFeedHorse, item, foodItem)
+                            local hunger = math.floor(Math.abs(foodItem:getHungerChange() * 100))
                             local tip = ISToolTip:new()
                             tip:initialise()
                             tip.description = "Will restore up to " .. hunger .. " hunger."
                             opt.toolTip = tip
-                        else
-                            opt = subMenu:addOption(name)
-                            opt.notAvailable = true
                         end
+                    end
+                    if not hasFood then
+                        menuOption.notAvailable = true
+                        local opt = subMenu:addOption("You do not have anything a horse will eat.")
+                        opt.notAvailable = true
                     end
 
                     local menuOption = context:addOption("Give Water", worldobjects);
@@ -1009,7 +1042,7 @@ end
 
     local hasMouth = data.equipment.mouth and (data.equipment.mouthWear or 0) > 0 and (data.equipment.mouthFill or 0) > 0
     local mouthInfo = hasMouth and HORSE_MOUTH_TYPES[data.equipment.mouth] or nil
-    local hungerDrainMult = 0
+    local hungerDrainMult = getTemperamentMult(data, "hungerDrainMult")
     local thirstDrainMult = getTemperamentMult(data, "thirstDrainMult")
     if hasMouth and mouthInfo then
         if mouthInfo.fillType == "food" then
@@ -1030,6 +1063,13 @@ end
     elseif isMoving then
         data.hunger = math.max(0, data.hunger - (0.013 * hungerDrainMult * delta))
         data.thirst = math.max(0, data.thirst - (0.033 * thirstDrainMult * delta))
+    end
+
+    local worldHours = getGameTime():getWorldAgeHours()
+    local grazed = worldHours - (data.grazeHours or worldHours)
+    data.grazeHours = worldHours
+    if grazed > 0 and (not isMoving or grazed > 0.1) then
+        data.hunger = math.min(data.maxHunger or 300, data.hunger + (HORSE_GRAZE_PER_HOUR * grazed))
     end
 
     if data.hunger >= 300 and data.thirst >= 300 and not isMoving then
