@@ -10,7 +10,9 @@ module Base
 
 		SkillRequired:MetalWelding=1,
         	Result:JarLid,
-        	Time:140.0,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
         	Sound:BlowTorch,
         	Category:Welding,
     	}
@@ -24,7 +26,9 @@ module Base
 		SkillRequired:MetalWelding=4,
 
         	Result:ScrewsBox,
-        	Time:140.0,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
         	Sound:BlowTorch,
         	Category:Welding,
     	}
@@ -38,7 +42,9 @@ module Base
 		SkillRequired:MetalWelding=4,
 
         	Result:NailsBox,
-        	Time:140.0,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
         	Sound:BlowTorch,
         	Category:Welding,
     	}
@@ -49,8 +55,10 @@ module Base
         	keep [Recipe.GetItemTypes.Hammer],
 
         	Result:aerx.IronFragments,
-        	Time:50.0,
-		Sound:Hammering,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Hammer,
+        	Sound:Hammering,
         	Category:Welding,
 	}
 
@@ -64,7 +72,9 @@ module Base
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLForgeX10,
 		SkillRequired:MetalWelding=3,
-        	Time:10.0,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
         	Sound:BlowTorch,
         	Category:Welding,
     	}
@@ -78,7 +88,9 @@ module Base
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLForgeX10,
 		SkillRequired:MetalWelding=3,
-        	Time:10.0,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
         	Sound:BlowTorch,
         	Category:Welding,
     	}
@@ -93,7 +105,9 @@ module Base
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLForgeX4,
 		SkillRequired:MetalWelding=3,
-        	Time:10.0,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
         	Sound:BlowTorch,
         	Category:Welding,
     	}
@@ -107,7 +121,9 @@ module Base
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLForgeX4,
 		SkillRequired:MetalWelding=3,
-        	Time:10.0,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
         	Sound:BlowTorch,
         	Category:Welding,
     	}
@@ -122,7 +138,9 @@ module Base
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLForgeX10,
 		SkillRequired:MetalWelding=3,
-        	Time:10.0,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
         	Sound:BlowTorch,
         	Category:Welding,
     	}
@@ -137,7 +155,9 @@ module Base
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLForgeX4,
 		SkillRequired:MetalWelding=3,
-        	Time:10.0,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
         	Sound:BlowTorch,
         	Category:Welding,
     	}
@@ -150,7 +170,8 @@ module Base
 		SkillRequired:MetalWelding=3,
 
         	Result:Base.PaintbucketEmpty,
-        	Time:140.0,
+        	Time:255.0,
+			AnimNode:Disassemble,
         	Sound:Hammering,
         	Category:Welding,
     	}
@@ -165,7 +186,9 @@ module Base
 		SkillRequired:MetalWelding=3,
 
         	Result:WeldingRods=4,
-        	Time:140.0,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
         	Sound:Hammering,
         	Category:Welding,
     	}
@@ -189,6 +212,10 @@ module Base
 		CanBeDoneFromFloor      : False,
 		NeedToBeLearn: false,
 		NearItem:Simple Forge,
+		Prop1:Blowtorch,
+		Prop2:Hammer,
+		Sound:Hammering,
+		Sound:BlowTorch,
     }
 
 	recipe Melt Ingots into Nails
@@ -210,6 +237,10 @@ module Base
 		CanBeDoneFromFloor      : False,
 		NeedToBeLearn: false,
 		NearItem:Advanced Forge,
+		Prop1:Blowtorch,
+		Prop2:Hammer,
+		Sound:Hammering,
+		Sound:BlowTorch,
     }
 
 	recipe Melt Ingot into Electric Wire
@@ -230,6 +261,8 @@ module Base
 		CanBeDoneFromFloor      : False,
 		NeedToBeLearn: false,
 		NearItem:Simple Forge,
+		Prop1:Blowtorch,
+		Sound:BlowTorch,
     }
 
    recipe Cut Sheet Metal
@@ -240,9 +273,12 @@ module Base
         Result:SmallSheetMetal=4,
         Time:255.0,
         Category:Smithing,
-	RemoveResultItem:true,
-	OnCreate:Recipe.OnCreate.DLForgeX4,
-	SkillRequired:MetalWelding=1,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.DLForgeX4,
+		SkillRequired:MetalWelding=1,
+		AnimNode:Disassemble,
+		Prop1:Blowtorch,
+		Sound:BlowTorch,
 
     }
 
@@ -254,8 +290,11 @@ module Base
         Result:SheetMetal=1,
         Time:255.0,
         Category:Smithing,
-	OnCreate:Recipe.OnCreate.DLForge,
-	SkillRequired:MetalWelding=3,
+		AnimNode:Disassemble,
+		OnCreate:Recipe.OnCreate.DLForge,
+		SkillRequired:MetalWelding=3,
+		Prop1:Blowtorch,
+		Sound:BlowTorch,
 
     }
 
@@ -273,8 +312,10 @@ module Base
         	Result:aerx.File,
         OnCreate:Recipe.OnCreate.DLForge,
         	Time:140.0,
-        	Sound:BlowTorch,
-        	Category:Welding,
+		AnimNode:Disassemble,
+		Prop1:Blowtorch,
+        Sound:BlowTorch,
+        Category:Welding,
     	}
 
 }
