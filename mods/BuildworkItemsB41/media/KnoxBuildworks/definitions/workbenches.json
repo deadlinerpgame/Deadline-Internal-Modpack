@@ -2096,6 +2096,247 @@
           "health": 400
         }
       ]
+    },
+    {
+      "id": "kbw.deadline.workbench.precisionfabricator",
+      "displayName": "Precision Fabricator",
+      "translationKey": "IGUI_KBW_Deadline_precisionfabricator",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "edit_ddd_RUS_location_business_machinery_02_6",
+      "materialTags": [
+        "Metal"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "edit_ddd_RUS_location_business_machinery_02_7"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "edit_ddd_RUS_location_business_machinery_02_7"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "edit_ddd_RUS_location_business_machinery_02_6"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "edit_ddd_RUS_location_business_machinery_02_6"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.PrecisionFabricator"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "VehicleTrailer",
+            "sound": "RepairWithWrench",
+            "category": "Carpentry"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "PrecisionFabricator"
+          },
+          "health": 400
+        }
+      ]
+    },
+    {
+      "id": "kbw.deadline.workbench.lathe",
+      "displayName": "Lathe",
+      "translationKey": "IGUI_KBW_Deadline_lathe",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "industry_tk_02_56",
+      "materialTags": [
+        "Metal"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "industry_tk_02_57"
+                      ],
+                      [
+                        "industry_tk_02_56"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "industry_tk_02_69"
+                      ],
+                      [
+                        "industry_tk_02_68"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "industry_tk_02_58",
+                        "industry_tk_02_59"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "industry_tk_02_70",
+                        "industry_tk_02_71"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.Lathe"
+                ],
+                "amount": 1
+              }
+            ],
+            "skills": {
+              "Woodwork": 6
+            }
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "VehicleTrailer",
+            "sound": "RepairWithWrench",
+            "category": "Carpentry"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Lathe"
+          },
+          "health": 400
+        }
+      ]
     }
   ]
 }
