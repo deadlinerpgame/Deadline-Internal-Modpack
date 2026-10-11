@@ -81,7 +81,7 @@ function Recipe.OnCreate.DLMeltIngot(items, result, player)
     local mat = DL.Forge.sourceMaterial(items)
     if not (mat and mat.composition) then return end
     if not payOut(player, mat.composition, 6, "scrap") then
-        player:getInventory():AddItem("aerx.IronScrap")
+        player:getInventory():AddItem("DL_MetalLine.Scrap_Iron_M")
     end
 end
 
@@ -112,7 +112,7 @@ function Recipe.OnCreate.DLReclaimMetal(items, result, player)
 
     if not (mat and mat.composition and payOut(player, mat.composition, units, "fragments")) then
         local inv = player:getInventory()
-        for _ = 1, units do inv:AddItem("aerx.IronFragments") end
+        for _ = 1, units do inv:AddItem("DL_MetalLine.Scrap_Iron_S") end
     end
 end
 

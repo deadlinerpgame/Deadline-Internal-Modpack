@@ -69,7 +69,7 @@ module KCMweapons
 	fixing Fix Hand Crossbow
 	{
 		Require 		: HandCrossbow,
-		Fixer 			: IronFragments=1; MetalWelding=1,
+		Fixer 			: Scrap_Iron_S=1; MetalWelding=1,
 		Fixer 			: HandCrossbow; Aiming=1,
 		Fixer 			: DuctTape=1,
 
@@ -89,7 +89,7 @@ module KCMweapons
 	fixing Fix Handmade Metal Crossbow
 	{
 		Require 		: KCM_Handmade02,
-		Fixer 			: IronFragments=1; MetalWelding=2,
+		Fixer 			: Scrap_Iron_S=1; MetalWelding=2,
 		Fixer 			: KCM_Handmade02; Aiming=2,
 		Fixer 			: DuctTape=2,
 
@@ -99,7 +99,7 @@ module KCMweapons
 	fixing Fix Scout Compound Bow
 	{
 		Require 		: KCM_Compound,
-		Fixer 			: IronFragments=2; MetalWelding=3,
+		Fixer 			: Scrap_Iron_S=2; MetalWelding=3,
 		Fixer 			: KCM_Compound; Aiming=3,
 		Fixer 			: DuctTape=3,
 
@@ -109,7 +109,7 @@ module KCMweapons
 	fixing Fix Haze 470 Compound Bow
 	{
 		Require 		: KCM_Compound02,
-		Fixer 			: IronFragments=3; MetalWelding=3,
+		Fixer 			: Scrap_Iron_S=3; MetalWelding=3,
 		Fixer 			: KCM_Compound02; Aiming=3,
 		Fixer 			: DuctTape=3,
 
@@ -122,7 +122,7 @@ module KCMweapons
 		Plank=4,
 		Nails=10,
 		Twine=4,
-		IronFragments=2,
+		Scrap_Iron_S=2,
 		RippedSheets=2,
         keep [Recipe.GetItemTypes.Hammer],
 		keep [Recipe.GetItemTypes.Saw],
@@ -145,7 +145,7 @@ module KCMweapons
 		BlowTorch=1,
 		Screws=10,
 		Twine=4,
-		IronFragments=4,
+		Scrap_Iron_S=4,
         keep Screwdriver,
 		keep [Recipe.GetItemTypes.Saw],
 
@@ -177,7 +177,7 @@ module KCMweapons
 	recipe Craft Long Crossbow Bolt (x3)
     {
        WoodenStick = 3,
-	   IronFragments,	
+	   Scrap_Iron_S,	
 	   keep [Recipe.GetItemTypes.Hammer],
 	   keep [Recipe.GetItemTypes.SharpKnife],
 
@@ -194,7 +194,7 @@ module KCMweapons
 	recipe Craft Short Crossbow Bolt (x3)
     {
        WoodenStick = 1,
-	   IronFragments,	
+	   Scrap_Iron_S,	
 	   keep [Recipe.GetItemTypes.Hammer],
 	   keep [Recipe.GetItemTypes.SharpKnife],
 
@@ -225,7 +225,7 @@ module KCMweapons
 	recipe Craft Long Crossbow Bolt (x15)
     {
        WoodenStick = 15,
-       IronFragments = 5,
+       Scrap_Iron_S = 5,
        keep [Recipe.GetItemTypes.Hammer],
        keep [Recipe.GetItemTypes.SharpKnife],
        Result:CrossbowBoltLarge = 15,
@@ -240,7 +240,7 @@ module KCMweapons
 	recipe Craft Short Crossbow Bolt (x15)
     {
        WoodenStick = 5,
-       IronFragments = 5,
+       Scrap_Iron_S = 5,
        keep [Recipe.GetItemTypes.Hammer],
        keep [Recipe.GetItemTypes.SharpKnife],
        Result:CrossbowBolt = 15,

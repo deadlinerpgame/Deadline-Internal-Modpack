@@ -3,7 +3,7 @@ module Base
 
 	recipe Make Jar Lid
 	{
-        	aerx.IronFragments=2,
+        	DL_MetalLine.Scrap_Iron_S=2,
         	BlowTorch=1,
         	keep [Recipe.GetItemTypes.Hammer],
         	keep [Recipe.GetItemTypes.WeldingMask],
@@ -19,7 +19,7 @@ module Base
 
     	recipe Make Box of Screws
     	{
-        	aerx.IronScrap=5,
+        	DL_MetalLine.Scrap_Iron_M=5,
         	BlowTorch=5,
         	keep [Recipe.GetItemTypes.Hammer],
         	keep [Recipe.GetItemTypes.WeldingMask],
@@ -35,7 +35,7 @@ module Base
 
     	recipe Make Box of Nails
     	{
-        	aerx.IronScrap=5,
+        	DL_MetalLine.Scrap_Iron_M=5,
         	BlowTorch=1,
         	keep [Recipe.GetItemTypes.Hammer],
         	keep [Recipe.GetItemTypes.WeldingMask],
@@ -54,7 +54,7 @@ module Base
         	TinCanEmpty/EmptyBeerCan/PopEmpty/Pop2Empty/Pop3Empty/BeerCanEmpty/Necklace_DogTag,
         	keep [Recipe.GetItemTypes.Hammer],
 
-        	Result:aerx.IronFragments,
+        	Result:DL_MetalLine.Scrap_Iron_S,
         	Time:255.0,
 			AnimNode:Disassemble,
 			Prop1:Hammer,
@@ -301,7 +301,7 @@ module Base
     	recipe Make File
     	{
 		SmallSheetMetal=2,
-		aerx.IronFragments=4,
+		DL_MetalLine.Scrap_Iron_S=4,
         	BlowTorch=1,
 		aerx.Handle=1,
 		keep Saw,

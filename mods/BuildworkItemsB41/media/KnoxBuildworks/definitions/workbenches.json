@@ -2337,6 +2337,121 @@
           "health": 400
         }
       ]
+    },
+    {
+      "id": "kbw.deadline.workbench.cementmixer",
+      "displayName": "Cement Mixer",
+      "translationKey": "IGUI_KBW_Deadline_cementmixer",
+      "category": "Workbenches",
+      "subcategory": "Deadline",
+      "iconSprite": "construction_01_6",
+      "materialTags": [
+        "Metal"
+      ],
+      "tags": [
+        "deadline",
+        "workbench"
+      ],
+      "placement": {
+        "kind": "object"
+      },
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "geometry": {
+            "faces": {
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "construction_01_6"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "construction_01_6"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "construction_01_7"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "construction_01_7"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          },
+          "requirements": {
+            "inputs": [
+              {
+                "id": "tool_hammer",
+                "role": "tool",
+                "mode": "keep",
+                "resourceType": "Item",
+                "tags": [
+                  "Hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "kit",
+                "role": "material",
+                "mode": "consume",
+                "resourceType": "Item",
+                "items": [
+                  "Base.CementMixer"
+                ],
+                "amount": 1
+              }
+            ]
+          },
+          "construction": {
+            "time": 200,
+            "completionSound": "BuildWoodenStructureLarge",
+            "actionAnim": "VehicleTrailer",
+            "sound": "RepairWithWrench",
+            "category": "Carpentry"
+          },
+          "object": {
+            "isThumpable": true,
+            "blockAllSquare": true,
+            "canBarricade": false,
+            "dismantable": true,
+            "objectName": "Cement Mixer"
+          },
+          "health": 400
+        }
+      ]
     }
   ]
 }
