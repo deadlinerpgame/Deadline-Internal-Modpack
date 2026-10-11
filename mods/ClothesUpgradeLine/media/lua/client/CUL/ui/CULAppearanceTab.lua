@@ -164,9 +164,11 @@ end
 function CULAppearanceTab:onRGBChanged()
     if self._syncingRGB then return end
     if not (self.selectedItem and self.appr and self.appr.canTint) then return end
-    local r = clamp255(self.rBox:getText()) / 255
-    local g = clamp255(self.gBox:getText()) / 255
-    local b = clamp255(self.bBox:getText()) / 255
+    -- onTextChange fires before the Java text box copies its internal text
+    -- into getText(), so getText() is one keystroke behind. Read the live text.
+    local r = clamp255(self.rBox:getInternalText()) / 255
+    local g = clamp255(self.gBox:getInternalText()) / 255
+    local b = clamp255(self.bBox:getInternalText()) / 255
     self:ensurePreviewMarked()
     self.curR, self.curG, self.curB = r, g, b
     self.dirty = true
@@ -348,10 +350,16 @@ function CULAppearanceTab:prerender()
     local reason = self:blockReason(st)
     S.setButtonState(self.applyBtn, reason == nil, reason)
     S.setButtonState(self.revertBtn, self.dirty, "Nothing to revert.")
+    -- The engine draws prerender, then children, then render. Drawing the
+    -- body here keeps it underneath the colour picker when it is open.
+    self:drawBody()
 end
 
 function CULAppearanceTab:render()
     ISPanel.render(self)
+end
+
+function CULAppearanceTab:drawBody()
     local x, w = self.rightX, self.rightW
     local it = self.selectedItem
     if not it then

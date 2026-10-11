@@ -67,11 +67,11 @@ local function onCreateUI()
     UI:addButton("button2", spawnpointnames[2], mapb);
     UI:addButton("button3", spawnpointnames[3], mapc);
     UI:addButton("button4", spawnpointnames[4], mapd);
-    UI:setLineHeightPercent(0.02);    
+    UI:setLineHeightPercent(0.045);    
     UI:nextLine();
 
     UI:addButton("", "Spawn", spawn);
-    UI:setLineHeightPercent(0.02); 
+    UI:setLineHeightPercent(0.045); 
     UI:saveLayout();
 end
 
