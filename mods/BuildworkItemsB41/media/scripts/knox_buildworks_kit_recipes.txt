@@ -247,4 +247,80 @@ module Base
         SkillRequired:Woodwork=6,
         Category:Construction,
     }
+
+    recipe Craft a Cement Mixer Kit WIP
+    {
+        keep Saw,
+	    keep Hammer,
+        keep Wrench,
+
+        EngineParts=20,
+	    SheetMetal=2,
+	    MetalPipe=2,
+	    ElectronicsScrap=50,
+        WeldingRods=20,
+        BlowTorch=10,
+        ElectricWire=10,
+        Smithing.IngotD=2,
+        Screws=20,
+        Timer=1,
+        ScannerModule=1,
+        TriggerCrafted=1,
+        CanBeDoneFromFloor:true,
+        Result:Base.CementMixer,
+        Time:600.0,
+	    SkillRequired:Electricity=10,
+        Category:Construction,
+    }
+
+    recipe Craft a Lathe Kit (with Brass and Steel) WIP
+    {
+        keep Saw,
+	    keep Hammer,
+        keep Wrench,
+        keep Screwdriver,
+        MachinedComponents = 2,
+        WeldingRods=40,
+        BlowTorch=10,
+        Smithing.IngotK=1,
+        Smithing.IngotD=3,
+	    Screws=50,
+        CanBeDoneFromFloor:true,
+        Result:Base.Lathe,
+        Time:600.0,
+	    SkillRequired:MetalWelding=10,
+        Category:Construction,
+    }
+
+    recipe Craft a Precision Fabricator Kit (with Brass and Steel) WIP
+    {
+        keep Saw,
+	    keep Hammer,
+        keep Wrench,
+        keep Screwdriver,
+
+        EngineParts=20,
+        PrecisionOptics,
+        MachinedComponents,
+        GlassPane=4,
+        WeldingRods=20,
+        BlowTorch=10,
+        ElectricWire=10,
+        Smithing.IngotK=1,
+        Smithing.IngotD=1,
+	    ElectronicsScrap=50,
+	    Screws=25,
+        LightBulbRed=1,
+	    LightBulbGreen=1,
+	    LightBulbYellow=1,
+        Timer=1,
+        ScannerModule=1,
+        TriggerCrafted=1,
+        CanBeDoneFromFloor:true,
+        Result:Base.PrecisionFabricator,
+        Time:600.0,
+	    SkillRequired:Electricity=10,
+        Category:Construction,
+    }
+
 }
