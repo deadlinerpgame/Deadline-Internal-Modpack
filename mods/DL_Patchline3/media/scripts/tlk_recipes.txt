@@ -4,19 +4,6 @@ module Base
 	Base,
     }
 
-	recipe Make Maggot Meat Balls
-	{
-		Base.Maggots=40,
-		Water=2,
-		Base.Maize=2,
-		keep Base.Saucepan,
-
-		Result:tlkitems.maggot_meat_balls=2,
-		Time:900.0,
-		Category:Survivalist,
-		OnGiveXP:Recipe.OnGiveXP.Cooking10,
-	}
-
 	recipe Make Pot of Spaghetti Meatballs
 	{
 		tlkitems.maggot_meat_balls=2,
@@ -51,7 +38,7 @@ module Base
 
 		recipe Make Wild Berry Juice
 	{
-		Base.WaterBottleEmpty/Base.PopBottleEmpty/BZMClothing.WaterBottleEmpty=1,
+		Base.WaterBottleEmpty/Base.PopBottleEmpty=1,
 		keep Base.MortarPestle,
 
 		Result:tlkitems.wildjuice,

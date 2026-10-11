@@ -20,40 +20,4 @@ module SGuns
 		Override = true,
 	}
 
-    recipe Assemble Scrap Gatling
-	{
-		GunParts=6,
-		SmallSheetMetal=6,
-		Wire=5,
-		SheetMetal=3,
-		EngineParts=3,
-		Plank=2,
-		No=1,
-		MetalPipe/LeadPipe,
-		MetalPipe/LeadPipe,
-		MetalPipe/LeadPipe,
-		Motor,
-		CarBattery1/CarBattery2/CarBattery3,
-		Screws=30,
-		LeatherStrips=20,
-		BlowTorch=5,
-		keep [Recipe.GetItemTypes.Drill],
-		keep [Recipe.GetItemTypes.Pliers],
-		keep [Recipe.GetItemTypes.WeldingMask],
-		keep [Recipe.GetItemTypes.Hammer],
-		keep [Recipe.GetItemTypes.Screwdriver],
-		Result 		: ScrapGatling,
-		Sound 		: SMGCrafting,
-		Time 		: 1800,
-		Category 		: Weapons,
-		SkillRequired       : Electrical=1,
-		SkillRequired       : Mechanics=1,
-		SkillRequired 		: MetalWelding=9,
-		OnGiveXP 		: Recipe.OnGiveXP.MetalWelding10,
-		AnimNode 		: BlowTorchMid,
-		Prop1       : BlowTorch,
-		NeedToBeLearn : true,
-		Override : true
-
-	}
 }

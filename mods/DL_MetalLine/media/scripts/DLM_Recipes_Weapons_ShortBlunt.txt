@@ -26,7 +26,6 @@ module Base
         Time:100.0,
         Category:ShortBlunt,
 	SkillRequired:Woodwork=3,
-	NeedToBeLearn:true,
 
     }
 
@@ -176,7 +175,6 @@ module Base
         Time:100.0,
         Category:ShortBlunt,
 	SkillRequired:Woodwork=1,
-	NeedToBeLearn:true,
 
     }
 
@@ -188,7 +186,6 @@ module Base
         Time:100.0,
         Category:ShortBlunt,
 	SkillRequired:Woodwork=1,
-	NeedToBeLearn:true,
 
     }
 
@@ -224,7 +221,7 @@ module Base
 
     recipe Craft a Jawbone Club
     {
-       	aerx.Handle
+       	aerx.Handle,
 	LeatherStrips=2,
 	aerx.JawboneBovide=1,
 	keep [Recipe.GetItemTypes.Saw],
@@ -232,7 +229,6 @@ module Base
         Time:100.0,
         Category:ShortBlunt,
 	SkillRequired:Woodwork=3,
-	NeedToBeLearn:true,
     }
 
     recipe Craft Short Scrap Morningstar

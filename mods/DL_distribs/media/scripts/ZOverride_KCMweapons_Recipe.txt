@@ -209,6 +209,49 @@ module KCMweapons
     }
 
 
+	recipe Craft Wooden Crossbow Bolt (x15)
+    {
+       WoodenStick = 15,
+       keep [Recipe.GetItemTypes.SharpKnife],
+       Result:WoodenBolt = 15,
+       Time:300,
+	   Sound:Sawing,
+	   AnimNode:Disassemble,
+	   Prop1:Hammer,
+       Category:Crossbows,
+	   NeedToBeLearn:true,
+    }
+
+	recipe Craft Long Crossbow Bolt (x15)
+    {
+       WoodenStick = 15,
+       IronFragments = 5,
+       keep [Recipe.GetItemTypes.Hammer],
+       keep [Recipe.GetItemTypes.SharpKnife],
+       Result:CrossbowBoltLarge = 15,
+       Time:375,
+	   Sound:Hammering,
+	   AnimNode:Disassemble,
+	   Prop1:Hammer,
+       Category:Crossbows,
+	   NeedToBeLearn:true,
+    }
+
+	recipe Craft Short Crossbow Bolt (x15)
+    {
+       WoodenStick = 5,
+       IronFragments = 5,
+       keep [Recipe.GetItemTypes.Hammer],
+       keep [Recipe.GetItemTypes.SharpKnife],
+       Result:CrossbowBolt = 15,
+       Time:287.5,
+	   Sound:Hammering,
+	   AnimNode:Disassemble,
+	   Prop1:Hammer,
+       Category:Crossbows,
+	   NeedToBeLearn:true,
+    }
+
     recipe Convert Sling to Crossbow Sling
     {
        DLSling,

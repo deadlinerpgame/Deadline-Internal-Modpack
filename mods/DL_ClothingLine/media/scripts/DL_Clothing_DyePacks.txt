@@ -36,19 +36,4 @@ module Base
         Time: 150,
         }
 
-    recipe Mix Dye Pack {
-        HairDyeYellow/HairDyeBlonde,
-        HairDyeBlue/HairDyeRed/HairDyeGreen,
-        HairDyeWhite/Bleach/HairDyeBlack,
-	No=1,
-        keep Mugl/Bowl/Teacup,
-        keep Spoon/WoodenStick,
-        Result: DyePack,
-        Category:Tailoring,
-        SkillRequired:Tailoring=6,
-        Sound:MakePlaster,
-        Time: 150,
-	NeedToBeLearn : true,
-	Override : true,
-        }
 }

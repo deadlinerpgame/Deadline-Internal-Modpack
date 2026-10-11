@@ -64,24 +64,6 @@ module Base
 		SkillRequired:Cooking=5,
 	}
 
-    recipe Make Cannabis Gummies
-	{
-		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
-		keep BakingMolds,
-		keep Bowl,
-		Water=4,
-		Jello_Strawberry;1,
-		Jello_Lime;1,
-		Jello_Orange;1,
-        [Recipe.GetItemTypes.CannaButter];8,
-
-		Result:CannabisGummies,
-		Category:MoreSmokes,
-		Time:250,
-        OnGiveXP: Recipe.OnGiveXP.Cultivation20,
-        SkillRequired:Cultivation=6,
-		SkillRequired:Cooking=2,
-	}
 
     recipe Make Gummy Worms
 	{
