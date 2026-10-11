@@ -4,7 +4,7 @@ module Base
     {
         Base.SmallSheetMetal=1,
         Result:aerx.IronFragments,
-        Time:15.0,
+        Time:50.0,
         Category:Scrapping,
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLScrap,
@@ -14,58 +14,76 @@ module Base
     {
         Base.SheetMetal=1,
         Result:aerx.IronFragments,
-        Time:15.0,
+        Time:50.0,
         Category:Scrapping,
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLScrap,
+		AnimNode:Disassemble,
+		Prop1:Hammer,
+        Sound:Hammering,        
     }
 
     recipe Scrap Beer Can
     {
         Base.BeerCanEmpty/Base.PopEmpty/Base.Pop2Empty/Base.Pop3Empty,
         Result:aerx.AluminumFragments,
-        Time:15.0,
+        Time:50.0,
         Category:Scrapping,
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLScrap,
+        AnimNode:Disassemble,
+		Prop1:Hammer,
+        Sound:Hammering,
     }
 
     recipe Scrap Electric Wire
     {
         Radio.ElectricWire,
         Result:aerx.CopperFragments,
-        Time:15.0,
+        Time:50.0,
         Category:Scrapping,
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLScrap,
+        AnimNode:Disassemble,
+		Prop1:Hammer,
+        Sound:Hammering,
     }
 
     recipe Scrap Electronic Scrap
     {
         Base.ElectronicsScrap,
         Result:aerx.CopperFragments,
-        Time:15.0,
+        Time:50.0,
         Category:Scrapping,
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLScrap,
+        AnimNode:Disassemble,
+		Prop1:Hammer,
+        Sound:Hammering,
     }
 
     recipe Scrap Tin Can
     {
         Base.TinCanEmpty,
         Result:aerx.TinFragments,
-        Time:15.0,
+        Time:50.0,
         Category:Scrapping,
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLScrap,
+        AnimNode:Disassemble,
+		Prop1:Hammer,
+        Sound:Hammering,
     }
 
     recipe Scrap Lead Pipe
     {
         Base.LeadPipe,
         Result:aerx.LeadScrap,
-        Time:15.0,
+        Time:50.0,
         Category:Scrapping,
+        AnimNode:Disassemble,
+		Prop1:Hammer,
+        Sound:Hammering,
     }
 
     recipe Scrap Gold Jewelry
@@ -73,8 +91,11 @@ module Base
         BellyButton_DangleGold/BellyButton_RingGold/BellyButton_StudGold/Bracelet_BangleLeftGold/Bracelet_BangleRightGold/Bracelet_ChainLeftGold/Bracelet_ChainRightGold/Earring_LoopLrg_Gold_Both/Earring_LoopMed_Gold_Both/Earring_LoopSmall_Gold_Both/Earring_LoopSmall_Gold_Top/Earring_Stud_Gold_Both/Necklace_Gold/NecklaceLong_Gold/NoseRing_Gold/NoseStud_Gold/Ring_Left_MiddleFinger_Gold/Ring_Left_RingFinger_Gold/Ring_Right_MiddleFinger_Gold/Ring_Right_RingFinger_Gold/BellyButton_RingGoldDiamond/BellyButton_StudGoldDiamond/Necklace_GoldDiamond/NecklaceLong_GoldDiamond/Ring_Left_MiddleFinger_GoldDiamond/Ring_Left_RingFinger_GoldDiamond/Ring_Right_MiddleFinger_GoldDiamond/Ring_Right_RingFinger_GoldDiamond/BellyButton_DangleGoldRuby/BellyButton_RingGoldRuby/Necklace_GoldRuby/Ring_Left_MiddleFinger_GoldRuby/Ring_Left_RingFinger_GoldRuby/Ring_Right_MiddleFinger_GoldRuby/Ring_Right_RingFinger_GoldRuby,
         Result:aerx.GoldScrap,
 
-        Time:15.0,
+        Time:50.0,
         Category:Scrapping,
+        AnimNode:Disassemble,
+		Prop1:Hammer,
+        Sound:Hammering,
     }
 
     recipe Scrap Silver Jewelry
@@ -82,34 +103,46 @@ module Base
     BellyButton_DangleSilver/BellyButton_RingSilver/BellyButton_StudSilver/Bracelet_BangleLeftSilver/Bracelet_BangleRightSilver/Bracelet_ChainLeftSilver/Bracelet_ChainRightSilver/Earring_LoopLrg_Silver_Both/Earring_LoopMed_Silver_Both/Earring_LoopSmall_Silver_Both/Earring_LoopSmall_Silver_Top/Earring_Stud_Silver_Both/NecklaceLong_Silver/Necklace_SilverCrucifix/Necklace_Silver/NoseRing_Silver/NoseStud_Silver/Ring_Left_MiddleFinger_Silver/Ring_Left_RingFinger_Silver/Ring_Right_MiddleFinger_Silver/Ring_Right_RingFinger_Silver/BellyButton_DangleSilverDiamond/BellyButton_RingSilverDiamond/BellyButton_StudSilverDiamond/NecklaceLong_SilverDiamond/Necklace_SilverDiamond/Ring_Left_MiddleFinger_SilverDiamond/Ring_Left_RingFinger_SilverDiamond/Ring_Right_MiddleFinger_SilverDiamond/Ring_Right_RingFinger_SilverDiamond/BellyButton_RingSilverRuby/NecklaceLong_SilverSapphire/Necklace_SilverSapphire/NecklaceLong_SilverEmerald/BellyButton_RingSilverAmethyst,
         Result:aerx.SilverScrap,
 
-        Time:15.0,
+        Time:50.0,
         Category:Scrapping,
+        AnimNode:Disassemble,
+		Prop1:Hammer,
+        Sound:Hammering,
     }
 
     recipe Turn Aluminum Foil into Fragments
     {
         Base.Aluminum=1,
         Result:aerx.AluminumFragments=2,
-        Time:15.0,
+        Time:50.0,
         Category:Scrapping,
+        AnimNode:Disassemble,
+		Prop1:Hammer,
+        Sound:Hammering,
     }
 
     recipe Turn Aluminum Fragments into Foil
     {
         aerx.AluminumFragments=2,
         Result:Base.Aluminum,
-        Time:15.0,
+        Time:50.0,
         Category:Scrapping,
+        AnimNode:Disassemble,
+		Prop1:Hammer,
+        Sound:Hammering,
     }
 
     recipe Salvage Unusable Metal
     {
         UnusableMetal,
         Result:aerx.IronFragments,
-        Time:15.0,
+        Time:50.0,
         Category:Scrapping,
         RemoveResultItem:true,
         OnCreate:Recipe.OnCreate.DLScrap,
+        AnimNode:Disassemble,
+		Prop1:Hammer,
+        Sound:Hammering,
     }
 
     recipe Swap Iron Scrap with Scrap
