@@ -27,7 +27,7 @@ DL.FuelList = {
     { type = "Base.Plank",       name = "Plank",       maxTemp = 45,  minutes = 8 },
     { type = "Base.Log",         name = "Log",         maxTemp = 45,  minutes = 20 },
     { type = "Base.Charcoal",    name = "Charcoal",    maxTemp = 75,  minutes = 10 },
-    { type = "Base.Coal",        name = "Coal",        maxTemp = 100, minutes = 15 },
+    { type = "aerx.Coke",        name = "Coke",        maxTemp = 100, minutes = 15 },
 }
 
 DL.Fuel = {}

@@ -1,6 +1,16 @@
 module Base
 {
 
+	recipe Mix Fire Clay
+	{
+		aerx.Clay=2,
+		DL_MetalLine.Junk_Slag=1,
+		keep [Recipe.GetItemTypes.Hammer],
+		Result:aerx.FireClay=2,
+		Time:200,
+		Category:ClayMolds,
+	}
+
 	recipe Press Blacksmith Anvil Mold
 	{
 		keep aerx.WoodenBenchAnvilMold,
