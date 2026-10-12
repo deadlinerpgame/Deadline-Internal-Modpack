@@ -96,7 +96,7 @@ DiceTraits.defs = {
 	redhand = { name = "Redhand", text = "+4 Attack with Short Blades", attackCat = { SmallBlade = 4 } },
 	sticker = { name = "Sticker", text = "+2 Attack with Spears", attackCat = { Spear = 2 } },
 	longreach = { name = "Longreach", text = "+4 Attack with Spears", attackCat = { Spear = 4 } },
-	scrapper = { name = "Scrapper", text = "+4 Attack Unarmed and Improvised", attackCat = { Unarmed = 4, Improvised = 4 } },
+	scrapper = { name = "Scrapper", text = "+4 Attack Unarmed and Improvised", attackUnarmed = 4 },
 
 	snapshooter = { name = "Snapshooter", text = "+1 Attack with Guns, +2 total with Close group guns", attackGun = 1, attackGunRange = { close = 1 } },
 	gunslinger = { name = "Gunslinger", text = "+2 Attack with Guns, +4 total with Close group guns", attackGun = 2, attackGunRange = { close = 2 } },
@@ -534,6 +534,9 @@ local function attackValue(def, ctx)
 		value = value + (def.attackThrown or 0)
 	else
 		value = value + (def.attackNonThrown or 0)
+	end
+	if def.attackUnarmed ~= nil and class == "unarmed" and not (ctx and ctx.thrown) then
+		value = value + def.attackUnarmed
 	end
 	if def.attackCat ~= nil and ctx ~= nil and ctx.cats ~= nil and not ctx.thrown then
 		for cat, amount in pairs(def.attackCat) do
