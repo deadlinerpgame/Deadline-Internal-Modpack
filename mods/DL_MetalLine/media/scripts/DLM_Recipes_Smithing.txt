@@ -70,7 +70,7 @@ module Base
 
    recipe Smith Bar into Sheet Metal
     {
-       	aerx.IronBar=1,
+       	aerx.IronBar=4,
 		Log/Coke/Charcoal=1,
 		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
         Result:SheetMetal=1,
@@ -84,8 +84,9 @@ module Base
 	recipe Smith Metal Sheet into Iron Bar
 	{
 		SheetMetal=1,
-		Result:aerx.IronBar=1,
-		OnCreate:Recipe.OnCreate.DLForge,
+		Result:aerx.IronBar=4,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.DLForgeX4,
 		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
 		Time:200.0,
 		Category:Smithing,

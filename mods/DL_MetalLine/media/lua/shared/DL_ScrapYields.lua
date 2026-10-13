@@ -19,8 +19,8 @@ end
 
 DL.ScrapYields = {
     ["Base.SmallSheetMetal"] = {
-        { item = "DL_MetalLine.Scrap_Iron_S", n = 5 },
-        { choice = { "DL_MetalLine.Scrap_Zinc_S", "DL_MetalLine.Scrap_Nickel_S" }, n = 2 },
+        { item = "DL_MetalLine.Scrap_Iron_S", n = 4 },
+        { choice = { "DL_MetalLine.Scrap_Zinc_S", "DL_MetalLine.Scrap_Nickel_S" }, n = 1 },
     },
     ["Base.SheetMetal"] = {
         { item = "DL_MetalLine.Scrap_Iron_M",     n = 1 },

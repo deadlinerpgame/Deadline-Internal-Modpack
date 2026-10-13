@@ -80,7 +80,7 @@ function Recipe.OnCreate.DLMeltIngot(items, result, player)
     if not player then return end
     local mat = DL.Forge.sourceMaterial(items)
     if not (mat and mat.composition) then return end
-    if not payOut(player, mat.composition, 6, "scrap") then
+    if not payOut(player, mat.composition, 4, "scrap") then
         player:getInventory():AddItem("DL_MetalLine.Scrap_Iron_M")
     end
 end
@@ -88,7 +88,7 @@ end
 local WEAPON_VALUE = {
     ["aerx.ShortSword_Scrap"] = 10, ["aerx.Sword_Scrap"] = 20,
     ["aerx.CrudeShortSword"]  = 10, ["aerx.CrudeSword"]  = 20,
-    ["aerx.ShortSword"]       = 15, ["aerx.Sword"]       = 30,
+    ["aerx.ShortSword"]       = 10, ["aerx.Sword"]       = 20,
     ["aerx.Mace"]             = 10, ["aerx.LongMace"]    = 10,
     ["aerx.ClubHammerForged"] = 5,  ["aerx.HammerForged"] = 5,
     ["aerx.BallPeenHammerForged"] = 5, ["base.Pickaxe"]  = 5,
