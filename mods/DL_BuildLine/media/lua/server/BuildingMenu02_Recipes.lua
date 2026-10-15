@@ -6539,8 +6539,8 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "MetalWelding",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * metalweldingXpPerLevel)
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
             }
         }
     }
@@ -6721,8 +6721,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * metalweldingXpPerLevel)
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
             },
             {
                 Skill = "Electricity",
@@ -6770,8 +6770,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * metalweldingXpPerLevel)
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
             },
             {
                 Skill = "Electricity",
@@ -6964,13 +6964,13 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "Woodwork",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * carpentryXpPerLevel)
+                Level = 2,
+                Xp = BuildingMenu.round(2 * carpentryXpPerLevel)
             },
             {
                 Skill = "MetalWelding",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * metalweldingXpPerLevel)
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
             },
             {
                 Skill = "Electricity",
@@ -7023,8 +7023,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * metalweldingXpPerLevel)
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
             },
             {
                 Skill = "Electricity",
@@ -7073,8 +7073,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 4,
-                Xp = BuildingMenu.round(4 * metalweldingXpPerLevel)
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
             },
             {
                 Skill = "Electricity",
@@ -7304,7 +7304,6 @@ local function initBuildingMenuRecipes()
             "BlowTorch",
             "WeldingMask",
             "Screwdriver",
-            "Saw",
         },
         neededMaterials = {
             {
@@ -7341,8 +7340,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 3,
-                Xp = BuildingMenu.round(3 * metalweldingXpPerLevel)
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
             },
             {
                 Skill = "Electricity",
