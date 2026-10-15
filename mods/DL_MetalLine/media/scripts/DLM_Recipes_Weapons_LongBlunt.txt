@@ -319,4 +319,20 @@ module Base
 	SkillRequired:MetalWelding=6,
 	NearItem:Simple Forge,
     }
+
+    recipe Metal Walking Canes
+	{
+	  	RippedSheets=10,
+		[Recipe.GetItemTypes.DLIngot],
+
+	  	Result:AuthenticZLite.AuthenticWalkingCaneMetal=2,
+		OnCreate:Recipe.OnCreate.DLForge,
+	  	Sound:Hammering,
+		AnimNode:Disassemble,
+		Time:300.0,
+		Category : LongBlunt,
+		SkillRequired:MetalWelding=4,
+		NearItem:Simple Forge,
+	}
+
 }
