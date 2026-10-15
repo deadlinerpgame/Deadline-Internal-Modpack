@@ -2913,22 +2913,24 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                Material = "Base.SheetMetal",
-                Amount = sheetMetalCountForRoofingAndFloors
-            },
-            {
                 {
-                    Material = "Base.MetalBar",
-                    Amount = BuildingMenu.round(metalBarsCount * 0.5)
+                    Material = "Base.SheetMetal",
+                    Amount = sheetMetalCountForRoofingAndFloors
                 },
                 {
-                    Material = "Base.MetalPipe",
-                    Amount = BuildingMenu.round(metalBarsCount * 0.5)
-                },
+                    Material = "Base.SmallSheetMetal",
+                    Amount = smallSheetMetalCountForRoofingAndFloors
+                }
             },
             {
                 Material = "Base.Screws",
                 Amount = BuildingMenu.round(screwsCount * 0.5)
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 1
             },
         },
         skills = {
@@ -3019,7 +3021,7 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 3,
+                Level = 2,
                 Xp = BuildingMenu.round(3 * metalweldingXpPerLevel)
             },
         }
@@ -3241,8 +3243,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "Woodwork",
-                Level = smallObjectsCarpentrySkill,
-                Xp = BuildingMenu.round(smallObjectsCarpentrySkill * carpentryXpPerLevel)
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
             }
         }
     }
