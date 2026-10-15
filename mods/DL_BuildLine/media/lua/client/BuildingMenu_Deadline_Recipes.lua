@@ -1649,26 +1649,16 @@ local function initBuildingMenuRecipes()
             {
                 {
                     Material = "Base.MetalBar",
-                    Amount = 2
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 2
-                },
-            },
-            {
-                {
-                    Material = "Base.Tarp",
                     Amount = 1
                 },
                 {
-                    Material = "Base.RippedSheets",
-                    Amount = 15
+                    Material = "Base.MetalPipe",
+                    Amount = 1
                 },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 8
-                }
+            },
+            {
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
         },
         useConsumable = {
@@ -1693,7 +1683,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 4,
+                Level = 2,
                 Xp = 15
             }
         }
@@ -1710,28 +1700,8 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                {
-                    Material = "Base.MetalBar",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 1
-                },
-            },
-            {
-                {
-                    Material = "Base.Tarp",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 8
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 4
-                }
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
         },
         useConsumable = {
@@ -1756,7 +1726,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 3,
+                Level = 2,
                 Xp = 10
             }
         }
@@ -1773,28 +1743,8 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                {
-                    Material = "Base.MetalBar",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 1
-                },
-            },
-            {
-                {
-                    Material = "Base.Tarp",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 8
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 4
-                }
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
             {
                 BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Ropes, 1, "Material")
@@ -1822,7 +1772,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 3,
+                Level = 2,
                 Xp = 10
             }
         }
@@ -1841,26 +1791,16 @@ local function initBuildingMenuRecipes()
             {
                 {
                     Material = "Base.MetalBar",
-                    Amount = 2
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 2
-                },
-            },
-            {
-                {
-                    Material = "Base.Tarp",
                     Amount = 1
                 },
                 {
-                    Material = "Base.RippedSheets",
-                    Amount = 15
+                    Material = "Base.MetalPipe",
+                    Amount = 1
                 },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 8
-                }
+            },
+            {
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
         },
         useConsumable = {
@@ -1885,7 +1825,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 4,
+                Level = 2,
                 Xp = 15
             }
         }
@@ -1902,28 +1842,8 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                {
-                    Material = "Base.MetalBar",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 1
-                },
-            },
-            {
-                {
-                    Material = "Base.Tarp",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 8
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 4
-                }
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
         },
         useConsumable = {
@@ -1948,7 +1868,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 3,
+                Level = 2,
                 Xp = 10
             }
         }
@@ -1965,28 +1885,8 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                {
-                    Material = "Base.MetalBar",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 1
-                },
-            },
-            {
-                {
-                    Material = "Base.Tarp",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 8
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 4
-                }
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
             {
                 BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Ropes, 1, "Material")
@@ -2014,7 +1914,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 3,
+                Level = 2,
                 Xp = 10
             }
         }
@@ -2033,26 +1933,16 @@ local function initBuildingMenuRecipes()
             {
                 {
                     Material = "Base.MetalBar",
-                    Amount = 2
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 2
-                },
-            },
-            {
-                {
-                    Material = "Base.Tarp",
                     Amount = 1
                 },
                 {
-                    Material = "Base.RippedSheets",
-                    Amount = 15
+                    Material = "Base.MetalPipe",
+                    Amount = 1
                 },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 8
-                }
+            },
+            {
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
         },
         useConsumable = {
@@ -2077,7 +1967,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 4,
+                Level = 2,
                 Xp = 15
             }
         }
@@ -2094,28 +1984,8 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                {
-                    Material = "Base.MetalBar",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 1
-                },
-            },
-            {
-                {
-                    Material = "Base.Tarp",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 8
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 4
-                }
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
         },
         useConsumable = {
@@ -2140,7 +2010,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 3,
+                Level = 2,
                 Xp = 10
             }
         }
@@ -2157,28 +2027,8 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                {
-                    Material = "Base.MetalBar",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 1
-                },
-            },
-            {
-                {
-                    Material = "Base.Tarp",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 8
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 4
-                }
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
             {
                 BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Ropes, 1, "Material")
@@ -2206,7 +2056,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 3,
+                Level = 2,
                 Xp = 10
             }
         }
@@ -2225,26 +2075,16 @@ local function initBuildingMenuRecipes()
             {
                 {
                     Material = "Base.MetalBar",
-                    Amount = 2
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 2
-                },
-            },
-            {
-                {
-                    Material = "Base.Tarp",
                     Amount = 1
                 },
                 {
-                    Material = "Base.RippedSheets",
-                    Amount = 15
+                    Material = "Base.MetalPipe",
+                    Amount = 1
                 },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 8
-                }
+            },
+            {
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
         },
         useConsumable = {
@@ -2269,7 +2109,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 4,
+                Level = 2,
                 Xp = 15
             }
         }
@@ -2286,28 +2126,8 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                {
-                    Material = "Base.MetalBar",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 1
-                },
-            },
-            {
-                {
-                    Material = "Base.Tarp",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 8
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 4
-                }
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
         },
         useConsumable = {
@@ -2332,7 +2152,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 3,
+                Level = 2,
                 Xp = 10
             }
         }
@@ -2349,28 +2169,8 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                {
-                    Material = "Base.MetalBar",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.MetalPipe",
-                    Amount = 1
-                },
-            },
-            {
-                {
-                    Material = "Base.Tarp",
-                    Amount = 1
-                },
-                {
-                    Material = "Base.RippedSheets",
-                    Amount = 8
-                },
-                {
-                    Material = "Base.DenimStrips",
-                    Amount = 4
-                }
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
             {
                 BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Ropes, 1, "Material")
@@ -2398,7 +2198,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 3,
+                Level = 2,
                 Xp = 10
             }
         }
