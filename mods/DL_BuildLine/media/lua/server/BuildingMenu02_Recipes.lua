@@ -231,7 +231,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 4,
+                Level = 1,
                 Xp = 10
             }
         }
@@ -4056,7 +4056,7 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "Tailoring",
-                Level = 4,
+                Level = 1,
                 Xp = 20
             }
         }
@@ -4086,7 +4086,7 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "Tailoring",
-                Level = 5,
+                Level = 1,
                 Xp = 20
             }
         }
@@ -5900,8 +5900,8 @@ local function initBuildingMenuRecipes()
         },
         neededMaterials = {
             {
-                Material = "Base.RippedSheets",
-                Amount = 5
+                Material = "Base.FabricRoll",
+                Amount = 1
             },
         },
         useConsumable = {
@@ -5913,7 +5913,7 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "Tailoring",
-                Level = 3,
+                Level = 1,
                 Xp = 10
             }
         }
@@ -5935,7 +5935,7 @@ local function initBuildingMenuRecipes()
                 },
             },
             {
-                Material = "Base.Sheet",
+                Material = "Base.FabricRoll",
                 Amount = 2
             },
         },
@@ -5948,8 +5948,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "Tailoring",
-                Level = 5,
-                Xp = 15
+                Level = 1,
+                Xp = 10
             }
         }
     }
@@ -7544,7 +7544,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 4,
+                Level = 1,
                 Xp = 10
             }
         }
@@ -7583,7 +7583,7 @@ local function initBuildingMenuRecipes()
             },
             {
                 Skill = "Tailoring",
-                Level = 2,
+                Level = 1,
                 Xp = 10
             }
         }
