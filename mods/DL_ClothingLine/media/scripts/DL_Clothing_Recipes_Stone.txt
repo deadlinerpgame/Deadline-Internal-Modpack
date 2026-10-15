@@ -1,0 +1,38 @@
+module Base
+{
+    recipe Make Sand from Stones   
+    {
+        Stone=3,
+        EmptySandbag=1,
+        Result:Sandbag=1,
+        Time:20.0,
+    }
+
+    recipe Make Gravel from Stones   
+    {
+        Stone=5,
+        EmptySandbag=1,
+        Result:GravelBag=1,
+        Time:20.0,
+    }
+
+    recipe Make Dirt from Stones   
+    {
+        Stone=5,
+        EmptySandbag=1,
+        Result:DirtBag=1,
+        Time:20.0,
+    }
+
+}
+    recipe Make Purple Pigment/Dye
+	{
+		Grapes/Eggplant/BerryBlue=3,
+		Cherry/HairDyeRed/Apple=2,
+		NearItem:PaintMixingTable,
+		Result:PurpleDye,
+		Sound:Hammering,
+		Time:5.0,
+		Category:Dyemaking,
+		SkillRequired:Tailoring=6,
+	}
