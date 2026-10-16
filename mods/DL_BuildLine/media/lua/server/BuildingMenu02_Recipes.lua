@@ -3453,7 +3453,7 @@ local function initBuildingMenuRecipes()
                 Amount = smallObjectsWoodCount
             },
             {
-                BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Nails, BigObjectsNailsCount,
+                BuildingMenu.generateGroupAlternatives(BuildingMenu.GroupsAlternatives.Nails, bigObjectsNailsCount,
                     "Material")
             },
         },
