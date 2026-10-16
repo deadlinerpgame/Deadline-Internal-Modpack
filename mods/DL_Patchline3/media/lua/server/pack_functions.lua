@@ -14,8 +14,7 @@ end
 -- 	return items:getUsedDelta() == 1 and Recipe.OnTest.NotTaintedWater(items)
 -- end
 -- this should work looking at other OnTest functions
-function Recipe.OnTest.FullAndNotTainted(items)
-    local item = items:get(0)
+function Recipe.OnTest.FullAndNotTainted(item)
     return item
     and item:getUsedDelta() == 1 and Recipe.OnTest.NotTaintedWater(item)
 end
