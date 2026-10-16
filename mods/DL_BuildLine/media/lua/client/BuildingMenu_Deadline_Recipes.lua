@@ -4,13 +4,21 @@ local BuildingMenu = require("BuildingMenu01_Main");
 
 local function initBuildingMenuRecipes()
 
-    local SurvivalBigLogWallCount = SandboxVars.BuildingMenuRecipes.SurvivalBigLogWallCount or 4;
+    local SurvivalBigLogWallCount = SandboxVars.BuildingMenuRecipes.SurvivalBigLogWallCount or 2;
     local SurvivalBigLogWallRippedSheetsCount = SandboxVars.BuildingMenuRecipes.SurvivalBigLogWallRippedSheetsCount or 4;
     local SurvivalBigLogWallRopesCount = SandboxVars.BuildingMenuRecipes.SurvivalBigLogWallRopesCount or 2;
 
-    local SurvivalSmallLogWallCount = SandboxVars.BuildingMenuRecipes.SurvivalSmallLogWallCount or 2;
+    local SurvivalSmallLogWallCount = SandboxVars.BuildingMenuRecipes.SurvivalSmallLogWallCount or 1;
     local SurvivalSmallLogWallRippedSheetsCount = SandboxVars.BuildingMenuRecipes.SurvivalSmallLogWallRippedSheetsCount or 4;
     local SurvivalSmallLogWallRopesCount = SandboxVars.BuildingMenuRecipes.SurvivalSmallLogWallRopesCount or 2;
+
+    local SurvivalBigLogFurnitureCount = SandboxVars.BuildingMenuRecipes.SurvivalBigLogFurnitureCount or 2;
+    local SurvivalBigLogFurnitureRippedSheetsCount = SandboxVars.BuildingMenuRecipes.SurvivalBigLogFurnitureRippedSheetsCount or 4;
+    local SurvivalBigLogFurnitureRopesCount = SandboxVars.BuildingMenuRecipes.SurvivalBigLogFurnitureRopesCount or 2;
+
+    local SurvivalSmallLogFurnitureCount = SandboxVars.BuildingMenuRecipes.SurvivalSmallLogFurnitureCount or 1;
+    local SurvivalSmallLogFurnitureRippedSheetsCount = SandboxVars.BuildingMenuRecipes.SurvivalSmallLogFurnitureRippedSheetsCount or 4;
+    local SurvivalSmallLogFurnitureRopesCount = SandboxVars.BuildingMenuRecipes.SurvivalSmallLogFurnitureRopesCount or 2;
 
     local SurvivalbigWallWoodCount = SandboxVars.BuildingMenuRecipes.bigWallWoodCount or 4;
     local SurvivalbigWallNailsCount = SandboxVars.BuildingMenuRecipes.bigWallNailsCount or 3;
@@ -24,6 +32,7 @@ local function initBuildingMenuRecipes()
     local survivalCarpentryLevel3 = 3;
     local survivalCarpentryLevel2 = 2;
     local survivalCarpentryLevel1 = 1;
+    local survivalCarpentryLevel0 = 0;
 
     local carpentryXpPerLevel = SandboxVars.BuildingMenuRecipes.carpentryXpPerLevel or 2.5;
     local metalweldingXpPerLevel = SandboxVars.BuildingMenuRecipes.metalweldingXpPerLevel or 2.5;
@@ -44,7 +53,7 @@ local function initBuildingMenuRecipes()
 -- [[ LEVEL 6 STUFF ]]
 
 -- SURVIVAL BIG LIGHT LOG WALL RECIPE
-    BuildingMenu.SurvivalBigLogWallLevel6Recipe = {
+    BuildingMenu.SurvivalBigLogWallLevel0Recipe = {
  --[[        neededTools = {
             "Hammer",
             "Screwdriver"
@@ -74,7 +83,7 @@ local function initBuildingMenuRecipes()
         }
     }
 -- SURVIVAL SMALL LIGHT LOG WALL RECIPE
-    BuildingMenu.SurvivalSmallLogWallLevel6Recipe = {
+    BuildingMenu.SurvivalSmallLogWallLevel0Recipe = {
  --[[        neededTools = {
             "Hammer",
             "Screwdriver"
@@ -336,13 +345,13 @@ local function initBuildingMenuRecipes()
                 }
             },
         },
- --[[        skills = {
+        skills = {
             {
                 Skill = "Woodwork",
                 Level = survivalCarpentryLevel0,
                 Xp = BuildingMenu.round(survivalCarpentryLevel1 * carpentryXpPerLevel)
             }
-        } ]]
+        }
     }
 -- SURVIVAL SMALL LOG WALL RECIPE
     BuildingMenu.SurvivalSmallLogWallLevel0Recipe = {
@@ -353,7 +362,7 @@ local function initBuildingMenuRecipes()
         neededMaterials = { -- Contains Groups of Materials
             { -- Material that is required and have no alternatives
                 Material = "Base.Log",
-                Amount = SurvivalSmallLogWallCount,
+                Amount = SurvivalBigLogWallCount,
             },
             { -- Alternative Groups
                 {
@@ -366,13 +375,13 @@ local function initBuildingMenuRecipes()
                 }
             },
         },
- --[[        skills = {
+        skills = {
             {
                 Skill = "Woodwork",
                 Level = survivalCarpentryLevel0,
                 Xp = BuildingMenu.round(survivalCarpentryLevel1 * carpentryXpPerLevel)
             }
-        } ]]
+        } 
     }
 
 -- SANDBAG/GRAVELBAG RECIPE
@@ -389,6 +398,64 @@ local function initBuildingMenuRecipes()
         },
     }
 
+-- SMALL LOG FURNITURE
+    BuildingMenu.SmallLogFurnitureRecipe = {
+        neededTools = {
+            "Saw"
+        },
+        neededMaterials = { -- Contains Groups of Materials
+            { -- Material that is required and have no alternatives
+                Material = "Base.Log",
+                Amount = SurvivalSmallLogFurnitureCount,
+            },
+            { -- Alternative Groups
+                {
+                    Material = { "Base.Rope", "Base.SheetRope" }, -- Alternative Items: Within this group these items can be combined to meet the requirement
+                    Amount = SurvivalSmallLogFurnitureRopesCount,
+                },
+                {
+                    Material = "Base.RippedSheets", -- This can be used as an alternative to the entire first alternative group. (seen with an "or" in front in the material name)
+                    Amount = SurvivalSmallLogFurnitureRippedSheetsCount,
+                }
+            },
+        },
+        skills = {
+            {
+                Skill = "Woodwork",
+                Level = survivalCarpentryLevel0,
+                Xp = BuildingMenu.round(survivalCarpentryLevel1 * carpentryXpPerLevel)
+            }
+        } 
+    }
+-- BIG LOG FURNITURE
+    BuildingMenu.LargeLogFurnitureRecipe = {
+        neededTools = {
+            "Saw"
+        },
+        neededMaterials = { -- Contains Groups of Materials
+            { -- Material that is required and have no alternatives
+                Material = "Base.Log",
+                Amount = SurvivalBigLogFurnitureCount,
+            },
+            { -- Alternative Groups
+                {
+                    Material = { "Base.Rope", "Base.SheetRope" }, -- Alternative Items: Within this group these items can be combined to meet the requirement
+                    Amount = SurvivalBigLogFurnitureRopesCount,
+                },
+                {
+                    Material = "Base.RippedSheets", -- This can be used as an alternative to the entire first alternative group. (seen with an "or" in front in the material name)
+                    Amount = SurvivalBigLogFurnitureRippedSheetsCount,
+                }
+            },
+        },
+        skills = {
+            {
+                Skill = "Woodwork",
+                Level = survivalCarpentryLevel0,
+                Xp = BuildingMenu.round(survivalCarpentryLevel1 * carpentryXpPerLevel)
+            }
+        } 
+    }
 
 
 -- [[ METAL STUFF ]]

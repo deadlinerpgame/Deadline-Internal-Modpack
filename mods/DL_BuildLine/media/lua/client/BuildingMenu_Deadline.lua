@@ -2798,7 +2798,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWall_Name",
                     "Tooltip_SurvivalLogWall_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2819,7 +2819,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallCorner_Name",
                     "Tooltip_SurvivalLogWallCorner_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2838,7 +2838,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallPillar_Name",
                     "Tooltip_SurvivalLogWallPillar_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2856,7 +2856,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallPillar_Name",
                     "Tooltip_SurvivalLogWallPillar_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2875,7 +2875,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWall_Name",
                     "Tooltip_SurvivalLogWall_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2894,7 +2894,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallDoor_Name",
                     "Tooltip_SurvivalLogWallDoor_Desc",
                     BuildingMenu.onBuildDoorFrame,
-                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2910,7 +2910,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallWindow_Name",
                     "Tooltip_SurvivalLogWallWindow_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2929,7 +2929,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -2943,7 +2943,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -2957,7 +2957,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -2971,7 +2971,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -2985,7 +2985,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -2999,7 +2999,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -3013,7 +3013,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -3027,7 +3027,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -3041,7 +3041,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -30657,6 +30657,624 @@ local function addDeadlineFloorsToMenu()
     end
 end
 
+--[[ >>>>>>>> FROADWORK <<<<<<<< --]]
+
+local function addRoadworkDirtandGrassToMenu()
+    local roadworkDeadlineDirtandGrass = {
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_0",
+                northSprite = "blends_street_BeDirt_5",
+                eastSprite = "blends_street_BeDirt_6",
+                southSprite = "blends_street_BeDirt_7"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_4",
+                northSprite = "blends_street_BeDirt_2",
+                eastSprite = "blends_street_BeDirt_3",
+                southSprite = "blends_street_BeDirt_1"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_9",
+                northSprite = "blends_street_BeDirt_8",
+                eastSprite = "blends_street_BeDirt_10",
+                southSprite = "blends_street_BeDirt_11"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_13",
+                northSprite = "blends_street_BeDirt_12",
+                eastSprite = "blends_street_BeDirt_14",
+                southSprite = "blends_street_BeDirt_15"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_16",
+                northSprite = "blends_street_BeDirt_21",
+                eastSprite = "blends_street_BeDirt_22",
+                southSprite = "blends_street_BeDirt_23"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_20",
+                northSprite = "blends_street_BeDirt_18",
+                eastSprite = "blends_street_BeDirt_19",
+                southSprite = "blends_street_BeDirt_17"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_25",
+                northSprite = "blends_street_BeDirt_24",
+                eastSprite = "blends_street_BeDirt_26",
+                southSprite = "blends_street_BeDirt_27"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_29",
+                northSprite = "blends_street_BeDirt_28",
+                eastSprite = "blends_street_BeDirt_30",
+                southSprite = "blends_street_BeDirt_31"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_32",
+                northSprite = "blends_street_BeDirt_37",
+                eastSprite = "blends_street_BeDirt_38",
+                southSprite = "blends_street_BeDirt_39"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_36",
+                northSprite = "blends_street_BeDirt_34",
+                eastSprite = "blends_street_BeDirt_35",
+                southSprite = "blends_street_BeDirt_33"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_41",
+                northSprite = "blends_street_BeDirt_40",
+                eastSprite = "blends_street_BeDirt_42",
+                southSprite = "blends_street_BeDirt_43"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_45",
+                northSprite = "blends_street_BeDirt_44",
+                eastSprite = "blends_street_BeDirt_46",
+                southSprite = "blends_street_BeDirt_47"
+            }
+        ),
+            BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_48",
+                northSprite = "blends_street_BeDirt_53",
+                eastSprite = "blends_street_BeDirt_54",
+                southSprite = "blends_street_BeDirt_55"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_52",
+                northSprite = "blends_street_BeDirt_50",
+                eastSprite = "blends_street_BeDirt_51",
+                southSprite = "blends_street_BeDirt_49"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_57",
+                northSprite = "blends_street_BeDirt_56",
+                eastSprite = "blends_street_BeDirt_58",
+                southSprite = "blends_street_BeDirt_59"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_61",
+                northSprite = "blends_street_BeDirt_60",
+                eastSprite = "blends_street_BeDirt_62",
+                southSprite = "blends_street_BeDirt_63"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_64",
+                northSprite = "blends_street_BeDirt_69",
+                eastSprite = "blends_street_BeDirt_70",
+                southSprite = "blends_street_BeDirt_71"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_68",
+                northSprite = "blends_street_BeDirt_66",
+                eastSprite = "blends_street_BeDirt_67",
+                southSprite = "blends_street_BeDirt_65"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_73",
+                northSprite = "blends_street_BeDirt_72",
+                eastSprite = "blends_street_BeDirt_74",
+                southSprite = "blends_street_BeDirt_75"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_77",
+                northSprite = "blends_street_BeDirt_76",
+                eastSprite = "blends_street_BeDirt_78",
+                southSprite = "blends_street_BeDirt_79"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_80",
+                northSprite = "blends_street_BeDirt_85",
+                eastSprite = "blends_street_BeDirt_86",
+                southSprite = "blends_street_BeDirt_87"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_84",
+                northSprite = "blends_street_BeDirt_82",
+                eastSprite = "blends_street_BeDirt_83",
+                southSprite = "blends_street_BeDirt_81"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_89",
+                northSprite = "blends_street_BeDirt_88",
+                eastSprite = "blends_street_BeDirt_90",
+                southSprite = "blends_street_BeDirt_91"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_93",
+                northSprite = "blends_street_BeDirt_92",
+                eastSprite = "blends_street_BeDirt_94",
+                southSprite = "blends_street_BeDirt_95"
+            }
+        ),
+            BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_96",
+                northSprite = "blends_street_BeDirt_101",
+                eastSprite = "blends_street_BeDirt_102",
+                southSprite = "blends_street_BeDirt_103"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_100",
+                northSprite = "blends_street_BeDirt_98",
+                eastSprite = "blends_street_BeDirt_99",
+                southSprite = "blends_street_BeDirt_97"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_105",
+                northSprite = "blends_street_BeDirt_104",
+                eastSprite = "blends_street_BeDirt_106",
+                southSprite = "blends_street_BeDirt_107"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_109",
+                northSprite = "blends_street_BeDirt_108",
+                eastSprite = "blends_street_BeDirt_110",
+                southSprite = "blends_street_BeDirt_111"
+            }
+        ),
+            BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_112",
+                northSprite = "blends_street_BeDirt_117",
+                eastSprite = "blends_street_BeDirt_118",
+                southSprite = "blends_street_BeDirt_119"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_116",
+                northSprite = "blends_street_BeDirt_114",
+                eastSprite = "blends_street_BeDirt_115",
+                southSprite = "blends_street_BeDirt_113"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_121",
+                northSprite = "blends_street_BeDirt_120",
+                eastSprite = "blends_street_BeDirt_122",
+                southSprite = "blends_street_BeDirt_123"
+            }
+        ),
+    }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineRoadWork",
+        "blends_street_01_32",
+        "IGUI_BuildingMenuSubCat_Deadline_Road_Work_BeDirt",
+        "blends_street_BeDirt_0",
+        roadworkDeadlineDirtandGrass
+    )
+end
+
 
 --[[ >>>>>> CONTAINERS <<<<<< --]]
 
@@ -31727,6 +32345,34 @@ local function addDeadlineTablesToMenu()
                 BuildingMenu.createObject(
                     "",
                     "Tooltip_LowTable_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_04_113",
+                        northSprite = "crafted_04_112",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LowTable_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_02_94",
+                        northSprite = "crafted_02_93",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LowTable_Desc",
                     BuildingMenu.onBuildDoubleTileFurniture,
                     BuildingMenu.SmallFurnitureRecipe,
                     true,
@@ -32752,6 +33398,54 @@ local function addDeadlineTablesToMenu()
                     "",
                     "Tooltip_LargeTable_Desc",
                     BuildingMenu.onBuildDoubleTileFurniture,
+                    BuildingMenu.LargeLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_04_97",
+                        sprite2 = "crafted_04_96",
+                        northSprite = "crafted_04_98",
+                        northSprite2 = "crafted_04_99",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LargeTable_Desc",
+                    BuildingMenu.onBuildDoubleTileFurniture,
+                    BuildingMenu.LargeLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_04_101",
+                        sprite2 = "crafted_04_100",
+                        northSprite = "crafted_04_102",
+                        northSprite2 = "crafted_04_103",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LargeTable_Desc",
+                    BuildingMenu.onBuildDoubleTileFurniture,
+                    BuildingMenu.LargeLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_02_91",
+                        sprite2 = "crafted_02_90",
+                        northSprite = "crafted_02_88",
+                        northSprite2 = "crafted_02_89",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LargeTable_Desc",
+                    BuildingMenu.onBuildDoubleTileFurniture,
                     BuildingMenu.LargeFurnitureRecipe,
                     true,
                     {
@@ -32940,6 +33634,132 @@ local function addDeadlineTablesToMenu()
     end
 end
 
+-- >> SEATING: CHAIRS
+local function addDeadlineSeatingToMenu()
+    local DeadlineSeating = {
+ --[[ FTOCHOOSE
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_Furniture_Low_Tables",
+            subCategoryIcon = "furniture_tables_low_01_13",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LowTable_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_02_94",
+                        northSprite = "crafted_02_93",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LowTable_Desc",
+                    BuildingMenu.onBuildDoubleTileFurniture,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "furniture_tables_low_01_9",
+                        sprite2 = "furniture_tables_low_01_8",
+                        northSprite = "furniture_tables_low_01_10",
+                        northSprite2 = "furniture_tables_low_01_11",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LowTable_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_tables_low_01_64",
+                    }
+                ),
+            }
+        }, ]]
+ --[[ FTOCHOOSE
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_Furniture_Small_Tables",
+            subCategoryIcon = "melos_tiles_furniture_tables_01_24",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_SmallTable_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_tables_01_68",
+                    }
+                ),
+            }
+        }, ]]
+ -- FCCHAIRS        
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_Furniture_Chairs",
+            subCategoryIcon = "crafted_02_92",
+            objects = {
+                BuildingMenu.createObject(
+                    "Tooltip_LogChair_Name",
+                    "Tooltip_Chair_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canPassThrough = true,
+                        isThumpable = true,
+                        isCorner = true
+                    },
+                    {
+                        sprite = "crafted_02_92"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_LogChair_NameCheeky",
+                    "Tooltip_Chair_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canPassThrough = true,
+                        isThumpable = true,
+                        isCorner = true
+                    },
+                    {
+                        sprite = "crafted_02_95"
+                    }
+                ),
+            }
+        },
+    }
+ -- Add Furniture Category 
+    for k, subCatData in pairs(DeadlineSeating) do
+        BuildingMenu.addObjectsToCategories(
+            "Deadline",
+            "IGUI_BuildingMenuCat_DeadlineFurniture",
+            "melos_tiles_furniture_tables_low_01_14",
+            subCatData.subcategoryName,
+            subCatData.subCategoryIcon,
+            subCatData.objects
+        )
+    end
+end
+
 -- >> BOOKSHELVES
 local function addDeadlineBookshelvesToMenu()
     local DeadlineBookshelves = {
@@ -33047,6 +33867,106 @@ local function addDeadlineBookshelvesToMenu()
                         northSprite = "furniture_shelving_erika_01_97",
                         eastSprite = "furniture_shelving_erika_01_99",
                         southSprite = "furniture_shelving_erika_01_100",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        needToBeAgainstWall = true,
+                        buildHigh = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "crafted_05_40",
+                        northSprite = "crafted_05_41",
+                        eastSprite = "crafted_05_42",
+                        southSprite = "crafted_05_43",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        needToBeAgainstWall = true,
+                        buildHigh = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "crafted_05_37",
+                        northSprite = "crafted_05_36",
+                        eastSprite = "crafted_05_38",
+                        southSprite = "crafted_05_39",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_04_90",
+                        northSprite = "crafted_04_88",
+                        eastSprite = "crafted_04_91",
+                        southSprite = "crafted_04_89",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.LargeLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_04_95",
+                        northSprite = "crafted_04_92",
+                        eastSprite = "crafted_04_94",
+                        southSprite = "crafted_04_93",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_05_51",
+                        northSprite = "crafted_05_50",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildDoubleTileContainer,
+                    BuildingMenu.LargeLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_05_49",
+                        sprite2 = "crafted_05_48",
+                        northSprite = "crafted_05_52",
+                        northSprite2 = "crafted_05_53",
                     }
                 ),
                 BuildingMenu.createObject(
@@ -34356,8 +35276,6 @@ local function addDeadlineCurtainsToMenu()
         { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 172, 174, 173, 175 } },
         { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 180, 182, 181, 183 } },
         { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 188, 190, 189, 191 } },
-        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 196, 198, 197, 199 } },
-        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 204, 206, 205, 207 } },
 
         { prefix = "fixtures_windows_curtains_ddd_01_", offsets = { 4, 6, 5, 7 } },
         { prefix = "fixtures_windows_curtains_ddd_01_", offsets = { 12, 14, 13, 15 } },
@@ -34646,6 +35564,8 @@ local function addDeadlineBarricadesToMenu()
 end
 
 
+
+
 --[[ >>>>>> FOR THE SANDBOX OPTIONS ON "media\sandbox-options.txt" <<<<<<--]]
 local function addCategoriesToBuildingMenu()
     if SandboxVars.BuildingMenu.DeadlineWallsCategory then
@@ -34680,6 +35600,12 @@ local function addCategoriesToBuildingMenu()
     end
     if SandboxVars.BuildingMenu.DeadlineBookshelvesSubCategory then
         addDeadlineBookshelvesToMenu()
+    end
+    if SandboxVars.BuildingMenu.DeadlineRoadworkDirtandGrassCategory then
+        addRoadworkDirtandGrassToMenu()
+    end
+    if SandboxVars.BuildingMenu.DeadlineSeatingCategory then
+        addDeadlineSeatingToMenu()
     end
 end
 Events.OnInitializeBuildingMenuObjects.Add(addCategoriesToBuildingMenu)
