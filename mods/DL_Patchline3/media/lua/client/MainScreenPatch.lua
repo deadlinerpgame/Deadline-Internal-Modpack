@@ -9,6 +9,10 @@ local function disableExitToDesktop()
 end
 
 local function OnPostUIDraw()
+    if not isClient() or isAdmin() or isDebugEnabled() then
+        return;
+    end
+
     if isExitToDesktopDisabled then
         Events.OnPostUIDraw.Remove(OnPostUIDraw);
         return;
@@ -24,7 +28,7 @@ end
 
 local onMenuItemDown_original = MainScreen.onMenuItemMouseDownMainMenu;
 function MainScreen.onMenuItemMouseDownMainMenu(item, x, y)
-    if item.internal == "EXIT" and MainScreen.instance.inGame == true then
+    if isClient() and item.internal == "EXIT" and MainScreen.instance.inGame == true then
         sendClientCommand(getPlayer(), "PatchLine", "QuitChecker", { time = getTimestamp() });
     end
 
