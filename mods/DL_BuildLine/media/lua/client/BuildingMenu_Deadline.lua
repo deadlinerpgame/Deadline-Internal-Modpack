@@ -867,7 +867,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -881,7 +881,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -895,7 +895,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -909,7 +909,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -923,7 +923,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -937,7 +937,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -951,7 +951,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -965,7 +965,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -979,7 +979,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -993,7 +993,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1007,7 +1007,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1021,7 +1021,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1035,7 +1035,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1049,7 +1049,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1063,7 +1063,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1077,7 +1077,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1091,7 +1091,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1105,7 +1105,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1119,7 +1119,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1133,7 +1133,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1147,7 +1147,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1161,7 +1161,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1175,7 +1175,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1189,7 +1189,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1203,7 +1203,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1217,7 +1217,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1231,7 +1231,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4436,7 +4436,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4450,7 +4450,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4464,7 +4464,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4478,7 +4478,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4492,7 +4492,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4506,7 +4506,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4520,7 +4520,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4534,7 +4534,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4548,7 +4548,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4562,7 +4562,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4576,7 +4576,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4590,7 +4590,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4604,7 +4604,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4618,7 +4618,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4632,7 +4632,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4646,7 +4646,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4660,7 +4660,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4674,7 +4674,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4688,7 +4688,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4702,7 +4702,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4716,7 +4716,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4730,7 +4730,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4744,7 +4744,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4758,7 +4758,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4772,7 +4772,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4786,7 +4786,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4800,7 +4800,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5457,7 +5457,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5471,7 +5471,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5485,7 +5485,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5499,7 +5499,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5513,7 +5513,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5527,7 +5527,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5541,7 +5541,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5555,7 +5555,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5569,7 +5569,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5583,7 +5583,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5597,7 +5597,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5611,7 +5611,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5625,7 +5625,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5639,7 +5639,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5653,7 +5653,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5667,7 +5667,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5681,7 +5681,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5695,7 +5695,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5709,7 +5709,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5723,7 +5723,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5737,7 +5737,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5751,7 +5751,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5765,7 +5765,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5779,7 +5779,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5793,7 +5793,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5807,7 +5807,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5821,7 +5821,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6478,7 +6478,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6492,7 +6492,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6506,7 +6506,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6520,7 +6520,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6534,7 +6534,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6548,7 +6548,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6562,7 +6562,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6576,7 +6576,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6590,7 +6590,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6604,7 +6604,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6618,7 +6618,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6632,7 +6632,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6646,7 +6646,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6660,7 +6660,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6674,7 +6674,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6688,7 +6688,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6702,7 +6702,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6716,7 +6716,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6730,7 +6730,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6744,7 +6744,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6758,7 +6758,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6772,7 +6772,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6786,7 +6786,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6800,7 +6800,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6814,7 +6814,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6828,7 +6828,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6842,7 +6842,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7499,7 +7499,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7513,7 +7513,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7527,7 +7527,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7541,7 +7541,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7555,7 +7555,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7569,7 +7569,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7583,7 +7583,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7597,7 +7597,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7611,7 +7611,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7625,7 +7625,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7639,7 +7639,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7653,7 +7653,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7667,7 +7667,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7681,7 +7681,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7695,7 +7695,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7709,7 +7709,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7723,7 +7723,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7737,7 +7737,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7751,7 +7751,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7765,7 +7765,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7779,7 +7779,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7793,7 +7793,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7807,7 +7807,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7821,7 +7821,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7835,7 +7835,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7849,7 +7849,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7863,7 +7863,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8520,7 +8520,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8534,7 +8534,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8548,7 +8548,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8562,7 +8562,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8576,7 +8576,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8590,7 +8590,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8604,7 +8604,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8618,7 +8618,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8632,7 +8632,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8646,7 +8646,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8660,7 +8660,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8674,7 +8674,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8688,7 +8688,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8702,7 +8702,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8716,7 +8716,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8730,7 +8730,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8744,7 +8744,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8758,7 +8758,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8772,7 +8772,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8786,7 +8786,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8800,7 +8800,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8814,7 +8814,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8828,7 +8828,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8842,7 +8842,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8856,7 +8856,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8870,7 +8870,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8884,7 +8884,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9541,7 +9541,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9555,7 +9555,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9569,7 +9569,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9583,7 +9583,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9597,7 +9597,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9611,7 +9611,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9625,7 +9625,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9639,7 +9639,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9653,7 +9653,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9667,7 +9667,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9681,7 +9681,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9695,7 +9695,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9709,7 +9709,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9723,7 +9723,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9737,7 +9737,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9751,7 +9751,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9765,7 +9765,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9779,7 +9779,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9793,7 +9793,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9807,7 +9807,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9821,7 +9821,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9835,7 +9835,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9849,7 +9849,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9863,7 +9863,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9877,7 +9877,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9891,7 +9891,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9905,7 +9905,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14079,7 +14079,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14093,7 +14093,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14107,7 +14107,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14121,7 +14121,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14135,7 +14135,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14149,7 +14149,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14163,7 +14163,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14177,7 +14177,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14191,7 +14191,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14205,7 +14205,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14219,7 +14219,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14233,7 +14233,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14247,7 +14247,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14261,7 +14261,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14275,7 +14275,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14289,7 +14289,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14303,7 +14303,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14317,7 +14317,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14331,7 +14331,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14345,7 +14345,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14359,7 +14359,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14373,7 +14373,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14387,7 +14387,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14401,7 +14401,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14415,7 +14415,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14429,7 +14429,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14443,7 +14443,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16121,7 +16121,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16135,7 +16135,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16149,7 +16149,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16163,7 +16163,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16177,7 +16177,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16191,7 +16191,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16205,7 +16205,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16219,7 +16219,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16233,7 +16233,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16247,7 +16247,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16261,7 +16261,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16275,7 +16275,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16289,7 +16289,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16303,7 +16303,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16317,7 +16317,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16331,7 +16331,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16345,7 +16345,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16359,7 +16359,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16373,7 +16373,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16387,7 +16387,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16401,7 +16401,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16415,7 +16415,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16429,7 +16429,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16443,7 +16443,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16457,7 +16457,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16471,7 +16471,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16485,7 +16485,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17142,7 +17142,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17156,7 +17156,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17170,7 +17170,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17184,7 +17184,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17198,7 +17198,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17212,7 +17212,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17226,7 +17226,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17240,7 +17240,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17254,7 +17254,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17268,7 +17268,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17282,7 +17282,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17296,7 +17296,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17310,7 +17310,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17324,7 +17324,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17338,7 +17338,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17352,7 +17352,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17366,7 +17366,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17380,7 +17380,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17394,7 +17394,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17408,7 +17408,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17422,7 +17422,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17436,7 +17436,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17450,7 +17450,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17464,7 +17464,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17478,7 +17478,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17492,7 +17492,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17506,7 +17506,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18163,7 +18163,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18177,7 +18177,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18191,7 +18191,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18205,7 +18205,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18219,7 +18219,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18233,7 +18233,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18247,7 +18247,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18261,7 +18261,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18275,7 +18275,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18289,7 +18289,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18303,7 +18303,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18317,7 +18317,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18331,7 +18331,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18345,7 +18345,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18359,7 +18359,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18373,7 +18373,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18387,7 +18387,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18401,7 +18401,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18415,7 +18415,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18429,7 +18429,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18443,7 +18443,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18457,7 +18457,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18471,7 +18471,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18485,7 +18485,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18499,7 +18499,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18513,7 +18513,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18527,7 +18527,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19184,7 +19184,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19198,7 +19198,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19212,7 +19212,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19226,7 +19226,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19240,7 +19240,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19254,7 +19254,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19268,7 +19268,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19282,7 +19282,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19296,7 +19296,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19310,7 +19310,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19324,7 +19324,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19338,7 +19338,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19352,7 +19352,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19366,7 +19366,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19380,7 +19380,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19394,7 +19394,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19408,7 +19408,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19422,7 +19422,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19436,7 +19436,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19450,7 +19450,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19464,7 +19464,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19478,7 +19478,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19492,7 +19492,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19506,7 +19506,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19520,7 +19520,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19534,7 +19534,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19548,7 +19548,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20205,7 +20205,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20219,7 +20219,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20233,7 +20233,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20247,7 +20247,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20261,7 +20261,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20275,7 +20275,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20289,7 +20289,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20303,7 +20303,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20317,7 +20317,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20331,7 +20331,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20345,7 +20345,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20359,7 +20359,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20373,7 +20373,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20387,7 +20387,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20401,7 +20401,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20415,7 +20415,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20429,7 +20429,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20443,7 +20443,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20457,7 +20457,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20471,7 +20471,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20485,7 +20485,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20499,7 +20499,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20513,7 +20513,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20527,7 +20527,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20541,7 +20541,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20555,7 +20555,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20569,7 +20569,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21226,7 +21226,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21240,7 +21240,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21254,7 +21254,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21268,7 +21268,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21282,7 +21282,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21296,7 +21296,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21310,7 +21310,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21324,7 +21324,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21338,7 +21338,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21352,7 +21352,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21366,7 +21366,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21380,7 +21380,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21394,7 +21394,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21408,7 +21408,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21422,7 +21422,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21436,7 +21436,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21450,7 +21450,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21464,7 +21464,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21478,7 +21478,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21492,7 +21492,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21506,7 +21506,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21520,7 +21520,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21534,7 +21534,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21548,7 +21548,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21562,7 +21562,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21576,7 +21576,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21590,7 +21590,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
