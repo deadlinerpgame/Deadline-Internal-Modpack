@@ -3164,8 +3164,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 6,
-                Xp = BuildingMenu.round(6 * metalweldingXpPerLevel)
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
             }
         }
     }
@@ -3219,8 +3219,8 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "MetalWelding",
-                Level = 6,
-                Xp = BuildingMenu.round(6 * metalweldingXpPerLevel)
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
             }
         }
     }
