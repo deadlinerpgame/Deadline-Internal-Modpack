@@ -26,7 +26,7 @@ local function blockDisassembly(context)
             toolTip:setVisible(false)
             toolTip:setName(option.name)
             toolTip.description = "<RGB:1,0,0> This vehicle has already been disassembled."
-            toolTip.footnote = "Only rust remains, anything useful has already been salvaged."
+            toolTip.footNote = "Only rust remains, anything useful has already been salvaged."
             option.toolTip = toolTip
         end
     end
