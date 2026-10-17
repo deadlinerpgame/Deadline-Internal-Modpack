@@ -313,7 +313,7 @@ function DL_CrucibleUI:update()
 
     local pourReason
     if phase ~= "molten" then pourReason = "Not molten yet"
-    elseif not st.alloy or (st.alloy.units or 0) < 1 then pourReason = "Less than one unit"
+    elseif not st.alloy or (st.alloy.units or 0) + 1e-6 < 1 then pourReason = "Less than one unit"
     elseif not DL.Crucible.findIngotMold(self.player) then pourReason = "Need an ingot mold" end
     self.btnPour.enable = pourReason == nil; self.btnPourAll.enable = pourReason == nil
     tip(self.btnPour, pourReason); tip(self.btnPourAll, pourReason)
