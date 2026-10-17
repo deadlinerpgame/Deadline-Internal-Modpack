@@ -22,7 +22,7 @@ function ISMannequinUI:loadMannequinData(data)
     self.button.internal = "SpawnMannequin";
     self.button:initialise();
     self.button:instantiate();
-    self.button.borderColor = {r=0.7, g=0.7, b=0.7, a=0.5}; -- Optional
+    self.button.borderColor = {r=0.7, g=0.7, b=0.7, a=0.5};
     self:addChild(self.button);
 
     self:addPreviewPanel();
@@ -34,7 +34,6 @@ function ISMannequinUI:loadMannequinData(data)
     for k, v in pairs(data.data) do
         self.skinPanel:addItem(k);
 
-        -- Probably a better way to get the first element and manually select it but oh well.
         if selected == 0 then
             for i, v in pairs(data.data[k]) do
                 self.posePanel:addItem(v);
@@ -49,7 +48,6 @@ function ISMannequinUI:loadMannequinData(data)
 end
 
 function ISMannequinUI:renderPreview()
-    --ISCollapsableWindow.render(self);
 
     if not self.parent.firstInit then return end;
 
@@ -148,7 +146,6 @@ function ISMannequinUI:loadPosePanel(skin)
 
     self.posePanel:clear()
 
-    -- Get the pose data for the given skin.
     local poseData = self.mannequinData.data[skin];
 
     if not poseData then
@@ -159,7 +156,6 @@ function ISMannequinUI:loadPosePanel(skin)
         self.posePanel:addItem(v)
     end
 end    
---
 
 function ISMannequinUI.SkinPanel_OnMouseDown(self, x, y)
     local selected = self.selected
@@ -169,7 +165,7 @@ function ISMannequinUI.SkinPanel_OnMouseDown(self, x, y)
 
     self.selected = row;
     
-    if self.selected ~= selected then -- Selection has changed, load new panel data.
+    if self.selected ~= selected then
         local selectedText = self.items[row].text
         self.parent:loadPosePanel(selectedText);
     end
@@ -184,24 +180,22 @@ function ISMannequinUI.PosePanel_OnMouseDown(self, x, y)
 
     self.selected = row;
     
-    if self.selected ~= selected then -- Selection has changed, load new panel data.
+    if self.selected ~= selected then
         local selectedText = self.items[row].text
     end
 
 end
----
 
-function ISMannequinUI:prerender() -- Call before render, it's for harder stuff that need init, ect
+function ISMannequinUI:prerender()
     ISCollapsableWindow.prerender(self);
     
-    --self:drawText("Hello world",0,0,1,1,1,1, UIFont.Small); -- You can put it in render() too
 end
 
-function ISMannequinUI:render() -- Use to render text and other
+function ISMannequinUI:render()
     ISCollapsableWindow.render(self);
 end
 
-function ISMannequinUI:create() -- Use to make the elements
+function ISMannequinUI:create()
 end
 
 function ISMannequinUI:new(x, y, width, height)

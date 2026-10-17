@@ -11,7 +11,7 @@ function ISRenameEverything:onRenameItemClick(button, player, item)
     original_renameItem_func(self, button, player, item);
     local newName = item and item:getName() or "";
 
-    if originalName == newName then return end; -- Name hasn't changed.
+    if originalName == newName then return end;
 
     local coordsStr = string.format("%0d,%0d,%0d", player:getX(), player:getY(), player:getZ());
 
@@ -24,7 +24,6 @@ end
 
 local original_renameStack_func = ISRenameEverything.onRenameStackClick;
 function ISRenameEverything:onRenameStackClick(button, player, items)
-    -- Get first item and compare the names, because stacks of items are items that share the same name not the same type.
     if not items or items:size() == 0 then return end;
 
     local firstItem = items:get(0);

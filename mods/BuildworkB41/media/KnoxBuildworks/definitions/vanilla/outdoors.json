@@ -1,0 +1,3100 @@
+{
+ "schemaVersion": 1,
+ "source": "Project Zomboid Build 42 generated entity scripts",
+ "category": "Outdoors",
+ "buildables": [
+  {
+   "id": "kbw.vanilla.amphora",
+   "displayName": "Amphora",
+   "translationKey": "IGUI_KBW_Vanilla_Amphora",
+   "tooltipKey": "Tooltip_craft_amphoraDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Outdoors"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "crafted_04_33",
+      "E": "crafted_04_35"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 100,
+     "skillBaseHealth": 20,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 10,
+        "items": [
+         "Base.Clay"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildLowNoTool",
+      "category": "Pottery"
+     },
+     "_b41Entity": "Base.Amphora"
+    }
+   ],
+   "iconName": "Build_Amphora",
+   "_b41NeedsTilesets": [
+    "crafted_04"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.skullpoleantlers",
+   "displayName": "Antlers Pole",
+   "translationKey": "IGUI_KBW_Vanilla_SkullPoleAntlers",
+   "tooltipKey": "Tooltip_craft_skullPoleDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Fiber"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "E": "constructedobjects_signs_01_101",
+      "S": "constructedobjects_signs_01_100"
+     },
+     "geometry": {
+      "faces": {
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_101"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_100"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 50,
+     "skillBaseHealth": 10,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.LongStick",
+         "Base.Sapling"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.SheetRope"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.DeerStag_Skull"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 150,
+      "timedAction": "BuildWallNoTool",
+      "category": "Miscellaneous"
+     },
+     "_b41Entity": "Base.SkullPoleAntlers"
+    }
+   ],
+   "iconName": "Build_Stake_Antlers"
+  },
+  {
+   "id": "kbw.vanilla.skullpolebull",
+   "displayName": "Bull Skull Pole",
+   "translationKey": "IGUI_KBW_Vanilla_SkullPoleBull",
+   "tooltipKey": "Tooltip_craft_skullPoleDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Fiber"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_signs_01_54",
+      "N": "constructedobjects_signs_01_53",
+      "E": "constructedobjects_signs_01_55",
+      "S": "constructedobjects_signs_01_52"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_55"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_52"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 50,
+     "skillBaseHealth": 10,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.LongStick",
+         "Base.Sapling"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.SheetRope"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Bull_Skull"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 150,
+      "timedAction": "BuildWallNoTool",
+      "category": "Miscellaneous"
+     },
+     "_b41Entity": "Base.SkullPoleBull"
+    }
+   ],
+   "iconName": "Build_Stake_SkullBull"
+  },
+  {
+   "id": "kbw.vanilla.stonecairn",
+   "displayName": "Cairn",
+   "translationKey": "IGUI_KBW_Vanilla_StoneCairn",
+   "tooltipKey": "Tooltip_craft_stonePileDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Stone"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "location_community_cemetary_01_30"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_30"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 150,
+     "skillBaseHealth": 50,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 6,
+        "items": [
+         "Base.Stone2"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildCairn",
+      "category": "Miscellaneous"
+     },
+     "_b41Entity": "Base.StoneCairn"
+    }
+   ],
+   "iconName": "Build_Cairn"
+  },
+  {
+   "id": "kbw.vanilla.campfire",
+   "displayName": "Campfire",
+   "translationKey": "IGUI_KBW_Vanilla_Campfire",
+   "tooltipKey": "Tooltip_craft_campfireDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Stone"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "camping_01_6"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_01_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false,
+      "onCreate": "BuildRecipeCode.campfire.OnCreate",
+      "onIsValid": "BuildRecipeCode.campfire.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.Stone2"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 100,
+      "timedAction": "BuildCampfire",
+      "category": "Outdoors"
+     },
+     "_b41Entity": "Base.Campfire"
+    }
+   ],
+   "iconName": "Build_Campfire"
+  },
+  {
+   "id": "kbw.vanilla.chopping_block",
+   "displayName": "Chopping Block",
+   "translationKey": "IGUI_KBW_Vanilla_Chopping_Block",
+   "tooltipKey": "Tooltip_craft_choppingBlockDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "_b41GenericObject": true,
+     "geometry": {
+      "faces": {
+       "SINGLE": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_02_85"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "CrudeSaw",
+         "Saw"
+        ],
+        "flags": [
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 1
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildLowNoTool",
+      "category": "Outdoors",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.Chopping_Block"
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "crafted_02"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.composter",
+   "displayName": "Composter",
+   "translationKey": "IGUI_KBW_Vanilla_Composter",
+   "tooltipKey": "Tooltip_craft_composterDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "camping_01_19"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_01_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "onCreate": "BuildRecipeCode.composter.OnCreate"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 6
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Farming",
+      "xp": {
+       "Woodwork": 60
+      }
+     },
+     "_b41Entity": "Base.Composter"
+    }
+   ],
+   "iconName": "Build_Composter",
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanilla.compostershoddy",
+   "displayName": "Composter (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_ComposterShoddy",
+   "tooltipKey": "Tooltip_craft_composterDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_116"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_116"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "onCreate": "BuildRecipeCode.composter.OnCreate"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Farming",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.ComposterShoddy"
+    }
+   ],
+   "iconName": "Build_Composter"
+  },
+  {
+   "id": "kbw.vanilla.skullpolecow",
+   "displayName": "Cow Skull Pole",
+   "translationKey": "IGUI_KBW_Vanilla_SkullPoleCow",
+   "tooltipKey": "Tooltip_craft_skullPoleDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Fiber"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_signs_01_62",
+      "N": "constructedobjects_signs_01_61",
+      "E": "constructedobjects_signs_01_63",
+      "S": "constructedobjects_signs_01_60"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_62"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_61"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_63"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_60"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 50,
+     "skillBaseHealth": 10,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.LongStick",
+         "Base.Sapling"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.SheetRope"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Cow_Skull"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 150,
+      "timedAction": "BuildWallNoTool",
+      "category": "Miscellaneous"
+     },
+     "_b41Entity": "Base.SkullPoleCow"
+    }
+   ],
+   "iconName": "Build_Stake_SkullCow"
+  },
+  {
+   "id": "kbw.vanilla.skullpoledeer",
+   "displayName": "Deer Skull Pole",
+   "translationKey": "IGUI_KBW_Vanilla_SkullPoleDeer",
+   "tooltipKey": "Tooltip_craft_skullPoleDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Fiber"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_signs_01_70",
+      "N": "constructedobjects_signs_01_69",
+      "E": "constructedobjects_signs_01_71",
+      "S": "constructedobjects_signs_01_68"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_70"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_69"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_71"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_68"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 50,
+     "skillBaseHealth": 10,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.LongStick",
+         "Base.Sapling"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.SheetRope"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.DeerStag_Skull"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 150,
+      "timedAction": "BuildWallNoTool",
+      "category": "Miscellaneous"
+     },
+     "_b41Entity": "Base.SkullPoleDeer"
+    }
+   ],
+   "iconName": "Build_Stake_SkullStag"
+  },
+  {
+   "id": "kbw.vanilla.skullpoledeerdoe",
+   "displayName": "Doe Skull Pole",
+   "translationKey": "IGUI_KBW_Vanilla_SkullPoleDeerDoe",
+   "tooltipKey": "Tooltip_craft_skullPoleDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Fiber"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_signs_01_94",
+      "N": "constructedobjects_signs_01_93",
+      "E": "constructedobjects_signs_01_95",
+      "S": "constructedobjects_signs_01_92"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_94"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_93"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_95"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_92"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 50,
+     "skillBaseHealth": 10,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.LongStick",
+         "Base.Sapling"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.SheetRope"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.DeerDoe_Skull"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 150,
+      "timedAction": "BuildWallNoTool",
+      "category": "Miscellaneous"
+     },
+     "_b41Entity": "Base.SkullPoleDeerDoe"
+    }
+   ],
+   "iconName": "Build_Stake_SkullDoe"
+  },
+  {
+   "id": "kbw.vanilla.woodlamppillar",
+   "displayName": "Lamp On Pillar",
+   "translationKey": "IGUI_KBW_Vanilla_WoodLampPillar",
+   "tooltipKey": "Tooltip_craft_lampOnPillarDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Fiber",
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_61",
+      "N": "carpentry_02_60",
+      "E": "carpentry_02_62",
+      "S": "carpentry_02_59"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_61"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_60"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_62"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_59"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "isThumpable": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Rope"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "destroy",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "FlashlightPillar"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 1
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.WoodLampPillar"
+    }
+   ],
+   "iconName": "Build_FlashlightLamp"
+  },
+  {
+   "id": "kbw.vanilla.leanto_shelter",
+   "displayName": "Lean-To Shelter",
+   "translationKey": "IGUI_KBW_Vanilla_LeanTo_Shelter",
+   "tooltipKey": "Tooltip_craft_shelterDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Stone",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "camping_03_2",
+      "E": "camping_03_5",
+      "N": "camping_03_0",
+      "W": "camping_03_7"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_03_2",
+            "camping_03_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_03_5"
+           ],
+           [
+            "camping_03_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_03_0",
+            "camping_03_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_03_7"
+           ],
+           [
+            "camping_03_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isProp": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 20,
+        "items": [
+         "Base.TreeBranch2",
+         "Base.WoodenStick2"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Stone2"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 5,
+        "items": [
+         "Base.LongStick",
+         "Base.Sapling"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildLowNoTool",
+      "category": "Outdoors"
+     },
+     "_b41Entity": "Base.LeanTo_Shelter"
+    }
+   ],
+   "iconName": "Build_LeanToShelterSticks",
+   "_b41NeedsTilesets": [
+    "camping_03"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.leather_shelter",
+   "displayName": "Leather Shelter",
+   "translationKey": "IGUI_KBW_Vanilla_Leather_Shelter",
+   "tooltipKey": "Tooltip_craft_shelterDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Stone",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "camping_03_44",
+      "E": "camping_03_47",
+      "N": "camping_03_40",
+      "W": "camping_03_43"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_03_44",
+            "camping_03_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_03_47"
+           ],
+           [
+            "camping_03_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_03_40",
+            "camping_03_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_03_43"
+           ],
+           [
+            "camping_03_42"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isProp": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.TreeBranch2",
+         "Base.WoodenStick2"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "LeatherCrudeTannedLarge",
+         "LeatherFurTannedLarge"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Stone2"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.LongStick",
+         "Base.Sapling"
+        ]
+       },
+       {
+        "id": "input_6",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildLowNoTool",
+      "category": "Outdoors"
+     },
+     "_b41Entity": "Base.Leather_Shelter"
+    }
+   ],
+   "iconName": "Build_LeanToShelterLeather",
+   "_b41NeedsTilesets": [
+    "camping_03"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.skullpolepig",
+   "displayName": "Pig Skull Pole",
+   "translationKey": "IGUI_KBW_Vanilla_SkullPolePig",
+   "tooltipKey": "Tooltip_craft_skullPoleDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Fiber"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_signs_01_86",
+      "N": "constructedobjects_signs_01_85",
+      "E": "constructedobjects_signs_01_87",
+      "S": "constructedobjects_signs_01_84"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_86"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_85"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_87"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_84"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 50,
+     "skillBaseHealth": 10,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.LongStick",
+         "Base.Sapling"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.SheetRope"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Pig_Skull"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 150,
+      "timedAction": "BuildWallNoTool",
+      "category": "Miscellaneous"
+     },
+     "_b41Entity": "Base.SkullPolePig"
+    }
+   ],
+   "iconName": "Build_Stake_SkullPig"
+  },
+  {
+   "id": "kbw.vanilla.raincollectorround",
+   "displayName": "Rain Collector Barrel",
+   "translationKey": "IGUI_KBW_Vanilla_RainCollectorRound",
+   "tooltipKey": "Tooltip_craft_rainCollectorDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_02_122"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_122"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 6,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 5,
+        "items": [
+         "Base.Nails"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "tags": [
+         "GarbageBag"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Outdoors",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.RainCollectorRound"
+    }
+   ],
+   "iconName": "Build_RainCollectorBarrel2"
+  },
+  {
+   "id": "kbw.vanilla.raincollectorround_tarp",
+   "displayName": "Rain Collector Barrel Tarp",
+   "translationKey": "IGUI_KBW_Vanilla_RainCollectorRound_Tarp",
+   "tooltipKey": "Tooltip_craft_rainCollectorDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_02_124"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_124"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 6,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 5,
+        "items": [
+         "Base.Nails"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Tarp"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Outdoors",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.RainCollectorRound_Tarp"
+    }
+   ],
+   "iconName": "Build_RainCollectorBarrel"
+  },
+  {
+   "id": "kbw.vanilla.raincollector",
+   "displayName": "Rain Collector Crate",
+   "translationKey": "IGUI_KBW_Vanilla_RainCollector",
+   "tooltipKey": "Tooltip_craft_rainCollectorDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_02_54"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_54"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "tags": [
+         "GarbageBag"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Outdoors",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.RainCollector"
+    }
+   ],
+   "iconName": "Build_RainCollectorCrate2",
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanilla.raincollector_tarp",
+   "displayName": "Rain Collector Crate Tarp",
+   "translationKey": "IGUI_KBW_Vanilla_RainCollector_Tarp",
+   "tooltipKey": "Tooltip_craft_rainCollectorDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_02_120"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_120"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Tarp"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Outdoors",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.RainCollector_Tarp"
+    }
+   ],
+   "iconName": "Build_RainCollectorCrate",
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanilla.ruggedcross",
+   "displayName": "Rugged Cross",
+   "translationKey": "IGUI_KBW_Vanilla_RuggedCross",
+   "tooltipKey": "Tooltip_craft_woodenCrossDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Fiber"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_04_105",
+      "N": "crafted_04_107",
+      "E": "crafted_04_106",
+      "S": "crafted_04_104"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_105"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_107"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_106"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_104"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "isThumpable": false
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.TreeBranch2",
+         "Base.WoodenStick2"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.LongStick",
+         "Base.Sapling"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Miscellaneous",
+      "xp": {
+       "Woodwork": 1
+      }
+     },
+     "_b41Entity": "Base.RuggedCross"
+    }
+   ],
+   "iconName": "Build_CrossSimple",
+   "_b41NeedsTilesets": [
+    "crafted_04"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.sandbagwall",
+   "displayName": "Sandbag Wall",
+   "translationKey": "IGUI_KBW_Vanilla_SandbagWall",
+   "tooltipKey": "Tooltip_craft_sandBagDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Outdoors"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_12",
+      "N": "carpentry_02_13",
+      "E": "carpentry_02_14",
+      "S": "carpentry_02_15"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "bonusHealth": 400,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "destroy",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.Sandbag"
+        ],
+        "flags": [
+         "ItemCount"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 80,
+      "timedAction": "BuildSandbagWall",
+      "category": "Outdoors"
+     },
+     "_b41Entity": "Base.SandbagWall"
+    }
+   ],
+   "iconName": "Build_SandbagWall"
+  },
+  {
+   "id": "kbw.vanilla.skullpolesheep",
+   "displayName": "Sheep Skull Pole",
+   "translationKey": "IGUI_KBW_Vanilla_SkullPoleSheep",
+   "tooltipKey": "Tooltip_craft_skullPoleDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Fiber"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_signs_01_77",
+      "N": "constructedobjects_signs_01_78",
+      "E": "constructedobjects_signs_01_79",
+      "S": "constructedobjects_signs_01_76"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_77"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_78"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_79"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_76"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 50,
+     "skillBaseHealth": 10,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.LongStick",
+         "Base.Sapling"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.SheetRope"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Sheep_Skull"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 150,
+      "timedAction": "BuildWallNoTool",
+      "category": "Miscellaneous"
+     },
+     "_b41Entity": "Base.SkullPoleSheep"
+    }
+   ],
+   "iconName": "Build_Stake_SkullSheep"
+  },
+  {
+   "id": "kbw.vanilla.tarp_shelter",
+   "displayName": "Tarp Shelter",
+   "translationKey": "IGUI_KBW_Vanilla_Tarp_Shelter",
+   "tooltipKey": "Tooltip_craft_shelterDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Stone",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "camping_03_14",
+      "E": "camping_03_13",
+      "N": "camping_03_8",
+      "W": "camping_03_11"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_03_14",
+            "camping_03_15"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_03_13"
+           ],
+           [
+            "camping_03_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_03_8",
+            "camping_03_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_03_11"
+           ],
+           [
+            "camping_03_10"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isProp": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.TreeBranch2",
+         "Base.WoodenStick2"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Tarp"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Stone2"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.LongStick",
+         "Base.Sapling"
+        ]
+       },
+       {
+        "id": "input_6",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildLowNoTool",
+      "category": "Outdoors"
+     },
+     "_b41Entity": "Base.Tarp_Shelter"
+    }
+   ],
+   "iconName": "Build_LeanToShelterTarp",
+   "_b41NeedsTilesets": [
+    "camping_03"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.woodcross",
+   "displayName": "Wood Cross",
+   "translationKey": "IGUI_KBW_Vanilla_WoodCross",
+   "tooltipKey": "Tooltip_craft_woodenCrossDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "location_community_cemetary_01_38",
+      "N": "location_community_cemetary_01_39",
+      "E": "location_community_cemetary_01_37",
+      "S": "location_community_cemetary_01_36"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_39"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "isThumpable": false
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Miscellaneous",
+      "xp": {
+       "Woodwork": 6
+      }
+     },
+     "_b41Entity": "Base.WoodCross"
+    }
+   ],
+   "iconName": "Build_Cross"
+  },
+  {
+   "id": "kbw.vanilla.woodpicket",
+   "displayName": "Wood Picket",
+   "translationKey": "IGUI_KBW_Vanilla_WoodPicket",
+   "tooltipKey": "Tooltip_craft_woodenPicketDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "location_community_cemetary_01_31"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_cemetary_01_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.SheetRope"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Miscellaneous",
+      "xp": {
+       "Woodwork": 6
+      }
+     },
+     "_b41Entity": "Base.WoodPicket"
+    }
+   ],
+   "iconName": "Build_WoodPicket"
+  },
+  {
+   "id": "kbw.vanilla.woodsign",
+   "displayName": "Wood Sign",
+   "translationKey": "IGUI_KBW_Vanilla_WoodSign",
+   "tooltipKey": "Tooltip_craft_signDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_signs_01_27",
+      "N": "constructedobjects_signs_01_11"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_27"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_signs_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 1
+      }
+     },
+     "construction": {
+      "time": 80,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Miscellaneous",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.WoodSign"
+    }
+   ],
+   "iconName": "Build_WoodSign"
+  },
+  {
+   "id": "kbw.vanilla.woodstake",
+   "displayName": "Wooden Stake",
+   "translationKey": "IGUI_KBW_Vanilla_WoodStake",
+   "tooltipKey": "Tooltip_craft_woodenStakeDesc",
+   "category": "Outdoors",
+   "subcategory": "Outdoors",
+   "materialTags": [
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "outdoors"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fencing_01_19"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fencing_01_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Plank"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Outdoors",
+      "xp": {
+       "Woodwork": 6
+      }
+     },
+     "_b41Entity": "Base.WoodStake"
+    }
+   ],
+   "iconName": "Item_Handle"
+  }
+ ]
+}

@@ -102,14 +102,12 @@ function DDTransportBox:initialise()
     self.zEntry:initialise(); self.zEntry:instantiate(); self:addChild(self.zEntry)
     y = y + rowH + 10
 
-    -- SPRITE DROPDOWN
     self:addChild(ISLabel:new(pad + 35, y, rowH, "Sprite:", 1,1,1,1, UIFont.Small, false))
 
     self.spriteCombo = ISComboBox:new(pad + 60, y, self.width - pad*2 - 60, rowH, self, nil)
     self.spriteCombo:initialise()
     self.spriteCombo:instantiate()
 
-    -- Populate dropdown
     local selectedIndex = 1
     local currentSprite = md.ddTeleSprite
 
@@ -181,7 +179,6 @@ function DDTransportBox:onOK()
 
     x, y, z = math.floor(x), math.floor(y), math.floor(z)
     
-    -- write modData
     local md = self.sq:getModData()
     md.ddTeleName = name
     md.ddTeleDest = { x = x, y = y, z = z }

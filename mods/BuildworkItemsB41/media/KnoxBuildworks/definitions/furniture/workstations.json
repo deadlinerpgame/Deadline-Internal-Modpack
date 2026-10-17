@@ -1,0 +1,335 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.furniture.wood_top_workbench",
+   "translationKey": "IGUI_KBWVE_Buildable_Extended_WoodTopWorkbench",
+   "displayName": "Wood-Top Workbench",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_WoodTopWorkbench",
+   "category": "Furniture",
+   "subcategory": "Workstations",
+   "material": "Wood and Metal",
+   "materialTags": [
+    "Wood",
+    "Metal"
+   ],
+   "iconSprite": "location_business_machinery_01_16",
+   "placement": {
+    "kind": "object",
+    "requiresFloor": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_machinery_01_19"
+           ],
+           [
+            "location_business_machinery_01_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_machinery_01_16",
+            "location_business_machinery_01_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_machinery_01_23"
+           ],
+           [
+            "location_business_machinery_01_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_machinery_01_20",
+            "location_business_machinery_01_21"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 2,
+        "flags": [
+         "Prop2",
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 2,
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 4,
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 150,
+      "timedAction": "BuildMetalStructureMedium",
+      "completionSound": "BuildMetalStructureMedium",
+      "xp": {
+       "Woodwork": 40,
+       "MetalWelding": 30
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.wooden_pegboard",
+   "translationKey": "IGUI_KBWVE_Buildable_Extended_WoodenPegboard",
+   "displayName": "Wooden Pegboard",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_WoodenPegboard",
+   "category": "Furniture",
+   "subcategory": "Workstations",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "location_business_machinery_01_24",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_machinery_01_27"
+           ],
+           [
+            "location_business_machinery_01_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_machinery_01_31"
+           ],
+           [
+            "location_business_machinery_01_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_machinery_01_28",
+            "location_business_machinery_01_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_machinery_01_24",
+            "location_business_machinery_01_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  }
+ ]
+}

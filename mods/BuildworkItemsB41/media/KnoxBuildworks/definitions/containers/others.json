@@ -1,0 +1,1622 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.containers.others.location_farm_accesories_01_8",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_location_farm_accesories_01_8",
+   "displayName": "Dog House",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_containers_others_location_farm_accesories_01_8",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "location_farm_accesories_01_8",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_farm_accesories_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_farm_accesories_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_farm_accesories_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_farm_accesories_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": true,
+      "canBePadlocked": true
+     },
+     "container": {
+      "type": "doghouse",
+      "capacity": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.furniture_storage_01_53",
+   "translationKey": "IGUI_KBWVE_Buildable_small_table",
+   "displayName": "Small Table",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "furniture_storage_01_53",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_01_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_01_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_01_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_01_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "container": {
+      "type": "sidetable",
+      "capacity": 10
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.location_community_medical_01_36",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_location_community_medical_01_36",
+   "displayName": "Pale Drawers",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "location_community_medical_01_36",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_medical_01_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_medical_01_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_medical_01_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_medical_01_39"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "container": {
+      "type": "sidetable",
+      "capacity": 15
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.fixtures_bathroom_02_24",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_fixtures_bathroom_wooden_toilet",
+   "displayName": "Wooden Toilet",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_containers_others_fixtures_bathroom_02_24",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "fixtures_bathroom_02_24",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_02_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_02_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "canBePadlocked": true
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.fixtures_bathroom_02_24_2",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_fixtures_bathroom_wooden_toilet",
+   "displayName": "Wooden Toilet",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "fixtures_bathroom_02_24",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_02_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_02_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": true,
+      "canBePadlocked": true
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.location_community_school_01_4",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_location_community_school_01_4",
+   "displayName": "Dark School Bench",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "location_community_school_01_4",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_school_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_school_01_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_school_01_7"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_school_01_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "container": {
+      "type": "desk"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.location_community_school_01_12",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_location_community_school_01_12",
+   "displayName": "Light School Bench",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "location_community_school_01_12",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_school_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_school_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_school_01_15"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_school_01_14"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "container": {
+      "type": "desk"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.wooden_barrel_empty_shelves",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_wooden_barrel_empty_shelves",
+   "displayName": "Wooden Barrel Empty Shelves",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "location_business_distillery_01_0",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_distillery_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_distillery_01_5"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.wooden_barrel_shelves1",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_wooden_barrel_shelves1",
+   "displayName": "Wooden Barrel Shelves 1",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "location_business_distillery_01_2",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_distillery_01_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_distillery_01_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.containers.others.wooden_barrel_shelves",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_containers_others_wooden_barrel_shelves"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.wooden_barrel_shelves2",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_wooden_barrel_shelves2",
+   "displayName": "Wooden Barrel Shelves 2",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "location_business_distillery_01_1",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_distillery_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_business_distillery_01_4"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.containers.others.wooden_barrel_shelves",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_containers_others_wooden_barrel_shelves"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.logs",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_logs",
+   "displayName": "Logs",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "camping_01_25",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_01_24",
+            "camping_01_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_01_39"
+           ],
+           [
+            "camping_01_38"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "logs",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Log"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "dismantable": true
+     },
+     "container": {
+      "type": "logs",
+      "capacity": 50
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.logs_2",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_logs",
+   "displayName": "Logs",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "camping_01_27",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_01_26",
+            "camping_01_27"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_01_37"
+           ],
+           [
+            "camping_01_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "logs",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Log"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "dismantable": true
+     },
+     "container": {
+      "type": "logs",
+      "capacity": 50
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.logs_3",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_logs",
+   "displayName": "Logs",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "camping_01_29",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_01_28",
+            "camping_01_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_01_35"
+           ],
+           [
+            "camping_01_34"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "logs",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Log"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "dismantable": true
+     },
+     "container": {
+      "type": "logs",
+      "capacity": 50
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.logs_4",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_logs",
+   "displayName": "Logs",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "camping_01_31",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_01_30",
+            "camping_01_31"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_01_33"
+           ],
+           [
+            "camping_01_32"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "logs",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Log"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "dismantable": true
+     },
+     "container": {
+      "type": "logs",
+      "capacity": 50
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.others.logs_5",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_others_logs",
+   "displayName": "Logs",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Others",
+   "material": "Wood",
+   "iconSprite": "camping_01_41",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_01_40",
+            "camping_01_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "camping_01_43"
+           ],
+           [
+            "camping_01_42"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "logs",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Log"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "dismantable": true
+     },
+     "container": {
+      "type": "logs",
+      "capacity": 50
+     }
+    }
+   ]
+  }
+ ]
+}

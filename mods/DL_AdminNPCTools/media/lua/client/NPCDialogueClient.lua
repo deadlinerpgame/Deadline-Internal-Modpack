@@ -1,11 +1,19 @@
 require "NPCDialogueShared"
 require "AdminEditorWindow"
+require "DialogueWindow"
 
-local NPCDialogueClientCommands = {}
+local MODULE = NPCDialogue.MODULE
+local CMD    = NPCDialogue.CMD
+
+local Handlers = {}
 NPCDialogue.clientZones = NPCDialogue.clientZones or {}
 
 local activeZoneFloors = {}
 local lastPlayerPos    = { x = 0, y = 0, z = 0 }
+
+local function rescanSoon()
+    lastPlayerPos = { x = -1, y = -1, z = -1 }
+end
 
 local function isAdminOrDebug(player)
     if not player then return false end
@@ -14,102 +22,78 @@ local function isAdminOrDebug(player)
     return admin or dbg
 end
 
-local ZONE_KEY = "NPCDialogueZone"
-
-local function writeZoneToTile(zone)
-    local cell = getCell()
-    if not cell then return false end
-    local sq = cell:getGridSquare(zone.x, zone.y, zone.z)
-    if not sq then return false end
-    sq:getModData()[ZONE_KEY] = zone
-    return true
-end
-
-local function clearZoneFromTile(x, y, z, id)
-    local cell = getCell()
-    if not cell then return end
-    local sq = cell:getGridSquare(x, y, z)
-    if sq then
-        sq:getModData()[ZONE_KEY] = nil
-    end
-end
-
-local function readZoneFromTile(x, y, z)
-    local cell = getCell()
-    if not cell then return nil end
-    local sq = cell:getGridSquare(x, y, z)
-    if not sq then return nil end
-    return sq:getModData()[ZONE_KEY]
-end
-
-function NPCDialogueClientCommands.SyncZone(args)
-    if not (args and args.zone) then return end
-    local zone = args.zone
-    NPCDialogue.clientZones[zone.id] = zone
-    writeZoneToTile(zone)
-    lastPlayerPos = { x = -1, y = -1, z = -1 }
-end
-
-function NPCDialogueClientCommands.RemoveAck(args)
-    if not (args and args.id) then return end
-    local existing = NPCDialogue.clientZones[args.id]
-    NPCDialogue.clientZones[args.id] = nil
-    if args.x and args.y and args.z then
-        clearZoneFromTile(math.floor(args.x), math.floor(args.y), math.floor(args.z), args.id)
-    elseif existing then
-        clearZoneFromTile(existing.x, existing.y, existing.z, args.id)
-    end
-    lastPlayerPos = { x = -1, y = -1, z = -1 }
-end
-
-local function onServerCommand(module, command, args)
-    if module ~= "NPCDialogue" then return end
-
-    if NPCDialogueClientCommands[command] then
-        NPCDialogueClientCommands[command](args)
-    end
-end
-
-Events.OnServerCommand.Add(onServerCommand)
-
-local syncReceived = false
-local retryAttempts = 0
-local MAX_RETRIES = 8
-
-local function requestSync()
+local function send(command, args)
     local p = getSpecificPlayer(0)
     if not p then return false end
-    sendClientCommand(p, "NPCDialogue", "RequestSync", {})
+    sendClientCommand(p, MODULE, command, args or {})
     return true
 end
 
-function NPCDialogueClientCommands.SyncReady(args)
-    syncReceived = true
-    lastPlayerPos = { x = -1, y = -1, z = -1 }
+local READY_DELAY_MS = 1000
+local RETRY_MS       = 10000
+local MAX_REQUESTS   = 6
+
+local synced     = false
+local nextSyncAt = nil
+local syncTries  = 0
+
+local function queueSync()
+    synced     = false
+    syncTries  = 0
+    nextSyncAt = getTimestampMs() + READY_DELAY_MS
 end
 
-local function onConnected()
-    NPCDialogue.clientZones = {}
-    syncReceived = false
-    retryAttempts = 0
-    requestSync()
+local function pumpSync()
+    if synced or not nextSyncAt or getTimestampMs() < nextSyncAt then return end
+    if syncTries >= MAX_REQUESTS then
+        nextSyncAt = nil
+        return
+    end
+    if send(CMD.REQUEST_SYNC) then syncTries = syncTries + 1 end
+    nextSyncAt = getTimestampMs() + RETRY_MS
 end
 
-local function onGameStart()
-    if syncReceived then return end
-    requestSync()
+Events.OnGameStart.Add(queueSync)
+Events.OnCreatePlayer.Add(function(playerIndex)
+    if playerIndex == 0 then queueSync() end
+end)
+Events.OnTick.Add(pumpSync)
+
+function Handlers.SyncAll(args)
+    local fresh = {}
+    for _, zone in ipairs(args.zones or {}) do
+        if zone.id then fresh[zone.id] = zone end
+    end
+    NPCDialogue.clientZones = fresh
+    synced = true
+    rescanSoon()
 end
 
-Events.OnConnected.Add(onConnected)
-Events.OnGameStart.Add(onGameStart)
+function Handlers.ZoneUpdated(args)
+    local zone = args.zone
+    if not (zone and zone.id) then return end
+    NPCDialogue.clientZones[zone.id] = zone
+    rescanSoon()
+end
 
-if Events.EveryOneMinute then
-    Events.EveryOneMinute.Add(function()
-        if syncReceived then return end
-        if retryAttempts >= MAX_RETRIES then return end
-        retryAttempts = retryAttempts + 1
-        requestSync()
-    end)
+function Handlers.ZoneRemoved(args)
+    local id = args.id
+    if not id then return end
+    NPCDialogue.clientZones[id] = nil
+    rescanSoon()
+    local dw = DialogueWindow._instance
+    if dw and dw.active and dw.zoneId == id then dw:endSession() end
+    AdminEditorWindow.closeFor(id, "This NPC was removed.")
+end
+
+function Handlers.ZoneData(args)
+    local zone = args.zone
+    if not (zone and zone.id) then return end
+    AdminEditorWindow.getInstance():openForZone(zone)
+end
+
+function Handlers.SaveResult(args)
+    AdminEditorWindow.onSaveResult(args)
 end
 
 local function updateActiveZones()
@@ -172,7 +156,7 @@ local function getZoneAtTile(x, y, z)
     return nil
 end
 
-local function onFillWorldObjectContextMenu(playerNum, context, worldObjects, x, y, z)
+local function onFillWorldObjectContextMenu(playerNum, context, worldObjects)
     local player = getSpecificPlayer(playerNum)
     if not isAdminOrDebug(player) then return end
 
@@ -186,139 +170,115 @@ local function onFillWorldObjectContextMenu(playerNum, context, worldObjects, x,
     if not sq then return end
 
     local tx, ty, tz = sq:getX(), sq:getY(), sq:getZ()
-
-    local existingZone = getZoneAtTile(tx, ty, tz) or readZoneFromTile(tx, ty, tz)
+    local existingZone = getZoneAtTile(tx, ty, tz)
 
     if existingZone then
         context:addOption("Edit NPC Zone: " .. existingZone.name, sq, function()
-            if not AdminEditorWindow then
-                return
-            end
-            local editor = AdminEditorWindow.getInstance()
-            editor:openForZone(existingZone)
+            send(CMD.REQUEST_ZONE, { id = existingZone.id })
         end)
         context:addOption("Remove NPC Zone: " .. existingZone.name, sq, function()
-            sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "RemoveZone", {
-                id = existingZone.id,
-                x  = existingZone.x,
-                y  = existingZone.y,
-                z  = existingZone.z,
-            })
+            send(CMD.REMOVE_ZONE, { id = existingZone.id })
         end)
     else
         context:addOption("Place NPC Zone Here", sq, function()
-            sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "PlaceZone", {
-                name = "New NPC",
-                x    = tx,
-                y    = ty,
-                z    = tz,
-            })
+            send(CMD.PLACE_ZONE, { name = "New NPC", x = tx, y = ty, z = tz })
         end)
     end
 end
 
 Events.OnFillWorldObjectContextMenu.Add(onFillWorldObjectContextMenu)
 
-require "DialogueWindow"
-
 local currentZoneInside = nil
 
-function NPCDialogueClientCommands.SessionGranted(args)
-    if not (args and args.zoneId) then return end
-
-    local zone = NPCDialogue.clientZones[args.zoneId]
-    if not zone then
-        zone = readZoneFromTile(math.floor(args.x), math.floor(args.y), math.floor(args.z))
-    end
-
-    local npcName = (zone and zone.name) or args.name or "NPC"
-    local portrait = zone and zone.portrait or nil
-    local tree    = zone and zone.dialogueTree
-
+local function buildNodes(tree, player, zoneId)
     local nodes  = {}
     local rootId = nil
+    if not (tree and tree.nodeOrder and #tree.nodeOrder > 0) then return nodes, rootId end
 
-    local player = getSpecificPlayer(0)
+    rootId = tree.nodeOrder[1]
+    for _, nid in ipairs(tree.nodeOrder) do
+        local n = tree.nodes and tree.nodes[nid]
+        if n then
+            local npcText = n.npcText or ""
+            if player then
+                npcText = NPCDialogue.resolvePrompts(npcText, player)
+            end
+
+            local responses = {}
+            for _, resp in ipairs(n.responses or {}) do
+                local state = "normal"
+                if player then
+                    state = NPCDialogue.evalResponse(resp, player, zoneId)
+                end
+                if state ~= "hidden" then
+                    local leadsTo = resp.leadsTo
+                    if leadsTo == "(end)" then leadsTo = nil end
+
+                    local reqs = nil
+                    if resp.conditions then
+                        local hasAnyCond = false
+                        for _ in pairs(resp.conditions) do hasAnyCond = true; break end
+                        if hasAnyCond then
+                            reqs = {}
+                            for _, cond in pairs(resp.conditions) do
+                                local label = nil
+
+                                local c = {}
+                                for k, v in pairs(cond) do c[k] = v end
+                                c.zoneId = zoneId
+                                local met = NPCDialogue.evalCondition(c, player)
+
+                                if cond.type == "item" and cond.itemName and cond.itemName ~= "" then
+                                    local displayName = cond.itemName
+                                    local scriptItem = ScriptManager.instance:getItem(cond.itemName)
+                                    if scriptItem then displayName = scriptItem:getDisplayName() end
+                                    local amt = tonumber(cond.amount) or 1
+                                    label = (amt > 1) and (amt .. "x " .. displayName) or displayName
+                                elseif cond.type == "skill" and cond.skill then
+                                    label = cond.skill .. " " .. tostring(cond.level or 1)
+                                elseif cond.type == "occupation" and cond.occupation and cond.occupation ~= "" then
+                                    label = cond.occupation
+                                elseif cond.type == "talked" then
+                                    label = "Talked before"
+                                end
+                                if label then
+                                    reqs[#reqs + 1] = { label = label, met = met }
+                                end
+                            end
+                            if #reqs == 0 then reqs = nil end
+                        end
+                    end
+
+                    responses[#responses + 1] = {
+                        label   = resp.label or "",
+                        state   = state,
+                        leadsTo = leadsTo,
+                        reqs    = reqs,
+                        consumeList = resp.consumeList,
+                    }
+                end
+            end
+
+            nodes[nid] = {
+                npcText   = npcText,
+                responses = responses,
+            }
+        end
+    end
+    return nodes, rootId
+end
+
+function Handlers.SessionGranted(args)
     local zoneId = args.zoneId
+    if not zoneId then return end
 
+    local npcName = args.name or "NPC"
+    local player  = getSpecificPlayer(0)
     if player then
         player:getModData()["NPCTalked_" .. zoneId] = true
     end
 
-    if tree and tree.nodeOrder and #tree.nodeOrder > 0 then
-        rootId = tree.nodeOrder[1]
-        for _, nid in ipairs(tree.nodeOrder) do
-            local n = tree.nodes[nid]
-            if n then
-                local npcText = n.npcText or ""
-                if player then
-                    npcText = NPCDialogue.resolvePrompts(npcText, player)
-                end
-
-                local responses = {}
-                for _, resp in ipairs(n.responses or {}) do
-                    local state = "normal"
-                    if player then
-                        state = NPCDialogue.evalResponse(resp, player, zoneId)
-                    end
-                    if state ~= "hidden" then
-                        local leadsTo = resp.leadsTo
-                        if leadsTo == "(end)" then leadsTo = nil end
-
-                        local reqs = nil
-                        if resp.conditions then
-                            local hasAnyCond = false
-                            for _ in pairs(resp.conditions) do hasAnyCond = true; break end
-                            if hasAnyCond then
-                                reqs = {}
-                                for _, cond in pairs(resp.conditions) do
-                                    local label = nil
-
-                                    local c = {}
-                                    for k,v in pairs(cond) do c[k] = v end
-                                    c.zoneId = zoneId
-                                    local met = NPCDialogue.evalCondition(c, player)
-
-                                    if cond.type == "item" and cond.itemName and cond.itemName ~= "" then
-                                        local displayName = cond.itemName
-                                        local ok, scriptItem = pcall(function()
-                                            return ScriptManager.instance:getItem(cond.itemName)
-                                        end)
-                                        if ok and scriptItem then displayName = scriptItem:getDisplayName() end
-                                        local amt = tonumber(cond.amount) or 1
-                                        label = (amt > 1) and (amt .. "x " .. displayName) or displayName
-                                    elseif cond.type == "skill" and cond.skill then
-                                        label = cond.skill .. " " .. tostring(cond.level or 1)
-                                    elseif cond.type == "occupation" and cond.occupation and cond.occupation ~= "" then
-                                        label = cond.occupation
-                                    elseif cond.type == "talked" then
-                                        label = "Talked before"
-                                    end
-                                    if label then
-                                        reqs[#reqs+1] = { label = label, met = met }
-                                    end
-                                end
-                                if #reqs == 0 then reqs = nil end
-                            end
-                        end
-
-                        responses[#responses+1] = {
-                            label   = resp.label or "",
-                            state   = state,
-                            leadsTo = leadsTo,
-                            reqs    = reqs,
-                        }
-                    end
-                end
-
-                nodes[nid] = {
-                    npcText   = npcText,
-                    responses = responses,
-                }
-            end
-        end
-    end
-
+    local nodes, rootId = buildNodes(args.tree, player, zoneId)
     if not rootId then
         rootId = "root"
         nodes["root"] = {
@@ -327,13 +287,11 @@ function NPCDialogueClientCommands.SessionGranted(args)
         }
     end
 
-    local dw = DialogueWindow.getInstance()
-    dw:openForZone(args.zoneId, npcName, nodes, rootId, portrait)
+    DialogueWindow.getInstance():openForZone(zoneId, npcName, nodes, rootId, args.portrait)
 end
 
-function NPCDialogueClientCommands.SessionDenied(args)
-    if not (args and args.message) then return end
-
+function Handlers.SessionDenied(args)
+    if not args.message then return end
     local p = getSpecificPlayer(0)
     if p then
         p:setHaloNote(args.message, 255, 200, 100, 200)
@@ -366,16 +324,7 @@ local function onKeyPressed(key)
     local dw = DialogueWindow.getInstance()
     if dw:isVisible() then return end
     if not currentZoneInside then return end
-
-    local zone = currentZoneInside
-
-    sendClientCommand(getSpecificPlayer(0), "NPCDialogue", "StartSession", {
-        zoneId = zone.id,
-        name   = zone.name,
-        x      = zone.x,
-        y      = zone.y,
-        z      = zone.z,
-    })
+    send(CMD.START_SESSION, { zoneId = currentZoneInside.id })
 end
 
 Events.OnKeyPressed.Add(onKeyPressed)
@@ -397,3 +346,11 @@ local function updatePrompt()
 end
 
 Events.OnTick.Add(updatePrompt)
+
+local function onServerCommand(module, command, args)
+    if module ~= MODULE then return end
+    local fn = Handlers[command]
+    if fn then fn(args or {}) end
+end
+
+Events.OnServerCommand.Add(onServerCommand)

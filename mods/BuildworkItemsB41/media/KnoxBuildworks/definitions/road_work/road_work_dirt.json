@@ -1,0 +1,965 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.road_work.road_work_dirt.dirt_corner",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_road_work_dirt_dirt_corner",
+   "displayName": "Dirt Corner",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_road_work_road_work_dirt_dirt_corner",
+   "category": "Road Work",
+   "subcategory": "Road Work Dirt",
+   "material": "Other",
+   "iconSprite": "blends_natural_01_68",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_68"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_66"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_67"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_65"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.road_work_dirt.grass",
+   "translationKey": "IGUI_KBWVE_Buildable_grass",
+   "displayName": "Grass",
+   "tooltipKey": "Tooltip_KBW_Shared_GrassSurface",
+   "category": "Road Work",
+   "subcategory": "Road Work Dirt",
+   "material": "Other",
+   "iconSprite": "blends_natural_01_16",
+   "placement": {
+    "kind": "floor"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_16"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.road_work_dirt.grass_corner",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_road_work_dirt_grass_corner",
+   "displayName": "Grass Corner",
+   "tooltipKey": "Tooltip_KBW_Shared_GrassSurface",
+   "category": "Road Work",
+   "subcategory": "Road Work Dirt",
+   "material": "Other",
+   "iconSprite": "blends_natural_01_19",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_18"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.road_work_dirt.grass_edge",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_road_work_dirt_grass_edge",
+   "displayName": "Grass Edge",
+   "tooltipKey": "Tooltip_KBW_Shared_GrassSurface",
+   "category": "Road Work",
+   "subcategory": "Road Work Dirt",
+   "material": "Other",
+   "iconSprite": "blends_natural_01_25",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.road_work_dirt.grass_2",
+   "translationKey": "IGUI_KBWVE_Buildable_grass",
+   "displayName": "Grass",
+   "tooltipKey": "Tooltip_KBW_Shared_GrassSurface",
+   "category": "Road Work",
+   "subcategory": "Road Work Dirt",
+   "material": "Other",
+   "iconSprite": "blends_natural_01_32",
+   "placement": {
+    "kind": "floor"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_32"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.road_work_dirt.grass_corner_2",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_road_work_dirt_grass_corner",
+   "displayName": "Grass Corner",
+   "tooltipKey": "Tooltip_KBW_Shared_GrassSurface",
+   "category": "Road Work",
+   "subcategory": "Road Work Dirt",
+   "material": "Other",
+   "iconSprite": "blends_natural_01_35",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_34"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.road_work_dirt.grass_edge_2",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_road_work_dirt_grass_edge",
+   "displayName": "Grass Edge",
+   "tooltipKey": "Tooltip_KBW_Shared_GrassSurface",
+   "category": "Road Work",
+   "subcategory": "Road Work Dirt",
+   "material": "Other",
+   "iconSprite": "blends_natural_01_41",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.road_work_dirt.grass_3",
+   "translationKey": "IGUI_KBWVE_Buildable_grass",
+   "displayName": "Grass",
+   "tooltipKey": "Tooltip_KBW_Shared_GrassSurface",
+   "category": "Road Work",
+   "subcategory": "Road Work Dirt",
+   "material": "Other",
+   "iconSprite": "blends_natural_01_48",
+   "placement": {
+    "kind": "floor"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_48"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.road_work_dirt.grass_corner_3",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_road_work_dirt_grass_corner",
+   "displayName": "Grass Corner",
+   "tooltipKey": "Tooltip_KBW_Shared_GrassSurface",
+   "category": "Road Work",
+   "subcategory": "Road Work Dirt",
+   "material": "Other",
+   "iconSprite": "blends_natural_01_51",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_51"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_50"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.road_work_dirt.grass_edge_3",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_road_work_dirt_grass_edge",
+   "displayName": "Grass Edge",
+   "tooltipKey": "Tooltip_KBW_Shared_GrassSurface",
+   "category": "Road Work",
+   "subcategory": "Road Work Dirt",
+   "material": "Other",
+   "iconSprite": "blends_natural_01_57",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_57"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_56"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_59"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  }
+ ]
+}

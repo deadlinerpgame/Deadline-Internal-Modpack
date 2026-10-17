@@ -1,0 +1,33 @@
+module aerx
+{
+    imports
+    {
+        Base,
+    }
+
+    item BlackPowder
+    {
+        DisplayCategory = Material,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseDelta = 0.1,
+        UseWhileEquipped = FALSE,
+        DisplayName	=	Black Powder,
+        Icon	=	Blackpowder,
+        WeightEmpty = 0.01,
+        WorldStaticModel = GunpowderJar,
+    }
+
+    item IGunpowder
+    {
+        DisplayCategory = Material,
+        Weight	=	1,
+        Type	=	Drainable,
+        UseDelta = 0.1,
+        UseWhileEquipped = FALSE,
+        DisplayName	=	Improvised Gunpowder,
+        Icon	=	Blackpowder,
+        WeightEmpty = 0.01,
+        WorldStaticModel = GunpowderJar,
+    }
+}

@@ -1,0 +1,3026 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_shakes",
+   "displayName": "Brown Shakes",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_54",
+   "placement": {
+    "kind": "floor",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_pitched_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_pitched_1",
+   "displayName": "Brown Shakes Pitched 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_32",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_pitched",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_roofs_brown_shakes_pitched"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_pitched_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_pitched_2",
+   "displayName": "Brown Shakes Pitched 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_33",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_pitched",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_roofs_brown_shakes_pitched"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_pitched_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_pitched_3",
+   "displayName": "Brown Shakes Pitched 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_34",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_pitched",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_roofs_brown_shakes_pitched"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_inner_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_inner_1",
+   "displayName": "Brown Shakes Inner 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_40",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_40"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_inner",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_roofs_brown_shakes_inner"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_inner_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_inner_2",
+   "displayName": "Brown Shakes Inner 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_41",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_inner",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_roofs_brown_shakes_inner"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_inner_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_inner_3",
+   "displayName": "Brown Shakes Inner 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_42",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_42"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_inner",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_roofs_brown_shakes_inner"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_valley_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_valley_1",
+   "displayName": "Brown Shakes Valley 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_43",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_valley",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_roofs_brown_shakes_valley"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_valley_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_valley_2",
+   "displayName": "Brown Shakes Valley 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_44",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_44"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_valley",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_roofs_brown_shakes_valley"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_valley_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_valley_3",
+   "displayName": "Brown Shakes Valley 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_45",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_45"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_valley",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_roofs_brown_shakes_valley"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_outer_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_outer_1",
+   "displayName": "Brown Shakes Outer 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_56",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_56"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_61"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_outer",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_roofs_brown_shakes_outer"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_outer_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_outer_2",
+   "displayName": "Brown Shakes Outer 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_57",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_57"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_60"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_outer",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_roofs_brown_shakes_outer"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_outer_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_outer_3",
+   "displayName": "Brown Shakes Outer 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_58",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_59"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_outer",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_roofs_brown_shakes_outer"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_patio_shakes_pitched",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_patio_shakes_pitched",
+   "displayName": "Brown Patio Shakes Pitched",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_38",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_39"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_patio_shakes_inner",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_patio_shakes_inner",
+   "displayName": "Brown Patio Shakes Inner",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_52",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_52"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_patio_shakes_outer",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_patio_shakes_outer",
+   "displayName": "Brown Patio Shakes Outer",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_62",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_62"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_63"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_patio_shakes_valley",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_patio_shakes_valley",
+   "displayName": "Brown Patio Shakes Valley",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_53",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_53"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r5_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r5_1",
+   "displayName": "Brown Shakes Roof Section 5-1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_47",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_47"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_46"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r5",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r5"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r6_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r6_1",
+   "displayName": "Brown Shakes Roof Section 6-1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_49",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_49"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r6",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r6"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r9_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r9_1",
+   "displayName": "Brown Shakes Roof Section 9-1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_72",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_72"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r9",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r9"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r9_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r9_2",
+   "displayName": "Brown Shakes Roof Section 9-2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_76",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_76"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r9",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r9"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r9_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r9_3",
+   "displayName": "Brown Shakes Roof Section 9-3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_73",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_73"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r9",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r9"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r9_4",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r9_4",
+   "displayName": "Brown Shakes Roof Section 9-4",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_77",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_77"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r9",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r9"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r9_5",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r9_5",
+   "displayName": "Brown Shakes Roof Section 9-5",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_79",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_79"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_78"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r9",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r9"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r9_6",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r9_6",
+   "displayName": "Brown Shakes Roof Section 9-6",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_74",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_74"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r9",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r9"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r9_7",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r9_7",
+   "displayName": "Brown Shakes Roof Section 9-7",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_75",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_75"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r9",
+    "level": 7,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r9"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r13_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r13_1",
+   "displayName": "Brown Shakes Roof Section 13-1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_106",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_106"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r13",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r13"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r13_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r13_2",
+   "displayName": "Brown Shakes Roof Section 13-2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_107",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_107"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r13",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r13"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r13_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r13_3",
+   "displayName": "Brown Shakes Roof Section 13-3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_110",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_110"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_111"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r13",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r13"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r13_4",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r13_4",
+   "displayName": "Brown Shakes Roof Section 13-4",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_108",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_108"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r13",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r13"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.brown_shakes_roofs.brown_shakes_section_r13_5",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_brown_shakes_section_r13_5",
+   "displayName": "Brown Shakes Roof Section 13-5",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Brown Shakes Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_01_109",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_01_109"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.brown_shakes_roofs.brown_shakes_section_r13",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_roofing_brown_shakes_section_r13"
+   },
+   "allowSpriteReuse": true
+  }
+ ]
+}

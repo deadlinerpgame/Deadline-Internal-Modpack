@@ -1,16 +1,21 @@
 NPCDialogue = NPCDialogue or {}
 
+NPCDialogue.MODULE = "NPCDialogue"
+
 NPCDialogue.CMD = {
-    
-    PLACE_ZONE    = "PlaceZone",
-    REMOVE_ZONE   = "RemoveZone",
     REQUEST_SYNC  = "RequestSync",
+    REQUEST_ZONE  = "RequestZone",
+    PLACE_ZONE    = "PlaceZone",
+    UPDATE_ZONE   = "UpdateZone",
+    REMOVE_ZONE   = "RemoveZone",
     START_SESSION = "StartSession",
     END_SESSION   = "EndSession",
 
-    SYNC_READY      = "SyncReady",
-    SYNC_ZONE       = "SyncZone",
-    REMOVE_ACK      = "RemoveAck",
+    SYNC_ALL        = "SyncAll",
+    ZONE_UPDATED    = "ZoneUpdated",
+    ZONE_REMOVED    = "ZoneRemoved",
+    ZONE_DATA       = "ZoneData",
+    SAVE_RESULT     = "SaveResult",
     SESSION_GRANTED = "SessionGranted",
     SESSION_DENIED  = "SessionDenied",
 }
@@ -21,7 +26,23 @@ function NPCDialogue.distanceTo(px, py, zx, zy)
     return math.sqrt(dx * dx + dy * dy)
 end
 
-NPCDialogue.MODDATA_KEY = "NPCDialogueZones"
+function NPCDialogue.deepCopy(v)
+    if type(v) ~= "table" then return v end
+    local out = {}
+    for k, val in pairs(v) do out[k] = NPCDialogue.deepCopy(val) end
+    return out
+end
+
+function NPCDialogue.zoneSummary(zone)
+    return {
+        id     = zone.id,
+        name   = zone.name,
+        x      = zone.x,
+        y      = zone.y,
+        z      = zone.z,
+        radius = zone.radius,
+    }
+end
 
 NPCDialogue.DEFAULT_RADIUS     = 2
 NPCDialogue.DEFAULT_CONCURRENT = true
@@ -43,6 +64,7 @@ function NPCDialogue.newZone(id, name, x, y, z)
         concurrent     = NPCDialogue.DEFAULT_CONCURRENT,
         portrait       = "",
         dialogueTreeId = "",
+        dialogueTree   = { nodes = {}, nodeOrder = {} },
     }
 end
 
@@ -124,8 +146,8 @@ function NPCDialogue.evalCondition(cond, player)
         
         if profId:lower() == cond.occupation:lower() then return true end
         
-        local ok, prof = pcall(function() return ProfessionFactory.getProfession(profId) end)
-        if ok and prof then
+        local prof = ProfessionFactory and ProfessionFactory.getProfession(profId)
+        if prof then
             local displayName = prof:getName()
             if displayName and displayName:lower() == cond.occupation:lower() then return true end
         end

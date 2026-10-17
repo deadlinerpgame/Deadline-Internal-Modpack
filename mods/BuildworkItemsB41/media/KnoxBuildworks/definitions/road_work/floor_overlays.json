@@ -1,0 +1,1503 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_0",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_8"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay_2",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_2",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay_3",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_19",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_18"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay_4",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_28",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay_5",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_84",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_84"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_83"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_82"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_85"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay_6",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_32",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay_7",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_48",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_64"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_72"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_56"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay_8",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_49",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_65"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_73"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_57"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay_9",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_50",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_50"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_66"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_74"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_58"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay_10",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_51",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_51"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_67"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_75"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_59"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay_11",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_52",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_68"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_76"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_60"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay_12",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_53",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_69"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_77"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_61"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay_13",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_54",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_70"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_78"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_62"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.road_work.floor_overlays.street_overlay_14",
+   "translationKey": "IGUI_KBWVE_Buildable_road_work_street_overlay",
+   "displayName": "Street Overlay",
+   "tooltipKey": "Tooltip_KBW_Shared_DirtOverlay",
+   "category": "Road Work",
+   "subcategory": "Floor Overlays",
+   "material": "Other",
+   "iconSprite": "overlay_grime_floor_01_55",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_55"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_71"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_79"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "overlay_grime_floor_01_63"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_shovel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "DigPlow"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "ground_material",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Dirtbag",
+         "Base.Gravelbag"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  }
+ ]
+}

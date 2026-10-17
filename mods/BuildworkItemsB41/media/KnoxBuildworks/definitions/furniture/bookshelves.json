@@ -1,0 +1,346 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.furniture.bookshelves.furniture_shelving_01_45",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_bookshelves_furniture_shelving_01_45",
+   "displayName": "White Fancy Shelves",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_bookshelves_furniture_shelving_01_45",
+   "category": "Furniture",
+   "subcategory": "Bookshelves",
+   "material": "Wood",
+   "iconSprite": "furniture_shelving_01_45",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_47"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 90
+      },
+      "category": "Furniture"
+     },
+     "container": {
+      "type": "shelves",
+      "capacity": 40
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.bookshelves.furniture_shelving_01_10",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_bookshelves_big_wall_shelves",
+   "displayName": "Big Wall Shelves",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_bookshelves_big_wall_shelves",
+   "category": "Furniture",
+   "subcategory": "Bookshelves",
+   "material": "Wood",
+   "iconSprite": "furniture_shelving_01_10",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_9"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Furniture"
+     },
+     "container": {
+      "type": "shelves",
+      "capacity": 30
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.bookshelves.big_wall_shelves",
+   "translationKey": "IGUI_KBWVE_Buildable_furniture_bookshelves_big_wall_shelves",
+   "displayName": "Big Wall Shelves",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_furniture_bookshelves_big_wall_shelves",
+   "category": "Furniture",
+   "subcategory": "Bookshelves",
+   "material": "Wood",
+   "iconSprite": "furniture_shelving_01_8",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_8"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Furniture"
+     },
+     "container": {
+      "type": "shelves",
+      "capacity": 30
+     }
+    }
+   ]
+  }
+ ]
+}

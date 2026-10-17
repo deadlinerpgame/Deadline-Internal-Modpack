@@ -28,7 +28,6 @@ function LootTicketManager.ShowSetContext(playerNum, item)
 
     if item:getType() ~= "DLDC_ItemLootTicket_Unset" then return end;
 
-    -- Get the item in the player's primary hand.
     local primaryHandItem = playerObj:getPrimaryHandItem();
     if not primaryHandItem then
         playerObj:setHaloNote("I need a container equipped in my primary hand to get the items from.", 180, 25, 25, 300);
@@ -65,7 +64,6 @@ function LootTicketManager.ShowSetContext(playerNum, item)
     local posX = halfScreenX - uiWidth;
     local posY = halfScreenY - uiHeight
 
-    -- Now we have all the items and the number of them, we need to show the player a UI which has the full item list and the chance to win.
     local ui = DLLootTicketChancesUI:new(posX, posY, uiWidth, uiHeight, item, uniqueItemsTable);
     ui:initialise();
     ui:addToUIManager();
@@ -120,11 +118,6 @@ function LootTicketManager.ShowTicketParams(playerNum, item)
             return;
         end
 
-        --[[
-            modData.LootTicket.RestrictedTo = nil;
-    modData.LootTicket.MaxRolls = tonumber(self.maxRolledItems:getText());
-    modData.LootTicket.AllowDuplicates = self.allowDuplicateItems;
-        --]]
         local ui = DLLootTicketInspectionUI:new(0, 0, 500, 300, itemData.Items, itemData.MaxRolls, itemData.AllowDuplicates);
         ui:initialise();
         ui:addToUIManager();

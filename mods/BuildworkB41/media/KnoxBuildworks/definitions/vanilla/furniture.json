@@ -1,0 +1,7094 @@
+{
+ "schemaVersion": 1,
+ "source": "Project Zomboid Build 42 generated entity scripts",
+ "category": "Furniture",
+ "buildables": [
+  {
+   "id": "kbw.vanilla.wood_bed",
+   "displayName": "Bed",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_Bed",
+   "tooltipKey": "Tooltip_craft_bedDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_02_72",
+      "E": "carpentry_02_75"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_72",
+            "carpentry_02_73"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_75"
+           ],
+           [
+            "carpentry_02_74"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 6,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Mattress"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWallHammer",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 40
+      }
+     },
+     "_b41Entity": "Base.Wood_Bed"
+    }
+   ],
+   "iconName": "Build_Bed"
+  },
+  {
+   "id": "kbw.vanilla.metal_lockerbig_lvl2",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Big Metal Locker",
+   "translationKey": "IGUI_KBW_Vanilla_Metal_LockerBig_Lvl2",
+   "tooltipKey": "Tooltip_craft_lockerDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "furniture_storage_02_3",
+      "N": "furniture_storage_02_2",
+      "E": "furniture_storage_02_1",
+      "S": "furniture_storage_02_0"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_02_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_02_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_02_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_02_0"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 8,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 10
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "MetalWelding": 100
+      }
+     },
+     "_b41Entity": "Base.Metal_LockerBig_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metal_lockerbig",
+    "name": "Big Metal Locker",
+    "translationKey": "IGUI_KBW_Group_vanilla_metal_lockerbig",
+    "level": 2
+   },
+   "iconName": "Build_CabinetMetal"
+  },
+  {
+   "id": "kbw.vanilla.metal_lockerbig_lvl1",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Big Metal Locker (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Metal_LockerBig_Lvl1",
+   "tooltipKey": "Tooltip_craft_lockerDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_05_16",
+      "N": "crafted_05_17",
+      "E": "crafted_05_18",
+      "S": "crafted_05_19"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_17"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 8,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.Metal_LockerBig_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metal_lockerbig",
+    "name": "Big Metal Locker",
+    "translationKey": "IGUI_KBW_Group_vanilla_metal_lockerbig",
+    "level": 1
+   },
+   "iconName": "Build_CabinetMetal",
+   "_b41NeedsTilesets": [
+    "crafted_05"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.coffin",
+   "displayName": "Coffin",
+   "translationKey": "IGUI_KBW_Vanilla_Coffin",
+   "tooltipKey": "Tooltip_craft_coffinDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "crafted_04_49",
+      "N": "crafted_04_47",
+      "W": "crafted_04_44",
+      "E": "crafted_04_50"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_49"
+           ],
+           [
+            "crafted_04_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_47"
+           ],
+           [
+            "crafted_04_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_44",
+            "crafted_04_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_50",
+            "crafted_04_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Saw",
+         "CrudeSaw"
+        ],
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 40
+      }
+     },
+     "_b41Entity": "Base.Coffin"
+    }
+   ],
+   "iconName": "Build_Coffin",
+   "_b41NeedsTilesets": [
+    "crafted_04"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.log_bench",
+   "displayName": "Log Bench",
+   "translationKey": "IGUI_KBW_Vanilla_Log_Bench",
+   "tooltipKey": "Tooltip_craft_benchDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "crafted_02_58",
+      "E": "crafted_02_57"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_02_58",
+            "crafted_02_59"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_02_57"
+           ],
+           [
+            "crafted_02_56"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 100,
+     "skillBaseHealth": 20,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.TreeBranch2"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "ChopTree",
+         "Saw",
+         "CrudeSaw"
+        ],
+        "flags": [
+         "MayDegradeLight",
+         "IsNotDull",
+         "Prop1"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWallNoTool",
+      "category": "Furniture"
+     },
+     "_b41Entity": "Base.Log_Bench"
+    }
+   ],
+   "iconName": "Build_LogBench",
+   "_b41NeedsTilesets": [
+    "crafted_02"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.log_stool",
+   "displayName": "Log Stool 1",
+   "translationKey": "IGUI_KBW_Vanilla_Log_Stool",
+   "tooltipKey": "Tooltip_craft_stoolDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "crafted_02_94",
+      "E": "crafted_02_93"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_02_94"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_02_93"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isProp": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.TreeBranch2"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "ChopTree",
+         "Saw",
+         "CrudeSaw"
+        ],
+        "flags": [
+         "MayDegradeLight",
+         "IsNotDull",
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWallNoTool",
+      "category": "Furniture"
+     },
+     "_b41Entity": "Base.Log_Stool"
+    }
+   ],
+   "iconName": "Build_LogSeat",
+   "_b41NeedsTilesets": [
+    "crafted_02"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.other_log_stool",
+   "displayName": "Log Stool 2",
+   "translationKey": "IGUI_KBW_Vanilla_Other_Log_Stool",
+   "tooltipKey": "Tooltip_craft_stoolDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "geometry": {
+      "faces": {
+       "SINGLE": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_02_92"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isProp": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.TreeBranch2"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "ChopTree",
+         "Saw",
+         "CrudeSaw"
+        ],
+        "flags": [
+         "MayDegradeLight",
+         "IsNotDull",
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWallNoTool",
+      "category": "Furniture"
+     },
+     "_b41Entity": "Base.Other_Log_Stool"
+    }
+   ],
+   "iconName": "Build_LogStool",
+   "_b41NeedsTilesets": [
+    "crafted_02"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.log_table",
+   "displayName": "Log Table",
+   "translationKey": "IGUI_KBW_Vanilla_Log_Table",
+   "tooltipKey": "Tooltip_craft_tableDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "crafted_02_90",
+      "E": "crafted_02_89"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_02_90",
+            "crafted_02_91"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_02_89"
+           ],
+           [
+            "crafted_02_88"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 100,
+     "skillBaseHealth": 20,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.TreeBranch2"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "ChopTree",
+         "Saw",
+         "CrudeSaw"
+        ],
+        "flags": [
+         "MayDegradeLight",
+         "IsNotDull",
+         "Prop1"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 8,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWallNoTool",
+      "category": "Furniture"
+     },
+     "_b41Entity": "Base.Log_Table"
+    }
+   ],
+   "iconName": "Build_LogTable",
+   "_b41NeedsTilesets": [
+    "crafted_02"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.barreloven",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Barrel Oven",
+   "translationKey": "IGUI_KBW_Vanilla_BarrelOven",
+   "tooltipKey": "Tooltip_craft_barrelOvenDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_05_5",
+      "N": "crafted_05_7",
+      "E": "crafted_05_6",
+      "S": "crafted_05_4"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_7"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_4"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "onCreate": "BuildRecipeCode.barrelOven.OnCreate"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.SheetMetal"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 50
+      }
+     },
+     "_b41Entity": "Base.BarrelOven"
+    }
+   ],
+   "iconName": "Build_BarrelOven",
+   "_b41NeedsTilesets": [
+    "crafted_05"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.metal_counter_lvl2",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Counter",
+   "translationKey": "IGUI_KBW_Vanilla_Metal_Counter_Lvl2",
+   "tooltipKey": "Tooltip_craft_metalCounterDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fixtures_counters_01_35",
+      "N": "fixtures_counters_01_37",
+      "E": "fixtures_counters_01_39",
+      "S": "fixtures_counters_01_33"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_39"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 8
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "MetalWelding": 80
+      }
+     },
+     "_b41Entity": "Base.Metal_Counter_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metal_counter",
+    "name": "Metal Counter",
+    "translationKey": "IGUI_KBW_Group_vanilla_metal_counter",
+    "level": 2
+   },
+   "iconName": "Build_MetalCounter"
+  },
+  {
+   "id": "kbw.vanilla.metal_counter_lvl1",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Counter (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Metal_Counter_Lvl1",
+   "tooltipKey": "Tooltip_craft_metalCounterDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_05_27",
+      "N": "crafted_05_29",
+      "E": "crafted_05_31",
+      "S": "crafted_05_25"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_27"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_31"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.Metal_Counter_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metal_counter",
+    "name": "Metal Counter",
+    "translationKey": "IGUI_KBW_Group_vanilla_metal_counter",
+    "level": 1
+   },
+   "iconName": "Build_MetalCounter",
+   "_b41NeedsTilesets": [
+    "crafted_05"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.metal_countercorner_lvl2",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Counter Corner",
+   "translationKey": "IGUI_KBW_Vanilla_Metal_CounterCorner_Lvl2",
+   "tooltipKey": "Tooltip_craft_metalCounterCornerDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fixtures_counters_01_34",
+      "N": "fixtures_counters_01_36",
+      "E": "fixtures_counters_01_38",
+      "S": "fixtures_counters_01_32"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_32"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 8
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "MetalWelding": 80
+      }
+     },
+     "_b41Entity": "Base.Metal_CounterCorner_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metal_countercorner",
+    "name": "Metal Counter Corner",
+    "translationKey": "IGUI_KBW_Group_vanilla_metal_countercorner",
+    "level": 2
+   },
+   "iconName": "Build_MetalCounterCorner"
+  },
+  {
+   "id": "kbw.vanilla.metal_countercorner_lvl1",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Counter Corner (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Metal_CounterCorner_Lvl1",
+   "tooltipKey": "Tooltip_craft_metalCounterCornerDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_05_26",
+      "N": "crafted_05_28",
+      "E": "crafted_05_30",
+      "S": "crafted_05_24"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_24"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.Metal_CounterCorner_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metal_countercorner",
+    "name": "Metal Counter Corner",
+    "translationKey": "IGUI_KBW_Group_vanilla_metal_countercorner",
+    "level": 1
+   },
+   "iconName": "Build_MetalCounterCorner",
+   "_b41NeedsTilesets": [
+    "crafted_05"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.metal_crate_lvl2",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Crate",
+   "translationKey": "IGUI_KBW_Vanilla_Metal_Crate_Lvl2",
+   "tooltipKey": "Tooltip_craft_crateDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "E": "crafted_05_45"
+     },
+     "geometry": {
+      "faces": {
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_45"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.SheetMetal"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 7
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "MetalWelding": 70
+      }
+     },
+     "_b41Entity": "Base.Metal_Crate_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metal_crate",
+    "name": "Metal Crate",
+    "translationKey": "IGUI_KBW_Group_vanilla_metal_crate",
+    "level": 2
+   },
+   "iconName": "Build_CrateMetal",
+   "_b41NeedsTilesets": [
+    "crafted_05"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.metal_crate_lvl1",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Crate (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Metal_Crate_Lvl1",
+   "tooltipKey": "Tooltip_craft_crateDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_45",
+      "N": "constructedobjects_01_44",
+      "E": "constructedobjects_01_47",
+      "S": "constructedobjects_01_46"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_47"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_46"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.SheetMetal"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.Metal_Crate_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metal_crate",
+    "name": "Metal Crate",
+    "translationKey": "IGUI_KBW_Group_vanilla_metal_crate",
+    "level": 1
+   },
+   "iconName": "Build_CrateMetal"
+  },
+  {
+   "id": "kbw.vanilla.metal_shelves_lvl2",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Shelves",
+   "translationKey": "IGUI_KBW_Vanilla_Metal_Shelves_Lvl2",
+   "tooltipKey": "Tooltip_craft_NeedsWallDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "furniture_shelving_01_29",
+      "N": "furniture_shelving_01_28"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_28"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "needToBeAgainstWall": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 9
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureSmall",
+      "category": "Furniture",
+      "xp": {
+       "MetalWelding": 90
+      }
+     },
+     "_b41Entity": "Base.Metal_Shelves_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metal_shelves",
+    "name": "Metal Shelves",
+    "translationKey": "IGUI_KBW_Group_vanilla_metal_shelves",
+    "level": 2
+   },
+   "iconName": "Build_ShelvesMetal"
+  },
+  {
+   "id": "kbw.vanilla.metal_shelves_lvl1",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Shelves (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Metal_Shelves_Lvl1",
+   "tooltipKey": "Tooltip_craft_NeedsWallDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_05_34",
+      "N": "crafted_05_35",
+      "E": "crafted_05_33",
+      "S": "crafted_05_32"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_32"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "needToBeAgainstWall": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.ScrapMetal"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureSmall",
+      "category": "Furniture",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.Metal_Shelves_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metal_shelves",
+    "name": "Metal Shelves",
+    "translationKey": "IGUI_KBW_Group_vanilla_metal_shelves",
+    "level": 1
+   },
+   "iconName": "Build_ShelvesMetal",
+   "_b41NeedsTilesets": [
+    "crafted_05"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.rugged_stool",
+   "displayName": "Rugged Stool",
+   "translationKey": "IGUI_KBW_Vanilla_Rugged_Stool",
+   "tooltipKey": "Tooltip_craft_stoolDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Fiber"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "crafted_04_113",
+      "E": "crafted_04_112"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_113"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_112"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.TreeBranch2",
+         "Base.WoodenStick2"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 1
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWallNoTool",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.Rugged_Stool"
+    }
+   ],
+   "iconName": "Build_LogSeat2",
+   "_b41NeedsTilesets": [
+    "crafted_04"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.rugged_table",
+   "displayName": "Rugged Table",
+   "translationKey": "IGUI_KBW_Vanilla_Rugged_Table",
+   "tooltipKey": "Tooltip_craft_tableDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Fiber"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "crafted_04_108",
+      "E": "crafted_04_111"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_108",
+            "crafted_04_109"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_111"
+           ],
+           [
+            "crafted_04_110"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 8,
+        "items": [
+         "Base.TreeBranch2",
+         "Base.WoodenStick2"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 1
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWallNoTool",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.Rugged_Table"
+    }
+   ],
+   "iconName": "Build_LogTable2",
+   "_b41NeedsTilesets": [
+    "crafted_04"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.metal_lockersmall_lvl2",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Small Metal Locker",
+   "translationKey": "IGUI_KBW_Vanilla_Metal_LockerSmall_Lvl2",
+   "tooltipKey": "Tooltip_craft_lockerDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "furniture_storage_02_8",
+      "N": "furniture_storage_02_9",
+      "E": "furniture_storage_02_10",
+      "S": "furniture_storage_02_11"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_02_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_02_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_02_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_02_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 9
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "MetalWelding": 90
+      }
+     },
+     "_b41Entity": "Base.Metal_LockerSmall_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metal_lockersmall",
+    "name": "Small Metal Locker",
+    "translationKey": "IGUI_KBW_Group_vanilla_metal_lockersmall",
+    "level": 2
+   },
+   "iconName": "Build_GunLocker"
+  },
+  {
+   "id": "kbw.vanilla.metal_lockersmall_lvl1",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Small Metal Locker (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Metal_LockerSmall_Lvl1",
+   "tooltipKey": "Tooltip_craft_lockerDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_05_20",
+      "N": "crafted_05_21",
+      "E": "crafted_05_22",
+      "S": "crafted_05_23"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_23"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.MetalPipe"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "MetalWelding": 50
+      }
+     },
+     "_b41Entity": "Base.Metal_LockerSmall_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metal_lockersmall",
+    "name": "Small Metal Locker",
+    "translationKey": "IGUI_KBW_Group_vanilla_metal_lockersmall",
+    "level": 1
+   },
+   "iconName": "Build_GunLocker",
+   "_b41NeedsTilesets": [
+    "crafted_05"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.wood_tablesmall_lvl3",
+   "displayName": "Small Wood Table (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_TableSmall_Lvl3",
+   "tooltipKey": "Tooltip_craft_tableDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_01_62"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_62"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.Wood_TableSmall_Lvl3"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_tablesmall",
+    "name": "Small Wood Table",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_tablesmall",
+    "level": 3
+   },
+   "iconName": "Build_TableSmallWood"
+  },
+  {
+   "id": "kbw.vanilla.wood_tablesmall_lvl2",
+   "displayName": "Small Wood Table (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_TableSmall_Lvl2",
+   "tooltipKey": "Tooltip_craft_tableDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_01_61"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_61"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.Wood_TableSmall_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_tablesmall",
+    "name": "Small Wood Table",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_tablesmall",
+    "level": 2
+   },
+   "iconName": "Build_TableSmallWood"
+  },
+  {
+   "id": "kbw.vanilla.wood_tablesmall_lvl1",
+   "displayName": "Small Wood Table (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_TableSmall_Lvl1",
+   "tooltipKey": "Tooltip_craft_tableDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_01_60"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_60"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 1
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.Wood_TableSmall_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_tablesmall",
+    "name": "Small Wood Table",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_tablesmall",
+    "level": 1
+   },
+   "iconName": "Build_TableSmallWood"
+  },
+  {
+   "id": "kbw.vanilla.stick_bookcase",
+   "displayName": "Stick Bookcase",
+   "translationKey": "IGUI_KBW_Vanilla_Stick_Bookcase",
+   "tooltipKey": "Tooltip_craft_bookcaseDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Fiber"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_04_94",
+      "N": "crafted_04_93",
+      "E": "crafted_04_95",
+      "S": "crafted_04_92"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_94"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_93"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_95"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_92"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 100,
+     "skillBaseHealth": 20,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 8,
+        "items": [
+         "Base.TreeBranch2",
+         "Base.WoodenStick2"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWallNoTool",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 5
+      }
+     },
+     "_b41Entity": "Base.Stick_Bookcase"
+    }
+   ],
+   "iconName": "Build_StickBookcase",
+   "_b41NeedsTilesets": [
+    "crafted_04"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.stick_bookcasesmall_lvl1",
+   "displayName": "Stick Small Bookcase",
+   "translationKey": "IGUI_KBW_Vanilla_Stick_BookcaseSmall_Lvl1",
+   "tooltipKey": "Tooltip_craft_bookcaseDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Cloth",
+    "Fiber"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_04_91",
+      "N": "crafted_04_89",
+      "E": "crafted_04_90",
+      "S": "crafted_04_88"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_91"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_89"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_90"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_88"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 8,
+        "items": [
+         "Base.TreeBranch2",
+         "Base.WoodenStick2"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWallNoTool",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 5
+      }
+     },
+     "_b41Entity": "Base.Stick_BookcaseSmall_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.stick_bookcasesmall",
+    "name": "Stick Small Bookcase",
+    "translationKey": "IGUI_KBW_Group_vanilla_stick_bookcasesmall",
+    "level": 1
+   },
+   "iconName": "Build_StickBookcaseSmall",
+   "_b41NeedsTilesets": [
+    "crafted_04"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.stone_cabinet",
+   "displayName": "Stone Cabinet",
+   "translationKey": "IGUI_KBW_Vanilla_Stone_Cabinet",
+   "tooltipKey": "Tooltip_craft_stoneCabinetDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Concrete",
+    "Stone"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "crafted_04_40",
+      "E": "crafted_04_41",
+      "N": "crafted_04_42",
+      "W": "crafted_04_43"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_04_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 100,
+     "skillBaseHealth": 20,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Concrete"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 10,
+        "items": [
+         "Base.Stone2"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.FlatStone"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildCairn",
+      "category": "Masonry",
+      "xp": {
+       "Woodwork": 5
+      }
+     },
+     "_b41Entity": "Base.Stone_Cabinet"
+    }
+   ],
+   "iconName": "Build_CabinetStone",
+   "_b41NeedsTilesets": [
+    "crafted_04"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.wood_barelement_lvl3",
+   "displayName": "Wood Bar Element (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_BarElement_Lvl3",
+   "tooltipKey": "Tooltip_craft_barElementDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_19",
+      "N": "carpentry_02_21",
+      "E": "carpentry_02_23",
+      "S": "carpentry_02_17"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_23"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 7
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 70
+      }
+     },
+     "_b41Entity": "Base.Wood_BarElement_Lvl3"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_barelement",
+    "name": "Wood Bar Element",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_barelement",
+    "level": 3
+   },
+   "iconName": "Build_WoodCounter"
+  },
+  {
+   "id": "kbw.vanilla.wood_barelement_lvl2",
+   "displayName": "Wood Bar Element (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_BarElement_Lvl2",
+   "tooltipKey": "Tooltip_craft_barElementDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_27",
+      "N": "carpentry_02_29",
+      "E": "carpentry_02_31",
+      "S": "carpentry_02_25"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_27"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_31"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.Wood_BarElement_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_barelement",
+    "name": "Wood Bar Element",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_barelement",
+    "level": 2
+   },
+   "iconName": "Build_WoodCounter"
+  },
+  {
+   "id": "kbw.vanilla.wood_barelement_lvl1",
+   "displayName": "Wood Bar Element (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_BarElement_Lvl1",
+   "tooltipKey": "Tooltip_craft_barElementDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_35",
+      "N": "carpentry_02_37",
+      "E": "carpentry_02_39",
+      "S": "carpentry_02_33"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_39"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.Wood_BarElement_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_barelement",
+    "name": "Wood Bar Element",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_barelement",
+    "level": 1
+   },
+   "iconName": "Build_WoodCounter"
+  },
+  {
+   "id": "kbw.vanilla.wood_barelementcorner_lvl3",
+   "displayName": "Wood Bar Element Corner (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_BarElementCorner_Lvl3",
+   "tooltipKey": "Tooltip_craft_barElementCornerDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_18",
+      "N": "carpentry_02_20",
+      "E": "carpentry_02_22",
+      "S": "carpentry_02_16"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_16"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 7
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 70
+      }
+     },
+     "_b41Entity": "Base.Wood_BarElementCorner_Lvl3"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_barelementcorner",
+    "name": "Wood Bar Element Corner",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_barelementcorner",
+    "level": 3
+   },
+   "iconName": "Build_WoodCounterCorner"
+  },
+  {
+   "id": "kbw.vanilla.wood_barelementcorner_lvl2",
+   "displayName": "Wood Bar Element Corner (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_BarElementCorner_Lvl2",
+   "tooltipKey": "Tooltip_craft_barElementCornerDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_26",
+      "N": "carpentry_02_28",
+      "E": "carpentry_02_30",
+      "S": "carpentry_02_24"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_24"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.Wood_BarElementCorner_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_barelementcorner",
+    "name": "Wood Bar Element Corner",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_barelementcorner",
+    "level": 2
+   },
+   "iconName": "Build_WoodCounterCorner"
+  },
+  {
+   "id": "kbw.vanilla.wood_barelementcorner_lvl1",
+   "displayName": "Wood Bar Element Corner (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_BarElementCorner_Lvl1",
+   "tooltipKey": "Tooltip_craft_barElementCornerDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_34",
+      "N": "carpentry_02_36",
+      "E": "carpentry_02_38",
+      "S": "carpentry_02_32"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_32"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.Wood_BarElementCorner_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_barelementcorner",
+    "name": "Wood Bar Element Corner",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_barelementcorner",
+    "level": 1
+   },
+   "iconName": "Build_WoodCounterCorner"
+  },
+  {
+   "id": "kbw.vanilla.wood_bookcase_lvl2",
+   "displayName": "Wood Bookcase",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_Bookcase_Lvl2",
+   "tooltipKey": "Tooltip_craft_bookcaseDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "furniture_shelving_01_42",
+      "N": "furniture_shelving_01_43",
+      "E": "furniture_shelving_01_41",
+      "S": "furniture_shelving_01_40"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_43"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_40"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.Wood_Bookcase_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_bookcase",
+    "name": "Wood Bookcase",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_bookcase",
+    "level": 2
+   },
+   "iconName": "Build_Bookcase"
+  },
+  {
+   "id": "kbw.vanilla.wood_bookcase_lvl1",
+   "displayName": "Wood Bookcase (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_Bookcase_Lvl1",
+   "tooltipKey": "Tooltip_craft_bookcaseDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_66",
+      "N": "carpentry_02_67",
+      "E": "carpentry_02_65",
+      "S": "carpentry_02_64"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_66"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_67"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_65"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_64"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.Wood_Bookcase_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_bookcase",
+    "name": "Wood Bookcase",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_bookcase",
+    "level": 1
+   },
+   "iconName": "Build_Bookcase"
+  },
+  {
+   "id": "kbw.vanilla.wood_chair_lvl3",
+   "displayName": "Wood Chair (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_Chair_Lvl3",
+   "tooltipKey": "Tooltip_craft_chairDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_01_44",
+      "N": "carpentry_01_46",
+      "E": "carpentry_01_45",
+      "W": "carpentry_01_47"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_47"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 6
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 60
+      }
+     },
+     "_b41Entity": "Base.Wood_Chair_Lvl3"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_chair",
+    "name": "Wood Chair",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_chair",
+    "level": 3
+   },
+   "iconName": "Build_Chair"
+  },
+  {
+   "id": "kbw.vanilla.wood_chair_lvl2",
+   "displayName": "Wood Chair (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_Chair_Lvl2",
+   "tooltipKey": "Tooltip_craft_chairDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_01_40",
+      "N": "carpentry_01_42",
+      "E": "carpentry_01_41",
+      "W": "carpentry_01_43"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.Wood_Chair_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_chair",
+    "name": "Wood Chair",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_chair",
+    "level": 2
+   },
+   "iconName": "Build_Chair"
+  },
+  {
+   "id": "kbw.vanilla.wood_chair_lvl1",
+   "displayName": "Wood Chair (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_Chair_Lvl1",
+   "tooltipKey": "Tooltip_craft_chairDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_01_36",
+      "N": "carpentry_01_37",
+      "E": "carpentry_01_38",
+      "W": "carpentry_01_39"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_39"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 1
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.Wood_Chair_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_chair",
+    "name": "Wood Chair",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_chair",
+    "level": 1
+   },
+   "iconName": "Build_Chair"
+  },
+  {
+   "id": "kbw.vanilla.wood_crate_lvl2",
+   "displayName": "Wood Crate",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_Crate_Lvl2",
+   "tooltipKey": "Tooltip_craft_crateDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_01_16"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_16"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 7
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 70
+      }
+     },
+     "_b41Entity": "Base.Wood_Crate_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_crate",
+    "name": "Wood Crate",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_crate",
+    "level": 2
+   },
+   "iconName": "Build_CrateWood"
+  },
+  {
+   "id": "kbw.vanilla.wood_crate_lvl1",
+   "displayName": "Wood Crate (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_Crate_Lvl1",
+   "tooltipKey": "Tooltip_craft_crateDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_01_19"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.Wood_Crate_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_crate",
+    "name": "Wood Crate",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_crate",
+    "level": 1
+   },
+   "iconName": "Build_CrateWood"
+  },
+  {
+   "id": "kbw.vanilla.wood_shelvesdouble_lvl1",
+   "displayName": "Wood Double Shelves (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_ShelvesDouble_Lvl1",
+   "tooltipKey": "Tooltip_craft_NeedsWallDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_05_38",
+      "N": "crafted_05_39",
+      "E": "crafted_05_37",
+      "S": "crafted_05_36"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_39"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "needToBeAgainstWall": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.Wood_ShelvesDouble_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_shelvesdouble",
+    "name": "Wood Double Shelves",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_shelvesdouble",
+    "level": 1
+   },
+   "iconName": "Build_ShelvesWood",
+   "_b41NeedsTilesets": [
+    "crafted_05"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.wood_shelves_lvl2",
+   "displayName": "Wood Shelves",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_Shelves_Lvl2",
+   "tooltipKey": "Tooltip_craft_NeedsWallDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_70",
+      "N": "carpentry_02_71",
+      "E": "carpentry_02_68",
+      "S": "carpentry_02_69"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_70"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_71"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_68"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_69"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "needToBeAgainstWall": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.Wood_Shelves_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_shelves",
+    "name": "Wood Shelves",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_shelves",
+    "level": 2
+   },
+   "iconName": "Build_ShelfWood"
+  },
+  {
+   "id": "kbw.vanilla.wood_shelves_lvl1",
+   "displayName": "Wood Shelves (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_Shelves_Lvl1",
+   "tooltipKey": "Tooltip_craft_NeedsWallDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_05_42",
+      "N": "crafted_05_43",
+      "E": "crafted_05_40",
+      "S": "crafted_05_41"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_43"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "needToBeAgainstWall": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.Wood_Shelves_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_shelves",
+    "name": "Wood Shelves",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_shelves",
+    "level": 1
+   },
+   "iconName": "Build_ShelfWood",
+   "_b41NeedsTilesets": [
+    "crafted_05"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.wood_bookcasesmall_lvl2",
+   "displayName": "Wood Small Bookcase",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_BookcaseSmall_Lvl2",
+   "tooltipKey": "Tooltip_craft_bookcaseDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "furniture_shelving_01_55",
+      "N": "furniture_shelving_01_51",
+      "E": "furniture_shelving_01_23",
+      "S": "furniture_shelving_01_19"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_55"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_51"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_23"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.Wood_BookcaseSmall_Lvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_bookcasesmall",
+    "name": "Wood Small Bookcase",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_bookcasesmall",
+    "level": 2
+   },
+   "iconName": "Build_BookcaseShort"
+  },
+  {
+   "id": "kbw.vanilla.wood_bookcasesmall_lvl1",
+   "displayName": "Wood Small Bookcase (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_BookcaseSmall_Lvl1",
+   "tooltipKey": "Tooltip_craft_bookcaseDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "crafted_05_51",
+      "N": "crafted_05_50",
+      "E": "crafted_05_139",
+      "S": "crafted_05_138"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_51"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_50"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_139"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "crafted_05_138"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.Wood_BookcaseSmall_Lvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_bookcasesmall",
+    "name": "Wood Small Bookcase",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_bookcasesmall",
+    "level": 1
+   },
+   "iconName": "Build_BookcaseShort",
+   "_b41NeedsTilesets": [
+    "crafted_05"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.wood_tablelvl3",
+   "displayName": "Wood Table (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_TableLvl3",
+   "tooltipKey": "Tooltip_craft_tableDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_01_32",
+      "E": "carpentry_01_35"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_32",
+            "carpentry_01_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_35"
+           ],
+           [
+            "carpentry_01_34"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWallHammer",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.Wood_TableLvl3"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_table",
+    "name": "Wood Table",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_table",
+    "level": 3
+   },
+   "iconName": "Build_TableLargeWood"
+  },
+  {
+   "id": "kbw.vanilla.wood_tablelvl2",
+   "displayName": "Wood Table (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_TableLvl2",
+   "tooltipKey": "Tooltip_craft_tableDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_01_28",
+      "E": "carpentry_01_31"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_28",
+            "carpentry_01_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_31"
+           ],
+           [
+            "carpentry_01_30"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWallHammer",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.Wood_TableLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_table",
+    "name": "Wood Table",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_table",
+    "level": 2
+   },
+   "iconName": "Build_TableLargeWood"
+  },
+  {
+   "id": "kbw.vanilla.wood_tablelvl1",
+   "displayName": "Wood Table (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_TableLvl1",
+   "tooltipKey": "Tooltip_craft_tableDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_01_24",
+      "E": "carpentry_01_27"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_24",
+            "carpentry_01_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_27"
+           ],
+           [
+            "carpentry_01_26"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 1
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWallHammer",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.Wood_TableLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_table",
+    "name": "Wood Table",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_table",
+    "level": 1
+   },
+   "iconName": "Build_TableLargeWood"
+  },
+  {
+   "id": "kbw.vanilla.wood_tabledrawerlvl2",
+   "displayName": "Wood Table with Drawer",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_TableDrawerLvl2",
+   "tooltipKey": "Tooltip_craft_tableDrawerDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_02_5",
+      "E": "carpentry_02_7",
+      "N": "carpentry_02_6",
+      "W": "carpentry_02_4"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_7"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_4"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 40
+      }
+     },
+     "_b41Entity": "Base.Wood_TableDrawerLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_tabledrawer",
+    "name": "Wood Table with Drawer",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_tabledrawer",
+    "level": 2
+   },
+   "iconName": "Build_Sidetable"
+  },
+  {
+   "id": "kbw.vanilla.wood_tabledrawerlvl3",
+   "displayName": "Wood Table with Drawer (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_TableDrawerLvl3",
+   "tooltipKey": "Tooltip_craft_tableDrawerDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_02_9",
+      "E": "carpentry_02_11",
+      "N": "carpentry_02_10",
+      "W": "carpentry_02_8"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_11"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_8"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 6
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 60
+      }
+     },
+     "_b41Entity": "Base.Wood_TableDrawerLvl3"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_tabledrawer",
+    "name": "Wood Table with Drawer",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_tabledrawer",
+    "level": 3
+   },
+   "iconName": "Build_Sidetable"
+  },
+  {
+   "id": "kbw.vanilla.wood_tabledrawerlvl1",
+   "displayName": "Wood Table with Drawer (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_Wood_TableDrawerLvl1",
+   "tooltipKey": "Tooltip_craft_tableDrawerDesc",
+   "category": "Furniture",
+   "subcategory": "Furniture",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "furniture"
+   ],
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "S": "carpentry_02_1",
+      "E": "carpentry_02_3",
+      "N": "carpentry_02_2",
+      "W": "carpentry_02_0"
+     },
+     "geometry": {
+      "faces": {
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_0"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureSmall",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.Wood_TableDrawerLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wood_tabledrawer",
+    "name": "Wood Table with Drawer",
+    "translationKey": "IGUI_KBW_Group_vanilla_wood_tabledrawer",
+    "level": 1
+   },
+   "iconName": "Build_Sidetable"
+  }
+ ]
+}

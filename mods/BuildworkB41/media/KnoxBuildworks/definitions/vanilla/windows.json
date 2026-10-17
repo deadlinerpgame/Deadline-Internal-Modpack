@@ -1,0 +1,1358 @@
+{
+ "schemaVersion": 1,
+ "source": "Project Zomboid Build 42 generated entity scripts",
+ "category": "Windows",
+ "buildables": [
+  {
+   "id": "kbw.vanilla.brickwindowframelvl2",
+   "displayName": "Classic Brick Window Frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_classic_brick_window_frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_classic_brick_classic_brick_window_frame",
+   "category": "Windows",
+   "subcategory": "Window Frames",
+   "materialTags": [
+    "Brick",
+    "Concrete"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "windows"
+   ],
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.brick.window_frame",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintLightBrown": {
+       "W": "walls_exterior_house_02_44",
+       "N": "walls_exterior_house_02_45"
+      },
+      "PaintBlue": {
+       "W": "walls_exterior_house_01_8",
+       "N": "walls_exterior_house_01_9"
+      },
+      "PaintBrown": {
+       "W": "walls_exterior_house_02_104",
+       "N": "walls_exterior_house_02_105"
+      },
+      "PaintGreen": {
+       "W": "walls_exterior_house_02_60",
+       "N": "walls_exterior_house_02_61"
+      },
+      "PaintGrey": {
+       "W": "walls_exterior_house_02_24",
+       "N": "walls_exterior_house_02_25"
+      },
+      "PaintPink": {
+       "W": "walls_exterior_house_01_12",
+       "N": "walls_exterior_house_01_13"
+      },
+      "PaintRed": {
+       "W": "walls_exterior_house_02_72",
+       "N": "walls_exterior_house_02_73"
+      },
+      "PaintWhite": {
+       "W": "walls_exterior_house_02_56",
+       "N": "walls_exterior_house_02_57"
+      },
+      "PaintWhite+PaintYellow": {
+       "W": "walls_exterior_house_02_88",
+       "N": "walls_exterior_house_02_89"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_house_01_24",
+      "walls_exterior_house_01_25"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "base:masonstrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "base:concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Masonry": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Masonry": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     },
+     "level": 1
+    }
+   ],
+   "group": {
+    "id": "vanilla.brickwindowframe",
+    "name": "Brick Window Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_brickwindowframe",
+    "level": 2
+   },
+   "iconName": "Build_WindowframeBrick",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_01_24",
+   "variants": [
+    {
+     "id": "vanilla",
+     "labelKey": "IGUI_KBW_Variant_BrickVanilla",
+     "iconSprite": "walls_exterior_house_01_12",
+     "stages": [
+      {
+       "id": "built",
+       "level": 1,
+       "entityCompat": {
+        "module": "Base",
+        "entity": "BrickWindowFrameLvl2"
+       }
+      }
+     ]
+    },
+    {
+     "id": "old_weathered",
+     "labelKey": "IGUI_KBWVE_Variant_BrickOldWeathered",
+     "iconSprite": "walls_exterior_house_01_60",
+     "stages": [
+      {
+       "id": "built",
+       "geometry": {
+        "faces": {
+         "W": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_exterior_house_01_60"
+             ]
+            ]
+           }
+          ]
+         },
+         "N": {
+          "layers": [
+           {
+            "rows": [
+             [
+              "walls_exterior_house_01_61"
+             ]
+            ]
+           }
+          ]
+         }
+        }
+       },
+       "requirements": {
+        "inputs": [
+         {
+          "id": "tool_masons_trowel",
+          "role": "tool",
+          "mode": "keep",
+          "resourceType": "Item",
+          "tags": [
+           "base:masonstrowel"
+          ],
+          "amount": 1,
+          "flags": [
+           "Prop1",
+           "MayDegradeLight"
+          ]
+         },
+         {
+          "id": "mortar",
+          "role": "consumable",
+          "mode": "drain",
+          "resourceType": "Item",
+          "tags": [
+           "base:concrete"
+          ],
+          "amount": 1,
+          "uses": 2
+         },
+         {
+          "id": "masonry_units",
+          "role": "material",
+          "mode": "consume",
+          "resourceType": "Item",
+          "items": [
+           "Base.ClayBrick"
+          ],
+          "amount": 5
+         }
+        ],
+        "skills": {
+         "Masonry": 2
+        }
+       },
+       "construction": {
+        "time": 200,
+        "timedAction": "BuildWallNoTool",
+        "completionSound": "BuildWoodenStructureLarge",
+        "xp": {
+         "Masonry": 20
+        },
+        "category": "Masonry"
+       },
+       "object": {
+        "isThumpable": true,
+        "hoppable": true,
+        "canBarricade": true
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanilla.brickwindowframelvl1",
+   "displayName": "Brick Window Frame (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_BrickWindowFrameLvl1",
+   "tooltipKey": "Tooltip_craft_woodenFrameDesc",
+   "category": "Windows",
+   "subcategory": "Window Frames",
+   "materialTags": [
+    "Brick",
+    "Concrete"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "windows"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_exterior_house_01_28",
+      "N": "walls_exterior_house_01_29"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_29"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "bonusHealth": 400,
+     "object": {
+      "pillarSprite": "walls_exterior_house_01_23"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "tags": [
+         "Concrete"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.ClayBrick"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Masonry",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.BrickWindowFrameLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.brickwindowframe",
+    "name": "Brick Window Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_brickwindowframe",
+    "level": 1
+   },
+   "iconName": "Build_WindowframeBrick",
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanilla.logwindowframelvl1",
+   "displayName": "Log Window Frame (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_LogWindowFrameLvl1",
+   "tooltipKey": "Tooltip_craft_woodenFrameDesc",
+   "category": "Windows",
+   "subcategory": "Window Frames",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "windows"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_logs_48",
+      "N": "walls_logs_49"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_49"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 500,
+     "skillBaseHealth": 50,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.LogWindowFrameLvl1"
+    }
+   ],
+   "iconName": "Build_WindowframeLogs",
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.metalwindowframelvl2",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Window Frame",
+   "translationKey": "IGUI_KBW_Vanilla_MetalWindowFrameLvl2",
+   "tooltipKey": "Tooltip_craft_NeedsWallframeDesc",
+   "category": "Windows",
+   "subcategory": "Window Frames",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "windows"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_56",
+      "N": "constructedobjects_01_57"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_56"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_57"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "bonusHealth": 400,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 50
+      }
+     },
+     "_b41Entity": "Base.MetalWindowFrameLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metalwindowframe",
+    "name": "Metal Window Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_metalwindowframe",
+    "level": 2
+   },
+   "iconName": "Build_WindowframeMetal"
+  },
+  {
+   "id": "kbw.vanilla.metalwindowframelvl1",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Window Frame (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_MetalWindowFrameLvl1",
+   "tooltipKey": "Tooltip_craft_NeedsWallframeDesc",
+   "category": "Windows",
+   "subcategory": "Window Frames",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "windows"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_72",
+      "N": "constructedobjects_01_73"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_72"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_73"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "bonusHealth": 400,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalWindowFrameLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metalwindowframe",
+    "name": "Metal Window Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_metalwindowframe",
+    "level": 1
+   },
+   "iconName": "Build_WindowframeMetal"
+  },
+  {
+   "id": "kbw.vanilla.stonewindowframe",
+   "displayName": "Stone Window Frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_window_frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_grey_stone_grey_stone_window_frame",
+   "category": "Windows",
+   "subcategory": "Window Frames",
+   "materialTags": [
+    "Concrete",
+    "Stone"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "windows"
+   ],
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_02_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_02_9"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "base:masonstrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "base:concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 5
+       }
+      ],
+      "skills": {
+       "Masonry": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Masonry": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     },
+     "level": 1
+    }
+   ],
+   "iconName": "Build_WindowframeStone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_house_02_8",
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.window_frame",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_house_02_8",
+       "N": "walls_exterior_house_02_9"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_house_02_12",
+       "N": "walls_exterior_house_02_13"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_house_02_8",
+      "walls_exterior_house_02_9"
+     ]
+    }
+   },
+   "variants": [
+    {
+     "id": "vanilla",
+     "labelKey": "IGUI_KBW_Variant_StoneVanilla",
+     "iconSprite": "walls_logs_104",
+     "stages": [
+      {
+       "id": "built",
+       "level": 1,
+       "entityCompat": {
+        "module": "Base",
+        "entity": "StoneWindowFrame"
+       }
+      }
+     ]
+    }
+   ],
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.woodenwindowframelvl3",
+   "displayName": "Wooden Panel Window Frame",
+   "translationKey": "IGUI_KBWVE_Buildable_Extended_WoodenPanelWindowFrame",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Windows",
+   "subcategory": "Window Frames",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "windows"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.extended.wall_frame",
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ],
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     },
+     "level": 1
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodenwindowframe",
+    "name": "Wood Window Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodenwindowframe",
+    "level": 3
+   },
+   "iconName": "Build_WindowframeWood",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_wooden_01_32",
+   "finishes": {
+    "enabled": true,
+    "surface": {
+     "canPlaster": true,
+     "canPaint": true,
+     "canWallpaper": true
+    }
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanilla.woodenwindowframelvl2",
+   "displayName": "Wood Window Frame (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodenWindowFrameLvl2",
+   "tooltipKey": "Tooltip_craft_NeedsWallframeDesc",
+   "category": "Windows",
+   "subcategory": "Window Frames",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "windows"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_exterior_wooden_01_48",
+      "N": "walls_exterior_wooden_01_49"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_49"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 550,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 40
+      }
+     },
+     "_b41Entity": "Base.WoodenWindowFrameLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodenwindowframe",
+    "name": "Wood Window Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodenwindowframe",
+    "level": 2
+   },
+   "iconName": "Build_WindowframeWood"
+  },
+  {
+   "id": "kbw.vanilla.woodenwindowframelvl1",
+   "displayName": "Wood Window Frame (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodenWindowFrameLvl1",
+   "tooltipKey": "Tooltip_craft_NeedsWallframeDesc",
+   "category": "Windows",
+   "subcategory": "Window Frames",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "windows"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_exterior_wooden_01_52",
+      "N": "walls_exterior_wooden_01_53"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_53"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 450,
+     "skillBaseHealth": 20,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.WoodenWindowFrameLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodenwindowframe",
+    "name": "Wood Window Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodenwindowframe",
+    "level": 1
+   },
+   "iconName": "Build_WindowframeWood"
+  },
+  {
+   "id": "kbw.vanilla.wooden_windows",
+   "displayName": "Wooden Windows",
+   "translationKey": "IGUI_KBW_Vanilla_Wooden_Windows",
+   "tooltipKey": "Tooltip_craft_WindowDesc",
+   "category": "Windows",
+   "subcategory": "Windows",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "windows"
+   ],
+   "placement": {
+    "kind": "object",
+    "needWindowFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fixtures_windows_01_0",
+      "N": "fixtures_windows_01_1"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "needWindowFrame": true,
+      "onCreate": "BuildRecipeCode.windowGlass.OnCreate"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.GlassPanel"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "category": "Furniture",
+      "xp": {
+       "Woodwork": 15
+      }
+     },
+     "_b41Entity": "Base.Wooden_Windows"
+    }
+   ],
+   "iconName": "Build_WindowBlack"
+  }
+ ]
+}

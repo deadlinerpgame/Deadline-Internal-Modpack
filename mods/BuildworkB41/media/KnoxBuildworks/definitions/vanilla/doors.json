@@ -1,0 +1,2058 @@
+{
+ "schemaVersion": 1,
+ "source": "Project Zomboid Build 42 generated entity scripts",
+ "category": "Doors",
+ "buildables": [
+  {
+   "id": "kbw.vanilla.brickdoorframelvl2",
+   "displayName": "Brick Door Frame (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_BrickDoorFrameLvl2",
+   "tooltipKey": "Tooltip_craft_doorFrameDesc",
+   "category": "Doors",
+   "subcategory": "Door Frames",
+   "materialTags": [
+    "Brick",
+    "Concrete"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_exterior_house_01_14",
+      "N": "walls_exterior_house_01_15"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "pillarSprite": "walls_exterior_house_01_7",
+      "isThumpable": false,
+      "onIsValid": "BuildRecipeCode.doorFrame.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "tags": [
+         "Concrete"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.ClayBrick"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Masonry",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.BrickDoorFrameLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.brickdoorframe",
+    "name": "Brick Door Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_brickdoorframe",
+    "level": 2
+   },
+   "iconName": "Build_DoorframeBrick"
+  },
+  {
+   "id": "kbw.vanilla.brickdoorframelvl1",
+   "displayName": "Brick Door Frame (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_BrickDoorFrameLvl1",
+   "tooltipKey": "Tooltip_craft_doorFrameDesc",
+   "category": "Doors",
+   "subcategory": "Door Frames",
+   "materialTags": [
+    "Brick",
+    "Concrete"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_exterior_house_01_30",
+      "N": "walls_exterior_house_01_31"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_01_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "pillarSprite": "walls_exterior_house_01_7",
+      "isThumpable": false,
+      "onIsValid": "BuildRecipeCode.doorFrame.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "tags": [
+         "Concrete"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.ClayBrick"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Masonry",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.BrickDoorFrameLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.brickdoorframe",
+    "name": "Brick Door Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_brickdoorframe",
+    "level": 1
+   },
+   "iconName": "Build_DoorframeBrick",
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanilla.logdoorframelvl1",
+   "displayName": "Log Door Frame (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_LogDoorFrameLvl1",
+   "tooltipKey": "Tooltip_craft_doorFrameDesc",
+   "category": "Doors",
+   "subcategory": "Door Frames",
+   "materialTags": [
+    "Cloth",
+    "Fiber",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_logs_50",
+      "N": "walls_logs_51"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_50"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "health": 500,
+     "skillBaseHealth": 50,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27",
+      "isThumpable": false,
+      "onIsValid": "BuildRecipeCode.doorFrame.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.Log"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.RippedSheets",
+         "Base.RippedSheetsDirty",
+         "Base.Twine",
+         "Base.Rope",
+         "Base.SheetRope"
+        ],
+        "flags": [
+         "DontReplace"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.LogDoorFrameLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.logdoorframe",
+    "name": "Log Door Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_logdoorframe",
+    "level": 1
+   },
+   "iconName": "Build_DoorframeLogs",
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.metaldoorframelvl2",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Door Frame (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_MetalDoorFrameLvl2",
+   "tooltipKey": "Tooltip_craft_doorFrameMetalDesc",
+   "category": "Doors",
+   "subcategory": "Door Frames",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_58",
+      "N": "constructedobjects_01_59"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_59"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27",
+      "isThumpable": false,
+      "onIsValid": "BuildRecipeCode.doorFrame.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.MetalBar"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 50
+      }
+     },
+     "_b41Entity": "Base.MetalDoorFrameLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metaldoorframe",
+    "name": "Metal Door Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_metaldoorframe",
+    "level": 2
+   },
+   "iconName": "Build_DoorframeMetal"
+  },
+  {
+   "id": "kbw.vanilla.metaldoorframelvl1",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Door Frame (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_MetalDoorFrameLvl1",
+   "tooltipKey": "Tooltip_craft_doorFrameMetalDesc",
+   "category": "Doors",
+   "subcategory": "Door Frames",
+   "materialTags": [
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_74",
+      "N": "constructedobjects_01_75"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_74"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_75"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27",
+      "isThumpable": false,
+      "onIsValid": "BuildRecipeCode.doorFrame.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.MetalBar"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalDoorFrameLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metaldoorframe",
+    "name": "Metal Door Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_metaldoorframe",
+    "level": 1
+   },
+   "iconName": "Build_DoorframeMetal"
+  },
+  {
+   "id": "kbw.vanilla.stonedoorframe",
+   "displayName": "Stone Door Frame",
+   "translationKey": "IGUI_KBW_Vanilla_StoneDoorFrame",
+   "tooltipKey": "Tooltip_craft_doorFrameDesc",
+   "category": "Doors",
+   "subcategory": "Door Frames",
+   "materialTags": [
+    "Concrete",
+    "Stone"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_logs_106",
+      "N": "walls_logs_107"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_106"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_logs_107"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "pillarSprite": "walls_logs_99",
+      "isThumpable": false,
+      "onIsValid": "BuildRecipeCode.doorFrame.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "tags": [
+         "Concrete"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Stone2"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "category": "Masonry",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.StoneDoorFrame"
+    }
+   ],
+   "iconName": "Build_DoorframeStone",
+   "_b41NeedsTilesets": [
+    "walls_logs"
+   ]
+  },
+  {
+   "id": "kbw.vanilla.wooddoorframelvl3",
+   "displayName": "Wood Door Frame (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodDoorFrameLvl3",
+   "tooltipKey": "Tooltip_craft_doorFrameDesc",
+   "category": "Doors",
+   "subcategory": "Door Frames",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_exterior_wooden_01_34",
+      "N": "walls_exterior_wooden_01_35"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27",
+      "isThumpable": false,
+      "onCreate": "BuildRecipeCode.canBePlastered.OnCreate",
+      "onIsValid": "BuildRecipeCode.doorFrame.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 6
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 60
+      }
+     },
+     "_b41Entity": "Base.WoodDoorFrameLvl3"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wooddoorframe",
+    "name": "Wood Door Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_wooddoorframe",
+    "level": 3
+   },
+   "iconName": "Build_DoorframeWood"
+  },
+  {
+   "id": "kbw.vanilla.wooddoorframelvl2",
+   "displayName": "Wood Door Frame (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodDoorFrameLvl2",
+   "tooltipKey": "Tooltip_craft_doorFrameDesc",
+   "category": "Doors",
+   "subcategory": "Door Frames",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_exterior_wooden_01_50",
+      "N": "walls_exterior_wooden_01_51"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_50"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27",
+      "isThumpable": false,
+      "onIsValid": "BuildRecipeCode.doorFrame.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 40
+      }
+     },
+     "_b41Entity": "Base.WoodDoorFrameLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wooddoorframe",
+    "name": "Wood Door Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_wooddoorframe",
+    "level": 2
+   },
+   "iconName": "Build_DoorframeWood"
+  },
+  {
+   "id": "kbw.vanilla.wooddoorframelvl1",
+   "displayName": "Wood Door Frame (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodDoorFrameLvl1",
+   "tooltipKey": "Tooltip_craft_doorFrameDesc",
+   "category": "Doors",
+   "subcategory": "Door Frames",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "walls_exterior_wooden_01_54",
+      "N": "walls_exterior_wooden_01_55"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "pillarSprite": "walls_exterior_wooden_01_27",
+      "isThumpable": false,
+      "onIsValid": "BuildRecipeCode.doorFrame.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.WoodDoorFrameLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.wooddoorframe",
+    "name": "Wood Door Frame",
+    "translationKey": "IGUI_KBW_Group_vanilla_wooddoorframe",
+    "level": 1
+   },
+   "iconName": "Build_DoorframeWood"
+  },
+  {
+   "id": "kbw.vanilla.doubledoor",
+   "displayName": "Double Door",
+   "translationKey": "IGUI_KBW_Vanilla_DoubleDoor",
+   "tooltipKey": "Tooltip_craft_doubleWoodenDoorDesc",
+   "category": "Doors",
+   "subcategory": "Doors",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fixtures_doors_fences_01_97",
+      "N": "fixtures_doors_fences_01_98"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_97"
+           ],
+           [
+            "fixtures_doors_fences_01_96"
+           ],
+           [
+            "fixtures_doors_fences_01_105"
+           ],
+           [
+            "fixtures_doors_fences_01_104"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_fences_01_98",
+            "fixtures_doors_fences_01_99",
+            "fixtures_doors_fences_01_106",
+            "fixtures_doors_fences_01_107"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "object": {
+      "dontNeedFrame": true
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 8,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 8,
+        "items": [
+         "Base.Nails"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Doorknob"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 40
+      }
+     },
+     "_b41Entity": "Base.DoubleDoor"
+    }
+   ],
+   "iconName": "Build_DoubleWoodGate"
+  },
+  {
+   "id": "kbw.vanilla.metaldoorlvl2",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Door (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_MetalDoorLvl2",
+   "tooltipKey": "Tooltip_craft_metalDoorDesc",
+   "category": "Doors",
+   "subcategory": "Doors",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fixtures_doors_01_52",
+      "N": "fixtures_doors_01_53"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_01_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_01_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "W_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_01_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "N_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_01_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Doorknob"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalDoorLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metaldoor",
+    "name": "Metal Door",
+    "translationKey": "IGUI_KBW_Group_vanilla_metaldoor",
+    "level": 2
+   },
+   "iconName": "Build_DoorMetal"
+  },
+  {
+   "id": "kbw.vanilla.metaldoorlvl1",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Door (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_MetalDoorLvl1",
+   "tooltipKey": "Tooltip_craft_metalDoorDesc",
+   "category": "Doors",
+   "subcategory": "Doors",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "fixtures_doors_01_68",
+      "N": "fixtures_doors_01_69"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_01_68"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_01_69"
+           ]
+          ]
+         }
+        ]
+       },
+       "W_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_01_70"
+           ]
+          ]
+         }
+        ]
+       },
+       "N_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_doors_01_71"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 3,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Doorknob"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 30
+      }
+     },
+     "_b41Entity": "Base.MetalDoorLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metaldoor",
+    "name": "Metal Door",
+    "translationKey": "IGUI_KBW_Group_vanilla_metaldoor",
+    "level": 1
+   },
+   "iconName": "Build_DoorWeldedMetal"
+  },
+  {
+   "id": "kbw.vanilla.woodendoorlvl3",
+   "displayName": "Wood Door (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodenDoorLvl3",
+   "tooltipKey": "Tooltip_craft_woodenDoorDesc",
+   "category": "Doors",
+   "subcategory": "Doors",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_01_56",
+      "N": "carpentry_01_57"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_56"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_57"
+           ]
+          ]
+         }
+        ]
+       },
+       "W_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "N_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_59"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Doorknob"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 7
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 70
+      }
+     },
+     "_b41Entity": "Base.WoodenDoorLvl3"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodendoor",
+    "name": "Wood Door",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodendoor",
+    "level": 3
+   },
+   "iconName": "Build_DoorWood"
+  },
+  {
+   "id": "kbw.vanilla.woodendoorlvl2",
+   "displayName": "Wood Door (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodenDoorLvl2",
+   "tooltipKey": "Tooltip_craft_woodenDoorDesc",
+   "category": "Doors",
+   "subcategory": "Doors",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_01_52",
+      "N": "carpentry_01_53"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "W_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "N_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Doorknob"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 50
+      }
+     },
+     "_b41Entity": "Base.WoodenDoorLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodendoor",
+    "name": "Wood Door",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodendoor",
+    "level": 2
+   },
+   "iconName": "Build_DoorWood"
+  },
+  {
+   "id": "kbw.vanilla.woodendoorlvl1",
+   "displayName": "Wood Door (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodenDoorLvl1",
+   "tooltipKey": "Tooltip_craft_woodenDoorDesc",
+   "category": "Doors",
+   "subcategory": "Doors",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "doors"
+   ],
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_01_48",
+      "N": "carpentry_01_49"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "W_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_50"
+           ]
+          ]
+         }
+        ]
+       },
+       "N_OPEN": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_01_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "skillBaseHealth": 300,
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.Nails"
+        ]
+       },
+       {
+        "id": "input_4",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 2,
+        "items": [
+         "Base.Hinge"
+        ]
+       },
+       {
+        "id": "input_5",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Doorknob"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 30
+      }
+     },
+     "_b41Entity": "Base.WoodenDoorLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodendoor",
+    "name": "Wood Door",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodendoor",
+    "level": 1
+   },
+   "iconName": "Build_DoorWood"
+  }
+ ]
+}

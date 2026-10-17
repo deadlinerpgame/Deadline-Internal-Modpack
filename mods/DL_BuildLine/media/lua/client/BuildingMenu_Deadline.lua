@@ -867,7 +867,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -881,7 +881,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -895,7 +895,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -909,7 +909,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -923,7 +923,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -937,7 +937,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -951,7 +951,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -965,7 +965,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -979,7 +979,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -993,7 +993,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1007,7 +1007,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1021,7 +1021,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1035,7 +1035,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1049,7 +1049,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1063,7 +1063,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1077,7 +1077,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1091,7 +1091,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1105,7 +1105,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1119,7 +1119,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1133,7 +1133,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1147,7 +1147,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1161,7 +1161,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1175,7 +1175,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1189,7 +1189,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1203,7 +1203,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1217,7 +1217,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -1231,7 +1231,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -2798,7 +2798,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWall_Name",
                     "Tooltip_SurvivalLogWall_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2819,7 +2819,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallCorner_Name",
                     "Tooltip_SurvivalLogWallCorner_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2838,7 +2838,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallPillar_Name",
                     "Tooltip_SurvivalLogWallPillar_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2856,7 +2856,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallPillar_Name",
                     "Tooltip_SurvivalLogWallPillar_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2875,7 +2875,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWall_Name",
                     "Tooltip_SurvivalLogWall_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2894,7 +2894,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallDoor_Name",
                     "Tooltip_SurvivalLogWallDoor_Desc",
                     BuildingMenu.onBuildDoorFrame,
-                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2910,7 +2910,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallWindow_Name",
                     "Tooltip_SurvivalLogWallWindow_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalBigLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalBigLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
@@ -2929,7 +2929,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -2943,7 +2943,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -2957,7 +2957,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -2971,7 +2971,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -2985,7 +2985,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -2999,7 +2999,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -3013,7 +3013,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -3027,7 +3027,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -3041,7 +3041,7 @@ local function addDeadlineWallsToMenu()
                     "Tooltip_SurvivalLogWallRoofSlope_Name",
                     "Tooltip_SurvivalLogWallRoofSlope_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SurvivalSmallLogWallLevel6Recipe,
+                    BuildingMenu.SurvivalSmallLogWallLevel0Recipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureSmall",
@@ -4436,7 +4436,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4450,7 +4450,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4464,7 +4464,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4478,7 +4478,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4492,7 +4492,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4506,7 +4506,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4520,7 +4520,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4534,7 +4534,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4548,7 +4548,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4562,7 +4562,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4576,7 +4576,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4590,7 +4590,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4604,7 +4604,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4618,7 +4618,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4632,7 +4632,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4646,7 +4646,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4660,7 +4660,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4674,7 +4674,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4688,7 +4688,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4702,7 +4702,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4716,7 +4716,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4730,7 +4730,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4744,7 +4744,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4758,7 +4758,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4772,7 +4772,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4786,7 +4786,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -4800,7 +4800,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5457,7 +5457,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5471,7 +5471,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5485,7 +5485,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5499,7 +5499,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5513,7 +5513,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5527,7 +5527,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5541,7 +5541,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5555,7 +5555,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5569,7 +5569,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5583,7 +5583,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5597,7 +5597,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5611,7 +5611,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5625,7 +5625,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5639,7 +5639,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5653,7 +5653,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5667,7 +5667,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5681,7 +5681,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5695,7 +5695,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5709,7 +5709,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5723,7 +5723,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5737,7 +5737,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5751,7 +5751,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5765,7 +5765,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5779,7 +5779,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5793,7 +5793,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5807,7 +5807,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -5821,7 +5821,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6478,7 +6478,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6492,7 +6492,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6506,7 +6506,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6520,7 +6520,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6534,7 +6534,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6548,7 +6548,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6562,7 +6562,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6576,7 +6576,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6590,7 +6590,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6604,7 +6604,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6618,7 +6618,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6632,7 +6632,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6646,7 +6646,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6660,7 +6660,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6674,7 +6674,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6688,7 +6688,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6702,7 +6702,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6716,7 +6716,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6730,7 +6730,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6744,7 +6744,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6758,7 +6758,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6772,7 +6772,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6786,7 +6786,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6800,7 +6800,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6814,7 +6814,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6828,7 +6828,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -6842,7 +6842,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7499,7 +7499,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7513,7 +7513,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7527,7 +7527,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7541,7 +7541,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7555,7 +7555,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7569,7 +7569,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7583,7 +7583,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7597,7 +7597,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7611,7 +7611,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7625,7 +7625,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7639,7 +7639,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7653,7 +7653,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7667,7 +7667,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7681,7 +7681,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7695,7 +7695,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7709,7 +7709,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7723,7 +7723,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7737,7 +7737,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7751,7 +7751,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7765,7 +7765,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7779,7 +7779,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7793,7 +7793,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7807,7 +7807,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7821,7 +7821,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7835,7 +7835,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7849,7 +7849,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -7863,7 +7863,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8520,7 +8520,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8534,7 +8534,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8548,7 +8548,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8562,7 +8562,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8576,7 +8576,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8590,7 +8590,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8604,7 +8604,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8618,7 +8618,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8632,7 +8632,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8646,7 +8646,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8660,7 +8660,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8674,7 +8674,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8688,7 +8688,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8702,7 +8702,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8716,7 +8716,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8730,7 +8730,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8744,7 +8744,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8758,7 +8758,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8772,7 +8772,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8786,7 +8786,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8800,7 +8800,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8814,7 +8814,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8828,7 +8828,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8842,7 +8842,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8856,7 +8856,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8870,7 +8870,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -8884,7 +8884,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9541,7 +9541,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9555,7 +9555,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9569,7 +9569,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9583,7 +9583,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9597,7 +9597,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9611,7 +9611,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9625,7 +9625,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9639,7 +9639,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9653,7 +9653,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9667,7 +9667,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9681,7 +9681,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9695,7 +9695,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9709,7 +9709,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9723,7 +9723,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9737,7 +9737,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9751,7 +9751,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9765,7 +9765,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9779,7 +9779,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9793,7 +9793,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9807,7 +9807,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9821,7 +9821,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9835,7 +9835,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9849,7 +9849,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9863,7 +9863,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9877,7 +9877,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9891,7 +9891,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -9905,7 +9905,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14079,7 +14079,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14093,7 +14093,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14107,7 +14107,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14121,7 +14121,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14135,7 +14135,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14149,7 +14149,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14163,7 +14163,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14177,7 +14177,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14191,7 +14191,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14205,7 +14205,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14219,7 +14219,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14233,7 +14233,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14247,7 +14247,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14261,7 +14261,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14275,7 +14275,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14289,7 +14289,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14303,7 +14303,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14317,7 +14317,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14331,7 +14331,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14345,7 +14345,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14359,7 +14359,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14373,7 +14373,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14387,7 +14387,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14401,7 +14401,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14415,7 +14415,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14429,7 +14429,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -14443,7 +14443,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16121,7 +16121,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16135,7 +16135,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16149,7 +16149,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16163,7 +16163,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16177,7 +16177,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16191,7 +16191,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16205,7 +16205,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16219,7 +16219,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16233,7 +16233,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16247,7 +16247,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16261,7 +16261,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16275,7 +16275,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16289,7 +16289,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16303,7 +16303,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16317,7 +16317,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16331,7 +16331,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16345,7 +16345,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16359,7 +16359,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16373,7 +16373,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16387,7 +16387,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16401,7 +16401,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16415,7 +16415,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16429,7 +16429,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16443,7 +16443,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16457,7 +16457,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16471,7 +16471,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -16485,7 +16485,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17142,7 +17142,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17156,7 +17156,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17170,7 +17170,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17184,7 +17184,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17198,7 +17198,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17212,7 +17212,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17226,7 +17226,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17240,7 +17240,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17254,7 +17254,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17268,7 +17268,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17282,7 +17282,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17296,7 +17296,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17310,7 +17310,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17324,7 +17324,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17338,7 +17338,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17352,7 +17352,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17366,7 +17366,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17380,7 +17380,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17394,7 +17394,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17408,7 +17408,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17422,7 +17422,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17436,7 +17436,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17450,7 +17450,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17464,7 +17464,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17478,7 +17478,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17492,7 +17492,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -17506,7 +17506,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18163,7 +18163,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18177,7 +18177,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18191,7 +18191,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18205,7 +18205,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18219,7 +18219,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18233,7 +18233,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18247,7 +18247,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18261,7 +18261,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18275,7 +18275,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18289,7 +18289,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18303,7 +18303,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18317,7 +18317,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18331,7 +18331,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18345,7 +18345,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18359,7 +18359,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18373,7 +18373,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18387,7 +18387,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18401,7 +18401,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18415,7 +18415,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18429,7 +18429,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18443,7 +18443,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18457,7 +18457,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18471,7 +18471,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18485,7 +18485,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18499,7 +18499,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18513,7 +18513,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -18527,7 +18527,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19184,7 +19184,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19198,7 +19198,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19212,7 +19212,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19226,7 +19226,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19240,7 +19240,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19254,7 +19254,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19268,7 +19268,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19282,7 +19282,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19296,7 +19296,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19310,7 +19310,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19324,7 +19324,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19338,7 +19338,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19352,7 +19352,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19366,7 +19366,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19380,7 +19380,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19394,7 +19394,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19408,7 +19408,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19422,7 +19422,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19436,7 +19436,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19450,7 +19450,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19464,7 +19464,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19478,7 +19478,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19492,7 +19492,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19506,7 +19506,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19520,7 +19520,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19534,7 +19534,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -19548,7 +19548,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20205,7 +20205,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20219,7 +20219,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20233,7 +20233,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20247,7 +20247,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20261,7 +20261,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20275,7 +20275,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20289,7 +20289,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20303,7 +20303,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20317,7 +20317,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20331,7 +20331,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20345,7 +20345,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20359,7 +20359,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20373,7 +20373,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20387,7 +20387,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20401,7 +20401,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20415,7 +20415,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20429,7 +20429,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20443,7 +20443,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20457,7 +20457,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20471,7 +20471,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20485,7 +20485,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20499,7 +20499,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20513,7 +20513,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20527,7 +20527,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20541,7 +20541,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20555,7 +20555,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -20569,7 +20569,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21226,7 +21226,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21240,7 +21240,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21254,7 +21254,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21268,7 +21268,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21282,7 +21282,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21296,7 +21296,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21310,7 +21310,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21324,7 +21324,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21338,7 +21338,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21352,7 +21352,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21366,7 +21366,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21380,7 +21380,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21394,7 +21394,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21408,7 +21408,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21422,7 +21422,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21436,7 +21436,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21450,7 +21450,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21464,7 +21464,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21478,7 +21478,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21492,7 +21492,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21506,7 +21506,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21520,7 +21520,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21534,7 +21534,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21548,7 +21548,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21562,7 +21562,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21576,7 +21576,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21590,7 +21590,7 @@ local function addDeadlineWallsToMenu()
             "Tooltip_WallRoofSlope_Name",
             "Tooltip_WallRoofSlope_Desc",
             BuildingMenu.onBuildWall,
-            BuildingMenu.SmallWoodWallRecipe,
+            BuildingMenu.RoofTileRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -21900,322 +21900,6 @@ end
 
 local function addDeadlineRoofingToMenu()
 -- SHAKES
- -- Shakes beige
-    local shakesroofbeige = {
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildFloor,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureSmall",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false
-            },
-            { sprite = "custom_roofs_04_22", northSprite = "custom_roofs_04_23" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_0", northSprite = "custom_roofs_04_5" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_1", northSprite = "custom_roofs_04_4" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_2", northSprite = "custom_roofs_04_3" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_TopHalf",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_15", northSprite = "custom_roofs_04_14" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_8" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_9" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_10" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_11" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_12" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_13" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_24", northSprite = "custom_roofs_04_29" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_25", northSprite = "custom_roofs_04_28" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_26", northSprite = "custom_roofs_04_27" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_6", northSprite = "custom_roofs_04_7" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Inner",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_21" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Outer",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_30", northSprite = "custom_roofs_04_31" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Valley",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_20" }
-        ),
-    }
-    BuildingMenu.addObjectsToCategories(
-        "Deadline",
-        "IGUI_BuildingMenuCat_DeadlineRoofing",
-        nil,
-        "IGUI_DeadlineRoofing_shakesroofbeige",
-        "custom_roofs_04_24",
-        shakesroofbeige
-    )    
  -- Shakes black - Dylan
     local shakesroofblack = {
         BuildingMenu.createObject(
@@ -22531,322 +22215,6 @@ local function addDeadlineRoofingToMenu()
         "IGUI_DeadlineRoofing_shakesroofblack",
         "DylansRoofs01_56",
         shakesroofblack
-    )   
- -- Shakes black blue tone
-    local shakesroofblackblue = {
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildFloor,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureSmall",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false
-            },
-            { sprite = "custom_roofs_03_54", northSprite = "custom_roofs_03_55" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_32", northSprite = "custom_roofs_03_37" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_33", northSprite = "custom_roofs_03_36" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_34", northSprite = "custom_roofs_03_35" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_TopHalf",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_47", northSprite = "custom_roofs_03_48" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_40" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_41" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_42" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_43" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_44" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_45" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_56", northSprite = "custom_roofs_03_61" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_57", northSprite = "custom_roofs_03_60" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_58", northSprite = "custom_roofs_03_59" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_38", northSprite = "custom_roofs_03_39" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Inner",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_62", northSprite = "custom_roofs_03_63" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Outer",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_53" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Valley",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_52" }
-        ),
-    }
-    BuildingMenu.addObjectsToCategories(
-        "Deadline",
-        "IGUI_BuildingMenuCat_DeadlineRoofing",
-        nil,
-        "IGUI_DeadlineRoofing_shakesroofblackblue",
-        "custom_roofs_03_56",
-        shakesroofblackblue
     )   
  -- Shakes black brown tone - Erika
     local shakesroofblackbrown = {
@@ -24078,1800 +23446,6 @@ local function addDeadlineRoofingToMenu()
         "roofs_03_56",
         shakesroofgreyishgreendark
     )   
- -- Shakes greyish green light
-    local shakesroofgreyishgreenlight = {
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildFloor,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureSmall",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false
-            },
-            { sprite = "customs_roofs_103_54", northSprite = "customs_roofs_103_55" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_32", northSprite = "customs_roofs_103_37" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_33", northSprite = "customs_roofs_103_36" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_34", northSprite = "customs_roofs_103_35" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_40" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_41" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_42" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_43" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_44" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_45" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_56", northSprite = "customs_roofs_103_61" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_57", northSprite = "customs_roofs_103_60" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_58", northSprite = "customs_roofs_103_59" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_38", northSprite = "customs_roofs_103_39" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Inner",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_62", northSprite = "customs_roofs_103_63" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Outer",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_53" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Valley",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_52" }
-        ),
-    }
-    BuildingMenu.addObjectsToCategories(
-        "Deadline",
-        "IGUI_BuildingMenuCat_DeadlineRoofing",
-        nil,
-        "IGUI_DeadlineRoofing_shakesroofgreyishgreenlight",
-        "customs_roofs_103_56",
-        shakesroofgreyishgreenlight
-    )   
- -- Shakes green dark
-    local shakesroofgreendark = {
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildFloor,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureSmall",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false
-            },
-            { sprite = "custom_roofs_03_22", northSprite = "custom_roofs_03_23" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_0", northSprite = "custom_roofs_03_5" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_1", northSprite = "custom_roofs_03_4" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_2", northSprite = "custom_roofs_03_3" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_8" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_9" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_10" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_11" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_12" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_13" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_24", northSprite = "custom_roofs_03_29" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_25", northSprite = "custom_roofs_03_28" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_26", northSprite = "custom_roofs_03_27" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_6", northSprite = "custom_roofs_03_7" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Inner",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_21" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Outer",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_30", northSprite = "custom_roofs_03_31" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Valley",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_03_20" }
-        ),
-    }
-    BuildingMenu.addObjectsToCategories(
-        "Deadline",
-        "IGUI_BuildingMenuCat_DeadlineRoofing",
-        nil,
-        "IGUI_DeadlineRoofing_shakesroofgreendark",
-        "custom_roofs_03_24",
-        shakesroofgreendark
-    )    
- -- Shakes green light
-    local shakesroofgreenlight = {
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildFloor,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureSmall",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false
-            },
-            { sprite = "custom_roofs_104_22", northSprite = "custom_roofs_104_23" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_0", northSprite = "custom_roofs_104_5" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_1", northSprite = "custom_roofs_104_4" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_2", northSprite = "custom_roofs_104_3" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_8" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_9" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_10" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_11" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_12" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_13" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_24", northSprite = "custom_roofs_104_29" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_25", northSprite = "custom_roofs_104_28" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_26", northSprite = "custom_roofs_104_27" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_6", northSprite = "custom_roofs_104_7" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Inner",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_21" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Outer",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_30", northSprite = "custom_roofs_104_31" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Valley",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_104_20" }
-        ),
-    }
-    BuildingMenu.addObjectsToCategories(
-        "Deadline",
-        "IGUI_BuildingMenuCat_DeadlineRoofing",
-        nil,
-        "IGUI_DeadlineRoofing_shakesroofgreenlight",
-        "custom_roofs_104_24",
-        shakesroofgreenlight
-    )    
- -- Shakes pink
-    local shakesroofpink = {
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildFloor,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureSmall",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false
-            },
-            { sprite = "customs_roofs_103_22", northSprite = "customs_roofs_103_23" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_0", northSprite = "customs_roofs_103_5" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_1", northSprite = "customs_roofs_103_4" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_2", northSprite = "customs_roofs_103_3" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_8" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_9" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_10" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_11" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_12" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_13" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_24", northSprite = "customs_roofs_103_29" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_25", northSprite = "customs_roofs_103_28" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_26", northSprite = "customs_roofs_103_27" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_6", northSprite = "customs_roofs_103_7" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Inner",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_21" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Outer",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_30", northSprite = "customs_roofs_103_31" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Valley",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "customs_roofs_103_20" }
-        ),
-    }
-    BuildingMenu.addObjectsToCategories(
-        "Deadline",
-        "IGUI_BuildingMenuCat_DeadlineRoofing",
-        nil,
-        "IGUI_DeadlineRoofing_shakesroofpink",
-        "customs_roofs_103_24",
-        shakesroofpink
-    )    
- -- Shakes purple
-    local shakesroofpurple = {
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildFloor,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureSmall",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false
-            },
-            { sprite = "custom_roofs_11_54", northSprite = "custom_roofs_11_55" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_32", northSprite = "custom_roofs_11_37" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_33", northSprite = "custom_roofs_11_36" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_34", northSprite = "custom_roofs_11_35" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_40" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_41" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_42" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_43" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_44" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_45" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_56", northSprite = "custom_roofs_11_61" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_57", northSprite = "custom_roofs_11_60" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_58", northSprite = "custom_roofs_11_59" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_38", northSprite = "custom_roofs_11_39" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Inner",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_62", northSprite = "custom_roofs_11_63" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Outer",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_53" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Valley",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_52" }
-        ),
-    }
-    BuildingMenu.addObjectsToCategories(
-        "Deadline",
-        "IGUI_BuildingMenuCat_DeadlineRoofing",
-        nil,
-        "IGUI_DeadlineRoofing_shakesroofpurple",
-        "custom_roofs_11_56",
-        shakesroofpurple
-    )   
- -- Shakes white
-    local shakesroofwhite = {
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildFloor,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureSmall",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false
-            },
-            { sprite = "custom_roofs_04_54", northSprite = "custom_roofs_04_55" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_32", northSprite = "custom_roofs_04_37" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_33", northSprite = "custom_roofs_04_36" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Pitched_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_34", northSprite = "custom_roofs_04_35" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_40" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_41" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Inner_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_42" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_43" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_44" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Valley_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_45" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_56", northSprite = "custom_roofs_04_61" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_57", northSprite = "custom_roofs_04_60" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shakes_Outer_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_58", northSprite = "custom_roofs_04_59" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_38", northSprite = "custom_roofs_04_39" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Inner",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_62", northSprite = "custom_roofs_04_63" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Outer",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_53" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shakes_Valley",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_04_52" }
-        ),
-    }
-    BuildingMenu.addObjectsToCategories(
-        "Deadline",
-        "IGUI_BuildingMenuCat_DeadlineRoofing",
-        nil,
-        "IGUI_DeadlineRoofing_shakesroofwhite",
-        "custom_roofs_04_56",
-        shakesroofwhite
-    )   
 -- SHINGLES
  -- Shingles black - Erika
     local shinglesroofblack = {
@@ -26468,813 +24042,6 @@ local function addDeadlineRoofingToMenu()
         "IGUI_DeadlineRoofing_shinglesroofblack",
         "roofs_erika_02_24",
         shinglesroofblack
-    )    
- -- Shingles black alternative
-    local shinglesroofblackalternative = {
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildFloor,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureSmall",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false
-            },
-            { sprite = "custom_roofs_01_22", northSprite = "custom_roofs_01_23" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Pitched_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_0", northSprite = "custom_roofs_01_5" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Pitched_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_1", northSprite = "custom_roofs_01_4" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Pitched_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_2", northSprite = "custom_roofs_01_3" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_TopHalf",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_15", northSprite = "custom_roofs_01_14" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Inner_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_8" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Inner_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_9" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Inner_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_10" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Valley_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_11" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Valley_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_12" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Valley_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_13" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Outer_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_24", northSprite = "custom_roofs_01_29" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Outer_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_25", northSprite = "custom_roofs_01_28" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Outer_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_26", northSprite = "custom_roofs_01_27" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shingles_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_6", northSprite = "custom_roofs_01_7" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shingles_Inner",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_21" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shingles_Outer",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_30", northSprite = "custom_roofs_01_31" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shingles_Valley",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_01_20" }
-        ),
-    }
-    BuildingMenu.addObjectsToCategories(
-        "Deadline",
-        "IGUI_BuildingMenuCat_DeadlineRoofing",
-        nil,
-        "IGUI_DeadlineRoofing_shinglesroofblackalternative",
-        "custom_roofs_01_24",
-        shinglesroofblackalternative
-    )    
- -- Shingles green dark
-    local shinglesroofgreendark = {
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildFloor,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureSmall",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false
-            },
-            { sprite = "custom_roofs_11_22", northSprite = "custom_roofs_11_23" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Pitched_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_0", northSprite = "custom_roofs_11_5" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Pitched_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_1", northSprite = "custom_roofs_11_4" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Pitched_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_2", northSprite = "custom_roofs_11_3" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Inner_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_8" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Inner_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_9" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Inner_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_10" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Valley_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_11" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Valley_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_12" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Valley_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_13" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Outer_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_24", northSprite = "custom_roofs_11_29" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Outer_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_25", northSprite = "custom_roofs_11_28" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Outer_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_26", northSprite = "custom_roofs_11_27" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shingles_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_6", northSprite = "custom_roofs_11_7" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shingles_Inner",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_21" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shingles_Outer",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_30", northSprite = "custom_roofs_11_31" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shingles_Valley",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_20" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Half_Valley_Outer_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_11_64"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Half_Valley_Outer_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_11_65"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Half_Valley_Outer_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_11_66"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Half_Valley_Inner_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_11_67"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Half_Valley_Inner_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_11_68"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Half_Valley_Inner_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_11_69"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Pitched_Half",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_71", northSprite = "custom_roofs_11_70" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Pitched_Half",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_11_15", northSprite = "custom_roofs_11_14" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Lower_Half_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_11_87",
-                northSprite = "custom_roofs_11_83",
-                eastSprite = "custom_roofs_11_84",
-                southSprite = "custom_roofs_11_80"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Top_Half_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_11_86",
-                northSprite = "custom_roofs_11_82",
-                eastSprite = "custom_roofs_11_85",
-                southSprite = "custom_roofs_11_81"
-            }
-        ),
-    }
-    BuildingMenu.addObjectsToCategories(
-        "Deadline",
-        "IGUI_BuildingMenuCat_DeadlineRoofing",
-        nil,
-        "IGUI_DeadlineRoofing_shinglesroofgreendark",
-        "custom_roofs_11_24",
-        shinglesroofgreendark
     )    
  -- Shingles green light - Pert
     local shinglesroofgreenlight = {
@@ -29030,497 +25797,6 @@ local function addDeadlineRoofingToMenu()
         "roofs_erika_02_56",
         shinglesroofpink
     )   
- -- Shingles purple dark
-    local shinglesroofpurpledark = {
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildFloor,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureSmall",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false
-            },
-            { sprite = "custom_roofs_021_22", northSprite = "custom_roofs_021_23" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Pitched_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_0", northSprite = "custom_roofs_021_5" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Pitched_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_1", northSprite = "custom_roofs_021_4" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Pitched_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_2", northSprite = "custom_roofs_021_3" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Inner_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_8" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Inner_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_9" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Inner_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_10" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Valley_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_11" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Valley_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_12" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Valley_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_13" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Outer_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_24", northSprite = "custom_roofs_021_29" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Outer_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_25", northSprite = "custom_roofs_021_28" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Outer_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_26", northSprite = "custom_roofs_021_27" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shingles_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_6", northSprite = "custom_roofs_021_7" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shingles_Inner",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_21" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shingles_Outer",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_30", northSprite = "custom_roofs_021_31" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Patio_Shingles_Valley",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_20" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Half_Valley_Outer_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_021_64"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Half_Valley_Outer_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_021_65"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Half_Valley_Outer_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_021_66"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Half_Valley_Inner_1",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_021_67"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Half_Valley_Inner_2",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_021_68"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Half_Valley_Inner_3",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_021_69"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Pitched_Half",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_71", northSprite = "custom_roofs_021_70" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Pitched_Half",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            { sprite = "custom_roofs_021_15", northSprite = "custom_roofs_021_14" }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Lower_Half_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_021_87",
-                northSprite = "custom_roofs_021_83",
-                eastSprite = "custom_roofs_021_84",
-                southSprite = "custom_roofs_021_80"
-            }
-        ),
-        BuildingMenu.createObject(
-            "Tooltip_BuildingMenuObj_Shingles_Top_Half_Pitched",
-            "Tooltip_Roof_Generic",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.RoofTileRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-                needToBeAgainstWall = false,
-                blockAllTheSquare = false,
-                renderFloorHelper = true,
-                canPassThrough = true,
-                canBarricade = false,
-                isCorner = true
-            },
-            {
-                sprite = "custom_roofs_021_86",
-                northSprite = "custom_roofs_021_82",
-                eastSprite = "custom_roofs_021_85",
-                southSprite = "custom_roofs_021_81"
-            }
-        ),
-    }
-    BuildingMenu.addObjectsToCategories(
-        "Deadline",
-        "IGUI_BuildingMenuCat_DeadlineRoofing",
-        nil,
-        "IGUI_DeadlineRoofing_shinglesroofpurpledark",
-        "custom_roofs_021_24",
-        shinglesroofpurpledark
-    )    
  -- Shingles purple light
     local shinglesroofpurplelight = {
         BuildingMenu.createObject(
@@ -32859,149 +29135,6 @@ local function addDeadlineFloorsToMenu()
                         completionSound = "BuildWoodenStructureSmall"
                     },
                     {
-                        sprite = "custom_floors_interior_tilesandwood_011_40"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_41"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_42"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_43"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_44"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_45"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_48"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_49"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_50"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_51"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_52"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
                         sprite = "floors_interior_tilesandwood_erika_01_40"
                     }
                 ),
@@ -33865,45 +29998,6 @@ local function addDeadlineFloorsToMenu()
                         completionSound = "BuildWoodenStructureSmall"
                     },
                     {
-                        sprite = "custom_floors_interior_tilesandwood_011_5"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_3"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_2"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
                         sprite = "floors_interior_tilesandwood_erika_01_3"
                     }
                 ),
@@ -34041,58 +30135,6 @@ local function addDeadlineFloorsToMenu()
                         completionSound = "BuildWoodenStructureSmall"
                     },
                     {
-                        sprite = "custom_floors_interior_tilesandwood_011_6"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_7"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_21"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_23"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
                         sprite = "floors_interior_tilesandwood_erika_01_28"
                     }
                 ),
@@ -34191,46 +30233,7 @@ local function addDeadlineFloorsToMenu()
                         completionSound = "BuildWoodenStructureSmall"
                     },
                     {
-                        sprite = "custom_floors_interior_tilesandwood_011_9"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
                         sprite = "floors_interior_tilesandwood_erika_01_4"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_12"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.TwoSpriteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "BuildWoodenStructureSmall"
-                    },
-                    {
-                        sprite = "custom_floors_interior_tilesandwood_011_14"
                     }
                 ),
                 BuildingMenu.createObject(
@@ -34530,19 +30533,6 @@ local function addDeadlineFloorsToMenu()
                         completionSound = "DropSoilFromGravelBag"
                     },
                     {
-                        sprite = "custom_floors_interior_tilesandwood_011_11"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "Tooltip_BuildingMenuObj_Exterior_Tile",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.ConcreteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "DropSoilFromGravelBag"
-                    },
-                    {
                         sprite = "floors_exterior_tilesandstone_01_1"
                     }
                 ),
@@ -34570,19 +30560,6 @@ local function addDeadlineFloorsToMenu()
                     },
                     {
                         sprite = "floors_exterior_tilesandstone_01_9"
-                    }
-                ),
-                BuildingMenu.createObject(
-                    "Tooltip_BuildingMenuObj_Exterior_Tile",
-                    "Tooltip_Floor_Generic",
-                    BuildingMenu.onBuildFloor,
-                    BuildingMenu.ConcreteFloorRecipe,
-                    true,
-                    {
-                        completionSound = "DropSoilFromGravelBag"
-                    },
-                    {
-                        sprite = "floors_exterior_tilesandstone_01_10"
                     }
                 ),
                 BuildingMenu.createObject(
@@ -34678,6 +30655,624 @@ local function addDeadlineFloorsToMenu()
             subCatData.objects
         )
     end
+end
+
+--[[ >>>>>>>> FROADWORK <<<<<<<< --]]
+
+local function addRoadworkDirtandGrassToMenu()
+    local roadworkDeadlineDirtandGrass = {
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_0",
+                northSprite = "blends_street_BeDirt_5",
+                eastSprite = "blends_street_BeDirt_6",
+                southSprite = "blends_street_BeDirt_7"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_4",
+                northSprite = "blends_street_BeDirt_2",
+                eastSprite = "blends_street_BeDirt_3",
+                southSprite = "blends_street_BeDirt_1"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_9",
+                northSprite = "blends_street_BeDirt_8",
+                eastSprite = "blends_street_BeDirt_10",
+                southSprite = "blends_street_BeDirt_11"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_13",
+                northSprite = "blends_street_BeDirt_12",
+                eastSprite = "blends_street_BeDirt_14",
+                southSprite = "blends_street_BeDirt_15"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_16",
+                northSprite = "blends_street_BeDirt_21",
+                eastSprite = "blends_street_BeDirt_22",
+                southSprite = "blends_street_BeDirt_23"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_20",
+                northSprite = "blends_street_BeDirt_18",
+                eastSprite = "blends_street_BeDirt_19",
+                southSprite = "blends_street_BeDirt_17"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_25",
+                northSprite = "blends_street_BeDirt_24",
+                eastSprite = "blends_street_BeDirt_26",
+                southSprite = "blends_street_BeDirt_27"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_29",
+                northSprite = "blends_street_BeDirt_28",
+                eastSprite = "blends_street_BeDirt_30",
+                southSprite = "blends_street_BeDirt_31"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_32",
+                northSprite = "blends_street_BeDirt_37",
+                eastSprite = "blends_street_BeDirt_38",
+                southSprite = "blends_street_BeDirt_39"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_36",
+                northSprite = "blends_street_BeDirt_34",
+                eastSprite = "blends_street_BeDirt_35",
+                southSprite = "blends_street_BeDirt_33"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_41",
+                northSprite = "blends_street_BeDirt_40",
+                eastSprite = "blends_street_BeDirt_42",
+                southSprite = "blends_street_BeDirt_43"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_45",
+                northSprite = "blends_street_BeDirt_44",
+                eastSprite = "blends_street_BeDirt_46",
+                southSprite = "blends_street_BeDirt_47"
+            }
+        ),
+            BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_48",
+                northSprite = "blends_street_BeDirt_53",
+                eastSprite = "blends_street_BeDirt_54",
+                southSprite = "blends_street_BeDirt_55"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_52",
+                northSprite = "blends_street_BeDirt_50",
+                eastSprite = "blends_street_BeDirt_51",
+                southSprite = "blends_street_BeDirt_49"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_57",
+                northSprite = "blends_street_BeDirt_56",
+                eastSprite = "blends_street_BeDirt_58",
+                southSprite = "blends_street_BeDirt_59"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_61",
+                northSprite = "blends_street_BeDirt_60",
+                eastSprite = "blends_street_BeDirt_62",
+                southSprite = "blends_street_BeDirt_63"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_64",
+                northSprite = "blends_street_BeDirt_69",
+                eastSprite = "blends_street_BeDirt_70",
+                southSprite = "blends_street_BeDirt_71"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_68",
+                northSprite = "blends_street_BeDirt_66",
+                eastSprite = "blends_street_BeDirt_67",
+                southSprite = "blends_street_BeDirt_65"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_73",
+                northSprite = "blends_street_BeDirt_72",
+                eastSprite = "blends_street_BeDirt_74",
+                southSprite = "blends_street_BeDirt_75"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_77",
+                northSprite = "blends_street_BeDirt_76",
+                eastSprite = "blends_street_BeDirt_78",
+                southSprite = "blends_street_BeDirt_79"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_80",
+                northSprite = "blends_street_BeDirt_85",
+                eastSprite = "blends_street_BeDirt_86",
+                southSprite = "blends_street_BeDirt_87"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_84",
+                northSprite = "blends_street_BeDirt_82",
+                eastSprite = "blends_street_BeDirt_83",
+                southSprite = "blends_street_BeDirt_81"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_89",
+                northSprite = "blends_street_BeDirt_88",
+                eastSprite = "blends_street_BeDirt_90",
+                southSprite = "blends_street_BeDirt_91"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_93",
+                northSprite = "blends_street_BeDirt_92",
+                eastSprite = "blends_street_BeDirt_94",
+                southSprite = "blends_street_BeDirt_95"
+            }
+        ),
+            BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_96",
+                northSprite = "blends_street_BeDirt_101",
+                eastSprite = "blends_street_BeDirt_102",
+                southSprite = "blends_street_BeDirt_103"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_100",
+                northSprite = "blends_street_BeDirt_98",
+                eastSprite = "blends_street_BeDirt_99",
+                southSprite = "blends_street_BeDirt_97"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_105",
+                northSprite = "blends_street_BeDirt_104",
+                eastSprite = "blends_street_BeDirt_106",
+                southSprite = "blends_street_BeDirt_107"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_109",
+                northSprite = "blends_street_BeDirt_108",
+                eastSprite = "blends_street_BeDirt_110",
+                southSprite = "blends_street_BeDirt_111"
+            }
+        ),
+            BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "blends_street_BeDirt_112",
+                northSprite = "blends_street_BeDirt_117",
+                eastSprite = "blends_street_BeDirt_118",
+                southSprite = "blends_street_BeDirt_119"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Corner",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_116",
+                northSprite = "blends_street_BeDirt_114",
+                eastSprite = "blends_street_BeDirt_115",
+                southSprite = "blends_street_BeDirt_113"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.DirtRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "blends_street_BeDirt_121",
+                northSprite = "blends_street_BeDirt_120",
+                eastSprite = "blends_street_BeDirt_122",
+                southSprite = "blends_street_BeDirt_123"
+            }
+        ),
+    }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineRoadWork",
+        "blends_street_01_32",
+        "IGUI_BuildingMenuSubCat_Deadline_Road_Work_BeDirt",
+        "blends_street_BeDirt_0",
+        roadworkDeadlineDirtandGrass
+    )
 end
 
 
@@ -35750,6 +32345,34 @@ local function addDeadlineTablesToMenu()
                 BuildingMenu.createObject(
                     "",
                     "Tooltip_LowTable_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_04_113",
+                        northSprite = "crafted_04_112",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LowTable_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_02_94",
+                        northSprite = "crafted_02_93",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LowTable_Desc",
                     BuildingMenu.onBuildDoubleTileFurniture,
                     BuildingMenu.SmallFurnitureRecipe,
                     true,
@@ -36775,6 +33398,54 @@ local function addDeadlineTablesToMenu()
                     "",
                     "Tooltip_LargeTable_Desc",
                     BuildingMenu.onBuildDoubleTileFurniture,
+                    BuildingMenu.LargeLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_04_97",
+                        sprite2 = "crafted_04_96",
+                        northSprite = "crafted_04_98",
+                        northSprite2 = "crafted_04_99",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LargeTable_Desc",
+                    BuildingMenu.onBuildDoubleTileFurniture,
+                    BuildingMenu.LargeLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_04_101",
+                        sprite2 = "crafted_04_100",
+                        northSprite = "crafted_04_102",
+                        northSprite2 = "crafted_04_103",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LargeTable_Desc",
+                    BuildingMenu.onBuildDoubleTileFurniture,
+                    BuildingMenu.LargeLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_02_91",
+                        sprite2 = "crafted_02_90",
+                        northSprite = "crafted_02_88",
+                        northSprite2 = "crafted_02_89",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LargeTable_Desc",
+                    BuildingMenu.onBuildDoubleTileFurniture,
                     BuildingMenu.LargeFurnitureRecipe,
                     true,
                     {
@@ -36963,6 +33634,132 @@ local function addDeadlineTablesToMenu()
     end
 end
 
+-- >> SEATING: CHAIRS
+local function addDeadlineSeatingToMenu()
+    local DeadlineSeating = {
+ --[[ FTOCHOOSE
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_Furniture_Low_Tables",
+            subCategoryIcon = "furniture_tables_low_01_13",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LowTable_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_02_94",
+                        northSprite = "crafted_02_93",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LowTable_Desc",
+                    BuildingMenu.onBuildDoubleTileFurniture,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "furniture_tables_low_01_9",
+                        sprite2 = "furniture_tables_low_01_8",
+                        northSprite = "furniture_tables_low_01_10",
+                        northSprite2 = "furniture_tables_low_01_11",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_LowTable_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_tables_low_01_64",
+                    }
+                ),
+            }
+        }, ]]
+ --[[ FTOCHOOSE
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_Furniture_Small_Tables",
+            subCategoryIcon = "melos_tiles_furniture_tables_01_24",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_SmallTable_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_tables_01_68",
+                    }
+                ),
+            }
+        }, ]]
+ -- FCCHAIRS        
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_Furniture_Chairs",
+            subCategoryIcon = "crafted_02_92",
+            objects = {
+                BuildingMenu.createObject(
+                    "Tooltip_LogChair_Name",
+                    "Tooltip_Chair_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canPassThrough = true,
+                        isThumpable = true,
+                        isCorner = true
+                    },
+                    {
+                        sprite = "crafted_02_92"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_LogChair_NameCheeky",
+                    "Tooltip_Chair_Desc",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canPassThrough = true,
+                        isThumpable = true,
+                        isCorner = true
+                    },
+                    {
+                        sprite = "crafted_02_95"
+                    }
+                ),
+            }
+        },
+    }
+ -- Add Furniture Category 
+    for k, subCatData in pairs(DeadlineSeating) do
+        BuildingMenu.addObjectsToCategories(
+            "Deadline",
+            "IGUI_BuildingMenuCat_DeadlineFurniture",
+            "melos_tiles_furniture_tables_low_01_14",
+            subCatData.subcategoryName,
+            subCatData.subCategoryIcon,
+            subCatData.objects
+        )
+    end
+end
+
 -- >> BOOKSHELVES
 local function addDeadlineBookshelvesToMenu()
     local DeadlineBookshelves = {
@@ -37070,6 +33867,106 @@ local function addDeadlineBookshelvesToMenu()
                         northSprite = "furniture_shelving_erika_01_97",
                         eastSprite = "furniture_shelving_erika_01_99",
                         southSprite = "furniture_shelving_erika_01_100",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        needToBeAgainstWall = true,
+                        buildHigh = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "crafted_05_40",
+                        northSprite = "crafted_05_41",
+                        eastSprite = "crafted_05_42",
+                        southSprite = "crafted_05_43",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        needToBeAgainstWall = true,
+                        buildHigh = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "crafted_05_37",
+                        northSprite = "crafted_05_36",
+                        eastSprite = "crafted_05_38",
+                        southSprite = "crafted_05_39",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_04_90",
+                        northSprite = "crafted_04_88",
+                        eastSprite = "crafted_04_91",
+                        southSprite = "crafted_04_89",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.LargeLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_04_95",
+                        northSprite = "crafted_04_92",
+                        eastSprite = "crafted_04_94",
+                        southSprite = "crafted_04_93",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_05_51",
+                        northSprite = "crafted_05_50",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Bookshelf_Desc",
+                    BuildingMenu.onBuildDoubleTileContainer,
+                    BuildingMenu.LargeLogFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "crafted_05_49",
+                        sprite2 = "crafted_05_48",
+                        northSprite = "crafted_05_52",
+                        northSprite2 = "crafted_05_53",
                     }
                 ),
                 BuildingMenu.createObject(
@@ -38367,7 +35264,18 @@ local function addDeadlineCurtainsToMenu()
         { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 76, 78, 77, 79 } },
         { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 84, 86, 85, 87 } },
         { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 92, 94, 93, 95 } },
-
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 100, 102, 101, 103 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 108, 110, 109, 111 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 116, 118, 117, 119 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 124, 126, 125, 127 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 132, 134, 133, 135 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 140, 142, 141, 143 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 148, 150, 149, 151 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 156, 158, 157, 159 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 164, 166, 165, 167 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 172, 174, 173, 175 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 180, 182, 181, 183 } },
+        { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 188, 190, 189, 191 } },
 
         { prefix = "fixtures_windows_curtains_ddd_01_", offsets = { 4, 6, 5, 7 } },
         { prefix = "fixtures_windows_curtains_ddd_01_", offsets = { 12, 14, 13, 15 } },
@@ -38656,6 +35564,8 @@ local function addDeadlineBarricadesToMenu()
 end
 
 
+
+
 --[[ >>>>>> FOR THE SANDBOX OPTIONS ON "media\sandbox-options.txt" <<<<<<--]]
 local function addCategoriesToBuildingMenu()
     if SandboxVars.BuildingMenu.DeadlineWallsCategory then
@@ -38690,6 +35600,12 @@ local function addCategoriesToBuildingMenu()
     end
     if SandboxVars.BuildingMenu.DeadlineBookshelvesSubCategory then
         addDeadlineBookshelvesToMenu()
+    end
+    if SandboxVars.BuildingMenu.DeadlineRoadworkDirtandGrassCategory then
+        addRoadworkDirtandGrassToMenu()
+    end
+    if SandboxVars.BuildingMenu.DeadlineSeatingCategory then
+        addDeadlineSeatingToMenu()
     end
 end
 Events.OnInitializeBuildingMenuObjects.Add(addCategoriesToBuildingMenu)

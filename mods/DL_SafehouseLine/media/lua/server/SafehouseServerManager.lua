@@ -11,46 +11,12 @@ function LogSafehouseChange(safehouseKey, changeStr)
     ISLogSystem.sendLog(getPlayer(), "SafehouseLine", messageString);
 end
 
---[[function ValidateManagers()
-    local allSafehouses = SafeHouse.getSafehouseList();
-
-    print("ValidateManagers");
-
-    print("There are " .. tostring(allSafehouses:size()) .. " safehouses to iterate");
-
-    for i = 0, allSafehouses:size() - 1 do
-        -- Iterate through all safehouses. Check that there are no extraneous managers.
-        -- Rare edge case, may happen if player account is deleted rather than them being removed from SH.
-
-        local safehouse = allSafehouses:get(i);
-        print("Iterating on safehouse " .. safehouse:getTitle());
-
-        if not safehouse then return end; -- Something's gone badly wrong, kill loop.
-
-        -- Get all safehouse managers.
-        local managersForSafehouse = SafehouseManagers[safehouse:getId()];
-
-        if managersForSafehouse and #managersForSafehouse > 0 then
-            print("Safehouse has managers.");
-            for _, mgr in ipairs(managersForSafehouse) do
-                print("Is " .. tostring(mgr) .. " still in SH?");
-                if not safehouse:playerAllowed(mgr) then -- If the name ISN'T allowed in the safehouse, something has happened.
-                    print("No, removing from list :(");
-                    RemoveManagerFromSafehouse(safehouse:getId(), mgr, "ValidateManagers_Server");
-                end
-            end
-        end
-    end
-end--]]
-
 function OnInitGlobalModData(newGame)
     SafehouseManagers = ModData.getOrCreate("SafehouseLine_Managers");
 
-    --ValidateManagers(); -- You can't be a manager if you are not part of the safehouse.
 end
 
 function OnReceiveGlobalModData(key, data)
-    --print("OnReceiveGlobalModData");
 end
 
 function OnServerStartSave()
@@ -104,7 +70,7 @@ function OnClientCommand(module, command, player, args)
 
     if not (args.safehouse or args.manager or args.issuer) then return end;
 
-    local safehouseId = tostring(args.safehouse); -- Allows giving either safehouse itself or the ID.
+    local safehouseId = tostring(args.safehouse);
     if not safehouseId then return end;
 
     if command == "AddSafehouseManager" then

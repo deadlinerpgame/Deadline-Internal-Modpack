@@ -1,0 +1,473 @@
+module Base
+{
+	imports
+	{
+		Base,
+	}
+
+	model AxeHead_Old
+	{
+		mesh = WorldItems/Axe_Forged_Head,
+		texture = Weapons/1Handed/Axe_OldStyle_Forged,
+		scale = 0.1,
+	}
+
+    model CrudeBenchVise
+    {
+        mesh = WorldItems/Vise_Crude,
+        scale = 0.1,
+    }
+
+	model CrudeBenchViseParts
+    {
+        mesh = WorldItems/Vise_Crude_Parts,
+        scale = 0.1,
+    }
+
+	model IronBarMold
+	{
+		mesh = WorldItems/Cast_Bar_Metal,
+		texture= WorldItems/Cast_Metal_Iron,
+		scale = 0.125,
+	}
+
+	model IronIngotMold
+	{
+		mesh = WorldItems/Cast_Ingot_Metal,
+		texture= WorldItems/Cast_Metal_Iron,
+		scale = 0.1,
+	}
+
+	model SteelBarMold
+	{
+		mesh = WorldItems/Cast_Bar_Metal,
+		texture= WorldItems/Cast_Metal_Steel,
+		scale = 0.125,
+	}
+
+	model SteelIngotMold
+	{
+		mesh = WorldItems/Cast_Ingot_Metal,
+		texture= WorldItems/Cast_Metal_Steel,
+		scale = 0.1,
+	}
+
+	model Coke
+	{
+		mesh = WorldItems/Coke,
+		scale = 0.1,
+	}
+
+	model ClawhammerHeadForged
+    {
+        mesh = WorldItems/HammerHeadForged,
+        texture = weapons/1handed/Hammer_Forged,
+        scale = 0.125,
+    }
+
+	model CrudeSwordBlade
+    {
+        mesh = WorldItems/SwordSingleEdge_Basic_Blade,
+        texture = weapons/1handed/Sword_SingleEdge_Basic,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 0.0 0.0,
+		}
+    }
+
+	model CrudeSwordBlade_NoTang
+    {
+        mesh = WorldItems/SwordSingleEdge_Basic_Blade_NoTang,
+        texture = weapons/1handed/Sword_SingleEdge_Basic,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 0.0 0.0,
+		}
+    }
+
+	model CrudeShortSwordBlade
+    {
+        mesh = WorldItems/Sword_SingleEdgeShort_Blade_Basic,
+        texture = weapons/1handed/Sword_SingleEdge_Basic,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 0.0 0.0,
+		}
+    }
+
+	model CrudeShortSwordBlade_NoTang
+    {
+        mesh = WorldItems/SwordSingleEdgeShort_Blade_Basic_NoTang,
+        texture = weapons/1handed/Sword_SingleEdge_Basic,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 0.0 0.0,
+		}
+    }
+
+	model GardenFork_Head
+	{
+		mesh = Weapons/1Handed/GardenFork_ForkBroken,
+		texture = Weapons/2Handed/GardenFork,
+	}
+
+	model HacksawBlade
+    {
+        mesh = WorldItems/Saw_Forged_Blade,
+        texture = WorldItems/Saw_Forged,
+        scale = 0.05625,
+	}
+
+	model HandScytheHeadForged
+    {
+        mesh = WorldItems/HandScythe_Head_Forged,
+		texture = Weapons/1Handed/HandScythe_Forged,
+        scale = 0.125,
+    }
+
+	model HandAxeHeadForged
+    {
+        mesh =  WorldItems/HandAxe_Forged_Head,
+        texture = weapons/1handed/HandAxe_Forged,
+        scale = 0.125,
+    }
+
+	model HuntingKnifeBladeForged
+    {
+        mesh =  WorldItems/KnifeHunting_Forged_Blade,
+        texture = weapons/1handed/KnifeHunting_Forged,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment knife_stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+    }
+
+	model KitchenKnifeBladeForged
+	{
+		mesh =  WorldItems/KitchenKnife_Forged_Blade,
+		texture = weapons/1handed/KitchenKnife_Forged,
+		scale = 0.125,
+
+		attachment knife_shoulder
+		{
+			offset = 0.0000 0.1500 0.0000,
+			rotate = -90.0000 0.0000 -90.0000,
+		}
+
+		attachment knife_stomach
+		{
+			offset = 0.0000 0.1500 0.0000,
+			rotate = -90.0000 0.0000 -90.0000,
+		}
+
+		attachment stomach
+		{
+			offset = 0.0000 0.1500 0.0000,
+			rotate = -90.0000 0.0000 -90.0000,
+		}
+
+		attachment world
+		{
+			offset = -0.0081 -0.0152 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+	model CrudeHuntingKnifeForgedBlade
+    {
+        mesh = WorldItems/KnifeHunting_Forged_Blade_Basic,
+        texture = weapons/1handed/KnifeHunting_Forged_Basic,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment knife_stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+    }
+
+	model SpearLongHeadForged
+	{
+		mesh = weapons/1handed/Spear_Forged_Head_Hand,
+		texture = weapons/2handed/Spear_Forged,
+
+		attachment world
+		{
+			offset = -0.0063 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+	model SpearShortHeadForged
+	{
+		mesh = weapons/1handed/SpearForged_Basic_Head_Hand,
+		texture = weapons/2handed/SpearForged_Basic,
+
+		attachment world
+		{
+			offset = -0.0126 0.0000 0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+	model MaceHead
+    {
+        mesh = WorldItems/Mace_Head,
+        texture = weapons/1handed/Mace,
+        scale = 0.125,
+    }
+
+	model MacheteBladeForged
+	{
+		mesh =  WorldItems/Machete_Forged_Blade,
+		texture = weapons/1handed/Machete_Forged,
+		scale = 0.125,
+
+		attachment knife_shoulder
+		{
+			offset = 0.0000 0.1500 0.0000,
+			rotate = -90.0000 0.0000 -90.0000,
+		}
+
+		attachment knife_stomach
+		{
+			offset = 0.0000 0.1500 0.0000,
+			rotate = -90.0000 0.0000 -90.0000,
+		}
+
+		attachment stomach
+		{
+			offset = 0.0000 0.1500 0.0000,
+			rotate = -90.0000 0.0000 -90.0000,
+		}
+
+		attachment world
+		{
+			offset = -0.0000 -0.0016 -0.0000,
+			rotate = 0.0000 0.0000 0.0000,
+		}
+	}
+
+	model MacheteBlade_NoTang
+    {
+        mesh =  WorldItems/Machete_Forged_Blade_NoTang,
+        texture = weapons/1handed/Machete_Forged,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment knife_stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+    }
+
+	model MeatCleaverBladeForged
+    {
+        mesh =  WorldItems/MeatCleaver_Forged_Blade,
+        texture = weapons/1handed/MeatCleaver_Forged,
+        scale = 0.125,
+		attachment knife_shoulder
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment knife_stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+		attachment stomach
+		{
+			offset = 0.0 0.15 0.0,
+			rotate = -90.0 0.0 -90.0,
+		}
+    }
+
+	model PickAxeHeadForged
+    {
+        mesh = WorldItems/PickAxe_Head_Forged,
+        texture = weapons/2handed/PickAxe_Forged,
+        scale = 0.125,
+    }
+
+	model RakeHead
+	{
+		mesh = WorldItems/RakeHead,
+		texture = Weapons/2Handed/Rake,
+		scale = 0.125,
+	}
+
+	model Sword_Scrap_Shard
+	{
+		mesh = WorldItems/Sword_Basic_Broken_Top,
+        texture = weapons/1handed/Sword_ScrapMetal,
+		scale = 0.1,
+	}
+
+	model ScytheHeadForged
+    {
+        mesh = WorldItems/ScytheHead_Forged,
+        texture = weapons/2handed/Scythe_Forged,
+        scale = 0.125,
+    }
+
+	model ShortSwordBlade
+    {
+        mesh = WorldItems/Sword_SingleEdgeShort_Blade,
+        texture = weapons/1handed/Sword_SingleEdge,
+        scale = 0.095,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 180.0 0.0,
+		}
+    }
+
+	model ShortSwordBlade_NoTang
+    {
+        mesh = WorldItems/Sword_SingleEdgeShort_Blade_NoTang,
+        texture = weapons/1handed/Sword_SingleEdge,
+        scale = 0.095,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 180.0 0.0,
+		}
+    }
+
+	model SledgehammerHeadForged
+    {
+        mesh = WorldItems/SledgehammerHeadForged,
+        texture = weapons/2handed/Sledgehammer02_Forged,
+        scale = 0.125,
+    }
+
+	model SpadeHeadForged
+    {
+        mesh =  WorldItems/Spade_Forged_Head,
+        texture = weapons/2handed/Spade_Forged,
+        scale = 0.125,
+        scale = 0.125,
+    }
+
+	model SwordBlade
+    {
+        mesh = WorldItems/Sword_SingleEdge_Blade,
+        texture = weapons/1handed/Sword_SingleEdge,
+        scale = 0.095,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 180.0 0.0,
+		}
+    }
+
+	model SwordBlade_NoTang
+    {
+        mesh = WorldItems/Sword_SingleEdge_Blade_NoTang,
+        texture = weapons/1handed/Sword_SingleEdge,
+        scale = 0.095,
+		attachment knife_shoulder
+		{
+			offset = -0.1 0.1 0.0,
+			rotate = -90.0 180.0 0.0,
+		}
+    }
+
+	model BenchAnvil
+    {
+        mesh = WorldItems/Anvil_Jeweller,
+        scale = 0.125,
+    }
+
+	model BenchAnvilUntreated
+    {
+        mesh = WorldItems/Anvil_Jeweller,
+        texture = WorldItems/Anvil_Jeweller_Rough,
+        scale = 0.125,
+    }
+
+	model BlockAnvil
+    {
+        mesh = WorldItems/Anvil_Block,
+        scale = 0.13,
+    }
+
+	model WoodAxeHeadForged
+    {
+        mesh = WorldItems/WoodAxeHead_Forged,
+        texture = weapons/2handed/WoodAxe_Forged,
+        scale = 0.125,
+    }
+
+	model ClubHammerForgedHead
+	{
+		mesh = WorldItems/HammerClubHead_Forged,
+		texture = Weapons/1Handed/HammerClub_Forged,
+        scale = 0.12,
+	}
+
+	model BallPeenHammerHeadForged
+    {
+        mesh = WorldItems/BallPeenHammer_Head,
+        texture = weapons/1handed/BallPeen_Forged,
+        scale = 0.125,
+    }
+
+	model Buckle
+	{
+		mesh = WorldItems/BeltBuckle_Forged,
+		scale = 0.2,
+	}
+
+	model IronBarStock
+    {
+        mesh = weapons/2handed/MetalBar_Full_Hand,
+        texture = WorldItems/MetalBar_FullHalfQtr_Iron,
+
+		attachment world
+		{
+			offset = 0.0000 0.0000 0.0000,
+			rotate = 0.0000 90.0000 0.0000,
+		}
+    }
+
+}

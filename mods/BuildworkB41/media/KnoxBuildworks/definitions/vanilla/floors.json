@@ -1,0 +1,753 @@
+{
+ "schemaVersion": 1,
+ "source": "Project Zomboid Build 42 generated entity scripts",
+ "category": "Floors",
+ "buildables": [
+  {
+   "id": "kbw.vanilla.dirtfloor",
+   "displayName": "Dirt Floor",
+   "translationKey": "IGUI_KBW_Vanilla_DirtFloor",
+   "tooltipKey": "Tooltip_craft_dirtFloorDesc",
+   "category": "Floors",
+   "subcategory": "Floors",
+   "materialTags": [
+    "Floors"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "floors"
+   ],
+   "placement": {
+    "kind": "floor"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "geometry": {
+      "faces": {
+       "SINGLE": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_64"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false,
+      "onCreate": "BuildRecipeCode.floor.OnCreate",
+      "onIsValid": "BuildRecipeCode.floor.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Dirtbag"
+        ],
+        "flags": [
+         "Prop1"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 100,
+      "timedAction": "EmptyBag",
+      "category": "Outdoors"
+     },
+     "_b41Entity": "Base.DirtFloor"
+    }
+   ],
+   "iconName": "Build_FloorDirt"
+  },
+  {
+   "id": "kbw.vanilla.gravelfloor",
+   "displayName": "Gravel Floor",
+   "translationKey": "IGUI_KBW_Vanilla_GravelFloor",
+   "tooltipKey": "Tooltip_craft_gravelFloorDesc",
+   "category": "Floors",
+   "subcategory": "Floors",
+   "materialTags": [
+    "Floors"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "floors"
+   ],
+   "placement": {
+    "kind": "floor"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "geometry": {
+      "faces": {
+       "SINGLE": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_street_01_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false,
+      "onCreate": "BuildRecipeCode.floor.OnCreate",
+      "onIsValid": "BuildRecipeCode.floor.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Gravelbag"
+        ],
+        "flags": [
+         "Prop1"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 100,
+      "timedAction": "EmptyBag",
+      "category": "Outdoors"
+     },
+     "_b41Entity": "Base.GravelFloor"
+    }
+   ],
+   "iconName": "Build_FloorGravel"
+  },
+  {
+   "id": "kbw.vanilla.metalfloorlvl1",
+   "tools": [
+    {
+     "id": "welding_mask",
+     "role": "tool",
+     "mode": "keep",
+     "tags": [
+      "base:weldingmask"
+     ],
+     "amount": 1
+    }
+   ],
+   "displayName": "Metal Floor",
+   "translationKey": "IGUI_KBW_Vanilla_MetalFloorLvl1",
+   "tooltipKey": "Tooltip_craft_MetalRoofDesc",
+   "category": "Floors",
+   "subcategory": "Floors",
+   "materialTags": [
+    "Cloth",
+    "Metal"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "floors"
+   ],
+   "placement": {
+    "kind": "floor"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "constructedobjects_01_86"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "constructedobjects_01_86"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false,
+      "onCreate": "BuildRecipeCode.floor.OnCreate",
+      "onIsValid": "BuildRecipeCode.floor.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.SmallSheetMetal"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowMetal",
+      "category": "Welding",
+      "xp": {
+       "MetalWelding": 10
+      }
+     },
+     "_b41Entity": "Base.MetalFloorLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.metalfloor",
+    "name": "Metal Floor",
+    "translationKey": "IGUI_KBW_Group_vanilla_metalfloor",
+    "level": 1
+   },
+   "iconName": "Build_FloorTileMetal"
+  },
+  {
+   "id": "kbw.vanilla.sandfloor",
+   "displayName": "Sand Floor",
+   "translationKey": "IGUI_KBW_Vanilla_SandFloor",
+   "tooltipKey": "Tooltip_craft_sandFloorDesc",
+   "category": "Floors",
+   "subcategory": "Floors",
+   "materialTags": [
+    "Floors"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "floors"
+   ],
+   "placement": {
+    "kind": "floor"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "geometry": {
+      "faces": {
+       "SINGLE": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "blends_natural_01_5"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false,
+      "onCreate": "BuildRecipeCode.floor.OnCreate",
+      "onIsValid": "BuildRecipeCode.floor.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Sandbag"
+        ],
+        "flags": [
+         "Prop1"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 100,
+      "timedAction": "EmptyBag",
+      "category": "Outdoors"
+     },
+     "_b41Entity": "Base.SandFloor"
+    }
+   ],
+   "iconName": "Build_FloorSand"
+  },
+  {
+   "id": "kbw.vanilla.brickfloorlvl1",
+   "displayName": "Tile Floor",
+   "translationKey": "IGUI_KBW_Vanilla_BrickFloorLvl1",
+   "tooltipKey": "Tooltip_craft_brickFloorDesc",
+   "category": "Floors",
+   "subcategory": "Floors",
+   "materialTags": [
+    "Concrete"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "floors"
+   ],
+   "placement": {
+    "kind": "floor"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "floors_exterior_tilesandstone_01_6"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_exterior_tilesandstone_01_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false,
+      "onCreate": "BuildRecipeCode.floor.OnCreate",
+      "onIsValid": "BuildRecipeCode.floor.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Concrete"
+        ],
+        "flags": [
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 4,
+        "items": [
+         "Base.ClayTile"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "category": "Masonry",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.BrickFloorLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.brickfloor",
+    "name": "Tile Floor",
+    "translationKey": "IGUI_KBW_Group_vanilla_brickfloor",
+    "level": 1
+   },
+   "iconName": "Build_FloorTilePorcelain"
+  },
+  {
+   "id": "kbw.vanilla.woodfloorlvl3",
+   "displayName": "Wood Floor (Good)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodFloorLvl3",
+   "tooltipKey": "Tooltip_craft_woodenFloorDesc",
+   "category": "Floors",
+   "subcategory": "Floors",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "floors"
+   ],
+   "placement": {
+    "kind": "floor"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_56"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_56"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false,
+      "onCreate": "BuildRecipeCode.floor.OnCreate",
+      "onIsValid": "BuildRecipeCode.floor.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 40
+      }
+     },
+     "_b41Entity": "Base.WoodFloorLvl3"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodfloor",
+    "name": "Wood Floor",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodfloor",
+    "level": 3
+   },
+   "iconName": "Build_FloorTileWood"
+  },
+  {
+   "id": "kbw.vanilla.woodfloorlvl2",
+   "displayName": "Wood Floor (Poor)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodFloorLvl2",
+   "tooltipKey": "Tooltip_craft_woodenFloorDesc",
+   "category": "Floors",
+   "subcategory": "Floors",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "floors"
+   ],
+   "placement": {
+    "kind": "floor"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_57"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_57"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false,
+      "onCreate": "BuildRecipeCode.floor.OnCreate",
+      "onIsValid": "BuildRecipeCode.floor.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 20
+      }
+     },
+     "_b41Entity": "Base.WoodFloorLvl2"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodfloor",
+    "name": "Wood Floor",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodfloor",
+    "level": 2
+   },
+   "iconName": "Build_FloorTileWood"
+  },
+  {
+   "id": "kbw.vanilla.woodfloorlvl1",
+   "displayName": "Wood Floor (Shoddy)",
+   "translationKey": "IGUI_KBW_Vanilla_WoodFloorLvl1",
+   "tooltipKey": "Tooltip_craft_woodenFloorDesc",
+   "category": "Floors",
+   "subcategory": "Floors",
+   "materialTags": [
+    "Metal",
+    "Wood"
+   ],
+   "tags": [
+    "vanilla-b42",
+    "entity-script",
+    "floors"
+   ],
+   "placement": {
+    "kind": "floor"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "level": 1,
+     "sprites": {
+      "W": "carpentry_02_58"
+     },
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "carpentry_02_58"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "object": {
+      "isThumpable": false,
+      "onCreate": "BuildRecipeCode.floor.OnCreate",
+      "onIsValid": "BuildRecipeCode.floor.OnIsValid"
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "input_1",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "amount": 1,
+        "tags": [
+         "Hammer"
+        ],
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "input_2",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Plank"
+        ]
+       },
+       {
+        "id": "input_3",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "amount": 1,
+        "items": [
+         "Base.Nails"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 1
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowHammer",
+      "category": "Carpentry",
+      "xp": {
+       "Woodwork": 10
+      }
+     },
+     "_b41Entity": "Base.WoodFloorLvl1"
+    }
+   ],
+   "group": {
+    "id": "vanilla.woodfloor",
+    "name": "Wood Floor",
+    "translationKey": "IGUI_KBW_Group_vanilla_woodfloor",
+    "level": 1
+   },
+   "iconName": "Build_FloorTileWood"
+  }
+ ]
+}

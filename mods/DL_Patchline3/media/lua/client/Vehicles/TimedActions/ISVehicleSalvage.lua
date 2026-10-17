@@ -1,0 +1,116 @@
+require "TimedActions/ISBaseTimedAction"
+
+ISVehicleSalvage = ISBaseTimedAction:derive("ISVehicleSalvage")
+
+ISVehicleSalvage.ROLLS = {
+    [0] = { 5, 7 },
+    { 5, 7 },
+    { 6, 7 },
+    { 6, 7 },
+    { 6, 8 },
+    { 6, 8 },
+    { 7, 9 },
+    { 8, 11 },
+    { 10, 13 },
+    { 12, 16 },
+    { 14, 19 },
+}
+
+ISVehicleSalvage.POOL = {
+    { "DL_MetalLine.Scrap_Iron_S", 10 },
+    { "DL_MetalLine.Scrap_Iron_M", 12 },
+    { "DL_MetalLine.Scrap_Iron_L", 8 },
+    { "DL_MetalLine.Scrap_Carbon_S", 5 },
+    { "DL_MetalLine.Scrap_Carbon_M", 4 },
+    { "DL_MetalLine.Scrap_Aluminum_S", 8 },
+    { "DL_MetalLine.Scrap_Aluminum_M", 8 },
+    { "DL_MetalLine.Scrap_Copper_S", 4 },
+    { "DL_MetalLine.Scrap_Copper_M", 1 },
+    { "DL_MetalLine.Scrap_Lead_S", 5 },
+    { "DL_MetalLine.Scrap_Lead_M", 2 },
+    { "DL_MetalLine.Scrap_Zinc_S", 4 },
+    { "DL_MetalLine.Scrap_Nickel_S", 2 },
+    { "DL_MetalLine.Scrap_Chromium_S", 3 },
+    { "DL_MetalLine.Scrap_Chromium_M", 1 },
+    { "DL_MetalLine.Scrap_Tin_S", 1 },
+    { "DL_MetalLine.Scrap_Silver_S", 2 },
+    { "DL_MetalLine.Scrap_Gold_S", 2 },
+    { "Base.SmallSheetMetal", 16 },
+    { "Base.SheetMetal", 4 },
+    { "Base.MetalBar", 20 },
+    { "Base.MetalPipe", 20 },
+    { "Base.ScrapMetal", 20 },
+}
+
+function ISVehicleSalvage:isValid()
+    if not DLSalvage.isTorch(self.character:getPrimaryHandItem()) then
+        return false
+    end
+    return self.vehicle and not self.vehicle:isRemovedFromWorld() and not DLSalvage.isSalvaged(self.vehicle)
+end
+
+function ISVehicleSalvage:update()
+    self.character:faceThisObject(self.vehicle)
+    self.item:setJobDelta(self:getJobDelta())
+    self.item:setJobType(getText("ContextMenu_SalvageVehicle"))
+
+    if self.sound ~= 0 and not self.character:getEmitter():isPlaying(self.sound) then
+        self.sound = self.character:playSound("BlowTorch")
+    end
+
+    self.character:setMetabolicTarget(Metabolics.HeavyWork);
+end
+
+function ISVehicleSalvage:start()
+    self.item = self.character:getPrimaryHandItem()
+    self:setActionAnim("BlowTorch")
+    self:setOverrideHandModels(self.item, nil)
+    self.sound = self.character:playSound("BlowTorch")
+end
+
+function ISVehicleSalvage:stop()
+    if self.item then
+        self.item:setJobDelta(0)
+    end
+    if self.sound ~= 0 then
+        self.character:getEmitter():stopSound(self.sound)
+    end
+    ISBaseTimedAction.stop(self)
+end
+
+function ISVehicleSalvage:perform()
+    if self.sound ~= 0 then
+        self.character:getEmitter():stopSound(self.sound)
+    end
+    local level = self.character:getPerkLevel(Perks.MetalWelding)
+    local range = ISVehicleSalvage.ROLLS[level]
+    local rolls = ZombRand(range[1], range[2] + 1)
+    local totalXp = 10;
+    for i = 1, rolls do
+        self:dropItem(DLSalvage.pick(ISVehicleSalvage.POOL))
+        totalXp = totalXp + 2
+    end
+    for i = 1, DLSalvage.REQUIRE.torchUses do
+        self.item:Use();
+    end
+    self.character:getXp():AddXP(Perks.MetalWelding, totalXp);
+    -- This is a stupid way of doing this, but I have no time to do it in a cleaner way
+    DLSalvage.markSalvaged(self.character, self.vehicle)
+    self.item:setJobDelta(0);
+    ISBaseTimedAction.perform(self)
+end
+
+function ISVehicleSalvage:dropItem(item)
+    self.character:getCurrentSquare():AddWorldInventoryItem(item, ZombRandFloat(0, 0.9), ZombRandFloat(0, 0.9), 0);
+end
+
+function ISVehicleSalvage:new(character, vehicle)
+    local o = {}
+    setmetatable(o, self)
+    self.__index = self
+    o.character = character
+    o.vehicle = vehicle
+    o.maxTime = 3000 - (character:getPerkLevel(Perks.MetalWelding) * 20);
+    if character:isTimedActionInstant() then o.maxTime = 10 end
+    return o
+end

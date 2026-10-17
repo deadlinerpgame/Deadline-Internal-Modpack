@@ -1,0 +1,1887 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.elevator_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_elevator_wall",
+   "displayName": "Elevator Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_MetalPanelWall",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "iconSprite": "fixtures_escalators_01_48",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_escalators_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_escalators_01_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 5
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 3
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.elevator_wall_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_elevator_wall",
+   "displayName": "Elevator Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_MetalPanelWall",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "iconSprite": "fixtures_escalators_01_49",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_escalators_01_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_escalators_01_50"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 5
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 3
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.metal_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_metal_wall",
+   "displayName": "Metal Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_MetalPanelWall",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "iconSprite": "industry_trucks_01_4",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_5"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 5
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 3
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "industry_trucks_01_6",
+      "pillarSprite": "industry_trucks_01_7"
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.metal_door_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_metal_door_frame",
+   "displayName": "Metal Door Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_metal_walls_metal_door_frame",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "iconSprite": "industry_trucks_01_14",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 3
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ],
+     "callbacks": {
+      "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+     },
+     "object": {
+      "isThumpable": false,
+      "isDoorFrame": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.metal_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_metal_window_frame",
+   "displayName": "Metal Window",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_metal_walls_metal_window_frame",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "iconSprite": "industry_trucks_01_12",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_13"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 3
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.metal_corner_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_metal_corner_wall",
+   "displayName": "Metal Corner Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_MetalPanelWall",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 5
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 3
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "industry_trucks_01_6"
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.metal_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_metal_pillar",
+   "displayName": "Metal Pillar",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_metal_walls_metal_pillar",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "iconSprite": "industry_trucks_01_7",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.dark_metal_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_dark_metal_wall",
+   "displayName": "Dark Metal Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_DarkMetalWall",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "iconSprite": "industry_trucks_01_48",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_49"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 5
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 3
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "industry_trucks_01_50",
+      "pillarSprite": "industry_trucks_01_51"
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.dark_metal_door_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_dark_metal_door_frame",
+   "displayName": "Dark Metal Door Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_metal_walls_dark_metal_door_frame",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "iconSprite": "industry_trucks_01_58",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_59"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 3
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ],
+     "callbacks": {
+      "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+     },
+     "object": {
+      "isThumpable": false,
+      "isDoorFrame": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.dark_metal_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_dark_metal_window_frame",
+   "displayName": "Dark Metal Window",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_metal_walls_dark_metal_window_frame",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "iconSprite": "industry_trucks_01_56",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_56"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_57"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 3
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.dark_metal_corner_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_dark_metal_corner_wall",
+   "displayName": "Dark Metal Corner Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_DarkMetalWall",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_50"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 5
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 3
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "industry_trucks_01_50"
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.dark_metal_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_dark_metal_pillar",
+   "displayName": "Dark Metal Pillar",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_metal_walls_dark_metal_pillar",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "iconSprite": "industry_trucks_01_51",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "industry_trucks_01_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.jail_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_jail_wall",
+   "displayName": "Jail Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_JailWall",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "iconSprite": "location_community_police_01_0",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_police_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_police_01_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 5
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 3
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "location_community_police_01_2",
+      "pillarSprite": "location_community_police_01_3"
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.jail_door_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_jail_door_frame",
+   "displayName": "Jail Door Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_metal_walls_jail_door_frame",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "iconSprite": "location_community_police_01_10",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_police_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_police_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 3
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ],
+     "callbacks": {
+      "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+     },
+     "object": {
+      "isThumpable": false,
+      "isDoorFrame": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.jail_corner_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_jail_corner_wall",
+   "displayName": "Jail Corner Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_JailWall",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_police_01_2"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 5
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 3
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "location_community_police_01_2"
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.metal_walls.jail_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_metal_jail_pillar",
+   "displayName": "Jail Pillar",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_metal_walls_jail_pillar",
+   "category": "Walls",
+   "subcategory": "Metal Walls",
+   "material": "Metal",
+   "iconSprite": "location_community_police_01_3",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_police_01_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "MetalWelding": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureWallFrame",
+      "xp": {
+       "MetalWelding": 40
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,1869 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_sheet_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_sheet_1",
+   "displayName": "Light Brown Shallow Roof Sheet 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_0",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_sheet",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_sheet"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_sheet_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_sheet_2",
+   "displayName": "Light Brown Shallow Roof Sheet 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_1",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_sheet",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_sheet"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_eave_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_eave_1",
+   "displayName": "Light Brown Shallow Roof Eave 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_3",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_eave",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_eave"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_4"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_eave_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_eave_2",
+   "displayName": "Light Brown Shallow Roof Eave 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_2",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_eave",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_eave"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_5"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_corner_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_corner_1",
+   "displayName": "Light Brown Shallow Roof Corner 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_8",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_corner",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_corner"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_14"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_corner_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_corner_2",
+   "displayName": "Light Brown Shallow Roof Corner 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_9",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_corner",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_corner"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_cap_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_cap_1",
+   "displayName": "Light Brown Shallow Roof Cap 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_11",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_cap",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_cap"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_cap_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_cap_2",
+   "displayName": "Light Brown Shallow Roof Cap 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_10",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_cap",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_cap"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_10"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_ridge_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_ridge_1",
+   "displayName": "Light Brown Shallow Roof Ridge 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_13",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_ridge",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_13"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_ridge_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_ridge_2",
+   "displayName": "Light Brown Shallow Roof Ridge 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_12",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_ridge",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_ridge"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_12"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_pyramid_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_pyramid_1",
+   "displayName": "Light Brown Shallow Roof Pyramid 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_16",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_pyramid",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_pyramid"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_16"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_pyramid_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_pyramid_2",
+   "displayName": "Light Brown Shallow Roof Pyramid 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_17",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_pyramid",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_pyramid"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_valley_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_valley_1",
+   "displayName": "Light Brown Shallow Roof Valley 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_19",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_valley",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_valley"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_valley_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_valley_2",
+   "displayName": "Light Brown Shallow Roof Valley 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_18",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_valley",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_valley"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_18"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_hip_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_hip_1",
+   "displayName": "Light Brown Shallow Roof Hip 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_20",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_hip",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_hip"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_23"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.light_brown_roofs.light_brown_shallow_hip_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_light_brown_shallow_hip_2",
+   "displayName": "Light Brown Shallow Roof Hip 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Light Brown Roofs",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "roofs_shallow_01_21",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.light_brown_roofs.light_brown_shallow_hip",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_light_brown_shallow_hip"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_shallow_01_22"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "roofs_shallow_01"
+   ]
+  }
+ ]
+}

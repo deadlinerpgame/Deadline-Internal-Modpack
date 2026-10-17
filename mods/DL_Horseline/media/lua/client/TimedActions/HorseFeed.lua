@@ -44,7 +44,7 @@ function HorseFeed:handleFeedItem(feed, oldHunger, oldThirst)
         local amountToUse = math.min(300 - oldThirst, waterAmount)
         print("Water amount: " .. waterAmount)
         print("Amount to use: " .. amountToUse)
-        self.foodItem:setUsedDelta(self.foodItem:getUsedDelta() - amountToUse * self.foodItem:getUseDelta())
+        self.foodItem:setUsedDelta(self.foodItem:getUsedDelta() - (amountToUse / 2) * self.foodItem:getUseDelta())
         newThirst = math.min(300, oldThirst + amountToUse)
         if self.foodItem:getUsedDelta() <= 0 then
             self.foodItem:Use()
@@ -66,11 +66,6 @@ function HorseFeed:perform()
     
     local newHunger = oldHunger
     local newThirst = oldThirst
- --   if feed == "Base.BucketWaterFull" or feed == "Base.WaterPot" or feed == "Base.WaterBottleFull" or feed == "aerx.ClayJarWater" or feed == "Base.WaterPopBottle" then
- --      newHunger, newThirst = self:handleWaterItem(feed, oldHunger, oldThirst)
- --  else
- --      newHunger, newThirst = self:handleFoodItem(feed, oldHunger, oldThirst)
- --  end
         newHunger, newThirst = self:handleFeedItem(feed, oldHunger, oldThirst)
     
     if newHunger < 0 then

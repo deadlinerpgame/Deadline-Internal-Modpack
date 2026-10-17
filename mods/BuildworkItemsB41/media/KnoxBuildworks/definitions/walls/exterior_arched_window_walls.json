@@ -1,0 +1,2422 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.grey_stone_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_grey_stone_arched_window_frame",
+   "displayName": "Grey Stone Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_grey_stone_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_house_03_0",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.blue_brick_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_blue_brick_arched_window_frame",
+   "displayName": "Blue Brick Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_blue_brick_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_03_2",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintBlue"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.tan_stone_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_tan_stone_arched_window_frame",
+   "displayName": "Tan Stone Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_tan_stone_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_house_03_4",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_5"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.pink_brick_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_pink_brick_arched_window_frame",
+   "displayName": "Pink Brick Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_pink_brick_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_03_6",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintPink"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.grey_brick_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_grey_brick_arched_window_frame",
+   "displayName": "Grey Brick Arched Window Frame",
+   "tooltipKey": "Tooltip_KBW_Shared_GreyBrickArchWall",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_03_8",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_9"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGrey"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.classic_brick_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_classic_brick_arched_window_frame",
+   "displayName": "Classic Brick Arched Window Frame",
+   "tooltipKey": "Tooltip_KBW_Shared_GreyBrickArchWall",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_03_10",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.blue_clapboard_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_blue_clapboard_arched_window_frame",
+   "displayName": "Blue Clapboard Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_blue_clapboard_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_house_03_12",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_13"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintBlue"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 70
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.red_brick_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_red_brick_arched_window_frame",
+   "displayName": "Red Brick Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_red_brick_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_03_14",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.tan_clapboard_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_tan_clapboard_arched_window_frame",
+   "displayName": "Tan Clapboard Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_tan_clapboard_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_house_03_16",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintLightBrown"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 70
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.white_clapboard_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_white_clapboard_arched_window_frame",
+   "displayName": "White Clapboard Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_white_clapboard_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_house_03_18",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 70
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.beige_brick_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_beige_brick_arched_window_frame",
+   "displayName": "Beige Brick Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_beige_brick_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_03_20",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_21"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.brown_brick_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_brown_brick_arched_window_frame",
+   "displayName": "Brown Brick Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_brown_brick_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_03_22",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_23"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.white_brick_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_white_brick_arched_window_frame",
+   "displayName": "White Brick Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_white_brick_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_03_24",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.brown_clapboard_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_brown_clapboard_arched_window_frame",
+   "displayName": "Brown Clapboard Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_brown_clapboard_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_house_03_26",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintBrown"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 70
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.green_brick_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_green_brick_arched_window_frame",
+   "displayName": "Green Brick Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_green_brick_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_03_28",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_29"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGreen"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.old_brick_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_old_brick_arched_window_frame",
+   "displayName": "Old Brick Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_old_brick_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_03_30",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.turquoise_clapboard_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_turquoise_clapboard_arched_window_frame",
+   "displayName": "Turquoise Clapboard Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_turquoise_clapboard_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_house_03_32",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintTurquoise"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 70
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.tan_brick_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_tan_brick_arched_window_frame",
+   "displayName": "Tan Brick Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_tan_brick_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Brick",
+   "iconSprite": "walls_exterior_house_03_34",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.exterior_arched_window_walls.pink_clapboard_arched_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_exterior_arched_window_pink_clapboard_arched_window_frame",
+   "displayName": "Pink Clapboard Arched Window Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_exterior_arched_window_walls_pink_clapboard_arched_window_frame",
+   "category": "Walls",
+   "subcategory": "Exterior Arched Window Walls",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_house_03_36",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_03_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintPink"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 70
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     }
+    }
+   ]
+  }
+ ]
+}

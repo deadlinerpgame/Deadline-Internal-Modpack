@@ -5,7 +5,6 @@ WRC.SpecialCommands = WRC.SpecialCommands or {}
 
 MLine = {}
 
--- Finds all the Deadline Mannequin scripts, splits them by _, and separates them into a LUA object.
 function MLine.InitMannequins()
     if not (isAdmin() or isDebugEnabled()) then return end
 
@@ -27,7 +26,7 @@ function MLine.InitMannequins()
     for i = 0, mannequins:size() - 1 do
 		local script = mannequins:get(i)
 
-		if script and script:getName():contains("DL_") then -- If it is a Deadline Mannequin script.
+		if script and script:getName():contains("DL_") then
 
             local scriptName = script:getName();
             local splitName = scriptName:split("_");
@@ -42,7 +41,6 @@ function MLine.InitMannequins()
 
                 table.insert(mannequinScripts.data[skinType], pose);
 
-                -- Calculating the box sizes for skin.
                 local xLenSkin = getTextManager():MeasureStringX(UIFont.Small, skinType);
                 local yLenSkin = getTextManager():MeasureStringY(UIFont.Small, skinType);
 
@@ -54,7 +52,6 @@ function MLine.InitMannequins()
                     highestyLenSkin = yLenSkin
                 end
 
-                -- Calculating the box sizes for pose.
                 local xLenPose = getTextManager():MeasureStringX(UIFont.Small, pose);
                 local yLenPose = getTextManager():MeasureStringY(UIFont.Small, pose);
 

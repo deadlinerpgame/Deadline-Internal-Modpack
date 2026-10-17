@@ -13,11 +13,11 @@ function DLLootResultsUI:render()
     ISPanel.render(self);
 end
 
-function DLLootResultsUI:prerender() -- Call before render, it's for harder stuff that need init, ect
+function DLLootResultsUI:prerender()
     ISPanel.prerender(self);
 end
 
-function DLLootResultsUI:render() -- Use to render text and other
+function DLLootResultsUI:render()
     ISPanel.render(self);
 end
 

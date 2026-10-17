@@ -1,0 +1,1864 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shingles",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shingles",
+   "displayName": "Sage Green Shingles",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_54",
+   "placement": {
+    "kind": "floor",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shingles_pitched_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shingles_pitched_1",
+   "displayName": "Sage Green Shingles Pitched 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_32",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shingles_pitched",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_roofs_sage_green_shingles_pitched"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shingles_pitched_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shingles_pitched_2",
+   "displayName": "Sage Green Shingles Pitched 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_33",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shingles_pitched",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_roofs_sage_green_shingles_pitched"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shingles_pitched_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shingles_pitched_3",
+   "displayName": "Sage Green Shingles Pitched 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_34",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shingles_pitched",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_roofs_sage_green_shingles_pitched"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shingles_inner_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shingles_inner_1",
+   "displayName": "Sage Green Shingles Inner 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_40",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_40"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shingles_inner",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_roofs_sage_green_shingles_inner"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shingles_inner_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shingles_inner_2",
+   "displayName": "Sage Green Shingles Inner 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_41",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shingles_inner",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_roofs_sage_green_shingles_inner"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shingles_inner_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shingles_inner_3",
+   "displayName": "Sage Green Shingles Inner 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_42",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_42"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shingles_inner",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_roofs_sage_green_shingles_inner"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shingles_valley_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shingles_valley_1",
+   "displayName": "Sage Green Shingles Valley 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_43",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shingles_valley",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_roofs_sage_green_shingles_valley"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shingles_valley_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shingles_valley_2",
+   "displayName": "Sage Green Shingles Valley 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_44",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_44"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shingles_valley",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_roofs_sage_green_shingles_valley"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shingles_valley_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shingles_valley_3",
+   "displayName": "Sage Green Shingles Valley 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_45",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_45"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shingles_valley",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_roofs_sage_green_shingles_valley"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shingles_outer_1",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shingles_outer_1",
+   "displayName": "Sage Green Shingles Outer 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_56",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_56"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_61"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shingles_outer",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_roofs_sage_green_shingles_outer"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shingles_outer_2",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shingles_outer_2",
+   "displayName": "Sage Green Shingles Outer 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_57",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_57"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_60"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shingles_outer",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_roofs_sage_green_shingles_outer"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_shingles_outer_3",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_shingles_outer_3",
+   "displayName": "Sage Green Shingles Outer 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_58",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_59"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.roofing.sage_green_roofs.sage_green_shingles_outer",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_roofing_sage_green_roofs_sage_green_shingles_outer"
+   },
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_patio_shingles_pitched",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_patio_shingles_pitched",
+   "displayName": "Sage Green Patio Shingles Pitched",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_38",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_39"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_patio_shingles_inner",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_patio_shingles_inner",
+   "displayName": "Sage Green Patio Shingles Inner",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_53",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_53"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_patio_shingles_outer",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_patio_shingles_outer",
+   "displayName": "Sage Green Patio Shingles Outer",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_62",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_62"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_63"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.roofing.sage_green_roofs.sage_green_patio_shingles_valley",
+   "translationKey": "IGUI_KBWVE_Buildable_roofing_sage_green_patio_shingles_valley",
+   "displayName": "Sage Green Patio Shingles Valley",
+   "tooltipKey": "Tooltip_KBW_Shared_RoofSection",
+   "category": "Roofing",
+   "subcategory": "Sage Green Roofs",
+   "material": "Wood",
+   "iconSprite": "roofs_03_52",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "roofs_03_52"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "roof_shingles",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayShingle"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  }
+ ]
+}

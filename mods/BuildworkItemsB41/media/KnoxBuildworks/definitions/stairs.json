@@ -1,0 +1,1154 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.stairs.metal_stairs.modern_stairs",
+   "translationKey": "IGUI_KBWVE_Buildable_stairs_metal_stairs_modern_stairs",
+   "displayName": "Modern Stairs",
+   "tooltipKey": "Tooltip_KBW_Shared_Stairs",
+   "category": "Stairs",
+   "subcategory": "Metal Stairs",
+   "material": "Wood",
+   "iconSprite": "fixtures_stairs_01_0",
+   "placement": {
+    "kind": "stairs"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -2,
+          "rows": [
+           [
+            "fixtures_stairs_01_10"
+           ],
+           [
+            "fixtures_stairs_01_9"
+           ],
+           [
+            "fixtures_stairs_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_stairs_01_2",
+            "fixtures_stairs_01_1",
+            "fixtures_stairs_01_0"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 13
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 8
+       }
+      ],
+      "skills": {
+       "Woodwork": 6
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildMetalStructureMedium",
+      "xp": {
+       "Woodwork": 60
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.stairs.metal_stairs.metal_stairs",
+   "translationKey": "IGUI_KBWVE_Buildable_stairs_metal_stairs_metal_stairs",
+   "displayName": "Metal Stairs",
+   "tooltipKey": "Tooltip_KBW_Shared_Stairs",
+   "category": "Stairs",
+   "subcategory": "Metal Stairs",
+   "material": "Metal",
+   "iconSprite": "fixtures_stairs_01_3",
+   "placement": {
+    "kind": "stairs"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -2,
+          "rows": [
+           [
+            "fixtures_stairs_01_5"
+           ],
+           [
+            "fixtures_stairs_01_4"
+           ],
+           [
+            "fixtures_stairs_01_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_stairs_01_11",
+            "fixtures_stairs_01_12",
+            "fixtures_stairs_01_13"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 5
+       }
+      ],
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureMedium",
+      "xp": {
+       "MetalWelding": 50
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.stairs.metal_stairs.elevator_stairs",
+   "translationKey": "IGUI_KBWVE_Buildable_stairs_metal_stairs_elevator_stairs",
+   "displayName": "Elevator Stairs",
+   "tooltipKey": "Tooltip_KBW_Shared_Stairs",
+   "category": "Stairs",
+   "subcategory": "Metal Stairs",
+   "material": "Metal",
+   "iconSprite": "fixtures_escalators_01_0",
+   "placement": {
+    "kind": "stairs"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -2,
+          "rows": [
+           [
+            "fixtures_escalators_01_10"
+           ],
+           [
+            "fixtures_escalators_01_9"
+           ],
+           [
+            "fixtures_escalators_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_escalators_01_2",
+            "fixtures_escalators_01_1",
+            "fixtures_escalators_01_0"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 5
+       }
+      ],
+      "skills": {
+       "MetalWelding": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureMedium",
+      "xp": {
+       "MetalWelding": 50
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.stairs.wooden_stairs.simple_wooden_stairs",
+   "translationKey": "IGUI_KBWVE_Buildable_stairs_wooden_simple_wooden_stairs",
+   "displayName": "Simple Wooden Stairs",
+   "tooltipKey": "Tooltip_KBW_Shared_Stairs",
+   "category": "Stairs",
+   "subcategory": "Wooden Stairs",
+   "material": "Wood",
+   "iconSprite": "fixtures_stairs_01_64",
+   "placement": {
+    "kind": "stairs"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -2,
+          "rows": [
+           [
+            "fixtures_stairs_01_74"
+           ],
+           [
+            "fixtures_stairs_01_73"
+           ],
+           [
+            "fixtures_stairs_01_72"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_stairs_01_66",
+            "fixtures_stairs_01_65",
+            "fixtures_stairs_01_64"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 13
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 8
+       }
+      ],
+      "skills": {
+       "Woodwork": 6
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 60
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.stairs.wooden_stairs.brown_stairs",
+   "translationKey": "IGUI_KBWVE_Buildable_stairs_wooden_brown_stairs",
+   "displayName": "Brown Stairs",
+   "tooltipKey": "Tooltip_KBW_Shared_Stairs",
+   "category": "Stairs",
+   "subcategory": "Wooden Stairs",
+   "material": "Wood",
+   "iconSprite": "fixtures_stairs_01_32",
+   "placement": {
+    "kind": "stairs"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -2,
+          "rows": [
+           [
+            "fixtures_stairs_01_42"
+           ],
+           [
+            "fixtures_stairs_01_41"
+           ],
+           [
+            "fixtures_stairs_01_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_stairs_01_34",
+            "fixtures_stairs_01_33",
+            "fixtures_stairs_01_32"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 13
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintBrown"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 6
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 60
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.stairs.wooden_stairs.dark_brown_stairs",
+   "translationKey": "IGUI_KBWVE_Buildable_stairs_wooden_dark_brown_stairs",
+   "displayName": "Dark Brown Stairs",
+   "tooltipKey": "Tooltip_KBW_Shared_Stairs",
+   "category": "Stairs",
+   "subcategory": "Wooden Stairs",
+   "material": "Wood",
+   "iconSprite": "fixtures_stairs_01_16",
+   "placement": {
+    "kind": "stairs"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -2,
+          "rows": [
+           [
+            "fixtures_stairs_01_26"
+           ],
+           [
+            "fixtures_stairs_01_25"
+           ],
+           [
+            "fixtures_stairs_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_stairs_01_18",
+            "fixtures_stairs_01_17",
+            "fixtures_stairs_01_16"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 13
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintBrown"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 6
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 60
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.stairs.wooden_stairs.yellow_brown_stairs",
+   "translationKey": "IGUI_KBWVE_Buildable_stairs_wooden_yellow_brown_stairs",
+   "displayName": "Yellow Brown Stairs",
+   "tooltipKey": "Tooltip_KBW_Shared_Stairs",
+   "category": "Stairs",
+   "subcategory": "Wooden Stairs",
+   "material": "Wood",
+   "iconSprite": "fixtures_stairs_01_19",
+   "placement": {
+    "kind": "stairs"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -2,
+          "rows": [
+           [
+            "fixtures_stairs_01_29"
+           ],
+           [
+            "fixtures_stairs_01_28"
+           ],
+           [
+            "fixtures_stairs_01_27"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_stairs_01_21",
+            "fixtures_stairs_01_20",
+            "fixtures_stairs_01_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 13
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintYellow"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 6
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 60
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.stairs.wooden_stairs.white_industrial_stairs",
+   "translationKey": "IGUI_KBWVE_Buildable_stairs_wooden_white_industrial_stairs",
+   "displayName": "White Industrial Stairs",
+   "tooltipKey": "Tooltip_KBW_Shared_Stairs",
+   "category": "Stairs",
+   "subcategory": "Wooden Stairs",
+   "material": "Wood",
+   "iconSprite": "fixtures_stairs_01_48",
+   "placement": {
+    "kind": "stairs"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -2,
+          "rows": [
+           [
+            "fixtures_stairs_01_58"
+           ],
+           [
+            "fixtures_stairs_01_57"
+           ],
+           [
+            "fixtures_stairs_01_56"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_stairs_01_50",
+            "fixtures_stairs_01_49",
+            "fixtures_stairs_01_48"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 13
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 6
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 60
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.stairs.wooden_stairs.white_motel_stairs",
+   "translationKey": "IGUI_KBWVE_Buildable_stairs_wooden_white_motel_stairs",
+   "displayName": "White Motel Stairs",
+   "tooltipKey": "Tooltip_KBW_Shared_Stairs",
+   "category": "Stairs",
+   "subcategory": "Wooden Stairs",
+   "material": "Wood",
+   "iconSprite": "location_hospitality_sunstarmotel_01_40",
+   "placement": {
+    "kind": "stairs"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -2,
+          "rows": [
+           [
+            "location_hospitality_sunstarmotel_01_50"
+           ],
+           [
+            "location_hospitality_sunstarmotel_01_49"
+           ],
+           [
+            "location_hospitality_sunstarmotel_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_hospitality_sunstarmotel_01_42",
+            "location_hospitality_sunstarmotel_01_41",
+            "location_hospitality_sunstarmotel_01_40"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 13
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 6
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 60
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": false
+     }
+    }
+   ]
+  }
+ ]
+}

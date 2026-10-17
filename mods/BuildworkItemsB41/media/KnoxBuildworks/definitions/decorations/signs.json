@@ -1,0 +1,1689 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.location_restaurant_spiffos_02_58",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_location_restaurant_spiffos_02_58",
+   "displayName": "Spiffos Arrow Sign",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Metal",
+   "iconSprite": "location_restaurant_spiffos_02_58",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_59"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_57"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_56"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "metal_stock",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.IronBar",
+         "Base.MetalBar",
+         "Base.SteelBar",
+         "Base.MetalPipe"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 4
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildMetalStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "MetalWelding": 30
+      },
+      "category": "Welding"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.location_shop_accessories_genericsigns_01_7",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_location_shop_accessories_genericsigns_01_7",
+   "displayName": "For Sale Sign",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Wood",
+   "iconSprite": "location_shop_accessories_genericsigns_01_7",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_accessories_genericsigns_01_7"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_accessories_genericsigns_01_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_accessories_genericsigns_01_7"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_accessories_genericsigns_01_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 3
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.mens_room",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_mens_room",
+   "displayName": "Mens Room",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Wood",
+   "iconSprite": "fixtures_bathroom_01_18",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_21"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 3
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.ladies_room",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_ladies_room",
+   "displayName": "Ladies Room",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Wood",
+   "iconSprite": "fixtures_bathroom_01_19",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_bathroom_01_20"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 3
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.location_community_school_01_33",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_location_community_school_01_33",
+   "displayName": "Wall Clock",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Electronics",
+   "iconSprite": "location_community_school_01_33",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_school_01_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_community_school_01_32"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "electrical_wire",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ElectricWire"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "electronic_parts",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ElectronicsScrap"
+        ],
+        "amount": 5
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Electricity": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Electricity": 30
+      },
+      "category": "Electrical"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.spiffo_sign_1",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_spiffo_sign",
+   "displayName": "Spiffo Sign",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Electronics",
+   "iconSprite": "location_restaurant_spiffos_02_29",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_28"
+           ],
+           [
+            "location_restaurant_spiffos_02_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_31"
+           ],
+           [
+            "location_restaurant_spiffos_02_30"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "electrical_wire",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ElectricWire"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "electronic_parts",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ElectronicsScrap"
+        ],
+        "amount": 12
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Electricity": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Electricity": 50
+      },
+      "category": "Electrical"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.spiffo_sign_1_2",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_spiffo_sign",
+   "displayName": "Spiffo Sign",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_03_7",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_03_15"
+           ],
+           [
+            "location_restaurant_spiffos_03_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_03_6",
+            "location_restaurant_spiffos_03_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.location_restaurant_spiffos_02_47",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_location_restaurant_spiffos_02_47",
+   "displayName": "Spiffos Sign",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_02_47",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_46"
+           ],
+           [
+            "location_restaurant_spiffos_02_47"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_54",
+            "location_restaurant_spiffos_02_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.location_restaurant_spiffos_02_43",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_location_restaurant_spiffos_02_43",
+   "displayName": "Spiffos Big Menu",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_02_43",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -2,
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_45"
+           ],
+           [
+            "location_restaurant_spiffos_02_44"
+           ],
+           [
+            "location_restaurant_spiffos_02_43"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_02_40",
+            "location_restaurant_spiffos_02_41",
+            "location_restaurant_spiffos_02_42"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.location_restaurant_spiffos_03_18",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_location_restaurant_spiffos_03_18",
+   "displayName": "The Glorious Spiffo",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_03_17",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            false,
+            "location_restaurant_spiffos_03_18"
+           ],
+           [
+            "location_restaurant_spiffos_03_16",
+            "location_restaurant_spiffos_03_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": true,
+      "canPassThrough": false,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.spiffo_sign_1_3",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_spiffo_sign",
+   "displayName": "Spiffo Sign",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_03_28",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -3,
+          "rows": [
+           [
+            "location_restaurant_spiffos_03_31"
+           ],
+           [
+            "location_restaurant_spiffos_03_30"
+           ],
+           [
+            "location_restaurant_spiffos_03_29"
+           ],
+           [
+            "location_restaurant_spiffos_03_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_03_24",
+            "location_restaurant_spiffos_03_25",
+            "location_restaurant_spiffos_03_26",
+            "location_restaurant_spiffos_03_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.food_market_sign",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_food_market_sign",
+   "displayName": "Food Market Sign",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Electronics",
+   "iconSprite": "location_shop_accessories_genericsigns_01_48",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -3,
+          "rows": [
+           [
+            "location_shop_accessories_genericsigns_01_51"
+           ],
+           [
+            "location_shop_accessories_genericsigns_01_50"
+           ],
+           [
+            "location_shop_accessories_genericsigns_01_49"
+           ],
+           [
+            "location_shop_accessories_genericsigns_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_accessories_genericsigns_01_52",
+            "location_shop_accessories_genericsigns_01_53",
+            "location_shop_accessories_genericsigns_01_54",
+            "location_shop_accessories_genericsigns_01_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "electrical_wire",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ElectricWire"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "electronic_parts",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ElectronicsScrap"
+        ],
+        "amount": 12
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Electricity": 5
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Electricity": 50
+      },
+      "category": "Electrical"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.eptools_sign",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_eptools_sign",
+   "displayName": "EP Tools & Thunder GAS Sign",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Wood",
+   "iconSprite": "signs_miscbrands_01_44",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -2,
+          "rows": [
+           [
+            "signs_miscbrands_01_46"
+           ],
+           [
+            "signs_miscbrands_01_45"
+           ],
+           [
+            "signs_miscbrands_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "signs_miscbrands_01_20",
+            "signs_miscbrands_01_21",
+            "signs_miscbrands_01_22"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.thedrake_sign",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_thedrake_sign",
+   "displayName": "The Drake Sign & Hair Genesis Sign",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Wood",
+   "iconSprite": "signs_miscbrands_01_28",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -3,
+          "rows": [
+           [
+            "signs_miscbrands_01_31"
+           ],
+           [
+            "signs_miscbrands_01_30"
+           ],
+           [
+            "signs_miscbrands_01_29"
+           ],
+           [
+            "signs_miscbrands_01_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "signs_miscbrands_01_24",
+            "signs_miscbrands_01_25",
+            "signs_miscbrands_01_26",
+            "signs_miscbrands_01_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.signs.ustoreit_sign",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_signs_ustoreit_sign",
+   "displayName": "U-Store It Sign",
+   "tooltipKey": "Tooltip_KBW_Shared_Sign",
+   "category": "Decorations",
+   "subcategory": "Signs",
+   "material": "Wood",
+   "iconSprite": "signs_miscbrands_01_76",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -3,
+          "rows": [
+           [
+            "signs_miscbrands_01_79"
+           ],
+           [
+            "signs_miscbrands_01_78"
+           ],
+           [
+            "signs_miscbrands_01_77"
+           ],
+           [
+            "signs_miscbrands_01_76"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "signs_miscbrands_01_72",
+            "signs_miscbrands_01_73",
+            "signs_miscbrands_01_74",
+            "signs_miscbrands_01_75"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  }
+ ]
+}

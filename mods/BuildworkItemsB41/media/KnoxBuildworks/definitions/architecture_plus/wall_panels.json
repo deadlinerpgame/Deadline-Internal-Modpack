@@ -1,0 +1,6645 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.white_wainscoting",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_white_wainscoting",
+   "displayName": "White Wainscoting",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_detailing_01_16",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_detailing_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_detailing_01_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.white_wainscoting_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_white_wainscoting_pillar",
+   "displayName": "White Wainscoting Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_detailing_01_19",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_detailing_01_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.white_wood_panneling_upper",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_white_wood_panneling_upper",
+   "displayName": "White Wood Panelling Upper",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_detailing_01_56",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_detailing_01_56"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_detailing_01_57"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.white_wood_panneling_pillar_upper",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_white_wood_panneling_pillar_upper",
+   "displayName": "White Wood Panelling Pillar Upper",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_detailing_01_59",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_detailing_01_59"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.white_wood_panneling",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_white_wood_panneling",
+   "displayName": "White Wood Panelling",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_interior_detailing_01_0",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.white_wood_panneling_corner",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_white_wood_panneling_corner",
+   "displayName": "White Wood Panelling Corner",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_interior_detailing_01_3",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.white_wood_panneling_doorway",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_white_wood_panneling_doorway",
+   "displayName": "White Wood Panelling Doorway",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_interior_detailing_01_10",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.stained_wood_wainscoting",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_stained_wood_wainscoting",
+   "displayName": "Stained Wood Wainscoting",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_detailing_01_80",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_detailing_01_80"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_detailing_01_81"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.stained_wood_wainscoting_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_stained_wood_wainscoting_pillar",
+   "displayName": "Stained Wood Wainscoting Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_detailing_01_83",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_detailing_01_83"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.stained_wood_wood_panneling",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_stained_wood_wood_panneling",
+   "displayName": "Stained Wood Panelling",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_detailing_01_83",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_detailing_01_83"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_detailing_01_84"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.stained_wood_wood_panneling_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_stained_wood_wood_panneling_pillar",
+   "displayName": "Stained Wood Panelling Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_detailing_01_87",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_detailing_01_87"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.brown_wall_panneling",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_brown_wall_panneling",
+   "displayName": "Brown Wall Panelling",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_interior_detailing_01_32",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintBrown"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.brown_wall_panneling_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_brown_wall_panneling_pillar",
+   "displayName": "Brown Wall Panelling Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_interior_detailing_01_35",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintBrown"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.brown_wall_panneling_doorway",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_brown_wall_panneling_doorway",
+   "displayName": "Brown Wall Panelling Doorway",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_interior_detailing_01_42",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintBrown"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.light_red_brick_wall_panneling",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_light_red_brick_wall_panneling",
+   "displayName": "Light Red Brick Wall Panelling",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_interior_detailing_01_48",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_49"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.light_red_brick_wall_panneling_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_light_red_brick_wall_panneling_pillar",
+   "displayName": "Light Red Brick Wall Panelling Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_interior_detailing_01_51",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.light_red_brick_wall_panneling_doorway",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_light_red_brick_wall_panneling_doorway",
+   "displayName": "Light Red Brick Wall Panelling Doorway",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_interior_detailing_01_58",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_59"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.dark_red_brick_wall_panneling",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_dark_red_brick_wall_panneling",
+   "displayName": "Dark Red Brick Wall Panelling",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_interior_detailing_01_52",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_53"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.dark_red_brick_wall_panneling_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_dark_red_brick_wall_panneling_pillar",
+   "displayName": "Dark Red Brick Wall Panelling Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_interior_detailing_01_55",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.dark_red_brick_wall_panneling_doorway",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_dark_red_brick_wall_panneling_doorway",
+   "displayName": "Dark Red Brick Wall Panelling Doorway",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_interior_detailing_01_62",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_62"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_63"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.vibrant_red_brick_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_vibrant_red_brick_lower_third",
+   "displayName": "Vibrant Red Brick Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_commercial_03_60",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_60"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_61"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.vibrant_red_brick_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_vibrant_red_brick_lower_third_pillar",
+   "displayName": "Vibrant Red Brick Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_commercial_03_63",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_63"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.vibrant_green_brick_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_vibrant_green_brick_lower_third",
+   "displayName": "Vibrant Green Brick Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_commercial_03_68",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_68"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_69"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGreen"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.vibrant_green_brick_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_vibrant_green_brick_lower_third_pillar",
+   "displayName": "Vibrant Green Brick Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_commercial_03_71",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_71"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGreen"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.grey_brick_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_grey_brick_lower_third",
+   "displayName": "Grey Brick Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_interior_detailing_01_96",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_96"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_97"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGrey"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.grey_brick_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_grey_brick_lower_third_pillar",
+   "displayName": "Grey Brick Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_interior_detailing_01_99",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_99"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGrey"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.grey_brick_lower_third_doorway",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_grey_brick_lower_third_doorway",
+   "displayName": "Grey Brick Lower Third Doorway",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_interior_detailing_01_106",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_106"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_107"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGrey"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.tan_brick_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_tan_brick_lower_third",
+   "displayName": "Tan Brick Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_commercial_03_44",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_45"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintLightBrown"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.tan_brick_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_tan_brick_lower_third_pillar",
+   "displayName": "Tan Brick Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Brick",
+   "iconSprite": "walls_commercial_03_47",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_47"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "masonry_units",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ClayBrick"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintLightBrown"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.painted_white_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_painted_white_lower_third",
+   "displayName": "Painted White Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_interior_detailing_01_64",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_64"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_65"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.painted_white_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_painted_white_lower_third_pillar",
+   "displayName": "Painted White Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_interior_detailing_01_67",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_67"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.painted_white_lower_third_doorway",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_painted_white_lower_third_doorway",
+   "displayName": "Painted White Lower Third Doorway",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_interior_detailing_01_74",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_74"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_75"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.painted_tan_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_painted_tan_lower_third",
+   "displayName": "Painted Tan Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_interior_detailing_01_68",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_68"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_69"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintLightBrown"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.painted_tan_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_painted_tan_lower_third_pillar",
+   "displayName": "Painted Tan Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_interior_detailing_01_71",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_71"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintLightBrown"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.painted_tan_lower_third_doorway",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_painted_tan_lower_third_doorway",
+   "displayName": "Painted Tan Lower Third Doorway",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_interior_detailing_01_78",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_78"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_79"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintLightBrown"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.white_clapboard_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_white_clapboard_lower_third",
+   "displayName": "White Clapboard Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_commercial_03_28",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_29"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.white_clapboard_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_white_clapboard_lower_third_pillar",
+   "displayName": "White Clapboard Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Wood",
+   "iconSprite": "walls_commercial_03_31",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.green_cinderblock_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_green_cinderblock_lower_third",
+   "displayName": "Green Cinderblock Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_interior_detailing_01_80",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_80"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_81"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGreen"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.green_cinderblock_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_green_cinderblock_lower_third_pillar",
+   "displayName": "Green Cinderblock Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_interior_detailing_01_83",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_83"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGreen"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.white_cinderblock_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_white_cinderblock_lower_third",
+   "displayName": "White Cinderblock Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_interior_detailing_01_84",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_84"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_85"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.white_cinderblock_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_white_cinderblock_lower_third_pillar",
+   "displayName": "White Cinderblock Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_interior_detailing_01_87",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_87"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.white_cinderblock_lower_third_doorway",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_white_cinderblock_lower_third_doorway",
+   "displayName": "White Cinderblock Lower Third Doorway",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_interior_detailing_01_94",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_94"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_95"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.tan_cinderblock_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_tan_cinderblock_lower_third",
+   "displayName": "Tan Cinderblock Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_commercial_03_20",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_21"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintLightBrown"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.tan_cinderblock_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_tan_cinderblock_lower_third_pillar",
+   "displayName": "Tan Cinderblock Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_commercial_03_23",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_23"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintLightBrown"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.light_grey_cinderblock_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_light_grey_cinderblock_lower_third",
+   "displayName": "Light Grey Cinderblock Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_commercial_03_52",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_53"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGrey"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.light_grey_cinderblock_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_light_grey_cinderblock_lower_third_pillar",
+   "displayName": "Light Grey Cinderblock Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_commercial_03_55",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGrey"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.dark_grey_cinderblock_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_dark_grey_cinderblock_lower_third",
+   "displayName": "Dark Grey Cinderblock Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_interior_detailing_01_116",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_116"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_117"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGrey"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.dark_grey_cinderblock_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_dark_grey_cinderblock_lower_third_pillar",
+   "displayName": "Dark Grey Cinderblock Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_interior_detailing_01_119",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_119"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGrey"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.dark_grey_cinderblock_lower_third_doorway",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_dark_grey_cinderblock_lower_third_doorway",
+   "displayName": "Dark Grey Cinderblock Lower Third Doorway",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_interior_detailing_01_126",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_126"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_127"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGrey"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.brown_cinderblock_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_brown_cinderblock_lower_third",
+   "displayName": "Brown Cinderblock Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_commercial_03_12",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_13"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintBrown"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.brown_cinderblock_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_brown_cinderblock_lower_third_pillar",
+   "displayName": "Brown Cinderblock Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Concrete",
+   "iconSprite": "walls_commercial_03_15",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_commercial_03_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "concrete_mix",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintBrown"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.grey_stone_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_grey_stone_lower_third",
+   "displayName": "Grey Stone Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Stone",
+   "iconSprite": "walls_interior_detailing_01_100",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_100"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_101"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.grey_stone_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_grey_stone_lower_third_pillar",
+   "displayName": "Grey Stone Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Stone",
+   "iconSprite": "walls_interior_detailing_01_103",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_103"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.grey_stone_lower_third_doorway",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_grey_stone_lower_third_doorway",
+   "displayName": "Grey Stone Lower Third Doorway",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Stone",
+   "iconSprite": "walls_interior_detailing_01_110",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_110"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_111"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.brown_stone_lower_third",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_brown_stone_lower_third",
+   "displayName": "Brown Stone Lower Third",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Stone",
+   "iconSprite": "walls_interior_detailing_01_112",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_112"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_113"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.brown_stone_lower_third_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_brown_stone_lower_third_pillar",
+   "displayName": "Brown Stone Lower Third Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Stone",
+   "iconSprite": "walls_interior_detailing_01_115",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_115"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.architecture_plus.wall_panels.brown_stone_lower_third_doorway",
+   "translationKey": "IGUI_KBWVE_Buildable_architecture_plus_wall_panels_brown_stone_lower_third_doorway",
+   "displayName": "Brown Stone Lower Third Doorway",
+   "tooltipKey": "Tooltip_KBW_Shared_WallPanel",
+   "category": "Architecture Plus",
+   "subcategory": "Wall Panels",
+   "material": "Stone",
+   "iconSprite": "walls_interior_detailing_01_122",
+   "placement": {
+    "kind": "overlay",
+    "needToBeAgainstWall": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_122"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_interior_detailing_01_123"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_masons_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CrudeChisel",
+         "MasonsChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  }
+ ]
+}

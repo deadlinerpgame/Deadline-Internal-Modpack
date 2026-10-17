@@ -2,10 +2,6 @@ if isClient() then return end;
 
 require "Logs/ISLogSystem";
 
---[[
-        QueueLine Tables
---]]
-
 QueueLine_Server = {};
 
 QueueLine_Server.ItemTypes = 
@@ -19,10 +15,6 @@ QueueLine_Server.ItemTypes =
 }
 
 QueueLine_Server.QueueItems = {};
-
---[[
-        FUNCTIONS   
---]]
 
 function QueueLine_Server.PrettyPrintParams(itemParams)
     if not itemParams then return "" end;

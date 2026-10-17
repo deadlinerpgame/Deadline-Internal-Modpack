@@ -19,7 +19,7 @@ local nextTileNotification = 0;
 Events.OnPlayerUpdate.Add(function(p)
     if not p then return end
 
-    if isKeyDown(Keyboard.KEY_E) then -- Check for transport.
+    if isKeyDown(Keyboard.KEY_E) then
         local x,y,z = math.floor(p:getX()), math.floor(p:getY()), p:getZ()
         local pid = p:getOnlineID() or 0;
 
@@ -33,8 +33,6 @@ Events.OnPlayerUpdate.Add(function(p)
         DD_TeleportWithFade(pid, dest, 1, 1);
         return;
     else
-        -- Check should notify?
-        -- only fire when the player changes tile
         local pid = p:getOnlineID() or 0
         local x, y, z = math.floor(p:getX()), math.floor(p:getY()), p:getZ()
         local key = x .. "," .. y .. "," .. z

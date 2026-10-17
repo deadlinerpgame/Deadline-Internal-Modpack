@@ -1,0 +1,1982 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_shop_generic_01_19",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_shop_generic_01_19",
+   "displayName": "Generic Shop Counter",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Wood",
+   "iconSprite": "location_shop_generic_01_19",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_23"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_shop_generic_01_18",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_shop_generic_01_18",
+   "displayName": "Generic Shop Corner Counter",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Wood",
+   "iconSprite": "location_shop_generic_01_18",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_16"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_shop_generic_01_89",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_shop_generic_01_89",
+   "displayName": "Shop Display Counter",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Wood",
+   "iconSprite": "location_shop_generic_01_89",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_89"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_88"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_90"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_91"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": true
+     },
+     "container": {
+      "type": "grocerstand",
+      "capacity": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_shop_generic_01_93",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_shop_generic_01_93",
+   "displayName": "Trapzoid Shop Shelves",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Wood",
+   "iconSprite": "location_shop_generic_01_93",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_93"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_92"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_94"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_95"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true
+     },
+     "container": {
+      "type": "grocerstand",
+      "capacity": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_restaurant_pie_01_43",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_pie_store_counter",
+   "displayName": "Pie Store Counter",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_pie_01_43",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_43"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_45"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_47"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": true
+     },
+     "container": {
+      "type": "counter",
+      "capacity": 50
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_restaurant_pie_01_42",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_pie_store_corner_counter",
+   "displayName": "Pie Store Corner Counter",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_pie_01_42",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_40"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": true
+     },
+     "container": {
+      "type": "counter",
+      "capacity": 50
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_restaurant_pie_01_53",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_shop_generic_location_restaurant_pie_01_53",
+   "displayName": "Pie Display Stand",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_pie_01_53",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_54"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true
+     },
+     "container": {
+      "type": "displaycasebakery",
+      "capacity": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_shop_greenes_01_25",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_shop_generic_location_shop_greenes_01_25",
+   "displayName": "Greene's Grocery Display Counter",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Wood",
+   "iconSprite": "location_shop_greenes_01_25",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_greenes_01_25"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_greenes_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_greenes_01_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_greenes_01_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": true
+     },
+     "container": {
+      "type": "grocerstand",
+      "capacity": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_shop_greenes_01_29",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_shop_generic_location_shop_greenes_01_29",
+   "displayName": "Grocery Trapezoid Counter",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Wood",
+   "iconSprite": "location_shop_greenes_01_29",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_greenes_01_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_greenes_01_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_greenes_01_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_greenes_01_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": true
+     },
+     "container": {
+      "type": "displaycasebakery",
+      "capacity": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_shop_generic_01_99",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_shop_generic_01_99",
+   "displayName": "Glass Display Counter",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Metal",
+   "iconSprite": "location_shop_generic_01_99",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_99"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_101"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_103"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_97"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 4,
+        "flags": [
+         "Prop1",
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "metal_pipe",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "door_hinges",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Hinge"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 4,
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "completionSound": "BuildMetalStructureMedium",
+      "xp": {
+       "MetalWelding": 30
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": true
+     },
+     "container": {
+      "type": "displaycase",
+      "capacity": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_shop_generic_01_98",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_shop_generic_01_98",
+   "displayName": "Glass Corner Display Counter",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Metal",
+   "iconSprite": "location_shop_generic_01_98",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_98"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_100"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_102"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_96"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 4,
+        "flags": [
+         "Prop1",
+         "DontRecordInput"
+        ]
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "metal_pipe",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.MetalPipe"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "door_hinges",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Hinge"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "welding_rods",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.WeldingRods"
+        ],
+        "amount": 1,
+        "uses": 4,
+        "flags": [
+         "DontRecordInput"
+        ]
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildMetalStructureMedium",
+      "completionSound": "BuildMetalStructureMedium",
+      "xp": {
+       "MetalWelding": 30
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": true
+     },
+     "container": {
+      "type": "displaycase",
+      "capacity": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_shop_generic_01_35",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_shop_generic_01_35",
+   "displayName": "Rounded Glass Display Counter",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Wood",
+   "iconSprite": "location_shop_generic_01_35",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_33"
+           ],
+           [
+            "location_shop_generic_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_34",
+            "location_shop_generic_01_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_113"
+           ],
+           [
+            "location_shop_generic_01_112"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_114",
+            "location_shop_generic_01_115"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "dismantable": true
+     },
+     "container": {
+      "type": "displaycasebakery",
+      "capacity": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_restaurant_pie_01_51",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_shop_generic_location_restaurant_pie_01_51",
+   "displayName": "Glass Display Stand",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_pie_01_51",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_49"
+           ],
+           [
+            "location_restaurant_pie_01_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_50",
+            "location_restaurant_pie_01_51"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_33"
+           ],
+           [
+            "location_restaurant_pie_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_pie_01_34",
+            "location_restaurant_pie_01_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "dismantable": true
+     },
+     "container": {
+      "type": "displaycasebakery",
+      "capacity": 20
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_shop_generic_01_83",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_shop_generic_01_83",
+   "displayName": "White Display Counter",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Wood",
+   "iconSprite": "location_shop_generic_01_83",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "y": -2,
+          "rows": [
+           [
+            "location_shop_generic_01_85"
+           ],
+           [
+            "location_shop_generic_01_84"
+           ],
+           [
+            "location_shop_generic_01_83"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_80",
+            "location_shop_generic_01_81",
+            "location_shop_generic_01_82"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "glass_panels",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.GlassPanel"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintWhite"
+        ],
+        "amount": 1,
+        "uses": 1
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 50,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 50
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "dismantable": true
+     },
+     "container": {
+      "type": "displaycasebutcher"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.shop_generic.location_shop_generic_01_73",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_shop_generic_large_shop_shelves",
+   "displayName": "Large Shop Shelves",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Shop Generic",
+   "material": "Wood",
+   "iconSprite": "location_shop_generic_01_73",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_75"
+           ],
+           [
+            "location_shop_generic_01_74"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_72",
+            "location_shop_generic_01_73"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_79"
+           ],
+           [
+            "location_shop_generic_01_78"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_generic_01_76",
+            "location_shop_generic_01_77"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 40
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "canBePadlocked": true
+     },
+     "container": {
+      "type": "shelves"
+     }
+    }
+   ]
+  }
+ ]
+}

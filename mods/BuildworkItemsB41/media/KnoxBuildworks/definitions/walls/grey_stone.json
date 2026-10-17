@@ -1,0 +1,4124 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_wall",
+   "displayName": "Stone Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_house_02_0",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.wall",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_house_02_0",
+       "N": "walls_exterior_house_02_1",
+       "Corner": "walls_exterior_house_02_2"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_house_02_4",
+       "N": "walls_exterior_house_02_5",
+       "Corner": "walls_exterior_house_02_6"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_house_02_0",
+      "walls_exterior_house_02_1",
+      "walls_exterior_house_02_2"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_02_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_02_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "walls_exterior_house_02_2",
+      "pillarSprite": "walls_exterior_house_02_3"
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_door_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_door_frame",
+   "displayName": "Stone Door Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_grey_stone_grey_stone_door_frame",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_house_02_10",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.door_frame",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_house_02_10",
+       "N": "walls_exterior_house_02_11"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_house_02_14",
+       "N": "walls_exterior_house_02_15"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_house_02_10",
+      "walls_exterior_house_02_11"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_02_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_02_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "callbacks": {
+      "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+     },
+     "object": {
+      "isThumpable": false,
+      "isDoorFrame": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_corner_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_corner_wall",
+   "displayName": "Stone Corner Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_02_2"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "walls_exterior_house_02_2",
+      "isCorner": true
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "iconSprite": "walls_exterior_house_02_2",
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.corner_wall",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_house_02_2"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_house_02_6"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_house_02_2"
+     ]
+    }
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_pillar",
+   "displayName": "Stone Pillar",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_grey_stone_grey_stone_pillar",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_house_02_3",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_house_02_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "canPassThrough": true,
+      "canBarricade": false,
+      "isCorner": true
+     }
+    }
+   ],
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.pillar",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_house_02_3",
+       "Pillar": "walls_exterior_house_02_3"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_house_02_7",
+       "Pillar": "walls_exterior_house_02_7"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_house_02_3"
+     ]
+    }
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof_slope_wall_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_roof_slope_wall_1",
+   "displayName": "Stone Roof Slope Wall 1",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_09_0",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.roof_slope_wall_1",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_09_0",
+       "N": "walls_exterior_roofs_09_13"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_01_96",
+       "N": "walls_exterior_roofs_01_109"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_0",
+      "walls_exterior_roofs_09_13"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_13"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof_slope_wall",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_grey_stone_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof_slope_wall_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_roof_slope_wall_2",
+   "displayName": "Stone Roof Slope Wall 2",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_09_1",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.roof_slope_wall_2",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_09_1",
+       "N": "walls_exterior_roofs_09_12"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_01_97",
+       "N": "walls_exterior_roofs_01_108"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_1",
+      "walls_exterior_roofs_09_12"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_12"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof_slope_wall",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_grey_stone_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof_slope_wall_3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_roof_slope_wall_3",
+   "displayName": "Stone Roof Slope Wall 3",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_09_2",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.roof_slope_wall_3",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_09_2",
+       "N": "walls_exterior_roofs_09_11"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_01_98",
+       "N": "walls_exterior_roofs_01_107"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_2",
+      "walls_exterior_roofs_09_11"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof_slope_wall",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_grey_stone_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof_slope_wall_4",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_roof_slope_wall_4",
+   "displayName": "Stone Roof Slope Wall 4",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_09_8",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.roof_slope_wall_4",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_09_8",
+       "N": "walls_exterior_roofs_09_5"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_01_104",
+       "N": "walls_exterior_roofs_01_101"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_8",
+      "walls_exterior_roofs_09_5"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_5"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof_slope_wall",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_grey_stone_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof_slope_wall_5",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_roof_slope_wall_5",
+   "displayName": "Stone Roof Slope Wall 5",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_09_9",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.roof_slope_wall_5",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_09_9",
+       "N": "walls_exterior_roofs_09_4"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_01_105",
+       "N": "walls_exterior_roofs_01_100"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_9",
+      "walls_exterior_roofs_09_4"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_4"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof_slope_wall",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_grey_stone_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof_slope_wall_6",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_roof_slope_wall_6",
+   "displayName": "Stone Roof Slope Wall 6",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_09_10",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.roof_slope_wall_6",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_09_10",
+       "N": "walls_exterior_roofs_09_3"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_01_106",
+       "N": "walls_exterior_roofs_01_99"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_10",
+      "walls_exterior_roofs_09_3"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof_slope_wall",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_grey_stone_roof_slope_wall"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof_end_small",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_roof_end_small",
+   "displayName": "Stone Roof End Small",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_09_15",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.roof_end_small",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_09_15",
+       "N": "walls_exterior_roofs_09_7"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_01_111",
+       "N": "walls_exterior_roofs_01_103"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_15",
+      "walls_exterior_roofs_09_7"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_15"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof_end_medium",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_roof_end_medium",
+   "displayName": "Stone Roof End Medium",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_09_14",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.roof_end_medium",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_09_14",
+       "N": "walls_exterior_roofs_09_6"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_01_110",
+       "N": "walls_exterior_roofs_01_102"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_14",
+      "walls_exterior_roofs_09_6"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 4
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof_end_big",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_stone_roof_end_big",
+   "displayName": "Stone Roof End Big",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_09_16",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.stone.roof_end_big",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_09_16",
+       "N": "walls_exterior_roofs_09_17"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_01_112",
+       "N": "walls_exterior_roofs_01_113"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_09_16",
+      "walls_exterior_roofs_09_17"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_09_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 6
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_rising_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_rising_1",
+   "displayName": "Stone 30 Degree Rising Slope Wall 1",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_48",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_rising_1",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_48",
+       "N": "walls_exterior_roofs_30_04_77"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_0",
+       "N": "walls_exterior_roofs_30_05_29"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_48",
+      "walls_exterior_roofs_30_04_77"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_48"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_77"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_rising",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_rising_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_rising_2",
+   "displayName": "Stone 30 Degree Rising Slope Wall 2",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_49",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_rising_2",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_49",
+       "N": "walls_exterior_roofs_30_04_76"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_1",
+       "N": "walls_exterior_roofs_30_05_28"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_49",
+      "walls_exterior_roofs_30_04_76"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_76"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_rising",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_rising_3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_rising_3",
+   "displayName": "Stone 30 Degree Rising Slope Wall 3",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_50",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_rising_3",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_50",
+       "N": "walls_exterior_roofs_30_04_75"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_2",
+       "N": "walls_exterior_roofs_30_05_27"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_50",
+      "walls_exterior_roofs_30_04_75"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_50"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_75"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_rising",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_rising_4",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_rising_4",
+   "displayName": "Stone 30 Degree Rising Slope Wall 4",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_51",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_rising_4",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_51",
+       "N": "walls_exterior_roofs_30_04_74"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_3",
+       "N": "walls_exterior_roofs_30_05_26"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_51",
+      "walls_exterior_roofs_30_04_74"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_51"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_74"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_rising",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_rising_5",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_rising_5",
+   "displayName": "Stone 30 Degree Rising Slope Wall 5",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_52",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_rising_5",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_52",
+       "N": "walls_exterior_roofs_30_04_73"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_4",
+       "N": "walls_exterior_roofs_30_05_25"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_52",
+      "walls_exterior_roofs_30_04_73"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_52"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_73"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_rising",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_rising_6",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_rising_6",
+   "displayName": "Stone 30 Degree Rising Slope Wall 6",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_53",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_rising_6",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_53",
+       "N": "walls_exterior_roofs_30_04_72"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_5",
+       "N": "walls_exterior_roofs_30_05_24"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_53",
+      "walls_exterior_roofs_30_04_72"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_72"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_rising",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_rising"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_falling_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_falling_1",
+   "displayName": "Stone 30 Degree Falling Slope Wall 1",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_61",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_falling_1",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_61",
+       "N": "walls_exterior_roofs_30_04_64"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_13",
+       "N": "walls_exterior_roofs_30_05_16"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_61",
+      "walls_exterior_roofs_30_04_64"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_61"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_64"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_falling",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_falling_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_falling_2",
+   "displayName": "Stone 30 Degree Falling Slope Wall 2",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_60",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_falling_2",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_60",
+       "N": "walls_exterior_roofs_30_04_65"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_12",
+       "N": "walls_exterior_roofs_30_05_17"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_60",
+      "walls_exterior_roofs_30_04_65"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_60"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_65"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_falling",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_falling_3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_falling_3",
+   "displayName": "Stone 30 Degree Falling Slope Wall 3",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_59",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_falling_3",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_59",
+       "N": "walls_exterior_roofs_30_04_66"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_11",
+       "N": "walls_exterior_roofs_30_05_18"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_59",
+      "walls_exterior_roofs_30_04_66"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_59"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_66"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_falling",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_falling_4",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_falling_4",
+   "displayName": "Stone 30 Degree Falling Slope Wall 4",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_58",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_falling_4",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_58",
+       "N": "walls_exterior_roofs_30_04_67"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_10",
+       "N": "walls_exterior_roofs_30_05_19"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_58",
+      "walls_exterior_roofs_30_04_67"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_58"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_67"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_falling",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_falling_5",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_falling_5",
+   "displayName": "Stone 30 Degree Falling Slope Wall 5",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_57",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_falling_5",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_57",
+       "N": "walls_exterior_roofs_30_04_68"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_9",
+       "N": "walls_exterior_roofs_30_05_20"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_57",
+      "walls_exterior_roofs_30_04_68"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_57"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_68"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_falling",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_falling_6",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_falling_6",
+   "displayName": "Stone 30 Degree Falling Slope Wall 6",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_56",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_falling_6",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_56",
+       "N": "walls_exterior_roofs_30_04_69"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_8",
+       "N": "walls_exterior_roofs_30_05_21"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_56",
+      "walls_exterior_roofs_30_04_69"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_56"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_69"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_falling",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_falling"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_end_1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_end_1",
+   "displayName": "Stone 30 Degree Roof End 1",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_80",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_end_1",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_80",
+       "N": "walls_exterior_roofs_30_04_88"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_32",
+       "N": "walls_exterior_roofs_30_05_40"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_80",
+      "walls_exterior_roofs_30_04_88"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_80"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_88"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_end",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_end_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_end_2",
+   "displayName": "Stone 30 Degree Roof End 2",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_81",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_end_2",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_81",
+       "N": "walls_exterior_roofs_30_04_89"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_33",
+       "N": "walls_exterior_roofs_30_05_41"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_81",
+      "walls_exterior_roofs_30_04_89"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_81"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_89"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_end",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_end_3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_end_3",
+   "displayName": "Stone 30 Degree Roof End 3",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_82",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_end_3",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_82",
+       "N": "walls_exterior_roofs_30_04_90"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_34",
+       "N": "walls_exterior_roofs_30_05_42"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_82",
+      "walls_exterior_roofs_30_04_90"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_82"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_90"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_end",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_end_4",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_end_4",
+   "displayName": "Stone 30 Degree Roof End 4",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_83",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_end_4",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_83",
+       "N": "walls_exterior_roofs_30_04_91"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_35",
+       "N": "walls_exterior_roofs_30_05_43"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_83",
+      "walls_exterior_roofs_30_04_91"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_83"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_91"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_end",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_end_5",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_end_5",
+   "displayName": "Stone 30 Degree Roof End 5",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_84",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_end_5",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_84",
+       "N": "walls_exterior_roofs_30_04_92"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_36",
+       "N": "walls_exterior_roofs_30_05_44"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_84",
+      "walls_exterior_roofs_30_04_92"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_84"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_92"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_end",
+    "level": 5,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.grey_stone.grey_stone_roof30_end_6",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_grey_stone_roof30_end_6",
+   "displayName": "Stone 30 Degree Roof End 6",
+   "tooltipKey": "Tooltip_KBW_Shared_StoneWall",
+   "category": "Walls",
+   "subcategory": "Stone",
+   "material": "Stone",
+   "iconSprite": "walls_exterior_roofs_30_04_85",
+   "placement": {
+    "kind": "wall",
+    "dontNeedFrame": true
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "kbw.vanillaexpanded.finish.grey_stone.roof30_end_6",
+    "surface": {
+     "canPlaster": false,
+     "canPaint": true,
+     "canWallpaper": false,
+     "paintRequiresPlaster": false,
+     "wallpaperRequiresPlaster": false
+    },
+    "mapping": {
+     "directPaints": {
+      "PaintGrey": {
+       "W": "walls_exterior_roofs_30_04_85",
+       "N": "walls_exterior_roofs_30_04_93"
+      },
+      "PaintLightBrown": {
+       "W": "walls_exterior_roofs_30_05_37",
+       "N": "walls_exterior_roofs_30_05_45"
+      }
+     },
+     "baseSprites": [
+      "walls_exterior_roofs_30_04_85",
+      "walls_exterior_roofs_30_04_93"
+     ]
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_85"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_roofs_30_04_93"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_masons_trowel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "MasonsTrowel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "mortar",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Concrete"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "stone_blocks",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.StoneBlock"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 20
+      },
+      "category": "Masonry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.walls.grey_stone.grey_stone_roof30_end",
+    "level": 6,
+    "translationKey": "IGUI_KBW_Group_walls_grey_stone_roof30_end"
+   },
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "walls_exterior_roofs_30_04"
+   ]
+  }
+ ]
+}

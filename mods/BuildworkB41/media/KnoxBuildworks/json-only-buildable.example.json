@@ -1,0 +1,291 @@
+{
+  "$schema": "./buildables.schema.json",
+  "schemaVersion": 1,
+  "templates": {
+    "example.jsonOnlyObject": {
+      "category": "Furniture",
+      "subcategory": "Examples",
+      "placement": {
+        "kind": "object",
+        "requiresFloor": true
+      },
+      "construction": {
+        "time": 150,
+        "timedAction": "BuildWallHammer",
+        "sound": "HammeringIn",
+        "completionSound": "BuildWoodenStructureLarge",
+        "canWalk": false,
+        "category": "Carpentry",
+        "tags": []
+      }
+    }
+  },
+  "materialGroups": {
+    "example.woodAndFasteners": [
+      {
+        "id": "wood",
+        "role": "material",
+        "mode": "consume",
+        "items": [
+          "Base.Plank"
+        ],
+        "amount": 4
+      },
+      {
+        "id": "fasteners",
+        "role": "material",
+        "mode": "consume",
+        "items": [
+          "Base.Nails"
+        ],
+        "tags": [
+          "base:nails"
+        ],
+        "amount": 8
+      }
+    ]
+  },
+  "buildables": [
+    {
+      "id": "example.json_only_lamp",
+      "extends": "example.jsonOnlyObject",
+      "category": "Furniture",
+      "translationKey": "IGUI_Example_JSONOnlyLamp",
+      "tooltipKey": "Tooltip_Example_JSONOnlyLamp",
+      "displayName": "JSON-only lamp",
+      "description": "Editor example showing the full JSON-owned construction surface.",
+      "iconItem": "Base.Torch",
+      "material": "wood",
+      "materialTags": [
+        "Wood"
+      ],
+      "styleTags": [
+        "Utility"
+      ],
+      "tags": [
+        "light"
+      ],
+      "aliases": [
+        "example.lamp"
+      ],
+      "allowSpriteReuse": false,
+      "group": {
+        "id": "example.lamps",
+        "translationKey": "IGUI_Example_Lamps",
+        "level": 1
+      },
+      "placement": {
+        "kind": "object",
+        "requiresFloor": true,
+        "maxDistance": 10,
+        "againstWall": false,
+        "needToBeAgainstWall": false,
+        "dontNeedFrame": false,
+        "needWindowFrame": false,
+        "isPole": false
+      },
+      "construction": {
+        "time": 150,
+        "timedAction": "BuildWallHammer",
+        "sound": "HammeringIn",
+        "completionSound": "BuildWoodenStructureLarge",
+        "actionAnim": "Build",
+        "animVariable": {
+          "key": "BuildType",
+          "value": "Low"
+        },
+        "canWalk": false,
+        "category": "Carpentry",
+        "tags": [
+          "CanBeDoneInDark"
+        ],
+        "xp": {
+          "Woodwork": 5
+        }
+      },
+      "variants": [
+        {
+          "id": "plain",
+          "translationKey": "IGUI_Example_Variant_Plain"
+        }
+      ],
+      "materialOptions": [
+        {
+          "id": "wood",
+          "translationKey": "IGUI_Example_Material_Wood"
+        }
+      ],
+      "stages": [
+        {
+          "id": "built",
+          "level": 1,
+          "translationKey": "IGUI_Example_JSONOnlyLamp_Built",
+          "health": 150,
+          "skillBaseHealth": 10,
+          "bonusHealth": 25,
+          "xp": {
+            "Woodwork": 8,
+            "Electricity": 2
+          },
+          "object": {
+            "isThumpable": true,
+            "isProp": false,
+            "dismantable": true,
+            "blockAllSquare": false,
+            "canPassThrough": true,
+            "hoppable": false,
+            "canBarricade": false,
+            "canBePadlocked": false,
+            "thumpDamage": 8,
+            "breakSound": "BreakObject",
+            "cornerSprite": "walls_exterior_house_01_18",
+            "pillarSprite": "walls_exterior_house_01_19",
+            "buildLow": true,
+            "drawFloorGrid": true
+          },
+          "callbacks": {
+            "onAddToMenu": "ExampleBuildable.OnAddToMenu",
+            "onCreate": "ExampleBuildable.OnCreate",
+            "onIsValid": "ExampleBuildable.OnIsValid",
+            "timedActionOnIsValid": "ExampleBuildable.TimedActionOnIsValid"
+          },
+          "lightSource": {
+            "radius": 8,
+            "item": "Base.Torch",
+            "tags": [
+              "base:flashlight"
+            ],
+            "fuel": "Battery",
+            "debugItem": "Base.Torch",
+            "offsets": {
+              "W": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "N": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "E": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              },
+              "S": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          },
+          "container": {
+            "type": "kbw_example",
+            "capacity": 20
+          },
+          "requirements": {
+            "materials": "example.woodAndFasteners",
+            "inputs": [
+              {
+                "id": "hammer",
+                "role": "tool",
+                "mode": "keep",
+                "items": [
+                  "Base.Hammer"
+                ],
+                "tags": [
+                  "base:hammer"
+                ],
+                "amount": 1,
+                "flags": [
+                  "Prop1",
+                  "MayDegradeVeryLight"
+                ]
+              },
+              {
+                "id": "battery",
+                "role": "component",
+                "mode": "consume",
+                "items": [
+                  "Base.Battery"
+                ],
+                "amount": 1,
+                "flags": [
+                  "DontRecordInput"
+                ]
+              }
+            ],
+            "skills": {
+              "Woodwork": 2,
+              "Electricity": 1
+            },
+            "knowledge": {
+              "needToBeLearned": true,
+              "recipes": [
+                "Make JSON-only Lamp"
+              ],
+              "sources": [
+                "Example.LampMagazine"
+              ]
+            }
+          },
+          "sprites": {
+            "W": "carpentry_02_56",
+            "N": "carpentry_02_57",
+            "E": "carpentry_02_58",
+            "S": "carpentry_02_59"
+          },
+          "geometry": {
+            "faces": {
+              "W": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "carpentry_02_56"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "N": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "carpentry_02_57"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "E": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "carpentry_02_58"
+                      ]
+                    ]
+                  }
+                ]
+              },
+              "S": {
+                "layers": [
+                  {
+                    "rows": [
+                      [
+                        "carpentry_02_59"
+                      ]
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+module KnoxBuildworks
+{
+    imports { Base }
+
+    item KBW_Blueprint
+    {
+        DisplayCategory = Literature,
+        Type            = Literature,
+        Weight          = 0.1,
+        Icon            = Blueprint,
+        CanBeWrite      = false,
+        StaticModel     = Sheet,
+        WorldStaticModel = KBW_Blueprint,
+        Tags            = Blueprint;Paper,
+        DisplayName     = Blueprint,
+    }
+
+    item AsphaltMixturePowder
+    {
+        DisplayCategory = Material,
+        Type            = Normal,
+        Weight          = 5.0,
+        Icon            = AsphaltMixture,
+        Tooltip         = Tooltip_KBW_AsphaltMixturePowder,
+        WorldStaticModel = KBW_BagOfAsphaltMixture,
+        DisplayName     = Bag of Asphalt Mixture,
+    }
+
+    item BucketAsphaltMixtureFull
+    {
+        DisplayCategory  = Material,
+        Type             = Drainable,
+        Weight           = 10.0,
+        Icon             = MetalBucket_Concrete,
+        ReplaceOnDeplete = Bucket,
+        UseDelta         = 0.1,
+        UseWhileEquipped = false,
+        Tags             = HasMetal;Asphalt,
+        DisplayName      = Bucket of Asphalt Mixture,
+    }
+}

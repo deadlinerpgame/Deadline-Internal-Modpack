@@ -1,0 +1,23 @@
+module SGuns
+{
+    imports
+    {
+        Base,
+    }
+
+    item ScrapGunMag4
+	{
+		Weight = 0.1,
+		Tooltip    =    Tooltip_ScrapGunMag4,
+		Type = Literature,
+		DisplayName = Gunsmiths Journal Vol. 1,
+		Icon = ScrapGunMag4,
+		TeachedRecipes = Disassamble Gun;Make Scrap Bullets;Assemble Scrap SMG;Assemble Scrap Pistol;Assemble Scrap Pistol Magazine;Assemble Scrap SMG Magazine,
+		StaticModel = ScrapGunMag4_Reading,
+		ReplaceOnUse    =   ScrapGunMag4,
+		WorldStaticModel = ScrapGunMag4_Ground,
+		DisplayCategory = SkillBook,
+		Override = true,
+	}
+
+}

@@ -1,0 +1,321 @@
+module Base
+{
+
+	recipe Make Jar Lid
+	{
+        	DL_MetalLine.Scrap_Iron_S=2,
+        	BlowTorch=1,
+        	keep [Recipe.GetItemTypes.Hammer],
+        	keep [Recipe.GetItemTypes.WeldingMask],
+
+		SkillRequired:MetalWelding=1,
+        	Result:JarLid,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Box of Screws
+    	{
+        	DL_MetalLine.Scrap_Iron_M=5,
+        	BlowTorch=5,
+        	keep [Recipe.GetItemTypes.Hammer],
+        	keep [Recipe.GetItemTypes.WeldingMask],
+		SkillRequired:MetalWelding=4,
+
+        	Result:ScrewsBox,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Box of Nails
+    	{
+        	DL_MetalLine.Scrap_Iron_M=5,
+        	BlowTorch=1,
+        	keep [Recipe.GetItemTypes.Hammer],
+        	keep [Recipe.GetItemTypes.WeldingMask],
+		SkillRequired:MetalWelding=4,
+
+        	Result:NailsBox,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Scrap Junk
+    	{
+        	TinCanEmpty/EmptyBeerCan/PopEmpty/Pop2Empty/Pop3Empty/BeerCanEmpty/Necklace_DogTag,
+        	keep [Recipe.GetItemTypes.Hammer],
+
+        	Result:DL_MetalLine.Scrap_Iron_S,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Hammer,
+        	Sound:Hammering,
+        	Category:Welding,
+	}
+
+    	recipe Make Doorknobs from Bars
+    	{
+		aerx.IronBar=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        	Result:Doorknob=10,
+        RemoveResultItem:true,
+        OnCreate:Recipe.OnCreate.DLForgeX10,
+		SkillRequired:MetalWelding=3,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Hinges from Bars
+    	{
+		aerx.IronBar=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+        	Result:Hinge=10,
+        RemoveResultItem:true,
+        OnCreate:Recipe.OnCreate.DLForgeX10,
+		SkillRequired:MetalWelding=3,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Doorknobs
+    	{
+		MetalBar/MetalPipe=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        	Result:Doorknob=4,
+        RemoveResultItem:true,
+        OnCreate:Recipe.OnCreate.DLForgeX4,
+		SkillRequired:MetalWelding=3,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Hinges
+    	{
+		MetalBar/MetalPipe=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+        	Result:Hinge=4,
+        RemoveResultItem:true,
+        OnCreate:Recipe.OnCreate.DLForgeX4,
+		SkillRequired:MetalWelding=3,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Buckles from Bars
+    	{
+		aerx.IronBar=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        	Result:aerx.Buckle=10,
+        RemoveResultItem:true,
+        OnCreate:Recipe.OnCreate.DLForgeX10,
+		SkillRequired:MetalWelding=3,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Buckles
+    	{
+		MetalBar/MetalPipe=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+        	Result:aerx.Buckle=4,
+        RemoveResultItem:true,
+        OnCreate:Recipe.OnCreate.DLForgeX4,
+		SkillRequired:MetalWelding=3,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
+        	Sound:BlowTorch,
+        	Category:Welding,
+    	}
+
+    	recipe Make Empty Paint Bucket
+    	{
+		aerx.IronBar=2,
+		Wire,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		SkillRequired:MetalWelding=3,
+
+        	Result:Base.PaintbucketEmpty,
+        	Time:255.0,
+			AnimNode:Disassemble,
+        	Sound:Hammering,
+        	Category:Welding,
+    	}
+
+    	recipe Make Welding Rods
+    	{
+		BlowTorch=1,
+		DL_MetalLine.Ingot_Copper=1,
+		DL_MetalLine.Ingot_Iron=2,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		SkillRequired:MetalWelding=3,
+
+        	Result:WeldingRods=4,
+        	Time:255.0,
+			AnimNode:Disassemble,
+			Prop1:Blowtorch,
+        	Sound:Hammering,
+        	Category:Welding,
+    	}
+
+	recipe Melt Ingots into Nails
+    {
+
+	[Recipe.GetItemTypes.DLIngot]=1,
+
+		keep [Recipe.GetItemTypes.WeldingMask],
+
+		NoBrokenItems			: false,
+		SkillRequired:MetalWelding=4,
+        	Result           		: NailsBox=4,
+        	Time             		: 500.0,
+	    	Sound 					: CutSheet,
+		OnGiveXP 				: Give2MWXP,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+
+		CanBeDoneFromFloor      : False,
+		NeedToBeLearn: false,
+		NearItem:Simple Forge,
+		Prop1:Blowtorch,
+		Prop2:Hammer,
+		Sound:Hammering,
+		Sound:BlowTorch,
+    }
+
+	recipe Melt Ingots into Nails
+    {
+
+	[Recipe.GetItemTypes.DLIngot]=1,
+
+		keep [Recipe.GetItemTypes.WeldingMask],
+
+		NoBrokenItems			: false,
+		SkillRequired:MetalWelding=8,
+        	Result           		: NailsBox=5,
+        	Time             		: 500.0,
+	    	Sound 					: CutSheet,
+		OnGiveXP 				: Give2MWXP,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+
+		CanBeDoneFromFloor      : False,
+		NeedToBeLearn: false,
+		NearItem:Advanced Forge,
+		Prop1:Blowtorch,
+		Prop2:Hammer,
+		Sound:Hammering,
+		Sound:BlowTorch,
+    }
+
+	recipe Melt Ingot into Electric Wire
+    {
+
+	DL_MetalLine.Ingot_Copper/DL_MetalLine.Ingot_CopperImpure=1,
+
+		keep [Recipe.GetItemTypes.WeldingMask],
+
+		NoBrokenItems			: false,
+		SkillRequired:MetalWelding=5,
+        	Result           		: Radio.ElectricWire=5,
+        	Time             		: 500.0,
+	    	Sound 					: CutSheet,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+
+		CanBeDoneFromFloor      : False,
+		NeedToBeLearn: false,
+		NearItem:Simple Forge,
+		Prop1:Blowtorch,
+		Sound:BlowTorch,
+    }
+
+   recipe Cut Sheet Metal
+    {
+       	SheetMetal=1,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+        Result:SmallSheetMetal=4,
+        Time:255.0,
+        Category:Smithing,
+		RemoveResultItem:true,
+		OnCreate:Recipe.OnCreate.DLForgeX4,
+		SkillRequired:MetalWelding=1,
+		AnimNode:Disassemble,
+		Prop1:Blowtorch,
+		Sound:BlowTorch,
+
+    }
+
+   recipe Weld Small Metal Sheets Together
+    {
+       	SmallSheetMetal=4,
+		BlowTorch=1,
+		keep Glasses_WeldingGogglesOn/WeldingMask/Hat_TagillaMask/Hat_TagillaMask2,
+        Result:SheetMetal=1,
+        Time:255.0,
+        Category:Smithing,
+		AnimNode:Disassemble,
+		OnCreate:Recipe.OnCreate.DLForge,
+		SkillRequired:MetalWelding=3,
+		Prop1:Blowtorch,
+		Sound:BlowTorch,
+
+    }
+
+    	recipe Make File
+    	{
+		SmallSheetMetal=2,
+		DL_MetalLine.Scrap_Iron_S=4,
+        	BlowTorch=1,
+		aerx.Handle=1,
+		keep Saw,
+		keep BallPeenHammer/BallPeenHammerForged/HammerForged/ClawhammerForged/ClubHammer/ClubHammerForged/Hammer/HammerStone,
+		keep [Recipe.GetItemTypes.WeldingMask],
+		SkillRequired:MetalWelding=5,
+
+        	Result:aerx.File,
+        OnCreate:Recipe.OnCreate.DLForge,
+        	Time:140.0,
+		AnimNode:Disassemble,
+		Prop1:Blowtorch,
+        Sound:BlowTorch,
+        Category:Welding,
+    	}
+
+}

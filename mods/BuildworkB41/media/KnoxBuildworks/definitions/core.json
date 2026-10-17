@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "templates": {
+    "woodCommon": {
+      "category": "Walls",
+      "subcategory": "Wood Walls",
+      "material": "wood",
+      "materialTags": [
+        "Wood"
+      ],
+      "placement": {
+        "kind": "wall"
+      },
+      "tools": [
+        {
+          "id": "hammer",
+          "role": "tool",
+          "mode": "keep",
+          "label": "Hammer",
+          "tags": [
+            "base:hammer"
+          ],
+          "flags": [
+            "Prop1",
+            "MayDegradeVeryLight"
+          ]
+        }
+      ],
+      "construction": {
+        "time": 200,
+        "sound": "HammeringIn"
+      }
+    },
+    "simpleObject": {
+      "category": "Furniture",
+      "placement": {
+        "kind": "object"
+      },
+      "construction": {
+        "time": 150
+      }
+    }
+  },
+  "materialGroups": {
+    "woodWall": [
+      {
+        "items": [
+          "Base.Plank"
+        ],
+        "amount": 2
+      },
+      {
+        "items": [
+          "Base.Nails"
+        ],
+        "amount": 4
+      }
+    ]
+  },
+  "buildables": []
+}

@@ -1,0 +1,324 @@
+{
+ "schemaVersion": 1,
+ "materialGroups": {
+  "kbwve.extended.wall_frame": [
+   {
+    "id": "tool_hammer",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:hammer"
+    ],
+    "amount": 1,
+    "flags": [
+     "Prop1",
+     "MayDegradeVeryLight"
+    ]
+   },
+   {
+    "id": "lumber",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.Plank"
+    ],
+    "amount": 3
+   },
+   {
+    "id": "fasteners_nails",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.Nails"
+    ],
+    "amount": 4
+   }
+  ],
+  "kbwve.extended.pillar": [
+   {
+    "id": "tool_hammer",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:hammer"
+    ],
+    "amount": 1,
+    "flags": [
+     "Prop1",
+     "MayDegradeVeryLight"
+    ]
+   },
+   {
+    "id": "lumber",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.Plank"
+    ],
+    "amount": 1
+   },
+   {
+    "id": "fasteners_nails",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.Nails"
+    ],
+    "amount": 2
+   }
+  ],
+  "kbwve.extended.window": [
+   {
+    "id": "tool_hammer",
+    "role": "tool",
+    "mode": "keep",
+    "tags": [
+     "base:hammer"
+    ],
+    "amount": 1,
+    "flags": [
+     "Prop1",
+     "MayDegradeVeryLight"
+    ]
+   },
+   {
+    "id": "lumber",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.Plank"
+    ],
+    "amount": 2
+   },
+   {
+    "id": "fasteners_nails",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.Nails"
+    ],
+    "amount": 4
+   },
+   {
+    "id": "glass_panels",
+    "role": "material",
+    "mode": "consume",
+    "items": [
+     "Base.GlassPanel"
+    ],
+    "amount": 4
+   }
+  ]
+ },
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.extended.wooden_panel_door_frame",
+   "allowSpriteReuse": true,
+   "translationKey": "IGUI_KBWVE_Buildable_Extended_WoodenPanelDoorFrame",
+   "displayName": "Wooden Panel Door Frame",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_wooden_01_34",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "doorframe",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": true,
+     "canWallpaper": true
+    }
+   },
+   "construction": {
+    "time": 200,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureLarge",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 30
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.extended.wall_frame",
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ],
+     "callbacks": {
+      "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+     },
+     "object": {
+      "isThumpable": false,
+      "isDoorFrame": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.extended.wooden_panel_pillar",
+   "allowSpriteReuse": true,
+   "translationKey": "IGUI_KBWVE_Buildable_Extended_WoodenPanelPillar",
+   "displayName": "Wooden Panel Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_WoodPanelWall",
+   "category": "Walls",
+   "subcategory": "Wooden Panel",
+   "material": "Wood",
+   "iconSprite": "walls_exterior_wooden_01_27",
+   "placement": {
+    "kind": "wall"
+   },
+   "finishes": {
+    "enabled": true,
+    "wallType": "pillar",
+    "surface": {
+     "canPlaster": true,
+     "canPaint": true,
+     "canWallpaper": true
+    }
+   },
+   "construction": {
+    "time": 200,
+    "timedAction": "BuildWallHammer",
+    "completionSound": "BuildWoodenStructureLarge",
+    "category": "Carpentry",
+    "xp": {
+     "Woodwork": 30
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "walls_exterior_wooden_01_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.extended.pillar",
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "object": {
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.extended.plain_wooden_window",
+   "allowSpriteReuse": true,
+   "translationKey": "IGUI_KBWVE_Buildable_Extended_PlainWoodenWindow",
+   "displayName": "Plain Wooden Window",
+   "tooltipKey": "Tooltip_KBW_Shared_Window",
+   "category": "Windows",
+   "subcategory": "Wooden",
+   "material": "Wood",
+   "iconSprite": "fixtures_windows_01_0",
+   "placement": {
+    "kind": "object",
+    "needWindowFrame": true
+   },
+   "construction": {
+    "time": 75,
+    "timedAction": "BuildWoodenStructureMedium",
+    "completionSound": "BuildWoodenStructureMedium",
+    "category": "Furniture",
+    "xp": {
+     "Woodwork": 20
+    }
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_windows_01_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "materials": "kbwve.extended.window",
+      "skills": {
+       "Woodwork": 5
+      }
+     },
+     "object": {
+      "canBarricade": true
+     }
+    }
+   ]
+  }
+ ]
+}

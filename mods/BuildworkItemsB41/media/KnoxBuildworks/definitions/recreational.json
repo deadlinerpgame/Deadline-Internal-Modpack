@@ -1,0 +1,300 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.recreational.music.recreational_01_0",
+   "translationKey": "IGUI_KBWVE_Buildable_recreational_music_recreational_01_0",
+   "displayName": "Oldies Jukebox",
+   "tooltipKey": "Tooltip_KBW_Shared_MusicDecoration",
+   "category": "Recreational",
+   "subcategory": "Music",
+   "material": "Electronics",
+   "iconSprite": "recreational_01_0",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "recreational_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "recreational_01_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "electrical_wire",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ElectricWire"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "electronic_parts",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.ElectronicsScrap"
+        ],
+        "amount": 12
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 6
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "wood_cabinet",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "speaker",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Speaker"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "light_bulb",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.LightBulb"
+        ],
+        "amount": 1
+       }
+      ],
+      "skills": {
+       "Electricity": 5,
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Electricity": 50,
+       "Woodwork": 30
+      },
+      "category": "Electrical"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.recreational.music.recreational_01_9",
+   "allowSpriteReuse": true,
+   "translationKey": "IGUI_KBWVE_Buildable_recreational_music_recreational_01_9",
+   "displayName": "Western Piano",
+   "tooltipKey": "Tooltip_KBW_Shared_MusicDecoration",
+   "category": "Recreational",
+   "subcategory": "Music",
+   "material": "Wood",
+   "iconSprite": "recreational_01_9",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "recreational_01_13"
+           ],
+           [
+            "recreational_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "recreational_01_8",
+            "recreational_01_9"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "recreational_01_31"
+           ],
+           [
+            "recreational_01_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "recreational_01_28",
+            "recreational_01_29"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 16
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 8
+       },
+       {
+        "id": "tool_carpentry_chisel",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "CarpentryChisel"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 8
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureMedium",
+      "completionSound": "BuildWoodenStructureSmall",
+      "xp": {
+       "Woodwork": 120
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": true,
+      "canPassThrough": false,
+      "canBarricade": false
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+module TW
+{
+    imports
+    {
+        Base,
+    }
+
+    recipe Cut Scraps into Wire
+    {
+
+    		DL_MetalLine.Scrap_Iron_M/DL_MetalLine.Scrap_Aluminum_M/DL_MetalLine.Scrap_Tin_M/DL_MetalLine.Scrap_Nickel_M/DL_MetalLine.Scrap_Zinc_M=15,
+		BlowTorch=2,
+
+		keep [Recipe.GetItemTypes.WeldingMask],
+
+		NoBrokenItems			: false,
+		AllowDestroyedItem      : true,
+        	Result           		: Wire=2,
+        	Time             		: 500.0,
+	    	Sound 					: CutSheet,
+		OnGiveXP 				: Give2MWXP,
+		Category 		        : Scrapping,
+		AnimNode 				: Disassemble,
+
+		CanBeDoneFromFloor      : False,
+		NeedToBeLearn: false,
+
+    }
+
+}

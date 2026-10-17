@@ -1,0 +1,2269 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red1_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red1_wall",
+   "displayName": "Spiffos Red 1 Walls Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoWall",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_01_0",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "location_restaurant_spiffos_01_7",
+      "pillarSprite": "location_restaurant_spiffos_01_22"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red1_door_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red1_door_frame",
+   "displayName": "Spiffos Red 1 Walls Door Frame",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoDoorFrame",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_01_2",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ],
+     "callbacks": {
+      "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+     },
+     "object": {
+      "isThumpable": false,
+      "isDoorFrame": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red1_window_frame1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red1_window_frame1",
+   "displayName": "Spiffos Red 1 Walls Window 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoWindowFrame",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_01_70",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_70"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_71"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red1_window_frame2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red1_window_frame2",
+   "displayName": "Spiffos Red 1 Walls Window 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoWindowAlt",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Glass",
+   "iconSprite": "location_restaurant_spiffos_01_4",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_4"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_18"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red1_window_frame3",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red1_window_frame3",
+   "displayName": "Spiffos Red 1 Walls Window 3",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoWindowAlt",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Glass",
+   "iconSprite": "location_restaurant_spiffos_01_6",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_16"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red1_corner_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red1_corner_wall",
+   "displayName": "Spiffos Red 1 Walls Corner Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoWall",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "location_restaurant_spiffos_01_7"
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red1_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red1_pillar",
+   "displayName": "Spiffos Red 1 Walls Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoPillar",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_01_22",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_22"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red2_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red2_wall",
+   "displayName": "Spiffos Red 2 Walls Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoWall",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_01_8",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_9"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "location_restaurant_spiffos_01_15",
+      "pillarSprite": "location_restaurant_spiffos_01_23"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red2_door_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red2_door_frame",
+   "displayName": "Spiffos Red 2 Walls Door Frame",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoDoorFrame",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_01_10",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_11"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ],
+     "callbacks": {
+      "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+     },
+     "object": {
+      "isThumpable": false,
+      "isDoorFrame": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red2_window_frame2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red2_window_frame2_spiffos_red_2_walls_window_2",
+   "displayName": "Spiffos Red 2 Walls Window 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoWindowFrame",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_01_78",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_78"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_79"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red2_window_frame1",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red2_window_frame1",
+   "displayName": "Spiffos Red 2 Walls Window 1",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoWindowAlt",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Glass",
+   "iconSprite": "location_restaurant_spiffos_01_12",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_12"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_21"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red2_window_frame2_2",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red2_window_frame2_spiffos_red_2_walls_window_2",
+   "displayName": "Spiffos Red 2 Walls Window 2",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoWindowAlt",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Glass",
+   "iconSprite": "location_restaurant_spiffos_01_14",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_19"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red2_corner_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red2_corner_wall",
+   "displayName": "Spiffos Red 2 Walls Corner Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoWall",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_15"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "location_restaurant_spiffos_01_15"
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_red2_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_red2_pillar",
+   "displayName": "Spiffos Red 2 Walls Pillar",
+   "tooltipKey": "Tooltip_KBW_Shared_RedSpiffoPillar",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_01_23",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_23"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintRed"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_green_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_green_wall",
+   "displayName": "Spiffos Green Walls Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_GreenSpiffoWall",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_01_40",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_41"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGreen"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "location_restaurant_spiffos_01_42",
+      "pillarSprite": "location_restaurant_spiffos_01_43"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_green_door_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_green_door_frame",
+   "displayName": "Spiffos Green Walls Door Frame",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_spiffos_walls_spiffos_green_door_frame",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_01_46",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_47"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGreen"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ],
+     "callbacks": {
+      "onIsValid": "KnoxBuildworks.JsonCallbacks.DoorFrame.OnIsValid"
+     },
+     "object": {
+      "isThumpable": false,
+      "isDoorFrame": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_green_window_frame",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_green_window_frame",
+   "displayName": "Spiffos Green Walls Window",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_spiffos_walls_spiffos_green_window_frame",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_01_44",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_44"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_45"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGreen"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "hoppable": true,
+      "canBarricade": true
+     },
+     "previousStage": [
+      "WoodenWallFrame",
+      "MetalWallFrame"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_green_corner_wall",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_green_corner_wall",
+   "displayName": "Spiffos Green Walls Corner Wall",
+   "tooltipKey": "Tooltip_KBW_Shared_GreenSpiffoWall",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_42"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGreen"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "isThumpable": true,
+      "canBarricade": false,
+      "cornerSprite": "location_restaurant_spiffos_01_42"
+     }
+    }
+   ],
+   "allowSpriteReuse": true
+  },
+  {
+   "id": "kbw.vanillaexpanded.walls.spiffos_walls.spiffos_green_pillar",
+   "translationKey": "IGUI_KBWVE_Buildable_walls_spiffos_green_pillar",
+   "displayName": "Spiffos Green Walls Pillar",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_walls_spiffos_walls_spiffos_green_pillar",
+   "category": "Walls",
+   "subcategory": "Spiffos Walls",
+   "material": "Wood",
+   "iconSprite": "location_restaurant_spiffos_01_43",
+   "placement": {
+    "kind": "wall"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_restaurant_spiffos_01_43"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "tool_paintbrush",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Paintbrush"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "finish_paint",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.PaintGreen"
+        ],
+        "amount": 1,
+        "uses": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  }
+ ]
+}

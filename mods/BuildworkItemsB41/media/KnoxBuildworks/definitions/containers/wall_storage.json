@@ -1,0 +1,1813 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.containers.wall_cabinets.wall_cabinet_oakwood",
+   "translationKey": "IGUI_KBWVE_Buildable_WallCabinet_Oakwood",
+   "displayName": "Oakwood Wall Cabinet",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Upper Counters",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "fixtures_counters_01_19",
+   "placement": {
+    "kind": "object",
+    "againstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 60,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "blockAllSquare": false
+     },
+     "container": {
+      "type": "counter"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.wall_cabinets.wall_cabinet_hardwood",
+   "translationKey": "IGUI_KBWVE_Buildable_WallCabinet_Hardwood",
+   "displayName": "Hardwood Wall Cabinet",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Upper Counters",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "fixtures_counters_01_23",
+   "placement": {
+    "kind": "object",
+    "againstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_23"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_20"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_21"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 60,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "blockAllSquare": false
+     },
+     "container": {
+      "type": "counter"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.wall_cabinets.wall_cabinet_steel",
+   "translationKey": "IGUI_KBWVE_Buildable_WallCabinet_Steel",
+   "displayName": "Steel Wall Cabinet",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Upper Counters",
+   "material": "Metal",
+   "materialTags": [
+    "Metal"
+   ],
+   "iconSprite": "fixtures_counters_01_31",
+   "placement": {
+    "kind": "object",
+    "againstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_31"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_29"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 5
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 80,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureMedium",
+      "xp": {
+       "MetalWelding": 25
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "blockAllSquare": false
+     },
+     "container": {
+      "type": "counter"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.wall_cabinets.wall_cabinet_oak",
+   "translationKey": "IGUI_KBWVE_Buildable_WallCabinet_Oak",
+   "displayName": "Oak Wall Cabinet",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Upper Counters",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "fixtures_counters_01_147",
+   "placement": {
+    "kind": "object",
+    "againstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_147"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_146"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_144"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_145"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 60,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "blockAllSquare": false
+     },
+     "container": {
+      "type": "counter"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.wall_cabinets.wall_cabinet_dark",
+   "translationKey": "IGUI_KBWVE_Buildable_WallCabinet_Dark",
+   "displayName": "Dark Wall Cabinet",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Upper Counters",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "fixtures_counters_01_151",
+   "placement": {
+    "kind": "object",
+    "againstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_151"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_150"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_148"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_149"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 60,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "blockAllSquare": false
+     },
+     "container": {
+      "type": "counter"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.wall_cabinets.wall_cabinet_green",
+   "translationKey": "IGUI_KBWVE_Buildable_WallCabinet_Green",
+   "displayName": "Green Wall Cabinet",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Upper Counters",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "fixtures_counters_01_155",
+   "placement": {
+    "kind": "object",
+    "againstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_155"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_154"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_152"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_153"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 60,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "blockAllSquare": false
+     },
+     "container": {
+      "type": "counter"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.wall_cabinets.wall_cabinet_white",
+   "translationKey": "IGUI_KBWVE_Buildable_WallCabinet_White",
+   "displayName": "White Wall Cabinet",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Upper Counters",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "fixtures_counters_01_159",
+   "placement": {
+    "kind": "object",
+    "againstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_159"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_158"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_156"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_157"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 60,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "blockAllSquare": false
+     },
+     "container": {
+      "type": "counter"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.wall_cabinets.wall_cabinet_dark_oak",
+   "translationKey": "IGUI_KBWVE_Buildable_WallCabinet_DarkOak",
+   "displayName": "Dark Oak Wall Cabinet",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Containers",
+   "subcategory": "Upper Counters",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "fixtures_counters_01_203",
+   "placement": {
+    "kind": "object",
+    "againstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_203"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_202"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_200"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "fixtures_counters_01_201"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 60,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "blockAllSquare": false
+     },
+     "container": {
+      "type": "counter"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.wall_shelves.hardwood",
+   "translationKey": "IGUI_KBWVE_Buildable_WallShelf_Hardwood",
+   "displayName": "Hardwood Wall Shelves",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Furniture",
+   "subcategory": "Bookshelves",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "furniture_shelving_01_2",
+   "placement": {
+    "kind": "object",
+    "againstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_1"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_4"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 60,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "blockAllSquare": false
+     },
+     "container": {
+      "type": "shelves"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.wall_shelves.metal",
+   "allowSpriteReuse": true,
+   "translationKey": "IGUI_KBWVE_Buildable_WallShelf_Metal",
+   "displayName": "Metal Wall Shelves",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Furniture",
+   "subcategory": "Bookshelves",
+   "material": "Metal",
+   "materialTags": [
+    "Metal"
+   ],
+   "iconSprite": "furniture_shelving_01_29",
+   "placement": {
+    "kind": "object",
+    "againstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_29"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_28"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_welding_mask",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "WeldingMask"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "sheet_metal",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SmallSheetMetal"
+        ],
+        "amount": 3
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "torch_fuel",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.BlowTorch"
+        ],
+        "amount": 1,
+        "uses": 5
+       }
+      ],
+      "skills": {
+       "MetalWelding": 3
+      }
+     },
+     "construction": {
+      "time": 80,
+      "timedAction": "BuildWallMetal",
+      "completionSound": "BuildMetalStructureMedium",
+      "xp": {
+       "MetalWelding": 25
+      },
+      "category": "Welding"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "blockAllSquare": false
+     },
+     "container": {
+      "type": "metal_shelves"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.wall_shelves.lightwood",
+   "translationKey": "IGUI_KBWVE_Buildable_WallShelf_Lightwood",
+   "displayName": "Lightwood Wall Shelves",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Furniture",
+   "subcategory": "Bookshelves",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "furniture_shelving_01_32",
+   "placement": {
+    "kind": "object",
+    "againstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 60,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "blockAllSquare": false
+     },
+     "container": {
+      "type": "shelves"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.wall_shelves.darkwood",
+   "translationKey": "IGUI_KBWVE_Buildable_WallShelf_Darkwood",
+   "displayName": "Darkwood Wall Shelves",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Furniture",
+   "subcategory": "Bookshelves",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "furniture_shelving_01_34",
+   "placement": {
+    "kind": "object",
+    "againstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 60,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "blockAllSquare": false
+     },
+     "container": {
+      "type": "shelves"
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.furniture.wall_shelves.white",
+   "translationKey": "IGUI_KBWVE_Buildable_WallShelf_White",
+   "displayName": "White Wall Shelves",
+   "tooltipKey": "Tooltip_KBW_Shared_StorageFixture",
+   "category": "Furniture",
+   "subcategory": "Bookshelves",
+   "material": "Wood",
+   "materialTags": [
+    "Wood"
+   ],
+   "iconSprite": "furniture_shelving_01_36",
+   "placement": {
+    "kind": "object",
+    "againstWall": true,
+    "requiresFloor": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_36"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_shelving_01_37"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "fasteners_screws",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Screws"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "tool_screwdriver",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Screwdriver"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeVeryLight"
+        ]
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 60,
+      "timedAction": "BuildWallHammer",
+      "completionSound": "BuildWoodenStructureMedium",
+      "xp": {
+       "Woodwork": 25
+      },
+      "category": "Furniture"
+     },
+     "object": {
+      "isThumpable": false,
+      "canPassThrough": true,
+      "blockAllSquare": false
+     },
+     "container": {
+      "type": "shelves"
+     }
+    }
+   ]
+  }
+ ]
+}

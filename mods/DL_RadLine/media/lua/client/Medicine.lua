@@ -108,7 +108,6 @@ local function RadResist()
     end
 end
 
--- Hook the function into the game's context menu generator
 Events.OnFillInventoryObjectContextMenu.Add(addPotassiumOption)
 Events.OnFillInventoryObjectContextMenu.Add(addPrussianBlueOption)
 Events.OnFillInventoryObjectContextMenu.Add(addNeupogenOption)

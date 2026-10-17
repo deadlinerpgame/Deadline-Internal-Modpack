@@ -9,7 +9,6 @@ function ProstheticsCore.CheckForAmputations()
     local amputationSlots = {};
     local currentAmputations = {};
 
-    -- Find all the clothing locations named "amputation".
     local humanGroup = BodyLocations.getGroup("Human");
     local clothingLocs = humanGroup:getAllLocations();
 
@@ -21,7 +20,6 @@ function ProstheticsCore.CheckForAmputations()
         end
     end
 
-    -- For each amputation slot, is something worn there? (i.e. is there an amputation)
     if #amputationSlots == 0 then return {} end;
 
     for i, v in ipairs(amputationSlots) do
@@ -204,9 +202,6 @@ function ProstheticsCore.DoMultiAmputationsDisableActions()
     end 
 end
 
---[[
-        TIME HELPERS
---]]
 function ProstheticsCore.GetMinutesDiffMs(oldTimestamp)
     return ProstheticsCore.GetMinutesDiff(Calendar.getInstance():getTimeInMillis(), oldTimestamp);
 end
@@ -224,7 +219,6 @@ function ProstheticsCore.MinutesToMs(minutes)
     return math.floor(minutes * 60000);
 end
 
----------------------------------------------------------------
 function ProstheticsCore.LoadProstheticItems()
     ProstheticsCore.PROSTHETIC_TIERS = {};
 
@@ -244,6 +238,5 @@ function ProstheticsCore.OnLoad()
 end
 
 Events.OnLoad.Add(ProstheticsCore.OnLoad);
----------------------------------------------------------------
 
 return ProstheticsCore;

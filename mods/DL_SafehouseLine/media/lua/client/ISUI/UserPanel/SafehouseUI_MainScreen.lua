@@ -13,7 +13,6 @@ local ADD_LEN = getTextManager():MeasureStringX(UIFont.Small, "Add Manager") + 5
 local REMOVE_LEN = getTextManager():MeasureStringX(UIFont.Small, "Remove Manager") + 5;
 
 function ISSafehouseUI:onClickAddManager(button)
-    -- Find player and check if they are in game.
     local selected = self.playerList.selected;
 
     local selectedName = self.playerList.items[selected].item.name;
@@ -27,7 +26,6 @@ function ISSafehouseUI:onClickAddManager(button)
 end 
 
 function ISSafehouseUI:onClickRemoveManager(button)
-    -- Find player and check if they are in game.
     local selected = self.playerList.selected;
 
     local selectedName = self.playerList.items[selected].item.name;
@@ -40,7 +38,7 @@ function ISSafehouseUI:onClickRemoveManager(button)
     self:updateManagerButtons();
 end
 
-function ISSafehouseUI:onMouseDown_List(x, y) -- NOTE, the self of this is the playerList itself!
+function ISSafehouseUI:onMouseDown_List(x, y)
     local row = self:rowAt(x, y);
     if not row or row == -1 then return; end
 
@@ -75,26 +73,21 @@ function ISSafehouseUI:updateButtons()
 end
 
 function ISSafehouseUI:updateManagerButtons()
-    -- 1. Is there a player selected?
     if not self.playerList.selected or self.playerList.selected == 0 then return end;
 
     local selected = self.playerList.selected;
 
-    -- Get player from selected.
     if not self.playerList.items then return end;
     if not self.playerList.items[selected] then return end;
 
     local managerItem = self.playerList.items[selected].item or nil;
     if not managerItem then return end;
 
-    -- 2. If selected, are they a manager?
     local isMgr = SafehouseClient.IsManagerEx(managerItem.name, self.safehouse);
 
-    -- 3. If they're NOT a manager:
     if not isMgr or isMgr == false then
         local mgrSlotsLeft = SafehouseClient.GetRemainingManagerSlots(self.safehouse);
         if not mgrSlotsLeft then return end;
-        -- a. If manager slots available, "add manager".
         if mgrSlotsLeft > 0 then
             self.mgrBtn.title = "Add Manager";
             self.mgrBtn:setWidth(ADD_LEN + 5);
@@ -103,15 +96,12 @@ function ISSafehouseUI:updateManagerButtons()
             if self:canAddManagers() then
                 self.mgrBtn.enable = true;
             end
-        -- b. If manager slots NOT available, keep button disabled.
         else
             self.mgrBtn.enable = false;
         end
         return;
     end
 
-    -- 4. If they ARE a manager:
-        -- a. Show remove manager button.
     self.mgrBtn.title = "Remove Manager";
     self.mgrBtn:setWidth(REMOVE_LEN + 5);
     self.mgrBtn.onclick = ISSafehouseUI.onClickRemoveManager;
@@ -120,7 +110,6 @@ function ISSafehouseUI:updateManagerButtons()
         self.mgrBtn.enable = true;
     end
 
-    -- Now check if we can reactivate the add player for managers.
     if SafehouseClient.IsManager(getPlayer(), self.safehouse) then
         self.addPlayer.enable = true;
     end
@@ -149,17 +138,7 @@ function ISSafehouseUI:populateListEx()
     self:updateManagerButtons();
 end
 
---[[
-    OVERRIDE DEFAULT SAFEHOUSE UI INIT FUNCTIONALITY
-    Call initial functionality.
-    Then inject our own features.
---]]
-
 local vanillaPlayerListFunction = ISSafehouseUI.populateList;
-
---[[
-    OVERRIDE THE FUNCTION TO PREVENT SENDING IF HAS MULTIPLE SHs.
---]]
 
 function SafehouseLine_ReceiveSafehouseInvite(safehouse, host)
     if ISSafehouseUI.inviteDialogs[host] then
@@ -202,7 +181,6 @@ function SafehouseLine_OnCreatePlayer(playerNum, player)
         self.mgrBtn = mgrBtn;
         self.mgrBtn.enable = false;
     
-        -- Override vanilla functionality to allow managers to add players.
         self.addPlayer.enable = self:isOwner() or self:hasPrivilegedAccessLevel() or SafehouseClient.IsManager(getPlayer(), self.safehouse);
         self.playerList.onMouseDown = self.onMouseDown_List;
         self.playerList.doDrawItem = self.drawPlayers;

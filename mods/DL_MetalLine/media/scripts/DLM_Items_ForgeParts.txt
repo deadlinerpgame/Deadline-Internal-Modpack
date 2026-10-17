@@ -1,0 +1,475 @@
+module aerx
+{
+	imports
+	{
+		Base,
+	}
+
+	item OldAxeHead
+	{
+		DisplayName = Axe Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = Axehead_Forged02,
+		StaticModel         = AxeHead_Old,
+		WorldStaticModel    = AxeHead_Old,
+
+	}
+
+	item ClawhammerHead
+	{
+		DisplayName = Clawhammer Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = HammerHead_Forged,
+		StaticModel         = ClawhammerHeadForged,
+		WorldStaticModel    = ClawhammerHeadForged,
+
+	}
+
+	item CrudeSwordBlade
+	{
+		DisplayName = Crude Sword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = SwordBlade_Forged_01,
+		StaticModel = CrudeSwordBlade,
+		WorldStaticModel = CrudeSwordBlade,
+	}
+
+	item CrudeSwordBlade_NoTang
+	{
+		DisplayName = Crude Sword Blade (No Tang),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = SwordBlade_Forged_01_NoTang,
+		StaticModel = CrudeSwordBlade_NoTang,
+		WorldStaticModel = CrudeSwordBlade_NoTang,
+	}
+
+	item CrudeShortSwordBlade
+	{
+		DisplayName = Crude Shortsword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1.5,
+		Icon = SwordBlade_Forged_01,
+		StaticModel = CrudeShortSwordBlade,
+		WorldStaticModel = CrudeShortSwordBlade,
+	}
+
+	item CrudeShortSwordBlade_NoTang
+	{
+		DisplayName = Crude Shortsword Blade (No Tang),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1.5,
+		Icon = SwordBlade_Short_Forged_01_NoTang,
+		StaticModel = CrudeShortSwordBlade_NoTang,
+		WorldStaticModel = CrudeShortSwordBlade_NoTang,
+	}
+
+	item GardenForkHead_Forged
+	{
+		DisplayName = Garden Fork Head,
+		DisplayCategory = Material,
+		Type = Weapon,
+		Weight = 1,
+		Icon = GardenFork_Head_Forged,
+		BaseSpeed = 1.2,
+		BreakSound = MeatCleaverBreak,
+		Categories = Blunt,
+		ConditionLowerChanceOneIn = 15,
+		ConditionMax = 10,
+		CritDmgMultiplier = 2,
+		CriticalChance = 15,
+		DamageCategory = Slash,
+		DamageMakeHole = TRUE,
+		DoorDamage = 1,
+		DoorHitSound = MeatCleaverHit,
+		DropSound = MeatCleaverDrop,
+		HitFloorSound = MeatCleaverHit,
+		HitSound = MeatCleaverHit,
+		KnockBackOnNoDeath = TRUE,
+		KnockdownMod = 2,
+		MaxDamage = 0.8,
+		MaxHitCount = 2,
+		MaxRange = 1.1,
+		MinAngle = 0.65,
+		MinDamage = 0.4,
+		MinRange = 0.61,
+		MinimumSwingTime = 4,
+		PushBackMod = 0.3,
+		SplatBloodOnNoDeath = FALSE,
+		SplatNumber = 3,
+		SubCategory = Swinging,
+		SwingAmountBeforeImpact = 0.02,
+		SwingAnim = Bat,
+		SwingSound = MeatCleaverSwing,
+		SwingTime = 4,
+		TreeDamage = 0,
+		WeaponLength = 0.2,
+		WeaponSprite = GardenFork_Head,
+	}
+
+	item HacksawBlade
+	{
+		DisplayName = Hacksaw Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = Sawblade,
+		StaticModel = HacksawBlade,
+		WorldStaticModel = HacksawBlade,
+	}
+
+	item HandScytheBlade
+	{
+		DisplayName = Hand Scythe Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.3,
+		Icon = ScytheHead_Forged,
+		StaticModel         = HandScytheHeadForged,
+		WorldStaticModel    = HandScytheHeadForged,
+	}
+
+	item HandAxeHead
+	{
+		DisplayName = Hatchet Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = AxeHead_Forged,
+		StaticModel = HandAxeHeadForged,
+		WorldStaticModel = HandAxeHeadForged,
+	}
+
+	item HuntingKnifeBlade
+	{
+		DisplayName = Hunting Knife Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = HuntingKnifeBlade_Forged,
+		StaticModel = HuntingKnifeBladeForged,
+		WorldStaticModel = HuntingKnifeBladeForged,
+	}
+
+	item KitchenKnifeBlade
+	{
+		DisplayName = Kitchen Knife Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = KitchenKnifeBlade_Forged,
+		StaticModel = KitchenKnifeBladeForged,
+		WorldStaticModel = KitchenKnifeBladeForged,
+	}
+
+	item LargeKnifeBlade
+	{
+		DisplayName = Large Knife Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = KnifeLargeBlade_Crude_Tang,
+		StaticModel = CrudeHuntingKnifeForgedBlade,
+		WorldStaticModel = CrudeHuntingKnifeForgedBlade,
+
+	}
+
+	item SpearLongHead
+	{
+		DisplayName = Long Spearhead,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = SpearHead_Forged_02,
+		StaticModel = SpearLongHeadForged,
+		WorldStaticModel = SpearLongHeadForged,
+	}
+
+	item MaceHead
+	{
+		DisplayName = Mace Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = MaceHead_Forged,
+		StaticModel = MaceHead,
+		WorldStaticModel = MaceHead,
+	}
+
+	item MacheteBlade
+	{
+		DisplayName = Machete Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = MacheteBlade_Forged,
+		StaticModel = MacheteBladeForged,
+		WorldStaticModel = MacheteBladeForged,
+	}
+
+	item MacheteBlade_NoTang
+	{
+		DisplayName = Machete Blade (No Tang),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = MacheteBlade_Forged_NoTang,
+		StaticModel = MacheteBlade_NoTang,
+		WorldStaticModel = MacheteBlade_NoTang,
+	}
+
+	item MeatCleaverBlade
+	{
+		DisplayName = Meat Cleaver Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = CleaverBlade_Forged,
+		StaticModel = MeatCleaverBladeForged,
+		WorldStaticModel = MeatCleaverBladeForged,
+	}
+
+	item PickAxeHead
+	{
+		DisplayName = Pick Axe Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = PickaxeHead_Forged,
+		StaticModel         = PickAxeHeadForged,
+		WorldStaticModel    = PickAxeHeadForged,
+	}
+
+	item RakeHead
+	{
+		DisplayName = Rake-Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = RakeHead,
+		StaticModel = RakeHead,
+		WorldStaticModel = RakeHead,
+	}
+
+	item Sword_Scrap_Shard
+	{
+		DisplayName = Scrap Metal Blade Shard,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = Sword_Crude_Tip,
+		StaticModel = Sword_Scrap_Shard,
+		WorldStaticModel = Sword_Scrap_Shard,
+	}
+
+	item ScytheBlade
+	{
+		DisplayName = Scythe Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = FullScytheHead_Forged,
+		StaticModel         = ScytheHeadForged,
+		WorldStaticModel    = ScytheHeadForged,
+	}
+
+	item ShortSwordBlade
+	{
+		DisplayName = Shortsword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1.5,
+		Icon = SwordBlade_Forged_Short,
+		StaticModel = ShortSwordBlade,
+		WorldStaticModel = ShortSwordBlade,
+	}
+
+	item ShortSwordBlade_NoTang
+	{
+		DisplayName = Shortsword Blade (No Tang),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1.5,
+		Icon = SwordBlade_Forged_02_NoTang,
+		StaticModel = ShortSwordBlade_NoTang,
+		WorldStaticModel = ShortSwordBlade_NoTang,
+	}
+
+	item SledgehammerHead
+	{
+		DisplayName = Sledgehammer Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 4,
+		Icon = SledgehammerHead_Forged,
+		StaticModel         = SledgehammerHeadForged,
+		WorldStaticModel    = SledgehammerHeadForged,
+	}
+
+	item SpadeHead_Forged
+	{
+		DisplayName = Spade Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 1,
+		Icon = ShovelHead_Forged,
+		StaticModel = SpadeHeadForged,
+		WorldStaticModel = SpadeHeadForged,
+	}
+
+	item SpearHead
+	{
+		DisplayName = Spearhead,
+		DisplayCategory = Material,
+		Type = Weapon,
+		Weight = 0.7,
+		Icon = SpearHead_Forged_01,
+		StaticModel = SpearShortHeadForged,
+		WorldStaticModel = SpearShortHeadForged,
+	}
+
+	item SwordBlade
+	{
+		DisplayName = Sword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = SwordBlade_Forged_02,
+		StaticModel = SwordBlade,
+		WorldStaticModel = SwordBlade,
+	}
+
+	item SwordBlade_NoTang
+	{
+		DisplayName = Sword Blade (No Tang),
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = SwordBlade_Forged_02_NoTang,
+		StaticModel = SwordBlade_NoTang,
+		WorldStaticModel = SwordBlade_NoTang,
+
+	}
+
+	item WoodAxeHead
+	{
+		DisplayName = Wood Axe Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = AxeHead_Forged,
+		StaticModel         = WoodAxeHeadForged,
+		WorldStaticModel    = WoodAxeHeadForged,
+	}
+
+	item BallPeenHammerHead
+	{
+		DisplayName = Ball Peen Hammer Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 0.5,
+		Icon = BallPeenHammerHead_Forged,
+		StaticModel         = BallPeenHammerHeadForged,
+		WorldStaticModel    = BallPeenHammerHeadForged,
+		ConditionMax = 10,
+	}
+
+	item ClubHammerHead
+	{
+		DisplayName = Club Hammer Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 2,
+		Icon = ClubHammerHead_Forged,
+		StaticModel         = ClubHammerForgedHead,
+		WorldStaticModel    = ClubHammerForgedHead,
+		ConditionMax = 10,
+	}
+
+	item T3_Greatsword_Blade
+	{
+		DisplayName = Greatsword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 4,
+		Icon = T3Greatsword,
+		StaticModel = T3_GreatswordBlade,
+		WorldStaticModel = T3_GreatswordBlade,
+	}
+
+	item T3_Longsword_Blade
+	{
+		DisplayName = Longsword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = T3Longsword,
+		StaticModel = T3_LongswordBlade,
+		WorldStaticModel = T3_LongswordBlade,
+	}
+
+	item T3_Shortsword_Blade
+	{
+		DisplayName = Shortsword Blade,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = T3Shortsword,
+		StaticModel = T3_ShortswordBlade,
+		WorldStaticModel = T3_ShortswordBlade,
+	}
+
+	item T3_HalberdA_Head
+	{
+		DisplayName = Long-Pointed Halberd Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = HalberdA,
+		StaticModel = T3_HalberdA_Head,
+		WorldStaticModel = T3_HalberdA_Head,
+	}
+
+	item T3_HalberdB_Head
+	{
+		DisplayName = Curved Halberd Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = HalberdB,
+		StaticModel = T3_HalberdB_Head,
+		WorldStaticModel = T3_HalberdB_Head,
+	}
+
+	item T3_HalberdC_Head
+	{
+		DisplayName = Ornate Halberd Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = HalberdC,
+		StaticModel = T3_HalberdC_Head,
+		WorldStaticModel = T3_HalberdC_Head,
+	}
+
+	item T3_HalberdD_Head
+	{
+		DisplayName = Glaive Head,
+		DisplayCategory = Material,
+		Type = Normal,
+		Weight = 3,
+		Icon = T3_Glaive,
+		StaticModel = T3_HalberdD_Head,
+		WorldStaticModel = T3_HalberdD_Head,
+	}
+
+}

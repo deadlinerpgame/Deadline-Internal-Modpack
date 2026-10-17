@@ -1,0 +1,402 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.containers.crates.location_shop_greenes_01_35",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_crates_location_shop_greenes_01_35",
+   "displayName": "Small Crate",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_containers_crates_location_shop_greenes_01_35",
+   "category": "Containers",
+   "subcategory": "Crates",
+   "material": "Wood",
+   "iconSprite": "location_shop_greenes_01_35",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_greenes_01_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_greenes_01_36"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": true,
+      "canBePadlocked": true
+     },
+     "container": {
+      "type": "smallcrate",
+      "capacity": 25
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.crates.location_shop_greenes_01_37",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_crates_location_shop_greenes_01_37",
+   "displayName": "Vegetable Basket",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_containers_crates_location_shop_greenes_01_37",
+   "category": "Containers",
+   "subcategory": "Crates",
+   "material": "Wood",
+   "iconSprite": "location_shop_greenes_01_37",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_greenes_01_37"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "location_shop_greenes_01_38"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "tool_hammer",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Hammer"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop1",
+         "MayDegradeVeryLight"
+        ]
+       },
+       {
+        "id": "lumber",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Plank"
+        ],
+        "amount": 2
+       },
+       {
+        "id": "fasteners_nails",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.Nails"
+        ],
+        "amount": 2
+       }
+      ],
+      "skills": {
+       "Woodwork": 3
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWoodenStructureSmall",
+      "completionSound": "BuildWoodenStructureLarge",
+      "xp": {
+       "Woodwork": 30
+      },
+      "category": "Carpentry"
+     },
+     "object": {
+      "blockAllSquare": true
+     },
+     "container": {
+      "type": "smallbox",
+      "capacity": 10
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.crates.furniture_storage_02_16",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_crates_furniture_storage_02_16",
+   "displayName": "Cartbox",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_containers_crates_furniture_storage_02_16",
+   "category": "Containers",
+   "subcategory": "Crates",
+   "material": "Other",
+   "iconSprite": "furniture_storage_02_16",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_02_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "furniture_storage_02_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "paper",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SheetPaper2"
+        ],
+        "amount": 4
+       },
+       {
+        "id": "adhesive",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Glue",
+         "Base.Woodglue"
+        ],
+        "amount": 1,
+        "uses": 2
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeVeryLight"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": true
+     },
+     "container": {
+      "type": "cardboardbox",
+      "capacity": 25
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.containers.crates.trashcontainers_01_26",
+   "translationKey": "IGUI_KBWVE_Buildable_containers_crates_trashcontainers_01_26",
+   "displayName": "Battered Cartboard Box",
+   "tooltipKey": "Tooltip_KBWVE_Buildable_kbw_vanillaexpanded_containers_crates_trashcontainers_01_26",
+   "category": "Containers",
+   "subcategory": "Crates",
+   "material": "Other",
+   "iconSprite": "trashcontainers_01_26",
+   "placement": {
+    "kind": "object"
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "trashcontainers_01_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "trashcontainers_01_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "paper",
+        "role": "material",
+        "mode": "consume",
+        "resourceType": "Item",
+        "items": [
+         "Base.SheetPaper2"
+        ],
+        "amount": 1
+       },
+       {
+        "id": "adhesive",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.Scotchtape",
+         "Base.Glue"
+        ],
+        "amount": 1,
+        "uses": 1
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeVeryLight"
+        ]
+       }
+      ]
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildWallNoTool",
+      "completionSound": "BuildWoodenStructureLarge",
+      "category": "Other"
+     },
+     "object": {
+      "blockAllSquare": true
+     },
+     "container": {
+      "type": "smallbox",
+      "capacity": 10
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,5196 @@
+{
+ "schemaVersion": 1,
+ "buildables": [
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_0",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_dark_green_rug",
+   "displayName": "Dark Green Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_0",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_0"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_6"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_7"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.dark_green_rug",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_dark_green_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_2",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_dark_green_rug",
+   "displayName": "Dark Green Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_2",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_2"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_5"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_3"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_4"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.dark_green_rug",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_dark_green_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_88",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_victorian_2_rug",
+   "displayName": "Victorian 2 Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_88",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_88"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_90"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_89"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_91"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.victorian_2_rug",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_victorian_2_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_92",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_victorian_2_rug",
+   "displayName": "Victorian 2 Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_92",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_92"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_93"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.victorian_2_rug",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_victorian_2_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_60",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_rug",
+   "displayName": "Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_60",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_60"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.rug",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_8",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_dark_purple_rug",
+   "displayName": "Dark Purple Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_8",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_8"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_14"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_15"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_9"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.dark_purple_rug",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_dark_purple_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_10",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_dark_purple_rug",
+   "displayName": "Dark Purple Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_10",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_10"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_13"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_11"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_12"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.dark_purple_rug",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_dark_purple_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_80",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_victorian_1_victorian_1_rug",
+   "displayName": "Victorian 1 Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_80",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_80"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_82"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_81"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_83"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.victorian_1_victorian_1_rug",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_victorian_1_victorian_1_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_84",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_victorian_1_victorian_1_rug",
+   "displayName": "Victorian 1 Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_84",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_84"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_85"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.victorian_1_victorian_1_rug",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_victorian_1_victorian_1_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_61",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_rug",
+   "displayName": "Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_61",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_61"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.rug",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_16",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_bordeaux_rug",
+   "displayName": "Bordeaux Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_16",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_16"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_22"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_23"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_17"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.bordeaux_rug",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_bordeaux_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_18",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_bordeaux_rug",
+   "displayName": "Bordeaux Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_18",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_18"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_21"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_19"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_20"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.bordeaux_rug",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_bordeaux_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_96",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_victorian_3_rug",
+   "displayName": "Victorian 3 Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_96",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_96"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_98"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_97"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_99"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.victorian_3_rug",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_victorian_3_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_100",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_victorian_3_rug",
+   "displayName": "Victorian 3 Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_100",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_100"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_101"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.victorian_3_rug",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_victorian_3_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_62",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_rug",
+   "displayName": "Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_62",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_62"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.rug",
+    "level": 3,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_78",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_dark_grey_rug",
+   "displayName": "Dark Grey Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_78",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_78"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_72"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_73"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_79"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.dark_grey_rug",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_dark_grey_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_74",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_dark_grey_rug",
+   "displayName": "Dark Grey Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_74",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_74"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_77"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_75"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_76"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.dark_grey_rug",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_dark_grey_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_104",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_victorian_4_rug",
+   "displayName": "Victorian 4 Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_104",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_104"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_106"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_105"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_107"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.victorian_4_rug",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_victorian_4_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_108",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_victorian_4_rug",
+   "displayName": "Victorian 4 Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_108",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_108"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_109"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.victorian_4_rug",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_victorian_4_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_87",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_rug",
+   "displayName": "Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_87",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_87"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.rug",
+    "level": 4,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_26",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_fancy_blue_rug",
+   "displayName": "Fancy Blue Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_26",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_26"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_42"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_43"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_27"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.fancy_blue_rug",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_fancy_blue_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_34",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_fancy_blue_rug",
+   "displayName": "Fancy Blue Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_34",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_35"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_34"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_35"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.fancy_blue_rug",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_fancy_blue_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_30",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_fancy_green_rug",
+   "displayName": "Fancy Green Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_30",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_30"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_46"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_47"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_31"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.fancy_green_rug",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_fancy_green_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_38",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_fancy_green_rug",
+   "displayName": "Fancy Green Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_38",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_39"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_38"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_39"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.fancy_green_rug",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_fancy_green_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_40",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_fancy_orange_rug",
+   "displayName": "Fancy Orange Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_40",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_40"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_41"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_24"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_25"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.fancy_orange_rug",
+    "level": 2,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_fancy_orange_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_32",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_fancy_orange_rug",
+   "displayName": "Fancy Orange Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_32",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_33"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_32"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_33"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 4
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 40
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "group": {
+    "id": "kbw.vanillaexpanded.group.decorations.rugs.fancy_orange_rug",
+    "level": 1,
+    "translationKey": "IGUI_KBW_Group_decorations_rugs_fancy_orange_rug"
+   }
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.toddler_rug_corner",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_toddler_rug_corner",
+   "displayName": "Toddler Rug Corner",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_63",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_63"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_64"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_66"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_70"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.toddler_rug_edge",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_toddler_rug_edge",
+   "displayName": "Toddler Rug Edge",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_65",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_65"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_67"
+           ]
+          ]
+         }
+        ]
+       },
+       "E": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_69"
+           ]
+          ]
+         }
+        ]
+       },
+       "S": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_71"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.toddler_rug_inner",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_toddler_rug_inner",
+   "displayName": "Toddler Rug Inner",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_68",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_68"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_49",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_01_49",
+   "displayName": "Rounded Bathroom Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_49",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_48"
+           ],
+           [
+            "floors_rugs_01_49"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_50",
+            "floors_rugs_01_51"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_53",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_01_53",
+   "displayName": "Square Bathroom Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_53",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_52"
+           ],
+           [
+            "floors_rugs_01_53"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_54",
+            "floors_rugs_01_55"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_01_57",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_floors_rugs_01_57",
+   "displayName": "Door Mat Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_01_57",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_56"
+           ],
+           [
+            "floors_rugs_01_57"
+           ]
+          ]
+         }
+        ]
+       },
+       "N": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_01_58",
+            "floors_rugs_01_59"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 10
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 8
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_02_0",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_cream_shag_rug",
+   "displayName": "Cream Shag Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_02_0",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_02_0"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "floors_rugs_02"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_02_1",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_black_shag_rug",
+   "displayName": "Black Shag Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_02_1",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_02_1"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "floors_rugs_02"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_02_2",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_tan_shag_rug",
+   "displayName": "Tan Shag Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_02_2",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_02_2"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "floors_rugs_02"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_02_3",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_mottled_shag_rug",
+   "displayName": "Mottled Shag Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_02_3",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_02_3"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "floors_rugs_02"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_02_4",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_pink_shag_rug",
+   "displayName": "Pink Shag Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_02_4",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_02_4"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "floors_rugs_02"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_02_5",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_blue_shag_rug",
+   "displayName": "Blue Shag Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_02_5",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_02_5"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "floors_rugs_02"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_02_6",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_grey_shag_rug",
+   "displayName": "Grey Shag Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_02_6",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_02_6"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "floors_rugs_02"
+   ]
+  },
+  {
+   "id": "kbw.vanillaexpanded.decorations.rugs.floors_rugs_02_7",
+   "translationKey": "IGUI_KBWVE_Buildable_decorations_rugs_rainbow_shag_rug",
+   "displayName": "Rainbow Shag Rug",
+   "tooltipKey": "Tooltip_KBW_Shared_Rug",
+   "category": "Decorations",
+   "subcategory": "Rugs",
+   "material": "Fabric",
+   "iconSprite": "floors_rugs_02_7",
+   "placement": {
+    "kind": "object",
+    "needToBeAgainstWall": false
+   },
+   "stages": [
+    {
+     "id": "built",
+     "geometry": {
+      "faces": {
+       "W": {
+        "layers": [
+         {
+          "rows": [
+           [
+            "floors_rugs_02_7"
+           ]
+          ]
+         }
+        ]
+       }
+      }
+     },
+     "requirements": {
+      "inputs": [
+       {
+        "id": "covering_fabric",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "items": [
+         "Base.FabricRoll_Cotton"
+        ],
+        "amount": 1,
+        "uses": 6
+       },
+       {
+        "id": "tool_cutting",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "Scissors",
+         "SharpKnife"
+        ],
+        "amount": 1,
+        "flags": [
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "tool_sewing_needle",
+        "role": "tool",
+        "mode": "keep",
+        "resourceType": "Item",
+        "tags": [
+         "SewingNeedle",
+         "Awl"
+        ],
+        "amount": 1,
+        "flags": [
+         "Prop2",
+         "MayDegradeLight"
+        ]
+       },
+       {
+        "id": "thread",
+        "role": "consumable",
+        "mode": "drain",
+        "resourceType": "Item",
+        "tags": [
+         "Thread",
+         "Twine"
+        ],
+        "amount": 1,
+        "uses": 4
+       }
+      ],
+      "skills": {
+       "Tailoring": 2
+      }
+     },
+     "construction": {
+      "time": 200,
+      "timedAction": "BuildLowNoTool",
+      "xp": {
+       "Tailoring": 20
+      },
+      "category": "Tailoring"
+     },
+     "object": {
+      "isThumpable": true,
+      "blockAllSquare": false,
+      "canPassThrough": true,
+      "canBarricade": false
+     }
+    }
+   ],
+   "allowSpriteReuse": true,
+   "_b41NeedsTilesets": [
+    "floors_rugs_02"
+   ]
+  }
+ ]
+}
