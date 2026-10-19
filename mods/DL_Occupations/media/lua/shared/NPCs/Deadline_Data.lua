@@ -862,6 +862,11 @@ O.traits = {
         cost = 8,
         section = "Skill Mastery",
         caps = { Mechanics = 10 },
+        recipes = {
+            "Basic Tuning",
+            "ATAFiliRecipes",
+            "ATAVanillaRecipes",
+        },
     },
     clothier = {
         planner = "clothier",
