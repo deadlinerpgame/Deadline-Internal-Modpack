@@ -104,6 +104,10 @@ function H.Light(player, args, item, st)
     st.mw = lvl
     st.heatScale = DL.MW.heatScale(lvl)
     st.refineScale = DL.MW.refineScale(lvl)
+    if st.phase == "molten" and st.alloy and st.alloy.gated and lvl >= (st.alloy.gateLevel or DL.MW.COMPLEX_LEVEL) then
+        DL.Crucible.spillToLoading(st)
+        resolveMelt(st)
+    end
 end
 
 function H.Extinguish(player, args, item, st)
@@ -122,12 +126,12 @@ end
 function H.Pour(player, args, item, st)
     settle(st)
     local a = st.alloy
-    if st.phase ~= "molten" or not a or (a.units or 0) < 1 then return end
-    a.units = a.units - 1
+    if st.phase ~= "molten" or not a or (a.units or 0) + 1e-6 < 1 then return end
+    a.units = math.max(0, a.units - 1)
     reply(player, "CruciblePoured", { id = a.id, name = a.name, color = a.color, quality = a.quality,
                                       composition = a.composition,
                                       metals = DL.Crucible.metalCount(a.composition) })
-    if (a.units or 0) < 1 then DL.Crucible.spillToLoading(st) end
+    if (a.units or 0) + 1e-6 < 1 then DL.Crucible.spillToLoading(st) end
 end
 
 local function onClientCommand(module, command, player, args)

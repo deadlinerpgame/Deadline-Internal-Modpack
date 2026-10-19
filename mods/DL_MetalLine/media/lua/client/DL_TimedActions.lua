@@ -73,7 +73,7 @@ ISDLPourCrucible = ISBaseTimedAction:derive("ISDLPourCrucible")
 function ISDLPourCrucible:isValid()
     if not near(self.character, self.wobj) then return false end
     local st = peek(self.wobj)
-    return st ~= nil and st.phase == "molten" and st.alloy ~= nil and (st.alloy.units or 0) >= 1
+    return st ~= nil and st.phase == "molten" and st.alloy ~= nil and (st.alloy.units or 0) + 1e-6 >= 1
         and DL.Crucible.findIngotMold(self.character) ~= nil
 end
 

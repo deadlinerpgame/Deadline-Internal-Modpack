@@ -1,12 +1,10 @@
-local reapplyingSince = nil
+local reapplying = false
 
 local function safeReapply(character)
-    if not character then return end
-    local now = getTimestampMs()
-    if reapplyingSince and now - reapplyingSince < 1000 then return end
-    reapplyingSince = now
+    if not character or reapplying then return end
+    reapplying = true
     ClothesUpgrade.reapplyForCharacter(character)
-    reapplyingSince = nil
+    reapplying = false
 end
 
 local function onLoadCharacter(character)
@@ -30,6 +28,17 @@ local function onEquipOrWear(character, item)
     if character then safeReapply(character) end
 end
 
+local function onClothingUpdated(character)
+    if instanceof(character, "IsoPlayer") and character:isLocalPlayer() then safeReapply(character) end
+end
+
+local function reapplyLocalPlayers()
+    for i = 0, 3 do
+        local plr = getSpecificPlayer(i)
+        if plr then safeReapply(plr) end
+    end
+end
+
 local function addEvent(name, fn)
     if Events[name] then Events[name].Add(fn) end
 end
@@ -38,4 +47,5 @@ addEvent("OnGameStart", reapplyAllPlayers)
 addEvent("OnCreatePlayer", onCreatePlayer)
 addEvent("OnEquipPrimary", onEquipOrWear)
 addEvent("OnEquipSecondary", onEquipOrWear)
-addEvent("OnWearClothing", onEquipOrWear)
+addEvent("OnClothingUpdated", onClothingUpdated)
+addEvent("EveryTenMinutes", reapplyLocalPlayers)
