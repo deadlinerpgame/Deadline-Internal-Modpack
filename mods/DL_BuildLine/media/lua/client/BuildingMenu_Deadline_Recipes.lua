@@ -349,7 +349,7 @@ local function initBuildingMenuRecipes()
             {
                 Skill = "Woodwork",
                 Level = survivalCarpentryLevel0,
-                Xp = BuildingMenu.round(survivalCarpentryLevel1 * carpentryXpPerLevel)
+                Xp = BuildingMenu.round(survivalCarpentryLevel0 * carpentryXpPerLevel)
             }
         }
     }
@@ -379,9 +379,9 @@ local function initBuildingMenuRecipes()
             {
                 Skill = "Woodwork",
                 Level = survivalCarpentryLevel0,
-                Xp = BuildingMenu.round(survivalCarpentryLevel1 * carpentryXpPerLevel)
+                Xp = BuildingMenu.round(survivalCarpentryLevel0 * carpentryXpPerLevel)
             }
-        } 
+        }
     }
 
 -- SANDBAG/GRAVELBAG RECIPE
@@ -457,9 +457,318 @@ local function initBuildingMenuRecipes()
         } 
     }
 
+-- TALL METAL LOCKER beginner
+ BuildingMenu.LargeMetalLockerBeginnerRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Screwdriver",
+        },
+        neededMaterials = {
+            {
+                Material = "Base.SheetMetal",
+                Amount = 2
+            },
+            {
+                Material = "Base.Screws",
+                Amount = 5
+            },
+            {
+                Material = "Base.Hinge",
+                Amount = 2
+            }
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 3
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(3)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(5 * metalweldingXpPerLevel)
+            }
+        }
+    }
+-- SHORT METAL LOCKER beginner
+ BuildingMenu.SmallMetalLockerBeginnerRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Screwdriver",
+        },
+        neededMaterials = {
+            {
+                Material = "Base.SmallSheetMetal",
+                Amount = 2
+            },
+            {
+                Material = "Base.Screws",
+                Amount = 5
+            },
+            {
+                Material = "Base.Hinge",
+                Amount = 2
+            }
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 1,
+                Xp = BuildingMenu.round(5 * metalweldingXpPerLevel)
+            }
+        }
+    }
+-- SHORT METAL WALL SHELVES beginner
+ BuildingMenu.SmallMetalWallShelvesBeginnerRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Screwdriver",
+        },
+        neededMaterials = {
+            { -- Alternative Groups
+                {
+                    Material = "Base.SheetMetal", -- Alternative Items: Within this group these items can be combined to meet the requirement
+                    Amount = 1,
+                },
+                {
+                    Material = "Base.SmallSheetMetal", -- This can be used as an alternative to the entire first alternative group. (seen with an "or" in front in the material name)
+                    Amount = 2,
+                }
+            },
+            {
+                Material = "Base.Screws",
+                Amount = 5
+            }
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 2
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(2)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 1,
+                Xp = BuildingMenu.round(5 * metalweldingXpPerLevel)
+            }
+        }
+    }
+
+    -- TALL METAL LOCKER beginner
+ BuildingMenu.MetalCounters = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Screwdriver",
+        },
+        neededMaterials = {
+            {
+                Material = "Base.SheetMetal",
+                Amount = 2
+            },
+            {
+                Material = "Base.Screws",
+                Amount = 5
+            },
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 3
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(3)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(5 * metalweldingXpPerLevel)
+            }
+        }
+    }
+
+-- HAY STUFF
+ BuildingMenu.FarmFloorRecipe = {
+    --[[    neededTools = {}, --]]
+        neededMaterials = {
+            {
+                Material = "Base.Twigs",
+                Amount = 5
+            },
+        },
+        skills = {
+            {
+                Skill = "Woodwork",
+                Level = survivalCarpentryLevel0,
+                Xp = BuildingMenu.round(survivalCarpentryLevel0 * carpentryXpPerLevel)
+            }
+        }
+    }
+ BuildingMenu.SmallFarmFloorRecipe = {
+ --[[        neededTools = {
+            "Shovel",
+        }, --]]
+        neededMaterials = {
+            {
+                Material = "Base.Twigs",
+                Amount = 2
+            },
+        },
+        skills = {
+            {
+                Skill = "Woodwork",
+                Level = survivalCarpentryLevel0,
+                Xp = BuildingMenu.round(survivalCarpentryLevel0 * carpentryXpPerLevel)
+            }
+        }
+    }
+ BuildingMenu.HayBale = {
+ --[[       neededTools = {
+            "Shovel",
+        }, --]]
+        neededMaterials = {
+            {
+                Material = "Base.Twigs",
+                Amount = 5
+            },
+        },
+        skills = {
+            {
+                Skill = "Woodwork",
+                Level = survivalCarpentryLevel0,
+                Xp = BuildingMenu.round(survivalCarpentryLevel0 * carpentryXpPerLevel)
+            }
+        }
+    }
+ BuildingMenu.BigHayBale = {
+ --[[       neededTools = {
+            "Shovel",
+        }, --]]
+        neededMaterials = {
+            {
+                Material = "Base.Twigs",
+                Amount = 10
+            },
+        },
+        skills = {
+            {
+                Skill = "Woodwork",
+                Level = survivalCarpentryLevel0,
+                Xp = BuildingMenu.round(survivalCarpentryLevel0 * carpentryXpPerLevel)
+            }
+        }
+    }
+
+-- STOVE BABY RECIPE
+ BuildingMenu.StoveBeginnerRecipe = {
+        neededTools = {
+            "BlowTorch",
+            "WeldingMask",
+            "Screwdriver",
+            "Saw",
+        },
+        neededMaterials = {
+            {
+                Material = "Base.SheetMetal",
+                Amount = 4
+            },
+            {
+                {
+                    Material = "Base.MetalBar",
+                    Amount = 2
+                },
+                {
+                    Material = "Base.MetalPipe",
+                    Amount = 2
+                },
+            },
+            {
+                Material = "Base.Screws",
+                Amount = 5
+            }
+        },
+        useConsumable = {
+            {
+                Consumable = "Base.BlowTorch",
+                Amount = 4
+            },
+            {
+                Consumable = "Base.WeldingRods",
+                Amount = BuildingMenu.weldingRodUses(3)
+            }
+        },
+        skills = {
+            {
+                Skill = "MetalWelding",
+                Level = 2,
+                Xp = BuildingMenu.round(2 * metalweldingXpPerLevel)
+            },
+        }
+    }
+
+-- SPECIAL SHOWER
+    BuildingMenu.MakeshiftShower = {
+        neededTools = {
+            "Hammer",
+        },
+        neededMaterials = { -- Contains Groups of Materials
+            { -- Material that is required and have no alternatives
+                Material = "Base.FabricRoll",
+                Amount = 1,
+            },
+            { -- Material that is required and have no alternatives
+                Material = "Base.Plank",
+                Amount = 8,
+            },
+            { -- Material that is required and have no alternatives
+                Material = "Base.WoodenStick",
+                Amount = 1,
+            },
+            { -- Alternative Groups
+                {
+                    Material = { "Base.BucketEmpty", "Base.Pot", "Base.PaintbucketEmpty" }, -- Alternative Items: Within this group these items can be combined to meet the requirement
+                    Amount = 1,
+                },
+            },
+        },
+        skills = {
+            {
+                Skill = "Woodwork",
+                Level = survivalCarpentryLevel2,
+                Xp = BuildingMenu.round(survivalCarpentryLevel2 * carpentryXpPerLevel)
+            }
+        }
+    }
 
 -- [[ METAL STUFF ]]
--- HIGH FENCE METAL BARS BLACK
+
+    -- HIGH FENCE METAL BARS BLACK
     BuildingMenu.HighMetalBarsFenceBlackRecipe = {
         neededTools = {
             "BlowTorch",

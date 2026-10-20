@@ -3,28 +3,95 @@ local BuildingMenu = require("BuildingMenu01_Main")
 require("BuildingMenu04_CategoriesDefinitions")
 
 --[[
-              HOW TO SEARCH
-        NO SPACE IN BETWEEN NOUNS
-        + F AT THE START. EG: LOW
-         TABLES ARE "FLOWTABLES"
 
-        !! CURRENT CATEGORIES !!
-            > WALLS
-            > ROOFING
-            > FENCING
-                - High metal
-            > FLOORS:
-                - Wooden
-                - Carpet
-                - Checkered: small, large
-                - Tile: diagonal, smooth, exterior
-            > CONTAINERS
-                - Counters, Metal shelving, Metal lockers
-            > FURNITURE
-                - TABLES: Low tables, Small tables, Large tables
-                - BOOKSHELVES
+        This file is prepared so you can hide categories or specific recipes on 1 click so just do that
 
 --]]
+
+
+--[[ >>>>>> FAPPLIANCES <<<<<<< ]]
+
+local function addDeadlineBathroomAppliancesToMenu()
+    local function createDeadlineBathroomObject(spec)
+        return BuildingMenu.createObject(
+            "",
+            spec.tooltip or "Tooltip_Sink",
+            spec.buildFunc,
+            spec.recipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+                buildMid = true,
+            },
+            spec.sprites
+        )
+    end
+
+    local DeadlineDeadlinebathroomObjectspecs = {
+        {
+            buildFunc = BuildingMenu.onBuildSink,
+            tooltip = "Tooltip_DoNotPickUp",
+            recipe = BuildingMenu.MakeshiftShower,
+            sprites = {
+                sprite = "hydrotiles_92",
+                northSprite = "hydrotiles_93"
+            }
+        },
+        {
+            buildFunc = BuildingMenu.onBuildSink,
+            tooltip = "Tooltip_DoNotPickUp",
+            recipe = BuildingMenu.MakeshiftShower,
+            sprites = {
+                sprite = "hydrotiles_94",
+                northSprite = "hydrotiles_95"
+            }
+        },
+    }
+
+    local DeadlinebathroomObjects = {}
+    for _, spec in ipairs(DeadlineDeadlinebathroomObjectspecs) do
+        table.insert(DeadlinebathroomObjects, createDeadlineBathroomObject(spec))
+    end
+
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineAppliances",
+        "fixtures_sinks_01_21",
+        "IGUI_BuildingMenuSubCat_Deadline_Appliances_Bathroom",
+        "fixtures_sinks_01_21",
+        DeadlinebathroomObjects
+    )
+end
+
+local function addDeadlineCookingAppliancesToMenu()
+    local DeadlineCookingObjects = {
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Oven",
+            BuildingMenu.onBuildStove,
+            BuildingMenu.StoveBeginnerRecipe,
+            true,
+            {
+                completionSound = "BuildMetalStructureMedium",
+            },
+            {
+                sprite = "crafted_05_6",
+                northSprite = "crafted_05_7",
+                eastSprite = "crafted_05_5",
+                southSprite = "crafted_05_4"
+            }
+        ),
+    }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineAppliances",
+        "crafted_05_6",
+        "IGUI_BuildingMenuSubCat_Deadline_Appliances_Cooking",
+        "crafted_05_6",
+        DeadlineCookingObjects
+    )
+end
+
 
 --[[ >>>>>>>> FWALLS <<<<<<<< --]]
 
@@ -21896,6 +21963,7 @@ local function addDeadlineWallsToMenu()
     )
 end
 
+
 --[[ >>>>>>>> FROOFING <<<<<<<< --]]
 
 local function addDeadlineRoofingToMenu()
@@ -29020,8 +29088,8 @@ local function addDeadlineHighMetalFencesToMenu()
 end
 
 local function addDeadlineRailingsToMenu()
- -- Wood light railing
-    local woodlightrailing = {
+    local deadlinerailings = {
+ -- Wood light railing        
         BuildingMenu.createObject(
             "Tooltip_BuildingMenuObj_Wooden_Railing",
             "Tooltip_Wooden_Railing",
@@ -29092,6 +29160,57 @@ local function addDeadlineRailingsToMenu()
                 southSprite = "crafted_02_100"
             }
         ),
+ -- Survival stick fence
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Wooden_Railing",
+            "Tooltip_Wooden_Railing",
+            BuildingMenu.onBuildWall,
+            BuildingMenu.WoodenFenceRecipe,
+            true,
+            {
+                completionSound = "BuildWoodenStructureSmall",
+                isThumpable = true,
+                hoppable = true,
+                blockAllTheSquare = false
+            },
+            {
+                sprite = "ivery_survival_01_6",
+                northSprite = "ivery_survival_01_7",
+                corner = "ivery_survival_01_8"
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Wooden_Railing_Corner",
+            "Tooltip_Wooden_Railing_Post",
+            BuildingMenu.onBuildWall,
+            BuildingMenu.WoodenFenceRecipe,
+            true,
+            {
+                completionSound = "BuildWoodenStructureSmall",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            {
+                corner = "ivery_survival_01_8",
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BuildingMenuObj_Wooden_Railing_Post",
+            "Tooltip_Wooden_Railing_Post",
+            BuildingMenu.onBuildWall,
+            BuildingMenu.WoodenFenceRecipe,
+            true,
+            {
+                completionSound = "BuildWoodenStructureSmall",
+                canBeAlwaysPlaced = true,
+                canPassThrough = true,
+                canBarricade = false,
+                isCorner = true
+            },
+            { sprite = "ivery_survival_01_9" }
+        ),
     }
     BuildingMenu.addObjectsToCategories(
         "Deadline",
@@ -29099,9 +29218,10 @@ local function addDeadlineRailingsToMenu()
         nil,
         "IGUI_BuildingMenuSubCat_DeadlineFencing_Railing",
         "crafted_02_110",
-        woodlightrailing
+        deadlinerailings
     )
 end
+
 
 --[[ >>>>>>>> FFLOORS <<<<<<<< --]]
 
@@ -30657,10 +30777,11 @@ local function addDeadlineFloorsToMenu()
     end
 end
 
+
 --[[ >>>>>>>> FROADWORK <<<<<<<< --]]
 
-local function addRoadworkDirtandGrassToMenu()
-    local roadworkDeadlineDirtandGrass = {
+local function addRoadworkBeDirtToMenu()
+    local roadworkDeadlineBeDirt = {
         BuildingMenu.createObject(
             "Tooltip_BeDirt_Normal",
             "Tooltip_BeDirt_Desc",
@@ -31271,12 +31392,58 @@ local function addRoadworkDirtandGrassToMenu()
         "blends_street_01_32",
         "IGUI_BuildingMenuSubCat_Deadline_Road_Work_BeDirt",
         "blends_street_BeDirt_0",
-        roadworkDeadlineDirtandGrass
+        roadworkDeadlineBeDirt
     )
 end
 
+local function addRoadworkFarmFloorsToMenu()
+    local roadworkDeadlineFarmFloors = {
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Normal",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.FarmFloorRecipe,
+            true,
+            {
+            },
+            {
+                sprite = "vegetation_farm_01_12",
+                northSprite = "vegetation_farm_01_13",
+            }
+        ),
+        BuildingMenu.createObject(
+            "Tooltip_BeDirt_Edge",
+            "Tooltip_BeDirt_Desc",
+            BuildingMenu.onBuildFloorOverlay,
+            BuildingMenu.SmallFarmFloorRecipe,
+            true,
+            {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
+                isThumpable = true,
+                isCorner = true
+            },
+            {
+                sprite = "vegetation_farm_01_22",
+                northSprite = "vegetation_farm_01_23",
+                eastSprite = "vegetation_farm_01_20",
+                southSprite = "vegetation_farm_01_21"
+            }
+        ),
+    }
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineRoadWork",
+        "blends_street_01_32",
+        "IGUI_BuildingMenuSubCat_Deadline_Farm",
+        "vegetation_farm_01_13",
+        roadworkDeadlineFarmFloors
+    )
+end
 
---[[ >>>>>> CONTAINERS <<<<<< --]]
+--[[ >>>>>> FCONTAINERS <<<<<< --]]
 
 -- >> CONTAINERS: COUNTERS, METAL LOCKERS
 local function addDeadlineContainersToMenu()
@@ -31286,6 +31453,42 @@ local function addDeadlineContainersToMenu()
             subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineContainers_Counters",
             subCategoryIcon = "fixtures_counters_erika_01_3",
             objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalCounters,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "crafted_05_27",
+                        northSprite = "crafted_05_29",
+                        eastSprite = "crafted_05_31",
+                        southSprite = "crafted_05_25"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalCounters,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "crafted_05_26",
+                        northSprite = "crafted_05_28",
+                        eastSprite = "crafted_05_30",
+                        southSprite = "crafted_05_24"
+                    }
+                ),
                 BuildingMenu.createObject(
                     "",
                     "Tooltip_Counter_Generic",
@@ -32052,6 +32255,25 @@ local function addDeadlineContainersToMenu()
                 BuildingMenu.createObject(
                     "",
                     "Tooltip_Counter_Generic",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallMetalWallShelvesBeginnerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        renderFloorHelper = true,
+                        blockAllTheSquare = false,
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "crafted_05_33",
+                        northSprite = "crafted_05_32",
+                        eastSprite = "crafted_05_34",
+                        southSprite = "crafted_05_35",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Counter_Generic",
                     BuildingMenu.onBuildDoubleMetalShelf,
                     BuildingMenu.MetalCounterBigRecipeDouble,
                     true,
@@ -32059,6 +32281,7 @@ local function addDeadlineContainersToMenu()
                         completionSound = "BuildMetalStructureMedium",
                         renderFloorHelper = false,
                         buildHigh = true,
+                        canBeLockedByPadlock = true
                     },
                     {
                         sprite = "ivery_shelving_01_1",
@@ -32124,200 +32347,234 @@ local function addDeadlineContainersToMenu()
             } 
         },
  -- FMETALLOCKERS
-         {
-             subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineContainers_MetalLockers",
-             subCategoryIcon = "furniture_storage_erika_02_28",
-             objects = {
-                 BuildingMenu.createObject(
-                     "Tooltip_MetalWallLocker_Name",
-                     "Tooltip_MetalWallLocker_Desc",
-                     BuildingMenu.onBuildWoodenContainer,
-                     BuildingMenu.MetalLockerRecipe,
-                     true,
-                     {
-                         completionSound = "BuildMetalStructureMedium",
-                         canBeLockedByPadlock = true
-                     },
-                     {
-                         sprite = "furniture_storage_erika_02_28",
-                         northSprite = "furniture_storage_erika_02_29",
-                         eastSprite = "furniture_storage_erika_02_30",
-                         southSprite = "furniture_storage_erika_02_31"
-                     }
-                 ),
-                 BuildingMenu.createObject(
-                     "Tooltip_MetalWallLocker_Name",
-                     "Tooltip_MetalWallLocker_Desc",
-                     BuildingMenu.onBuildWoodenContainer,
-                     BuildingMenu.MetalLockerRecipe,
-                     true,
-                     {
-                         completionSound = "BuildMetalStructureMedium",
-                         canBeLockedByPadlock = true
-                     },
-                     {
-                         sprite = "furniture_storage_erika_02_40",
-                         northSprite = "furniture_storage_erika_02_41",
-                         eastSprite = "furniture_storage_erika_02_42",
-                         southSprite = "furniture_storage_erika_02_43"
-                     }
-                 ),
-                 BuildingMenu.createObject(
-                     "Tooltip_MetalWallLocker_Name",
-                     "Tooltip_MetalWallLocker_Desc",
-                     BuildingMenu.onBuildWoodenContainer,
-                     BuildingMenu.MetalLockerRecipe,
-                     true,
-                     {
-                         completionSound = "BuildMetalStructureMedium",
-                         canBeLockedByPadlock = true
-                     },
-                     {
-                         sprite = "furniture_storage_02_12",
-                         northSprite = "furniture_storage_02_13",
-                         eastSprite = "furniture_storage_02_14",
-                         southSprite = "furniture_storage_02_15",
-                     }
-                 ),
-                 BuildingMenu.createObject(
-                     "Tooltip_MetalWallLocker_Name",
-                     "Tooltip_MetalWallLocker_Desc",
-                     BuildingMenu.onBuildWoodenContainer,
-                     BuildingMenu.MetalLockerRecipe,
-                     true,
-                     {
-                         completionSound = "BuildMetalStructureMedium",
-                         canBeLockedByPadlock = true
-                     },
-                     {
-                         sprite = "furniture_storage_erika_02_36",
-                         northSprite = "furniture_storage_erika_02_37",
-                         eastSprite = "furniture_storage_erika_02_38",
-                         southSprite = "furniture_storage_erika_02_39"
-                     }
-                 ),
-                 BuildingMenu.createObject(
-                     "Tooltip_MetalWallLocker_Name",
-                     "Tooltip_MetalWallLocker_Desc",
-                     BuildingMenu.onBuildWoodenContainer,
-                     BuildingMenu.MetalLockerRecipe,
-                     true,
-                     {
-                         completionSound = "BuildMetalStructureMedium",
-                         canBeLockedByPadlock = true
-                     },
-                     {
-                         sprite = "furniture_storage_02_4",
-                         northSprite = "furniture_storage_02_5",
-                         eastSprite = "furniture_storage_02_6",
-                         southSprite = "furniture_storage_02_7",
-                     }
-                 ),
-                 BuildingMenu.createObject(
-                     "Tooltip_MetalWallLocker_Name",
-                     "Tooltip_MetalWallLocker_Desc",
-                     BuildingMenu.onBuildWoodenContainer,
-                     BuildingMenu.MetalLockerRecipe,
-                     true,
-                     {
-                         completionSound = "BuildMetalStructureMedium",
-                         canBeLockedByPadlock = true
-                     },
-                     {
-                         sprite = "furniture_storage_erika_02_44",
-                         northSprite = "furniture_storage_erika_02_45",
-                         eastSprite = "furniture_storage_erika_02_46",
-                         southSprite = "furniture_storage_erika_02_47"
-                     }
-                 ),
-                 BuildingMenu.createObject(
-                     "Tooltip_MetalWallLocker_Name",
-                     "Tooltip_MetalWallLocker_Desc",
-                     BuildingMenu.onBuildWoodenContainer,
-                     BuildingMenu.MetalLockerRecipe,
-                     true,
-                     {
-                         completionSound = "BuildMetalStructureMedium",
-                         canBeLockedByPadlock = true
-                     },
-                     {
-                         sprite = "BZMsBikerGarage01_12",
-                         northSprite = "BZMsBikerGarage01_13",
-                         eastSprite = "BZMsBikerGarage01_14",
-                         southSprite = "BZMsBikerGarage01_15",
-                     }
-                 ),
-                 BuildingMenu.createObject(
-                     "Tooltip_MetalWallLocker_Name",
-                     "Tooltip_MetalWallLocker_Desc",
-                     BuildingMenu.onBuildWoodenContainer,
-                     BuildingMenu.MetalLockerRecipe,
-                     true,
-                     {
-                         completionSound = "BuildMetalStructureMedium",
-                         canBeLockedByPadlock = true
-                     },
-                     {
-                         sprite = "furniture_storage_erika_02_24",
-                         northSprite = "furniture_storage_erika_02_25",
-                         eastSprite = "furniture_storage_erika_02_26",
-                         southSprite = "furniture_storage_erika_02_27"
-                     }
-                 ),
-                 BuildingMenu.createObject(
-                     "Tooltip_MetalWallLocker_Name",
-                     "Tooltip_MetalWallLocker_Desc",
-                     BuildingMenu.onBuildWoodenContainer,
-                     BuildingMenu.MetalLockerRecipe,
-                     true,
-                     {
-                         completionSound = "BuildMetalStructureMedium",
-                         canBeLockedByPadlock = true
-                     },
-                     {
-                         sprite = "furniture_storage_erika_02_32",
-                         northSprite = "furniture_storage_erika_02_33",
-                         eastSprite = "furniture_storage_erika_02_34",
-                         southSprite = "furniture_storage_erika_02_35"
-                     }
-                 ),
-                 BuildingMenu.createObject(
-                     "Tooltip_MetalWallLocker_Name",
-                     "Tooltip_MetalWallLocker_Desc",
-                     BuildingMenu.onBuildWoodenContainer,
-                     BuildingMenu.MetalLockerRecipe,
-                     true,
-                     {
-                         completionSound = "BuildMetalStructureMedium",
-                         canBeLockedByPadlock = true
-                     },
-                     {
-                         sprite = "location_community_medical_ddd_01_0",
-                         northSprite = "location_community_medical_ddd_01_1",
-                         eastSprite = "location_community_medical_ddd_01_2",
-                         southSprite = "location_community_medical_ddd_01_3",
-                     }
-                 ),
-                 BuildingMenu.createObject(
-                     "Tooltip_MetalWallLocker_Name",
-                     "Tooltip_MetalWallLocker_Desc",
-                     BuildingMenu.onBuildWoodenContainer,
-                     BuildingMenu.MetalLockerRecipe,
-                     true,
-                     {
-                         completionSound = "BuildMetalStructureMedium",
-                         canBeLockedByPadlock = true
-                     },
-                     {
-                         sprite = "location_community_medical_ddd_01_4",
-                         northSprite = "location_community_medical_ddd_01_5",
-                         eastSprite = "location_community_medical_ddd_01_6",
-                         southSprite = "location_community_medical_ddd_01_7",
-                     }
-                 ),
-             }
-         },        
-     }
+       {
+            subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineContainers_MetalLockers",
+            subCategoryIcon = "furniture_storage_erika_02_28",
+            objects = {
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallMetalLockerBeginnerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "crafted_05_21",
+                        northSprite = "crafted_05_20",
+                        eastSprite = "crafted_05_23",
+                        southSprite = "crafted_05_22"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.LargeMetalLockerBeginnerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "crafted_05_16",
+                        northSprite = "crafted_05_17",
+                        eastSprite = "crafted_05_18",
+                        southSprite = "crafted_05_19"
+                    }
+                ), 
+               BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_erika_02_28",
+                        northSprite = "furniture_storage_erika_02_29",
+                        eastSprite = "furniture_storage_erika_02_30",
+                        southSprite = "furniture_storage_erika_02_31"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_erika_02_40",
+                        northSprite = "furniture_storage_erika_02_41",
+                        eastSprite = "furniture_storage_erika_02_42",
+                        southSprite = "furniture_storage_erika_02_43"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_02_12",
+                        northSprite = "furniture_storage_02_13",
+                        eastSprite = "furniture_storage_02_14",
+                        southSprite = "furniture_storage_02_15",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_erika_02_36",
+                        northSprite = "furniture_storage_erika_02_37",
+                        eastSprite = "furniture_storage_erika_02_38",
+                        southSprite = "furniture_storage_erika_02_39"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_02_4",
+                        northSprite = "furniture_storage_02_5",
+                        eastSprite = "furniture_storage_02_6",
+                        southSprite = "furniture_storage_02_7",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_erika_02_44",
+                        northSprite = "furniture_storage_erika_02_45",
+                        eastSprite = "furniture_storage_erika_02_46",
+                        southSprite = "furniture_storage_erika_02_47"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "BZMsBikerGarage01_12",
+                        northSprite = "BZMsBikerGarage01_13",
+                        eastSprite = "BZMsBikerGarage01_14",
+                        southSprite = "BZMsBikerGarage01_15",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_erika_02_24",
+                        northSprite = "furniture_storage_erika_02_25",
+                        eastSprite = "furniture_storage_erika_02_26",
+                        southSprite = "furniture_storage_erika_02_27"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "furniture_storage_erika_02_32",
+                        northSprite = "furniture_storage_erika_02_33",
+                        eastSprite = "furniture_storage_erika_02_34",
+                        southSprite = "furniture_storage_erika_02_35"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "location_community_medical_ddd_01_0",
+                        northSprite = "location_community_medical_ddd_01_1",
+                        eastSprite = "location_community_medical_ddd_01_2",
+                        southSprite = "location_community_medical_ddd_01_3",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "location_community_medical_ddd_01_4",
+                        northSprite = "location_community_medical_ddd_01_5",
+                        eastSprite = "location_community_medical_ddd_01_6",
+                        southSprite = "location_community_medical_ddd_01_7",
+                    }
+                ),
+            }
+        },        
+    }
  -- Add Containers Category 
      for k, subCatData in pairs(DeadlineContainers) do
          BuildingMenu.addObjectsToCategories(
@@ -32332,7 +32589,7 @@ local function addDeadlineContainersToMenu()
 end
 
 
---[[ >>>>>> FURNITURE <<<<<< --]]
+--[[ >>>>>> FFURNITURE <<<<<< --]]
 
 -- >> TABLES: LOW, SMALL, LARGE
 local function addDeadlineTablesToMenu()
@@ -33730,7 +33987,7 @@ local function addDeadlineSeatingToMenu()
                 ),
                 BuildingMenu.createObject(
                     "Tooltip_LogChair_NameCheeky",
-                    "Tooltip_Chair_Desc",
+                    "Tooltip_LogChair_DescCheeky",
                     BuildingMenu.onBuildSimpleFurniture,
                     BuildingMenu.SmallLogFurnitureRecipe,
                     true,
@@ -34440,7 +34697,7 @@ local function addDeadlineBookshelvesToMenu()
 end
 
 
---[[ >>>>>>> DECORATIONS <<<<<<< --]]
+--[[ >>>>>>> FDECORATIONS <<<<<<< --]]
 -- >> RUGS
 local function addDeadlineRugsToMenu()
     local DeadlineRugs = {
@@ -35248,8 +35505,81 @@ local function addDeadlineRugsToMenu()
     )
 end
 
--- >> CURTAINS
+local function addDeadlineDecorFarmToMenu()
+    local DeadlineDecorFarm = {
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_HayBale_Desc",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.HayBale,
+            true,
+            {
+                completionSound = "DropSoilFromGravelBag",
+            },
+            { 
+                sprite = "vegetation_farm_01_8",
+                northSprite = "vegetation_farm_01_16"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_HayBale_Desc",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.BigHayBale,
+            true,
+            {
+                completionSound = "DropSoilFromGravelBag",
+            },
+            { 
+                sprite = "vegetation_farm_01_8",
+                northSprite = "vegetation_farm_01_16"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Trough_Desc",
+            BuildingMenu.onBuildDoubleTileContainer,
+            BuildingMenu.LargeFurnitureRecipe,
+            true,
+            {
+                completionSound = "BuildWoodenStructureLarge",
+            },
+            {
+                sprite = "ivery_survival_01_11",
+                sprite2 = "ivery_survival_01_10",
+                northSprite = "ivery_survival_01_12",
+                northSprite2 = "ivery_survival_01_13"
+            }
+        ),
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_Trough_Desc",
+            BuildingMenu.onBuildDoubleTileContainer,
+            BuildingMenu.LargeFurnitureRecipe,
+            true,
+            {
+                completionSound = "BuildWoodenStructureLarge",
+            },
+            {
+                sprite = "ivery_survival_01_19",
+                sprite2 = "ivery_survival_01_18",
+                northSprite = "ivery_survival_01_20",
+                northSprite2 = "ivery_survival_01_21"
+            }
+        ),
+    }
+ -- Add DecorFarm Category
+    BuildingMenu.addObjectsToCategories(
+        "Deadline",
+        "IGUI_BuildingMenuCat_DeadlineDecorations",
+        "floors_rugs_02_7",
+        "IGUI_BuildingMenuSubCat_Deadline_Farm",
+        "vegetation_farm_01_8",
+        DeadlineDecorFarm
+    )
+end
 
+-- >> CURTAINS
 local function addDeadlineCurtainsToMenu()
     local curtainTypes = {
         { prefix = "LC_fixtures_windows_curtains_01_", offsets = { 4, 6, 5, 7 } },
@@ -35452,7 +35782,8 @@ local function addDeadlineCurtainsToMenu()
     );
 end
 
---[[ >>>>>>> BARRICADES <<<<<< --]]
+
+--[[ >>>>>>> FBARRICADES <<<<<< --]]
 -- >> BARRICADES
 local function addDeadlineBarricadesToMenu()
     local DeadlineBarricades = {
@@ -35568,6 +35899,13 @@ end
 
 --[[ >>>>>> FOR THE SANDBOX OPTIONS ON "media\sandbox-options.txt" <<<<<<--]]
 local function addCategoriesToBuildingMenu()
+
+    if SandboxVars.BuildingMenu.DeadlineBathroomAppliancesCategory then
+        addDeadlineBathroomAppliancesToMenu()
+    end
+    if SandboxVars.BuildingMenu.DeadlineCookingAppliancesCategory then
+        addDeadlineCookingAppliancesToMenu()
+    end
     if SandboxVars.BuildingMenu.DeadlineWallsCategory then
         addDeadlineWallsToMenu()
     end
@@ -35583,6 +35921,12 @@ local function addCategoriesToBuildingMenu()
     if SandboxVars.BuildingMenu.DeadlineFloorsSubCategory then
         addDeadlineFloorsToMenu()
     end
+    if SandboxVars.BuildingMenu.DeadlineRoadworkBeDirtCategory then
+        addRoadworkBeDirtToMenu()
+    end
+    if SandboxVars.BuildingMenu.DeadlineRoadworkFarmFloorsCategory then
+        addRoadworkFarmFloorsToMenu()
+    end
     if SandboxVars.BuildingMenu.DeadlineContainersCategory then
         addDeadlineContainersToMenu()
     end
@@ -35592,6 +35936,9 @@ local function addCategoriesToBuildingMenu()
     if SandboxVars.BuildingMenu.DeadlineRugsSubCategory then
         addDeadlineRugsToMenu()
     end
+    if SandboxVars.BuildingMenu.DeadlineDecorFarmSubCategory then
+        addDeadlineDecorFarmToMenu()
+    end
     if SandboxVars.BuildingMenu.DeadlineCurtainsSubCategory then
         addDeadlineCurtainsToMenu()
     end
@@ -35600,9 +35947,6 @@ local function addCategoriesToBuildingMenu()
     end
     if SandboxVars.BuildingMenu.DeadlineBookshelvesSubCategory then
         addDeadlineBookshelvesToMenu()
-    end
-    if SandboxVars.BuildingMenu.DeadlineRoadworkDirtandGrassCategory then
-        addRoadworkDirtandGrassToMenu()
     end
     if SandboxVars.BuildingMenu.DeadlineSeatingCategory then
         addDeadlineSeatingToMenu()
