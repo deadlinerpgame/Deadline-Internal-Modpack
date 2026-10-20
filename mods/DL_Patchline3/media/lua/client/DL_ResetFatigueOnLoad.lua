@@ -5,3 +5,4 @@ local function resetFatigueOnLoad(playerIndex, player)
 end
 
 Events.OnCreatePlayer.Add(resetFatigueOnLoad)
+Events.EveryHours.Add(resetFatigueonLoad) -- remove it after a few days
