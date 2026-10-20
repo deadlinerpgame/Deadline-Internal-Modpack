@@ -8,7 +8,7 @@ end
 
 function Recipe.OnCreate.ButcherCow(items, result, player)
     local inv = player:getInventory()
-    local hasTrait = player:HasTrait("profsurvivalist3")
+    local hasTrait = player:getPerkLevel(Perks.Cooking) >= 6
 
     if hasTrait or ZombRand(4) == 0 then
         addItems(inv, "aerx.CowLeather_Simmental_Full", 2)
@@ -30,7 +30,7 @@ end
 
 function Recipe.OnCreate.ButcherCowHalf(items, result, player)
     local inv = player:getInventory()
-    local hasTrait = player:HasTrait("profsurvivalist3")
+    local hasTrait = player:getPerkLevel(Perks.Cooking) >= 6
 
     if hasTrait or ZombRand(4) == 0 then
         addItems(inv, "aerx.CowLeather_Simmental_Full", 1)
@@ -50,7 +50,7 @@ end
 
 function Recipe.OnCreate.ButcherDeer(items, result, player)
     local inv = player:getInventory()
-    local hasTrait = player:HasTrait("profsurvivalist3")
+    local hasTrait = player:getPerkLevel(Perks.Cooking) >= 6
 
     if hasTrait or ZombRand(4) == 0 then
         addItems(inv, "aerx.DeerLeather_Full", 2)
@@ -69,7 +69,7 @@ end
 
 function Recipe.OnCreate.ButcherDeerHalf(items, result, player)
     local inv = player:getInventory()
-    local hasTrait = player:HasTrait("profsurvivalist3")
+    local hasTrait = player:getPerkLevel(Perks.Cooking) >= 6
 
     if hasTrait or ZombRand(4) == 0 then
         addItems(inv, "aerx.DeerLeather_Full", 1)
@@ -88,7 +88,7 @@ end
 
 function Recipe.OnCreate.ButcherPig(items, result, player)
     local inv = player:getInventory()
-    local hasTrait = player:HasTrait("profsurvivalist3")
+    local hasTrait = player:getPerkLevel(Perks.Cooking) >= 6
 
     if hasTrait or ZombRand(4) == 0 then
         addItems(inv, "aerx.PigLeather_Landrace_Full", 2)
@@ -108,7 +108,7 @@ end
 
 function Recipe.OnCreate.ButcherPigHalf(items, result, player)
     local inv = player:getInventory()
-    local hasTrait = player:HasTrait("profsurvivalist3")
+    local hasTrait = player:getPerkLevel(Perks.Cooking) >= 6
 
     if hasTrait or ZombRand(4) == 0 then
         addItems(inv, "aerx.PigLeather_Landrace_Full", 1)
@@ -128,7 +128,7 @@ end
 
 function Recipe.OnCreate.ButcherRabbit(items, result, player)
     local inv = player:getInventory()
-    local hasTrait = player:HasTrait("profsurvivalist3")
+    local hasTrait = player:getPerkLevel(Perks.Cooking) >= 6
 
     if hasTrait or ZombRand(4) == 0 then
         addItems(inv, "aerx.RabbitLeather_Full", 1)
@@ -148,7 +148,7 @@ end
 
 function Recipe.OnCreate.ButcherRabbitHalf(items, result, player)
     local inv = player:getInventory()
-    local hasTrait = player:HasTrait("profsurvivalist3")
+    local hasTrait = player:getPerkLevel(Perks.Cooking) >= 6
 
     if hasTrait or ZombRand(4) == 0 then
         addItems(inv, "aerx.RabbitLeather_Full", 1)
@@ -170,7 +170,7 @@ end
 
 function Recipe.OnCreate.ButcherSheep(items, result, player)
     local inv = player:getInventory()
-    local hasTrait = player:HasTrait("profsurvivalist3")
+    local hasTrait = player:getPerkLevel(Perks.Cooking) >= 6
 
     if hasTrait or ZombRand(4) == 0 then
         addItems(inv, "aerx.SheepLeather_Full", 2)
@@ -191,7 +191,7 @@ end
 function Recipe.OnCreate.ButcherSheepHalf(items, result, player)
     player = getPlayer()
     local inv = player:getInventory()
-    local hasTrait = player:HasTrait("profsurvivalist3")
+    local hasTrait = player:getPerkLevel(Perks.Cooking) >= 6
 
     if hasTrait or ZombRand(4) == 0 then
         addItems(inv, "aerx.SheepLeather_Full", 1)
