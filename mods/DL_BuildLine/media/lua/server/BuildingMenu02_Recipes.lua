@@ -6189,7 +6189,7 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "Farming",
-                Level = 2,
+                Level = 3,
                 Xp = 15
             }
         }
@@ -6223,13 +6223,8 @@ local function initBuildingMenuRecipes()
         },
         skills = {
             {
-                Skill = "Woodwork",
-                Level = smallObjectsCarpentrySkill,
-                Xp = BuildingMenu.round(smallObjectsCarpentrySkill * carpentryXpPerLevel)
-            },
-            {
                 Skill = "Farming",
-                Level = 2,
+                Level = 3,
                 Xp = 15
             }
         }
@@ -6270,13 +6265,8 @@ local function initBuildingMenuRecipes()
         },
         skills = {
             {
-                Skill = "Woodwork",
-                Level = smallObjectsCarpentrySkill,
-                Xp = BuildingMenu.round(smallObjectsCarpentrySkill * carpentryXpPerLevel)
-            },
-            {
                 Skill = "Farming",
-                Level = 2,
+                Level = 3,
                 Xp = 15
             }
         }
@@ -6301,7 +6291,7 @@ local function initBuildingMenuRecipes()
         skills = {
             {
                 Skill = "Farming",
-                Level = 4,
+                Level = 1,
                 Xp = 15
             }
         }
