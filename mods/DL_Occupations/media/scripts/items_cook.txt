@@ -1,0 +1,48 @@
+module Base
+{
+
+
+    item MushroomMash
+    {
+      DisplayCategory = Food,
+      HungerChange  = -10,
+      Weight  = 0.2,
+      AlwaysWelcomeGift = true,
+      Type  = Food,
+      DisplayName = Cleansed Mushroom Mash,
+      Icon  = MushroomMash,
+      EvolvedRecipe = Omelette:13;Stir fry Griddle Pan:13;Stir fry:13;Stew:13;Pie:13;Soup:13;Sandwich:13;Sandwich Baguette:13;Salad:13;Roasted Vegetables:13;RicePot:13;RicePan:13;PastaPot:13;PastaPan:13,
+      ThirstChange  = -1,
+      FoodType    =   Vegetables,
+      DaysFresh = 3,
+      DaysTotallyRotten = 4,
+      Carbohydrates = 2.12,
+      Proteins = 2.04,
+      Lipids = 0.24,
+      Calories = 30,
+      WorldStaticModel = MushroomGeneric1,
+    }
+
+    item BerryMash
+    {
+      DisplayCategory = Food,
+      HungerChange  = -5,
+      Weight  = 0.1,
+      AlwaysWelcomeGift = true,
+      Type  = Food,
+      DisplayName = Cleansed Berry Mash,
+      Icon  = BerryMash,
+      DaysTotallyRotten = 10,
+      DaysFresh = 6,
+      EvolvedRecipe = Cake:5;FruitSalad:5;Pancakes:5;Waffles:5;Muffin:5,
+      FoodType    =   Fruits,
+      ThirstChange  = -1,
+      Carbohydrates = 3,
+      Proteins = 2,
+      Lipids = 0,
+      Calories = 12,
+      CustomEatSound = EatingFruit,
+      WorldStaticModel = BerryGeneric1,
+    }
+
+}
