@@ -1,5 +1,5 @@
 function Recipe.OnCreate.OE_SawLogs(items, result, player)
-    if player:HasTrait("profcarpenter") then
+    if player:getPerkLevel(Perks.Woodwork) >= 10 then
         local plankCount = 1;
 
 	    local chance = player:getPerkLevel(Perks.Woodwork)*10;
@@ -11,13 +11,10 @@ function Recipe.OnCreate.OE_SawLogs(items, result, player)
         for i = 1, plankCount do
             square:AddWorldInventoryItem("Base.Plank", 0, 0, 0);
         end
-
-	    player:getStats():setStress(player:getStats():getStress() - 0.2);
-		print(player:getStats():getStress());
-	    player:getBodyDamage():setBoredomLevel(player:getBodyDamage():getBoredomLevel() - 10);
-		print(player:getBodyDamage():getBoredomLevel());
-	    player:getBodyDamage():setUnhappynessLevel(player:getBodyDamage():getUnhappynessLevel() - 5);
-		print(player:getBodyDamage():getUnhappynessLevel())
+        -- removed prints (performance), added math.max for any overflow silliness
+	    player:getStats():setStress(math.max(0, player:getStats():getStress() - 0.2));
+	    player:getBodyDamage():setBoredomLevel(math.max(0, player:getBodyDamage():getBoredomLevel() - 10));
+	    player:getBodyDamage():setUnhappynessLevel(math.max(0, player:getBodyDamage():getUnhappynessLevel() - 5));
     end
 end
 
@@ -47,6 +44,18 @@ end
 
 
 function Recipe.OnGiveXP.OE_MergeCarParts(recipe, ingredients, result, player)
+    local parts = recipe:getSource():get(0):getItems()
+    local condition, count = 0, 0
+    for i = 0, ingredients:size() - 1 do
+        local item = ingredients:get(i)
+        if parts:contains(item:getFullType()) then
+            condition = condition + item:getCondition() / item:getConditionMax()
+            count = count + 1
+        end
+    end
+    if count > 0 then
+        result:setCondition(math.floor(result:getConditionMax() * condition / count + 0.5))
+    end
     player:getXp():AddXP(Perks.Mechanics, 5);
 end
 
@@ -59,7 +68,7 @@ function Recipe.OnTest.OE_IsRottenFood(item)
 end
 
 
-function Recipe.OnCreate.ProfForager2_TestCritter(item)
+function Recipe.OnTest.ProfForager2_TestCritter(item)
     if item:getUnhappyChange() > 0 then
         return true;
     else
@@ -69,8 +78,8 @@ end
 
 
 function Recipe.OnCreate.ProfForager2_PrepareCritter(items, result, player, selectedItem)
-    local itemType = selectedItem:getFullType()
-    player:getInventory():Remove(result)
+    local source = items:get(0)
+    local itemType = source:getFullType()
     local newItem = InventoryItemFactory.CreateItem(itemType)
     
     if newItem then
@@ -78,12 +87,10 @@ function Recipe.OnCreate.ProfForager2_PrepareCritter(items, result, player, sele
         newItem:setPoisonPower(0)
         newItem:setPoisonDetectionLevel(0)
 
-        if selectedItem:isCooked() then
+        if source:isCooked() then
             newItem:setCooked(true)
         end
-        if selectedItem:isFresh() then
-            newItem:setAge(selectedItem:getAge())
-        end
+        newItem:setAge(source:getAge())
         player:getInventory():AddItem(newItem)
     end
 end

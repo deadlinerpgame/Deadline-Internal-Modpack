@@ -10,9 +10,9 @@ recipe Identify Insect
         Result: Maggots,
 	RemoveResultItem:true,
         Time: 2.0,
-	OnTest: Recipe.OnCreate.ProfForager2_TestCritter,
+	OnTest: Recipe.OnTest.ProfForager2_TestCritter,
         OnCreate: Recipe.OnCreate.ProfForager2_PrepareCritter,
-	NeedToBeLearn:true,
+	SkillRequired:PlantScavenging=10,
         Category: Survivalist,
     }
  	 
@@ -28,7 +28,7 @@ recipe Find Bait in Rotten Food
         Category:Expertise,
         Tooltip:Food needs to be rotten to appear as valid for this recipe.,
         AllowRottenItem:true,
-        NeedToBeLearn:true,
+        SkillRequired:PlantScavenging=10,
     }
 
 }
