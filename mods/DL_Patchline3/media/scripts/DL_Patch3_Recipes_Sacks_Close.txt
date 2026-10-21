@@ -346,6 +346,17 @@ module SP
         AllowRottenItem:false,
     }
 
+    recipe Put Hops in Sack
+    {
+        Deadline.Hops=12,
+	EmptySandbag=1,
+        Result:SackProduce_Hops,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
     recipe Put Lemons in Sack
     {
         Lemon=16,
@@ -477,4 +488,15 @@ module SP
         Time:15.0,
         AllowRottenItem:false,
     }
+    recipe Put Wheat in Sack
+    {
+        Deadline.Wheat=12,
+	EmptySandbag=1,
+        Result:SackProduce_Wheat,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        AllowRottenItem:false,
+    }
+
 }

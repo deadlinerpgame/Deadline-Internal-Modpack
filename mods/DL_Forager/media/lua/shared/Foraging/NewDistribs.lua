@@ -3,6 +3,34 @@ require 'Foraging/forageSystem'
 Events.onAddForageDefs.Add(function()
 
 
+	local Hops ={
+	type = "Deadline.Hops",
+	minCount = 1,
+	maxCount = 3,
+	xp=5,
+        categories = { "Vegetables" },
+	zones={ Forest=5, DeepForest=5, Vegitation=5, FarmLand=5, Farm=5, TrailerPark=5, TownZone=5, Nav=5 },
+	spawnFuncs = { doGenericItemSpawn },
+	forceOutside = false,
+	canBeAboveFloor = true,
+	itemSizeModifier = 0.5,
+	isItemOverrideSize = true,
+	};
+
+	local Wheat ={
+	type = "Deadline.Wheat",
+	minCount = 1,
+	maxCount = 3,
+	xp=5,
+        categories = { "Vegetables" },
+	zones={ Forest=5, DeepForest=5, Vegitation=5, FarmLand=5, Farm=5, TrailerPark=5, TownZone=5, Nav=5 },
+	spawnFuncs = { doGenericItemSpawn },
+	forceOutside = false,
+	canBeAboveFloor = true,
+	itemSizeModifier = 0.5,
+	isItemOverrideSize = true,
+	};
+
 	local Clay ={
 	type = "aerx.Clay",
 	minCount = 1,
@@ -279,6 +307,8 @@ Events.onAddForageDefs.Add(function()
 	forageSystem.addItemDef(Scrap_Zinc_S);
 	forageSystem.addItemDef(Scrap_Lead_S);
 
+forageSystem.addItemDef(Hops);
+forageSystem.addItemDef(Wheat);
 forageSystem.addItemDef(Clay);
 forageSystem.addItemDef(Stone);
 

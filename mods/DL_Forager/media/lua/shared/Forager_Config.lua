@@ -543,6 +543,7 @@ C.forageLists = C.forageLists or {
             { type = "Base.Cork",                        min = 1, max = 4, xp = 3,  zones = common(BOOZE_ZONES) },
             { type = "aerx.BottleOpener",                min = 1, max = 1, xp = 5,  zones = uncommon(BOOZE_ZONES) },
             { type = "SP.SackProduce_Hops",              min = 1, max = 1, xp = 15, zones = { Farm = 3, FarmLand = 3, TrailerPark = 1 } },
+            { type = "SP.SackProduce_Wheat",             min = 1, max = 1, xp = 15, zones = { Farm = 3, FarmLand = 3, TrailerPark = 1 } },
             { type = "SP.SackProduce_SugarCane",         min = 1, max = 1, xp = 15, zones = { Farm = 2, FarmLand = 2 } },
             { type = "Deadline.MashAppleWine",           min = 1, max = 1, xp = 15, zones = { Farm = 2, FarmLand = 2, TrailerPark = 1 } },
             { type = "Base.BrewingStationConstructionSet", min = 1, max = 1, xp = 30, zones = { Farm = 1, FarmLand = 1, TrailerPark = 1, Forest = 1 } },

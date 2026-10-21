@@ -184,6 +184,18 @@ module SP
 		AllowRottenItem:true,
     }
 
+    recipe Open Sack of Hops
+    {
+        SackProduce_Hops,
+
+        Result:Deadline.Hops=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
     recipe Open Sack of Lemons
     {
         SackProduce_Lemon,
@@ -327,4 +339,16 @@ module SP
         OnCreate:Recipe.OnCreate.OpenSackProduce,
 		AllowRottenItem:true,
     }
+    recipe Open Sack of Wheat
+    {
+        SackProduce_Wheat,
+
+        Result:Deadline.Wheat=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+		AllowRottenItem:true,
+    }
+
 }

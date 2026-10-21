@@ -182,12 +182,12 @@ function startLagerProduction(worldobjects, player, tile)
         return
     end
 
-    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Hops")
+    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Hops")
     if HopsCount < hopsNeeded then
         getSpecificPlayer(player):Say("I need more hops to start production.")
         return
     end
-    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Wheat")
+    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Wheat")
     if WheatCount < wheatNeeded then
         getSpecificPlayer(player):Say("I need more wheat to start production.")
         return
@@ -217,21 +217,21 @@ function startLagerProduction(worldobjects, player, tile)
     end
 
     for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        local hopsItem = playerInventory:getFirstTypeRecurse("Deadline.Hops")
         if hopsItem then
-            playerInventory:Remove(hopsItem)
+            hopsItem:getContainer():Remove(hopsItem)
         end
     end
     for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        local wheatItem = playerInventory:getFirstTypeRecurse("Deadline.Wheat")
         if wheatItem then
-            playerInventory:Remove(wheatItem)
+            wheatItem:getContainer():Remove(wheatItem)
         end
     end
     for i = 1, yeastNeeded do
-        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        local yeastItem = playerInventory:getFirstTypeRecurse("Base.Yeast")
         if yeastItem then
-            playerInventory:Remove(yeastItem)
+            yeastItem:getContainer():Remove(yeastItem)
         end
     end
 
@@ -239,7 +239,7 @@ function startLagerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 1
-    modData.TimeNeeded = 45
+    modData.TimeNeeded = 90
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -273,12 +273,12 @@ function startAleProduction(worldobjects, player, tile)
         return
     end
 
-    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Hops")
+    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Hops")
     if HopsCount < hopsNeeded then
         getSpecificPlayer(player):Say("I need more hops to start production.")
         return
     end
-    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Wheat")
+    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Wheat")
     if WheatCount < wheatNeeded then
         getSpecificPlayer(player):Say("I need more wheat to start production.")
         return
@@ -308,21 +308,21 @@ function startAleProduction(worldobjects, player, tile)
     end
 
     for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        local hopsItem = playerInventory:getFirstTypeRecurse("Deadline.Hops")
         if hopsItem then
-            playerInventory:Remove(hopsItem)
+            hopsItem:getContainer():Remove(hopsItem)
         end
     end
     for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        local wheatItem = playerInventory:getFirstTypeRecurse("Deadline.Wheat")
         if wheatItem then
-            playerInventory:Remove(wheatItem)
+            wheatItem:getContainer():Remove(wheatItem)
         end
     end
     for i = 1, yeastNeeded do
-        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        local yeastItem = playerInventory:getFirstTypeRecurse("Base.Yeast")
         if yeastItem then
-            playerInventory:Remove(yeastItem)
+            yeastItem:getContainer():Remove(yeastItem)
         end
     end
 
@@ -330,7 +330,7 @@ function startAleProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 2
-    modData.TimeNeeded = 60
+    modData.TimeNeeded = 120
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -364,12 +364,12 @@ function startWheatBeerProduction(worldobjects, player, tile)
         return
     end
 
-    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Hops")
+    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Hops")
     if HopsCount < hopsNeeded then
         getSpecificPlayer(player):Say("I need more hops to start production.")
         return
     end
-    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Wheat")
+    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Wheat")
     if WheatCount < wheatNeeded then
         getSpecificPlayer(player):Say("I need more wheat to start production.")
         return
@@ -399,21 +399,21 @@ function startWheatBeerProduction(worldobjects, player, tile)
     end
 
     for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        local hopsItem = playerInventory:getFirstTypeRecurse("Deadline.Hops")
         if hopsItem then
-            playerInventory:Remove(hopsItem)
+            hopsItem:getContainer():Remove(hopsItem)
         end
     end
     for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        local wheatItem = playerInventory:getFirstTypeRecurse("Deadline.Wheat")
         if wheatItem then
-            playerInventory:Remove(wheatItem)
+            wheatItem:getContainer():Remove(wheatItem)
         end
     end
     for i = 1, yeastNeeded do
-        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        local yeastItem = playerInventory:getFirstTypeRecurse("Base.Yeast")
         if yeastItem then
-            playerInventory:Remove(yeastItem)
+            yeastItem:getContainer():Remove(yeastItem)
         end
     end
 
@@ -421,7 +421,7 @@ function startWheatBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 3
-    modData.TimeNeeded = 70
+    modData.TimeNeeded = 135
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -455,12 +455,12 @@ function startIPAProduction(worldobjects, player, tile)
         return
     end
 
-    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Hops")
+    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Hops")
     if HopsCount < hopsNeeded then
         getSpecificPlayer(player):Say("I need more hops to start production.")
         return
     end
-    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Wheat")
+    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Wheat")
     if WheatCount < wheatNeeded then
         getSpecificPlayer(player):Say("I need more wheat to start production.")
         return
@@ -490,21 +490,21 @@ function startIPAProduction(worldobjects, player, tile)
     end
 
     for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        local hopsItem = playerInventory:getFirstTypeRecurse("Deadline.Hops")
         if hopsItem then
-            playerInventory:Remove(hopsItem)
+            hopsItem:getContainer():Remove(hopsItem)
         end
     end
     for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        local wheatItem = playerInventory:getFirstTypeRecurse("Deadline.Wheat")
         if wheatItem then
-            playerInventory:Remove(wheatItem)
+            wheatItem:getContainer():Remove(wheatItem)
         end
     end
     for i = 1, yeastNeeded do
-        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        local yeastItem = playerInventory:getFirstTypeRecurse("Base.Yeast")
         if yeastItem then
-            playerInventory:Remove(yeastItem)
+            yeastItem:getContainer():Remove(yeastItem)
         end
     end
 
@@ -512,7 +512,7 @@ function startIPAProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 4
-    modData.TimeNeeded = 75
+    modData.TimeNeeded = 150
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -546,12 +546,12 @@ function startStoutProduction(worldobjects, player, tile)
         return
     end
 
-    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Hops")
+    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Hops")
     if HopsCount < hopsNeeded then
         getSpecificPlayer(player):Say("I need more hops to start production.")
         return
     end
-    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Wheat")
+    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Wheat")
     if WheatCount < wheatNeeded then
         getSpecificPlayer(player):Say("I need more wheat to start production.")
         return
@@ -581,21 +581,21 @@ function startStoutProduction(worldobjects, player, tile)
     end
 
     for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        local hopsItem = playerInventory:getFirstTypeRecurse("Deadline.Hops")
         if hopsItem then
-            playerInventory:Remove(hopsItem)
+            hopsItem:getContainer():Remove(hopsItem)
         end
     end
     for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        local wheatItem = playerInventory:getFirstTypeRecurse("Deadline.Wheat")
         if wheatItem then
-            playerInventory:Remove(wheatItem)
+            wheatItem:getContainer():Remove(wheatItem)
         end
     end
     for i = 1, yeastNeeded do
-        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        local yeastItem = playerInventory:getFirstTypeRecurse("Base.Yeast")
         if yeastItem then
-            playerInventory:Remove(yeastItem)
+            yeastItem:getContainer():Remove(yeastItem)
         end
     end
 
@@ -603,7 +603,7 @@ function startStoutProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 5
-    modData.TimeNeeded = 90
+    modData.TimeNeeded = 180
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -638,12 +638,12 @@ function startStoutCoffeeProduction(worldobjects, player, tile)
         return
     end
 
-    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Hops")
+    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Hops")
     if HopsCount < hopsNeeded then
         getSpecificPlayer(player):Say("I need more hops to start production.")
         return
     end
-    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Wheat")
+    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Wheat")
     if WheatCount < wheatNeeded then
         getSpecificPlayer(player):Say("I need more wheat to start production.")
         return
@@ -653,7 +653,7 @@ function startStoutCoffeeProduction(worldobjects, player, tile)
         getSpecificPlayer(player):Say("I need more yeast to start production.")
         return
     end
-    local CoffeeCount = playerInventory:getItemCountFromTypeRecurse("Sprout.CoffeeBeans")
+    local CoffeeCount = playerInventory:getItemCountFromTypeRecurse("SapphCooking.CoffeeBeans")
     if CoffeeCount < coffeeNeeded then
         getSpecificPlayer(player):Say("I need more coffee beans to start production.")
         return
@@ -678,27 +678,27 @@ function startStoutCoffeeProduction(worldobjects, player, tile)
     end
 
     for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        local hopsItem = playerInventory:getFirstTypeRecurse("Deadline.Hops")
         if hopsItem then
-            playerInventory:Remove(hopsItem)
+            hopsItem:getContainer():Remove(hopsItem)
         end
     end
     for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        local wheatItem = playerInventory:getFirstTypeRecurse("Deadline.Wheat")
         if wheatItem then
-            playerInventory:Remove(wheatItem)
+            wheatItem:getContainer():Remove(wheatItem)
         end
     end
     for i = 1, yeastNeeded do
-        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        local yeastItem = playerInventory:getFirstTypeRecurse("Base.Yeast")
         if yeastItem then
-            playerInventory:Remove(yeastItem)
+            yeastItem:getContainer():Remove(yeastItem)
         end
     end
     for i = 1, coffeeNeeded do
-        local cofeeItem = playerInventory:getFirstType("Sprout.CoffeeBeans")
+        local cofeeItem = playerInventory:getFirstTypeRecurse("SapphCooking.CoffeeBeans")
         if cofeeItem then
-            playerInventory:Remove(cofeeItem)
+            cofeeItem:getContainer():Remove(cofeeItem)
         end
     end
 
@@ -706,7 +706,7 @@ function startStoutCoffeeProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 6
-    modData.TimeNeeded = 90
+    modData.TimeNeeded = 180
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -741,12 +741,12 @@ function startStoutChocolateProduction(worldobjects, player, tile)
         return
     end
 
-    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Hops")
+    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Hops")
     if HopsCount < hopsNeeded then
         getSpecificPlayer(player):Say("I need more hops to start production.")
         return
     end
-    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Wheat")
+    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Wheat")
     if WheatCount < wheatNeeded then
         getSpecificPlayer(player):Say("I need more wheat to start production.")
         return
@@ -781,27 +781,27 @@ function startStoutChocolateProduction(worldobjects, player, tile)
     end
 
     for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        local hopsItem = playerInventory:getFirstTypeRecurse("Deadline.Hops")
         if hopsItem then
-            playerInventory:Remove(hopsItem)
+            hopsItem:getContainer():Remove(hopsItem)
         end
     end
     for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        local wheatItem = playerInventory:getFirstTypeRecurse("Deadline.Wheat")
         if wheatItem then
-            playerInventory:Remove(wheatItem)
+            wheatItem:getContainer():Remove(wheatItem)
         end
     end
     for i = 1, yeastNeeded do
-        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        local yeastItem = playerInventory:getFirstTypeRecurse("Base.Yeast")
         if yeastItem then
-            playerInventory:Remove(yeastItem)
+            yeastItem:getContainer():Remove(yeastItem)
         end
     end
     for i = 1, chocolateNeeded do
-        local chocolateItem = playerInventory:getFirstType("Base.Chocolate")
+        local chocolateItem = playerInventory:getFirstTypeRecurse("Base.Chocolate")
         if chocolateItem then
-            playerInventory:Remove(chocolateItem)
+            chocolateItem:getContainer():Remove(chocolateItem)
         end
     end
 
@@ -809,7 +809,7 @@ function startStoutChocolateProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 7
-    modData.TimeNeeded = 90
+    modData.TimeNeeded = 180
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -844,12 +844,12 @@ function startCherryBeerProduction(worldobjects, player, tile)
         return
     end
 
-    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Hops")
+    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Hops")
     if HopsCount < hopsNeeded then
         getSpecificPlayer(player):Say("I need more hops to start production.")
         return
     end
-    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Wheat")
+    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Wheat")
     if WheatCount < wheatNeeded then
         getSpecificPlayer(player):Say("I need more wheat to start production.")
         return
@@ -884,27 +884,27 @@ function startCherryBeerProduction(worldobjects, player, tile)
     end
 
     for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        local hopsItem = playerInventory:getFirstTypeRecurse("Deadline.Hops")
         if hopsItem then
-            playerInventory:Remove(hopsItem)
+            hopsItem:getContainer():Remove(hopsItem)
         end
     end
     for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        local wheatItem = playerInventory:getFirstTypeRecurse("Deadline.Wheat")
         if wheatItem then
-            playerInventory:Remove(wheatItem)
+            wheatItem:getContainer():Remove(wheatItem)
         end
     end
     for i = 1, yeastNeeded do
-        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        local yeastItem = playerInventory:getFirstTypeRecurse("Base.Yeast")
         if yeastItem then
-            playerInventory:Remove(yeastItem)
+            yeastItem:getContainer():Remove(yeastItem)
         end
     end
     for i = 1, fruitNeeded do
-        local chocolateItem = playerInventory:getFirstType("Base.Cherry")
+        local chocolateItem = playerInventory:getFirstTypeRecurse("Base.Cherry")
         if chocolateItem then
-            playerInventory:Remove(chocolateItem)
+            chocolateItem:getContainer():Remove(chocolateItem)
         end
     end
 
@@ -912,7 +912,7 @@ function startCherryBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 8
-    modData.TimeNeeded = 60
+    modData.TimeNeeded = 120
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -947,12 +947,12 @@ function startBlueberryBeerProduction(worldobjects, player, tile)
         return
     end
 
-    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Hops")
+    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Hops")
     if HopsCount < hopsNeeded then
         getSpecificPlayer(player):Say("I need more hops to start production.")
         return
     end
-    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Wheat")
+    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Wheat")
     if WheatCount < wheatNeeded then
         getSpecificPlayer(player):Say("I need more wheat to start production.")
         return
@@ -987,27 +987,27 @@ function startBlueberryBeerProduction(worldobjects, player, tile)
     end
 
     for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        local hopsItem = playerInventory:getFirstTypeRecurse("Deadline.Hops")
         if hopsItem then
-            playerInventory:Remove(hopsItem)
+            hopsItem:getContainer():Remove(hopsItem)
         end
     end
     for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        local wheatItem = playerInventory:getFirstTypeRecurse("Deadline.Wheat")
         if wheatItem then
-            playerInventory:Remove(wheatItem)
+            wheatItem:getContainer():Remove(wheatItem)
         end
     end
     for i = 1, yeastNeeded do
-        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        local yeastItem = playerInventory:getFirstTypeRecurse("Base.Yeast")
         if yeastItem then
-            playerInventory:Remove(yeastItem)
+            yeastItem:getContainer():Remove(yeastItem)
         end
     end
     for i = 1, fruitNeeded do
-        local chocolateItem = playerInventory:getFirstType("Base.BerryBlue")
+        local chocolateItem = playerInventory:getFirstTypeRecurse("Base.BerryBlue")
         if chocolateItem then
-            playerInventory:Remove(chocolateItem)
+            chocolateItem:getContainer():Remove(chocolateItem)
         end
     end
 
@@ -1015,7 +1015,7 @@ function startBlueberryBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 9
-    modData.TimeNeeded = 60
+    modData.TimeNeeded = 120
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -1050,12 +1050,12 @@ function startStrawberryBeerProduction(worldobjects, player, tile)
         return
     end
 
-    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Hops")
+    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Hops")
     if HopsCount < hopsNeeded then
         getSpecificPlayer(player):Say("I need more hops to start production.")
         return
     end
-    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Wheat")
+    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Wheat")
     if WheatCount < wheatNeeded then
         getSpecificPlayer(player):Say("I need more wheat to start production.")
         return
@@ -1090,27 +1090,27 @@ function startStrawberryBeerProduction(worldobjects, player, tile)
     end
 
     for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        local hopsItem = playerInventory:getFirstTypeRecurse("Deadline.Hops")
         if hopsItem then
-            playerInventory:Remove(hopsItem)
+            hopsItem:getContainer():Remove(hopsItem)
         end
     end
     for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        local wheatItem = playerInventory:getFirstTypeRecurse("Deadline.Wheat")
         if wheatItem then
-            playerInventory:Remove(wheatItem)
+            wheatItem:getContainer():Remove(wheatItem)
         end
     end
     for i = 1, yeastNeeded do
-        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        local yeastItem = playerInventory:getFirstTypeRecurse("Base.Yeast")
         if yeastItem then
-            playerInventory:Remove(yeastItem)
+            yeastItem:getContainer():Remove(yeastItem)
         end
     end
     for i = 1, fruitNeeded do
-        local chocolateItem = playerInventory:getFirstType("farming.Strewberrie")
+        local chocolateItem = playerInventory:getFirstTypeRecurse("farming.Strewberrie")
         if chocolateItem then
-            playerInventory:Remove(chocolateItem)
+            chocolateItem:getContainer():Remove(chocolateItem)
         end
     end
 
@@ -1118,7 +1118,7 @@ function startStrawberryBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 10
-    modData.TimeNeeded = 60
+    modData.TimeNeeded = 120
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -1153,12 +1153,12 @@ function startLemonBeerProduction(worldobjects, player, tile)
         return
     end
 
-    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Hops")
+    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Hops")
     if HopsCount < hopsNeeded then
         getSpecificPlayer(player):Say("I need more hops to start production.")
         return
     end
-    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Wheat")
+    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Wheat")
     if WheatCount < wheatNeeded then
         getSpecificPlayer(player):Say("I need more wheat to start production.")
         return
@@ -1193,27 +1193,27 @@ function startLemonBeerProduction(worldobjects, player, tile)
     end
 
     for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        local hopsItem = playerInventory:getFirstTypeRecurse("Deadline.Hops")
         if hopsItem then
-            playerInventory:Remove(hopsItem)
+            hopsItem:getContainer():Remove(hopsItem)
         end
     end
     for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        local wheatItem = playerInventory:getFirstTypeRecurse("Deadline.Wheat")
         if wheatItem then
-            playerInventory:Remove(wheatItem)
+            wheatItem:getContainer():Remove(wheatItem)
         end
     end
     for i = 1, yeastNeeded do
-        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        local yeastItem = playerInventory:getFirstTypeRecurse("Base.Yeast")
         if yeastItem then
-            playerInventory:Remove(yeastItem)
+            yeastItem:getContainer():Remove(yeastItem)
         end
     end
     for i = 1, fruitNeeded do
-        local chocolateItem = playerInventory:getFirstType("Base.Lemon")
+        local chocolateItem = playerInventory:getFirstTypeRecurse("Base.Lemon")
         if chocolateItem then
-            playerInventory:Remove(chocolateItem)
+            chocolateItem:getContainer():Remove(chocolateItem)
         end
     end
 
@@ -1221,7 +1221,7 @@ function startLemonBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 11
-    modData.TimeNeeded = 60
+    modData.TimeNeeded = 120
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -1256,12 +1256,12 @@ function startPearBeerProduction(worldobjects, player, tile)
         return
     end
 
-    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Hops")
+    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Hops")
     if HopsCount < hopsNeeded then
         getSpecificPlayer(player):Say("I need more hops to start production.")
         return
     end
-    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Wheat")
+    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Wheat")
     if WheatCount < wheatNeeded then
         getSpecificPlayer(player):Say("I need more wheat to start production.")
         return
@@ -1296,27 +1296,27 @@ function startPearBeerProduction(worldobjects, player, tile)
     end
 
     for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        local hopsItem = playerInventory:getFirstTypeRecurse("Deadline.Hops")
         if hopsItem then
-            playerInventory:Remove(hopsItem)
+            hopsItem:getContainer():Remove(hopsItem)
         end
     end
     for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        local wheatItem = playerInventory:getFirstTypeRecurse("Deadline.Wheat")
         if wheatItem then
-            playerInventory:Remove(wheatItem)
+            wheatItem:getContainer():Remove(wheatItem)
         end
     end
     for i = 1, yeastNeeded do
-        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        local yeastItem = playerInventory:getFirstTypeRecurse("Base.Yeast")
         if yeastItem then
-            playerInventory:Remove(yeastItem)
+            yeastItem:getContainer():Remove(yeastItem)
         end
     end
     for i = 1, fruitNeeded do
-        local chocolateItem = playerInventory:getFirstType("Base.Pear")
+        local chocolateItem = playerInventory:getFirstTypeRecurse("Base.Pear")
         if chocolateItem then
-            playerInventory:Remove(chocolateItem)
+            chocolateItem:getContainer():Remove(chocolateItem)
         end
     end
 
@@ -1324,7 +1324,7 @@ function startPearBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 12
-    modData.TimeNeeded = 60
+    modData.TimeNeeded = 120
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -1359,12 +1359,12 @@ function startAppleBeerProduction(worldobjects, player, tile)
         return
     end
 
-    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Hops")
+    local HopsCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Hops")
     if HopsCount < hopsNeeded then
         getSpecificPlayer(player):Say("I need more hops to start production.")
         return
     end
-    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Sprout.Wheat")
+    local WheatCount = playerInventory:getItemCountFromTypeRecurse("Deadline.Wheat")
     if WheatCount < wheatNeeded then
         getSpecificPlayer(player):Say("I need more wheat to start production.")
         return
@@ -1399,27 +1399,27 @@ function startAppleBeerProduction(worldobjects, player, tile)
     end
 
     for i = 1, hopsNeeded do
-        local hopsItem = playerInventory:getFirstType("Sprout.Hops")
+        local hopsItem = playerInventory:getFirstTypeRecurse("Deadline.Hops")
         if hopsItem then
-            playerInventory:Remove(hopsItem)
+            hopsItem:getContainer():Remove(hopsItem)
         end
     end
     for i = 1, wheatNeeded do
-        local wheatItem = playerInventory:getFirstType("Sprout.Wheat")
+        local wheatItem = playerInventory:getFirstTypeRecurse("Deadline.Wheat")
         if wheatItem then
-            playerInventory:Remove(wheatItem)
+            wheatItem:getContainer():Remove(wheatItem)
         end
     end
     for i = 1, yeastNeeded do
-        local yeastItem = playerInventory:getFirstType("Base.Yeast")
+        local yeastItem = playerInventory:getFirstTypeRecurse("Base.Yeast")
         if yeastItem then
-            playerInventory:Remove(yeastItem)
+            yeastItem:getContainer():Remove(yeastItem)
         end
     end
     for i = 1, fruitNeeded do
-        local chocolateItem = playerInventory:getFirstType("Base.Apple")
+        local chocolateItem = playerInventory:getFirstTypeRecurse("Base.Apple")
         if chocolateItem then
-            playerInventory:Remove(chocolateItem)
+            chocolateItem:getContainer():Remove(chocolateItem)
         end
     end
 
@@ -1427,7 +1427,7 @@ function startAppleBeerProduction(worldobjects, player, tile)
     modData.isBrewing = true
     modData.BrewingStartTime = getGameTime():getWorldAgeHours()
     modData.BrewingType = 13
-    modData.TimeNeeded = 60
+    modData.TimeNeeded = 120
     local tileID = tile:getSquare():getX() .. "_" .. tile:getSquare():getY() .. "_" .. tile:getSquare():getZ()
     activeBrewingTiles[tileID] = true
     tile:transmitModData()
@@ -1464,9 +1464,9 @@ function giveLager(worldobjects, player, tile)
         return
     end
     for i = 1, 12 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty")
+        local bottleItem = inv:getFirstTypeRecurse("Base.BeerEmpty")
         if bottleItem then
-            inv:Remove(bottleItem)
+            bottleItem:getContainer():Remove(bottleItem)
         end
     end
     inv:AddItem('Deadline.BeerLager')
@@ -1495,9 +1495,9 @@ function giveAle(worldobjects, player, tile)
         return
     end
     for i = 1, 12 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty")
+        local bottleItem = inv:getFirstTypeRecurse("Base.BeerEmpty")
         if bottleItem then
-            inv:Remove(bottleItem)
+            bottleItem:getContainer():Remove(bottleItem)
         end
     end
     inv:AddItem('Deadline.BeerAle')
@@ -1526,9 +1526,9 @@ function giveWheatBeer(worldobjects, player, tile)
         return
     end
     for i = 1, 12 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty")
+        local bottleItem = inv:getFirstTypeRecurse("Base.BeerEmpty")
         if bottleItem then
-            inv:Remove(bottleItem)
+            bottleItem:getContainer():Remove(bottleItem)
         end
     end
     inv:AddItem('Deadline.BeerWheatBeer')
@@ -1557,9 +1557,9 @@ function giveIPA(worldobjects, player, tile)
         return
     end
     for i = 1, 12 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty")
+        local bottleItem = inv:getFirstTypeRecurse("Base.BeerEmpty")
         if bottleItem then
-            inv:Remove(bottleItem)
+            bottleItem:getContainer():Remove(bottleItem)
         end
     end
     inv:AddItem('Deadline.BeerIPA')
@@ -1588,9 +1588,9 @@ function giveStout(worldobjects, player, tile)
         return
     end
     for i = 1, 12 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty")
+        local bottleItem = inv:getFirstTypeRecurse("Base.BeerEmpty")
         if bottleItem then
-            inv:Remove(bottleItem)
+            bottleItem:getContainer():Remove(bottleItem)
         end
     end
     inv:AddItem('Deadline.BeerStout')
@@ -1619,9 +1619,9 @@ function giveStoutCoffee(worldobjects, player, tile)
         return
     end
     for i = 1, 12 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty")
+        local bottleItem = inv:getFirstTypeRecurse("Base.BeerEmpty")
         if bottleItem then
-            inv:Remove(bottleItem)
+            bottleItem:getContainer():Remove(bottleItem)
         end
     end
     inv:AddItem('Deadline.BeerStoutCoffee')
@@ -1650,9 +1650,9 @@ function giveStoutChocolate(worldobjects, player, tile)
         return
     end
     for i = 1, 12 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty")
+        local bottleItem = inv:getFirstTypeRecurse("Base.BeerEmpty")
         if bottleItem then
-            inv:Remove(bottleItem)
+            bottleItem:getContainer():Remove(bottleItem)
         end
     end
     inv:AddItem('Deadline.BeerStoutChocolate')
@@ -1682,9 +1682,9 @@ function giveBeerCherry(worldobjects, player, tile)
         return
     end
     for i = 1, 12 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty")
+        local bottleItem = inv:getFirstTypeRecurse("Base.BeerEmpty")
         if bottleItem then
-            inv:Remove(bottleItem)
+            bottleItem:getContainer():Remove(bottleItem)
         end
     end
     inv:AddItem('Deadline.BeerFruitCherry')
@@ -1713,9 +1713,9 @@ function giveBeerBlueberry(worldobjects, player, tile)
         return
     end
     for i = 1, 12 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty")
+        local bottleItem = inv:getFirstTypeRecurse("Base.BeerEmpty")
         if bottleItem then
-            inv:Remove(bottleItem)
+            bottleItem:getContainer():Remove(bottleItem)
         end
     end
     inv:AddItem('Deadline.BeerFruitBlueberry')
@@ -1744,9 +1744,9 @@ function giveBeerStrawberry(worldobjects, player, tile)
         return
     end
     for i = 1, 12 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty")
+        local bottleItem = inv:getFirstTypeRecurse("Base.BeerEmpty")
         if bottleItem then
-            inv:Remove(bottleItem)
+            bottleItem:getContainer():Remove(bottleItem)
         end
     end
     inv:AddItem('Deadline.BeerFruitStrawberry')
@@ -1775,9 +1775,9 @@ function giveBeerLemon(worldobjects, player, tile)
         return
     end
     for i = 1, 12 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty")
+        local bottleItem = inv:getFirstTypeRecurse("Base.BeerEmpty")
         if bottleItem then
-            inv:Remove(bottleItem)
+            bottleItem:getContainer():Remove(bottleItem)
         end
     end
     inv:AddItem('Deadline.BeerFruitLemon')
@@ -1806,9 +1806,9 @@ function giveBeerApple(worldobjects, player, tile)
         return
     end
     for i = 1, 12 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty")
+        local bottleItem = inv:getFirstTypeRecurse("Base.BeerEmpty")
         if bottleItem then
-            inv:Remove(bottleItem)
+            bottleItem:getContainer():Remove(bottleItem)
         end
     end
     inv:AddItem('Deadline.BeerFruitApple')
@@ -1837,9 +1837,9 @@ function giveBeerPear(worldobjects, player, tile)
         return
     end
     for i = 1, 12 do
-        local bottleItem = inv:getFirstType("Base.BeerEmpty")
+        local bottleItem = inv:getFirstTypeRecurse("Base.BeerEmpty")
         if bottleItem then
-            inv:Remove(bottleItem)
+            bottleItem:getContainer():Remove(bottleItem)
         end
     end
     inv:AddItem('Deadline.BeerFruitPear')
