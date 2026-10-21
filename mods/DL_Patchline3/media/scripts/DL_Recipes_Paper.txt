@@ -57,7 +57,14 @@ module Base
 	recipe Make a Drug Bag
 	{
 		ScrambledPaper=15,
-		Result:DrugsDLC.BolsaDeDroga,
+		Result:DrugsDLC.BolsaDeDroga=3,
+		Time:200.0,
+	}
+
+	recipe Make a Drug Bag from Garbage bags
+	{
+		Garbagebag=1,
+		Result:DrugsDLC.BolsaDeDroga=3,
 		Time:200.0,
 	}
 
