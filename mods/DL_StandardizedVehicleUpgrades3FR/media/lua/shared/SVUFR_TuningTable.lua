@@ -967,7 +967,7 @@ NewCarTuningTable2["Trailerfuelsmall"].parts["ATA2ProtectionWheels"].ATAProtecti
 		NewCarTuningTable2["schoolbusshort"] = NewCarTuningTable2["schoolbus"]
 		NewCarTuningTable2["volvo244"] = NewCarTuningTable2["68wildcat"]
 
-		local carRecipe = "MechanicMag1"
+		local carRecipe = "ATAFiliRecipes" -- swapped from MechanicMag1 which is the item and not the recipe it teaches
 
 		SVUC2_setVehicleRecipesArmor(NewCarTuningTable2, carRecipe, "51chevy3100", "ATA2ProtectionWindowFrontLeft")
 		SVUC2_setVehicleRecipesArmor(NewCarTuningTable2, carRecipe, "51chevy3100", "ATA2ProtectionWindowFrontRight")
