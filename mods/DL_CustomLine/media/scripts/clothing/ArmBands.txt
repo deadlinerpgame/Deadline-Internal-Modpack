@@ -1,0 +1,70 @@
+module Base
+{
+    item ArmbandSentinels
+    {
+        DisplayCategory = Accessory,
+        Type = Clothing,
+        DisplayName = Sentinel Armband,
+        ClothingItem = ArmbandSentinels,
+        BodyLocation = NARightArm,
+        ClothingItemExtra = ArmbandSentinelsLeft;ArmbandSentinelsRightLoose;ArmbandSentinelsLeftLoose,
+        ClothingItemExtraOption = Left;RightLoose;LeftLoose,
+        clothingExtraSubmenu = Right,
+        Weight = 0.2,
+        Icon = ArmbandBlack,
+        CanHaveHoles = false,
+        Tooltip = Tooltip_Right,
+        WorldStaticModel = ArmbandSentinels_Ground,
+    }
+
+    item ArmbandSentinelsLeft
+    {
+        DisplayCategory = Accessory,
+        Type = Clothing,
+        DisplayName = Sentinel Armband,
+        ClothingItem = ArmbandSentinelsLeft,
+        BodyLocation = NALeftArm,
+        ClothingItemExtra = ArmbandSentinels;ArmbandSentinelsRightLoose;ArmbandSentinelsLeftLoose,
+        ClothingItemExtraOption = Right;RightLoose;LeftLoose,
+        clothingExtraSubmenu = Left,
+        Weight = 0.2,
+        Icon = ArmbandBlack,
+        CanHaveHoles = false,
+        Tooltip = Tooltip_Left,
+        WorldStaticModel = ArmbandSentinels_Ground,
+    }
+
+    item ArmbandSentinelsRightLoose
+    {
+        DisplayCategory = Accessory,
+        Type = Clothing,
+        DisplayName = Sentinel Armband - Loose,
+        ClothingItem = ArmbandSentinelsRightLoose,
+        BodyLocation = NARightArm,
+        ClothingItemExtra = ArmbandSentinelsLeftLoose;ArmbandSentinelsLeft;ArmbandSentinels,
+        ClothingItemExtraOption = LeftLoose;Left;Right,
+        clothingExtraSubmenu = RightLoose,
+        Weight = 0.2,
+        Icon = ArmbandBlack,
+        CanHaveHoles = false,
+        Tooltip = Right Armband,
+        WorldStaticModel = ArmbandSentinels_Ground,
+    }
+
+    item ArmbandSentinelsLeftLoose
+    {
+        DisplayCategory = Accessory,
+        Type = Clothing,
+        DisplayName = Sentinel Armband - Loose,
+        ClothingItem = ArmbandSentinelsLeftLoose,
+        BodyLocation = NALeftArm,
+        ClothingItemExtra = ArmbandSentinelsRightLoose;ArmbandSentinelsLeft;ArmbandSentinels,
+        ClothingItemExtraOption = RightLoose;Left;Right,
+        clothingExtraSubmenu = LeftLoose,
+        Weight = 0.2,
+        Icon = ArmbandBlack,
+        CanHaveHoles = false,
+        Tooltip = Left Armband,
+        WorldStaticModel = ArmbandSentinels_Ground,
+    }
+}
