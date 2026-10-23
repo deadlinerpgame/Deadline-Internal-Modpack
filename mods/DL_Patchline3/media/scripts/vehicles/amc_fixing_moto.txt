@@ -6,8 +6,8 @@ module Base
         GlobalItem : BlowTorch=5,
         ConditionModifier : 1.2,
 
-        Fixer : SheetMetal; MetalWelding=3;Mechanics=4,
-        Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=4,
+        Fixer : SheetMetal; Mechanics=6,
+        Fixer : SmallSheetMetal=2; Mechanics=6,
     }
     
     fixing Fix Moto Muffler Welding
@@ -16,8 +16,8 @@ module Base
         GlobalItem : BlowTorch=5,
         ConditionModifier : 1.2,
 
-        Fixer : SheetMetal; MetalWelding=3;Mechanics=4,
-        Fixer : SmallSheetMetal=2; MetalWelding=3;Mechanics=4,
+        Fixer : SheetMetal; Mechanics=6,
+        Fixer : SmallSheetMetal=2; Mechanics=6,
     }
     
     fixing Fix Moto seat
@@ -25,8 +25,8 @@ module Base
         Require : ATAMotoBMWSeat;ATAMotoBMWSeatCustom;ATAMotoHarleySeat;ATAMotoQuadSeat;ATAMotoDirtBikeSeat,
         ConditionModifier : 0.8,
 
-        Fixer : DuctTape=2;Mechanics=1,
-        Fixer : Glue=2;Mechanics=2,
+        Fixer : DuctTape=2;Mechanics=6,
+        Fixer : Glue=2;Mechanics=6,
     }
     
 }
