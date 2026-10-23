@@ -2,14 +2,14 @@ require "ISUI/ISFitnessUI"
 
 local _CAPS = {
     [Perks.Fitness] = {
-        {to=1,  cap=750}, {to=2,  cap=1000}, {to=3,  cap=1500}, {to=4,  cap=1800},
-        {to=5,  cap=3000}, {to=6,  cap=4300}, {to=7,  cap=7500}, {to=8,  cap=10000},
-        {to=9,  cap=15000}, {to=10,  cap=18750},
+        {to=0,  cap=300}, {to=1,  cap=600}, {to=2,  cap=1200}, {to=3,  cap=1800},
+        {to=4,  cap=3600}, {to=5,  cap=6000}, {to=6,  cap=12000}, {to=7,  cap=18000},
+        {to=8,  cap=24000}, {to=9,  cap=30000}, {to=10, cap=30000},
     },
     [Perks.Strength] = {
-        {to=1,  cap=750}, {to=2,  cap=1000}, {to=3,  cap=1500}, {to=4,  cap=1800},
-        {to=5,  cap=3000}, {to=6,  cap=4300}, {to=7,  cap=7500}, {to=8,  cap=10000},
-        {to=9,  cap=15000}, {to=10,  cap=18750},
+        {to=0,  cap=300}, {to=1,  cap=600}, {to=2,  cap=1200}, {to=3,  cap=1800},
+        {to=4,  cap=3600}, {to=5,  cap=6000}, {to=6,  cap=12000}, {to=7,  cap=18000},
+        {to=8,  cap=24000}, {to=9,  cap=30000}, {to=10, cap=30000},
     }
 }
 
@@ -145,7 +145,7 @@ local function updateDailyLimitsUI(self)
     self._dl_lblFitness:setName(fmtUsedCap(usedFit, capFit))
 
     local now = getGameTime():getWorldAgeHours()
-    local RESET = 170
+    local RESET = 90
     local function fmtRemaining(ts)
         local elapsed = now - (ts or 0)
         local remain = RESET - elapsed
