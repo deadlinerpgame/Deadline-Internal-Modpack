@@ -56,14 +56,14 @@ module Base
 
     recipe Process Methane into Fuel
     	{
-		EmptyPetrolCan=1,
+		EmptyPetrolCan=2,
 		MethaneTank=1,
 		Water=10,
 		Charcoal/Bleach=1,
 		Log=1,
 		SkillRequired:Electricity=2,
 		NearItem:Distiller,
-        	Result:Base.PetrolCan,
+        	Result:Base.PetrolCan=2,
         	Time:140.0,
         	Sound:Screwdriver,
 		OnCreate:Recipe.OnCreate.GiveEmptyMethaneTank,
