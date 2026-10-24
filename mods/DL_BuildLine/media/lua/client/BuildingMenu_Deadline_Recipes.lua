@@ -613,7 +613,7 @@ local function initBuildingMenuRecipes()
         }
     }
 
--- HAY STUFF
+-- HAY AND FARM DECO STUFF
  BuildingMenu.FarmFloorRecipe = {
     --[[    neededTools = {}, --]]
         neededMaterials = {
@@ -684,6 +684,7 @@ local function initBuildingMenuRecipes()
             }
         }
     }
+
 
 -- STOVE BABY RECIPE
  BuildingMenu.StoveBeginnerRecipe = {
@@ -765,6 +766,7 @@ local function initBuildingMenuRecipes()
             }
         }
     }
+
 
 -- [[ METAL STUFF ]]
 

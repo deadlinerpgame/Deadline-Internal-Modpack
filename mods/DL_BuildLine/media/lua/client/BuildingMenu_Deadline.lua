@@ -29165,7 +29165,7 @@ local function addDeadlineRailingsToMenu()
             "Tooltip_BuildingMenuObj_Wooden_Railing",
             "Tooltip_Wooden_Railing",
             BuildingMenu.onBuildWall,
-            BuildingMenu.WoodenFenceRecipe,
+            BuildingMenu.FarmFloorRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -29183,7 +29183,7 @@ local function addDeadlineRailingsToMenu()
             "Tooltip_BuildingMenuObj_Wooden_Railing_Corner",
             "Tooltip_Wooden_Railing_Post",
             BuildingMenu.onBuildWall,
-            BuildingMenu.WoodenFenceRecipe,
+            BuildingMenu.FarmFloorRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -29200,7 +29200,7 @@ local function addDeadlineRailingsToMenu()
             "Tooltip_BuildingMenuObj_Wooden_Railing_Post",
             "Tooltip_Wooden_Railing_Post",
             BuildingMenu.onBuildWall,
-            BuildingMenu.WoodenFenceRecipe,
+            BuildingMenu.SmallFarmFloorRecipe,
             true,
             {
                 completionSound = "BuildWoodenStructureSmall",
@@ -31399,8 +31399,8 @@ end
 local function addRoadworkFarmFloorsToMenu()
     local roadworkDeadlineFarmFloors = {
         BuildingMenu.createObject(
-            "Tooltip_BeDirt_Normal",
-            "Tooltip_BeDirt_Desc",
+            "",
+            "",
             BuildingMenu.onBuildNaturalFloor,
             BuildingMenu.FarmFloorRecipe,
             true,
@@ -31412,8 +31412,8 @@ local function addRoadworkFarmFloorsToMenu()
             }
         ),
         BuildingMenu.createObject(
-            "Tooltip_BeDirt_Edge",
-            "Tooltip_BeDirt_Desc",
+            "",
+            "",
             BuildingMenu.onBuildFloorOverlay,
             BuildingMenu.SmallFarmFloorRecipe,
             true,
@@ -31448,6 +31448,214 @@ end
 -- >> CONTAINERS: COUNTERS, METAL LOCKERS
 local function addDeadlineContainersToMenu()
     local DeadlineContainers = {
+ -- FHOUSEHOLD
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineContainers_Household",
+            subCategoryIcon = "melos_tiles_furniture_random_02_40",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        needToBeAgainstWall = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "fears_storage_tiles_10",
+                        northSprite = "fears_storage_tiles_9"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_02_40",
+                        northSprite = "melos_tiles_furniture_random_02_41",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_02_42",
+                        northSprite = "melos_tiles_furniture_random_02_43",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_02_44",
+                        northSprite = "melos_tiles_furniture_random_02_45",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        isThumpable = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_02_46",
+                        northSprite = "melos_tiles_furniture_random_02_47",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        needToBeAgainstWall = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_02_8",
+                        northSprite = "melos_tiles_furniture_random_02_9",
+                        eastSprite = "melos_tiles_furniture_random_02_10",
+                        southSprite = "melos_tiles_furniture_random_02_11"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        needToBeAgainstWall = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_02_12",
+                        northSprite = "melos_tiles_furniture_random_02_13",
+                        eastSprite = "melos_tiles_furniture_random_02_14",
+                        southSprite = "melos_tiles_furniture_random_02_15"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Household_Bathroom",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        needToBeAgainstWall = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_01_48",
+                        northSprite = "melos_tiles_furniture_random_01_49",
+
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Household_Bathroom",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        needToBeAgainstWall = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_01_50",
+                        northSprite = "melos_tiles_furniture_random_01_51",
+
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Household_Bathroom",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        needToBeAgainstWall = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_01_52",
+                        northSprite = "melos_tiles_furniture_random_01_53",
+
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Household_Bathroom",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        needToBeAgainstWall = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_01_54",
+                        northSprite = "melos_tiles_furniture_random_01_55",
+
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Household_Bathroom",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.SmallFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        needToBeAgainstWall = true,
+                        blockAllTheSquare = false,
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_01_56",
+                        northSprite = "melos_tiles_furniture_random_01_57",
+
+                    }
+                ),
+            }
+        },
  -- FCOUNTERS
         {
             subcategoryName = "IGUI_BuildingMenuSubCat_DeadlineContainers_Counters",
@@ -32572,6 +32780,36 @@ local function addDeadlineContainersToMenu()
                         southSprite = "location_community_medical_ddd_01_7",
                     }
                 ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "damiao_tile_02_30",
+                        northSprite = "damiao_tile_02_27",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "Tooltip_MetalWallLocker_Name",
+                    "Tooltip_MetalWallLocker_Desc",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "damiao_tile_02_26",
+                        northSprite = "damiao_tile_02_25",
+                    }
+                ),
             }
         },        
     }
@@ -32594,6 +32832,87 @@ end
 -- >> TABLES: LOW, SMALL, LARGE
 local function addDeadlineTablesToMenu()
     local DeadlineTables = {
+ -- FWORKBENCHES        
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_Furniture_Workbenches",
+            subCategoryIcon = "fears_workbenches_5",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_NoFunctionality",
+                    BuildingMenu.onBuildDoubleTileFurniture,
+                    BuildingMenu.LargeFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "damiao_tile_04_29",
+                        sprite2 = "damiao_tile_04_28",
+                        northSprite = "damiao_tile_04_30",
+                        northSprite2 = "damiao_tile_04_31",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_NoFunctionality",
+                    BuildingMenu.onBuildDoubleTileContainer,
+                    BuildingMenu.LargeFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "fears_workbenches_1",
+                        sprite2 = "fears_workbenches_0",
+                        northSprite = "fears_workbenches_8",
+                        northSprite2 = "fears_workbenches_9",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_NoFunctionality",
+                    BuildingMenu.onBuildDoubleTileContainer,
+                    BuildingMenu.MetalLockerRecipe,
+                    true,
+                    {
+                        completionSound = "BuildMetalStructureMedium",
+                    },
+                    {
+                        sprite = "fears_workbenches_23",
+                        sprite2 = "fears_workbenches_22",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_NoFunctionality",
+                    BuildingMenu.onBuildDoubleTileContainer,
+                    BuildingMenu.LargeFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "fears_workbenches_5",
+                        sprite2 = "fears_workbenches_4",
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_NoFunctionality",
+                    BuildingMenu.onBuildDoubleTileContainer,
+                    BuildingMenu.LargeFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                    },
+                    {
+                        sprite = "fears_workbenches_7",
+                        sprite2 = "fears_workbenches_6",
+                    }
+                ),
+            }
+        },
  -- FLOWTABLES
         {
             subcategoryName = "IGUI_BuildingMenuSubCat_Furniture_Low_Tables",
@@ -33891,7 +34210,7 @@ local function addDeadlineTablesToMenu()
     end
 end
 
--- >> SEATING: CHAIRS
+-- >> SEATING: BENCHES, CHAIRS
 local function addDeadlineSeatingToMenu()
     local DeadlineSeating = {
  --[[ FTOCHOOSE
@@ -33944,26 +34263,51 @@ local function addDeadlineSeatingToMenu()
                 ),
             }
         }, ]]
- --[[ FTOCHOOSE
+ -- FBENCHES
         {
-            subcategoryName = "IGUI_BuildingMenuSubCat_Furniture_Small_Tables",
-            subCategoryIcon = "melos_tiles_furniture_tables_01_24",
+            subcategoryName = "IGUI_BuildingMenuSubCat_Furniture_Benches",
+            subCategoryIcon = "crafted_02_58",
             objects = {
                 BuildingMenu.createObject(
                     "",
-                    "Tooltip_SmallTable_Desc",
-                    BuildingMenu.onBuildSimpleFurniture,
-                    BuildingMenu.SmallFurnitureRecipe,
+                    "Tooltip_craft_woodenChairDesc",
+                    BuildingMenu.onBuildDoubleTileFurniture,
+                    BuildingMenu.LargeLogFurnitureRecipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
+                        canPassThrough = true,
+                        isThumpable = true,
+                        isCorner = true
                     },
                     {
-                        sprite = "melos_tiles_furniture_tables_01_68",
+                        sprite = "crafted_02_59",
+                        sprite2 = "crafted_02_58",
+                        northSprite = "crafted_02_56",
+                        northSprite2 = "crafted_02_57"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_craft_woodenChairDesc",
+                    BuildingMenu.onBuildDoubleTileFurniture,
+                    BuildingMenu.LargeFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canPassThrough = true,
+                        isThumpable = true,
+                        isCorner = true
+                    },
+                    {
+                        sprite = "furniture_seating_outdoor_01_21",
+                        sprite2 = "furniture_seating_outdoor_01_20",
+                        northSprite = "furniture_seating_outdoor_01_22",
+                        northSprite2 = "furniture_seating_outdoor_01_23"
                     }
                 ),
             }
-        }, ]]
+        }, 
  -- FCCHAIRS        
         {
             subcategoryName = "IGUI_BuildingMenuSubCat_Furniture_Chairs",
@@ -34512,6 +34856,7 @@ local function addDeadlineBookshelvesToMenu()
                     {
                         completionSound = "BuildWoodenStructureLarge",
                         buildLow = true,
+                        needToBeAgainstWall = true,
                         blockAllTheSquare = false,
                     },
                     {
@@ -34528,6 +34873,7 @@ local function addDeadlineBookshelvesToMenu()
                     {
                         completionSound = "BuildWoodenStructureLarge",
                         buildLow = true,
+                        needToBeAgainstWall = true,
                         blockAllTheSquare = false,
                     },
                     {
@@ -34538,13 +34884,15 @@ local function addDeadlineBookshelvesToMenu()
                     "Tooltip_WallPillar_Name",
                     "Tooltip_WallPillar_Desc",
                     BuildingMenu.onBuildWall,
-                    BuildingMenu.SmallWoodWallRecipe,
+                    BuildingMenu.SmallFurnitureRecipe,
                     true,
                     {
                         completionSound = "BuildWoodenStructureLarge",
                         canPassThrough = true,
                         canBarricade = false,
                         isCorner = true,
+                        needToBeAgainstWall = true,
+                        blockAllTheSquare = false,
                         modData = { wallType = "pillar" }
                     },
                     { 
@@ -34560,6 +34908,7 @@ local function addDeadlineBookshelvesToMenu()
                     {
                         completionSound = "BuildWoodenStructureLarge",
                         buildLow = true,
+                        needToBeAgainstWall = true,
                         blockAllTheSquare = false,
                     },
                     {
@@ -34576,6 +34925,7 @@ local function addDeadlineBookshelvesToMenu()
                     {
                         completionSound = "BuildWoodenStructureLarge",
                         buildLow = true,
+                        needToBeAgainstWall = true,
                         blockAllTheSquare = false,
                     },
                     {
@@ -34592,6 +34942,7 @@ local function addDeadlineBookshelvesToMenu()
                     {
                         completionSound = "BuildWoodenStructureLarge",
                         buildLow = true,
+                        needToBeAgainstWall = true,
                         blockAllTheSquare = false,
                     },
                     {
@@ -34608,6 +34959,7 @@ local function addDeadlineBookshelvesToMenu()
                     {
                         completionSound = "BuildWoodenStructureLarge",
                         buildLow = true,
+                        needToBeAgainstWall = true,
                         blockAllTheSquare = false,
                     },
                     {
@@ -34671,6 +35023,7 @@ local function addDeadlineBookshelvesToMenu()
                     {
                         completionSound = "BuildWoodenStructureLarge",
                         buildLow = true,
+                        needToBeAgainstWall = true,
                         blockAllTheSquare = false,
                     },
                     {
@@ -34696,9 +35049,168 @@ local function addDeadlineBookshelvesToMenu()
     end
 end
 
+-- >> DRESSERS
+local function addDeadlineDressersToMenu()
+    local DeadlineDressers = {
+ -- FDRESSERS
+        {
+            subcategoryName = "IGUI_BuildingMenuSubCat_Furniture_Dressers",
+            subCategoryIcon = "melos_tiles_furniture_random_01_96",
+            objects = {
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Dresser",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.LargeFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_01_80",
+                        northSprite = "melos_tiles_furniture_random_01_81",
+                        eastSprite = "melos_tiles_furniture_random_01_82",
+                        southSprite = "melos_tiles_furniture_random_01_83"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Dresser",
+                    BuildingMenu.onBuildDoubleTileContainer,
+                    BuildingMenu.LargeFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_01_95",
+                        sprite2 = "melos_tiles_furniture_random_01_94",
+                        northSprite = "melos_tiles_furniture_random_01_92",
+                        northSprite2 = "melos_tiles_furniture_random_01_93"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Dresser",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.LargeFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_01_88",
+                        northSprite = "melos_tiles_furniture_random_01_89",
+                        eastSprite = "melos_tiles_furniture_random_01_90",
+                        southSprite = "melos_tiles_furniture_random_01_91"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Dresser",
+                    BuildingMenu.onBuildDoubleTileContainer,
+                    BuildingMenu.LargeFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_01_107",
+                        sprite2 = "melos_tiles_furniture_random_01_106",
+                        northSprite = "melos_tiles_furniture_random_01_104",
+                        northSprite2 = "melos_tiles_furniture_random_01_105"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Dresser",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.LargeFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_01_96",
+                        northSprite = "melos_tiles_furniture_random_01_97",
+                        eastSprite = "melos_tiles_furniture_random_01_102",
+                        southSprite = "melos_tiles_furniture_random_01_103"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Dresser",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.LargeFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_01_112",
+                        northSprite = "melos_tiles_furniture_random_01_113",
+                        eastSprite = "melos_tiles_furniture_random_01_114",
+                        southSprite = "melos_tiles_furniture_random_01_115"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Dresser",
+                    BuildingMenu.onBuildDoubleTileContainer,
+                    BuildingMenu.LargeFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_01_127",
+                        sprite2 = "melos_tiles_furniture_random_01_126",
+                        northSprite = "melos_tiles_furniture_random_01_124",
+                        northSprite2 = "melos_tiles_furniture_random_01_125"
+                    }
+                ),
+                BuildingMenu.createObject(
+                    "",
+                    "Tooltip_Dresser",
+                    BuildingMenu.onBuildWoodenContainer,
+                    BuildingMenu.LargeFurnitureRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge",
+                        canBeLockedByPadlock = true
+                    },
+                    {
+                        sprite = "melos_tiles_furniture_random_01_120",
+                        northSprite = "melos_tiles_furniture_random_01_121",
+                        eastSprite = "melos_tiles_furniture_random_01_122",
+                        southSprite = "melos_tiles_furniture_random_01_123"
+                    }
+                ),
+            }
+        },
+    }
+ -- Add Dressers Category
+    for k, subCatData in pairs(DeadlineDressers) do
+        BuildingMenu.addObjectsToCategories(
+            "Deadline",
+            "IGUI_BuildingMenuCat_DeadlineFurniture",
+            nil,
+            subCatData.subcategoryName,
+            subCatData.subCategoryIcon,
+            subCatData.objects
+        )
+    end
+end
 
 --[[ >>>>>>> FDECORATIONS <<<<<<< --]]
--- >> RUGS
+-- >> FRUGS
 local function addDeadlineRugsToMenu()
     local DeadlineRugs = {
  -- SEGMENTED RUGS
@@ -35505,8 +36017,23 @@ local function addDeadlineRugsToMenu()
     )
 end
 
+-- >> FFARM DECORATIONS
 local function addDeadlineDecorFarmToMenu()
     local DeadlineDecorFarm = {
+        BuildingMenu.createObject(
+            "",
+            "Tooltip_HayBale_Desc",
+            BuildingMenu.onBuildSimpleFurniture,
+            BuildingMenu.BigHayBale,
+            true,
+            {
+                completionSound = "DropSoilFromGravelBag",
+            },
+            { 
+                sprite = "vegetation_farm_01_10",
+                northSprite = "vegetation_farm_01_18"
+            }
+        ),
         BuildingMenu.createObject(
             "",
             "Tooltip_HayBale_Desc",
@@ -35523,16 +36050,18 @@ local function addDeadlineDecorFarmToMenu()
         ),
         BuildingMenu.createObject(
             "",
-            "Tooltip_HayBale_Desc",
-            BuildingMenu.onBuildSimpleFurniture,
-            BuildingMenu.BigHayBale,
+            "Tooltip_Trough_Desc",
+            BuildingMenu.onBuildDoubleTileContainer,
+            BuildingMenu.LargeFurnitureRecipe,
             true,
             {
-                completionSound = "DropSoilFromGravelBag",
+                completionSound = "BuildWoodenStructureLarge",
             },
-            { 
-                sprite = "vegetation_farm_01_8",
-                northSprite = "vegetation_farm_01_16"
+            {
+                sprite = "ivery_survival_01_13",
+                sprite2 = "ivery_survival_01_12",
+                northSprite = "ivery_survival_01_10",
+                northSprite2 = "ivery_survival_01_11"
             }
         ),
         BuildingMenu.createObject(
@@ -35545,28 +36074,26 @@ local function addDeadlineDecorFarmToMenu()
                 completionSound = "BuildWoodenStructureLarge",
             },
             {
-                sprite = "ivery_survival_01_11",
-                sprite2 = "ivery_survival_01_10",
-                northSprite = "ivery_survival_01_12",
-                northSprite2 = "ivery_survival_01_13"
+                sprite = "ivery_survival_01_21",
+                sprite2 = "ivery_survival_01_20",
+                northSprite = "ivery_survival_01_18",
+                northSprite2 = "ivery_survival_01_19"
             }
         ),
         BuildingMenu.createObject(
-            "",
-            "Tooltip_Trough_Desc",
-            BuildingMenu.onBuildDoubleTileContainer,
-            BuildingMenu.LargeFurnitureRecipe,
-            true,
-            {
-                completionSound = "BuildWoodenStructureLarge",
-            },
-            {
-                sprite = "ivery_survival_01_19",
-                sprite2 = "ivery_survival_01_18",
-                northSprite = "ivery_survival_01_20",
-                northSprite2 = "ivery_survival_01_21"
-            }
-        ),
+                    "",
+                    "",
+                    BuildingMenu.onBuildSimpleFurniture,
+                    BuildingMenu.SignRecipe,
+                    true,
+                    {
+                        completionSound = "BuildWoodenStructureLarge"
+                    },
+                    {
+                        sprite = "melos_tiles_gardencenter_02_63",
+                        northSprite = "melos_tiles_gardencenter_02_55",
+                    }
+                ),
     }
  -- Add DecorFarm Category
     BuildingMenu.addObjectsToCategories(
@@ -35947,6 +36474,9 @@ local function addCategoriesToBuildingMenu()
     end
     if SandboxVars.BuildingMenu.DeadlineBookshelvesSubCategory then
         addDeadlineBookshelvesToMenu()
+    end
+    if SandboxVars.BuildingMenu.DeadlineDressersSubCategory then
+        addDeadlineDressersToMenu()
     end
     if SandboxVars.BuildingMenu.DeadlineSeatingCategory then
         addDeadlineSeatingToMenu()
