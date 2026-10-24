@@ -1,5 +1,59 @@
 module Base
 {
+    recipe Break Small Carbon Scrap into Tiny
+    {
+        DL_MetalLine.Scrap_Carbon_S=1,
+        Result:DL_MetalLine.Scrap_Carbon_XS=5,
+        Time:15.0,
+        Category:Scrapping,
+        NeedToBeLearn:false,
+    }
+
+    recipe Combine Tiny Carbon Scrap into Small
+    {
+        DL_MetalLine.Scrap_Carbon_XS=5,
+        Result:DL_MetalLine.Scrap_Carbon_S=1,
+        Time:15.0,
+        Category:Scrapping,
+        NeedToBeLearn:false,
+    }
+
+    recipe Break Medium Carbon Scrap into Small
+    {
+        DL_MetalLine.Scrap_Carbon_M=1,
+        Result:DL_MetalLine.Scrap_Carbon_S=5,
+        Time:15.0,
+        Category:Scrapping,
+        NeedToBeLearn:false,
+    }
+
+    recipe Combine Small Carbon Scrap into Medium
+    {
+        DL_MetalLine.Scrap_Carbon_S=5,
+        Result:DL_MetalLine.Scrap_Carbon_M=1,
+        Time:15.0,
+        Category:Scrapping,
+        NeedToBeLearn:false,
+    }
+
+    recipe Break Large Carbon Scrap into Medium
+    {
+        DL_MetalLine.Scrap_Carbon_L=1,
+        Result:DL_MetalLine.Scrap_Carbon_M=2,
+        Time:30.0,
+        Category:Scrapping,
+        NeedToBeLearn:false,
+    }
+
+    recipe Combine Medium Carbon Scrap into Large
+    {
+        DL_MetalLine.Scrap_Carbon_M=2,
+        Result:DL_MetalLine.Scrap_Carbon_L=1,
+        Time:30.0,
+        Category:Scrapping,
+        NeedToBeLearn:false,
+    }
+
     recipe Scrap Small Metal Sheet
     {
         Base.SmallSheetMetal=1,

@@ -163,7 +163,9 @@ function DL.Crucible.unitsToScrap(comp)
     for m, u in pairs(comp or {}) do
         local md = DL.Metals[m]
         if md and u and u > 0 then
-            local rem = math.floor(u / 0.05 + 0.5) * 0.05
+            -- Return whole carbon scraps and discard values below 0.05
+            local rounding = (m == "carbon") and 1e-9 or 0.5
+            local rem = math.floor(u / 0.05 + rounding) * 0.05
             local nL = math.floor(rem / 0.5 + 1e-9); rem = rem - nL * 0.5
             local nM = math.floor(rem / 0.25 + 1e-9); rem = rem - nM * 0.25
             local nS = math.floor(rem / 0.05 + 0.5)
