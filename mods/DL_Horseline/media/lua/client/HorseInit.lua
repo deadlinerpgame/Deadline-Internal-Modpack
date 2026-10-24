@@ -741,7 +741,7 @@ if isMoving then
     local tileY = math.floor(player:getY())
     if data._lastTileX and data._lastTileY then
         if tileX ~= data._lastTileX or tileY ~= data._lastTileY then
-            if hasSaddle and ZombRand(300) == 0 then
+            if hasSaddle and ZombRand(600) == 0 then
                 data.equipment.saddleWear = math.max(0, (data.equipment.saddleWear or 100) - 1)
             end
             local hasHead = data.equipment.head and (data.equipment.headWear or 0) > 0
