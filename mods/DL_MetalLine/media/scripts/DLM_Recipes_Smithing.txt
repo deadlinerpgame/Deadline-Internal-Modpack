@@ -1,5 +1,18 @@
 module Base
 {
+    recipe Make Coke
+    {
+        Base.Charcoal=5,
+        Base.Log=1,
+        keep aerx.CeramicCrucible,
+        Result:aerx.Coke=3,
+        Time:600.0,
+        Category:Smithing,
+        SkillRequired:MetalWelding=2,
+        NearItem:Simple Furnace,
+        NeedToBeLearn:false,
+    }
+
    recipe Smith Ingot into Bars
     {
        	[Recipe.GetItemTypes.DLIngot],
