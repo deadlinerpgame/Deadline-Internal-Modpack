@@ -1,3 +1,4 @@
+require "DL_TransportHours"
 local DD_lastTileKeyByPID = {}
 
 local function DD_ReadSquareTransport(sq)
@@ -26,16 +27,25 @@ Events.OnPlayerUpdate.Add(function(p)
         local info = DD_ReadSquareTransport(p:getSquare());
         if not info then return end;
 
+        local md = p:getSquare():getModData()
+        local hours = md.ddTeleHours
+        if not DL_TransportHours.isOpen(hours, nil, md.ddTeleEvenDays, md.ddTeleOddDays) then
+            if getTimestamp() >= nextTileNotification then
+                p:setHaloNote("Travel to: " .. info.name .. " - " .. DL_TransportHours.closedMessage(hours, md.ddTeleEvenDays, md.ddTeleOddDays), 255, 200, 100, 300)
+                nextTileNotification = getTimestamp() + 2
+            end
+            return
+        end
+
         print(string.format("[Transport] Standing on '%s' -> %d,%d,%d", info.name, info.x, info.y, info.z))
         p:setHaloNote("Moving to " .. info.name, 255, 255, 255, 300);
-        local md   = p and p:getSquare():getModData()
         local dest = md and md.ddTeleDest and { x = md.ddTeleDest.x, y = md.ddTeleDest.y, z = md.ddTeleDest.z }
         DD_TeleportWithFade(pid, dest, 1, 1);
         return;
     else
         local pid = p:getOnlineID() or 0
         local x, y, z = math.floor(p:getX()), math.floor(p:getY()), p:getZ()
-        local key = x .. "," .. y .. "," .. z
+        local key = x .. "," .. y .. "," .. z .. "," .. DL_TransportHours.currentHour()
 
         if DD_lastTileKeyByPID[pid] == key and nextTileNotification > getTimestamp() then return end;
         DD_lastTileKeyByPID[pid] = key;
@@ -43,7 +53,12 @@ Events.OnPlayerUpdate.Add(function(p)
         local info = DD_ReadSquareTransport(p:getSquare());
         if not info then return end;
 
-        p:setHaloNote("Travel to: " .. info.name .. " - press E to enter.", 255, 255, 255, 300);
+        local md = p:getSquare():getModData()
+        local hours = md.ddTeleHours
+        local message = DL_TransportHours.isOpen(hours, nil, md.ddTeleEvenDays, md.ddTeleOddDays)
+            and ("Travel to: " .. info.name .. " - press E to enter.")
+            or ("Travel to: " .. info.name .. " - " .. DL_TransportHours.closedMessage(hours, md.ddTeleEvenDays, md.ddTeleOddDays))
+        p:setHaloNote(message, 255, 255, 255, 300);
         nextTileNotification = getTimestamp() + 15;
     end
 end)

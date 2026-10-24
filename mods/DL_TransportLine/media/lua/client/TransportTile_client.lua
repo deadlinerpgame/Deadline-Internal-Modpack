@@ -1,3 +1,5 @@
+require "DL_TransportHours"
+require "ISUI/ISTickBox"
 require "ISUI/ISContextMenu"
 require "ISUI/ISPanel"
 require "ISUI/ISButton"
@@ -39,7 +41,7 @@ end
 DDTransportBox = ISPanel:derive("DDTransportBox")
 
 function DDTransportBox:new(square, pid, title)
-    local w, h = 250, 310
+    local w, h = 250, 500
     local sx, sy = getCore():getScreenWidth(), getCore():getScreenHeight()
     local o = ISPanel.new(self, sx/2 - w/2, sy/2 - h/2, w, h)
     o.backgroundColor = { r=0, g=0, b=0, a=0.85 }
@@ -138,6 +140,33 @@ function DDTransportBox:initialise()
     self.bEntry:initialise(); self.bEntry:instantiate(); self:addChild(self.bEntry)
     y = y + rowH + 10
 
+    self.hoursTick = ISTickBox:new(pad, y, self.width - pad*2, rowH*2, "")
+    self.hoursTick:initialise()
+    self.hoursTick:addOption("Limit operating hours")
+    self.hoursTick:setSelected(1, md.ddTeleHours ~= nil)
+    self.hoursTick:addOption("Limit operating days")
+    self.hoursTick:setSelected(2, md.ddTeleEvenDays == true or md.ddTeleOddDays == true)
+    self:addChild(self.hoursTick)
+    y = y + rowH*2 + 6
+    self.dayCombo = ISComboBox:new(pad, y, self.width - pad*2, rowH, self, nil)
+    self.dayCombo:initialise(); self.dayCombo:instantiate()
+    self.dayCombo:addOption("Even days (2, 4, 6...)")
+    self.dayCombo:addOption("Odd days (1, 3, 5...)")
+    self.dayCombo.selected = md.ddTeleOddDays and 2 or 1
+    self:addChild(self.dayCombo)
+    y = y + rowH + 6
+    local hours = DL_TransportHours.isValid(md.ddTeleHours) and md.ddTeleHours
+        or {startHour = 8, endHour = 20}
+    self:addChild(ISLabel:new(pad + 40, y, rowH, "Opens:", 1,1,1,1, UIFont.Small, false))
+    self.opensEntry = ISTextEntryBox:new(tostring(hours.startHour), pad+60, y-2, 90, rowH)
+    self.opensEntry:initialise(); self.opensEntry:instantiate(); self:addChild(self.opensEntry)
+    y = y + rowH + 6
+    self:addChild(ISLabel:new(pad + 40, y, rowH, "Closes:", 1,1,1,1, UIFont.Small, false))
+    self.closesEntry = ISTextEntryBox:new(tostring(hours.endHour), pad+60, y-2, 90, rowH)
+    self.closesEntry:initialise(); self.closesEntry:instantiate(); self:addChild(self.closesEntry)
+    y = y + rowH + 10
+    self:setHeight(y + rowH + pad)
+
     local btnW, btnH = 80, 24
     self.okBtn = ISButton:new(self.width - pad - btnW*2 - 6, y, btnW, btnH, "OK", self, DDTransportBox.onOK)
     self.okBtn:initialise(); self.okBtn:instantiate(); self:addChild(self.okBtn)
@@ -177,9 +206,22 @@ function DDTransportBox:onOK()
         return
     end
 
+    local hours = nil
+    if self.hoursTick:isSelected(1) then
+        hours = {startHour = tonumber(self.opensEntry:getText()),
+                 endHour = tonumber(self.closesEntry:getText())}
+        if not DL_TransportHours.isValid(hours) then
+            if p then p:Say("Use different whole opening and closing hours (0-23)") end
+            return
+        end
+    end
+
     x, y, z = math.floor(x), math.floor(y), math.floor(z)
     
     local md = self.sq:getModData()
+    md.ddTeleHours = hours
+    md.ddTeleEvenDays = (self.hoursTick:isSelected(2) and self.dayCombo.selected == 1) or nil
+    md.ddTeleOddDays = (self.hoursTick:isSelected(2) and self.dayCombo.selected == 2) or nil
     md.ddTeleName = name
     md.ddTeleDest = { x = x, y = y, z = z }
     md.ddTeleR = r
@@ -247,6 +289,9 @@ end
 
 local function clearSquareTransport(sq)
     local md = sq:getModData()
+    md.ddTeleHours = nil
+    md.ddTeleEvenDays = nil
+    md.ddTeleOddDays = nil
     md.ddTeleName = nil
     md.ddTeleDest = nil
     md.ddTeleSprite = nil
