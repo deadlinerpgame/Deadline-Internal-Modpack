@@ -30,11 +30,15 @@ function H.isOpen(hours, hour, evenDays, oddDays)
     return hour >= hours.startHour or hour < hours.endHour
 end
 
-function H.closedMessage(hours, evenDays, oddDays)
-    if hours ~= nil and not H.isValid(hours) then return "Closed: invalid operating hours" end
-    local text = hours and ("Closed: opens at " .. hours.startHour .. ", closes at " .. hours.endHour) or "Closed: open all hours"
+function H.message(name, hours, evenDays, oddDays)
+    local text = "Travel to " .. name
+    if hours == nil and not evenDays and not oddDays then return text end
+    text = text .. (H.isOpen(hours, nil, evenDays, oddDays) and " - OPEN" or " - CLOSED")
+    if hours ~= nil then
+        text = text .. "[br/]Hours: " .. (H.isValid(hours) and (hours.startHour .. "-" .. hours.endHour) or "Invalid")
+    end
     if evenDays or oddDays then
-        text = text .. (oddDays and " on odd dates (1, 3, 5...)" or " on even dates (2, 4, 6...)")
+        text = text .. "[br/]Dates: " .. (oddDays and "Odd (1, 3, 5...)" or "Even (2, 4, 6...)")
     end
     return text
 end

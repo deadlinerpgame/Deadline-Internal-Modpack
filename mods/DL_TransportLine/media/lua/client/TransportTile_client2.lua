@@ -31,7 +31,7 @@ Events.OnPlayerUpdate.Add(function(p)
         local hours = md.ddTeleHours
         if not DL_TransportHours.isOpen(hours, nil, md.ddTeleEvenDays, md.ddTeleOddDays) then
             if getTimestamp() >= nextTileNotification then
-                p:setHaloNote("Travel to: " .. info.name .. " - " .. DL_TransportHours.closedMessage(hours, md.ddTeleEvenDays, md.ddTeleOddDays), 255, 200, 100, 300)
+                p:setHaloNote(DL_TransportHours.message(info.name, hours, md.ddTeleEvenDays, md.ddTeleOddDays), 255, 200, 100, 300)
                 nextTileNotification = getTimestamp() + 2
             end
             return
@@ -55,9 +55,7 @@ Events.OnPlayerUpdate.Add(function(p)
 
         local md = p:getSquare():getModData()
         local hours = md.ddTeleHours
-        local message = DL_TransportHours.isOpen(hours, nil, md.ddTeleEvenDays, md.ddTeleOddDays)
-            and ("Travel to: " .. info.name .. " - press E to enter.")
-            or ("Travel to: " .. info.name .. " - " .. DL_TransportHours.closedMessage(hours, md.ddTeleEvenDays, md.ddTeleOddDays))
+        local message = DL_TransportHours.message(info.name, hours, md.ddTeleEvenDays, md.ddTeleOddDays)
         p:setHaloNote(message, 255, 255, 255, 300);
         nextTileNotification = getTimestamp() + 15;
     end
