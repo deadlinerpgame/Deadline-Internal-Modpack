@@ -3,7 +3,7 @@ DL.Config = DL.Config or {}
 local C = DL.Config
 
 local CHEM_ZONES  = { TownZone = 20, TrailerPark = 20, Nav = 10, Farm = 10, FarmLand = 10, Vegitation = 3 }
-local BONE_ZONES  = { DeepForest = 30, Forest = 30, Vegitation = 20, FarmLand = 15, Farm = 15, Nav = 5 }
+local BONE_ZONES  = { DeepForest = 30, TownZone = 20, Forest = 30, Vegitation = 20, FarmLand = 15, Farm = 15, Nav = 5 }
 local BOOZE_ZONES = { TrailerPark = 25, TownZone = 20, Farm = 15, FarmLand = 10, Nav = 10, Forest = 5, DeepForest = 5 }
 local ORE_ZONES   = { Nav = 20, DeepForest = 15, Forest = 15, Vegitation = 15, FarmLand = 10, Farm = 10, TownZone = 8, TrailerPark = 8 }
 local TECH_ZONES  = { TownZone = 30, TrailerPark = 25, Nav = 15, Farm = 5, FarmLand = 5 }
@@ -28,7 +28,7 @@ C.forageLists = C.forageLists or {
         enabled    = true,
         condition  = { trait = "carrion_eye" },
         categories = { "Junk" },
-        zones      = { TownZone = 1, TrailerPark = 1, Nav = 1, Farm = 1, FarmLand = 1, Vegitation = 1, Forest = 1, DeepForest = 1 },
+        zones      = { TownZone = 2, TrailerPark = 1, Nav = 1, Farm = 1, FarmLand = 1, Vegitation = 1, Forest = 1, DeepForest = 1 },
         items = {
             {
                 type = "Base.Wallet", min = 1, max = 1, xp = 10,
@@ -100,7 +100,7 @@ C.forageLists = C.forageLists or {
         enabled    = true,
         condition  = { trait = "carrion_eye" },
         categories = { "Junk" },
-        zones      = { TownZone = 1, TrailerPark = 1, Nav = 1, Farm = 1, FarmLand = 1, Vegitation = 1, Forest = 1, DeepForest = 1 },
+        zones      = { TownZone = 2, TrailerPark = 1, Nav = 1, Farm = 1, FarmLand = 1, Vegitation = 1, Forest = 1, DeepForest = 1 },
         items = {
             {
                 type = "Base.GroceryBag1", min = 1, max = 1, xp = 10,
@@ -177,7 +177,7 @@ C.forageLists = C.forageLists or {
         enabled    = true,
         condition  = { trait = "carrion_eye" },
         categories = { "Junk" },
-        zones      = { TownZone = 1, TrailerPark = 1, Nav = 1, Farm = 1, FarmLand = 1, Vegitation = 1, Forest = 1, DeepForest = 1 },
+        zones      = { TownZone = 2, TrailerPark = 1, Nav = 1, Farm = 1, FarmLand = 1, Vegitation = 1, Forest = 1, DeepForest = 1 },
         items = {
             {
                 type = "Base.Bag_DuffelBag", min = 1, max = 1, xp = 15,
@@ -258,8 +258,8 @@ C.forageLists = C.forageLists or {
             { type = "Base.Soap2",                       min = 1, max = 2, xp = 5,  zones = common(CHEM_ZONES) },
             { type = "Base.GluePaintBinder",             min = 1, max = 1, xp = 8,  zones = uncommon(CHEM_ZONES) },
             { type = "Base.Solvent",                     min = 1, max = 1, xp = 8,  zones = uncommon(CHEM_ZONES) },
-            { type = "farming.GardeningSprayCigarettes", min = 1, max = 1, xp = 10, zones = { Farm = 15, FarmLand = 15, TownZone = 5, TrailerPark = 5 } },
-            { type = "farming.GardeningSprayBonemeal",   min = 1, max = 1, xp = 10, zones = { Farm = 10, FarmLand = 10, TownZone = 3, TrailerPark = 3 } },
+            { type = "farming.GardeningSprayCigarettes", min = 1, max = 1, xp = 10, zones = uncommon(CHEM_ZONES) },
+            { type = "farming.GardeningSprayBonemeal",   min = 1, max = 1, xp = 10, zones = uncommon(CHEM_ZONES) },
             { type = "Base.WaterBottlePetrol",           min = 1, max = 1, xp = 10, zones = uncommon(CHEM_ZONES) },
             { type = "Base.PetrolBleachBottle",          min = 1, max = 1, xp = 10, zones = rare(CHEM_ZONES) },
             { type = "DrugsDLC.RexonaDesodorante",       min = 1, max = 1, xp = 5,  zones = uncommon(CHEM_ZONES) },
@@ -337,10 +337,10 @@ C.forageLists = C.forageLists or {
             { type = "DrugsDLC.DrugPipe", min = 1, max = 1, xp = 5, zones = uncommon(CHEM_ZONES) },
             { type = "DrugsDLC.Needle", min = 1, max = 2, xp = 5, zones = uncommon(CHEM_ZONES) },
             { type = "DrugsDLC.BolsaDeDroga", min = 1, max = 3, xp = 3, zones = uncommon(CHEM_ZONES) },
-            { type = "DrugsDLC.RawShrooms", min = 1, max = 3, xp = 12, zones = { DeepForest = 3, Forest = 3, Vegitation = 2, FarmLand = 1 } },
-            { type = "DrugsDLC.Peyote", min = 1, max = 1, xp = 15, zones = { Vegitation = 1, FarmLand = 1, TrailerPark = 1 } },
-            { type = "DrugsDLC.Ayahuasca", min = 1, max = 1, xp = 15, zones = { DeepForest = 1, Forest = 1, TownZone = 1 } },
-            { type = "DrugsDLC.Escopolamina", min = 1, max = 1, xp = 15, zones = { Vegitation = 1, Forest = 1, TownZone = 1 } },
+            { type = "DrugsDLC.RawShrooms", min = 1, max = 3, xp = 12, zones = uncommon(CHEM_ZONES) },
+            { type = "DrugsDLC.Peyote", min = 1, max = 1, xp = 15, zones = uncommon(CHEM_ZONES) },
+            { type = "DrugsDLC.Ayahuasca", min = 1, max = 1, xp = 15, zones = uncommon(CHEM_ZONES) },
+            { type = "DrugsDLC.Escopolamina", min = 1, max = 1, xp = 15, zones = uncommon(CHEM_ZONES) },
             {
                 type = "B42Bags.Bag_ProtectiveCaseSmall", min = 1, max = 1, xp = 25, zones = legendary(CHEM_ZONES),
                 contents = {
@@ -391,8 +391,8 @@ C.forageLists = C.forageLists or {
             { type = "DrugsDLC.MethN", min = 1, max = 1, xp = 12, zones = legendary(CHEM_ZONES) },
             { type = "DrugsDLC.HeroinN", min = 1, max = 1, xp = 12, zones = legendary(CHEM_ZONES) },
             { type = "DrugsDLC.DMTN", min = 1, max = 1, xp = 15, zones = legendary(CHEM_ZONES) },
-            { type = "DrugsDLC.LeanN", min = 1, max = 1, xp = 8, zones = { TrailerPark = 1, TownZone = 1 } },
-            { type = "DrugsDLC.FentanylN", min = 1, max = 1, xp = 20, zones = { TrailerPark = 1, TownZone = 1 } },
+            { type = "DrugsDLC.LeanN", min = 1, max = 1, xp = 8, zones = legendary(CHEM_ZONES) },
+            { type = "DrugsDLC.FentanylN", min = 1, max = 1, xp = 20, zones = legendary(CHEM_ZONES) },
             {
                 type = "B42Bags.CigarBox", min = 1, max = 1, xp = 25, zones = legendary(CHEM_ZONES),
                 contents = {
@@ -437,14 +437,14 @@ C.forageLists = C.forageLists or {
             { type = "aerx.Rabbit_Skull",           min = 1, max = 1, xp = 8,  zones = uncommon(BONE_ZONES) },
             { type = "aerx.Raccoon_Skull",          min = 1, max = 1, xp = 8,  zones = uncommon(BONE_ZONES) },
             { type = "aerx.Turkey_Skull",           min = 1, max = 1, xp = 8,  zones = rare(BONE_ZONES) },
-            { type = "aerx.Chicken_Hen_Skull",      min = 1, max = 1, xp = 8,  zones = { Farm = 8, FarmLand = 8, TrailerPark = 2 } },
+            { type = "aerx.Chicken_Hen_Skull",      min = 1, max = 1, xp = 8,  zones = rare(BONE_ZONES) },
             { type = "aerx.DeerDoe_Skull",          min = 1, max = 1, xp = 12, zones = rare(BONE_ZONES) },
-            { type = "aerx.DeerStag_Skull",         min = 1, max = 1, xp = 15, zones = { DeepForest = 3, Forest = 2, Vegitation = 1 } },
-            { type = "aerx.Sheep_Skull",            min = 1, max = 1, xp = 12, zones = { Farm = 4, FarmLand = 4 } },
-            { type = "aerx.Pig_Skull",              min = 1, max = 1, xp = 12, zones = { Farm = 4, FarmLand = 4 } },
-            { type = "aerx.Cow_Skull",              min = 1, max = 1, xp = 15, zones = { Farm = 3, FarmLand = 3 } },
-            { type = "aerx.Bull_Skull",             min = 1, max = 1, xp = 20, zones = { Farm = 1, FarmLand = 1 } },
-            { type = "aerx.Hominid_Skull_Fragment", min = 1, max = 1, xp = 25, zones = { DeepForest = 1, Forest = 1 } },
+            { type = "aerx.DeerStag_Skull",         min = 1, max = 1, xp = 15, zones = rare(BONE_ZONES) },
+            { type = "aerx.Sheep_Skull",            min = 1, max = 1, xp = 12, zones = rare(BONE_ZONES) },
+            { type = "aerx.Pig_Skull",              min = 1, max = 1, xp = 12, zones = rare(BONE_ZONES) },
+            { type = "aerx.Cow_Skull",              min = 1, max = 1, xp = 15, zones = rare(BONE_ZONES) },
+            { type = "aerx.Bull_Skull",             min = 1, max = 1, xp = 20, zones = rare(BONE_ZONES) },
+            { type = "aerx.Hominid_Skull_Fragment", min = 1, max = 1, xp = 25, zones = rare(BONE_ZONES) },
         },
     },
     {
@@ -456,9 +456,9 @@ C.forageLists = C.forageLists or {
         items = {
             { type = "aerx.RabbitLeather_Full",           min = 1, max = 1, xp = 10, zones = uncommon(BONE_ZONES) },
             { type = "aerx.DeerLeather_Full",             min = 1, max = 1, xp = 15, zones = rare(BONE_ZONES) },
-            { type = "aerx.SheepLeather_Full",            min = 1, max = 1, xp = 12, zones = { Farm = 5, FarmLand = 5, Vegitation = 1 } },
-            { type = "aerx.PigLeather_Landrace_Full",     min = 1, max = 1, xp = 12, zones = { Farm = 4, FarmLand = 4 } },
-            { type = "aerx.CowLeather_Holstein_Full",     min = 1, max = 1, xp = 15, zones = { Farm = 2, FarmLand = 2 } },
+            { type = "aerx.SheepLeather_Full",            min = 1, max = 1, xp = 12, zones = rare(BONE_ZONES) },
+            { type = "aerx.PigLeather_Landrace_Full",     min = 1, max = 1, xp = 12, zones = rare(BONE_ZONES) },
+            { type = "aerx.CowLeather_Holstein_Full",     min = 1, max = 1, xp = 15, zones = rare(BONE_ZONES) },
             { type = "aerx.RabbitLeather_Fur_Tan",        min = 1, max = 1, xp = 15, zones = legendary(BONE_ZONES) },
             { type = "aerx.LeatherStripsBundle",          min = 1, max = 1, xp = 10, zones = rare(BONE_ZONES) },
             {
@@ -542,12 +542,12 @@ C.forageLists = C.forageLists or {
             { type = "Base.Yeast",                       min = 1, max = 2, xp = 8,  zones = uncommon(BOOZE_ZONES) },
             { type = "Base.Cork",                        min = 1, max = 4, xp = 3,  zones = common(BOOZE_ZONES) },
             { type = "aerx.BottleOpener",                min = 1, max = 1, xp = 5,  zones = uncommon(BOOZE_ZONES) },
-            { type = "SP.SackProduce_Hops",              min = 1, max = 1, xp = 15, zones = { Farm = 3, FarmLand = 3, TrailerPark = 1 } },
-            { type = "SP.SackProduce_Wheat",             min = 1, max = 1, xp = 15, zones = { Farm = 3, FarmLand = 3, TrailerPark = 1 } },
-            { type = "SP.SackProduce_SugarCane",         min = 1, max = 1, xp = 15, zones = { Farm = 2, FarmLand = 2 } },
-            { type = "Deadline.MashAppleWine",           min = 1, max = 1, xp = 15, zones = { Farm = 2, FarmLand = 2, TrailerPark = 1 } },
-            { type = "Base.BrewingStationConstructionSet", min = 1, max = 1, xp = 30, zones = { Farm = 1, FarmLand = 1, TrailerPark = 1, Forest = 1 } },
-            { type = "Base.DistillerConstructionSet",    min = 1, max = 1, xp = 30, zones = { Farm = 1, FarmLand = 1, TrailerPark = 1, DeepForest = 1 } },
+            { type = "SP.SackProduce_Hops",              min = 1, max = 1, xp = 15, zones = common(BOOZE_ZONES) },
+            { type = "SP.SackProduce_Wheat",             min = 1, max = 1, xp = 15, zones = common(BOOZE_ZONES) },
+            { type = "SP.SackProduce_SugarCane",         min = 1, max = 1, xp = 15, zones = common(BOOZE_ZONES) },
+            { type = "Deadline.MashAppleWine",           min = 1, max = 1, xp = 15, zones = common(BOOZE_ZONES) },
+            { type = "Base.BrewingStationConstructionSet", min = 1, max = 1, xp = 30, zones = common(BOOZE_ZONES) },
+            { type = "Base.DistillerConstructionSet",    min = 1, max = 1, xp = 30, zones = common(BOOZE_ZONES) },
             {
                 type = "B42Bags.Bag_Gunny", min = 1, max = 1, xp = 20, zones = rare(BOOZE_ZONES),
                 contents = {
