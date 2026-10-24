@@ -16,10 +16,10 @@ local function scaled(zones, factor)
     return out
 end
 
-local function common(zones)    return scaled(zones, 1.5) end
-local function uncommon(zones)  return scaled(zones, 0.6) end
-local function rare(zones)      return scaled(zones, 0.25) end
-local function legendary(zones) return scaled(zones, 0.05) end
+local function common(zones)    return scaled(zones, 3) end
+local function uncommon(zones)  return scaled(zones, 1,1) end
+local function rare(zones)      return scaled(zones, 0.5) end
+local function legendary(zones) return scaled(zones, 0.1) end
 
 C.forageLists = C.forageLists or {
 
