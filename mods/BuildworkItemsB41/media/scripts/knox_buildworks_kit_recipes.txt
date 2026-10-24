@@ -248,20 +248,21 @@ module Base
         Category:Construction,
     }
 
-    recipe Craft a Cement Mixer Kit WIP
+    recipe Craft a Cement Mixer Kit (Steel Ingots)
     {
         keep Saw,
 	    keep Hammer,
         keep Wrench,
 
-        EngineParts=20,
+        EngineParts=6,
 	    SheetMetal=2,
 	    MetalPipe=2,
 	    ElectronicsScrap=50,
         WeldingRods=20,
         BlowTorch=10,
         ElectricWire=10,
-        Smithing.IngotD=2,
+        [Recipe.GetItemTypes.DLIngot]=1,
+        OnTest:Recipe.OnTest.DLBuildworksCementMixerAlloy,
         Screws=20,
         Timer=1,
         ScannerModule=1,
@@ -269,11 +270,11 @@ module Base
         CanBeDoneFromFloor:true,
         Result:Base.CementMixer,
         Time:600.0,
-	    SkillRequired:Electricity=10,
+	    SkillRequired:Electricity=6,
         Category:Construction,
     }
 
-    recipe Craft a Lathe Kit (with Brass and Steel) WIP
+    recipe Craft a Lathe Kit (Cast Iron Ingots and Bronze Bars)
     {
         keep Saw,
 	    keep Hammer,
@@ -282,8 +283,9 @@ module Base
         MachinedComponents = 2,
         WeldingRods=40,
         BlowTorch=10,
-        Smithing.IngotK=1,
-        Smithing.IngotD=3,
+        [Recipe.GetItemTypes.DLIngot]=2,
+        aerx.IronBar=2,
+        OnTest:Recipe.OnTest.DLBuildworksLatheAlloy,
 	    Screws=50,
         CanBeDoneFromFloor:true,
         Result:Base.Lathe,
@@ -292,7 +294,7 @@ module Base
         Category:Construction,
     }
 
-    recipe Craft a Precision Fabricator Kit (with Brass and Steel) WIP
+    recipe Craft a Precision Fabricator Kit (Steel Ingots and Invar Bars)
     {
         keep Saw,
 	    keep Hammer,
@@ -306,8 +308,9 @@ module Base
         WeldingRods=20,
         BlowTorch=10,
         ElectricWire=10,
-        Smithing.IngotK=1,
-        Smithing.IngotD=1,
+        [Recipe.GetItemTypes.DLIngot]=1,
+        aerx.IronBar=2,
+        OnTest:Recipe.OnTest.DLBuildworksPrecisionFabricatorAlloy,
 	    ElectronicsScrap=50,
 	    Screws=25,
         LightBulbRed=1,

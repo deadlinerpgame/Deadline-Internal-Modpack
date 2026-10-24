@@ -29,9 +29,28 @@ module ClothesUpgradeLine
         BlueDye=1,
         PurpleDye=1,
 
-        Result:FabricDye,
+        Result:FabricDye=2,
         Time:120.0,
         Category:Tailoring,
+        NearItem:Clothing Bench,
         SkillRequired:Tailoring=6,
     }
+
+    recipe Mix Fabric Dye - Primary Colours
+    {
+        RippedSheets=2,
+        Bleach=1,
+        RedDye=1,
+        YellowDye=1,
+        BlueDye=1,
+        BlackDye=1,
+        WhiteDye=1,
+
+        Result:FabricDye=2,
+        Time:120.0,
+        Category:Tailoring,
+        NearItem:Clothing Bench,
+        SkillRequired:Tailoring=6,
+    }
+
 }

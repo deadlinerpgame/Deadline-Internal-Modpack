@@ -1,0 +1,330 @@
+module Base
+{
+    item DL_BikeEngineGuard_BMWClassic
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 3.0,
+        Type = Normal,
+        DisplayName = BMW Classic Engine Guard,
+        Icon = EngineParts,
+        WorldStaticModel = EngineParts,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    recipe Make BMW Classic Engine Guard (with steel bars)
+    {
+        aerx.IronBar=2,
+        aerx.Coke/Base.Charcoal=5,
+        Screws=4,
+        BlowTorch=5,
+        keep WeldingMask,
+        keep Wrench,
+        keep [Recipe.GetItemTypes.Hammer],
+        Result:DL_BikeEngineGuard_BMWClassic,
+        OnTest:Recipe.OnTest.DL_BikeEngineGuardAlloy,
+        OnCreate:Recipe.OnCreate.DLForge,
+        Time:450.0,
+        Category:Vehicle Maintenance,
+        SkillRequired:MetalWelding=2;Mechanics=6,
+        NearItem:Lathe,
+        NeedToBeLearn:false,
+    }
+
+    fixing Fix BMW Classic Engine Guard Welding
+    {
+        Require : DL_BikeEngineGuard_BMWClassic,
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 2.4,
+        Fixer : SheetMetal; Mechanics=6,
+        Fixer : SmallSheetMetal=2; Mechanics=6,
+    }
+
+    item DL_BikeEngineGuard_BMWCustom
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 3.0,
+        Type = Normal,
+        DisplayName = BMW Custom Engine Guard,
+        Icon = EngineParts,
+        WorldStaticModel = EngineParts,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    recipe Make BMW Custom Engine Guard (with steel bars)
+    {
+        aerx.IronBar=2,
+        aerx.Coke/Base.Charcoal=5,
+        Screws=4,
+        BlowTorch=5,
+        keep WeldingMask,
+        keep Wrench,
+        keep [Recipe.GetItemTypes.Hammer],
+        Result:DL_BikeEngineGuard_BMWCustom,
+        OnTest:Recipe.OnTest.DL_BikeEngineGuardAlloy,
+        OnCreate:Recipe.OnCreate.DLForge,
+        Time:450.0,
+        Category:Vehicle Maintenance,
+        SkillRequired:MetalWelding=2;Mechanics=6,
+        NearItem:Lathe,
+        NeedToBeLearn:false,
+    }
+
+    fixing Fix BMW Custom Engine Guard Welding
+    {
+        Require : DL_BikeEngineGuard_BMWCustom,
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 2.4,
+        Fixer : SheetMetal; Mechanics=6,
+        Fixer : SmallSheetMetal=2; Mechanics=6,
+    }
+
+    item DL_BikeEngineGuard_DirtBike
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 2.0,
+        Type = Normal,
+        DisplayName = Dirt Bike Engine Guard,
+        Icon = EngineParts,
+        WorldStaticModel = EngineParts,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    recipe Make Dirt Bike Engine Guard (with steel bars)
+    {
+        aerx.IronBar=2,
+        aerx.Coke/Base.Charcoal=5,
+        Screws=4,
+        BlowTorch=5,
+        keep WeldingMask,
+        keep Wrench,
+        keep [Recipe.GetItemTypes.Hammer],
+        Result:DL_BikeEngineGuard_DirtBike,
+        OnTest:Recipe.OnTest.DL_BikeEngineGuardAlloy,
+        OnCreate:Recipe.OnCreate.DLForge,
+        Time:300.0,
+        Category:Vehicle Maintenance,
+        SkillRequired:MetalWelding=2;Mechanics=6,
+        NearItem:Lathe,
+        NeedToBeLearn:false,
+    }
+
+    fixing Fix Dirt Bike Engine Guard Welding
+    {
+        Require : DL_BikeEngineGuard_DirtBike,
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 2.4,
+        Fixer : SheetMetal; Mechanics=6,
+        Fixer : SmallSheetMetal=2; Mechanics=6,
+    }
+
+    item DL_BikeEngineGuard_Harley
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 4.0,
+        Type = Normal,
+        DisplayName = Harley Engine Guard,
+        Icon = EngineParts,
+        WorldStaticModel = EngineParts,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    recipe Make Harley Engine Guard (with steel bars)
+    {
+        aerx.IronBar=2,
+        aerx.Coke/Base.Charcoal=5,
+        Screws=6,
+        BlowTorch=5,
+        keep WeldingMask,
+        keep Wrench,
+        keep [Recipe.GetItemTypes.Hammer],
+        Result:DL_BikeEngineGuard_Harley,
+        OnTest:Recipe.OnTest.DL_BikeEngineGuardAlloy,
+        OnCreate:Recipe.OnCreate.DLForge,
+        Time:600.0,
+        Category:Vehicle Maintenance,
+        SkillRequired:MetalWelding=2;Mechanics=6,
+        NearItem:Lathe,
+        NeedToBeLearn:false,
+    }
+
+    fixing Fix Harley Engine Guard Welding
+    {
+        Require : DL_BikeEngineGuard_Harley,
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 2.4,
+        Fixer : SheetMetal; Mechanics=6,
+        Fixer : SmallSheetMetal=2; Mechanics=6,
+    }
+
+    item DL_BikeEngineGuard_Quad
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 4.0,
+        Type = Normal,
+        DisplayName = Quad Engine Guard,
+        Icon = EngineParts,
+        WorldStaticModel = EngineParts,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    recipe Make Quad Engine Guard (with steel bars)
+    {
+        aerx.IronBar=2,
+        aerx.Coke/Base.Charcoal=5,
+        Screws=6,
+        BlowTorch=5,
+        keep WeldingMask,
+        keep Wrench,
+        keep [Recipe.GetItemTypes.Hammer],
+        Result:DL_BikeEngineGuard_Quad,
+        OnTest:Recipe.OnTest.DL_BikeEngineGuardAlloy,
+        OnCreate:Recipe.OnCreate.DLForge,
+        Time:600.0,
+        Category:Vehicle Maintenance,
+        SkillRequired:MetalWelding=2;Mechanics=6,
+        NearItem:Lathe,
+        NeedToBeLearn:false,
+    }
+
+    fixing Fix Quad Engine Guard Welding
+    {
+        Require : DL_BikeEngineGuard_Quad,
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 2.4,
+        Fixer : SheetMetal; Mechanics=6,
+        Fixer : SmallSheetMetal=2; Mechanics=6,
+    }
+
+    item DL_BikeEngineGuard_SS100
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 3.0,
+        Type = Normal,
+        DisplayName = SS100 Engine Guard,
+        Icon = EngineParts,
+        WorldStaticModel = EngineParts,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    recipe Make SS100 Engine Guard (with steel bars)
+    {
+        aerx.IronBar=2,
+        aerx.Coke/Base.Charcoal=5,
+        Screws=4,
+        BlowTorch=5,
+        keep WeldingMask,
+        keep Wrench,
+        keep [Recipe.GetItemTypes.Hammer],
+        Result:DL_BikeEngineGuard_SS100,
+        OnTest:Recipe.OnTest.DL_BikeEngineGuardAlloy,
+        OnCreate:Recipe.OnCreate.DLForge,
+        Time:450.0,
+        Category:Vehicle Maintenance,
+        SkillRequired:MetalWelding=2;Mechanics=6,
+        NearItem:Lathe,
+        NeedToBeLearn:false,
+    }
+
+    fixing Fix SS100 Engine Guard Welding
+    {
+        Require : DL_BikeEngineGuard_SS100,
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 2.4,
+        Fixer : SheetMetal; Mechanics=6,
+        Fixer : SmallSheetMetal=2; Mechanics=6,
+    }
+
+    item DL_BikeEngineGuard_SS100Hermes
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 3.0,
+        Type = Normal,
+        DisplayName = SS100 Hermes Engine Guard,
+        Icon = EngineParts,
+        WorldStaticModel = EngineParts,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    recipe Make SS100 Hermes Engine Guard (with steel bars)
+    {
+        aerx.IronBar=2,
+        aerx.Coke/Base.Charcoal=5,
+        Screws=4,
+        BlowTorch=5,
+        keep WeldingMask,
+        keep Wrench,
+        keep [Recipe.GetItemTypes.Hammer],
+        Result:DL_BikeEngineGuard_SS100Hermes,
+        OnTest:Recipe.OnTest.DL_BikeEngineGuardAlloy,
+        OnCreate:Recipe.OnCreate.DLForge,
+        Time:450.0,
+        Category:Vehicle Maintenance,
+        SkillRequired:MetalWelding=2;Mechanics=6,
+        NearItem:Lathe,
+        NeedToBeLearn:false,
+    }
+
+    fixing Fix SS100 Hermes Engine Guard Welding
+    {
+        Require : DL_BikeEngineGuard_SS100Hermes,
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 2.4,
+        Fixer : SheetMetal; Mechanics=6,
+        Fixer : SmallSheetMetal=2; Mechanics=6,
+    }
+
+    item DL_BikeEngineGuard_Zanella
+    {
+        DisplayCategory = VehicleMaintenance,
+        Weight = 2.0,
+        Type = Normal,
+        DisplayName = Zanella Engine Guard,
+        Icon = EngineParts,
+        WorldStaticModel = EngineParts,
+        ChanceToSpawnDamaged = 25,
+        ConditionMax = 100,
+        MechanicsItem = TRUE,
+    }
+
+    recipe Make Zanella Engine Guard (with steel bars)
+    {
+        aerx.IronBar=2,
+        aerx.Coke/Base.Charcoal=5,
+        Screws=4,
+        BlowTorch=5,
+        keep WeldingMask,
+        keep Wrench,
+        keep [Recipe.GetItemTypes.Hammer],
+        Result:DL_BikeEngineGuard_Zanella,
+        OnTest:Recipe.OnTest.DL_BikeEngineGuardAlloy,
+        OnCreate:Recipe.OnCreate.DLForge,
+        Time:300.0,
+        Category:Vehicle Maintenance,
+        SkillRequired:MetalWelding=2;Mechanics=6,
+        NearItem:Lathe,
+        NeedToBeLearn:false,
+    }
+
+    fixing Fix Zanella Engine Guard Welding
+    {
+        Require : DL_BikeEngineGuard_Zanella,
+        GlobalItem : BlowTorch=2,
+        ConditionModifier : 2.4,
+        Fixer : SheetMetal; Mechanics=6,
+        Fixer : SmallSheetMetal=2; Mechanics=6,
+    }
+}

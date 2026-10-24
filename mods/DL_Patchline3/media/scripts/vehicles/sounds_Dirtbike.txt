@@ -1,0 +1,20 @@
+module Base
+{
+	sound VehicleStartDirtBike
+	{
+        category = Vehicle, loop = false, is3D = true,
+        clip { file = media/sound/start_dirtbike.wav, distanceMax = 20, volume = 0.2f, }
+	}
+
+	sound VehicleIdleDirtBike
+	{
+        category = Vehicle, loop = true, is3D = true,
+        clip { file = media/sound/idle_dirtbike.wav, distanceMax = 20, volume = 0.2f, }
+	}
+
+	sound VehicleEngineDirtBike
+	{
+        category = Vehicle, loop = true, is3D = true,
+        clip { file = media/sound/engine_dirtbike.wav, distanceMax = 20, volume = 0.1f, }
+	}
+}

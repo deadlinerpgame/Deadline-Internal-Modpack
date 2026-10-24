@@ -1,0 +1,32 @@
+module Base
+{
+    fixing Fix Moto Gas Tank Welding
+    {
+        Require : ATAMotoBMWGasTank;ATAMotoHarleyGasTank;ATAMotoDirtBikeGasTank,
+        GlobalItem : BlowTorch=5,
+        ConditionModifier : 2.4,
+
+        Fixer : SheetMetal; Mechanics=6,
+        Fixer : SmallSheetMetal=2; Mechanics=6,
+    }
+    
+    fixing Fix Moto Muffler Welding
+    {
+        Require : ATAMotoBMWCustomMuffler;ATAMotoBMWClassicMuffler;ATAMotoHarleyMuffler;ATAMotoDirtBikeMuffler,
+        GlobalItem : BlowTorch=5,
+        ConditionModifier : 2.4,
+
+        Fixer : SheetMetal; Mechanics=6,
+        Fixer : SmallSheetMetal=2; Mechanics=6,
+    }
+    
+    fixing Fix Moto seat
+    {
+        Require : ATAMotoBMWSeat;ATAMotoBMWSeatCustom;ATAMotoHarleySeat;ATAMotoQuadSeat;ATAMotoDirtBikeSeat,
+        ConditionModifier : 1.6,,
+
+        Fixer : DuctTape=2;Mechanics=6,
+        Fixer : Glue=2;Mechanics=6,
+    }
+    
+}

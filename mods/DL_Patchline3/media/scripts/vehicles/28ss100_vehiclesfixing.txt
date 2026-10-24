@@ -1,0 +1,30 @@
+module Base
+{
+	fixing Fix SS100 GasTank Welding
+		{
+		   Require : SS100gasTank3,
+		   GlobalItem : BlowTorch=5,
+		   ConditionModifier : 2.4,
+
+	      Fixer : SheetMetal; Mechanics=6,
+	      Fixer : SmallSheetMetal=2; Mechanics=6,
+		}
+
+	fixing Fix SS100 Tire
+	{
+	   Require : SS100oldTire;SS100normalTire;SS100modernTire,
+	   ConditionModifier : 0.9,
+
+      Fixer : DuctTape=2;Mechanics=6,
+      Fixer : Glue=2;Mechanics=6,
+	}
+
+	fixing Fix SS100 Seat
+	{
+	   Require : SS100seat3,
+	   ConditionModifier : 1.0,
+
+       Fixer : DuctTape=2;Mechanics=6,
+	}
+
+}

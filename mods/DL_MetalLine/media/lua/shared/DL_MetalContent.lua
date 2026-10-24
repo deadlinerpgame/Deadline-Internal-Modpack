@@ -33,6 +33,7 @@ DL.MetalContent = {
     ["DL_MetalLine.Scrap_Titanium_S"] = { units = 0.05, metal = "titanium", composition = { titanium = 1.0 } },
     ["DL_MetalLine.Scrap_Titanium_M"] = { units = 0.25, metal = "titanium", composition = { titanium = 1.0 } },
     ["DL_MetalLine.Scrap_Titanium_L"] = { units = 0.5, metal = "titanium", composition = { titanium = 1.0 } },
+    ["DL_MetalLine.Scrap_Carbon_XS"] = { units = 0.01, metal = "carbon", composition = { carbon = 1.0 } },
     ["DL_MetalLine.Scrap_Carbon_S"] = { units = 0.05, metal = "carbon", composition = { carbon = 1.0 } },
     ["DL_MetalLine.Scrap_Carbon_M"] = { units = 0.25, metal = "carbon", composition = { carbon = 1.0 } },
     ["DL_MetalLine.Scrap_Carbon_L"] = { units = 0.5, metal = "carbon", composition = { carbon = 1.0 } },

@@ -1,0 +1,56 @@
+module Base
+{
+	fixing Fix ZNL50 GasTank Welding
+		{
+		   Require : ZNL50gasTank,
+		   GlobalItem : BlowTorch=4,
+		   ConditionModifier : 2.2,
+
+	      Fixer : SheetMetal; Mechanics=6,
+	      Fixer : SmallSheetMetal=2; Mechanics=6,
+		}
+
+	fixing Fix ZNL50 Tire
+	{
+	   Require : ZNL50oldTire;ZNL50normalTire;ZNL50modernTire,
+	   ConditionModifier : 0.9,
+
+      Fixer : DuctTape=2;Mechanics=6,
+      Fixer : Glue=2;Mechanics=6,
+	}
+
+	fixing Fix ZNL50 Seat
+	{
+	   Require : ZNL50seat,
+	   ConditionModifier : 1.0,
+
+       Fixer : DuctTape=2;Mechanics=6,
+	}
+
+	fixing Fix ZNL50 Fender Welding
+	{
+	   Require : ZNL50fenderFront;ZNL50fenderRear,
+	   GlobalItem : BlowTorch=4,
+	   ConditionModifier : 1.7,
+
+       Fixer : SheetMetal;Mechanics=6,
+	}
+
+	fixing Fix ZNL50 Trunk Welding
+	{
+	   Require : ZNL50storageFront;ZNL50storageBox,
+	   GlobalItem : BlowTorch=2,
+	   ConditionModifier : 1.7,
+
+       Fixer : SheetMetal;Mechanics=6,
+	}
+
+	fixing Fix ZNL50 Box Lid
+	{
+	   Require : ZNL50boxLid,
+	   ConditionModifier : 1.0,
+
+      Fixer : DuctTape=2;Mechanics=6,
+	}
+
+}

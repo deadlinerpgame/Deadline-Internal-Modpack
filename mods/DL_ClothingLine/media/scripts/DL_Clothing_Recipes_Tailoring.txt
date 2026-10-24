@@ -273,7 +273,7 @@ module Base
 	{
 		LeatherStrips=3,
 		Thread=4,
-		DyePack = 1,
+		DyePack/ClothesUpgradeLine.FabricDye = 1,
 		keep Scissors,
 		keep Needle,
 
@@ -348,12 +348,23 @@ module Base
 		SkillRequired:Tailoring=6,
     	}
 
-    recipe Create a Cotton Fabric Roll
+    recipe Create a Cotton Fabric Roll (build-able)
 	{
 		Thread=100,
 		keep Needle,
 		NearItem:TailoringWorkbench,
        		Result:FabricRoll_Cotton,
+       		Time:120.0,
+      		Category:Tailoring,
+		SkillRequired:Tailoring=6,
+    	}
+
+    recipe Create a Cotton Fabric Roll
+	{
+		Thread=100,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+       		Result:aerx.FabricRoll_Cotton,
        		Time:120.0,
       		Category:Tailoring,
 		SkillRequired:Tailoring=6,
@@ -464,7 +475,7 @@ module Base
     recipe Knit Big White Scarf
     {
         Yarn = 10,
-        DyePack = 1,
+        DyePack/ClothesUpgradeLine.FabricDye = 1,
         Thread=4,
 		keep KnittingNeedles,
         keep Scissors,
@@ -482,7 +493,7 @@ module Base
     recipe Knit Big Red Scarf
     {
         Yarn = 10,
-        DyePack = 1,
+        DyePack/ClothesUpgradeLine.FabricDye = 1,
         Thread=4,
 		keep KnittingNeedles,
         keep Scissors,
@@ -500,7 +511,7 @@ module Base
     recipe Knit Big Magenta Scarf
     {
         Yarn = 10,
-        DyePack = 1,
+        DyePack/ClothesUpgradeLine.FabricDye = 1,
         Thread=4,
 		keep KnittingNeedles,
         keep Scissors,
@@ -518,7 +529,7 @@ module Base
     recipe Knit Big Green Scarf
     {
         Yarn = 10,
-        DyePack = 1,
+        DyePack/ClothesUpgradeLine.FabricDye = 1,
         Thread=4,
 		keep KnittingNeedles,
         keep Scissors,
@@ -536,7 +547,7 @@ module Base
     recipe Knit Big Brown Scarf
     {
         Yarn = 10,
-        DyePack = 1,
+        DyePack/ClothesUpgradeLine.FabricDye = 1,
         Thread=4,
 		keep KnittingNeedles,
         keep Scissors,
@@ -554,7 +565,7 @@ module Base
     recipe Knit Big Blue Scarf
     {
         Yarn = 10,
-        DyePack = 1,
+        DyePack/ClothesUpgradeLine.FabricDye = 1,
         Thread=4,
 		keep KnittingNeedles,
         keep Scissors,
@@ -572,7 +583,7 @@ module Base
     recipe Knit Big Black Scarf
     {
         Yarn = 10,
-        DyePack = 1,
+        DyePack/ClothesUpgradeLine.FabricDye = 1,
         Thread=4,
 		keep KnittingNeedles,
         keep Scissors,
@@ -590,7 +601,7 @@ module Base
     recipe Make Oversized Hoodie
     {
         aerx.FabricRoll_Cotton = 2,
-        DyePack = 2,
+        DyePack/ClothesUpgradeLine.FabricDye = 2,
         Thread=4,
         keep Needle,
         keep Scissors,
@@ -606,7 +617,7 @@ module Base
     recipe Make Oversized Hoodie
     {
         aerx.FabricRoll_Cotton = 2,
-        DyePack = 2,
+        DyePack/ClothesUpgradeLine.FabricDye = 2,
         Thread=4,
         keep Needle,
         keep Scissors,
@@ -622,7 +633,7 @@ module Base
     recipe Make Oversized Sweater
     {
         aerx.FabricRoll_Cotton = 2,
-        DyePack = 2,
+        DyePack/ClothesUpgradeLine.FabricDye = 2,
         Thread=4,
         keep Needle,
         keep Scissors,
@@ -638,7 +649,7 @@ module Base
     recipe Make Oversized Sweater
     {
         aerx.FabricRoll_Cotton = 2,
-        DyePack = 2,
+        DyePack/ClothesUpgradeLine.FabricDye = 2,
         Thread=4,
         keep Needle,
         keep Scissors,
@@ -654,7 +665,7 @@ module Base
     recipe Make Oversized Knitted Sweater
     {
         Yarn = 20,
-        DyePack = 2,
+        DyePack/ClothesUpgradeLine.FabricDye = 2,
         Thread=4,
 		keep KnittingNeedles,
         keep Scissors,
@@ -680,7 +691,7 @@ module Base
     recipe Make Cloth Head rag Dyeable
     {
 		RippedSheets = 5,
-        DyePack = 1,
+        DyePack/ClothesUpgradeLine.FabricDye = 1,
 
         Result:Hat_HeadragTINT,
         Time:70.0,
@@ -710,9 +721,9 @@ module Base
 		keep Needle,
 		keep KnittingNeedles,
         keep Scissors,
-        DyePack = 2,
+        DyePack/ClothesUpgradeLine.FabricDye = 2,
         Thread=10,
-        FabricRoll_Cotton = 2,
+        aerx.FabricRoll_Cotton = 2,
         aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 2,
 
         Result:Hat_Ushanka,
@@ -729,9 +740,9 @@ module Base
 		keep Needle,
 		keep KnittingNeedles,
         keep Scissors,
-        DyePack = 2,
+        DyePack/ClothesUpgradeLine.FabricDye = 2,
         Thread=10,
-        FabricRoll_Cotton = 2,
+        aerx.FabricRoll_Cotton = 2,
         aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 2,
 
         Result:Hat_UshankaTINT,
@@ -748,9 +759,9 @@ module Base
 		keep Needle,
 		keep KnittingNeedles,
         keep Scissors,
-        DyePack = 2,
+        DyePack/ClothesUpgradeLine.FabricDye = 2,
         Thread=10,
-        FabricRoll_Cotton = 2,
+        aerx.FabricRoll_Cotton = 2,
         aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 2,
 
         Result:Hat_UshankaCamo,
@@ -783,7 +794,7 @@ module Base
     recipe Eye bandage Tintable
     {
 		AlcoholBandage/Bandage/AlcoholBandage2 = 1,
-        DyePack = 1,
+        DyePack/ClothesUpgradeLine.FabricDye = 1,
 
         Result:Hat_EyeBandage_LeftTINT,
         Time:70.0,
