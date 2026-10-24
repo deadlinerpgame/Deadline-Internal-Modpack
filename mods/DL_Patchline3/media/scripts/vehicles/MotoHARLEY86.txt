@@ -291,6 +291,26 @@ module Base
             }
         }
 
+        template = EngineDoor,
+
+        part EngineDoor
+        {
+            specificItem = false,
+            itemType = Base.DL_BikeEngineGuard_Harley,
+            lua
+            {
+                create = Vehicles.Create.DL_BikeEngineGuard,
+            }
+            table install
+            {
+                skills = Mechanics:6,
+            }
+            table uninstall
+            {
+                skills = Mechanics:6,
+            }
+        }
+
         template = Engine,
 
         part Engine

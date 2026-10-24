@@ -130,6 +130,11 @@ module Base
 	{
 		template! = AMC_bmw,
 
+        part EngineDoor
+        {
+            itemType = Base.DL_BikeEngineGuard_BMWClassic,
+        }
+
 		model
 		{
 			file = AMC_bmw_r80,
@@ -325,6 +330,11 @@ module Base
 	vehicle AMC_bmw_custom
 	{
 		template! = AMC_bmw,
+
+        part EngineDoor
+        {
+            itemType = Base.DL_BikeEngineGuard_BMWCustom,
+        }
 
 		model
 		{
@@ -576,6 +586,26 @@ module Base
             }
 
             uninstall
+            {
+                skills = Mechanics:6,
+            }
+        }
+
+        template = EngineDoor,
+
+        part EngineDoor
+        {
+            specificItem = false,
+            itemType = Base.DL_BikeEngineGuard_BMWClassic,
+            lua
+            {
+                create = Vehicles.Create.DL_BikeEngineGuard,
+            }
+            table install
+            {
+                skills = Mechanics:6,
+            }
+            table uninstall
             {
                 skills = Mechanics:6,
             }
