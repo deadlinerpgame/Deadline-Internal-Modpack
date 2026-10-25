@@ -98,7 +98,20 @@ module Animals
         NearItem:TailoringWorkbench,
         SkillRequired:Tailoring=10,
     }
-	
+
+    recipe Repair Standard Saddle
+    {
+        Animals.Saddle,
+        Thread = 20,
+        aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Simmental_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.DeerLeather_Fur_Tan = 1,
+        keep Needle,
+        Result:Animals.Saddle,
+        Time:150.0,
+        Category:Horses,
+        NearItem:TailoringWorkbench,
+        SkillRequired:Tailoring=10,
+    }
+
     recipe Make Horse Blinders
     {
         LeatherStrips = 5,
