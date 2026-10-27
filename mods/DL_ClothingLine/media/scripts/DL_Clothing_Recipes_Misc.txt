@@ -1,8 +1,8 @@
-module BetterJournal
+module 
 {
     imports
     {
-        Base,
+        BaseBetterJournal,
     }
 
     recipe Make Journal
@@ -23,7 +23,7 @@ module BetterJournal
         Twine=5,
         aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan=1,
         CanBeDoneFromFloor:true,
-        Result:JournalBlack,
+        Result:BaseBetterJournal.JournalBlack,
         Time:50.0,
     }
 
@@ -34,7 +34,7 @@ module BetterJournal
         Twine=5,
         aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan=1,
         CanBeDoneFromFloor:true,
-        Result:SpringJournalBlack,
+        Result:BaseBetterJournal.SpringJournalBlack,
         Time:50.0,
     }
 
@@ -45,7 +45,7 @@ module BetterJournal
         Twine=5,
         aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan=1,
         CanBeDoneFromFloor:true,
-        Result:JournalBrown,
+        Result:BaseBetterJournal.JournalBrown,
         Time:50.0,
     }
 
@@ -56,7 +56,7 @@ module BetterJournal
         Twine=5,
         aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan=1,
         CanBeDoneFromFloor:true,
-        Result:SpringJournalBrown,
+        Result:BaseBetterJournal.SpringJournalBrown,
         Time:50.0,
     }
 
@@ -69,6 +69,34 @@ module BetterJournal
         CanBeDoneFromFloor:true,
         Result:Base.NotebookLeather,
         Time:50.0,
+    }
+
+    recipe Make Pillow
+    {
+        RippedSheets=6,
+        Thread=5,
+        keep Needle,
+        keep Scissors,
+        Result:Pillow,
+		Time:200.0,
+		SkillRequired:Tailoring=2,
+		Category:Tailoring,	
+
+    }
+
+    recipe Make Mattress
+    {
+        Thread=5,
+        Sheet=2,
+        Pillow=2,
+        keep [Recipe.GetItemTypes.SewingNeedle],
+        keep Scissors,
+
+        Result:Mattress,
+		Time:600.0,
+		SkillRequired:Tailoring=4,
+		Category:Tailoring,	
+        Override:true,
     }
 
 }
