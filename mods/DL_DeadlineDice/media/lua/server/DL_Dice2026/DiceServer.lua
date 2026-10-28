@@ -565,6 +565,25 @@ local WEAPON_NAMES = {
 	pistol = "Pistol", smg = "SMG", shotgun = "Shotgun", rifle = "Rifle", crossbow = "Crossbow",
 	thrown = "Thrown weapon", molotov = "Molotov", bomb = "Pipe/aerosol bomb",
 }
+local BOMB_TYPES = {
+	["Base.PipeBomb"] = true,
+	["Base.PipeBombTriggered"] = true,
+	["Base.PipeBombSensorV1"] = true,
+	["Base.PipeBombSensorV2"] = true,
+	["Base.PipeBombSensorV3"] = true,
+	["Base.PipeBombRemote"] = true,
+	["Base.PropPipebomb"] = true,
+	["AuthenticZLite.AuthenticPipeBomb"] = true,
+}
+local MOLOTOV_TYPES = {
+	["Base.Molotov"] = true,
+	["Base.Aerosolbomb"] = true,
+	["Base.AerosolbombTriggered"] = true,
+	["Base.AerosolbombSensorV1"] = true,
+	["Base.AerosolbombSensorV2"] = true,
+	["Base.AerosolbombSensorV3"] = true,
+	["Base.AerosolbombRemote"] = true,
+}
 
 local function classifyItem(item)
 	if not item then
@@ -573,6 +592,10 @@ local function classifyItem(item)
 	local class = "melee1h"
 	if not instanceof(item, "HandWeapon") then
 		class = "unarmed"
+	elseif item.getFullType and BOMB_TYPES[item:getFullType()] then
+		class = "bomb"
+	elseif item.getFullType and MOLOTOV_TYPES[item:getFullType()] then
+		class = "molotov"
 	elseif item.getExplosionPower and item:getExplosionPower() > 0 then
 		class = "bomb"
 	elseif item.getFirePower and item:getFirePower() > 0 then
