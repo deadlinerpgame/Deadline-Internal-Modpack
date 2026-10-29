@@ -1035,6 +1035,9 @@ local function checkAndConsumeAmmo(c, attacker, class, intent)
 	if p then
 		local item = p:getPrimaryHandItem()
 		count = item and item.getCurrentAmmoCount and item:getCurrentAmmoCount() or 0
+		if item and item.isRoundChambered and item:isRoundChambered() then
+			count = count + 1
+		end
 	end
 	if count <= 0 and intent then
 		count = tonumber(intent.ammo) or 0
@@ -1048,7 +1051,7 @@ local function checkAndConsumeAmmo(c, attacker, class, intent)
 	local need = use == -1 and croll(c, 3, "ammo:" .. attacker.name) or use
 	local used = math.min(count, need)
 	if p then
-		sendTo(p, "consumeAmmo", { count = used })
+		sendTo(p, "consumeAmmo", { count = used, totalAmmo = count })
 	end
 	addLog(c, attacker.name .. " fires " .. used .. " round" .. (used == 1 and "" or "s") .. ".")
 	return true

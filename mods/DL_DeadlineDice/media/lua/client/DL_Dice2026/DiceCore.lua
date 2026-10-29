@@ -606,7 +606,13 @@ local function applyServerCommand(cmd, args)
 		if p then
 			local item = p:getPrimaryHandItem()
 			if item and item.getCurrentAmmoCount then
-				item:setCurrentAmmoCount(math.max(0, item:getCurrentAmmoCount() - (args.count or 1)))
+				local magazine = item:getCurrentAmmoCount()
+				local used = args.count or 1
+				local remaining = (args.totalAmmo or magazine) - used
+				item:setCurrentAmmoCount(math.max(0, math.min(magazine, remaining)))
+				if item.setRoundChambered and item.haveChamber and item:haveChamber() then
+					item:setRoundChambered(remaining > item:getCurrentAmmoCount())
+				end
 			end
 		end
 	elseif cmd == "consumeItem" then
@@ -843,6 +849,9 @@ function DiceCore.roll(id)
 		local ammo = nil
 		if id ~= "throw" and GUN_CLASSES[class] then
 			ammo = item:getCurrentAmmoCount() or 0
+			if item.isRoundChambered and item:isRoundChambered() then
+				ammo = ammo + 1
+			end
 			if ammo <= 0 then
 				DiceCore.errorText = "Your weapon is not loaded."
 				DiceCore.errorTicks = 300
