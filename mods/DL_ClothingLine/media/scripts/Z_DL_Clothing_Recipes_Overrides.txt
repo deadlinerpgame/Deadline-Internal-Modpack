@@ -1,0 +1,22 @@
+module Base
+{
+
+    recipe Make Fabric Roll
+	{
+		Sheet=2,
+	    Thread=1,
+		keep Needle,
+		NearItem:TailoringWorkbench,
+		Result:FabricRoll,
+		Sound:ClothesRipping,
+		Time:100.0,
+		Category:Tailoring,
+		Prop1:KnittingNeedles,
+		Prop2:Yarn,
+		Override:true,
+		SkillRequired:Tailoring=6,
+		OnGiveXP:Recipe.OnGiveXP.Tailoring10,
+		AnimNode:RipSheets,
+	}
+
+}
