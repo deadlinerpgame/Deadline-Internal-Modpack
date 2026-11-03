@@ -31401,10 +31401,14 @@ local function addRoadworkFarmFloorsToMenu()
         BuildingMenu.createObject(
             "",
             "",
-            BuildingMenu.onBuildNaturalFloor,
+            BuildingMenu.onBuildFloorOverlay,
             BuildingMenu.FarmFloorRecipe,
             true,
             {
+                needToBeAgainstWall = false,
+                blockAllTheSquare = false,
+                canPassThrough = true,
+                canBarricade = false,
             },
             {
                 sprite = "vegetation_farm_01_12",
@@ -31422,7 +31426,6 @@ local function addRoadworkFarmFloorsToMenu()
                 blockAllTheSquare = false,
                 canPassThrough = true,
                 canBarricade = false,
-                isThumpable = true,
                 isCorner = true
             },
             {
