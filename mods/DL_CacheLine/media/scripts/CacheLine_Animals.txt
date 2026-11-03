@@ -1,0 +1,22 @@
+module DLCacheLine
+{
+    item AnimalTracks
+    {
+        Type = Normal,
+        DisplayName = Animal Tracks,
+        DisplayCategory = Animal,
+        Weight = 49,
+        Icon = Map,
+    }
+
+    recipe Follow Animal Tracks
+    {
+        AnimalTracks,
+        Result:AnimalTracks,
+        RemoveResultItem:true,
+        CanBeDoneFromFloor:true,
+        Time:300.0,
+        Category:Survivalist,
+        OnCreate:Recipe.OnCreate.CacheLineFollowTracks,
+    }
+}
