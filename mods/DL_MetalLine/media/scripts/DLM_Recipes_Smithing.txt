@@ -1,5 +1,25 @@
 module Base
 {
+    recipe Force Empty Small Ceramic Crucible (Discard Contents)
+    {
+        aerx.CeramicCrucibleSmall=1,
+        Result:aerx.CeramicCrucibleSmall=1,
+        Time:10.0,
+        Category:Smithing,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
+    }
+
+    recipe Force Empty Ceramic Crucible (Discard Contents)
+    {
+        aerx.CeramicCrucible=1,
+        Result:aerx.CeramicCrucible=1,
+        Time:10.0,
+        Category:Smithing,
+        CanBeDoneFromFloor:true,
+        NeedToBeLearn:false,
+    }
+
     recipe Make Coke
     {
         Base.Charcoal=5,

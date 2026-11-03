@@ -163,16 +163,17 @@ function DL.Crucible.unitsToScrap(comp)
     for m, u in pairs(comp or {}) do
         local md = DL.Metals[m]
         if md and u and u > 0 then
-            -- Return whole carbon scraps and discard values below 0.05
-            local rounding = (m == "carbon") and 1e-9 or 0.5
-            local rem = math.floor(u / 0.05 + rounding) * 0.05
-            local nL = math.floor(rem / 0.5 + 1e-9); rem = rem - nL * 0.5
-            local nM = math.floor(rem / 0.25 + 1e-9); rem = rem - nM * 0.25
-            local nS = math.floor(rem / 0.05 + 0.5)
+            -- Work in whole hundredths; discard material below one XS scrap.
+            local rem = math.floor(u / 0.01 + 1e-9)
+            local nL = math.floor(rem / 50); rem = rem - nL * 50
+            local nM = math.floor(rem / 25); rem = rem - nM * 25
+            local nS = math.floor(rem / 5); rem = rem - nS * 5
+            local nXS = rem
             local base = "DL_MetalLine.Scrap_" .. md.name .. "_"
             if nL > 0 then out[#out + 1] = { type = base .. "L", count = nL } end
             if nM > 0 then out[#out + 1] = { type = base .. "M", count = nM } end
             if nS > 0 then out[#out + 1] = { type = base .. "S", count = nS } end
+            if nXS > 0 then out[#out + 1] = { type = base .. "XS", count = nXS } end
         end
     end
     return out
