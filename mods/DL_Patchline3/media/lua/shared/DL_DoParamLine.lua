@@ -22,3 +22,5 @@ end
 WL_Utils.setItemProperties("Base.WoodenStick", { Weight = 0.5 })
 WL_Utils.setItemProperties("Base.Log", { Weight = 6 })
 WL_Utils.setItemProperties("Base.Plank", { Weight = 2 })
+
+WL_Utils.setItemProperties("VGE.Hat_BalaclavaTacticalTEXTURE", { BodyLocation = "Mask" }) -- tactical balaclava, it was set to makeup :(
