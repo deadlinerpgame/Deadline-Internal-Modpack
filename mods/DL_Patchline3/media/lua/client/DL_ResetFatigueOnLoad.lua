@@ -11,7 +11,7 @@ local function resetFatigueAndFear(player)
 
     stats:setFatigue(0)
     stats:setFear(0)
-    LogLineUtils.LogFromClient("InvalidStats", "Reset fatigue and fear for player "
+    LogLineUtils.LogFromClient("InvalidStats", "Automatic reset of fatigue and fear for player "
         .. tostring(player:getUsername()) .. ": fatigue=" .. tostring(fatigue)
         .. "; fear=" .. tostring(fear))
 end

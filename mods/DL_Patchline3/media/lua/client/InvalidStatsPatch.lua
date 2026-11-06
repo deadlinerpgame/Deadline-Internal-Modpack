@@ -63,11 +63,11 @@ function InvalidStats_IsTempInvalid(player)
 end
 
 function ResetPlayerClothing(player)
-    local wornItems = player:getWornItems();
-    if not wornItems then return end;
+    local items = player:getInventory():getItemsFromCategory("Clothing");
+    if not items then return end;
 
-    for i = 0, wornItems:size() - 1 do
-        local item = wornItems:get(i):getItem();
+    for i = 0, items:size() - 1 do
+        local item = items:get(i);
         if item then
             if instanceof(item, "Clothing") then
                 if IsNaN(item:getWetness()) then
@@ -146,11 +146,7 @@ function InvalidStats_OnClothingUpdated(player)
 end
 
 function InvalidStats_CheckPlayer(player)
-    if InvalidStats_IsTempInvalid(player) then
-        LogLineUtils.LogFromClient(LOGLINE_INVALIDSTATSPREFIX, "Player " .. player:getUsername() .. " temperature is invalid, resetting player and clothing...");
-        ResetPlayerClothing(player);
-        ResetPlayerTemperature(player);
-    end
+    if not player then return end;
 
     if InvalidStats_IsNutritionInvalid(player) then
         ResetPlayerNutrition(player);
@@ -160,7 +156,27 @@ function InvalidStats_CheckPlayer(player)
 end
 
 
-function InvalidStats_EveryOneMinute()
+function InvalidStats_RepairNeeds(player)
+    if not player then return end;
+    local stats = player:getStats();
+    if not stats then return end;
+    local repaired = {};
+    if IsNaN(stats:getHunger()) then stats:setHunger(0); table.insert(repaired, "hunger"); end
+    if IsNaN(stats:getThirst()) then stats:setThirst(0); table.insert(repaired, "thirst"); end
+    if InvalidStats_IsTempInvalid(player) then
+        ResetPlayerClothing(player);
+        ResetPlayerTemperature(player);
+        table.insert(repaired, "temperature/wetness (thermoregulator reset)");
+    end
+    return repaired;
+end
+
+function InvalidStats_EveryOneMinute() -- still called every 1 minute but it's 10
+    local player = getPlayer();
+    local repaired = InvalidStats_RepairNeeds(player);
+    if repaired and #repaired > 0 then
+        LogLineUtils.LogFromClient(LOGLINE_INVALIDSTATSPREFIX, "Automatic repair of " .. table.concat(repaired, ", ") .. " for player " .. tostring(player:getUsername()));
+    end
     if (not ClothingCheckedAfterChange) then
         InvalidStats_CheckPlayer(getPlayer());
     end
@@ -168,4 +184,4 @@ end
 
 Events.OnCreatePlayer.Add(InvalidStats_OnCreatePlayer);
 Events.OnClothingUpdated.Add(InvalidStats_OnClothingUpdated);
-Events.EveryOneMinute.Add(InvalidStats_EveryOneMinute);
+Events.EveryTenMinutes.Add(InvalidStats_EveryOneMinute); -- switched to 10 minutes
