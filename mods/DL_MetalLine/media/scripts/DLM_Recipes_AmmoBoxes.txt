@@ -184,4 +184,20 @@ module Craftline
         Sound:BoxOfShellsOpenOne,
         Time:30,
     }
+
+    recipe Place Scrap Pistol Rounds in Box
+    {
+        destroy aerx.T2AmmoPistol=30,
+        Result:Craftline.T2AmmoBox_Pistol,
+        Sound:BoxOfRoundsOpenOne,
+        Time:30,
+    }
+
+    recipe Open Box of Scrap Pistol Rounds
+    {
+        destroy Craftline.T2AmmoBox_Pistol,
+        Result:aerx.T2AmmoPistol=30,
+        Sound:BoxOfShellsOpenOne,
+        Time:30,
+    }
 }
