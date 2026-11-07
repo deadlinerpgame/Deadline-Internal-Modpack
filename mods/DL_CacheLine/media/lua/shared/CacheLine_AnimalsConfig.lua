@@ -94,7 +94,7 @@ DLCacheLine.AnimalPool = {
     { "Animals.BirdOwl", 10 },
     { "Animals.BirdCardinal", 10 },
     { "Animals.BirdBlueJay", 10 },
-    { "Animals.Tiger", 10 },
+    --{ "Animals.Tiger", 10 },
     --{ "Animals.BrownBear", 10 },
     --{ "Animals.BrownBearCub", 10 },
     { "Animals.DogChihuahua", 10 },
