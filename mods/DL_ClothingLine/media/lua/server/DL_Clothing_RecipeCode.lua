@@ -20,3 +20,7 @@ function Recipe.OnCreate.ReturnOliveJar(items, result, player)
         end;
     end;
 end
+
+function Recipe.OnCreate.ReturnEmptyPaintBucket(items, result, player)
+    player:getInventory():AddItem("Base.PaintbucketEmpty");
+end
