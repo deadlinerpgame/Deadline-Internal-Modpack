@@ -9,7 +9,7 @@ module SP
     {
         Sack_Clay,
 
-        Result:Clay=8,
+        Result:aerx.Clay=8,
         OnGiveXP:Recipe.OnGiveXP.None,
         Sound:PutItemInBag,
         Time:15.0,
@@ -68,7 +68,7 @@ module SP
     {
         SackProduce_Coffee,
 
-        Result:CoffeeBeans=12,
+        Result:SapphCooking.CoffeeBeans=12,
         OnGiveXP:Recipe.OnGiveXP.None,
         Sound:PutItemInBag,
         Time:15.0,
@@ -116,7 +116,7 @@ module SP
     {
         SackProduce_Strawberry,
 
-        Result:Strewberrie=16,
+        Result:farming.Strewberrie=16,
         OnGiveXP:Recipe.OnGiveXP.None,
         Sound:PutItemInBag,
         Time:15.0,
@@ -349,6 +349,82 @@ module SP
         Time:15.0,
         OnCreate:Recipe.OnCreate.OpenSackProduce,
 		AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Sugar Cane
+    {
+        SP.SackProduce_SugarCane,
+
+        Result:SP.SugarCane=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+        AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Olives
+    {
+        SP.SackProduce_Olive,
+        Result:SP.Olive=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+        AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Peppers
+    {
+        SP.SackProduce_Pepper,
+        Result:Base.BellPepper=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+        AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Rice
+    {
+        SP.SackProduce_Rice,
+        Result:Base.Rice=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+    }
+
+    recipe Open Sack of Soy Beans
+    {
+        SP.SackProduce_SoyBean,
+        Result:SP.SoyBean=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+        AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Tea Leaves
+    {
+        SP.SackProduce_Tea,
+        Result:SP.TeaLeaf=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
+        AllowRottenItem:true,
+    }
+
+    recipe Open Sack of Tobacco
+    {
+        SP.SackProduce_Tobacco,
+        Result:SP.Tobacco=12,
+        OnGiveXP:Recipe.OnGiveXP.None,
+        Sound:PutItemInBag,
+        Time:15.0,
+        OnCreate:Recipe.OnCreate.OpenSackProduce,
     }
 
 }
