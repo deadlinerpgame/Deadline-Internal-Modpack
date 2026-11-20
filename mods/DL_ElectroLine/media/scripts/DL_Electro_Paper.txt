@@ -1,0 +1,90 @@
+module Base
+{
+    item WoodPulp
+    {
+        DisplayName = Wood Pulp,
+        DisplayCategory = Material,
+        Type = Normal,
+        Count = 1,
+        Weight = 1.0,
+        Icon = Plank,
+        WorldStaticModel = Plank,
+    }
+
+    item WetPaperBundle
+    {
+        DisplayName = Wet Paper Bundle (20 Sheets),
+        DisplayCategory = Material,
+        Type = Food,
+        Count = 1,
+        Weight = 1.0,
+        Icon = Paper,
+        WorldStaticModel = SheetOfPaper,
+        CantEat = TRUE,
+        CantBeFrozen = TRUE,
+        HungerChange = 0,
+        Calories = 0,
+        Carbohydrates = 0,
+        Lipids = 0,
+        Proteins = 0,
+        DaysFresh = 7,
+        DaysTotallyRotten = 7,
+        ReplaceOnRotten = DryPaperBundle,
+        IsCookable = TRUE,
+        MinutesToCook = 360,
+        MinutesToBurn = 1440,
+        ReplaceOnCooked = Base.DryPaperBundle,
+    }
+
+    item DryPaperBundle
+    {
+        DisplayName = Dry Paper Bundle (20 Sheets),
+        DisplayCategory = Material,
+        Type = Normal,
+        Count = 1,
+        Weight = 0.2,
+        Icon = Paper,
+        WorldStaticModel = SheetOfPaper,
+    }
+
+    recipe Make Wood Pulp from Plank
+    {
+        Base.Plank,
+        Water=10,
+        keep Base.MortarPestle,
+        Result:Base.WoodPulp,
+        Time:100.0,
+        SkillRequired:Woodwork=2,
+        Category:Paper,
+    }
+
+    recipe Make Wood Pulp from Log
+    {
+        Base.Log,
+        Water=20,
+        keep Base.Saw,
+        keep Base.MortarPestle,
+        Result:Base.WoodPulp=3,
+        Time:100.0,
+        SkillRequired:Woodwork=2,
+        Category:Paper,
+    }
+
+    recipe Press Wet Paper Bundle
+    {
+        Base.WoodPulp,
+        Result:Base.WetPaperBundle,
+        Time:100.0,
+        SkillRequired:Woodwork=2,
+        NearItem:Hand Press,
+        Category:Paper,
+    }
+
+    recipe Unpack Dry Paper Bundle
+    {
+        Base.DryPaperBundle,
+        Result:Base.SheetPaper2=20,
+        Time:100.0,
+        Category:Paper,
+    }
+}

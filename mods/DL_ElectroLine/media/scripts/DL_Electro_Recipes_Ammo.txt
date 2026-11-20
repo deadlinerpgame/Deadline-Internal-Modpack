@@ -1,32 +1,136 @@
 module aerx
 {
-    imports
+    recipe Craft Black Powder
     {
-        Base,
+        keep Base.RecipeDisabler,
+        Base.WasteItem=2,
+        Base.Charcoal=1,
+        DL_MetalLine.Scrap_Aluminum_S=2,
+        keep Base.MortarPestle,
+        Result:aerx.BlackPowder,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PaintMixingTable,
     }
 
-    recipe Craft Black Powder
-	{
-		Charcoal=2,
-		Base.WasteItem,
-		DL_MetalLine.Scrap_Aluminum_S/DL_MetalLine.Scrap_Nickel_S=2,
-		keep Base.MortarPestle,
-		Result:aerx.BlackPowder,
-		Time:50.0,
-		Category:Firearms,
-	}
+    recipe Craft Black Powder with Sugar
+    {
+        keep Base.RecipeDisabler,
+        Base.WasteItem,
+        Base.Sugar/Base.SugarBrown;10,
+        DL_MetalLine.Scrap_Aluminum_S=2,
+        keep Base.MortarPestle,
+        Result:aerx.BlackPowder=2,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PaintMixingTable,
+    }
 
     recipe Craft Improvised Gunpowder
-	{
-		aerx.BlackPowder=40,
-		Base.Sugar=1,
-		Base.Disinfectant/Base.WhiskeyFull/Base.BeerCan/Base.BeerBottle/Deadline.BeerLager/Deadline.BeerAle/Deadline.BeerWheatBeer/Deadline.BeerIPA/Deadline.BeerStout/Deadline.BeerStoutCoffee/Deadline.BeerStoutChocolate/Deadline.BeerFritBluebrry/Deadline.BeerFruitCherry/Deadline.BeerFruitStrawberry/Deadline.BeerFruitLemon/Deadline.BeerFruitApple/Deadline.BeerPear/Deadline.CiderApple/Deadline.CiderBlackberry/Deadline.CiderPear/Deadline.LiquerOrange/Deadline.LiquerLemon/Deadline.LiquerLime/Deadline.LiquerCherry/Deadline.LiquerBlueberry/Deadline.LiquerBlackberry/Deadline.LiquerPeach/Deadline.LiquerPear/Deadline.LiquerCoffee=1,
-		keep Base.MortarPestle,
-		keep Base.Pot,
-		OnCreate:Recipe.OnCreate.ReturnBottleOrCan,
-		Result:aerx.IGunpowder=2,
-		Time:50.0,
-		Category:Firearms,
+    {
+        keep Base.RecipeDisabler,
+        Base.WasteItem=2,
+        aerx.BlackPowder=10,
+        keep Base.MortarPestle,
+        Result:aerx.IGunpowder,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PaintMixingTable,
+    }
 
-	}
+    recipe Craft Improvised Gunpowder with Alcohol
+    {
+        keep Base.RecipeDisabler,
+        Base.WasteItem,
+        aerx.BlackPowder=5,
+        Deadline.CiderApple/Deadline.SchnappsApple/Deadline.WineApple/Deadline.WineBanana/Base.BeerBottle/Base.BeerCan/Deadline.CiderBlackberry/Deadline.LiquerBlackberry/Deadline.WineBlackberry/Deadline.LiquerBlueberry/Deadline.WineBlueberry/Deadline.BeerAle/Deadline.BeerFruitApple/Deadline.BeerFruitBlueberry/Deadline.BeerFruitCherry/Deadline.BeerStoutChocolate/Deadline.BeerStoutCoffee/Deadline.BeerIPA/Deadline.BeerLager/Deadline.BeerFruitLemon/Deadline.BeerFruitPear/SapphCooking.RumFull/Deadline.BeerStout/Deadline.BeerFruitStrawberry/Deadline.BeerWheatBeer/SapphCooking.CachacaFull/Base.Wine/Deadline.LiquerCherry/Deadline.SchnappsCherry/Deadline.WineCherry/Deadline.LiquerCoffee/SapphCooking.GinFull/Deadline.WineGrape/Deadline.WineGrapefruit/Deadline.Kvass/Deadline.LiquerLemon/Deadline.WineLemon/Deadline.LiquerLime/Deadline.WineLime/SapphCooking.LiqueurBottle/Deadline.WineMango/Deadline.Mead/Deadline.LiquerOrange/Deadline.WineOrange/Deadline.LiquerPeach/Deadline.SchnappsPeach/Deadline.WinePeach/Deadline.CiderPear/Deadline.LiquerPear/Deadline.SchnappsPear/Deadline.WinePear/Deadline.WinePineapple/Deadline.SchnappsPlum/Deadline.WinePumpkin/Deadline.Rakija/Base.Wine2/Deadline.Sake/SapphCooking.SakeFull/SapphCooking.TequilaFull/Deadline.WineTomato/SapphCooking.Vermouth/Deadline.Vodka/SapphCooking.VodkaFull/Deadline.WineWatermelon/Base.WhiskeyFull;5,
+        keep Base.MortarPestle,
+        Result:aerx.IGunpowder=2,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PaintMixingTable,
+    }
+
+    recipe Craft Improvised Gunpowder with Ethanol
+    {
+        keep Base.RecipeDisabler,
+        Base.WasteItem,
+        aerx.BlackPowder=5,
+        DrugsDLC.EthanolBottle,
+        keep Base.MortarPestle,
+        Result:aerx.IGunpowder=2,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PaintMixingTable,
+    }
+
+    recipe Craft Improvised Gunpowder with Disinfectant
+    {
+        keep Base.RecipeDisabler,
+        Base.WasteItem,
+        aerx.BlackPowder=5,
+        Base.Disinfectant=5,
+        keep Base.MortarPestle,
+        Result:aerx.IGunpowder=2,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PaintMixingTable,
+    }
+
+    recipe Convert Gunpowder to Improvised Gunpowder
+    {
+        keep Base.RecipeDisabler,
+        Base.GunPowder=10,
+        keep Base.MortarPestle,
+        Result:aerx.IGunpowder;5,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PaintMixingTable,
+    }
+
+    recipe Craft Improvised Primer
+    {
+        keep Base.RecipeDisabler,
+        Base.WasteItem=2,
+        DL_MetalLine.Scrap_Copper_S=2,
+        keep Base.MortarPestle,
+        Result:aerx.IPrimer,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PaintMixingTable,
+    }
+
+    recipe Craft Improvised Primer with Sugar
+    {
+        keep Base.RecipeDisabler,
+        Base.WasteItem,
+        Base.Sugar/Base.SugarBrown;10,
+        DL_MetalLine.Scrap_Copper_S=2,
+        keep Base.MortarPestle,
+        Result:aerx.IPrimer=2,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PaintMixingTable,
+    }
+
+    recipe Convert Gunpowder to Improvised Primer
+    {
+        keep Base.RecipeDisabler,
+        Base.GunPowder=10,
+        keep Base.MortarPestle,
+        Result:aerx.IPrimer;5,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PaintMixingTable,
+    }
 }

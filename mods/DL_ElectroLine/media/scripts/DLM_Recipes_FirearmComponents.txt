@@ -1,0 +1,217 @@
+module DL_MetalLine
+{
+    recipe Make Brass Sheet
+    {
+        keep Base.RecipeDisabler,
+        aerx.IronBar,
+        keep aerx.File,
+        Result:DL_MetalLine.BrassSheet,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:MetalWelding=6,
+        NearItem:Lathe,
+        OnTest:Recipe.OnTest.DLFirearmStock_brass,
+    }
+
+    recipe Make Bronze Sheet
+    {
+        keep Base.RecipeDisabler,
+        aerx.IronBar,
+        keep aerx.File,
+        Result:DL_MetalLine.BronzeSheet,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:MetalWelding=6,
+        NearItem:Lathe,
+        OnTest:Recipe.OnTest.DLFirearmStock_bronze,
+    }
+
+    recipe Make Steel Bar
+    {
+        keep Base.RecipeDisabler,
+        aerx.IronBar,
+        Result:DL_MetalLine.SteelBar,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:MetalWelding=6,
+        NearItem:Simple Forge,
+        OnTest:Recipe.OnTest.DLFirearmStock_steel,
+    }
+
+    recipe Make Stainless Steel Sheet
+    {
+        keep Base.RecipeDisabler,
+        aerx.IronBar,
+        keep aerx.File,
+        Result:DL_MetalLine.StainlessSteelSheet,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:MetalWelding=10,
+        NearItem:Lathe,
+        OnTest:Recipe.OnTest.DLFirearmStock_stainless_steel,
+    }
+
+    recipe Make Gunmetal Bar
+    {
+        keep Base.RecipeDisabler,
+        aerx.IronBar,
+        Result:DL_MetalLine.GunmetalBar,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:MetalWelding=10,
+        NearItem:Simple Forge,
+        OnTest:Recipe.OnTest.DLFirearmStock_gunmetal,
+    }
+
+    recipe Make Gunmetal Sheet
+    {
+        keep Base.RecipeDisabler,
+        DL_MetalLine.GunmetalBar,
+        keep aerx.File,
+        Result:DL_MetalLine.GunmetalSheet,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:MetalWelding=10,
+        NearItem:Lathe,
+    }
+
+    recipe Make Junk Casing Bundle
+    {
+        keep Base.RecipeDisabler,
+        DL_MetalLine.BrassSheet,
+        keep aerx.File,
+        Result:DL_MetalLine.JunkCasingBundle,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=4,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Make Scrap Casing Bundle
+    {
+        keep Base.RecipeDisabler,
+        DL_MetalLine.BrassSheet,
+        keep aerx.File,
+        Result:DL_MetalLine.ScrapCasingBundle,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Make Refined Casing Bundle
+    {
+        keep Base.RecipeDisabler,
+        DL_MetalLine.BrassSheet,
+        DL_MetalLine.Scrap_Nickel_S=2,
+        keep aerx.File,
+        Result:DL_MetalLine.RefinedCasingBundle,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Make Proper Casing Bundle
+    {
+        keep Base.RecipeDisabler,
+        DL_MetalLine.BrassSheet,
+        DL_MetalLine.Scrap_Copper_S=5,
+        keep aerx.File,
+        Result:DL_MetalLine.ProperCasingBundle,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Make Shotgun Hull Bundle
+    {
+        keep Base.RecipeDisabler,
+        Base.SheetPaper2=20,
+        Base.DuctTape=10,
+        DL_MetalLine.Scrap_Aluminum_S=2,
+        keep Base.Scissors,
+        Result:DL_MetalLine.ShotgunHullBundle,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=4,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Make Junk Firearm Frame
+    {
+        keep Base.RecipeDisabler,
+        DL_MetalLine.GunmetalBar,
+        keep aerx.File,
+        Base.BlowTorch=1,
+        Base.WeldingRods=1,
+        keep [Recipe.GetItemTypes.WeldingMask],
+        Result:DL_MetalLine.JunkFirearmFrame,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:MetalWelding=6,
+        NearItem:Lathe,
+    }
+
+    recipe Make Scrap Firearm Frame
+    {
+        keep Base.RecipeDisabler,
+        DL_MetalLine.GunmetalBar=2,
+        DL_MetalLine.SteelBar,
+        keep aerx.File,
+        Base.BlowTorch=2,
+        Base.WeldingRods=2,
+        keep [Recipe.GetItemTypes.WeldingMask],
+        Result:DL_MetalLine.ScrapFirearmFrame,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:MetalWelding=6,
+        NearItem:Lathe,
+    }
+
+    recipe Make Refined Firearm Frame
+    {
+        keep Base.RecipeDisabler,
+        DL_MetalLine.GunmetalSheet=2,
+        DL_MetalLine.SteelBar=2,
+        keep aerx.File,
+        Base.BlowTorch=3,
+        Base.WeldingRods=3,
+        keep [Recipe.GetItemTypes.WeldingMask],
+        Result:DL_MetalLine.RefinedFirearmFrame,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:MetalWelding=10,
+        NearItem:Lathe,
+    }
+
+    recipe Make Basic Magazine Kit
+    {
+        keep Base.RecipeDisabler,
+        DL_MetalLine.SteelBar,
+        Base.Wire,
+        Base.PrecisionParts,
+        keep aerx.File,
+        Result:DL_MetalLine.BasicMagazineKit=2,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:MetalWelding=6,
+        NearItem:Lathe,
+    }
+
+    recipe Make Precision Magazine Kit
+    {
+        keep Base.RecipeDisabler,
+        DL_MetalLine.StainlessSteelSheet,
+        Base.SmallSheetMetal,
+        Base.Wire=2,
+        Base.PrecisionParts,
+        keep aerx.File,
+        Result:DL_MetalLine.PrecisionMagazineKit,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:MetalWelding=10,
+        NearItem:Lathe,
+    }
+}

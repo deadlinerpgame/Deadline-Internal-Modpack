@@ -347,4 +347,17 @@ module Base
 		SkillRequired:Cooking=3,
        	OnGiveXP:Recipe.OnGiveXP.Cooking3,
 	}
+
+	recipe Make Sugar
+	{
+    	SP.SugarCane=2,
+      	keep MortarPestle,
+
+    	Result:Sugar,
+    	Time:130.0,
+    	Category:Cooking,
+	 	Sound:Sawing,
+		SkillRequired:Cooking=3,
+    	OnGiveXP:Recipe.OnGiveXP.Cooking3,
+	}
 }
