@@ -30,7 +30,10 @@ function CULUpgradeAction:perform()
     if self.sound and self.character:getEmitter() then
         self.character:getEmitter():stopSound(self.sound)
     end
-    local result, flaw = ClothesUpgrade.attemptUpgrade(self.character, self.item, self.track)
+    local result, flaw = "invalid", nil
+    if self:isValid() then
+        result, flaw = ClothesUpgrade.attemptUpgrade(self.character, self.item, self.track)
+    end
     ISBaseTimedAction.perform(self)
     if self.onComplete then
         self.onComplete(result, self.item, flaw)

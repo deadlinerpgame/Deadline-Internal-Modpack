@@ -1,4 +1,5 @@
 ClothesUpgrade = ClothesUpgrade or {}
+require "CUL/CUL_Containers"
 
 ClothesUpgrade.Stats = {
     insulation = {
@@ -160,9 +161,11 @@ end
 ClothesUpgrade.flawSumForStat = flawSumForStat
 
 function ClothesUpgrade.applyStat(item, statId)
+    if (statId == "capacity" or statId == "weightReduction") and not ClothesUpgrade.isBackpack(item) then return end
     local cul = ClothesUpgrade.ensureMD(item)
     local base = ClothesUpgrade.getBaseStat(item, statId)
     local target = base + (cul.bonus[statId] or 0) + flawSumForStat(cul, statId)
+    if statId == "capacity" then target = math.min(37, target) end
     ClothesUpgrade.statSetLive(item, statId, target)
 end
 
@@ -459,6 +462,7 @@ function ClothesUpgrade.getProfile(item)
 end
 
 function ClothesUpgrade.getTracks(item)
+    if instanceof(item, "InventoryContainer") and not ClothesUpgrade.isBackpack(item) then return {} end
     local p = ClothesUpgrade.getProfile(item)
     if not (p and p.tracks) then return {} end
     local out = {}
@@ -700,6 +704,7 @@ function ClothesUpgrade.trackStatus(inventory, item, track, perkLevel)
 end
 
 function ClothesUpgrade.canUpgrade(inventory, item, track, perkLevel)
+    if instanceof(item, "InventoryContainer") and not ClothesUpgrade.isBackpack(item) then return false end
     local st = ClothesUpgrade.trackStatus(inventory, item, track, perkLevel)
     return (not st.atCap) and st.haveAll and st.hasTools and st.meetsSkill
 end
@@ -766,7 +771,7 @@ function ClothesUpgrade.attemptUpgrade(character, item, track)
     local cfg = ClothesUpgrade.Config
     local perk = character:getPerkLevel(ClothesUpgrade.perk())
     local inv = character:getInventory()
-    if not ClothesUpgrade.canUpgrade(inv, item, track, perk) then
+    if not item or not inv:contains(item) or not ClothesUpgrade.canUpgrade(inv, item, track, perk) then
         return "invalid"
     end
 

@@ -5,7 +5,7 @@ local NEEDLE = { "Base.Needle" }
 local function capacityTrack()
     return {
         id = "capacity", stat = "capacity",
-        perStep = 3, maxValue = 40,
+        perStep = 3, maxValue = 37,
         difficulty = "normal", tools = NEEDLE,
         levels = {
             { skillMin = 4, xp = 8,  items = { { item = "Base.DenimStrips", count = 3 }, { item = "Base.Thread", count = 3 } } },

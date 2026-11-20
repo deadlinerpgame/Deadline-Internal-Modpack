@@ -13,6 +13,10 @@ local function onLoadCharacter(character)
     safeReapply(character)
 end
 
+local function resetLocalContainers()
+    ClothesUpgrade.resetNonBackpackContainers(getSpecificPlayer(0))
+end
+
 local function reapplyAllPlayers()
     for i = 0, 3 do
         local plr = getSpecificPlayer(i)
@@ -49,3 +53,4 @@ addEvent("OnEquipPrimary", onEquipOrWear)
 addEvent("OnEquipSecondary", onEquipOrWear)
 addEvent("OnClothingUpdated", onClothingUpdated)
 addEvent("EveryTenMinutes", reapplyLocalPlayers)
+addEvent("EveryHours", resetLocalContainers)
