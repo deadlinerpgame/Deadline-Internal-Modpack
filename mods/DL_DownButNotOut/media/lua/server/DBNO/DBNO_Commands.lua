@@ -17,7 +17,7 @@ end
 
 function DBNO.RespawnPt.set(username, x, y, z)
     local f = DBNO.Paths.respawnFile(username)
-    if f then DBNO.Files.writeString(f, math.floor(x) .. "," .. math.floor(y) .. "," .. math.floor(z)) end
+    return f ~= nil and DBNO.Files.writeString(f, math.floor(x) .. "," .. math.floor(y) .. "," .. math.floor(z))
 end
 
 DBNO.Respawn = DBNO.Respawn or {}
@@ -51,9 +51,9 @@ Events.OnClientCommand.Add(function(module, command, player, args)
     if command == "setRespawn" then
         if DBNO.Config.respawnPointEnable == false then return end
         local x, y, z = math.floor(player:getX()), math.floor(player:getY()), math.floor(player:getZ())
-        DBNO.RespawnPt.set(DBNO.accountName(player), x, y, z)
-        DBNO.Players.touch(DBNO.accountName(player))
-        sendServerCommand(player, "DBNORespawn", "setResult", { ok = true, x = x, y = y, z = z })
+        local ok = DBNO.RespawnPt.set(DBNO.accountName(player), x, y, z)
+        if ok then DBNO.Players.touch(DBNO.accountName(player)) end
+        sendServerCommand(player, "DBNORespawn", "setResult", { ok = ok, x = x, y = y, z = z })
 
     elseif command == "spawnat" then
         if args and args.x and args.y then

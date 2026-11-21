@@ -946,6 +946,19 @@ end
 
 DBNO.Items = DBNO.Items or {}
 
+local bandageModels = {}
+for i = 0, BodyPartType.ToIndex(BodyPartType.MAX) - 1 do
+    local model = BodyPartType.FromIndex(i):getBandageModel()
+    if model then
+        bandageModels[model] = true
+        bandageModels[model .. "_Blood"] = true
+    end
+end
+
+function DBNO.Items.isBandageModel(it)
+    return bandageModels[it:getFullType()] == true
+end
+
 function DBNO.Items.validLocation(player, loc)
     if loc == nil or loc == "" then return nil end
     local group = player and player:getBodyLocationGroup() or BodyLocations.getGroup("Human")
@@ -963,6 +976,14 @@ end
 
 function DBNO.Items.canWear(player, it)
     return DBNO.Items.wearLocation(player, it) ~= nil
+end
+
+function DBNO.Items.canReturnWorn(player, it)
+    local md = it:getModData()
+    local backBag = instanceof(it, "InventoryContainer")
+        and (md.dbno_wornLoc or it:canBeEquipped()) == "Back"
+    return md.dbno_wasWorn and not backBag and not DBNO.Items.isBandageModel(it)
+        and DBNO.Items.canWear(player, it)
 end
 
 function DBNO.Items.stripWorn(player)
@@ -1004,7 +1025,7 @@ function DBNO.Items.take(player, bagCont, wear, filter, remote)
     local moved = 0
     for _, it in ipairs(list) do
         local md = it:getModData()
-        if filter == nil or filter(it, md) then
+        if not DBNO.Items.isBandageModel(it) and (filter == nil or filter(it, md)) then
             local wasWorn, loc = md.dbno_wasWorn, md.dbno_wornLoc
             md.dbno_wasWorn = nil
             md.dbno_wornLoc = nil

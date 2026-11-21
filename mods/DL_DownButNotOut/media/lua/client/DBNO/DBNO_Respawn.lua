@@ -415,6 +415,7 @@ local _onRespawn = ISPostDeathUI.onRespawn
 function ISPostDeathUI:onRespawn()
 
     if DBNO.Wounds.isFinalNow() then
+        DBNO.Respawn._notice = "new"
         DBNO.Wounds.finalDeath = false
         DBNO.Respawn._lastRespawn = nil
         DBNO.Respawn._desc = nil
@@ -437,6 +438,7 @@ function ISPostDeathUI:onRespawn()
         return
     end
 
+    DBNO.Respawn._notice = DBNO.OverkillRescue.pending and "rescue" or "respawn"
     local coords, transferAll
     if DBNO.OverkillRescue.pending then
         coords = DBNO.OverkillRescue.coords

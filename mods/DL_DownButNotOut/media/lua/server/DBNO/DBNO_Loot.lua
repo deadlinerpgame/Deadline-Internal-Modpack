@@ -77,14 +77,21 @@ local function dumpOnDeath(character, isReal, retiring)
         bagCont:AddItem(it)
         return true
     end
-    local function moveInto(it)
-        if it == nil or seen[it] then return end
+    local function moveInto(it, wornLoc)
+        if it == nil then return end
+        -- Marks equipped items as worn, cleans moddata from items with wasworn not patching wornLoc
+        if wornLoc ~= nil or not seen[it] then
+            local md = it:getModData()
+            md.dbno_wasWorn = wornLoc ~= nil and true or nil
+            md.dbno_wornLoc = wornLoc
+        end
+        if seen[it] then return end
         seen[it] = true
         local cont = it:getContainer()
         if cont then
             cont:DoRemoveItem(it)
         end
-        if bagAdd(it) then moved = moved + 1 end
+        if not DBNO.Items.isBandageModel(it) and bagAdd(it) then moved = moved + 1 end
     end
 
     local function dropWorn()
@@ -97,11 +104,8 @@ local function dumpOnDeath(character, isReal, retiring)
             if it then wlist[#wlist + 1] = { it = it, loc = e:getLocation() } end
         end
         for _, e in ipairs(wlist) do
-            local md = e.it:getModData()
-            md.dbno_wasWorn = true
-            md.dbno_wornLoc = e.loc
             character:removeWornItem(e.it, false)
-            moveInto(e.it)
+            moveInto(e.it, e.loc)
         end
     end
     dropWorn()
@@ -141,11 +145,8 @@ local function dumpOnDeath(character, isReal, retiring)
                         if it then wlist[#wlist + 1] = { it = it, loc = e:getLocation() } end
                     end
                     for _, e in ipairs(wlist) do
-                        local md = e.it:getModData()
-                        md.dbno_wasWorn = true
-                        md.dbno_wornLoc = e.loc
                         w:remove(e.it)
-                        moveInto(e.it)
+                        moveInto(e.it, e.loc)
                     end
                 end
                 local bc = body:getItemContainer()
@@ -352,7 +353,7 @@ function R.holdWorn(username, bagCont)
 
     local n = 0
     for _, it in ipairs(list) do
-        if it:getModData().dbno_wasWorn and DBNO.Items.canWear(nil, it) then
+        if DBNO.Items.canReturnWorn(nil, it) then
             bagCont:DoRemoveItem(it)
             hc:AddItem(it)
             n = n + 1
@@ -390,7 +391,7 @@ local function takeFromDeathCache(username, spot, takeAll)
     for i = 0, its:size() - 1 do list[#list + 1] = its:get(i) end
     local n = 0
     for _, it in ipairs(list) do
-        if takeAll or (it:getModData().dbno_wasWorn and DBNO.Items.canWear(nil, it)) then
+        if not DBNO.Items.isBandageModel(it) and (takeAll or DBNO.Items.canReturnWorn(nil, it)) then
             bc:DoRemoveItem(it)
             pc:AddItem(it)
             n = n + 1
@@ -438,8 +439,8 @@ local function respawnClothesLocal(player, username, mode, spot)
 
         local bc = bag:getInventory()
         if bc == nil then return end
-        worn = DBNO.Items.take(player, bc, "any", function(it, md)
-            return takeAll or (md.dbno_wasWorn and DBNO.Items.canWear(player, it))
+        worn = DBNO.Items.take(player, bc, "any", function(it)
+            return takeAll or DBNO.Items.canReturnWorn(player, it)
         end, false)
         if takeAll and wio ~= nil and sq ~= nil then sq:transmitRemoveItemFromSquare(wio) end
     end

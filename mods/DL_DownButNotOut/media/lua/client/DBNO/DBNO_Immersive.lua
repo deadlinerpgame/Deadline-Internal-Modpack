@@ -55,6 +55,8 @@ Events.OnTick.Add(function()
                 local md = player:getModData()
                 md.dbno_charInit = true
                 sendClientCommand(player, "DBNOSnapshot", "characterReady", { payload = DBNO.Snap.payload(player) })
+                DBNO.showSpawnNotice(player, DBNO.Respawn._notice)
+                DBNO.Respawn._notice = nil
             end
         end
     end

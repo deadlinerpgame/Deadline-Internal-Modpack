@@ -1,9 +1,36 @@
 DBNO = DBNO or {}
 
+require "ISUI/ISModalRichText"
+
+local function dialog(player, message, yesno, onClick)
+    local idx = player:getPlayerNum()
+    local x = getPlayerScreenLeft(idx) + (getPlayerScreenWidth(idx) - 520) / 2
+    local y = getPlayerScreenTop(idx) + (getPlayerScreenHeight(idx) - 220) / 2
+    local modal = ISModalRichText:new(x, y, 520, 220, message:gsub("\n", " <LINE> "),
+        yesno, player, onClick, idx)
+    modal:initialise()
+    modal:addToUIManager()
+end
+
+function DBNO.showSpawnNotice(player, kind)
+    if kind == "rescue" then return end
+    local C = DBNO.Config
+    local intro = getText(kind == "respawn" and "IGUI_DBNO_RespawnHelp" or "IGUI_DBNO_NewCharacterHelp")
+    local message = intro .. "\n\n" .. getText("IGUI_DBNO_StashHelp",
+        tostring(C.lootLockMs / 3600000), tostring(C.lootDeleteAfterUnlockMs / 3600000))
+    dialog(player, message, false)
+    if WL_Utils and WL_Utils.addInfoToChat then
+        WL_Utils.addInfoToChat((message:gsub("\n", " ")))
+    end
+end
+
 local function notify(msg)
     local p = getPlayer()
     if p == nil then return end
     HaloTextHelper.addText(p, msg)
+    if WL_Utils and WL_Utils.addInfoToChat then
+        WL_Utils.addInfoToChat(msg)
+    end
 end
 
 local function isSavePoint(obj)
@@ -40,7 +67,11 @@ local function findRestTile(worldobjects)
 end
 
 local function onSave(player)
-    sendClientCommand(player, "DBNOSnapshot", "save", { payload = DBNO.Snap.payload(player) })
+    dialog(player, getText("IGUI_DBNO_ConfirmSave"), true, function(p, button)
+        if button.internal == "YES" then
+            sendClientCommand(p, "DBNOSnapshot", "save", { payload = DBNO.Snap.payload(p) })
+        end
+    end)
 end
 local function onRestore(player)
     sendClientCommand(player, "DBNOSnapshot", "restore", {})
@@ -74,7 +105,11 @@ local function onFillContextMenu(playerIndex, context, worldobjects, test)
     end
     if respawnPt then
         sub:addOption("Set respawn point", player, function(p)
-            sendClientCommand(p, "DBNORespawn", "setRespawn", {})
+            dialog(p, getText("IGUI_DBNO_ConfirmRespawnPoint"), true, function(character, button)
+                if button.internal == "YES" then
+                    sendClientCommand(character, "DBNORespawn", "setRespawn", {})
+                end
+            end)
         end)
     end
 end
@@ -156,9 +191,13 @@ end
 
 Events.OnServerCommand.Add(function(module, command, args)
     if module ~= "DBNORespawn" then return end
-    if command == "setResult" and args and args.ok then
-        cacheRespawn(args)
-        notify("Respawn point set (" .. tostring(args.x) .. ", " .. tostring(args.y) .. ").")
+    if command == "setResult" and args then
+        if args.ok then
+            cacheRespawn(args)
+            notify("Respawn point set (" .. tostring(args.x) .. ", " .. tostring(args.y) .. ").")
+        else
+            notify(getText("IGUI_DBNO_RespawnPointFailed"))
+        end
     elseif command == "point" then
         cacheRespawn(args)
     end
