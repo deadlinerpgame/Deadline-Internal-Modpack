@@ -49,6 +49,7 @@ local function writeDeathLog(username, lines, moved, woundLog, character, kind)
 end
 
 local function dumpOnDeath(character, isReal, retiring)
+    DBNO.Config.applySandbox()
     local username = character:getUsername() or "?"
 
     if not retiring and DBNO.Retire.takeBagSuppression(username) then

@@ -74,7 +74,11 @@ local function onSave(player)
     end)
 end
 local function onRestore(player)
-    sendClientCommand(player, "DBNOSnapshot", "restore", {})
+    dialog(player, getText("IGUI_DBNO_ConfirmRestore"), true, function(p, button)
+        if button.internal == "YES" then
+            sendClientCommand(p, "DBNOSnapshot", "restore", {})
+        end
+    end)
 end
 
 local function onFillContextMenu(playerIndex, context, worldobjects, test)
