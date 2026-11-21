@@ -467,15 +467,76 @@ module SP
 	}
     item SugarCane
     {
-        DisplayName = Sugar Cane,
-        DisplayCategory = Food,
         Type = Food,
-        Weight = 0.5,
+        DisplayCategory = Food,
+        DisplayName = SugarCane,
         Icon = Sugar,
+        Weight = 0.5,
+        HungerChange = -1,
+        DaysFresh = 30,
+        DaysTotallyRotten = 28,
+        FoodType = Vegetables,
+        StaticModel = RoundFood_Green,
+    }
+
+    item Olive
+    {
+        Type = Food,
+        DisplayCategory = Food,
+        DisplayName = Olive,
+        Icon = Peas,
+        Weight = 0.01,
+        HungerChange = -2,
         DaysFresh = 14,
         DaysTotallyRotten = 28,
-        HungerChange = -1,
+        EvolvedRecipe = Soup:18;Stew:18;Pie:18;Stir fry:18;Salad:9;Roasted Vegetables:18,
         FoodType = Vegetables,
+        Carbohydrates = 10,
+        Proteins = 2,
+        Lipids = 0.34,
+        Calories = 10,
+        StaticModel = RoundFood_Green,
+    }
+
+    item SoyBean
+    {
+        Type = Food,
+        DisplayCategory = Food,
+        DisplayName = Soybeans,
+        Icon = Peas,
+        Weight = 0.1,
+        HungerChange = -2,
+        DaysFresh = 14,
+        DaysTotallyRotten = 14,
+        FoodType = Vegetables,
+        Carbohydrates = 10,
+        Proteins = 2,
+        Lipids = 0.34,
+        Calories = 10,
+        StaticModel = RoundFood_Green,
+    }
+
+    item TeaLeaf
+    {
+        Type = Food,
+        DisplayCategory = Food,
+        DisplayName = Tea Leaf,
+        Icon = Teabag,
+        Weight = 0.5,
+        HungerChange = -1,
+        DaysFresh = 30,
+        DaysTotallyRotten = 28,
+        FoodType = Vegetables,
+        StaticModel = RoundFood_Green,
+    }
+
+    item Tobacco
+    {
+        DisplayCategory = Drugs,
+        Weight = 0.1,
+        Type = Normal,
+        DisplayName = Tobacco leaf,
+        Icon = Cigarettes,
     }
 
 }
