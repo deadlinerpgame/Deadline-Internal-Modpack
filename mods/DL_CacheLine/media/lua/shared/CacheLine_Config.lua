@@ -1,7 +1,7 @@
 -- Pool entries: { fullType, weight, optionalMinQuantity, optionalMaxQuantity }.
 DLCacheLine = {}
 DLCacheLine.Config = {
-    debugPrints = true, -- Client console debug logs for testing, need to turn them off after few days.
+    debugPrints = false, -- Client console debug logs for testing, need to turn them off after few days.
     periodSeconds = 20 * 60 * 60, -- 20 hours
     activePercent = 50, -- chance of a cell being active
     maxPerCell = 2, -- max rewards per cell
