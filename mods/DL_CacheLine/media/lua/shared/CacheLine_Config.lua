@@ -12,8 +12,8 @@ DLCacheLine.Config = {
     uniquePercent = 10, -- Remaining 5% selects animal tracks.
     minimumLevel = 4,
     higherCapLevel = 7,
-    normalCap = 1,
-    higherCap = 3,
+    normalCap = 2,
+    higherCap = 5,
     excluded = { minX = 9, maxX = 15, minY = 2, maxY = 7 }, -- Shelter is excluded
 }
 
@@ -585,6 +585,7 @@ DLCacheLine.Groups = {
                 contents = {
                     rolls = { 3, 6 },
                     pool = {
+                        { "Base.PrecisionOptics", 1, 1, 1 },
                         { "Base.ElectronicsScrap", 4, 5, 10 },
                         { "Radio.ElectricWire", 3, 2, 5 },
                         { "Base.Battery", 3, 2, 5 },
@@ -612,6 +613,7 @@ DLCacheLine.Groups = {
                 contents = {
                     rolls = { 3, 6 },
                     pool = {
+                        { "Base.GunToolKit", 1, 1, 1 },
                         { "Base.Screwdriver", 3 },
                         { "Base.Wrench", 2 },
                         { "Base.Hammer", 2 },
@@ -667,6 +669,8 @@ DLCacheLine.UniqueCache = {
     contents = {
         rolls = { 5, 8 },
         pool = {
+            { "Base.GunToolKit", 1, 1, 1 },
+            { "Base.PrecisionOptics", 1, 1, 1 },
             { "Deadline.Kevlar", 5, 1, 3 }, -- HQ fabric
             { "Base.MachinedComponents", 1 },
             { "Base.PrecisionParts", 2, 1, 3 },
