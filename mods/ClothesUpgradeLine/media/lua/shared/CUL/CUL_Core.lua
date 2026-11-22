@@ -161,6 +161,7 @@ end
 ClothesUpgrade.flawSumForStat = flawSumForStat
 
 function ClothesUpgrade.applyStat(item, statId)
+    if item:isHidden() then return end
     if (statId == "capacity" or statId == "weightReduction") and not ClothesUpgrade.isBackpack(item) then return end
     local cul = ClothesUpgrade.ensureMD(item)
     local base = ClothesUpgrade.getBaseStat(item, statId)
@@ -199,7 +200,7 @@ function ClothesUpgrade.isExcludedPack(item)
 end
 
 function ClothesUpgrade.getKind(item)
-    if not item then return nil end
+    if not item or item:isHidden() then return nil end
     if instanceof(item, "InventoryContainer") then
         if ClothesUpgrade.isExcludedPack(item) then return nil end
         return "pack"
@@ -290,12 +291,10 @@ function ClothesUpgrade.getAppearance(item)
     local canTint = false
     if ci.getAllowRandomTint then canTint = (ci:getAllowRandomTint() == true) end
 
-    local texCount = 0
-    local tc = ci.getTextureChoices and ci:getTextureChoices()
-    if tc and tc.size then texCount = tc:size() end
-
     local hasModel = true
     if ci.hasModel then hasModel = (ci:hasModel() == true) end
+    local textures = hasModel and ci:getTextureChoices() or ci:getBaseTextures()
+    local texCount = textures and textures:size() or 0
 
     if (not canTint) and texCount <= 1 then return nil end
     return {
@@ -342,7 +341,10 @@ end
 
 function ClothesUpgrade.getTextureIndex(item)
     local vis = visualOf(item)
-    return vis and vis:getTextureChoice() or 0
+    local appearance = ClothesUpgrade.getAppearance(item)
+    if not (vis and appearance and appearance.textureCount > 0) then return 0 end
+    local index = appearance.hasModel and vis:getTextureChoice() or vis:getBaseTexture()
+    return math.max(0, math.min(appearance.textureCount - 1, index))
 end
 
 function ClothesUpgrade.applyTint(character, item, r, g, b)
@@ -355,14 +357,13 @@ end
 
 function ClothesUpgrade.applyTexture(character, item, idx)
     local vis = visualOf(item)
-    if vis then
-        local ci = vis:getClothingItem()
-        local hasModel = true
-        if ci and ci.hasModel then hasModel = (ci:hasModel() == true) end
-        if hasModel then vis:setTextureChoice(idx) else vis:setBaseTexture(idx) end
-    end
+    local appearance = ClothesUpgrade.getAppearance(item)
+    if not (vis and appearance and type(idx) == "number" and idx == math.floor(idx)
+        and idx >= 0 and idx < appearance.textureCount) then return false end
+    if appearance.hasModel then vis:setTextureChoice(idx) else vis:setBaseTexture(idx) end
     if item.synchWithVisual then item:synchWithVisual() end
     ClothesUpgrade.refreshVisual(character, item)
+    return true
 end
 
 function ClothesUpgrade.refreshVisual(character, item)
@@ -704,6 +705,7 @@ function ClothesUpgrade.trackStatus(inventory, item, track, perkLevel)
 end
 
 function ClothesUpgrade.canUpgrade(inventory, item, track, perkLevel)
+    if not item or item:isHidden() then return false end
     if instanceof(item, "InventoryContainer") and not ClothesUpgrade.isBackpack(item) then return false end
     local st = ClothesUpgrade.trackStatus(inventory, item, track, perkLevel)
     return (not st.atCap) and st.haveAll and st.hasTools and st.meetsSkill
