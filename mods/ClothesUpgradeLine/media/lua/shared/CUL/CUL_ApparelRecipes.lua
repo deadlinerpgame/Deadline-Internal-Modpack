@@ -60,7 +60,7 @@ local function biteTrack()
 end
 
 local function genericTracks()
-    return { insulationTrack(), windTrack(), waterTrack(), scratchTrack() }
+    return { insulationTrack(), windTrack(), waterTrack() }
 end
 
 ClothesUpgrade.ApparelDefaults = {
