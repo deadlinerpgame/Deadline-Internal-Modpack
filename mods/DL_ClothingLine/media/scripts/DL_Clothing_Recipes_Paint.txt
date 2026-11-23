@@ -143,10 +143,12 @@ module Base
 		SkillRequired:Woodwork=4,
 	}
 
-    recipe Mix Paint into Black Hair Dye {
-		PaintBlack,
+    recipe Mix Dye into Black Hair Dye {
+		BlackDye,
+		Soap2=1,
 		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
 		Water=2,
+		NearItem:PaintMixingTable,
        	keep Spoon/WoodenStick,
        	Result: HairDyeBlack,
        	Category:Tailoring,
@@ -155,10 +157,12 @@ module Base
         Time: 150,
     }
 
-    recipe Mix Paint into Red Hair Dye {
-		PaintRed,
+    recipe Mix Dye into Red Hair Dye {
+		RedDye,
+		Soap2=1,
 		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
 		Water=2,
+		NearItem:PaintMixingTable,
 		keep Spoon/WoodenStick,
 		Result: HairDyeRed,
 		Category:Tailoring,
@@ -167,10 +171,12 @@ module Base
 		Time: 150,
 	}
 
-    recipe Mix Paint into Blue Hair Dye {
-		PaintBlue,
+    recipe Mix Dye into Blue Hair Dye {
+		BlueDye,
+		Soap2=1,
 		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
 		Water=2,
+		NearItem:PaintMixingTable,
 		keep Spoon/WoodenStick,
 		Result: HairDyeBlue,
 		Category:Tailoring,
@@ -179,10 +185,12 @@ module Base
 		Time: 150,
 	}
 
-    recipe Mix Paint into Green Hair Dye {
-		PaintGreen,
+    recipe Mix Dye into Green Hair Dye {
+		GreenDye,
+		Soap2=1,
 		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
 		Water=2,
+		NearItem:PaintMixingTable,
 		keep Spoon/WoodenStick,
 		Result: HairDyeGreen,
 		Category:Tailoring,
@@ -191,10 +199,12 @@ module Base
 		Time: 150,
 	}
 
-    recipe Mix Paint into Blonde Hair Dye {
-		PaintYellow,
+    recipe Mix Dye into Blonde Hair Dye {
+		YellowDye,
+		Soap2=1,
 		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
 		Water=2,
+		NearItem:PaintMixingTable,
 		keep Spoon/WoodenStick,
 		Result: HairDyeBlonde,
 		Category:Tailoring,
@@ -203,10 +213,12 @@ module Base
 		Time: 150,
 	}
 
-    recipe Mix Paint into Yellow Hair Dye {
-		PaintYellow,
+    recipe Mix Dye into Yellow Hair Dye {
+		YellowDye,
+		Soap2=1,
 		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
 		Water=2,
+		NearItem:PaintMixingTable,
 		keep Spoon/WoodenStick,
 		Result: HairDyeYellow,
 		Category:Tailoring,
@@ -215,10 +227,12 @@ module Base
 		Time: 150,
 	}
 
-    recipe Mix Paint into Brown Hair Dye {
-		PaintBrown/PaintLightBrown,
+    recipe Mix Dye into Brown Hair Dye {
+		BrownDye2,
+		Soap2=1,
 		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
 		Water=2,
+		NearItem:PaintMixingTable,
 		keep Spoon/WoodenStick,
 		Result: HairDyeLightBrown,
 		Category:Tailoring,
@@ -227,10 +241,12 @@ module Base
 		Time: 150,
 	}
 
-    recipe Mix Paint into Strawberry Blonde Hair Dye {
-		PaintYellow,
+    recipe Mix Dye into Strawberry Blonde Hair Dye {
+		OrangeDye,
+		Soap2=1,
 		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
 		Water=2,
+		NearItem:PaintMixingTable,
 		keep Spoon/WoodenStick,
 		Result: HairDyeGinger,
 		Category:Tailoring,
@@ -239,10 +255,12 @@ module Base
 		Time: 150,
 	}
 
-    recipe Mix Paint into White Hair Dye {
-		PaintWhite,
+    recipe Mix Dye into White Hair Dye {
+		WhiteDye,
+		Soap2=1,
 		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
 		Water=2,
+		NearItem:PaintMixingTable,
 		keep Spoon/WoodenStick,
 		Result: HairDyeWhite,
 		Category:Tailoring,
@@ -251,10 +269,12 @@ module Base
 		Time: 150,
 	}
 
-    recipe Mix Paint into Pink Hair Dye {
-		PaintPink,
+    recipe Mix Dye into Pink Hair Dye {
+		PinkDye,
+		Soap2=1,
 		WaterBottleEmpty/PopBottleEmpty/WhiskeyEmpty/WineEmpty2/WineEmpty/farming.RemouladeEmpty/farming.MayonnaiseEmpty,
 		Water=2,
+		NearItem:PaintMixingTable,
 		keep Spoon/WoodenStick,
 		Result: HairDyePink,
 		Category:Tailoring,
@@ -267,9 +287,8 @@ module Base
     {
         PaintBlack=20,
         keep Bowl,
-        NearItem:Clothing Bench,
+        NearItem:PaintMixingTable,
         Result:BlackDye,
-        OnCreate:Recipe.OnCreate.ReturnEmptyPaintBucket,
         Category:Tailoring,
         SkillRequired:Tailoring=6,
         Sound:MakePlaster,
@@ -280,9 +299,8 @@ module Base
     {
         PaintGrey=20,
         keep Bowl,
-        NearItem:Clothing Bench,
+        NearItem:PaintMixingTable,
         Result:GreyDye,
-        OnCreate:Recipe.OnCreate.ReturnEmptyPaintBucket,
         Category:Tailoring,
         SkillRequired:Tailoring=6,
         Sound:MakePlaster,
@@ -293,9 +311,8 @@ module Base
     {
         PaintWhite=20,
         keep Bowl,
-        NearItem:Clothing Bench,
+        NearItem:PaintMixingTable,
         Result:WhiteDye,
-        OnCreate:Recipe.OnCreate.ReturnEmptyPaintBucket,
         Category:Tailoring,
         SkillRequired:Tailoring=6,
         Sound:MakePlaster,
@@ -306,9 +323,8 @@ module Base
     {
         PaintBrown=20,
         keep Bowl,
-        NearItem:Clothing Bench,
+        NearItem:PaintMixingTable,
         Result:BrownDye2,
-        OnCreate:Recipe.OnCreate.ReturnEmptyPaintBucket,
         Category:Tailoring,
         SkillRequired:Tailoring=6,
         Sound:MakePlaster,
@@ -319,9 +335,8 @@ module Base
     {
         PaintRed=20,
         keep Bowl,
-        NearItem:Clothing Bench,
+        NearItem:PaintMixingTable,
         Result:RedDye,
-        OnCreate:Recipe.OnCreate.ReturnEmptyPaintBucket,
         Category:Tailoring,
         SkillRequired:Tailoring=6,
         Sound:MakePlaster,
@@ -332,9 +347,8 @@ module Base
     {
         PaintPink=20,
         keep Bowl,
-        NearItem:Clothing Bench,
+        NearItem:PaintMixingTable,
         Result:PinkDye,
-        OnCreate:Recipe.OnCreate.ReturnEmptyPaintBucket,
         Category:Tailoring,
         SkillRequired:Tailoring=6,
         Sound:MakePlaster,
@@ -345,9 +359,8 @@ module Base
     {
         PaintOrange=20,
         keep Bowl,
-        NearItem:Clothing Bench,
+        NearItem:PaintMixingTable,
         Result:OrangeDye,
-        OnCreate:Recipe.OnCreate.ReturnEmptyPaintBucket,
         Category:Tailoring,
         SkillRequired:Tailoring=6,
         Sound:MakePlaster,
@@ -358,9 +371,8 @@ module Base
     {
         PaintYellow=20,
         keep Bowl,
-        NearItem:Clothing Bench,
+        NearItem:PaintMixingTable,
         Result:YellowDye,
-        OnCreate:Recipe.OnCreate.ReturnEmptyPaintBucket,
         Category:Tailoring,
         SkillRequired:Tailoring=6,
         Sound:MakePlaster,
@@ -371,9 +383,8 @@ module Base
     {
         PaintGreen=20,
         keep Bowl,
-        NearItem:Clothing Bench,
+        NearItem:PaintMixingTable,
         Result:GreenDye,
-        OnCreate:Recipe.OnCreate.ReturnEmptyPaintBucket,
         Category:Tailoring,
         SkillRequired:Tailoring=6,
         Sound:MakePlaster,
@@ -384,9 +395,8 @@ module Base
     {
         PaintBlue=20,
         keep Bowl,
-        NearItem:Clothing Bench,
+        NearItem:PaintMixingTable,
         Result:BlueDye,
-        OnCreate:Recipe.OnCreate.ReturnEmptyPaintBucket,
         Category:Tailoring,
         SkillRequired:Tailoring=6,
         Sound:MakePlaster,
@@ -397,9 +407,8 @@ module Base
     {
         PaintPurple=20,
         keep Bowl,
-        NearItem:Clothing Bench,
+        NearItem:PaintMixingTable,
         Result:PurpleDye,
-        OnCreate:Recipe.OnCreate.ReturnEmptyPaintBucket,
         Category:Tailoring,
         SkillRequired:Tailoring=6,
         Sound:MakePlaster,
