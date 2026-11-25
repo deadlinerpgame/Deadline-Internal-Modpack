@@ -84,6 +84,7 @@ DLCacheLine.Groups = {
                         { "Base.Magazine", 1, 1, 3 },
                         { "Base.Scissors", 1 },
                         { "Base.Tissue", 2, 1, 3 },
+                        { "Deadline.Kevlar", 5, 1, 1 }, -- HQ fabric
                     },
                 },
                 extras = {
@@ -157,6 +158,7 @@ DLCacheLine.Groups = {
                         { "Base.Needle", 1 },
                         { "Radio.RadioRed", 1 },
                         { "Base.Garbagebag", 1 },
+                        { "Deadline.Kevlar", 5, 1, 1 }, -- HQ fabric
                     },
                 },
             },
@@ -222,6 +224,7 @@ DLCacheLine.Groups = {
                         { "Base.FishingRod", 1 },
                         { "Base.BaseballBat", 1 },
                         { "Base.Crowbar", 1 },
+                        { "Deadline.Kevlar", 5, 1, 1 }, -- HQ fabric
                     },
                 },
             },
@@ -338,6 +341,7 @@ DLCacheLine.Groups = {
                         { "Base.Twine", 2 },
                         { "Base.HuntingKnife", 1 },
                         { "Base.TrapSnare", 1 },
+                        { "Deadline.Kevlar", 5, 1, 1 }, -- HQ fabric
                     },
                 },
             },
@@ -379,7 +383,8 @@ DLCacheLine.Groups = {
                         { "aerx.PigLeather_Landrace_Full", 1, 1, 1 },
                         { "aerx.CowLeather_Holstein_Full", 1, 1, 1 },
                         { "aerx.RabbitLeather_Fur_Tan", 1, 1, 1 },
-                        { "aerx.LeatherStripsBundle", 1, 1, 1 },
+                        { "aerx.LeatherStripsBundle", 1, 1, 2 },
+                        { "Deadline.Kevlar", 1, 1, 1 }, -- HQ fabric
                     },
                 },
             },
@@ -603,7 +608,7 @@ DLCacheLine.Groups = {
                         { "Radio.WalkieTalkie2", 1 },
                         { "Base.Remote", 1 },
                         { "Base.MachinedComponents", 2 },
-                        { "Base.PrecisionParts", 2 },
+                        { "Base.PrecisionParts", 2, 1, 3 },
                     },
                 },
             },
@@ -613,6 +618,7 @@ DLCacheLine.Groups = {
                 contents = {
                     rolls = { 3, 6 },
                     pool = {
+                        { "Base.PrecisionOptics", 1, 1, 1 },
                         { "Base.GunToolKit", 1, 1, 1 },
                         { "Base.Screwdriver", 3 },
                         { "Base.Wrench", 2 },
@@ -640,6 +646,7 @@ DLCacheLine.Groups = {
                 contents = {
                     rolls = { 3, 6 },
                     pool = {
+                        { "Base.GunToolKit", 1, 1, 1 },
                         { "Base.Wrench", 1, 1, 1 },
                         { "Base.Doorknob", 1, 1, 1 },
                         { "Base.Padlock", 1, 1, 1 },
