@@ -1,8 +1,7 @@
 module DL_MetalLine
 {
-    recipe Make Brass Sheet
+    recipe Prepare Brass Sheet (Custom)
     {
-        keep Base.RecipeDisabler,
         aerx.IronBar,
         keep aerx.File,
         Result:DL_MetalLine.BrassSheet,
@@ -13,9 +12,8 @@ module DL_MetalLine
         OnTest:Recipe.OnTest.DLFirearmStock_brass,
     }
 
-    recipe Make Bronze Sheet
+    recipe Prepare Bronze Sheet (Custom)
     {
-        keep Base.RecipeDisabler,
         aerx.IronBar,
         keep aerx.File,
         Result:DL_MetalLine.BronzeSheet,
@@ -26,9 +24,8 @@ module DL_MetalLine
         OnTest:Recipe.OnTest.DLFirearmStock_bronze,
     }
 
-    recipe Make Steel Bar
+    recipe Prepare Steel Bar (Custom)
     {
-        keep Base.RecipeDisabler,
         aerx.IronBar,
         Result:DL_MetalLine.SteelBar,
         Time:100.0,
@@ -38,9 +35,8 @@ module DL_MetalLine
         OnTest:Recipe.OnTest.DLFirearmStock_steel,
     }
 
-    recipe Make Stainless Steel Sheet
+    recipe Prepare Stainless Steel Sheet (Custom)
     {
-        keep Base.RecipeDisabler,
         aerx.IronBar,
         keep aerx.File,
         Result:DL_MetalLine.StainlessSteelSheet,
@@ -51,9 +47,8 @@ module DL_MetalLine
         OnTest:Recipe.OnTest.DLFirearmStock_stainless_steel,
     }
 
-    recipe Make Gunmetal Bar
+    recipe Prepare Gunmetal Bar (Custom)
     {
-        keep Base.RecipeDisabler,
         aerx.IronBar,
         Result:DL_MetalLine.GunmetalBar,
         Time:100.0,
@@ -63,9 +58,8 @@ module DL_MetalLine
         OnTest:Recipe.OnTest.DLFirearmStock_gunmetal,
     }
 
-    recipe Make Gunmetal Sheet
+    recipe Prepare Gunmetal Sheet (Custom)
     {
-        keep Base.RecipeDisabler,
         DL_MetalLine.GunmetalBar,
         keep aerx.File,
         Result:DL_MetalLine.GunmetalSheet,
@@ -77,7 +71,6 @@ module DL_MetalLine
 
     recipe Make Junk Casing Bundle
     {
-        keep Base.RecipeDisabler,
         DL_MetalLine.BrassSheet,
         keep aerx.File,
         Result:DL_MetalLine.JunkCasingBundle,
@@ -89,7 +82,6 @@ module DL_MetalLine
 
     recipe Make Scrap Casing Bundle
     {
-        keep Base.RecipeDisabler,
         DL_MetalLine.BrassSheet,
         keep aerx.File,
         Result:DL_MetalLine.ScrapCasingBundle,
@@ -101,7 +93,6 @@ module DL_MetalLine
 
     recipe Make Refined Casing Bundle
     {
-        keep Base.RecipeDisabler,
         DL_MetalLine.BrassSheet,
         DL_MetalLine.Scrap_Nickel_S=2,
         keep aerx.File,
@@ -114,7 +105,6 @@ module DL_MetalLine
 
     recipe Make Proper Casing Bundle
     {
-        keep Base.RecipeDisabler,
         DL_MetalLine.BrassSheet,
         DL_MetalLine.Scrap_Copper_S=5,
         keep aerx.File,
@@ -127,7 +117,6 @@ module DL_MetalLine
 
     recipe Make Shotgun Hull Bundle
     {
-        keep Base.RecipeDisabler,
         Base.SheetPaper2=20,
         Base.DuctTape=10,
         DL_MetalLine.Scrap_Aluminum_S=2,
@@ -141,7 +130,6 @@ module DL_MetalLine
 
     recipe Make Junk Firearm Frame
     {
-        keep Base.RecipeDisabler,
         DL_MetalLine.GunmetalBar,
         keep aerx.File,
         Base.BlowTorch=1,
@@ -156,7 +144,6 @@ module DL_MetalLine
 
     recipe Make Scrap Firearm Frame
     {
-        keep Base.RecipeDisabler,
         DL_MetalLine.GunmetalBar=2,
         DL_MetalLine.SteelBar,
         keep aerx.File,
@@ -172,7 +159,6 @@ module DL_MetalLine
 
     recipe Make Refined Firearm Frame
     {
-        keep Base.RecipeDisabler,
         DL_MetalLine.GunmetalSheet=2,
         DL_MetalLine.SteelBar=2,
         keep aerx.File,
@@ -188,7 +174,6 @@ module DL_MetalLine
 
     recipe Make Basic Magazine Kit
     {
-        keep Base.RecipeDisabler,
         DL_MetalLine.SteelBar,
         Base.Wire,
         Base.PrecisionParts,
@@ -202,7 +187,6 @@ module DL_MetalLine
 
     recipe Make Precision Magazine Kit
     {
-        keep Base.RecipeDisabler,
         DL_MetalLine.StainlessSteelSheet,
         Base.SmallSheetMetal,
         Base.Wire=2,

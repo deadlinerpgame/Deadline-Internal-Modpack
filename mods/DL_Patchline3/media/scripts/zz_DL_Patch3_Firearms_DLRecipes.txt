@@ -1484,6 +1484,7 @@ module Base
 
     recipe Make Improvised Flashlight Silencer
     {
+    RecipeDisabler,
 	   destroy HandTorch,
 		ScrapMetal,
 	   DuctTape=2,
@@ -1497,10 +1498,13 @@ module Base
 	 	 OnGiveXP:Recipe.OnGiveXP.MetalWelding15,
 	   OnCreate:onImprovisedSilencer_OnCreate,
        Override:true,
+            IsHidden:true,
+        OnCanPerform:DLObsoleteRecipe_CanPerform,
     }
 
     recipe Make Improvised Bottle Silencer
     {
+    RecipeDisabler,
 	   destroy PopBottleEmpty/WaterBottleEmpty,
 	   DuctTape=2,
 
@@ -1508,6 +1512,8 @@ module Base
 	   Result:DLSilencer_PopBottle,
 	   Time:100.0,
        Override:true,
+            IsHidden:true,
+        OnCanPerform:DLObsoleteRecipe_CanPerform,
     }
 
     fixing DL Fix ColtAce
@@ -2204,5 +2210,19 @@ module Base
 
 			 Fixer : GunToolKit=1; Aiming=5,
 			 Fixer : ImprovisedGunToolKit=2; Aiming=2,
+    }
+}
+
+module Base
+{
+    item RecipeDisabler
+    {
+        DisplayName = Recipe Disabler,
+        DisplayCategory = Tool,
+        Type = Normal,
+        Count = 1,
+        Weight = 0.0,
+        Icon = Screwdriver,
+        WorldStaticModel = Screwdriver,
     }
 }

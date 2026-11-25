@@ -37,6 +37,13 @@ local CALIBER = {
   caliberBullets3006 = {'SuppressorEffectiveness308';'FirearmARSuppressed'};
 }
 
+-- Refined ammunition uses the existing suppression categories and sounds.
+CALIBER["caliberaerx.T3AmmoPistol"] = CALIBER.caliberBullets9mm
+CALIBER["caliberaerx.T3AmmoSMG"] = CALIBER.caliberBullets9mm
+CALIBER["caliberaerx.T3AmmoRifle"] = CALIBER.caliber556Bullets
+CALIBER["caliberaerx.T3AmmoBolt"] = CALIBER.caliber308Bullets
+CALIBER["caliberaerx.T3AmmoMG"] = CALIBER.caliber308Bullets
+
 local SUPPRESSORTYPE = {
   type22Silencer = 1;
   type9mmSilencer = 1;
@@ -74,9 +81,11 @@ function Firearms_Jay_silence(wielder, weapon, overridePart)
     if canon then
 		if getDebug() then print(canon:getType()) end
 		if string.find(canon:getType(), "Silencer") and not string.find(canon:getType(), "Broken") then
-			local weaponAmmo = string.gsub(weapon:getAmmoType(), "Base.", ""):gsub("^DL", "")
+			local weaponAmmo = string.gsub(weapon:getAmmoType() or "", "^Base%.", ""):gsub("^DL", "")
 			local suppressor = "type" .. canon:getType():gsub("^DL", "")
 			local ammo = "caliber" .. weaponAmmo
+            -- Unsupported ammunition retains its original noise and sound.
+            if CALIBER[ammo] then
 			if getDebug() then
 			  print("Ammo type: " .. ammo)
 			  print("Suppressor Type: " .. canon:getType())
@@ -105,6 +114,7 @@ function Firearms_Jay_silence(wielder, weapon, overridePart)
 			end
 			  soundRadius = soundRadius * effectivness
 			swingSound = CALIBER[ammo][2]
+            end
 			
 		elseif string.find(canon:getType(), "Compensator") or string.find(canon:getType(), "ChokeTubeFull") then
 			soundVolume = soundVolume * 1.1
@@ -114,8 +124,7 @@ function Firearms_Jay_silence(wielder, weapon, overridePart)
 				soundRadius = soundRadius + 10
 			end
 			
-		elseif string.find(canon:getType(), "ChokeTubeImproved") then
-			maxHitCount = maxHitCount + 1
+		-- Removed buff to improvised choke here
 		end
     end
 			

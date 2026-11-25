@@ -327,15 +327,15 @@ module Base
          Icon = Rifle_Bipod,
          Weight = 1.0,
          WeightModifier = 1.0,
-         HitChanceModifier = 10,
-         AimingTimeModifier = 5,
-         MaxRangeModifier = 5,
+         HitChanceModifier = 8,
+         AimingTimeModifier = -5,
+         MaxRangeModifier = 2,
 		 MinRangeModifier = 1,
 		 AngleModifier = 0.0005,
 
          MountOn = T3Sniper; T3Bolt; HuntingRifle; HuntingRifleShort; VarmintRifle; VarmintRifleShort; Rugerm7722; M24Rifle; HuntingRifle_Sawn; VarmintRifle_Sawn; Rugerm7722_Sawn; M14A1; M14A1Short; AssaultRifle2; AssaultRifle2Short; FN_FAL; FN_FALShort; BrowningAR; BrowningARShort; M1903Springfield; M1903SpringfieldBayonet; M1903SpringfieldShort; M1903Springfield_Sawn,
          PartType = Stock,
-         Tooltip = Tooltip_Bipod,
+        Tooltip = Tooltip_Bipod,
 				 WorldStaticModel = Bipod_wm,
      }
 
@@ -351,7 +351,7 @@ module Base
 
          MountOn =  T3Sniper; T3Bolt; ShotgunSawnoff; Remington870Sawnoff; Shotgun; ShotgunShort; Mossberg500; Mossberg500Tactical; SPAS12; LAW12; Remington870Wood; M1887; M1887Short; M1887Sawn; HuntingRifle; HuntingRifleShort; VarmintRifle; VarmintRifleShort; Rugerm7722; M24Rifle; HuntingRifle_Sawn; VarmintRifle_Sawn; Rugerm7722_Sawn; M1903Springfield; M1903SpringfieldBayonet; M1903SpringfieldShort; M1903Springfield_Sawn; Base.Winchester94; Winchester73; Rossi92; Winchester94Sawn; Winchester73Sawn; Rossi92Sawn,
          PartType = Stock,
-         Tooltip = Tooltip_AmmoStock,
+        Tooltip = Tooltip_AmmoStock,
 				 WorldStaticModel = Shotgun_AmmoStrap_wm,
      }
 
@@ -362,11 +362,11 @@ module Base
 				 DisplayCategory = WeaponPart,
          Icon = TacticalStock,
          Weight = 1.00,
-				AngleModifier = 0.02,
+				AngleModifier = 0,
 				 WeightModifier = 0.7,
 				 RecoilDelayModifier = -5.0,
 				AimingTimeModifier = 4,
-				MaxRangeModifier = 1,
+				MaxRangeModifier = 0,
 				MinRangeModifier = 0.02,
          MountOn =  Mossberg500Tactical,
          PartType = RecoilPad,
@@ -381,11 +381,11 @@ module Base
 				 DisplayCategory = WeaponPart,
          Icon = ShotgunStock,
          Weight = 1.0,
-				AngleModifier = 0.02,
+				AngleModifier = 0,
 				 WeightModifier = 0.8,
 				 RecoilDelayModifier = -5.0,
 				AimingTimeModifier = 2,
-				MaxRangeModifier = 1,
+				MaxRangeModifier = 0,
 				MinRangeModifier = 0.02,
          MountOn =  Mossberg500Tactical,
          PartType = RecoilPad,
@@ -400,11 +400,11 @@ module Base
 				 DisplayCategory = WeaponPart,
          Icon = LightShotgunStock,
          Weight = 0.5,
-				AngleModifier = 0.02,
+				AngleModifier = 0,
 				 WeightModifier = 0.5,
 				 RecoilDelayModifier = -3.0,
 				AimingTimeModifier = 2,
-				MaxRangeModifier = 1,
+				MaxRangeModifier = 0,
 				MinRangeModifier = 0.02,
          MountOn =  Mossberg500Tactical,
          PartType = RecoilPad,
@@ -421,14 +421,15 @@ module Base
          Weight = 1,
 				AngleModifier = 0.001,
 				 WeightModifier = 1,
-				 HitChanceModifier = 15,
+				 HitChanceModifier = 8,
 				AimingTimeModifier = 5,
-				MaxRangeModifier = 2,
+				MaxRangeModifier = 1,
 				MinRangeModifier = 0.05,
          MountOn =  MP5; UZI,
          PartType = RecoilPad,
          Tooltip = Tooltip_TacticalStock,
 				 WorldStaticModel = Stock_wm,
+        RecoilDelayModifier = -3,
      }
 
     item Retractable_Stock_Extended
@@ -440,7 +441,7 @@ module Base
          Weight = 1,
 				AngleModifier = 0.001,
 				 WeightModifier = 0.8,
-				 HitChanceModifier = 10,
+				 HitChanceModifier = 5,
 				AimingTimeModifier = 4,
 				MaxRangeModifier = 1,
 				MinRangeModifier = 0.05,
@@ -448,6 +449,7 @@ module Base
          PartType = RecoilPad,
          Tooltip = Tooltip_ExtendableStock,
 				 WorldStaticModel = UZI_Stock_wm,
+        RecoilDelayModifier = -2,
      }
 
     item Retractable_Stock_Retracted
@@ -471,12 +473,12 @@ module Base
 				 DisplayCategory = WeaponPart,
          Icon = MP5_Stock,
          Weight = 1.0,
-				AngleModifier = 0.02,
+				AngleModifier = 0,
 				 WeightModifier = 0.8,
 				 RecoilDelayModifier = -5.0,
 				AimingTimeModifier = 4,
 				HitChanceModifier = 5,
-				MaxRangeModifier = 1,
+				MaxRangeModifier = 0,
 				MinRangeModifier = 0.02,
          MountOn =  SPAS12; DLSPAS12,
          PartType = RecoilPad,
@@ -580,7 +582,7 @@ module Base
 				MountOn = Shotgun; Base.Mossberg500; Base.Remington870Wood,
 
 				PartType = Sling,
-	 			Tooltip = Tooltip_Sling,
+        Tooltip = Tooltip_Sling,
 				WorldStaticModel = Sling_wm,
 		}
 
@@ -592,16 +594,17 @@ module Base
 				Icon = ShotgunChoke,
 				Weight = 0.2,
 				WeightModifier = 0.2,
-				AngleModifier = 0.05,
-				DamageModifier = 0.2,
-				MinRangeModifier = 0.02,
+				AngleModifier = 0.02,
+				DamageModifier = 0,
+				MinRangeModifier = 0.5,
 				AimingTimeModifier = -2,
 
 				MountOn = Shotgun; ShotgunShort; ShotgunSawnoff; Base.Mossberg500; Mossberg500Tactical; Base.Remington870Wood; Base.Remington870Sawnoff; SPAS12; LAW12,
 				PartType = Canon,
-				Tooltip = Tooltip_ChokeTubeFull,
+        Tooltip = Tooltip_ChokeTubeFull,
 				MetalValue = 12,
 				WorldStaticModel = Shotgun_Choke_Ground,
+        MaxRangeModifier = 1,
 		}
 
     item ChokeTubeImproved
@@ -612,13 +615,13 @@ module Base
 				Icon = ShotgunChoke,
 				Weight = 0.2,
 				WeightModifier = 0.2,
-				AngleModifier = -0.1,
-				DamageModifier = -0.2,
+				AngleModifier = -0.02,
+				DamageModifier = 0,
 				MinRangeModifier = 0.02,
 
 				MountOn = Shotgun; ShotgunShort; ShotgunSawnoff; Base.Mossberg500; Mossberg500Tactical; Base.Remington870Wood; Base.Remington870Sawnoff; SPAS12; LAW12,
 				PartType = Canon,
-				Tooltip = Tooltip_ChokeTubeImproved,
+        Tooltip = Tooltip_ChokeTubeImproved,
 				MetalValue = 12,
 				WorldStaticModel = Shotgun_Choke_Ground,
 		}
@@ -668,7 +671,7 @@ module Base
 			ReloadTimeModifier = 7,
 			MountOn = M1903Springfield; DLM1903Springfield; M1903SpringfieldBayonet; DLM1903SpringfieldBayonet; M1903SpringfieldShort; DLM1903SpringfieldShort; M1903Springfield_Sawn; DLM1903Springfield_Sawn; SKS; DLSKS; SKSBayonet; DLSKSBayonet; SKSShort; DLSKSShort; SKSSawn; DLSKSSawn,
 		    PartType = Clip,
-		    Tooltip = Tooltip_AmmoStock,
+        Tooltip = Tooltip_AmmoStock,
 				WorldStaticModel = M1Clip,
 		}
 
@@ -683,7 +686,7 @@ module Base
 			ReloadTimeModifier = 7,
 			MountOn = Revolver_Short; DLRevolver_Short; Revolver; DLRevolver; Revolver_Long; DLRevolver_Long; Revolver_M29; DLRevolver_M29; ColtAnaconda; DLColtAnaconda; ColtPython; DLColtPython; ColtPythonStubby; DLColtPythonStubby; ColtPythonHunter; DLColtPythonHunter,
 		    PartType = Clip,
-		    Tooltip = Tooltip_AmmoStock,
+        Tooltip = Tooltip_AmmoStock,
 				WorldStaticModel = RevolverSpeedLoader,
 		}
 
@@ -696,11 +699,12 @@ module Base
 		    Weight = 0.2,
 		    WeightModifier = 0.1,
 		    AimingTimeModifier = 10,
-			AngleModifier = -0.001,
+			AngleModifier = 0,
 			MountOn = Revolver_Short; DLRevolver_Short; Revolver; DLRevolver; Revolver_Long; DLRevolver_Long; Revolver_M29; DLRevolver_M29; ColtPeacemaker; DLColtPeacemaker; ColtSingleAction22; DLColtSingleAction22; ColtAnaconda; DLColtAnaconda; ColtPython; DLColtPython; ColtPythonStubby; DLColtPythonStubby; ColtPythonHunter; DLColtPythonHunter,
 		    PartType = Stock,
-		    Tooltip = Tooltip_QuickDraw,
+        Tooltip = Tooltip_QuickDraw,
 				WorldStaticModel = PistolGripPiece,
+        HitChanceModifier = 5,
 		}
 
     item RubberGrip
@@ -711,10 +715,10 @@ module Base
 		    Icon = QuickDrawGrip,
 		    Weight = 0.2,
 		    WeightModifier = 0.1,
-		    RecoilDelayModifier = -2.0,
+		    RecoilDelayModifier = -5,
 			MountOn = Revolver_Short; DLRevolver_Short; Revolver; DLRevolver; Revolver_Long; DLRevolver_Long; Revolver_M29; DLRevolver_M29; ColtPeacemaker; DLColtPeacemaker; ColtSingleAction22; DLColtSingleAction22; ColtAnaconda; DLColtAnaconda; ColtPython; DLColtPython; ColtPythonStubby; DLColtPythonStubby; ColtPythonHunter; DLColtPythonHunter,
 		    PartType = Stock,
-		    Tooltip = Tooltip_RubberGrip,
+        Tooltip = Tooltip_RubberGrip,
 				WorldStaticModel = PistolGripPiece,
 		}
 
@@ -726,12 +730,16 @@ module Base
 		    Icon = ScopeIronSight,
 		    Weight = 0.1,
 		    WeightModifier = 0.1,
-		    MaxRangeModifier = 2,
+		    MaxRangeModifier = 0,
 			MountOn =  T3Bolt; T3Rifle; T3SMG; Pistol; Pistol_Compact; Pistol2; Pistol_M45A1; Glock17; AR15; AR15Short; AR15Bayonet; Mini14; Mini14Short; Mini14Sawn; AC556; AC556Short; M14A1; M14A1Short; AssaultRifle2; AssaultRifle2Short; M24Rifle; FN_FAL; FN_FALShort; SKS; SKSShort; SKSSawn; SKSBayonet; SKSMag; SKSMagShort; SKSMagSawn; SKSMagBayonet; AK47; AK47Bayonet; AK47S; VarmintRifle; VarmintRifleShort; HuntingRifle; HuntingRifleShort; Rugerm7722; HuntingRifle_Sawn; VarmintRifle_Sawn; Rugerm7722_Sawn; AssaultRifle; AssaultRifleShort; AssaultRifleBayonet; M16A2; M16A2Short; M16A2Bayonet;M733; M633; MP5; UZI; Mac10; Revolver_Short; Revolver; Revolver_Long; Revolver_M29; ColtPeacemaker; Shotgun; ShotgunShort; ShotgunSawnoff; Mossberg500; Mossberg500Tactical; Remington870Wood; Remington870Sawnoff; DoubleBarrelShotgun; DoubleBarrelShotgunShort; DoubleBarrelShotgunSawnoff; OUShotgun; OUShotgunShort; OUShotgunSawnoff; SPAS12; LAW12; M1887; M1887Short; M1887Sawn; Winchester73; Winchester94; Rossi92; Winchester94Sawn; Winchester73Sawn; Rossi92Sawn; ColtSingleAction22; ColtAnaconda; ColtPython; ColtPythonStubby; ColtPythonHunter; ColtAce; M1Garand; M1GarandBayonet; M3Grease; BrowningAR; BrowningARShort; M60; Winchester77; Winchester77_Sawn; M1903Springfield_Sawn; M1903SpringfieldBayonet; M1903Springfield; M1903SpringfieldShort,
 		    PartType = Scope,
-		    Tooltip = Tooltip_IronSight,
+        Tooltip = Tooltip_IronSight,
 		    MetalValue = 15,
 				WorldStaticModel = Rifle_IronSights_Ground,
+        HitChanceModifier = 3,
+        MinRangeModifier = 0,
+        AimingTimeModifier = 0,
+        AngleModifier = 0,
 		}
 
     item RedDot
@@ -745,9 +753,13 @@ module Base
 				AimingTimeModifier = 5,
 				MountOn = T3Sniper; T3Bolt; T3Rifle; T3SMG; T3Pistol; T3Revolver; Mac10; M3Grease; Pistol; Pistol2; Pistol_Compact; Pistol_M45A1; Pistol3; Base.Glock17; Base.HuntingRifle_Sawn; VarmintRifle_Sawn; Rugerm7722_Sawn; Shotgun; ShotgunShort; ShotgunSawnoff; Base.Remington870Sawnoff; Base.Mossberg500; Mossberg500Tactical; SPAS12; LAW12; Base.Remington870Wood; Base.MP5; Base.UZI; AssaultRifle; AssaultRifleShort; AssaultRifleBayonet; M14A1; M14A1Short; AssaultRifle2; AssaultRifle2Short; Base.M24Rifle; Base.FN_FAL; FN_FALShort; Base.M16A2; M16A2Short; M16A2Bayonet;M733; M633; AR15; AR15Short; Mini14; Mini14Short; Mini14Sawn; AC556; AC556Short; AR15Bayonet; Rugerm7722; Winchester77; Winchester77_Sawn; AK47; AK47S; AK47Bayonet; SKS; SKSShort; SKSSawn; SKSMag; SKSMagShort; SKSMagSawn,
 				PartType = Scope,
-				Tooltip = Tooltip_RedDot,
+        Tooltip = Tooltip_RedDot,
 				MetalValue = 15,
 				WorldStaticModel = Reddot_wm,
+        MaxRangeModifier = 0,
+        HitChanceModifier = 5,
+        MinRangeModifier = 0,
+        AngleModifier = 0,
 		}
 
     item RedDotScope
@@ -758,12 +770,16 @@ module Base
 				Icon = JAY_RedDot,
 				Weight = 0.3,
 				WeightModifier = 0.3,
-				HitChanceModifier = 10,
+				HitChanceModifier = 5,
 				MountOn = T3Sniper; T3Bolt; T3Rifle; T3SMG; T3Revolver; Mac10; DLMac10; M3Grease; DLM3Grease; Pistol; DLPistol; Pistol2; DLPistol2; Pistol_Compact; DLPistol_Compact; Pistol_M45A1; DLPistol_M45A1; Pistol3; DLPistol3; Base.Glock17; Base.DLGlock17; Base.HuntingRifle_Sawn; Base.DLHuntingRifle_Sawn; VarmintRifle_Sawn; DLVarmintRifle_Sawn; Rugerm7722_Sawn; DLRugerm7722_Sawn; Shotgun; DLShotgun; ShotgunShort; DLShotgunShort; ShotgunSawnoff; DLShotgunSawnoff; Base.Remington870Sawnoff; Base.DLRemington870Sawnoff; Base.Mossberg500; Base.DLMossberg500; Mossberg500Tactical; DLMossberg500Tactical; SPAS12; DLSPAS12; LAW12; DLLAW12; Base.Remington870Wood; Base.DLRemington870Wood; Base.MP5; Base.DLMP5; Base.UZI; Base.DLUZI; AssaultRifle; DLAssaultRifle; AssaultRifleShort; DLAssaultRifleShort; AssaultRifleBayonet; DLAssaultRifleBayonet; M14A1; DLM14A1; M14A1Short; DLM14A1Short; AssaultRifle2; DLAssaultRifle2; AssaultRifle2Short; DLAssaultRifle2Short; Base.M24Rifle; Base.DLM24Rifle; Base.FN_FAL; Base.DLFN_FAL; FN_FALShort; DLFN_FALShort; Base.M16A2; Base.DLM16A2; M16A2Short; DLM16A2Short; M16A2Bayonet; DLM16A2Bayonet; M733; DLM733; M633; DLM633; AR15; DLAR15; AR15Short; DLAR15Short; Mini14; DLMini14; Mini14Short; DLMini14Short; Mini14Sawn; DLMini14Sawn; AC556; DLAC556; AC556Short; DLAC556Short; AR15Bayonet; DLAR15Bayonet; Rugerm7722; DLRugerm7722; Winchester77; DLWinchester77; Winchester77_Sawn; DLWinchester77_Sawn; AK47; DLAK47; AK47S; DLAK47S; AK47Bayonet; DLAK47Bayonet; SKS; DLSKS; SKSShort; DLSKSShort; SKSSawn; DLSKSSawn; SKSMag; DLSKSMag; SKSMagShort; DLSKSMagShort; SKSMagSawn; DLSKSMagSawn,
 				PartType = Scope,
-				Tooltip = Tooltip_RedDotScope,
+        Tooltip = Tooltip_RedDotScope,
 				MetalValue = 15,
 				WorldStaticModel = Acog_wm,
+        MaxRangeModifier = 1,
+        MinRangeModifier = 0,
+        AimingTimeModifier = 5,
+        AngleModifier = 0,
 		}
 
     item x2LeupoldScope
@@ -774,15 +790,16 @@ module Base
 		    Icon = Scope2x,
 		    Weight = 0.2,
 		    WeightModifier = 0.2,
-			HitChanceModifier = 5,
-		    MaxRangeModifier = 7,
-		    MinRangeModifier = 1,
-			AngleModifier = 0.001,
+			HitChanceModifier = 3,
+		    MaxRangeModifier = 3,
+		    MinRangeModifier = 0,
+			AngleModifier = 0,
 		    MountOn = T3Revolver; ColtPythonHunter; DLColtPythonHunter; Winchester94; DLWinchester94; Winchester73; DLWinchester73; Rossi92; DLRossi92; Winchester94Sawn; DLWinchester94Sawn; Winchester73Sawn; DLWinchester73Sawn; Rossi92Sawn; DLRossi92Sawn,
 		    PartType = Scope,
-		    Tooltip = Tooltip_Scope,
+        Tooltip = Tooltip_Scope,
 		    MetalValue = 22,
 				WorldStaticModel = 2xLeupoldScope,
+        AimingTimeModifier = -2,
 		}
 
     item GarandScope
@@ -793,15 +810,16 @@ module Base
 		    Icon = Scope8x,
 		    Weight = 0.4,
 		    WeightModifier = 0.4,
-			HitChanceModifier = 5,
-		    MaxRangeModifier = 9,
-		    MinRangeModifier = 1,
-			AngleModifier = 0.001,
+			HitChanceModifier = 3,
+		    MaxRangeModifier = 3,
+		    MinRangeModifier = 0,
+			AngleModifier = 0,
 		    MountOn = M1Garand; DLM1Garand; M1GarandBayonet; DLM1GarandBayonet; M1903Springfield_Sawn; DLM1903Springfield_Sawn; M1903SpringfieldBayonet; DLM1903SpringfieldBayonet; M1903Springfield; DLM1903Springfield; M1903SpringfieldShort; DLM1903SpringfieldShort,
 		    PartType = Scope,
-		    Tooltip = Tooltip_Scope,
+        Tooltip = Tooltip_Scope,
 		    MetalValue = 22,
 				WorldStaticModel = GarandScope,
+        AimingTimeModifier = -2,
 		}
 
     item x2Scope
@@ -812,15 +830,16 @@ module Base
 		    Icon = Scope2x,
 		    Weight = 0.3,
 		    WeightModifier = 0.3,
-			HitChanceModifier = 5,
-		    MaxRangeModifier = 7,
-		    MinRangeModifier = 1,
-			AngleModifier = 0.001,
+			HitChanceModifier = 3,
+		    MaxRangeModifier = 3,
+		    MinRangeModifier = 0,
+			AngleModifier = 0,
 		    MountOn = T3Sniper; T3Bolt; T3Rifle; T3SMG; M3Grease; HuntingRifle; HuntingRifleShort; VarmintRifle; VarmintRifleShort; Base.HuntingRifle_Sawn; VarmintRifle_Sawn; Rugerm7722_Sawn; AssaultRifle; AssaultRifleShort; AssaultRifleBayonet; Base.M60; Base.FN_FAL; FN_FALShort; Base.M16A2; M16A2Short; M16A2Bayonet;M733; M633; AR15; AR15Short; Mini14; Mini14Short; Mini14Sawn; AC556; AC556Short; AR15Bayonet; M14A1; M14A1Short; AssaultRifle2; AssaultRifle2Short; Base.M24Rifle; Base.MP5; Base.UZI; Mossberg500Tactical; SPAS12; LAW12; Base.Mossberg500; Shotgun; ShotgunShort; Base.Remington870Wood; Rugerm7722; Winchester77; Winchester77_Sawn; AK47; AK47S; AK47Bayonet; SKS; SKSShort; SKSSawn; SKSMag; SKSMagShort; SKSMagSawn,
 		    PartType = Scope,
-		    Tooltip = Tooltip_Scope,
+        Tooltip = Tooltip_Scope,
 		    MetalValue = 22,
 				WorldStaticModel = Acog_wm,
+        AimingTimeModifier = -2,
 		}
 
     item x4Scope
@@ -831,15 +850,16 @@ module Base
 		    Icon = Scope2x,
 		    Weight = 0.3,
 		    WeightModifier = 0.3,
-			HitChanceModifier = 5,
-		    MaxRangeModifier = 13,
-		    MinRangeModifier = 2,
-			AngleModifier = 0.002,
+			HitChanceModifier = 3,
+		    MaxRangeModifier = 6,
+		    MinRangeModifier = 3,
+			AngleModifier = 0,
 		    MountOn = T3Sniper; T3Bolt; T3Rifle; HuntingRifle; HuntingRifleShort; VarmintRifle; VarmintRifleShort; Base.HuntingRifle_Sawn; VarmintRifle_Sawn; Rugerm7722_Sawn; AssaultRifle; AssaultRifleShort; AssaultRifleBayonet; Base.M60; Base.FN_FAL; FN_FALShort; Base.M16A2; M16A2Short; M16A2Bayonet; M733; AR15; AR15Short; Mini14; Mini14Short; Mini14Sawn; AC556; AC556Short; AR15Bayonet; M14A1; M14A1Short; AssaultRifle2; AssaultRifle2Short; Base.M24Rifle; Rugerm7722,
 		    PartType = Scope,
-		    Tooltip = Tooltip_Scope,
+        Tooltip = Tooltip_Scope,
 		    MetalValue = 22,
 				WorldStaticModel = Acog_wm,
+        AimingTimeModifier = -4,
 		}
 
     item x8Scope
@@ -850,15 +870,16 @@ module Base
 				Icon = Scope8x,
 			  Weight = 0.4,
 				WeightModifier = 0.5,
-			HitChanceModifier = 5,
-				MaxRangeModifier = 16,
-				MinRangeModifier = 3,
-				AngleModifier = 0.0025,
+			HitChanceModifier = 2,
+				MaxRangeModifier = 9,
+				MinRangeModifier = 5,
+				AngleModifier = 0,
 				MountOn = T3Sniper; T3Bolt; HuntingRifle; HuntingRifleShort; VarmintRifle; VarmintRifleShort; Base.HuntingRifle_Sawn; VarmintRifle_Sawn; Rugerm7722_Sawn; M14A1; M14A1Short; Mini14; Mini14Short; AC556; AC556Short; AssaultRifle2; AssaultRifle2Short; Base.M24Rifle; Rugerm7722,
 			 	PartType = Scope,
-				Tooltip = Tooltip_Scope,
+        Tooltip = Tooltip_Scope,
 				MetalValue = 22,
 				WorldStaticModel = 12xScope,
+        AimingTimeModifier = -6,
 		}
 
     item x2-x8Scope
@@ -869,15 +890,16 @@ module Base
 				Icon = Scope8x,
 				Weight = 0.5,
 				WeightModifier = 0.8,
-			HitChanceModifier = 5,
-				MaxRangeModifier = 16,
-				MinRangeModifier = 1,
-				AngleModifier = 0.002,
+			HitChanceModifier = 2,
+				MaxRangeModifier = 8,
+				MinRangeModifier = 3,
+				AngleModifier = 0,
 				MountOn = T3Sniper; T3Bolt; HuntingRifle; DLHuntingRifle; HuntingRifleShort; DLHuntingRifleShort; VarmintRifle; DLVarmintRifle; VarmintRifleShort; DLVarmintRifleShort; Base.HuntingRifle_Sawn; Base.DLHuntingRifle_Sawn; VarmintRifle_Sawn; DLVarmintRifle_Sawn; Rugerm7722_Sawn; DLRugerm7722_Sawn; M14A1; DLM14A1; M14A1Short; DLM14A1Short; Mini14; DLMini14; Mini14Short; DLMini14Short; AC556; DLAC556; AC556Short; DLAC556Short; AssaultRifle2; DLAssaultRifle2; AssaultRifle2Short; DLAssaultRifle2Short; Base.M24Rifle; Base.DLM24Rifle; Rugerm7722; DLRugerm7722,
 				PartType = Scope,
-				Tooltip = Tooltip_Scope,
+        Tooltip = Tooltip_Scope,
 				MetalValue = 22,
 				WorldStaticModel = 12xScope,
+        AimingTimeModifier = -6,
 		}
 
     item x4-x12Scope
@@ -888,15 +910,16 @@ module Base
 				Icon = Scope8x,
 				Weight = 0.5,
 				WeightModifier = 0.8,
-			HitChanceModifier = 5,
-				MaxRangeModifier = 20,
-				MinRangeModifier = 4,
-				AngleModifier = 0.003,
+			HitChanceModifier = 2,
+				MaxRangeModifier = 11,
+				MinRangeModifier = 6,
+				AngleModifier = 0,
 				MountOn = T3Sniper; T3Bolt; HuntingRifle; DLHuntingRifle; VarmintRifle; DLVarmintRifle; AssaultRifle2; DLAssaultRifle2; M14A1; DLM14A1; M24Rifle; DLM24Rifle,
 				PartType = Scope,
-				Tooltip = Tooltip_Scope,
+        Tooltip = Tooltip_Scope,
 				MetalValue = 22,
 				WorldStaticModel = 12xScope,
+        AimingTimeModifier = -8,
 		}
 
     item MagTubeExtension

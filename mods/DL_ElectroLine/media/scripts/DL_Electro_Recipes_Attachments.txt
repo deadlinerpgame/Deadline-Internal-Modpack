@@ -1,0 +1,537 @@
+module Base
+{
+    recipe Manufacture Quick Draw Grip
+    {
+        Base.PrecisionParts=1,
+        Base.SmallSheetMetal=1,
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Angus_Fur_Tan/aerx.CowLeather_Holstein_Fur_Tan/aerx.PigLeather_Black_Fur_Tan/aerx.LambLeather_Fur_Tan=2,
+        keep Base.Scissors,
+        keep Base.Needle,
+        keep Base.Screwdriver,
+        Result:Base.QuickDraw,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Tailoring=6;Aiming=4,
+    }
+
+    recipe Manufacture Rubber Grip
+    {
+        Base.PrecisionParts=1,
+        SolidRubber=1,
+        keep Base.Scissors,
+        keep Base.Needle,
+        Result:Base.RubberGrip,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Tailoring=6;Aiming=4,
+        NearItem:TailoringWorkbench,
+    }
+
+    recipe Manufacture Recoil Pad
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.SteelBar=1,
+        Deadline.Kevlar=1,
+        keep Base.Scissors,
+        keep Base.Needle,
+        keep Base.Screwdriver,
+        Result:Base.DLRecoilPad,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Tailoring=6;Aiming=4,
+        NearItem:TailoringWorkbench,
+    }
+
+    recipe Manufacture Extended Recoil Pad
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.SteelBar=2,
+        Deadline.Kevlar=2,
+        keep Base.Scissors,
+        keep Base.Needle,
+        keep Base.Screwdriver,
+        Result:Base.DLExtendedRecoilPad,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Tailoring=10;Aiming=4,
+        NearItem:TailoringWorkbench,
+    }
+
+    recipe Manufacture Ammo Rack
+    {
+        Base.SmallSheetMetal=1,
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Angus_Fur_Tan/aerx.CowLeather_Holstein_Fur_Tan/aerx.PigLeather_Black_Fur_Tan/aerx.LambLeather_Fur_Tan=5,
+        keep Base.Scissors,
+        keep Base.Needle,
+        keep Base.Screwdriver,
+        Result:Base.DLAmmoStock,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Tailoring=10,
+        NearItem:TailoringWorkbench,
+    }
+
+    recipe Manufacture Ammo Straps
+    {
+        aerx.CowLeather_Simmental_Fur_Tan/aerx.DeerLeather_Fur_Tan/aerx.PigLeather_Landrace_Fur_Tan/aerx.SheepLeather_Fur_Tan/aerx.CowLeather_Angus_Fur_Tan/aerx.CowLeather_Holstein_Fur_Tan/aerx.PigLeather_Black_Fur_Tan/aerx.LambLeather_Fur_Tan=5,
+        Base.Thread=2,
+        keep Base.Scissors,
+        keep Base.Needle,
+        Result:Base.DLAmmoStraps,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Tailoring=10,
+        NearItem:TailoringWorkbench,
+    }
+
+    recipe Manufacture Stripper Clip
+    {
+        Base.PrecisionParts=1,
+        Base.SmallSheetMetal=1,
+        Base.Wire=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.StripperClipAttachment,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Revolver Speed Loader
+    {
+        Base.PrecisionParts=1,
+        Base.SmallSheetMetal=1,
+        Base.Wire=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.RevolverSpeedLoader,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Iron Sights
+    {
+        Base.PrecisionParts=1,
+        Base.SmallSheetMetal=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLIronSight,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Full Choke
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.StainlessSteelSheet=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLChokeTubeFull,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=8,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Improved Choke
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.StainlessSteelSheet=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLChokeTubeImproved,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture 9mm Compensator
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.StainlessSteelSheet=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DL9mmCompensator,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture .45 Compensator
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.StainlessSteelSheet=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DL45Compensator,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture .44 Compensator
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.StainlessSteelSheet=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DL44Compensator,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Tactical Stock
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.SteelBar=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLTacticalStock,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Shotgun Stock
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.SteelBar=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLShotgunStock,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Light Shotgun Stock
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.SteelBar=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLLightShotgunStock,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Fiberglass Stock
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.SteelBar=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLFiberglassStock,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture SMG Fixed Stock
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.SteelBar=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLSMGFixedStock,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Extended Retractable Stock
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.SteelBar=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLRetractable_Stock_Extended,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Extended SPAS-12 Stock
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.SteelBar=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.SPAS12_Stock_Extended,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Rifle Bipod
+    {
+        Base.PrecisionParts=3,
+        DL_MetalLine.SteelBar=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLRifle_Bipod,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Gun Light (Empty)
+    {
+        Base.PrecisionParts=2,
+        DL_MetalLine.SteelBar=1,
+        destroy Base.HandTorch,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLGunLight,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=6,
+        NearItem:PrecisionFabricator,
+        OnCreate:Recipe.OnCreate.DLEmptyGunLight,
+    }
+
+    recipe Manufacture Laser
+    {
+        Base.PrecisionParts=3,
+        Base.PrecisionOptics=1,
+        DL_MetalLine.SteelBar=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLLaser,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Red Dot
+    {
+        Base.PrecisionParts=2,
+        Base.PrecisionOptics=1,
+        DL_MetalLine.SteelBar=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLRedDot,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Red Dot Scope
+    {
+        Base.PrecisionParts=2,
+        Base.PrecisionOptics=1,
+        DL_MetalLine.SteelBar=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.RedDotScope,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture 2x Scope
+    {
+        Base.PrecisionParts=3,
+        Base.PrecisionOptics=1,
+        DL_MetalLine.SteelBar=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLx2Scope,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture 2x Leupold Scope
+    {
+        Base.PrecisionParts=3,
+        Base.PrecisionOptics=1,
+        DL_MetalLine.SteelBar=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.x2LeupoldScope,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Garand Scope
+    {
+        Base.PrecisionParts=3,
+        Base.PrecisionOptics=1,
+        DL_MetalLine.SteelBar=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.GarandScope,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture 4x Scope
+    {
+        Base.PrecisionParts=4,
+        Base.PrecisionOptics=3,
+        DL_MetalLine.SteelBar=1,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLx4Scope,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture .22 Suppressor
+    {
+        Base.PrecisionParts=3,
+        DL_MetalLine.SteelBar=2,
+        DL_MetalLine.StainlessSteelSheet=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DL22Silencer,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture 9mm Suppressor
+    {
+        Base.PrecisionParts=3,
+        DL_MetalLine.SteelBar=2,
+        DL_MetalLine.StainlessSteelSheet=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DL9mmSilencer,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture .45 Suppressor
+    {
+        Base.PrecisionParts=3,
+        DL_MetalLine.SteelBar=2,
+        DL_MetalLine.StainlessSteelSheet=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DL45Silencer,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture .38 Suppressor
+    {
+        Base.PrecisionParts=3,
+        DL_MetalLine.SteelBar=2,
+        DL_MetalLine.StainlessSteelSheet=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DL38Silencer,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture .44 Suppressor
+    {
+        Base.PrecisionParts=3,
+        DL_MetalLine.SteelBar=2,
+        DL_MetalLine.StainlessSteelSheet=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DL44Silencer,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture .223 Suppressor
+    {
+        Base.PrecisionParts=4,
+        DL_MetalLine.SteelBar=3,
+        DL_MetalLine.StainlessSteelSheet=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DL223Silencer,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture .308 Suppressor
+    {
+        Base.PrecisionParts=4,
+        DL_MetalLine.SteelBar=3,
+        DL_MetalLine.StainlessSteelSheet=1,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DL308Silencer,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+    recipe Manufacture Shotgun Suppressor
+    {
+        Base.PrecisionParts=5,
+        DL_MetalLine.SteelBar=3,
+        DL_MetalLine.StainlessSteelSheet=2,
+        Deadline.Kevlar=2,
+        keep Base.Screwdriver,
+        keep aerx.File,
+        Result:Base.DLShotgunSilencer,
+        Time:100.0,
+        Category:Firearms,
+        SkillRequired:Electricity=10,
+        NearItem:PrecisionFabricator,
+    }
+
+}
