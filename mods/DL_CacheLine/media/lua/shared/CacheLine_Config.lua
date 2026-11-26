@@ -286,7 +286,7 @@ DLCacheLine.Groups = {
                         { "Base.Gloves_Surgical", 2 },
                         { "Base.Hat_DustMask", 1 },
                         { "Base.Hat_GasMask", 1 },
-                        { "Base.PotassiumIodide", 1}
+                        { "Base.PotassiumIodide", 1 },
                         { "Base.PrussianBlue", 1 },
                         { "Base.DTPA", 1 },
                         { "Base.Neupogen", 1 } 
